@@ -222,7 +222,7 @@ Os requisitos não-funcionais seguem as normas internacionais de qualidade de so
 
 ---
 
-## 🧪 5. Como Utilizar este Dataset como Benchmark no Mestrado
+## 🧪 5. Como Utilizar este Dataset como Benchmark no Gigabrain
 
 Este conjunto de dados permite desenhar experimentos reprodutíveis para avaliar LLMs, agentes autônomos ou técnicas tradicionais de PLN:
 
