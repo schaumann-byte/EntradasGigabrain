@@ -24,7 +24,7 @@ python scripts/export_entradas.py                 # publica as variantes meeting
 Parâmetros de `pureprep.cli`: `--seed` (padrão 42), `--support-threshold` (0,6),
 `--dialogue-cap` (60 requisitos por reunião), `--noise` (0,08),
 `--profiles` (`clean,realistic,hard`; vazio desativa o modo meetings),
-`--realizer` (`rules`).
+`--realizer` (`rules`, `llm`) e as opções `--llm-*` (ver Variante B).
 
 ## Modos
 
@@ -73,16 +73,45 @@ casual), `realistic` (2–3 reuniões, ~25% dos requisitos com fenômeno), `hard
 (`p_chunk`, `chunk_target`, `p_mid_backchannel`, `p_backchannel`, `p_react`), calibrados contra o AMI
 (ver `RELATORIO_DIAGNOSTICO.md` §5.3); `clean` mantém a estrutura de turnos do v1.
 
-### Como adicionar o realizador B (LLM)
+### Variante B: realizador `llm`
 
-1. Criar `pureprep/dialogue/realize_llm.py` com `realize(plan, rng) -> [(meeting, texto, segmentos)]`,
-   mesma assinatura de `realize_rules.realize`. Cada `Turn` do plano traz `speaker`, `act`,
-   `utts` (conteúdo do requisito a expressar, já transformado pelo plano, com `flags`) e `info`.
-2. Verificar cada fala gerada (cobertura de tokens do `Utt.text`, números preservados) e cair
-   para `realize_rules.render_turn` quando a verificação falhar.
-3. Guardar as respostas do LLM em cache versionado (chave = hash de prompt + modelo + turno),
-   pois o LLM não é determinístico.
-4. Registrar em `REALIZERS` (`pureprep/dialogue/__init__.py`) e gerar com `--realizer llm`.
+`pureprep/dialogue/realize_llm.py` reescreve as falas do **mesmo plano** da variante A com um LLM.
+Com a mesma semente e o mesmo perfil, o gabarito (requisitos, status, *issues*, distratores) é
+idêntico ao da A; só o texto das falas muda.
+
+- **Janelas**: cada reunião é fatiada em janelas de ~20 turnos (`--llm-window`); cada janela é uma
+  requisição independente, com os 3 turnos anteriores do plano como contexto. O prompt leva só o
+  conteúdo do plano: o detalhe removido por ambiguidade ou incompletude nunca vai para o LLM.
+- **Verificação de cada fala** (`verify`), com fallback para a fala da variante A quando falha:
+  números do conteúdo preservados, nenhum número inventado, detalhe removido não reaparece,
+  ≥ 50% dos tokens de conteúdo preservados, valor da variante preservado em distratores e
+  reafirmações, tamanho compatível com o ato. Os motivos ficam em
+  `generator.realizer_stats` de cada gabarito.
+- **Ruído lexical igual ao da A**: o LLM é instruído a não pôr hesitações; elas são aplicadas
+  depois, com a mesma semente da A. Um B sem nenhuma fala aceita reproduz a A byte a byte.
+- **Cache**: cada resposta fica em `llm_cache/<provedor>-<modelo>/` (chave = hash de versão do
+  prompt + provedor + modelo + prompt). **Versione o cache no git**: com ele, `--llm-offline`
+  regenera a variante B sem chamar o LLM.
+- **Provedores** (SDKs opcionais, importados só quando usados): `anthropic` (`pip install anthropic`,
+  padrão `claude-opus-5-5` com `--llm-effort low` e fallback de recusa no servidor), `openai`
+  (`pip install openai`; OpenAI ou qualquer API compatível via `--llm-base-url`, ex.: Ollama em
+  `http://localhost:11434/v1`) e `dry` (não chama nada; estima requisições e tokens).
+  Prefira um modelo de **família diferente** da do sistema avaliado (RELATORIO §5.1).
+
+```bash
+# 1. orçar (não gasta nada)
+python -m pureprep.cli --out output --realizer llm --llm-provider dry
+# 2. gerar (precisa de ANTHROPIC_API_KEY, ou OPENAI_API_KEY com --llm-provider openai --llm-model ...)
+python -m pureprep.cli --out output --realizer llm --profiles clean,realistic,hard
+git add llm_cache && git commit -m "Cache da variante B"
+# 3. reproduzir depois, sem chamar o LLM
+python -m pureprep.cli --out output --realizer llm --llm-offline
+# 4. publicar (manifest registra provedor, modelo e versão do prompt)
+python scripts/export_entradas.py --variants llm-clean,llm-realistic,llm-hard
+```
+
+Escala medida pelo dry-run (18 documentos, perfis `clean`+`realistic`+`hard`): 470 requisições,
+~0,8 M tokens de entrada e ~0,35 M de saída (sem o raciocínio do modelo).
 
 ## Saída
 

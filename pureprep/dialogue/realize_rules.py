@@ -349,13 +349,22 @@ def realize(plan, rng, noise=None):
     Cada turno vira um segmento ``{id: "M1:T5", start, end, speaker, act,
     gt_ids, refs}`` com offsets relativos ao arquivo da reunião.
     """
+    return assemble(plan, rng, lambda turn, seg_id: render_turn(turn, rng), noise)
+
+
+def assemble(plan, rng, render, noise=None):
+    """Monta os arquivos das reuniões a partir de ``render(turn, seg_id)``.
+
+    Compartilhado pelos realizadores: o ruído lexical (hesitações, gagueira,
+    marcas) é aplicado aqui, igual para todos, depois do texto de cada turno.
+    """
     noise = plan.params["noise"] if noise is None else noise
     out = []
     for m in plan.meetings:
         header = f"Meeting {m.index} of {m.total} ({m.kind})\nParticipants: {', '.join(m.participants)}\n\n"
         parts, pos, segs = [header], len(header), []
         for i, t in enumerate(m.turns, 1):
-            text = render_turn(t, rng)
+            text = render(t, f"{m.mid}:T{i}")
             if t.act not in _NO_NOISE:
                 text = add_disfluency(text, rng, noise)
             prefix = f"{t.speaker}: "

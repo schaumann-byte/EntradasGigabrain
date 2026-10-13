@@ -19,16 +19,18 @@ import csv
 import json
 import random
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from . import V1_VERSION, __version__
 from .dialogue import PROFILES, REALIZERS, build_meetings, meeting_file, variant_name
+from .dialogue.llm_providers import make_provider
 from .extract import extract
 from .parse import load_document
 from .synth import build_context, build_dialogue, build_notes, sample_reqs, support
 
 MODES = ("context", "notes", "dialogue")  # modos v1 (um arquivo de entrada por par)
+REALIZER_TOTALS = defaultdict(Counter)  # estatísticas do realizador por variante (resumo no fim)
 SCHEMA_VERSION = "1.0"
 
 
@@ -107,7 +109,7 @@ def _write_meetings(out, doc, plan, realized, gold):
     (a / f"{doc.doc_id}.json").write_text(json.dumps(plan.to_json(), ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-def process(xml_path, out, seed, tau, dialogue_cap, noise, profiles=(), realizer="rules"):
+def process(xml_path, out, seed, tau, dialogue_cap, noise, profiles=(), realizer="rules", realizer_options=None):
     doc = load_document(xml_path)
     ext = extract(doc)
     primary = [r for r in ext.requirements if r.tier == "primary"]
@@ -167,7 +169,10 @@ def process(xml_path, out, seed, tau, dialogue_cap, noise, profiles=(), realizer
 
     # --- meetings (schema 2.0): mesma amostra de requisitos do dialogue v1 --
     for profile in profiles:
-        plan, realized, gold = build_meetings(doc, ext, chosen, profile=profile, realizer=realizer, seed=seed)
+        plan, realized, gold = build_meetings(doc, ext, chosen, profile=profile, realizer=realizer, seed=seed,
+                                              realizer_options=realizer_options)
+        for k, n in (gold["generator"].get("realizer_stats") or {}).items():
+            REALIZER_TOTALS[gold["variant"]][k] += n
         _write_meetings(out, doc, plan, realized, gold)
         v, s = gold["variant"], gold["stats"]
         row[f"{v}_meetings"] = gold["input"]["n_meetings"]
@@ -192,11 +197,27 @@ def main(argv=None):
                     help=f"perfis do modo meetings, separados por vírgula ({', '.join(PROFILES)}); vazio desativa")
     ap.add_argument("--realizer", default="rules", choices=sorted(REALIZERS),
                     help="realizador da superfície do texto no modo meetings")
+    g = ap.add_argument_group("realizador llm (variante B)")
+    g.add_argument("--llm-provider", default="anthropic", choices=("anthropic", "openai", "dry"),
+                   help="dry = não chama LLM, só estima requisições e tokens")
+    g.add_argument("--llm-model", default=None, help="padrão: claude-opus-5-5 (anthropic); obrigatório com openai")
+    g.add_argument("--llm-effort", default="low", choices=("low", "medium", "high", "xhigh", "max"), help="só anthropic")
+    g.add_argument("--llm-base-url", default=None, help="API compatível com OpenAI (ex.: http://localhost:11434/v1 para Ollama)")
+    g.add_argument("--llm-cache", default="llm_cache", help="diretório do cache de respostas (versionar no git)")
+    g.add_argument("--llm-offline", action="store_true", help="usa só o cache; falha se faltar alguma resposta")
+    g.add_argument("--llm-workers", type=int, default=8, help="requisições em paralelo")
+    g.add_argument("--llm-window", type=int, default=20, help="turnos por requisição")
     args = ap.parse_args(argv)
     profiles = [p.strip() for p in args.profiles.split(",") if p.strip()]
     for p in profiles:
         if p not in PROFILES:
             sys.exit(f"perfil desconhecido: {p} (opções: {', '.join(PROFILES)})")
+
+    realizer_options = None
+    if args.realizer == "llm":
+        provider = make_provider(args.llm_provider, args.llm_model, args.llm_effort, args.llm_base_url)
+        realizer_options = {"provider": provider, "cache_dir": args.llm_cache, "offline": args.llm_offline,
+                            "workers": args.llm_workers, "window": args.llm_window}
 
     out = Path(args.out)
     files = sorted(Path(args.xml_dir).glob("*.xml"))
@@ -204,7 +225,8 @@ def main(argv=None):
         sys.exit(f"Nenhum XML encontrado em {args.xml_dir}")
     rows = []
     for f in files:
-        row = process(f, out, args.seed, args.support_threshold, args.dialogue_cap, args.noise, profiles, args.realizer)
+        row = process(f, out, args.seed, args.support_threshold, args.dialogue_cap, args.noise, profiles, args.realizer,
+                      realizer_options)
         rows.append(row)
         print(f"{row['doc_id']:24s} primary={row['n_primary']:4d} (FR {row['n_primary_fr']}, NFR {row['n_primary_nfr']}) "
               f"ctx_reach={row['context_reachable_primary']:.2f} tier_ctx={row['tier_context']} tier_syn={row['tier_synthetic']}")
@@ -213,15 +235,29 @@ def main(argv=None):
         wr = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
         wr.writeheader()
         wr.writerows(rows)
+    # gerar A e depois B na mesma pasta acumula as variantes no manifest
+    previous = []
+    if (out / "manifest.json").exists():
+        previous = json.loads((out / "manifest.json").read_text(encoding="utf-8")).get("meetings_variants", [])
+    variants = list(dict.fromkeys(previous + [variant_name(args.realizer, p) for p in profiles]))
     manifest = {
         "schema_version": SCHEMA_VERSION,
-        "generator": {"tool": "pureprep", "version": __version__, "args": vars(args)},
+        "generator": {"tool": "pureprep", "version": __version__,
+                      "args": {k: v for k, v in vars(args).items()}},
         "dataset": {"name": "PURE", "doi": "10.5281/zenodo.1414117", "subset": "requirements-xml (18 docs)"},
-        "meetings_variants": [variant_name(args.realizer, p) for p in profiles],
+        "meetings_variants": [v for v in variants if (out / "pairs" / "meetings" / v).exists()],
         "documents": rows,
     }
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n{len(rows)} documentos -> {out.resolve()}")
+    for v, c in REALIZER_TOTALS.items():
+        acc = c.get("llm_accepted", 0)
+        print(f"{v}: {acc}/{c.get('turns', 0)} falas do LLM aceitas; "
+              + ", ".join(f"{k} {n}" for k, n in sorted(c.items()) if k.startswith(("fallback:", "request_failed:"))))
+    if realizer_options and hasattr(realizer_options["provider"], "estimate"):
+        est = realizer_options["provider"].estimate()
+        print(f"dry-run: {est['requests']} requisições, ~{est['input_tokens']:,} tokens de entrada e "
+              f"~{est['output_tokens']:,} de saída (estimativa ±30%, sem contar raciocínio do modelo)")
 
 
 if __name__ == "__main__":
