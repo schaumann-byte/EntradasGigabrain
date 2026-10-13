@@ -1,299 +1,186 @@
-# Dataset de Entradas: Transcrições de Reuniões e Gabarito de Requisitos
+# Dataset de Entradas: Reuniões de Elicitação e Gabarito de Requisitos
 
-Este diretório contém o conjunto de dados processado para experimentos de **Engenharia de Requisitos** e **Melhoria de Processos de Software**. Ele fornece conversas de reuniões simuladas e seus respectivos gabaritos estruturados (*ground truth*), baseados no conceituado dataset público **PURE (*Public Requirements Engineering Dataset*)** ([Zenodo 10.5281/zenodo.1414117](https://doi.org/10.5281/zenodo.1414117)).
+Conjunto de dados para experimentos de **Engenharia de Requisitos** e **Melhoria de Processos de Software**: reuniões de elicitação simuladas e o gabarito (*ground truth*) dos requisitos que elas contêm. A base é o dataset público **PURE** (*Public Requirements Engineering Dataset*, [Zenodo 10.5281/zenodo.1414117](https://doi.org/10.5281/zenodo.1414117)).
 
----
-
-## 📌 1. Visão Geral e Propósito Científico
-
-Em cenários reais de engenharia de software, requisitos raramente nascem como especificações formais limpas. Eles emergem em **reuniões de brainstorming, entrevistas e alinhamentos entre stakeholders**, repletos de linguagem informal, hesitações, termos coloquiais e confirmações mútuas.
-
-Este repositório fornece **pares controlados de teste** (`Entradas/<projeto>/`):
-1. **Entrada Informal (`transcricao_reuniao.txt`)**: A transcrição integral de uma reunião virtual realista de elicitação de requisitos, com múltiplos participantes discutindo o sistema.
-2. **Gabarito Estruturado (`gabarito_requisitos.json`)**: O padrão-ouro contendo cada requisito formalmente extraído, classificado (Funcional vs Não-Funcional, com subtipos) e rastreado diretamente aos turnos da conversa.
-
-### Principais Diferenciais:
-- **Sem uso de IA generativa no pré-processamento**: As falas foram geradas através de transformações determinísticas aditivas dos requisitos reais do PURE. Isso elimina o risco de contaminação ou viés de LLMs na geração do benchmark.
-- **Preservação Semântica Total**: Todas as palavras de conteúdo e regras originais do requisito são preservadas; apenas a sintaxe modal ("*the system shall*") é convertida em fala informal ("*we'd need to be able to*").
-- **Rastreabilidade Fina (*Traceability*)**: Cada requisito formal aponta exatamente para quais turnos de fala (`T1`, `T2`, etc.) o originaram.
+Os dados são gerados pelo `pureprep` (repositório `pure_ingestao`) com transformações **determinísticas, sem IA generativa**. Cada variante traz no `manifest.json` o commit do gerador, a semente e os parâmetros usados, o que a torna reproduzível.
 
 ---
 
-## 📂 2. Estrutura de Diretórios
+## 1. Variantes
 
-A pasta `Entradas` está organizada da seguinte forma:
+Requisitos raramente surgem limpos. Eles aparecem espalhados por várias reuniões, no meio de discussões, conflitos, falas vagas e informações que faltam. Para medir o quanto isso atrapalha um extrator de requisitos, o dataset tem **variantes com níveis crescentes de ruído**. Todas usam o **mesmo conjunto de requisitos** por documento.
+
+| variante | reuniões/doc | o que tem | gabarito |
+|---|:---:|---|:---:|
+| `v1-original` | 1 | Dataset original (tag `v1.0`): uma reunião, ruído só lexical ("uh", gagueira, `[crosstalk]`), todo requisito dito com clareza | schema 1.0 |
+| `rules-clean` | 1 | Mesma estrutura, com fala mais casual: contrações, léxico coloquial, 1ª pessoa, marcadores de discurso | schema 2.0 |
+| `rules-realistic` | 2–3 | Várias reuniões, conversa bagunçada e ~25% dos requisitos com algum fenômeno (conflito, ambiguidade, inconsistência, incompletude) | schema 2.0 |
+| `rules-hard` | 3–4 | Bagunça intensa e ~45% dos requisitos com fenômeno | schema 2.0 |
+| `llm-*` | — | *Planejado*: mesmo plano das `rules-*`, mas superfície escrita por LLM (variante B, para comparação) | schema 2.0 |
+
+O prefixo indica o **realizador**, isto é, quem escreve as falas: `rules` são regras (variante A) e `llm` será um modelo de linguagem (variante B). O sufixo indica o **perfil de ruído**. Variantes com o mesmo perfil e realizadores diferentes compartilham o mesmo plano de reuniões, os mesmos fenômenos e o mesmo gabarito. A comparação A × B isola o efeito da linguagem.
+
+### Números agregados (18 documentos, 820 requisitos)
+
+| variante | palavras | esperados na saída | clear | conflito resolvido | conflito aberto | rejeitado | ambíguo | inconsistente | incompleto | omitido | issues | distratores |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `v1-original` | 35.398 | 820 | 820 | – | – | – | – | – | – | – | – | – |
+| `rules-clean` | 37.600 | 820 | 820 | – | – | – | – | – | – | – | – | – |
+| `rules-realistic` | 44.225 | 789 | 614 | 32 | 16 | 7 | 64 | 21 | 42 | 24 | 143 | 7 |
+| `rules-hard` | 50.456 | 758 | 441 | 41 | 45 | 19 | 110 | 52 | 69 | 43 | 276 | 7 |
+
+O detalhamento por documento está em [`indice_documentos.csv`](indice_documentos.csv), com uma linha por (variante, documento).
+
+---
+
+## 2. Estrutura de diretórios
 
 ```text
 Entradas/
-├── README.md                      # Este guia completo de documentação
-├── indice_documentos.csv          # Tabela com métricas rápidas de todos os 18 projetos
-│
-├── 0000-cctns/                    # Projeto: Crime & Criminal Tracking Network
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 1995-gemini/                    # Projeto: Gemini 8m Telescopes
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 1998-themas/                    # Projeto: THEMAS - Energy Management System
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 1999-dii/                    # Projeto: Defense Information Infrastructure XML Services
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 1999-tcs/                    # Projeto: Tactical Control System (TCS)
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2003-qheadache/                    # Projeto: QHeadache Diagnostic System
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2005-microcare/                    # Projeto: Voucher Management System (MicroCare)
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2005-phin/                    # Projeto: Public Health Info Network Outbreak Mgmt
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2006-eirene-sys-15/                    # Projeto: EIRENE Railway System Requirements
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2007-eirene-fun-7-2/                    # Projeto: EIRENE Railway Functional Requirements
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2007-ertms/                    # Projeto: ERTMS/ETCS European Rail Traffic System
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2007-get-real-0-2/                    # Projeto: Get Real 0.2
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2008-keepass/                    # Projeto: KeePass Password Safe
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2008-peering/                    # Projeto: Internetworking of CDNs through Peering
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2009-peppol-approved/                    # Projeto: Pan-European Public Procurement (PEPPOL)
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-├── 2009-video-search/                    # Projeto: Video Search Engine
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
-    │
-└── 2010-blitdraft/                    # Projeto: BlitDraft Specification
-    │   ├── transcricao_reuniao.txt    # Conversa da reunião (texto livre)
-    │   ├── gabarito_requisitos.json   # Gabarito com requisitos e rastreabilidade
-    │   └── requisitos_originais.pdf   # Cópia do documento original de requisitos
+├── README.md
+├── indice_documentos.csv              # uma linha por (variante, documento)
+├── originais/<doc_id>.pdf             # documento de requisitos original (compartilhado)
+└── variantes/
+    ├── v1-original/<doc_id>/
+    │   ├── transcricao_reuniao.txt
+    │   └── gabarito_requisitos.json   # schema 1.0
+    └── rules-realistic/               # (idem rules-clean, rules-hard)
+        ├── manifest.json              # commit do gerador, semente, parâmetros, estatísticas
+        └── <doc_id>/
+            ├── reuniao_01.txt
+            ├── reuniao_02.txt
+            └── gabarito_requisitos.json   # schema 2.0
 ```
+
+Projetos: `0000-cctns`, `0000-gamma-j`, `1995-gemini`, `1998-themas`, `1999-dii`, `1999-tcs`, `2003-qheadache`, `2005-microcare` (sem requisitos normativos, tier C), `2005-phin`, `2006-eirene-sys-15`, `2007-eirene-fun-7-2`, `2007-ertms`, `2007-get-real-0-2`, `2008-keepass`, `2008-peering`, `2009-peppol-approved`, `2009-video-search`, `2010-blitdraft`.
 
 ---
 
-## 🗣️ 3. Anatomia da Conversa (`transcricao_reuniao.txt`)
+## 3. As reuniões (`reuniao_NN.txt`)
 
-Cada transcrição simula uma sessão de trabalho de aproximadamente **45 minutos a 1 hora** entre stakeholders e analistas.
-
-### Formato dos Turnos
-As falas seguem o padrão padronizado:
 ```text
-Falante: Texto da fala
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, TechLead
+
+Analyst: Hi everyone, thanks for making time again. Let's pick up where we left off on KeePass Password Safe.
+Analyst: Quick recap from last time: we went over new database, open database and search database. We also left a few things open.
+Client: Oh, about master password from last time, I checked: ...
 ```
 
-### Personas Envolvidas
-A reunião conta com até 4 participantes com papéis definidos:
-- **`Analyst`**: Moderador da reunião. Introduz tópicos, faz perguntas estruturadas ("*So, let's talk about search database. What do you need there?*"), checa o entendimento e resume pontos.
-- **`Client`**: Stakeholder de negócios. Descreve objetivos do sistema, regras de negócio e necessidades funcionais gerais.
-- **`TechLead`**: Líder técnico e arquiteto. Foca principalmente em requisitos não-funcionais (segurança, disponibilidade, desempenho, restrições arquiteturais).
-- **`EndUser`**: Usuário final. Destaca fluxos práticos de uso, interface, acessibilidade e preferências de usabilidade.
+- **Participantes**: `Analyst` (conduz), `Client` (negócio), `TechLead` (restrições técnicas e RNF), `EndUser` (uso). A composição muda de reunião para reunião.
+- **Bagunça**: tópicos fora da ordem do documento, tópico retomado mais tarde ("going back to search…"), stakeholder que puxa o tópico sem o analista perguntar, interrupção no meio de uma fala que é retomada depois, falso começo ("We need the— actually, …"), *crosstalk*, conversa de abertura e comentários fora do tópico.
+- **Ruído lexical**: hesitações, muletas, gagueira e marcas `[laughter]`, `[crosstalk]`, `[pause]`, como no v1.
 
-### Padrões Naturais de Fala Presentes
-Para reproduzir a dinâmica de uma reunião humana real, foram incorporados fenômenos de fala espontânea:
-1. **Hesitações e Marcadores Conversacionais**: Palavras como `"uh"`, `"erm"`, `"you know"`, `"i mean"`, `"sort of"`, `"well"`.
-2. **Gagueira e Repetição de Palavras**: Repetições acidentais de artigos e conectivos curtos (ex: `"the the"`, `"of of"`).
-3. **Ruídos de Fala e Ambiente**: Marcadores de evento sonoro, como `[crosstalk]` (falas sobrepostas) e `[laughter]`.
-4. **Ecos de Confirmação**: O analista parafraseia o requisito para validar se entendeu corretamente:
-   > **EndUser**: *Databases would have to have different names or else the previews one will be replace if selected.*  
-   > **Analyst**: *Just to confirm, databases would have to have you know different names or else the previews one will be replace if selected?*  
-   > **EndUser**: *Mm-hmm, yes.*
-5. **Comentários Fora do Tópico (*Off-topic*)**: Pequenos imprevistos típicos de conferências online:
-   > **TechLead**: *Sorry, I was on mute.*  
-   > **Client**: *Sorry, can everyone hear me? My connection is a bit unstable today.*
+### Fenômenos de requisitos
+
+Cada requisito recebe no máximo um fenômeno.
+
+| fenômeno | como aparece | `status` final |
+|---|---|---|
+| **Conflito de valor/ator** | Um stakeholder propõe uma variante (número ou papel trocado, ex.: "5 sec" × "15 sec", "the driver" × "the operator") e outro contesta. O analista decide na hora ou adia ("let's park it"). O que foi adiado pode ser decidido numa reunião seguinte. | `conflict_resolved` (vence a versão original; a proposta perdedora vira **distrator**) ou `conflict_open` |
+| **Conflito de escopo** | "Do we really need that?" seguido de defesa. Desfecho: mantém, retira ou adia. | `conflict_resolved`, `rejected` (retirado; **não** deve ser extraído) ou `conflict_open` |
+| **Ambiguidade** | Número vago ("a few seconds"), ator vago ("someone"), referência vaga ("it should…") ou obrigatoriedade hesitante ("it'd be nice if…"). Às vezes o analista pede detalhes e recebe uma evasiva. | `ambiguous` |
+| **Inconsistência** | O requisito é reafirmado mais tarde, em geral em outra reunião, com valor, ator ou polaridade divergente ("shall" × "shall not"), e ninguém percebe. | `inconsistent` |
+| **Incompletude** | Valor faltante ("I'd have to check the exact number"), condição omitida ou fala cortada. Às vezes alguém traz a informação numa reunião seguinte. | `incomplete` ou `clear` (completado depois) |
+| **Omissão** | O requisito existe no SRS, mas nunca é discutido. | `omitted` (**não** deve ser extraído) |
 
 ---
 
-## 📋 4. Anatomia do Gabarito (`gabarito_requisitos.json`)
+## 4. O gabarito schema 2.0 (`gabarito_requisitos.json`)
 
-O arquivo de gabarito contém o conjunto formal de requisitos que a reunião gerou, além dos metadados completos de rastreabilidade.
-
-### Estrutura Geral do JSON
-
-```json
+```jsonc
+// exemplo ilustrativo (valores abreviados)
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "doc_id": "2008-keepass",
-  "doc_title": "Software Requirements Specification for KeePass Password Safe",
-  "mode": "dialogue",
-  "generator": { ... },
+  "variant": "rules-realistic",
+  "generator": {"tool": "pureprep", "realizer": "rules", "profile": "realistic", "params": {"seed": 42, ...}},
   "input": {
-    "file": "transcricao_reuniao.txt",
-    "n_chars": 9260,
-    "n_words": 1613,
-    "segments": [ ... ]
+    "n_meetings": 2,
+    "meetings": [{"id": "M1", "file": "reuniao_01.txt", "kind": "kickoff", "participants": [...], "topics": [...],
+                  "segments": [{"id": "M1:T7", "start": 812, "end": 960, "speaker": "Client", "act": "state",
+                                "gt_ids": ["2008-keepass:R0009"],
+                                "refs": [{"rid": "2008-keepass:R0009", "role": "statement", "pid": "P3"}]}]}]
   },
-  "stats": { ... },
-  "requirements": [ ... ]
+  "stats": {"by_status": {...}, "phenomena": {"conflict:resolved_later": 1, ...}, "messiness": {...}, ...},
+  "requirements": [{
+    "id": "2008-keepass:R0009", "text": "<texto canônico do SRS>", "class": "FR", "subtype": null,
+    "status": "conflict_resolved", "expected_in_output": true,
+    "phenomena": [{"pid": "P3", "type": "conflict", "kind": "value", "outcome": "resolved_later",
+                   "details": {"original_value": "100 characters", "proposed_value": "50 characters", ...},
+                   "segments": ["M1:T7", "M1:T8", "M1:T9", "M1:T10", "M2:T12"]}],
+    "trace": {"input_segments": [...], "related_segments": [...], "support_score": 0.97, "reachable": true}
+  }],
+  "distractors": [{"id": "...:D001", "text": "<proposta rejeitada>", "requirement": "...", "segments": [...]}],
+  "issues": [{"id": "...:I001", "type": "ambiguity", "kind": "vague_quantity", "requirement": "...",
+              "expected_action": "ask_clarification", "segments": [...], "details": {...}}]
 }
 ```
 
-### Detalhamento dos Campos:
+- **`start`/`end`** são posições de caractere (Unicode) no arquivo da reunião, com quebras de linha LF. `text[start:end]` é exatamente a fala, sem o prefixo `Falante: `.
+- **`refs[].role`** indica o papel da fala em relação ao requisito: `statement`, `part1`/`part2` (fala interrompida), `echo`, `resolution`, `followup`, `restatement` (versão inconsistente), `distractor` (proposta rejeitada), `conflict`, `clarification`.
+- **`trace.input_segments`** são as falas que carregam a versão válida do requisito. **`related_segments`** inclui também objeções, adiamentos e versões divergentes.
+- **`expected_in_output`** é `false` para `rejected` e `omitted`. Um bom extrator **não** deve devolver esses requisitos, nem os `distractors`.
+- **`issues`** lista o que um bom sistema deveria **apontar** em vez de silenciar: conflitos em aberto, ambiguidades, inconsistências e lacunas. Cada issue tem a ação esperada (`ask_clarification`, `resolve_with_stakeholders`, `flag_inconsistency`, `request_missing_information`).
+- O texto canônico em `requirements[].text` é sempre o do SRS original. Num requisito ambíguo ou incompleto, isso inclui o detalhe que **ninguém disse** na reunião (veja a métrica de alucinação abaixo).
 
-#### 1. Mapeamento de Segmentos (`input.segments`)
-Divide a transcrição em blocos contínuos de fala (`T1`, `T2`, etc.):
-- `id`: Identificador do segmento de fala (ex: `"T6"`).
-- `start` / `end`: Posição exata em caracteres dentro de `transcricao_reuniao.txt`.
-- `speaker`: Quem pronunciou a frase.
-- `gt_ids`: Lista de IDs de requisitos presentes nesta fala específica.
-
-#### 2. Resumo de Métricas (`stats`)
-- `n_requirements`: Total de requisitos no gabarito.
-- `n_primary_fr`: Quantidade de Requisitos Funcionais.
-- `n_primary_nfr`: Quantidade de Requisitos Não-Funcionais.
-- `n_reachable`: Requisitos que de fato foram cobertos e discutidos na conversa.
-- `reachable_ratio_primary`: Taxa de cobertura (geralmente 1.0 = 100%).
-
-#### 3. Especificação de Cada Requisito (`requirements`)
-Cada objeto dentro do array `"requirements"` possui:
-
-| Campo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id` | `string` | Identificador único no dataset (ex: `"2008-keepass:R0006"`). |
-| `text` | `string` | Texto formal e canônico do requisito (padrão-ouro). |
-| `class` | `string` | Classe do requisito: `"FR"` (Funcional) ou `"NFR"` (Não-Funcional). |
-| `subtype` | `string` | Código do subtipo para NFR (veja tabela de taxonomia abaixo). |
-| `subtype_name`| `string` | Nome por extenso do subtipo (ex: `"Performance"`, `"Security"`). |
-| `tier` | `string` | `"primary"` (normativo formal) ou `"secondary"` (modal de apoio). |
-| `source` | `object` | Origem no documento XML original (seção, elemento, força do modal `shall`/`must`). |
-| `trace` | `object` | Rastreabilidade direta com os segmentos de fala (`input_segments`, `support_score`). |
-
-### Taxonomia de Subtipos Não-Funcionais (NFR)
-Os requisitos não-funcionais seguem as normas internacionais de qualidade de software (ISO/IEC 25010 e IEEE 830):
-
-| Código | Subtipo | Exemplo de Foco |
-| :---: | :--- | :--- |
-| **`PE`** | Performance / Efficiency | Tempo de resposta, throughput, latência. |
-| **`SE`** | Security | Autenticação, permissões, criptografia, senhas. |
-| **`US`** | Usability | Intuitividade, facilidade de aprendizado, documentação. |
-| **`LF`** | Look & Feel | Interface gráfica, cores, fontes, layout. |
-| **`A`** | Availability | Uptime, disponibilidade 24/7, tolerância a falhas. |
-| **`SA`** | Safety | Prevenção de perda de dados e acidentes operacionais. |
-| **`PO`** | Portability | Suporte a múltiplos navegadores, SOs ou dispositivos. |
-| **`MN`** | Maintainability | Modularidade, facilidade de manutenção e código limpo. |
-| **`SC`** | Scalability | Capacidade de expansão de carga e usuários. |
-| **`L`** | Legal / Compliance | Leis, regulamentações, termos de licença (GPL, LGPD). |
-| **`FT`** | Fault Tolerance | Recuperação de desastres, backups e contingência. |
-| **`OT`** | Other NFR | Outros atributos de qualidade genéricos. |
+O schema 1.0 (`v1-original`) é o formato anterior: um arquivo `transcricao_reuniao.txt`, segmentos `T1…Tn` em `input.segments`, sem status, distratores ou issues.
 
 ---
 
-## 🧪 5. Como Utilizar este Dataset como Benchmark no Gigabrain
+## 5. Avaliação
 
-Este conjunto de dados permite desenhar experimentos reprodutíveis para avaliar LLMs, agentes autônomos ou técnicas tradicionais de PLN:
+O avaliador está em `pureprep.evaluate` e despacha automaticamente pelo `schema_version`. A predição é um JSON por documento:
 
-### Fluxo de Teste Recomendado:
-
-```
-[ transcricao_reuniao.txt ] 
-            │
-            ▼
-┌───────────────────────────────┐
-│     Sistema / LLM sob Teste   │  (Prompt com instruções de extração)
-└───────────────────────────────┘
-            │
-            ▼
-[ Predições: requisitos_extraidos.json ]
-            │
-            ▼
-┌───────────────────────────────┐
-│     Avaliador Automático      │  (pureprep.evaluate)
-└───────────────────────────────┘
-            ▲
-            │
-[ gabarito_requisitos.json ] (Ground Truth)
+```json
+{"requirements": [{"text": "The system shall ...", "class": "FR", "subtype": null, "source_text": "trecho citado"}],
+ "issues": [{"type": "ambiguity", "requirement_text": "...", "source_text": "...", "question": "..."}]}
 ```
 
-### Métricas Científicas que Você Pode Coletar:
+```bash
+python -m pureprep.evaluate --pairs output/pairs/meetings/rules-realistic --pred minhas_predicoes/rules-realistic --out relatorio.json
+```
 
-1. **Extração de Requisitos (Extração Pura)**:
-   - **Precisão (Precision)**: Dos requisitos que o seu modelo extraiu, quantos realmente existem no gabarito?
-   - **Revocação (Recall)**: De todos os requisitos do gabarito, quantos o seu modelo foi capaz de recuperar?
-   - **F1-Score**: Média harmônica entre Precisão e Revocação.
+Métricas do schema 2.0:
 
-2. **Classificação Funcional vs Não-Funcional (FR / NFR)**:
-   - Mede se o modelo classificou adequadamente o requisito como funcional ou de qualidade.
-   - Matriz de confusão e Macro-F1 por classe.
+| métrica | o que mede |
+|---|---|
+| `extraction.{precision, recall_expected, f1_expected}` | Extração contra os requisitos `expected_in_output` |
+| `recall_by_status`, `recall_by_phenomenon` | Onde o sistema perde: requisitos ambíguos? completados em outra reunião? |
+| `false_positives.{distractor_hits, rejected_hits, omitted_hits}` | Extraiu a proposta derrotada, o requisito retirado ou algo nunca discutido |
+| `detail_hallucination_rate` | Em requisitos ambíguos ou incompletos, fração em que a predição traz o detalhe removido (ex.: o número exato), que não aparece em lugar nenhum da entrada |
+| `issues.{precision, recall, f1, recall_untyped, recall_by_type}` | Detecção de problemas. A issue casa com a do gabarito pelo texto do requisito ou pelo trecho citado |
+| `classification_on_matched`, `trace_to_source`, `unsupported_rate` | Como no v1 |
 
-3. **Precisão de Rastreabilidade (*Trace to Source*)**:
-   - O modelo consegue citar o trecho da reunião que justifica o requisito?
-   - Verifica se o trecho citado pelo modelo coincide com `trace.input_segments`.
+### Baselines de referência
 
-4. **Taxa de Alucinação (*Unsupported Rate*)**:
-   - Quantas sentenças geradas pelo modelo afirmam ser requisitos mas não têm qualquer respaldo na conversa da reunião?
+O `naive` transforma em requisito toda frase com modal ou expressão de necessidade e não detecta issues. O `oracle` devolve o gabarito.
+
+| variante | P | R (esperados) | F1 | distratores extraídos | rejeitados extraídos |
+|---|---:|---:|---:|---:|---:|
+| `v1-original` | 0,673 | 0,782 | 0,723 | – | – |
+| `rules-clean` | 0,711 | 0,844 | 0,772 | 0 | 0 |
+| `rules-realistic` | 0,612 | 0,750 | 0,674 | 7 | 6 |
+| `rules-hard` | 0,545 | 0,708 | 0,616 | 5 | 17 |
+
+O `oracle` tem F1 = 1,0 em extração e issues, mas `detail_hallucination_rate` ≈ 0,57. Isso é esperado: ele copia o texto canônico do SRS, que contém detalhes que ninguém disse na reunião.
 
 ---
 
-## 📊 6. Tabela Índice dos 18 Projetos
+## 6. Limitações conhecidas
 
-A tabela abaixo resume todos os projetos disponíveis na pasta `Entradas`. Os dados completos também estão disponíveis em formato de planilha no arquivo `indice_documentos.csv`:
+- **Distratores são raros** (7 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e poucos requisitos do PURE têm número ou ator explícito. Inversões de polaridade ("shall" × "shall not") entram apenas como inconsistência, porque "not" é stopword no casamento lexical.
+- **As falas ainda carregam o texto do SRS.** O realizador `rules` muda a forma (modal, contrações, léxico, discurso), mas mantém as palavras de conteúdo. Por isso requisitos longos continuam soando como documento. A variante B (`llm-*`) existe para medir esse efeito.
+- **`v1-original` está congelado** como foi publicado. Os arquivos usam CRLF, e os offsets só batem quando o texto é lido com tradução de quebras de linha (Python em modo texto). O campo `input.file` do gabarito diz `input_raw.txt`, embora o arquivo se chame `transcricao_reuniao.txt`. As variantes 2.0 não têm esses problemas.
 
-| ID | Nome do Projeto | Requisitos no Diálogo | Palavras na Reunião | Qualidade |
-| :--- | :--- | :---: | :---: | :---: |
-| **`0000-cctns`** | Crime & Criminal Tracking Network and Systems | 60 | 2.972 | Tier A |
-| **`0000-gamma-j`** | Gamma-J Web Store (Connecting Retailers) | 60 | 1.633 | Tier A |
-| **`1995-gemini`** | Gemini 8m Telescopes System | 60 | 3.302 | Tier A |
-| **`1998-themas`** | THEMAS - Energy Management System | 60 | 2.226 | Tier B |
-| **`1999-dii`** | Defense Information Infrastructure XML Services | 19 | 1.779 | Tier B |
-| **`1999-tcs`** | Tactical Control System (TCS) | 60 | 2.758 | Tier A |
-| **`2003-qheadache`** | QHeadache Diagnostic System | 23 | 1.516 | Tier B |
-| **`2005-microcare`**| Voucher Management System (MicroCare) | 0 | 114 | Tier C |
-| **`2005-phin`** | Public Health Info Network Outbreak Mgmt | 60 | 2.430 | Tier B |
-| **`2006-eirene-sys`**| EIRENE Railway System Requirements | 60 | 2.775 | Tier B |
-| **`2007-eirene-fun`**| EIRENE Railway Functional Requirements | 60 | 2.949 | Tier A |
-| **`2007-ertms`** | ERTMS/ETCS European Rail Traffic System | 60 | 2.089 | Tier A |
-| **`2007-get-real`** | Get Real 0.2 | 10 | 553 | Tier B |
-| **`2008-keepass`** | KeePass Password Safe | 54 | 1.613 | Tier A |
-| **`2008-peering`** | Internetworking of CDNs through Peering | 27 | 809 | Tier B |
-| **`2009-peppol`** | Pan-European Public Procurement (PEPPOL) | 60 | 3.096 | Tier A |
-| **`2009-video`** | Video Search Engine | 30 | 865 | Tier A |
-| **`2010-blitdraft`**| BlitDraft Specification | 57 | 1.919 | Tier A |
+## 7. Como regenerar
 
-> **Nota sobre os Tiers de Qualidade:**
-> - **Tier A**: Documentos com alto volume de requisitos, excelente equilíbrio entre funcionais/não-funcionais e cobertura profunda na transcrição. Ideais para testes primários.
-> - **Tier B**: Documentos médios ou altamente especializados (ex: foco exclusivo em RF ou RNF).
-> - **Tier C**: Documentos com seções predominantemente discursivas/narrativas e poucos requisitos normativos explícitos.
+No repositório `pure_ingestao`:
+
+```bash
+python scripts/download_data.py
+python -m pureprep.cli --out output                      # v1 + rules-clean/realistic/hard
+python scripts/export_entradas.py --entradas ../Entradas  # copia variantes e regenera o índice
+```
+
+O `export_entradas.py` se recusa a exportar quando há alterações não commitadas no gerador, para que o `manifest.json` sempre aponte um commit reproduzível.

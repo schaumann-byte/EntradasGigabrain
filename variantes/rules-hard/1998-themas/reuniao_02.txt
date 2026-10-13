@@ -1,0 +1,46 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser
+
+Analyst: Uh, Hi everyone, thanks uhm for basically making time again. Let's pick up uh where we left off on THEMAS The Energy Management System.
+Analyst: So, last time we talked about load load h/c unit unit definitions, load thermostat definitions and set overtemp values. We also left a few things open.
+Analyst: Okay, what erm about determine uhm h/c mode?
+Client: When the current temperature value actually exceeds the current um temperature uhm setting by um a [crosstalk] pre pre -defined you know amount, sort of the THEMAS system might activate the appropriate heating or cooling unit.s.
+Analyst: Do you have a concrete number or example?
+Client: I don't know, something reasonable.
+EndUser: Yeah, so if this condition is true, then this module could maybe output a basically request to turn on the heating unit if LO = um T LT you know or kind of the the like cooling unit if well UT T = actually UO.
+Client: Erm, Can well I jump jump in on determine status of all h/c units? The um THEMAS system sort of might control each well of the heating and cooling units that are defined for the system, if possible.
+EndUser: The THEMAS um system would have to you know limit the uh number of of heating or... hmm, I'd need to think about the kind of rest.
+EndUser: For us, the THEMAS system has um to maintain the ON/OFF status of each heating and cooling unit.
+Client: Do we really need that? I'd leave it out, at least for the first version. [crosstalk]
+EndUser: We do like need it, it's important for our people.
+Analyst: Okay, we take it out of the scope.
+EndUser: And when a request to turn on or off a heating—
+Client: Uh, Hold on, does that er apply to mobile too?
+EndUser: Er, Right, so, you know or cooling unit, the following processing will occur.
+Client: If the the maximum number of heating kind of or cooling i mean units isn't you know running, this this process will generate uhm a request to turn on the uhm requested unit.
+EndUser: That sounds like a um lot of work for little value.
+Client: Without it the whole thing doesn't make much sense for us.
+Analyst: Uhm, Okay, we'll keep it in then.
+Client: If that uh thermostat um still needs a heating o r cooling unit unit turned on, this process ought to submit sort of a request to turn that unit on.
+Analyst: Going back to determine h/c mode for a sec, anything uh else there?
+Analyst: And actually generate unit unavailable event, how do you see that working?
+Client: Uhm, When a er request for uhm a um heating unit or cooling to be turned is denied, an event should be generated and the THEMAS system shall record uhm that event. And we uh need the the information in these events to be used for creating statistical reports.
+Analyst: Right.
+EndUser: Uhm, Then , you know it would have to not check all well the thermostats and determine if any erm thermostat's settings require a heating i mean or cooling unit to be turned on back on.
+Analyst: Let's move on to determine utilizations. What like do you know you basically have in mind?
+Client: Erm, Can we take a two-minute break after this topic?
+EndUser: We need the THEMAS system to control the sort of heating and cooling units that are designated as part of the THEMAS system.
+EndUser: Uhm, When a request to turn i mean on or uh off a heating or kind of cooling unit is made, this process would have to basically generate the appropriate request to carry out that like request.
+EndUser: On uhm determine temperature status, the er THEMAS system kind of mustn't compare the reported temperature value to to the temperature setting and um detect when the temperature value actually exceeds the specified sort of limits.
+Analyst: Uhm, Going back to to generate unit unavailable event for a a sec, anything else sort of there?
+EndUser: This procedure should realize the thermostat and heating or cooling information and use use this information to generate actually a specific system uh event.
+Client: Can I jump um in on generate er alarm data? This process has to determine which alarm... well, anyway, we we can sort of come you know back to that.
+Client: Er, When the THEMAS system detects a request for an alarm, this process ought to um detect which of the two alarms are are being requested.
+EndUser: That sounds like a lot of work for little value.
+Client: We do need it, it's sort of important for er our people.
+Analyst: Let's take this offline and decide sort of later.
+EndUser: Each beep has to have a three... well, anyway, we uh can come back back sort of to like that.
+EndUser: Okay so one thing is, if the system detects a temperature erm limit has been exceeded, if er that makes sense—
+Analyst: Uhm, Wait, sorry— [crosstalk]
+EndUser: Anyway, as you know I uh was saying, this this process i mean shall output a continuous series of um alternating 1000 Hz and 1500 Hz beeps on the supervisor's computer.
+Analyst: Uhm, Okay, we're out of kind of time. I'll send a erm summary and we'll pick up uhm the the rest rest next time.

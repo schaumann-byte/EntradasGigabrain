@@ -1,0 +1,58 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, EndUser
+
+Analyst: Er, Hi everyone, thanks for coming. The idea um today actually is to understand sort of what uhm you need for OUTBREAK MANAGEMENT FUNCTIONAL REQUIREMENTS.
+Client: Er, Outbreak Management (OM) is the PHIN uh functional uh area intended to support like the needs of investigation, monitoring, management, analysis, and reporting of a health event or uh act of bioterrorism. Central to the functionality sort of of you know a system basically supporting OM is the ability to collect data related to cases and exposures and to create traceable links between all appropriate entities. By tracing the mechanism of transmission and identifying the source of the health event, the appropriate response staff can more effectively contain basically the event.
+Analyst: Okay, what about outbreak management functional requirements?
+Client: Um, Analysis, Visualization, and Report i mean Generation: Systems supporting OM should enable investigators to produce both aggregated and individual reports erm about affected entities and events.
+Analyst: Right.
+Client: Um, System er Integration and uh Data Exchange: OM uh information should be er exchangeable, uh based actually on sort of established standards, between systems involved in the investigation, identification, confirmation, and reporting of a health event.
+Client: System Security and Availability: Security of OM data includes the protection of data from uhm corruption and uh access by unauthorized individuals, as well as the protection of the actual systems supporting OM from sabotage or other failure. A plan basically will need to be established for continuing activities when systems supporting OM are unavailable.
+Analyst: Uh, Right. And system architecture? Anything [pause] specific?
+Client: Systems supporting OM has to support structured data entry for common forms and fields to ensure data integrity, validity, and standardization. And uh the idea is is that systems supporting OM will provide the ability for computers in disconnected mode to reconnect to erm a server to share OM data among other computers that operate in disconnected mode.
+Client: We'd want OM data data to be synchronized so that all instances of OM applications working from the same server are able to share and use the same data.
+Analyst: Er, Let me check I got this: we'd want OM data uh to be synchronized actually so that that all instances of OM i mean applications working from the erm same server are able able to you know share basically and use the same data?
+Client: Yes, that's it.
+Client: Er, Okay so so ideally systems supporting erm OM OM would electronically record and store data from remote devices er that may well be uploaded to an um aggregating system, but I'm er not sure sure it's a must.
+Analyst: Got it.
+Client: Uh, For For us, systems supporting OM would have to be capable well of using configurable, like domain-specific i mean vocabulary, basically right?
+EndUser: Uhm, I'm not convinced that's necessary, honestly.
+Client: Er, I'd really like to keep it.
+Analyst: Erm, Okay, we take take it out of the scope.
+Analyst: Can you walk um me through entity actually data?
+EndUser: Er, Well, we'd want systems supporting OM to basically have the capability to capture demographic data about persons involved in an OM investigation, including: Subject ID, uh name, address, date of birth, gender, phone number, race, ethnicity, and country like of citizenship.
+EndUser: Systems supporting OM has to have the capability to capture data kind of about organizations (e.g., i mean a local health department, a university, um a professional association) involved in an OM sort of investigation, including: organization well name, location, and and well contact information.
+EndUser: Systems supporting basically OM has to have the capability to capture data data about any animals involved in an OM investigation, including: type (dog, monkey, basically etc), age, gender, owner's name and address, color, weight, and species.
+Client: Do we really need that? I'd leave it out, uhm at least for sort of the first version.
+EndUser: Er, Without it the whole thing doesn't sort of make much sense for us.
+Analyst: Er, Okay, we'll uh keep it in then.
+EndUser: The idea is that systems supporting OM will have the capability to capture data for any object involved in an kind of OM investigation, such as a letter, invoice, food item, or any object like that can't be classified as a "person, erm organization, place, or animal." Collected data may include: name of the object, type, physical descriptors, uh address, identification number (e.g. serial number, package slip number). And relevant dates and and times (e.g., invoice date, shipping date, packaging date).
+Client: That sounds like a lot of work erm for little value.
+EndUser: We do need it, it's important for our people.
+Analyst: Erm, Okay, we're not actually going um to solve this today. um Let's park it and come back to it.
+Client: Uhm, For us, the idea is that systems supporting OM will have the capability i mean to capture data about well any public or private gathering of people (e.g., church sort of social, ball game) involved in an OM investigation, including: time, location, like nature of of the event, etc, um that's pretty uh important for us.
+Analyst: Makes sense.
+Analyst: Right. And health event data? Anything specific?
+Client: Uh, When a health event is investigated, it'll need to be assigned an event identifier (i.e., Event ID) that's unique within the jurisdiction, that's the main thing.
+EndUser: Honestly, data describing the like health event should be captured, including the reason for the investigation, the the category of event (e.g. environmental, infectious), the date the event began, i mean the suspected agent (if erm known) or investigation focus, the geographic area impacted by the event, as well as the event status (e.g., open, closed).
+Analyst: And travel history and conveyance data, how do you see that working?
+Client: Honestly, travel history data to be collected for an uh animal you know or object should include shipping invoices, animal shelter delivery and you know adoption receipts. And delivery schedules (including delivery vehicle and driver information).
+Client: Uh, For example, if a person who lives in Georgia um travels to Seattle and becomes exposed to um monkey pox, then visits a... well, uhm anyway, we can come back to that.
+Analyst: Erm, Is erm that all for well travel history and conveyance data?
+EndUser: No, I think that's it.
+EndUser: And like we said, er travel history data to be collected for an uh animal or object shouldn't include shipping invoices, animal shelter delivery and adoption receipts. And delivery schedules er (including delivery vehicle and driver information).
+Analyst: Alright, case investigation and exposure contact data. Thoughts?
+EndUser: Uhm, Because actually attributes of both case and exposure like data may describe the same same entity, systems supporting OM would have to can avoid capturing basically redundant well entity demographic information, if that makes sense.
+Analyst: So if I got it right, because attributes of both case and exposure data may describe the same entity, systems supporting like OM will need to um can avoid capturing redundant entity demographic information?
+EndUser: Mm-hmm, yes.
+EndUser: Basically, case data about the entity should include: like a case identifier (i.e., Case uhm ID) er that is unique within the jurisdiction being reported, the suspected agent, case diagnosis, actually health status (e.g., no symptoms, acute illness), case status (e.g., confirmed, probable, suspect), investigation dates, clinical history, symptom onset date and time, epidemiological links to other cases, and actually priority (e.g., high, medium, low).
+Client: Do we really need that? I'd leave it out, uhm at least for the first version.
+EndUser: Without it the whole thing doesn't make much sense for us.
+Client: Erm, Let's leave that open for now, I need [crosstalk] to check with my team.
+EndUser: Basically, epidemiological um (epi) data will need to be collected to help in in um the case well investigation of events, if that makes sense.
+Analyst: Right.
+EndUser: Uhm, Well, detailed um data ought um to be collected about the source of of exposure i mean as well as um the exposed entity to support contact exposure tracing.
+EndUser: Epi data would have to [noise] uh be collected to help... hmm, I'd need to think about the rest.
+Analyst: Er, Is that all for case case investigation and exposure contact data?
+Client: No, I think that's it.
+Analyst: Let's stop here for today. I'll write this up and and we continue erm next time.

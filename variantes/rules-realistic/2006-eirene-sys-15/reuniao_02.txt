@@ -1,0 +1,55 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Hi everyone, thanks for making time again. Let's pick up where we left left off on UIC Projec like t EIRENE.
+EndUser: Busy week, um sorry if I'm a bit slow today.
+Analyst: Just to recap, in in the last meeting we covered railway like specif services and facilities, actually coverage and handover and cell selection.
+Analyst: Erm, Okay, what about mmi functions?
+EndUser: Upon detection (automatically or basically based on a list stored in the kind of Cab radio) of the extra on-train functions for equipment physically connected to the the Cab radio, uh a USSD message ought to um be sort of sent er by the Cab radio after activation um of the um registration uhm or deregistration function.
+Client: Um, Oh, and about handling of calls, okay so so the idea is that it well will be possible to store a priority in sort of association actually with er a stored number, if that makes sense. like And the Cab radio would have to arbitrate between calls when: an incoming call is received whilst the Cab radio you know is in an on-going call. Also, . like Also, a Cab radio user attempts to initiate a call er whilst the Cab radio well is is in an on-going call.
+Client: Replacing the handset should result in the—
+TechLead: Wait, sorry— [crosstalk]
+Client: Yeah, um so, outcomes listed you know in Tables 5A-2 and 5A-3.
+Analyst: Is that all for handling of calls?
+EndUser: No, I think that's it.
+Analyst: Let's move on to other cab radio functions. What do you kind of have in mind?
+Client: Incoming calls to the er Cab radio will need to be routed to the correct on-train uh user or uh device using information contained in the sub-addressing field, you know?
+Analyst: Okay, noted.
+EndUser: A means of directed network selection should be uhm provided—
+Analyst: Uh, Sorry, sorry, go ahead.
+EndUser: Where was I... yes, um to ensure that the MS registers with the um required network.
+Client: Something on environmental actually and physical: yeah, so we'd want the um Cab radio to pass electrical tests as defined in. And the aerial and any other equipment mounted external to the train should be capable actually of withstanding extremes of temperature from well -40C to +70C.
+TechLead: Erm, So, i'd like ease of maintenance to be taken into account uh in the design—
+Client: Wait, sorry— [crosstalk]
+TechLead: Yeah, so, and installation of radio [laughter] equipment.
+Analyst: Um, Let's like cover public address interface now. What level do you expect?
+Client: If implemented, the Public Address you know interface should comply with the specifications of the UIC Fiche.
+Analyst: Let you know me check I got this: if implemented, the Public Address interface should comply with the specifications of the um UIC Fiche?
+Client: Mm-hmm, yes.
+Analyst: And other interfaces, how [crosstalk] um do you see that working?
+Client: I mean, where other data interfaces are implemented, they um should be of the RS422 standard.
+Analyst: Got it.
+Client: Sorry, can everyone hear hear me? My connection is a bit unstable today.
+Analyst: Can um we like go back to uh other cab radio functions? I think we missed something.
+EndUser: Um, I mean, if directed network selection is implemented and voice calls um are ongoing at the time when when the external device attempts to trigger a network change, an audible and visual indication should be given to to the driver and and network change shall be deferred until the call is terminated or until coverage of the current network is lost.
+Client: The Cab radio has to be capable of selecting the most appropriate mobile radio network automatically using basically the um selection criteria stated in section 10.5.
+Client: Hold on, let me share [pause] my uhm screen again.
+Analyst: Uh, What about environmental and physical? Any hard limits there?
+TechLead: Uhm, We'd want general purpose radios to be equipped with rechargeable batteries capable of providing at least eight hours operation over the temperature range +18°C to +25°C from a single charge, based on the following cycle:.
+Analyst: Er, Going back to environmental and physical for a sec, anything else there?
+Client: We need um an emergency power supply to you know be be basically provided for erm Cab radios which will enable the driver's radio to continue to operate for a period of 6 hours in case of failure of the train's main power supply, er based on the following cycle:.
+Analyst: Right. And numbering plan requirements? Anything specific?
+Client: Er, Implementation of the EIRENE numbering plan would have to actually not prohibit any authorised caller from using the MSISDN number where known, basically thus enabling mobiles to be assigned well to particular personnel where this is appropriate, that's pretty important for us. And all Train Function Numbers and their um associated MSISDN numbers would have to be stored in the same routing database, actually which is the database of the GSM-R network in which the train is is currently operating.
+EndUser: One thing you know is, the Coach Function Number(s), that's pretty important for us—
+Analyst: Hold um on, does that apply to i mean mobile too?
+EndUser: Um, Where was I... yes, and um associated MSISDN number(s) shall at any time um be stored as an entry in the routing database of the home GSM-R network of the coach.
+Client: Can I jump in on use of international eirene numbers? The fields actually of an International Functional Number ought to be defined as follows:, you know you know?
+TechLead: Uh, Do we really need that? I'd leave it out, at least for the first uh version.
+Client: Erm, We do need it, it's important for our people.
+Client: Um, Let's take this offline and decide uh later.
+Client: Er, I have the missing info on uh core environmental requirements: many of the railway specific standards referenced are Pre-standards (eg) and should be re-examined for their applicability to the EIRENE system if any modifications are made to these standards in the the future.
+Analyst: Okay, actually next topic: use use of national eirene numbers. How um should i mean that work?
+EndUser: 2) User Identifier Number: um The User Identifier Number (UIN) would have actually to uhm be one of the following numbers (as identified by the CT): Train Number (TN): a number given well to a train by operational staff for a particular journey. This uh number shall be unique for the duration basically of the journey. Note. For certain Train Numbers (e.g. 1234 and 123), a risk exists you know when dialling a number by keying in individual digits e.g. by the dispatcher. actually In this circumstance the risk of connecting to an un-intended train exists if there's a delay between sort of keyed-in digits. There's no risk of basically ambiguity if block dialling is employed. kind of Engine Number (EN): a unique number given to a tractive unit to identify it permanently. The The UIC has introduced a uniform identification marking system um for tractive stock crossing frontiers. i mean To call a particular locomotive, it shall be er possible to call a number associated with actually the tractive unit's stock number. uhm The The actual sort of number of the unit, which shall be um used as the EN, um is sort of based on the kind of complete identification number. Coach Number (CN): a unique number given to a um coach (which isn't basically a tractive unit) to identify it permanently. The UIC has introduced a uniform identification marking for passenger rolling stock. To To call a particular coach it you know shall be i mean possible to call a number sort of associated with the vehicle marking. The total vehicle marking consists of of a sort of certain like number um of digits. The actual kind of number of the coach is denoted you know by seven digits (positions 5 to 11 of the complete vehicle marking), which shall be erm used as the CN7. Shunting Team uh Location Number (STLN) Maintenance Team i mean Location Number (MTLN) Train Controller basically Location kind of Number (TCLN) Group Location Number (GLN) Mobile Subscriber um Number i mean (MSN). I'd have to check the exact number though.
+EndUser: Er, 1) Call Type (CT) This prefix defines how to interpret the User Number that follows. It actually should basically consist of one or two digits. And we need every railway um network to consider a number uh as a National EIRENE Number (NEN) unless the number is um preceded by an International Code, identifying another GSM-R network.
+Analyst: Mm-hmm.
+Analyst: Okay, we're out of time. I'll send a summary and we'll pick up the rest next time.

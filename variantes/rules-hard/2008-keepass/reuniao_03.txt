@@ -1,0 +1,54 @@
+Meeting 3 of 3 (review)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, this should be our last session on KeePass Password um Safe, let's go through the remaining points.
+Client: Erm, Busy week, sorry if I'm a bit slow today.
+Analyst: Erm, Just to recap, basically in the last meeting we covered add entry, duplicate actually entry and change sort of language.
+TechLead: Just as a reminder, its sort of main function is the determination uh of the master password er that won't unlock the database from now on.
+Analyst: Alright, import/export. Thoughts?
+Client: It should— well, file formats aren't specialized password database formats.
+Client: Uhm, Honestly, file formats only specify a, if um that makes sense—
+TechLead: Erm, Hold on, does uh that that apply to mobile too?
+Client: Anyway, as I you know was was saying, um low-level layout er of stored data.
+Analyst: Er, Is Is that all for import/export?
+EndUser: That's all for now.
+Analyst: Er, What are are your expectations regarding composite master i mean key?
+EndUser: Er, The thing i mean is, if a master password might unlock the database, the database doesn't open unless the password is entered.
+Analyst: Okay.
+Client: Er, Also, there's no backdoor uh or key that that unlocks all databases.
+Analyst: Got it.
+Client: Er, If i mean a key file is required to uhm unlock the database, basically the erm database doesn't open. er Well, mostly, there are a few special cases.
+Client: Sorry, I just wanted to—
+Analyst: —no, you go.
+Client: If there's a composite key, both master password basically and key file actually are required.
+EndUser: Uh, So in um case of basically lost master er password or key file—
+Client: Sorry, sorry, go uh ahead.
+EndUser: Um, Anyway, as I was saying, the database never unlocks again. There's no recovery.
+Analyst: Erm, Okay, what about er tan support?
+EndUser: When TAN are created, they appear as sort of typical entries which i mean in the field title sort of contain "TAN" so that that um KeePass could maybe know uh it's a TAN.
+Analyst: What exactly do you mean basically by that?
+EndUser: I don't know, something reasonable.
+EndUser: Title, username or URL can't you know be— sorry, I lost my train of thought.
+Analyst: Er, Can we go back to um change language? I think we missed something.
+Analyst: And integration, how do um you see that working?
+Client: Global hot hot key can't be changed.
+Analyst: Got it.
+TechLead: Erm, Something on erm performance requirements: okay erm so if uh in like the meanwhile it you know isn't pasted anywhere, it might be copied again.
+Analyst: Okay, noted.
+Client: That happens so that if uh user copies a password and not paste it anywhere, the password can't be i mean found by anyone later.
+TechLead: Uh, Do we really basically need that? I'd leave it out, at least for the first version.
+Client: Without it the whole thing doesn't make much sense for us.
+Client: Uh, Let's uh take you know this offline and erm decide later.
+Analyst: Anything else on performance requirements?
+Client: Nothing else, I think.
+Analyst: And user interfaces, how strict do we need to be?
+TechLead: Er, At this time the main database uh window is inactive and um cannot you know be accessed unless the current active window you know is uhm closed.
+Analyst: Let's cover safety requirements now. What level do you know you expect?
+TechLead: When a USB which contains the database er is removed from a computer while changes er haven't been completely saved, sort of the database is damaged and can't sort of be opened.
+Analyst: Got it.
+Analyst: Uhm, Going back to tan support for a sec, like anything else there?
+Client: Sorry, someone just just knocked on my door, basically go erm ahead.
+EndUser: And when a a TAN is used, it expires automatically and um can never be used again.
+Analyst: Let's cover software quality sort of attributes now. What basically level like do you expect?
+Client: Erm, KeePass is a small you know and erm light project so it you know doesn't need to be installed. All it takes is unpacking from the Zip package. kind of It can uh be transferred also in a USB stick with no i mean extra configuration needed.
+Analyst: Great, I think [crosstalk] that covers it uh for today. I'll write this up and send it around.

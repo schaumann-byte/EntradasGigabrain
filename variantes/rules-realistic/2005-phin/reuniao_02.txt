@@ -1,0 +1,52 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Erm, Okay, welcome back. Let's uhm continue with with OUTBREAK sort of MANAGEMENT FUNCTIONAL REQUIREMENTS.
+Analyst: So, last time we talked about outbreak management functional requirements, system architecture and entity data. And a um couple of points were still open.
+Client: Before I forget, on specimen/sample collection and laboratory response data, specimen/sample collection and laboratory response data basically supports the collection of clinical specimens, food samples, environmental samples. And other types of samples that will be tested for biological, chemical, and and radiological um agents.
+TechLead: I'm not convinced that's necessary, honestly.
+Client: I'd really like to keep it.
+Analyst: Um, Let's take er this offline and decide later.
+EndUser: We need the— actually, the sort of thing is, specimens/samples collected for laboratory testing would have to be uh assigned an identifier uh (i.e., Specimen ID) that is unique within the the jurisdiction.
+Analyst: Um, So if I got it right, specimens/samples collected uh for laboratory testing should be assigned an sort of identifier (i.e., um Specimen ID) that's unique within the the jurisdiction?
+EndUser: Right, correct.
+EndUser: Systems supporting OM must be able to i mean store well data about the specimens/samples that are collected for laboratory testing.
+Client: Er, Environmental sample data might i mean include information about the the collection method, location (geocoded if possible) from which the sample was taken, source (e.g., rain or erm well for water, radiation release, well asbestos, chair or desk in a specified location), nature like of the sample (e.g., soil, water, air), quality control data, uhm collection begin and end date and time for air samples. And original volume and volume of concentrate tested for water samples, if possible.
+EndUser: Food sample data has to kind of include information about the um lot number, um batch number, manufacturer name—
+Analyst: Sorry, sorry, go ahead.
+EndUser: Where was I... yes, shipping invoice, temperature, sample type (e.g., dairy – milk, red meat, spice), and product storage condition.
+EndUser: Uhm, Basically, ideally systems supporting OM would well create a laboratory test request for a specimen/sample or group of specimens/samples, but I'm not sure it's a must.
+Client: All All levels sort of of granularity of results (e.g., kind of specimen/sample level, assay level) should be supported.
+Analyst: Let me check I I got this: all levels of granularity of of results you know (e.g., specimen/sample level, assay level) would have to to be supported?
+Client: Exactly, yeah.
+Analyst: Is that all for specimen/sample collection and laboratory response data?
+Client: Nothing else, I think.
+EndUser: Oh, about case investigation kind of and exposure contact data from last time, I checked: we'd want epi data i mean to be collected to help in the exposure investigation of uh health events.
+Analyst: Erm, Let's move on to prophylaxis and treatment data. What do you have in mind?
+Client: The thing is, systems supporting OM should capture or be linked uhm to sort of data about the prophylaxis or treatment to cases, exposed individuals, or at risk persons, including the person who ordered the prophylaxis or treatment. And actually the the name, date, um type, duration, and dosage of uh the treatment or prophylaxis given.
+Analyst: On On entity data, the thing we left open, we're taking it out.
+TechLead: We don't want systems supporting OM to capture or be linked to data about the prophylaxis or treatment to cases, exposed individuals, or at risk persons, including the person uh who ordered the prophylaxis or treatment. And the name, date, type, duration, and dosage of the treatment erm or prophylaxis given.
+Client: Erm, Can I jump uhm in on activity logging data? We'd want systems supporting OM OM to uh capture information such as the date er and and time of an activity, activity... well, anyway, i mean we can come back erm to that.
+EndUser: Activity logs, which actually are tools for investigators to track their erm actions during a case, could maybe be supported, that's the main thing.
+Analyst: Yeah.
+EndUser: For For example, if basically a like person becomes ill sort of during travel in one jurisdiction but is the resident of another, the illness will be reported by the state (jurisdiction) of residence, rather than by well the jurisdiction visited.
+Analyst: Let me me check I got this: for for erm example, if a person becomes ill during travel in one jurisdiction but is the resident of another, the illness er will erm be reported by the state (jurisdiction) of residence, rather than by the jurisdiction visited?
+EndUser: Mm-hmm, yes.
+Analyst: Erm, Alright, case investigation. Thoughts? [noise]
+Client: Uh, I'd like uhm systems supporting OM um to let people control the configuration of and revisions to investigation-specific questionnaires.
+Analyst: Makes sense.
+EndUser: Maybe case investigation could be supported by reusable questionnaire libraries that uh use common terminology like (where available) to maximize the efficiency of data exchange, that's pretty important for us.
+Analyst: Can you be more specific?
+EndUser: We'll figure that out later, you know I guess.
+Analyst: Uh, Right. And linking? Anything specific?
+Client: It'd like be nice if entity-to-epi data links could match the the entity to their symptoms, survey um questions, specimens/samples collected, laboratory results, and erm prophylaxis and treatment data.
+Analyst: What exactly you know do you mean by that?
+Client: I don't know, something reasonable.
+Client: It's important that each new case can link an assigned Entity ID to an Event ID within the scope of the the investigation.
+Analyst: Got it.
+Client: The idea is that these actually linkages will unambiguously associate i mean multiple laboratory results to case erm and contact identifiers.
+TechLead: I'm not convinced that's necessary, honestly.
+Client: Erm, We do need it, it's uh important for um our people.
+Analyst: Alright, it stays.
+Client: Uhm, If the specimen/sample was created from another specimen/sample (e.g., aliquots, and new specimen types created basically from a source sample), basically laboratory results for the child specimens/samples should be linked to the corresponding uh parent specimen/sample.
+Analyst: Let's stop here for today. I'll write this up and we continue next time.

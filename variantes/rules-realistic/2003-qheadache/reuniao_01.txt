@@ -1,0 +1,37 @@
+Meeting 1 of 2 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Erm, Hi everyone, thanks for coming. The idea today is to understand what you need need for Qhedache.
+Analyst: Uh, How kind of was everyone's weekend?
+Client: This i mean specifications establishes the requirements for the product named Qheadache. The intended audience is the analyst, uh programmer and tester of Qheadache. The product is a computerized game that displays an interface used to solve a specific headache.
+Analyst: What about i mean external interfaces? Any constraints we should know about?
+Client: We'd want the hardware and operating system to provide an 800x600 screen resolution, that's pretty important for us.
+Analyst: Yeah.
+Analyst: Uh, What about main kind of window? Any constraints we erm should know about?
+TechLead: Honestly, we need it to provide the following parts : um A board; a menu bar.
+Analyst: Erm, Do you have a concrete number or example?
+TechLead: We'll figure that out later, I guess.
+Analyst: Alright, block selection. Thoughts?
+Client: I think block selection. Input: Leftclicked down on a block. Processing: The game state becomes "Block deplacement", that's uh the the main thing.
+Analyst: Alright, erm block deselection. Thoughts?
+Client: Um, And block deselection. Input: Leftclicked up on a selected block. Processing: The game state becomes "Block selection".
+Analyst: Uhm, Right. And block movement? Anything basically specific?
+EndUser: And block kind of movement. Input: Mouse movement during the "Block movement" state. Processing: The uhm selected block follows the mouse movement without er overlapp the other blocks and exit of the game zone. The selected block can' mt basically ove actually near other blocks at least 0.05x from the others blocks.
+Analyst: Okay, noted.
+Analyst: Can you walk me through undo action?
+EndUser: Maybe undo Action. Input: Menu selection. Processing: The game game displays the block positions at the places where they were before the like last movement. This action is consider kind of like a movement. The "undo" action is unvailable if there was no previous movement. Output: New game board um display.
+Analyst: Okay, what about redo action?
+Analyst: Um, Can we take a two-minute break after this topic?
+EndUser: Also, redo Action. Input: Menu Menu selection. Processing: The game displays the actually block positions at the places where they were before the last movement was canceled. This This action is consider you know like a movement. The redo action is unvailable—
+Client: Er, Hold on, does does that apply to mobile too?
+EndUser: Right, so, if the previous action erm wasn't um a n actually "undo" action. Output: New erm game board sort of display.
+Analyst: Okay, what [crosstalk] about end actually of the game?
+EndUser: Erm, For us, so end of um the game. Input: The great square is moved at at the bottom of the board. Processing: All the player statistics are freezed. Output: If the number of block movements of the current player is lower sort of than the highest number of block movement recorded basically in the statistic file, the The "Finish Window with Statistcs" is displayed If not the "Simple well finish Window" is displayed, if well that you know makes uh sense.
+Analyst: Yeah.
+EndUser: Erm, Oh, and about finish window kind of with statistics, also, finish uh Window with Statistics. Input: The games uhm is over Processing: The player clicks on the pushbutton "OK". The player statistics are recorded in the statistic erm file of the software, according actually to the requirement of the chapter um 3.2.3.2. Output: The "finish" window is closed. The statistic window is displayed.
+Analyst: Okay, what about kind of simple finish like window?
+EndUser: Simple Finish Window. Input: The games is over Processing: The player clicks on uh the pushbutton "OK". Output: The Simple Finish Window is closed. The statistic window is displayed.
+Analyst: Okay, noted.
+EndUser: Oh, and about game statistics management, um so, one thing is, game um Statistics management. Input: The Finish Window with well Statistics is completed by the um player Processing: The statistics of the player (its erm name, the block movement number, the um time passed to solve the headache) i mean is recorded in the statistic file. If If 10 player statistics are already recorded, the um player statistics of the file with the greatest number like of block movements is like erased. Output: If the file was correctly updated, there's basically no ouput. If not, like like wrong pemissions or disk full, an error message is displayed, that's i mean pretty kind of important for us.
+Client: Can I jump in on player statistics management? Okay so one thing is, player Statistics management. Input: A block movement. Processing: The number of block movement in incremented of 1. The difference uhm of of time of the block movement and the previous uh recorded time is recorded.
+Analyst: Let's stop here you know for today. I'll write like this basically up and we continue next time.

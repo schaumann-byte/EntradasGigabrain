@@ -1,0 +1,50 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Hi everyone, thanks for coming. The idea today is to understand what you need for Internetworking of Content Delivery Networks.
+Client: The final product enabling CDN peering helps in coordinated and cooperative content delivery through internetworking among distinct CDNs to allow providers to rapidly "scale-out" to meet both both flash kind of crowds and anticipated increases in demand, and remove the need for a single CDN to provision resources. erm An actually ad-hoc or planned peering of CDNs requires uh fundamental research to be undertaken to address the core problems of measuring and disseminating load information, performing request assignment and redirection, enabling content replication um and determining appropriate compensation among participants on a geographically distributed "Internet" scale. In contrast to a basically single CDN, for well which these issues are deeply interrelated and co-dependent, the main thrust for the final product enabling CDN peering is to consider them in a erm coordinated and cooperative manner among many peered CDNs, whilst satisfying uhm the complex multi-dimensional constraints you know placed on each individual provider.
+Analyst: So, let's talk about trigger. What like do you need there?
+EndUser: Service registration is triggered when either one um of actually the following occurs: (a) resources are available as a provider starts operating. Also, (b) previously registered resource information needs to be updated. Also, (c) available local resource information is required in the event of traffic surges; and (d) local and delegated external resource information is to be encapsulated in an SR instance included in an established peering um arrangement.
+Analyst: And service um registration, how do you see that working?
+Client: So the format um for service information description is defined. erm And one thing is, the interaction you know protocol between Web um Server-SR, SR-mediator is defined.
+EndUser: Er, Resource provisioning, delegation and reservation [pause] policies are in place.
+Analyst: Makes sense.
+EndUser: Erm, There's an established norm that any resource failure will uhm be i mean reported.
+Analyst: And basically trigger, how do you see that working?
+EndUser: Erm, It's invoked when a (primary) CDN kind of realizes that it can't handle a part of the workload on its WS(s).
+Analyst: Is that all for trigger?
+Client: That's all for now.
+Analyst: Can you basically walk me through exceptions?
+EndUser: Malicious requests are detected and rejected.
+Client: So web servers have already replicated uh necessary content, actually if that makes sense. And both anticipated and unanticipated user requests (traffic) er are considered.
+Client: If the user requests can't be accepted according the provider policies, service requirements kind of aren't passed to the local PA.
+EndUser: Honestly, one thing is, uhm the format of service requirements is defined.
+Analyst: Makes sense.
+EndUser: Uh, I mean, also, mediator-SR, like mediator-PR, mediator-PA interaction protocols are defined.
+Analyst: Yeah.
+Client: Um, Also, mediator works in conjunction with the PA to establish sort of negotiation, if that makes sense.
+EndUser: Interaction protocols between PAs are identified.
+Analyst: Mm-hmm.
+EndUser: The thing is, uhm malicious requests are identified and basically acted well upon. And one thing is, there are existing policies for long-term i mean peering sort of arrangement.
+Analyst: Just to confirm, and there are existing policies for for long-term peering arrangement?
+EndUser: Exactly, yeah.
+Client: There's procedure to basically perform short-term negotiation.
+Client: Uhm, And negotiation is established between selected CDN peers.
+Client: Honestly, well also, primary CDN like has already acquired enough sort of external resources.
+Client: Functional policies are identified and deployed, that's pretty important for us. And effective content delivery is ensured through SLA satisfaction.
+Analyst: Anything else on on exceptions?
+EndUser: No, I think that's it.
+Analyst: Uhm, Okay, next topic: disband or um re-arrangement. How should that work?
+Client: For us, there could be circumstances under which a given peering arrangement may need to disband or rearranges itself.
+Analyst: Right. And exceptions? Anything specific?
+Client: And policies identifying the consequences of SLA violation are defined. And so policies are in place to perform renegotiation er for problem well resolution.
+Analyst: Right.
+Analyst: What uh about user interfaces? Any hard limits you know there?
+TechLead: Erm, For user like interface design, common GUI standards will be followed along with uh the presence of keyboard shortcuts, error message basically display standards etc.. And standard buttons and functions (i.e. help) will appear on every screen.
+Analyst: What about communications interfaces? Any constraints we should know about?
+TechLead: From a a technical point of view, TCP/IP will be used as the transport protocol, where each CDN um server establishes a TCP erm connection to the the well network elements using a well-known port number.
+Analyst: Er, So if I um got uhm it right, sort of from a technical point of view, TCP/IP will sort of be used as the transport protocol, where each CDN server establishes sort of a TCP connection to the network elements using a well-known port number?
+TechLead: Exactly, yeah.
+TechLead: Interaction sort of among kind of surrogates have to um be performed using HTTP erm or FTP.
+Analyst: Okay.
+Analyst: Er, Okay, I I basically think we have like everything. I'll consolidate and send it around.

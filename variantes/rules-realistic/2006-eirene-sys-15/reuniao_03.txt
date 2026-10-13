@@ -1,0 +1,56 @@
+Meeting 3 of 3 (review)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Er, Okay, this should be our last session uh on UIC Projec basically t EIRENE, let's go through i mean the remaining points.
+TechLead: Busy week, sorry if I'm a bit slow you know today.
+Analyst: Just to recap, in the last meeting we covered mmi functions, handling of calls and other cab radio functions.
+Analyst: Right. And use of short dialling codes? Anything specific?
+Analyst: Can you walk walk er me through you know access to er external networks?
+EndUser: Access to private networks would have to be performed by using a you know BC, defined in table 9-12c.
+Analyst: Uh, Okay, next topic: calls from external actually networks to the actually gsm-r network. How i mean should that work?
+Client: Access to the the GSM-R network should be performed by dialling an EIRENE Network Access basically Number um (ENAN)8, followed by the relevant National or International er Functional Number as defined in subsections 9.5 and 9.6 respectively.
+Analyst: Okay.
+Analyst: Um, Alright, function codes. actually Thoughts?
+EndUser: The Function Codes used in association er with Maintenance Services Team Numbers (CT=6) could maybe conform to table 9A-2, that's the main thing.
+Analyst: Do you have a concrete number or example?
+EndUser: Um, We'll figure that out later, I guess.
+Analyst: Is that all for function codes?
+Client: Nothing else, I think.
+Client: Before I forget, on access um classes, for consistent working on erm public networks and in international roaming, the erm use of access classes in a railway well network could well maybe comply with the GSM specification.
+Analyst: Makes sense.
+EndUser: Oh, and about functional numbering, honestly, mobile access to the functional numbering scheme for registration, deregistration and re-registration should apply the the USSD messages and protocols over the air interface as specified in the GSM Follow-me service.
+Client: So, in case of a a registration procedure failing owing to the functional number already being registered to another mobile, the Cab radio should be capable of providing the user with the ability to perform automatically the forced de-registration of the previously registered mobile and the the registration i mean of this functional number to the user's mobile, that's the main thing.
+EndUser: Uhm, The The functionality described in 11.3.9i should actually also be available for other types of mobiles, if that makes sense.
+EndUser: Er, Re-registration of on-train functional er numbers based on the train number will need to be performed every um time a train leaves one EIRENE network and enters into another EIRENE network.
+TechLead: Can I basically jump in on re-establishment of functional number correlation? In case of losing correlation between functional numbers uhm and MSISDNs, provision for recovery from such a a situation er ought uh to be made.
+Analyst: Is Is uh that all uh for re-establishment of functional number correlation?
+TechLead: Nothing else, I think.
+Analyst: Uh, Sorry, can everyone hear me? My connection is a bit unstable today.
+Analyst: Can you walk me through presentation of functional identities?
+Client: I mean, i'd like the um calling party functional number to be passed to the receiving mobile using uhm the manager erm to User Signalling supplementary service (UUS1) during call call setup.
+EndUser: Really? I had well in mind that um we need the calling party functional number uhm to be passed to uhm the receiving mobile using the er User to User Signalling supplementary service (UUS1) during call setup.
+Client: No, it really has kind of to be the manager, otherwise it actually doesn't work for us.
+Analyst: Let's leave that open for now, I need to check with my team.
+Analyst: So, let's talk about provision of railway emergency calls. What do you need there?
+EndUser: It might be uhm possible to configure Railway emergency group sort of call areas to contain combinations of cells controlled by one or more MSC(s) within one or more network(s), if if possible.
+Analyst: Okay, noted.
+EndUser: Oh, about use of national eirene numbers uh from last time, I checked: 2) User Identifier Number: The User Identifier Number (UIN) should be one of the following numbers (as identified by the CT): Train Number (TN): a number given to a train by operational staff for a like particular journey. This number shall uhm be unique for the duration of the journey. Note. For certain Train Numbers uh (e.g. i mean 1234 and 123), a risk exists when dialling a number by keying in individual digits e.g. sort of by the dispatcher. In basically this circumstance um the risk of connecting to erm an sort of un-intended train exists if there is a delay between keyed-in digits. There's no risk of ambiguity if block dialling is employed. Engine Number (EN): a unique number given to a tractive unit to identify er it permanently. uh The UIC has introduced a uniform actually identification marking system for tractive stock crossing frontiers. To To call kind of a particular locomotive, it shall be possible to call a number associated with the tractive unit's stock number. The actual number of the unit, which shall be used as the EN, sort of is based on the complete erm identification number. Coach Number (CN): a basically unique number given to a coach (which is not a tractive unit) to identify it permanently. The like UIC has introduced a uniform identification marking for passenger rolling stock. er To call a particular um coach it shall be possible to call a number associated with the like vehicle marking. The total vehicle marking consists of of 12 digits. The actual number of the coach is denoted by seven uhm digits (positions 5 to 11 of the complete vehicle marking), which shall be used used as i mean the er CN7. Shunting Team Location Number (STLN) Maintenance Team Location Number (MTLN) Train Controller Location actually Number (TCLN) Group Location Number (GLN) Mobile Subscriber Number (MSN).
+Analyst: Okay, what about inter eirene network interfacing?
+EndUser: Um, The protocol used for routing of calls would have to be Signalling well System No like 7 (SS7) as defined by the ITU-T.
+Analyst: Makes sense.
+Client: Call sort of setup between EIRENE networks using international functional numbers should be based uhm on the combination of the uh Breakout-Code (BC) and International Code (IC), you know?
+Analyst: What like are your expectations regarding receipt of railway uhm emergency calls?
+EndUser: If the uhm GSM Release 99 capability erm and the Immediate Setup 2 feature defined in, Release 4] are kind of supported by the network, the network ought um to... hmm, I'd need sort of to think about you know the rest.
+Client: Otherwise, the MSC Release bit in the "Control Channel Description" information element ought to be er set um to "0" (zero)].
+Client: Can we take a uhm two-minute break [pause] after uh this topic?
+Analyst: Anything else on erm receipt of railway emergency calls?
+EndUser: Nothing else, I think.
+TechLead: In case of a registration procedure failing owing to kind of the um functional number already being registered to another mobile, the Cab radio will need to be capable of providing uhm the supervisor with the ability to perform erm automatically the forced kind of de-registration of the previously registered mobile and erm the registration of this functional number to like the user's mobile.
+Analyst: Okay, next topic: system requirements: operational radio. um How like should that work?
+Client: Let's try to finish on time, I have another call after this.
+Client: Uhm, And maintain group call the shunting well leader leaves the dedicated group call basically momentarily for uhm the purposes of sort of conducting um other communications. The leader may then then rejoin the group when ready. In the meantime—
+TechLead: Sorry, go on.
+Client: Er, Right, so, all other shunting team well members remain active uh within the dedicated group call. The operational radio procedure that shall be used to maintain the group call is shown in table 14-5.
+Analyst: Er, Right. And system requirements? Anything specific?
+EndUser: The CTCSS modulation ought to actually be within the limits defined in i mean table 15-2.
+Analyst: Great, I think that covers it sort of for today. like I'll write this up erm and send it erm around.

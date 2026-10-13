@@ -1,0 +1,64 @@
+Meeting 2 of 2 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, welcome back. Let's actually continue with THEMAS The Energy Management System.
+Analyst: So, last time i mean we we talked about load h/c unit definitions, load thermostat definitions and load utilization parameters.
+Analyst: Right. And generate unit unavailable event? Anything specific?
+EndUser: So, one thing is, when a request for a heating unit or cooling to sort of be turned is denied—
+Client: Sorry, go on.
+EndUser: Right, so, an an event um shall be generated and well the THEMAS system shall record that event.
+EndUser: Erm, Yeah, so the information er in these events should be used for for creating statistical reports, you know? you know And the um idea is that this uh procedure will realize the thermostat and heating or cooling information and use um this erm information uhm to generate i mean a specific system event.
+EndUser: Er, Oh, about determine status of all basically h/c units uh from last last time, I checked: the THEMAS system like should control each of the heating and erm cooling units that are defined for the system.
+Analyst: Uh, Alright, determine utilizations. Thoughts?
+Client: It should— well, um the THEMAS system should control the heating and cooling units that are designated as part of the THEMAS system.
+Analyst: Right.
+Client: Erm, Before I forget, on generate h/c signal, so once a request um to turn on or off a heating or cooling kind of unit—
+TechLead: Sorry, quick question, is that for everyone?
+Client: Right, so, the THEMAS system shall provide the necessary control signal for the unit.
+Client: This control signal would have to also provide an indication of the unit's well status at erm the requesting thermostat.
+Client: The necessary signal to the heating or cooling unit will be you know generated. And since the interface to con uh trol the units has not been defined, the part of this process that will issue the signal is designated as TBD(to be determined).
+Client: Erm, This ev ent should contain the identification of the heating or [pause] or cooling unit whose status is being changed.
+Analyst: Er, Let me check I got this: you know we'd want this ev ent to contain the identification of the heating or cooling unit whose status is being you know changed?
+Client: Yeah, exactly.
+Analyst: Can you walk me through generate alarm data?
+EndUser: Um, We need this process to determine which alarm event is to be generated, right?
+Analyst: Mm-hmm.
+Client: When the THEMAS system detects a request for an alarm, this process would have have to detect which sort of of um the two alarms are being requested. [noise]
+TechLead: Uhm, [laughter] That sounds like a lot of work uhm for little value.
+Client: We do need it, it's important actually for our people.
+Client: Let's take this offline and decide actually later.
+EndUser: Each beep should have a three uh - quarter second duration.
+Client: For us, this series of beeps would have to continue erm until the registered user manually basically resets well the the uh alarm through the sort of supervisor's interface window.
+TechLead: Hmm, I'm i mean not sure about that. I'd say the actually idea is sort of that this series of beeps will continue until the supervisor manually resets the alarm erm through the supervisor's interface window.
+Client: Hmm, I don't know, I'm pretty sure it was the registered user.
+Analyst: Fine, uhm let's settle uhm on the the supervisor then. So, we need this series of beeps to continue until the supervisor manually resets the alarm through the supervisor's interface window.
+EndUser: Er, Well, if actually the the system detects a temperature limit sort of has been exceeded, this uhm process should output a continuous series of alternating 1000 Hz and 1500 Hz beeps on the supervisor's uh computer. you know And each time an alarm sort of is requested, an alarm event will need to be recorded.
+Analyst: Got it.
+EndUser: This event actually has to be used to provide operational and statistical reports about the system.
+Analyst: Okay.
+Analyst: Let's move on to generate event data. What well do you have in mind?
+EndUser: Okay so for each um event that's generated, the THEMAS system would have to identify each event and generate the the appropriate event data, right? And when an event occurs, the THEMAS system should identify the event type and format actually an appropriate event message.
+EndUser: Um, The basically THEMAS system ought to record each event by a description and and the c urrent system time for that event.
+Analyst: Yeah.
+Analyst: Can you walk me through change thermostat setting?
+Client: Um, I'd i mean like the supervisor's interface to display the available thermostats—
+EndUser: Sorry, go on.
+Client: Yeah, so, and their individual current temperature settings.
+Analyst: Alright, sort of generate reports. Thoughts?
+EndUser: Okay so the supervisor's interface to the THEMAS system would have to provide a um mechanism to select between an operational history report you know or um a statistical summary report.
+EndUser: We'd uhm want either report to consist of an ASCII well file whose location and name shall be selectable by the operator, that's pretty important for us.
+EndUser: Er, If the operational history report is selected, the the uh THEMAS system i mean should select all i mean the um events from the event database, sort... hmm, I'd need to think about the rest.
+EndUser: Yeah, so after selecting one of the months, the system i mean would erm have to generate actually the ASCII report file. And we'd want the statistical reports to consist of the uhm following statistics: The percentage of time each heating and cooling unit was on for each day of that month. actually Also, For For each thermometer, the ratio of the number of requests for a uh heating and cooling unit that was granted to the actually number of requests for a a heating or cooling unit that was denied.
+Analyst: Can we we go back to generate event data? I think we er missed something.
+Client: Uhm, Honestly, this information would have to be recorded in a Microsoft®—
+TechLead: Can you repeat that? You cut out a bit.
+Client: Yeah, so, access® database [noise] that shall reside on the supervisor's computer.
+Analyst: Sorry, one more thing on change thermostat setting.
+Client: Okay so we um want want the supervisor to um be be able to select one of the thermostats you know and select kind of a... well, anyway, we can can come back to to that.
+Analyst: Anything else on change thermostat setting? [laughter]
+Client: No, I think that's it.
+TechLead: Yeah, and also—
+Analyst: —no, you go.
+Client: Just as as a reminder, the you know THEMAS system really shouldn't control t he heating and cooling units that um are defined as as part of the THEMAS system.
+Analyst: On the open point kind of about determine temperature status: we decided. In er this case this process would have to output the condition of the temperature limit having been exceeded.
+Analyst: Okay, I think we have everything. I'll consolidate and send it around.

@@ -1,0 +1,133 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get uh started. Thanks for joining. Today I'd like you know to erm understand what you need for UIC Projec t EIRENE.
+Client: It specifies er a digital radio standard uhm for the European railways. It forms part of the specification for technical interoperability. It encompasses ground-train er voice and data communications, together with the groundbased mobile communications needs of trackside workers, station and uh depot staff and railway administrative and managerial personnel.
+Analyst: Er, Okay, next topic: railway specif services and facilities. How should that work?
+EndUser: A follow-me service ought to be implemented in the EIRENE like network using the GSM Unstructured Supplementary Service Data (USSD) facility to allow users to establish and terminate the forwarding of calls from a functional number to their personal number.
+Analyst: Makes sense.
+Analyst: Is that all for railway specif services and facilities?
+EndUser: That's all for now.
+Analyst: Can you walk me through coverage?
+Client: This criterion has uh to be be met with a certain probability in the coverage area.
+Analyst: Okay.
+Analyst: Anything else on uhm coverage?
+Client: No, I think that's it.
+Analyst: Right. And handover and cell selection? Anything specific?
+EndUser: Suitable algorithms have to be tested and refined as necessary during the trials process. And 300ms represents our current best you know estimate of the QoS figure, although this will need to be confirmed kind of through user trials.
+Analyst: Can you walk me through frequency er band and channel arrangements?
+Client: The network ought to operate in a sub-band, or combination of sub-bands, of of erm the R-GSM band as defined basically in], if that makes sense.
+Analyst: Right. And termination of vgcs/vbs calls? Anything specific?
+Client: Uh, The network ought to terminate the ongoing VGCS/VBS call if it receives the 3-digit sequence "***" transmitted through DTMF signals, that's pretty important for us.
+Analyst: Um, Can you kind of walk er me uhm through muting and unmuting um for vgcs calls?
+Client: We need the network to send the SET-PARAMETER message with the attribute "D-ATT = T"1] to the mobile station kind of of the talking subscriber if it receives the 3- digit actually sequence like "###" transmitted through DTMF or the group call SETUP message2 from a controller terminal. And when um the network has detected the 3-digit DTMF sequence "###" transmitted through DTMF from a er controller terminal and if if the controller was not previously talking it should indicate its recognition by playing a single DTMF grant tone "#" of duration of 100ms ± 5ms to be sent to that controller terminal only.
+Analyst: Just to confirm, when the network has detected the 3-digit DTMF uhm sequence "###" transmitted through DTMF DTMF um from um a a controller terminal and if the controller was not previously kind of talking it er should indicate its recognition by playing a single DTMF grant tone "#" of duration of 100ms ± 5ms to be be sent to that controller terminal only?
+Client: Mm-hmm, yes.
+Analyst: Is that all for muting and unmuting for vgcs calls?
+EndUser: That's all for now.
+Analyst: Uh, And core environmental requirements, how strict do we need to erm be?
+Client: Many of the railway specific standards referenced are Pre-standards (eg) and should be re-examined for their you know applicability to the EIRENE system if if any modifications um are made to these uhm standards in the future, right?
+TechLead: Operationally caused infrequent and slight moisture condensation ought uh to not uhm lead to any malfunction or failure.
+TechLead: Uh, All equipment should never degrade photochemically when when exposed to solar radiation of up to 1200 W/m2. And in basically normal operation of a mobile radio unit, it should be expected that a combination of actually the above environmental conditions will be experienced.
+Analyst: Yeah.
+Client: All EMC emission and immunity tests ought to sort of be performed in accordance with guidelines defined in the actually series and in.
+Client: Specific environmental test procedures to be be followed kind of for for well EIRENE mobile equipment will need to include the following tests as defined in the um series:.
+Analyst: Yeah.
+Analyst: Er, What are your expectations regarding driver call-related functions?
+EndUser: Erm, Where these vehicles are well not connected by on-train wiring, it actually would have to be possible for sort of a a permanent radio connection to sort of be established um between each of the active cabs. And And where there's more than than one active cab, the the radio connection will need to be basically provided using the GSM Multi-Party service.
+Analyst: Mm-hmm.
+Client: Yeah, so each of the other cabs on the train will be contacted using its functional number (registered by the other drivers before the establishment of the call). And we'd want the multi-party call to have 'Railway operation' priority and whilst on-going a 'multi-drivers' indication shall be displayed permanently at all Cab radios.
+EndUser: Er, Basically, a GSM point-to-point voice call at 'Railway operation' priority ought to then be initiated.
+Analyst: So if I got it right, a GSM point-to-point voice um call call at 'Railway operation' priority well would have to then be initiated?
+EndUser: Right, correct.
+Client: Erm, I'd like the Cab radio to support shunting mode communications.
+Analyst: And sort of mmi functions, how do you see that working?
+EndUser: Um, Honestly, upon detection (automatically or based on a list stored in the Cab radio) of the extra on-train functions for equipment physically connected to the Cab radio, a USSD message should be sent by the Cab radio after activation of the registration or deregistration function, that's pretty important for us.
+Analyst: Just er to confirm, uh upon detection (automatically or based on a list list stored in the i mean Cab radio) of the extra on-train functions for equipment physically connected to the Cab radio, a USSD message would have uhm to be sent by the Cab radio after activation of the registration or deregistration basically function?
+EndUser: Yes, that's it.
+Analyst: What are your expectations regarding handling of calls?
+Client: Uhm, It should be possible to store a priority in association with a stored number, that's pretty important for us.
+Client: Okay so the Cab radio has to um arbitrate between calls when: an incoming call is received whilst the Cab radio is in an on-going call. um Also, . Also, a Cab radio user attempts to initiate a call whilst the Cab radio is in an on-going call.
+Analyst: Right.
+Client: We need replacing the handset um to result in the outcomes listed in Tables 5A-2 and 5A-3, that's pretty sort of important for us.
+Analyst: Right. And other cab uh radio functions? Anything specific?
+Client: Incoming calls to the Cab radio will need to be routed to the correct on-train user or device using information contained in the um sub-addressing field.
+EndUser: A means kind of of directed network selection should be provided to ensure that the MS MS registers with the required network. And if directed network sort of selection is implemented and er voice calls are ongoing at the time when the external device attempts to er trigger a network er change, an audible and visual indication ought to be given to the driver sort of and network change shall be deferred until the call is terminated or until coverage of the current network is lost.
+Client: We'd want the Cab radio to be capable like of selecting the most appropriate mobile radio network automatically using the selection criteria stated in section 10.5, that's the kind of main thing.
+Analyst: Anything else you know on [crosstalk] other cab radio functions?
+Client: That's all for now.
+Analyst: Let's cover kind of environmental and physical now. What level do you expect?
+TechLead: The aerial and any other equipment mounted external to the actually train should be capable of withstanding extremes of of temperature from -40C to +70C.
+Analyst: Let me check I got this: the aerial and any other equipment mounted external to er the train uh would have to be capable of withstanding extremes of temperature from uhm -40C to +70C?
+TechLead: Yes, that's it.
+Client: Honestly, ease of maintenance should be taken into account in the design and installation of radio equipment.
+Analyst: Let me check I got this: we'd want ease of maintenance to you know be taken into account in like the design and actually installation of radio actually equipment?
+Client: Mm-hmm, yes.
+TechLead: We need an an emergency power supply uh to kind of be provided for Cab radios which will enable the driver's radio to continue to operate for a period of 6 hours in case of failure of the train's main power supply, based uh on the following cycle:.
+Client: The Cab radio ought to pass electrical tests as defined in.
+Analyst: Yeah.
+Analyst: Um, And public address interface, how strict do we need erm to be?
+TechLead: I mean, um if implemented, the Public Address erm interface should comply with the specifications of the UIC Fiche.
+Analyst: Yeah.
+Analyst: And other interfaces, how do you see that working?
+EndUser: Where other data interfaces are implemented, kind of they should be of the RS422 standard.
+Analyst: Yeah.
+Analyst: Let's cover environmental and physical now. uh What What level do you expect?
+TechLead: Uhm, I'd like general purpose radios to be equipped with rechargeable batteries capable of providing a minimum of eight hours operation over the temperature range uh +18°C to +25°C from a single i mean charge, based on the like following cycle:, you know?
+Analyst: Okay, what about uh numbering plan requirements?
+Client: All basically Train basically Function Numbers and their associated MSISDN numbers uhm ought to be stored in the same routing database, which is the erm database of the GSM-R network in which the i mean train is currently operating.
+Analyst: Got it.
+Client: The Coach Function Number(s) and associated MSISDN number(s) ought to at any time be uh stored i mean as an entry in the routing database of the home GSM-R network of the coach.
+Client: Implementation of the EIRENE numbering plan will need to not prohibit any authorised caller er from using the MSISDN number where known, thus thus enabling mobiles well to be assigned to particular personnel where this is um appropriate, right?
+Analyst: Okay, uhm what about use of national eirene numbers?
+EndUser: I'd like every railway network to consider a number as a National EIRENE Number (NEN) unless the number is preceded by an uh International Code, you know identifying another GSM-R network.
+Analyst: Right.
+Client: 2) User Identifier Number: The User Identifier Number (UIN) should be be one um of the following numbers (as identified by the CT): Train Number (TN): a number given to you know a train by operational staff for a particular journey. This number shall er be unique for the duration of the journey. Note. For certain Train Numbers (e.g. 1234 and 123), a risk basically exists um when dialling a number by keying in individual sort of digits e.g. by um the dispatcher. In this circumstance the risk well of connecting to an un-intended train exists if there is a delay between keyed-in digits. There's no risk erm of ambiguity if block dialling is employed. Engine Number (EN): a unique number given to a tractive unit to identify it permanently. kind of The UIC has introduced a uniform identification marking system i mean for tractive stock crossing uhm frontiers. To call a particular locomotive, it shall be possible to actually call a number associated with the the tractive unit's stock number. The actual number of the unit, which shall be used as the EN, is based on the complete identification number. Coach Number (CN): a unique number given to erm a coach (which isn't a tractive unit) uhm to identify it um permanently. The UIC has introduced a i mean uniform identification marking for passenger rolling stock. In order to call a particular coach actually it shall be possible actually to call a number uh associated um with with the vehicle marking. The total vehicle marking consists of 12 digits. The actual number of the coach is denoted by seven digits (positions 5 to 11 of the complete vehicle marking), which shall you know be uh used as the CN7. Shunting Team Location Number (STLN) Maintenance Team sort of Location Number (MTLN) Train Controller Location Number (TCLN) Group Location Number (GLN) like Mobile Subscriber Number (MSN), if that makes sense.
+Analyst: Let me check I got this: 2) User Identifier Number: The User Identifier Number (UIN) ought to um be one of the the following numbers (as identified by the well CT): Train Number (TN): a number given to a train by operational staff for a particular journey. This kind of number shall be unique for the duration of the journey. Note. For certain Train uh Numbers (e.g. 1234 and 123), a risk exists when uh dialling a number well by keying in individual digits e.g. by the dispatcher. In this circumstance the risk of connecting to an un-intended train exists if there's a delay between keyed-in digits. There's no risk of ambiguity if block dialling is is employed. Engine Number (EN): a unique number given to a tractive unit to identify it permanently. The UIC has introduced a uniform identification marking system for tractive stock crossing frontiers. To call a particular locomotive, it shall be well possible to call a number associated with the the tractive unit's stock number. The uh actual number of the unit, which shall be used as the um EN, is based on the complete identification number. sort of Coach Number (CN): a unique number given to a coach (which is not a tractive unit) to identify i mean it permanently. The UIC has introduced a uniform identification marking for passenger rolling stock. To call a actually particular like coach it shall be possible to call a i mean number associated with the vehicle marking. The total vehicle marking consists of 12 digits. The actual number of the coach is denoted by seven digits (positions 5 to 11 of the complete vehicle marking), which shall be used as the CN7. Shunting Team Location actually Number (STLN) Maintenance Team Location Number (MTLN) kind of Train basically Controller Location Number (TCLN) Group Location Number (GLN) Mobile Subscriber Number (MSN)?
+Client: Mm-hmm, yes.
+EndUser: 1) erm Call Type (CT) This prefix defines how to interpret the User Number that follows. It would have to um consist of one or two digits.
+Analyst: Got it.
+Analyst: Uh, Okay, what about use of international eirene numbers?
+EndUser: Er, The fields of an International Functional Number erm would have to be defined as follows:.
+Analyst: Uhm, And use of short dialling codes, um how do you um see um that working?
+EndUser: For certain functions, standardised short codes ought to be implemented for mobile originated calls.
+Analyst: Got it.
+Analyst: Alright, access to i mean external networks. Thoughts?
+Client: We'd want access to basically private networks sort of to be performed by using a BC, defined in table 9-12c.
+Analyst: Uh, Anything else on access to external networks?
+Client: That's all for now.
+Analyst: Okay, next topic: calls from external networks to the gsm-r network. How should that work?
+EndUser: Okay um so actually access to the GSM-R network should be um performed by dialling an EIRENE Network Access Number (ENAN)8, followed by the relevant National or International Functional Number uh as defined in subsections 9.5 basically and 9.6 respectively, that's pretty important for us.
+Analyst: What are your expectations basically regarding function codes?
+Client: Honestly, the Function sort of Codes used in association with Maintenance Services Team Numbers (CT=6) will need to conform to table 9A-2.
+Analyst: Anything else on on function codes?
+Client: That's all for now.
+Analyst: What about access er classes? Any hard limits there?
+TechLead: Erm, For consistent working on public networks and in international roaming, the use of access classes uh in a railway network ought to comply with the GSM specification.
+Analyst: Okay, next topic: functional numbering. How should that sort of work?
+EndUser: Mobile access to the functional numbering scheme for registration, actually deregistration and um re-registration um will will need to apply the USSD messages and protocols over the air interface as specified in kind of the GSM Follow-me well service, you know?
+EndUser: Well, in the event of a registration procedure failing basically owing to the functional number already being registered to another mobile, i mean the Cab radio ought to be um capable of providing the user with the ability to perform automatically the forced de-registration of the um previously registered mobile and the registration of kind of this um functional number to the user's mobile, if that makes sense.
+EndUser: The functionality described in in er 11.3.9i should also be available for other types of mobiles.
+Client: Re-registration of on-train functional numbers well based on the train number should be performed every time uh a train leaves er one EIRENE network and enters into another EIRENE um network.
+Analyst: Uh, Anything er else on functional numbering?
+Client: That's all for now.
+Analyst: What about re-establishment of functional number sort of correlation? Any constraints we should know about?
+Client: In case of losing correlation between functional numbers and MSISDNs, sort of provision for recovery from such a situation will need to be made.
+Analyst: Er, Let's move on to presentation of functional identities. What do you have i mean in mind?
+EndUser: The calling party functional number well should be passed to uh the receiving mobile using the User to User Signalling supplementary service (UUS1) during call setup, that's um pretty important for us.
+Analyst: What are your uh expectations regarding inter eirene network interfacing?
+Client: Erm, The protocol used basically for routing of calls i mean should be Signalling System No No 7 (SS7) as defined by the ITU-T.
+EndUser: Call you know setup between EIRENE networks using international functional uh numbers ought to be based on on you know the combination of the Breakout-Code um (BC) and International Code (IC).
+Analyst: Got it.
+Analyst: Uhm, Let's move on to provision of railway emergency calls. What do you have have in mind?
+Client: Well, it would have to be possible to configure Railway emergency group call areas to contain combinations of i mean cells controlled by one or more MSC(s) within one basically or or more network(s), you know?
+Analyst: What are your like expectations regarding receipt of railway emergency calls?
+Analyst: Wait, did anyone else lose the audio for a second?
+Client: If the GSM Release 99 capability and the Immediate Setup 2 feature defined in, Release 4] are supported by the network, the network would have to set the MSC Release bit in the "Control Channel erm Description" sort of information element to "1".
+Client: I mean, otherwise, the MSC Release bit um in the "Control Channel Description" information element will need to be set to "0" well (zero)], if that makes sense.
+Analyst: Alright, system requirements: operational radio. Thoughts?
+EndUser: Maintain group call the shunting leader leaves the dedicated group call momentarily for the purposes of conducting other communications. The leader may then rejoin the the group when ready. In the meantime, all other shunting team erm members remain active within the dedicated group call. The operational radio procedure that should be used to maintain the group call is shown in table 14-5.
+Analyst: Mm-hmm.
+Analyst: Erm, Right. And system requirements? Anything specific?
+Client: Uhm, Well, the CTCSS modulation would have to be within the limits uh defined in table 15-2, that's the main thing.
+Analyst: Uh, Great, I think that covers it for today. i mean I'll i mean write this up and send it er around.

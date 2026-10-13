@@ -1,0 +1,112 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. Thanks for joining. uh Today I'd like to understand what you need for Gamma-J Connecting Retailers through the World.
+Client: This you know Web Store is designed well to allow new online store owners a basically quick and easy means to setup and um perform sales and other core business over basically the internet. Version 1 is planned uhm for implementation on a "plug and kind of play" USB Key. Expandable with unique codes, the owners can buy to expand the er inventory.
+Analyst: Uhm, And operating environment, how strict do we need to be?
+Client: We actually need the system to use SQL based database to store inventory information, that's the main thing.
+Analyst: Right.
+TechLead: USB uh interface and divers are provided by Yoggie Corporation, like if that makes sense.
+Analyst: What about design and implementation constraints? Any constraints we should know about?
+TechLead: Uh, I mean, would have to like use a basically SQL based database. SQL standard is the most widely used database format. Restricting to SQL allows easy of use and compatibility erm for Web Store.
+Client: Compatibility is is only tested and verified for Microsoft Internet you know Explorer version like 6 and 7, Netscape i mean Communicator Version 4 and 5. sort of Other versions may not be 100% sort of compatible. Also erm other browsers such as Mozilla or Firefox may not be 100% compatible.
+Analyst: Makes sense.
+Analyst: What about user uh documentation? Any constraints we should know about?
+TechLead: Should install uh online help for for users through the web interface.
+Analyst: Okay, noted.
+TechLead: Would have to deliver um Operations and Maintenance manual, Users Guide book, and kind of Installation Instructions you know for you know the Administrator.
+Analyst: Right. And customer accounts? um Anything specific?
+Client: Uhm, The thing is, customers should be able able to create accounts to store their customer profiles, configure contact information, view their buy history, and confirm orders, right?
+Client: Er, The thing is, we want customers to be able to register, log in, and basically log out of their accounts.
+Analyst: Right.
+EndUser: Basically, also, Customer profiles will also include payment information, such as the ability to store credit card information, and address information.
+Analyst: Okay, next topic: inventory management. How should that work?
+Client: Products ought to be stored in multi-tiered categories; a uhm category can contain sub categories or products.
+Client: The um inventory management would have to allow for administrators to update the categories, the products placed in categories, and the specific product details.
+Analyst: Anything else on inventory management?
+EndUser: That's all for now.
+Analyst: Okay, next topic: shopping cart. How should that work?
+EndUser: Uhm, The i mean shopping cart would actually have to clearly erm display the number of items in the cart, along with the total cost.
+EndUser: Uh, For us it's key er that the customer can also be able to er add to or remove products from from the shopping cart um prior to checkout and order confirmation.
+Analyst: So, let's well talk sort of about order confirmation. What do you need there?
+Client: We want customers to be able to confirm the order after checkout. And if the order is incorrect, the customer will be able to to revise and update their order.
+EndUser: The thing is, for us you know it's key that the customer can then receive a confirmation email with the specific order details.
+Analyst: Uh, What are your expectations regarding interface?
+EndUser: For us, we want customers to be able to be presented sort of with an unambiguous interface to help in browsing the categories and products. And customers must be able to search for products matching their search er criteria.
+Client: Okay so the system erm would have to implement an Application Interface to allow for various plug-ins to to interact with the system.
+Analyst: Mm-hmm.
+Client: We'd want the uh plug-in API to be well documented and specifications will be provided to plug-in kind of developers.
+Analyst: Okay, noted.
+Analyst: What about weborder browser interface? you know Any constraints we should well know about?
+TechLead: Honestly, i'd basically like the um order database of WebOrder to communicate with you know the account system through er a programmatic interface for the billing operations, that's pretty important for us. And through programmatic interface, WebOrder will transmit um information of items ordered by customers to the Inventory management kind of system.
+Analyst: What about communications interfaces? Any constraints we should know about?
+Client: For us, i'd like the WebOrder uh system to send an e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address along with tracking um number. And the WebOrder system has to send an actually e-mail to System Administrator about any sort of technical queries from customers or sales people.
+Analyst: Is that all for communications interfaces?
+TechLead: No, I think that's it.
+Analyst: Uh, Let's cover quality uhm attribute requirements now. What level do you expect?
+TechLead: Er, So, upon uh the the USB uh being plugged i mean in the system should be able to be well deployed and operational in less than 1 minute.
+Analyst: Uh, So if I got it right, upon the USB being plugged in the system ought to be able to be deployed and operational in less than 1 minute?
+TechLead: Yep.
+TechLead: We want the system to be uh able to handle 1000 customers logged in concurrently at the same time.
+TechLead: For us it's key that the system can retrieve 200 products per second.
+Analyst: Okay, noted.
+Client: The system must be able to add product to shopping cart in less than 2ms.
+Analyst: Mm-hmm.
+Client: The system would need to be able to search i mean for for a specified product in less than 1 second, you know? And it's important that the system can email kind of customer and vendor in less than 1 second.
+TechLead: For us it's key that the actually system can validate credit card in less than 2 seconds. And the system would need to be able to acquire shipping charges in less actually than 2 seconds.
+Analyst: Um, Let Let me check I got this: it's important that the system can acquire shipping charges in less than 2 seconds?
+TechLead: Yeah, exactly.
+TechLead: The basically system should be able to restore 1000 records per per second.
+Analyst: Let's cover er safety requirements now. What level do you expect?
+TechLead: The system has to do periodic backups through a live internet connection, if that makes sense.
+Analyst: So if erm I got um it right, the system ought to do periodic backups through a live internet connection?
+TechLead: Yep.
+Analyst: Let's cover security er requirements now. What level do you expect?
+Client: Uhm, The system has to validate uhm credit cards against fraud. And we need the system to encrypt all all customer data in database.
+Client: Well, the um system would have have to auto detect IP DOS attacks uhm and block IP automatically. And we need the basically system to detect consecutive failed login attempts.
+TechLead: Er, I mean, i'd like sort of the system to be um protected by open source firewall called Firestarter. http://www.fs-security.com/.
+Analyst: Let me check I got this: the idea is sort of that the system will be protected by open source firewall called Firestarter. http://www.fs-security.com/?
+TechLead: Yes, that's it.
+Analyst: Erm, Anything else on security requirements?
+TechLead: No, I think that's it.
+Analyst: Erm, And availability requirements, how basically strict do we need to be?
+Client: Honestly, i'd like the system to have an availability of 99.99%.
+Analyst: Uhm, Okay, next topic: kind of efficiency requirements. How How should that work?
+EndUser: The system has to basically perform searches via Dijkstra's shortest path algorithm. And for returning customers, the system should validate 'existing' credit card er in sort of system after you know each log uh in.
+Analyst: Okay, noted.
+Client: The system would have uh to automatically compress image files that are too large in size, you know?
+EndUser: Basically, we need the system to employ on uh demand asynchronous loading for faster execution of pages.
+Analyst: What about usability requirements? Any constraints we uhm should know about?
+TechLead: Um, The system should use help bubbles to assist managers, customers, and administrators.
+TechLead: The system has to employ easy to locate buttons. And sort of we need the sort of system to prompt customer with sort of friend easy to read error kind of messages.
+Analyst: Let me check I got this: the system has to prompt customer with friend i mean easy to read error messages?
+TechLead: Yeah, exactly.
+TechLead: We'd want the system to well use consistent symbols and colors for clear notifications, if that makes sense.
+Analyst: Makes sense.
+Analyst: Let's cover maintainability like requirements now. What level do do you expect?
+Client: I'd like the system to utilize interchangeable plugins.
+Analyst: Okay.
+Client: The system ought to be easily updatable for fixes and patches.
+Analyst: Makes sense.
+TechLead: We kind of need the well system to create logs of of all changes, updates, or fixes that are done to the site, right?
+Analyst: Yeah.
+Analyst: What about portability requirements? Any hard limits there?
+Client: The system would have to be extremely portable via the usb drive, you know? And i'd like the system to be be easy to migrate or backed up through another usb drive.
+Analyst: So if I got it uh right, we'd want the system to be easy to migrate or backed up through another usb drive?
+Client: Mm-hmm, yes.
+Analyst: What about testability requirements? Any hard limits um there?
+TechLead: Okay so the system must sort of be able to run under debug mode.
+TechLead: Well, the uhm system should be able to run test shipping orders. And what we really want er is for for the system to be able to create uhm test environment of weborder system.
+Analyst: So if I got it right, for us it's key that the system can create test environment of of weborder system?
+TechLead: Exactly, yeah.
+Analyst: Is basically that all for testability requirements?
+Client: No, I think that's it.
+Analyst: Okay, what about other requirements?
+EndUser: The system hardware would have to be be fixed and patched through an internet connection, right?
+EndUser: Uhm, For uh us, yoggie should coordinate on future enhancement and features you know with with our organization.
+Client: The idea is is that the system will adhere to the following hardware requirements: uh 4GB Flash ram chip 128MB SDRAM Intel XScale PXA270 520-MHz chipset OS: Apache web server Database: MySQL, that's the main uh thing.
+Analyst: Mm-hmm.
+Analyst: What about preconditions? Any um hard limits there?
+TechLead: Sales Person should be able uh to access the i mean weborder um system via a web browser um with like HTTPS.
+Analyst: Yeah.
+Analyst: Great, I think that covers it for today. I'll write this up and send it around.

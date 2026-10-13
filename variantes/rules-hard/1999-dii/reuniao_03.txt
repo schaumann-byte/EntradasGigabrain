@@ -1,0 +1,32 @@
+Meeting 3 of 3 (review)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Um, Okay, uh this should um be our last session on DRAFT FOR THE DEFENSE INFORMATION, you know let's basically go through the remaining points.
+Analyst: Uh, Quick erm recap from last time: we went over xml services capability requirements, required states and modes and registry services.
+Analyst: What What about data access um services internal interface requirements? Any hard limits there?
+TechLead: Uhm, I mean, the XS actually function has to provide well standard APIs.
+Client: Do we sort of really need that? I'd leave basically it out, at least for the the first version.
+TechLead: Without it kind of the whole thing you know doesn't make much sense for us.
+Analyst: Let's leave that open for now, uhm I um need to check with my uh team.
+Analyst: Is that all for uh data access services kind of internal interface requirements?
+Client: That's all for now.
+EndUser: Quick follow-up on required like states and modes: in a degraded communications uh environment, there's a i mean need, uh for uh example, to uh be able able to you know reset session time-out values if the data management um services are like being accessed by users affected i mean by the communications degradation. At a a minimum, the sort of session time-out values ought to be basically user definable and and be able able to be reset prior to initialization of a user session. The goal sort of is to provide the um option of dynamically erm changing session time values based on current communications performance identified by capabilities of the network management or DBMS.
+TechLead: In a changing er (dynamic) environment, such actually as with deployed well units, uhm the workload and like database sizes may um be more er predetermined (given a more precise mission) and require access to fewer data management administrative capabilities than actually needed in erm a fixed environment. The XS would have to not not have the basically ability to redefine or reset well names of connect descriptors to database you know server instances. Connect descriptors uhm are fully qualified object names and uh include address (protocol/host/port) um and instance name.
+Analyst: Alright, general needs. Thoughts?
+EndUser: Erm, Honestly, kind of the XS should internally interface (transparent to the operator) with the existing data elements of um the DBIF, DAC, and COTS RDBMS products.
+Analyst: Okay, noted.
+Client: Uh, Oh, and about registry services environment requirements, basically, the Registry software should be portable and required to to execute on COE-compliant platforms.
+Analyst: And personnel-related requirements, how strict do we need to be?
+TechLead: For us it's key that personnel requirements can be be determined by the developers like of the system in which the um XS kind of module is er embedded, if that makes um sense.
+EndUser: Uhm, That sounds like a a lot of work for little value.
+TechLead: Uh, We do need it, it's important for our people.
+Analyst: Okay, erm we're not going to solve this today. Let's park erm it it and like come erm back to it.
+Client: But what if—
+TechLead: —no, you go.
+Analyst: Let's cover training-related requirements now. er What level do do you expect?
+Client: Training requirements have to kind of be determined by the i mean developers [crosstalk] er of the system in which the er XS module is embedded, right?
+Analyst: Uh, What uhm about sort of packaging requirements? Any hard [pause] limits there?
+TechLead: Uhm, Well, the actually idea is that the XS software will be delivered in um accordance with DII COE guidelines.
+EndUser: On registry services environment requirements, the Registry software really shouldn't be portable and required to erm execute on COE-compliant platforms.
+Client: Um, And like we said, the XS software should never be delivered in accordance with DII COE like guidelines.
+Analyst: Um, Okay, I think we um have everything. I'll erm consolidate and send it around.

@@ -1,0 +1,2220 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "2008-peering",
+  "doc_title": "Software Requirements Specification for Internetworking of Content Delivery Networks through Peering",
+  "source_file": "PURE/requirements-xml/2008 - peering.xml",
+  "mode": "meetings",
+  "variant": "rules-hard",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "rules",
+    "profile": "hard",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        3,
+        4
+      ],
+      "mess": 0.75,
+      "p_omit": 0.05,
+      "p_conflict": 0.12,
+      "p_ambiguity": 0.14,
+      "p_inconsistency": 0.08,
+      "p_incomplete": 0.12,
+      "p_conflict_open": 0.55,
+      "p_resolve_later": 0.35,
+      "p_complete_later": 0.35,
+      "noise": 0.14
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 7652,
+    "n_words": 1208,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser"
+        ],
+        "topics": [
+          "trigger",
+          "service registration",
+          "exceptions"
+        ],
+        "n_chars": 5128,
+        "n_words": 803,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 74,
+            "end": 213,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 223,
+            "end": 262,
+            "speaker": "EndUser",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M1:T3",
+            "start": 271,
+            "end": 1337,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T4",
+            "start": 1347,
+            "end": 1418,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T5",
+            "start": 1428,
+            "end": 1943,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0006",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 1953,
+            "end": 2004,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T7",
+            "start": 2014,
+            "end": 2052,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T8",
+            "start": 2062,
+            "end": 2208,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0007",
+              "2008-peering:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0007",
+                "role": "statement"
+              },
+              {
+                "rid": "2008-peering:R0008",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 2218,
+            "end": 2312,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0009",
+                "role": "statement",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T10",
+            "start": 2322,
+            "end": 2445,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0010",
+                "role": "statement",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T11",
+            "start": 2454,
+            "end": 2512,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-peering:R0010",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 2522,
+            "end": 2563,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-peering:R0010",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 2573,
+            "end": 2671,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2008-peering:R0010",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 2680,
+            "end": 2815,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0011",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 2825,
+            "end": 2830,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T16",
+            "start": 2839,
+            "end": 2955,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0026"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0026",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T17",
+            "start": 2964,
+            "end": 3041,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0018",
+                "role": "statement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 3051,
+            "end": 3110,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-peering:R0018",
+                "role": "conflict",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T19",
+            "start": 3119,
+            "end": 3182,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-peering:R0018",
+                "role": "conflict",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 3192,
+            "end": 3210,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "2008-peering:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0018",
+                "role": "resolution",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 3220,
+            "end": 3284,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0016",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 3294,
+            "end": 3370,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0023",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 3380,
+            "end": 3502,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0017",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 3512,
+            "end": 3692,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0025",
+              "2008-peering:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0025",
+                "role": "statement"
+              },
+              {
+                "rid": "2008-peering:R0024",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 3702,
+            "end": 3776,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0022",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 3785,
+            "end": 3881,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-peering:R0022",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T27",
+            "start": 3891,
+            "end": 3962,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-peering:R0022",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T28",
+            "start": 3972,
+            "end": 4017,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2008-peering:R0022",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 4027,
+            "end": 4136,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0013",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 4146,
+            "end": 4191,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "2008-peering:R0013",
+                "role": "clarification",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 4201,
+            "end": 4263,
+            "speaker": "EndUser",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "2008-peering:R0013",
+                "role": "clarification",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T32",
+            "start": 4272,
+            "end": 4351,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0019",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T33",
+            "start": 4360,
+            "end": 4421,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0012",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T34",
+            "start": 4431,
+            "end": 4492,
+            "speaker": "EndUser",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T35",
+            "start": 4502,
+            "end": 4582,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-peering:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0012",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T36",
+            "start": 4591,
+            "end": 4595,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T37",
+            "start": 4604,
+            "end": 4676,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0021",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T38",
+            "start": 4685,
+            "end": 4837,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0014",
+              "2008-peering:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0014",
+                "role": "statement"
+              },
+              {
+                "rid": "2008-peering:R0020",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 4847,
+            "end": 4853,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T40",
+            "start": 4863,
+            "end": 5007,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0015",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T41",
+            "start": 5017,
+            "end": 5024,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T42",
+            "start": 5034,
+            "end": 5127,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "user interfaces"
+        ],
+        "n_chars": 780,
+        "n_words": 121,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 77,
+            "end": 179,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 189,
+            "end": 318,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T3",
+            "start": 328,
+            "end": 391,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T4",
+            "start": 400,
+            "end": 674,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0030",
+                "role": "statement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M2:T5",
+            "start": 684,
+            "end": 779,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "disband or re-arrangement",
+          "exceptions",
+          "communications interfaces"
+        ],
+        "n_chars": 1744,
+        "n_words": 284,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 83,
+            "end": 196,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 206,
+            "end": 275,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T3",
+            "start": 285,
+            "end": 444,
+            "speaker": "EndUser",
+            "act": "followup",
+            "gt_ids": [
+              "2008-peering:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0009",
+                "role": "followup",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T4",
+            "start": 454,
+            "end": 499,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T5",
+            "start": 509,
+            "end": 654,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0027",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T6",
+            "start": 664,
+            "end": 671,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T7",
+            "start": 681,
+            "end": 709,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T8",
+            "start": 720,
+            "end": 782,
+            "speaker": "TechLead",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T9",
+            "start": 791,
+            "end": 864,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0029",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T10",
+            "start": 873,
+            "end": 998,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0028",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1008,
+            "end": 1067,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1076,
+            "end": 1203,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0032",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T13",
+            "start": 1212,
+            "end": 1427,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-peering:R0031"
+            ],
+            "refs": [
+              {
+                "rid": "2008-peering:R0031",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T14",
+            "start": 1437,
+            "end": 1649,
+            "speaker": "EndUser",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2008-peering:R0031",
+                "role": "restatement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1659,
+            "end": 1743,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 27,
+    "n_primary_fr": 24,
+    "n_primary_nfr": 3,
+    "n_expected_in_output": 27,
+    "n_reachable": 27,
+    "by_status": {
+      "clear": 18,
+      "conflict_resolved": 1,
+      "conflict_open": 2,
+      "ambiguous": 3,
+      "inconsistent": 1,
+      "incomplete": 2
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 3,
+      "conflict:open": 2,
+      "conflict:resolved": 1,
+      "incompleteness:completed_later": 1,
+      "incompleteness:open": 2,
+      "inconsistency:unnoticed": 1
+    },
+    "n_distractors": 0,
+    "n_issues": 8,
+    "messiness": {
+      "topics_out_of_document_order": 3,
+      "smalltalk": 1,
+      "false_starts": 2,
+      "offtopic": 3,
+      "self_introduced_topics": 2,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.984
+  },
+  "requirements": [
+    {
+      "id": "2008-peering:R0006",
+      "text": "Service registration is triggered when either one of the following occurs: (a) resources are available as a provider starts operating; (b) previously registered resource information needs to be updated; (c) available local resource information is required in the event of traffic surges; and (d) local and delegated external resource information is to be encapsulated in an SR instance included in an established peering arrangement.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2",
+        "section_path": [
+          "System Features",
+          "Service Registration",
+          "Trigger"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T5"
+        ],
+        "related_segments": [
+          "M1:T5"
+        ],
+        "support_score": 0.969,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0007",
+      "text": "The format for service information description is defined",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7",
+        "section_path": [
+          "System Features",
+          "Service Registration",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T8"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0008",
+      "text": "The interaction protocol between Web Server-SR, SR-mediator is defined.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7",
+        "section_path": [
+          "System Features",
+          "Service Registration",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T8"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0009",
+      "text": "Resource provisioning, delegation and reservation policies are in place",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7",
+        "section_path": [
+          "System Features",
+          "Service Registration",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "policies are in place",
+            "stated_text": "Resource provisioning, delegation and reservation",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M1:T9",
+            "M3:T3"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T9",
+          "M3:T3"
+        ],
+        "related_segments": [
+          "M1:T9",
+          "M3:T3"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0010",
+      "text": "There is an established norm that any resource failure will be reported",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "3.1.7",
+        "section_path": [
+          "System Features",
+          "Service Registration",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T10",
+            "M1:T11",
+            "M1:T12",
+            "M1:T13"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T10"
+        ],
+        "related_segments": [
+          "M1:T10",
+          "M1:T11",
+          "M1:T12",
+          "M1:T13"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0011",
+      "text": "It is invoked when a (primary) CDN realizes that it cannot handle a part of the workload on its WS(s).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2",
+        "section_path": [
+          "System Features",
+          "Request Initiation to Trigger Peering",
+          "Trigger"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T14"
+        ],
+        "related_segments": [
+          "M1:T14"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0012",
+      "text": "Malicious requests are detected and rejected.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.7",
+        "section_path": [
+          "System Features",
+          "Request Initiation to Trigger Peering",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T33",
+          "M1:T35"
+        ],
+        "related_segments": [
+          "M1:T33",
+          "M1:T35"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0013",
+      "text": "Web servers have already replicated necessary content.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.7",
+        "section_path": [
+          "System Features",
+          "Request Initiation to Trigger Peering",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Web servers have already replicated necessary content.",
+            "clarification_attempted": true
+          },
+          "segments": [
+            "M1:T29",
+            "M1:T30",
+            "M1:T31"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T29"
+        ],
+        "related_segments": [
+          "M1:T29",
+          "M1:T30",
+          "M1:T31"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0014",
+      "text": "Both anticipated and unanticipated user requests (traffic) are considered.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.7",
+        "section_path": [
+          "System Features",
+          "Request Initiation to Trigger Peering",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T38"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0015",
+      "text": "If the user requests can not be accepted according the provider policies, service requirements are not passed to the local PA.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.6",
+        "section_path": [
+          "System Features",
+          "Mediator Invokes Creation of Negotiated Relationship",
+          "Exceptions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T40"
+        ],
+        "related_segments": [
+          "M1:T40"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0016",
+      "text": "The format of service requirements is defined.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.7",
+        "section_path": [
+          "System Features",
+          "Mediator Invokes Creation of Negotiated Relationship",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T21"
+        ],
+        "related_segments": [
+          "M1:T21"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0017",
+      "text": "Mediator-SR, mediator-PR, mediator-PA interaction protocols are defined.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.7",
+        "section_path": [
+          "System Features",
+          "Mediator Invokes Creation of Negotiated Relationship",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T23"
+        ],
+        "related_segments": [
+          "M1:T23"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0018",
+      "text": "Mediator works in conjunction with the PA to establish negotiation.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.7",
+        "section_path": [
+          "System Features",
+          "Mediator Invokes Creation of Negotiated Relationship",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T17",
+            "M1:T18",
+            "M1:T19",
+            "M1:T20"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T17",
+          "M1:T20"
+        ],
+        "related_segments": [
+          "M1:T17",
+          "M1:T18",
+          "M1:T19",
+          "M1:T20"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0019",
+      "text": "Interaction protocols between PAs are identified.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.7",
+        "section_path": [
+          "System Features",
+          "Resource Discovery through PA",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T32"
+        ],
+        "related_segments": [
+          "M1:T32"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0020",
+      "text": "Malicious requests are identified and acted upon.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.7",
+        "section_path": [
+          "System Features",
+          "Resource Discovery through PA",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T38"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0021",
+      "text": "There are existing policies for long-term peering arrangement.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.7",
+        "section_path": [
+          "System Features",
+          "Resource Discovery through PA",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T37"
+        ],
+        "related_segments": [
+          "M1:T37"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0022",
+      "text": "There is procedure to perform short-term negotiation.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.7",
+        "section_path": [
+          "System Features",
+          "Resource Discovery through PA",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T25",
+            "M1:T26",
+            "M1:T27",
+            "M1:T28"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T25"
+        ],
+        "related_segments": [
+          "M1:T25",
+          "M1:T26",
+          "M1:T27",
+          "M1:T28"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0023",
+      "text": "Negotiation is established between selected CDN peers.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.7",
+        "section_path": [
+          "System Features",
+          "Operational Management",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Negotiation is established between selected CDN peers."
+          },
+          "segments": [
+            "M1:T22"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T22"
+        ],
+        "related_segments": [
+          "M1:T22"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0024",
+      "text": "Primary CDN has already acquired sufficient external resources.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.7",
+        "section_path": [
+          "System Features",
+          "Operational Management",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T24"
+        ],
+        "related_segments": [
+          "M1:T24"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0025",
+      "text": "Functional policies are identified and deployed.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.7",
+        "section_path": [
+          "System Features",
+          "Operational Management",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T24"
+        ],
+        "related_segments": [
+          "M1:T24"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0026",
+      "text": "Effective content delivery is ensured through SLA satisfaction.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.7",
+        "section_path": [
+          "System Features",
+          "Operational Management",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T16"
+        ],
+        "related_segments": [
+          "M1:T16"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0027",
+      "text": "There could be circumstances under which a given peering arrangement may need to disband or rearranges itself.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6",
+        "section_path": [
+          "System Features",
+          "Disband or Re-arrangement"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T5"
+        ],
+        "related_segments": [
+          "M3:T5"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0028",
+      "text": "Policies identifying the consequences of SLA violation are defined.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.7",
+        "section_path": [
+          "System Features",
+          "Disband or Re-arrangement",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "SLA violation are defined.",
+            "stated_text": "Policies identifying the consequences of"
+          },
+          "segments": [
+            "M3:T10"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T10"
+        ],
+        "related_segments": [
+          "M3:T10"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0029",
+      "text": "Policies are in place to perform renegotiation for problem resolution.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.7",
+        "section_path": [
+          "System Features",
+          "Disband or Re-arrangement",
+          "Exceptions"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T9"
+        ],
+        "related_segments": [
+          "M3:T9"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0030",
+      "text": "For user interface design, common GUI standards will be followed along with the presence of keyboard shortcuts, error message display standards etc., and standard buttons and functions (i.e. help) will appear on every screen.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "For user interface design, common GUI standards will be followed along with the presence of keyboard shortcuts, error message display standards etc., and standard buttons and functions (i.e. help) will appear on every screen."
+          },
+          "segments": [
+            "M2:T4"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T4"
+        ],
+        "related_segments": [
+          "M2:T4"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0031",
+      "text": "From a technical point of view, TCP/IP will be used as the transport protocol, where each CDN server establishes a TCP connection to the network elements using a well-known port number.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2",
+        "section_path": [
+          "External Interface Requirements",
+          "Communications Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "will",
+            "conflicting_value": "will not",
+            "conflicting_text": "From a technical point of view, TCP/IP will not be used as the transport protocol, where each CDN server establishes a TCP connection to the network elements using a well-known port number.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M3:T13",
+            "M3:T14"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T13"
+        ],
+        "related_segments": [
+          "M3:T13",
+          "M3:T14"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-peering:R0032",
+      "text": "Interaction among surrogates will be performed using HTTP or FTP.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2",
+        "section_path": [
+          "External Interface Requirements",
+          "Communications Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "performed using HTTP or FTP.",
+            "stated_text": "Interaction among surrogates will be"
+          },
+          "segments": [
+            "M3:T12"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T12"
+        ],
+        "related_segments": [
+          "M3:T12"
+        ],
+        "support_score": 0.429,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": [
+    {
+      "id": "2008-peering:I001",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2008-peering:R0010",
+      "pid": "P2",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T10",
+        "M1:T11",
+        "M1:T12",
+        "M1:T13"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M1"
+      }
+    },
+    {
+      "id": "2008-peering:I002",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2008-peering:R0013",
+      "pid": "P3",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T29",
+        "M1:T30",
+        "M1:T31"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Web servers have already replicated necessary content.",
+        "clarification_attempted": true
+      }
+    },
+    {
+      "id": "2008-peering:I003",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2008-peering:R0022",
+      "pid": "P5",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T25",
+        "M1:T26",
+        "M1:T27",
+        "M1:T28"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M1"
+      }
+    },
+    {
+      "id": "2008-peering:I004",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2008-peering:R0023",
+      "pid": "P6",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T22"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Negotiation is established between selected CDN peers."
+      }
+    },
+    {
+      "id": "2008-peering:I005",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2008-peering:R0028",
+      "pid": "P7",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T10"
+      ],
+      "details": {
+        "missing": "SLA violation are defined.",
+        "stated_text": "Policies identifying the consequences of"
+      }
+    },
+    {
+      "id": "2008-peering:I006",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2008-peering:R0030",
+      "pid": "P8",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T4"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "For user interface design, common GUI standards will be followed along with the presence of keyboard shortcuts, error message display standards etc., and standard buttons and functions (i.e. help) will appear on every screen."
+      }
+    },
+    {
+      "id": "2008-peering:I007",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "2008-peering:R0031",
+      "pid": "P9",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M3:T13",
+        "M3:T14"
+      ],
+      "details": {
+        "original_value": "will",
+        "conflicting_value": "will not",
+        "conflicting_text": "From a technical point of view, TCP/IP will not be used as the transport protocol, where each CDN server establishes a TCP connection to the network elements using a well-known port number.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "2008-peering:I008",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2008-peering:R0032",
+      "pid": "P10",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T12"
+      ],
+      "details": {
+        "missing": "performed using HTTP or FTP.",
+        "stated_text": "Interaction among surrogates will be"
+      }
+    }
+  ]
+}
