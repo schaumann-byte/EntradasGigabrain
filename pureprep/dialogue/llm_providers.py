@@ -16,19 +16,30 @@ padrão):
 
 
 class LLMUnavailable(Exception):
-    """A chamada não produziu texto utilizável (recusa, erro, dry-run)."""
+    """A chamada não produziu texto utilizável (recusa, erro, dry-run): o
+    turno volta para o realizador por regras."""
+
+
+class LLMFatal(SystemExit):
+    """Erro que vale para todas as requisições (chave, permissão, pedido
+    inválido, saldo): interrompe a geração em vez de cair no fallback."""
+
+
+_FATAL_STATUS = {400, 401, 403, 404, 413}
 
 
 class AnthropicProvider:
     name = "anthropic"
 
-    def __init__(self, model="claude-opus-5-5", effort="low", max_tokens=16000, max_retries=4):
+    def __init__(self, model="claude-opus-5-5", effort="low", max_tokens=16000, max_retries=4, workspace_id=None):
         try:
             import anthropic
         except ImportError as e:  # pragma: no cover - depende do ambiente
             raise SystemExit("O provedor 'anthropic' precisa do SDK: pip install anthropic") from e
         self._anthropic = anthropic
-        self.client = anthropic.Anthropic(max_retries=max_retries)  # o SDK já repete 408/409/429/5xx
+        # chave sem workspace exige o header anthropic-workspace-id em cada requisição
+        headers = {"anthropic-workspace-id": workspace_id} if workspace_id else None
+        self.client = anthropic.Anthropic(max_retries=max_retries, default_headers=headers)  # o SDK já repete 408/409/429/5xx
         self.model, self.effort, self.max_tokens = model, effort, max_tokens
 
     def params(self):
@@ -46,7 +57,9 @@ class AnthropicProvider:
                 messages=[{"role": "user", "content": user}],
             )
         except self._anthropic.APIStatusError as e:
-            raise LLMUnavailable(f"HTTP {e.status_code}: {e.message}") from e
+            if e.status_code in _FATAL_STATUS:
+                raise LLMFatal(f"A API recusou a requisição (HTTP {e.status_code}), o que vale para todas: {e.message}") from e
+            raise LLMUnavailable(f"HTTP {e.status_code}") from e
         except self._anthropic.APIConnectionError as e:
             raise LLMUnavailable(f"conexão: {e}") from e
         if resp.stop_reason == "refusal":
@@ -114,9 +127,9 @@ class DryRunProvider:
         return {"requests": self.requests, "input_tokens": self.input_chars // 4, "output_tokens": self.expected_output_chars // 4}
 
 
-def make_provider(name, model=None, effort="low", base_url=None):
+def make_provider(name, model=None, effort="low", base_url=None, workspace_id=None):
     if name == "anthropic":
-        return AnthropicProvider(model=model or "claude-opus-5-5", effort=effort)
+        return AnthropicProvider(model=model or "claude-opus-5-5", effort=effort, workspace_id=workspace_id)
     if name == "openai":
         if not model:
             raise SystemExit("--llm-model é obrigatório com --llm-provider openai")

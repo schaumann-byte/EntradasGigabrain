@@ -17,6 +17,7 @@ Saída:
 import argparse
 import csv
 import json
+import os
 import random
 import sys
 from collections import Counter, defaultdict
@@ -202,6 +203,8 @@ def main(argv=None):
                    help="dry = não chama LLM, só estima requisições e tokens")
     g.add_argument("--llm-model", default=None, help="padrão: claude-opus-5-5 (anthropic); obrigatório com openai")
     g.add_argument("--llm-effort", default="low", choices=("low", "medium", "high", "xhigh", "max"), help="só anthropic")
+    g.add_argument("--anthropic-workspace-id", default=os.environ.get("ANTHROPIC_WORKSPACE_ID"),
+                   help="workspace (wrkspc_...) para chave sem workspace; padrão: variável ANTHROPIC_WORKSPACE_ID")
     g.add_argument("--llm-base-url", default=None, help="API compatível com OpenAI (ex.: http://localhost:11434/v1 para Ollama)")
     g.add_argument("--llm-cache", default="llm_cache", help="diretório do cache de respostas (versionar no git)")
     g.add_argument("--llm-offline", action="store_true", help="usa só o cache; falha se faltar alguma resposta")
@@ -215,7 +218,8 @@ def main(argv=None):
 
     realizer_options = None
     if args.realizer == "llm":
-        provider = make_provider(args.llm_provider, args.llm_model, args.llm_effort, args.llm_base_url)
+        provider = make_provider(args.llm_provider, args.llm_model, args.llm_effort, args.llm_base_url,
+                                 args.anthropic_workspace_id)
         realizer_options = {"provider": provider, "cache_dir": args.llm_cache, "offline": args.llm_offline,
                             "workers": args.llm_workers, "window": args.llm_window}
 

@@ -166,3 +166,59 @@ def _stress_profile(monkeypatch):
     monkeypatch.setitem(profiles.PROFILES, "stress", {**profiles.PROFILES["hard"], "meetings": (3, 3), "p_omit": 0.06,
                                                        "p_conflict": 0.2, "p_ambiguity": 0.15, "p_inconsistency": 0.15,
                                                        "p_incomplete": 0.15, "p_resolve_later": 0.6, "p_complete_later": 0.6})
+
+
+# ----------------------------------------------------------------- provedor Anthropic (servidor falso local)
+
+
+@pytest.fixture
+def fake_api(monkeypatch):
+    """Servidor HTTP local que imita a Messages API; nada sai da máquina."""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+
+    state = {"status": 200, "requests": []}
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            body = json.loads(self.rfile.read(int(self.headers["content-length"])))
+            state["requests"].append({"headers": dict(self.headers), "body": body})
+            if state["status"] == 200:
+                resp = {"id": "msg_x", "type": "message", "role": "assistant", "model": body["model"],
+                        "content": [{"type": "text", "text": '{"turns": []}'}], "stop_reason": "end_turn",
+                        "stop_sequence": None, "usage": {"input_tokens": 1, "output_tokens": 1}}
+            else:
+                resp = {"type": "error", "error": {"type": "invalid_request_error", "message": "not scoped to a workspace"}}
+            data = json.dumps(resp).encode()
+            self.send_response(state["status"])
+            self.send_header("content-type", "application/json")
+            self.send_header("content-length", str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
+
+        def log_message(self, *a):
+            pass
+
+    srv = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    monkeypatch.setenv("ANTHROPIC_BASE_URL", f"http://127.0.0.1:{srv.server_port}")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-ant-teste-local")
+    yield state
+    srv.shutdown()
+
+
+def test_anthropic_provider_sends_workspace_header(fake_api):
+    pytest.importorskip("anthropic")
+    from pureprep.dialogue.llm_providers import AnthropicProvider
+    AnthropicProvider(workspace_id="wrkspc_teste").complete(RL.SYSTEM, "{}", RL.SCHEMA)
+    req = fake_api["requests"][-1]
+    assert req["headers"]["anthropic-workspace-id"] == "wrkspc_teste"
+    assert req["body"]["model"] == "claude-opus-5-5" and req["body"]["fallbacks"] == "default"
+
+
+def test_fatal_api_error_stops_generation(fake_api, portal, tmp_path):
+    pytest.importorskip("anthropic")
+    from pureprep.dialogue.llm_providers import AnthropicProvider, LLMFatal
+    fake_api["status"] = 400
+    with pytest.raises(LLMFatal, match="HTTP 400"):
+        _run(portal, AnthropicProvider(max_retries=0), tmp_path)
