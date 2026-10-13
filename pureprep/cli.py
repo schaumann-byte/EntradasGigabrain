@@ -97,9 +97,11 @@ def _write_pair(out, mode, doc, text, payload):
 def _write_meetings(out, doc, plan, realized, gold):
     d = out / "pairs" / "meetings" / gold["variant"] / doc.doc_id
     d.mkdir(parents=True, exist_ok=True)
+    # LF explícito: os offsets dos segmentos valem para o arquivo lido como
+    # está (sem a tradução \n -> \r\n do Windows, que desloca os offsets)
     for m, text, _ in realized:
-        (d / meeting_file(m)).write_text(text, encoding="utf-8")
-    (d / "ground_truth_requirements.json").write_text(json.dumps(gold, ensure_ascii=False, indent=2), encoding="utf-8")
+        (d / meeting_file(m)).write_text(text, encoding="utf-8", newline="\n")
+    (d / "ground_truth_requirements.json").write_text(json.dumps(gold, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
     a = out / "audit" / "plans" / plan.profile
     a.mkdir(parents=True, exist_ok=True)
     (a / f"{doc.doc_id}.json").write_text(json.dumps(plan.to_json(), ensure_ascii=False, indent=1), encoding="utf-8")

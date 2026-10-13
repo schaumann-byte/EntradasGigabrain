@@ -276,6 +276,9 @@ def test_meetings_on_real_pure(tmp_path):
             assert gt["schema_version"] == "2.0" and gt["variant"] == variant.name
             texts = load_texts(d, gt)
             for m in gt["input"]["meetings"]:
+                # offsets valem também para o arquivo lido sem tradução de quebras de linha
+                raw = (d / m["file"]).read_bytes().decode("utf-8")
+                assert "\r" not in raw and raw == texts[m["id"]]
                 for s in m["segments"]:
                     assert texts[m["id"]][s["start"] : s["end"]].strip()
             o = oracle_meetings(gt)
