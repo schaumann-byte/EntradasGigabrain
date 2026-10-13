@@ -68,8 +68,8 @@ Fenômenos (no máximo um por requisito) e o que viram no gabarito:
 | omissão | requisito nunca discutido | `omitted` | `expected_in_output: false` |
 
 Perfis (`pureprep/dialogue/profiles.py`): `clean` (1 reunião, sem fenômenos; só a superfície
-casual), `realistic` (2–3 reuniões, ~30% dos requisitos com fenômeno), `hard` (3–4 reuniões,
-~50%).
+casual), `realistic` (2–3 reuniões, ~25% dos requisitos com fenômeno), `hard` (3–4 reuniões,
+~45%).
 
 ### Como adicionar o realizador B (LLM)
 

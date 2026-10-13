@@ -4,9 +4,9 @@ estrutural (``mess`` ∈ [0, 1]).
 
 - ``clean``     : 1 reunião, ordem do documento, sem fenômenos semânticos.
                   Só a superfície casual do realizador + ruído lexical.
-- ``realistic`` : 2–3 reuniões, bagunça moderada, ~30% dos requisitos com
+- ``realistic`` : 2–3 reuniões, bagunça moderada, ~25% dos requisitos com
                   algum fenômeno.
-- ``hard``      : 3–4 reuniões, bagunça alta, ~50% com fenômeno.
+- ``hard``      : 3–4 reuniões, bagunça alta, ~45% com fenômeno.
 """
 
 PROFILES = {
