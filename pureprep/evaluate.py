@@ -23,8 +23,12 @@ Métricas:
 - ``unsupported_rate``: predições cujo conteúdo não tem suporte na entrada
   (proxy de alucinação), independentemente do gabarito.
 
+Gabaritos schema 2.0 (modo ``meetings``) usam as métricas de
+:mod:`pureprep.evaluate_meetings` (distratores, issues, recall por status).
+
 Uso:
     python -m pureprep.evaluate --pairs output/pairs/context --pred preds/context [--out report.json]
+    python -m pureprep.evaluate --pairs output/pairs/meetings/rules-realistic --pred preds/rules-realistic
 """
 
 import argparse
@@ -33,6 +37,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from . import evaluate_meetings as evm
 from .textsim import containment, overlap_f1, token_set
 
 
@@ -176,25 +181,35 @@ def summarize(c):
 
 
 def evaluate_dir(pairs_dir, pred_dir, threshold=0.5):
+    """Avalia um diretório de pares. Gabaritos schema 2.0 (modo ``meetings``)
+    são despachados para :mod:`pureprep.evaluate_meetings`."""
     total = Counter()
     per_doc = {}
+    schema = "1"
     for d in sorted(Path(pairs_dir).iterdir()):
         gt_path = d / "ground_truth_requirements.json"
         pred_path = Path(pred_dir) / f"{d.name}.json"
         if not gt_path.exists() or not pred_path.exists():
             continue
         gt = json.loads(gt_path.read_text(encoding="utf-8"))
-        text = (d / "input_raw.txt").read_text(encoding="utf-8")
-        c = evaluate_doc(gt, text, _load_pred(pred_path), threshold)
-        per_doc[d.name] = summarize(c)
+        if str(gt.get("schema_version", "1")).startswith("2"):
+            schema = "2"
+            raw = json.loads(pred_path.read_text(encoding="utf-8"))
+            preds, issues = (raw.get("requirements", []), raw.get("issues", [])) if isinstance(raw, dict) else (raw, [])
+            c = evm.evaluate_doc(gt, evm.load_texts(d, gt), preds, issues, threshold)
+            per_doc[d.name] = evm.summarize(c)
+        else:
+            text = (d / "input_raw.txt").read_text(encoding="utf-8")
+            c = evaluate_doc(gt, text, _load_pred(pred_path), threshold)
+            per_doc[d.name] = summarize(c)
         total.update(c)
     if not per_doc:
         return None
-    macro = {
-        k: round(sum(v["extraction"][k] for v in per_doc.values()) / len(per_doc), 4)
-        for k in ("precision", "recall_all", "f1_all", "recall_reachable", "f1_reachable")
-    }
-    return {"micro": summarize(total), "macro_extraction": macro, "n_docs": len(per_doc), "per_doc": per_doc,
+    keys = ("precision", "recall_expected", "f1_expected") if schema == "2" else \
+        ("precision", "recall_all", "f1_all", "recall_reachable", "f1_reachable")
+    macro = {k: round(sum(v["extraction"][k] for v in per_doc.values()) / len(per_doc), 4) for k in keys}
+    micro = evm.summarize(total) if schema == "2" else summarize(total)
+    return {"schema": schema, "micro": micro, "macro_extraction": macro, "n_docs": len(per_doc), "per_doc": per_doc,
             "params": {"match_threshold": threshold}}
 
 

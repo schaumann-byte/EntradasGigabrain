@@ -4,9 +4,12 @@ Uso:
     python -m pureprep.cli --xml-dir data/raw/requirements-xml/XMLZIPFile --out output
 
 Saída:
-    output/pairs/<modo>/<doc_id>/input_raw.txt
+    output/pairs/<modo>/<doc_id>/input_raw.txt                 (modos v1: context, notes, dialogue)
     output/pairs/<modo>/<doc_id>/ground_truth_requirements.json
+    output/pairs/meetings/<realizador>-<perfil>/<doc_id>/reuniao_NN.txt
+    output/pairs/meetings/<realizador>-<perfil>/<doc_id>/ground_truth_requirements.json   (schema 2.0)
     output/audit/section_roles/<doc_id>.json   (papel atribuído a cada seção)
+    output/audit/plans/<perfil>/<doc_id>.json  (plano das reuniões; igual para todo realizador)
     output/manifest.json                       (estatísticas e tiers por documento)
     output/summary.csv
 """
@@ -19,12 +22,13 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from . import __version__
+from . import V1_VERSION, __version__
+from .dialogue import PROFILES, REALIZERS, build_meetings, meeting_file, variant_name
 from .extract import extract
 from .parse import load_document
 from .synth import build_context, build_dialogue, build_notes, sample_reqs, support
 
-MODES = ("context", "notes", "dialogue")
+MODES = ("context", "notes", "dialogue")  # modos v1 (um arquivo de entrada por par)
 SCHEMA_VERSION = "1.0"
 
 
@@ -61,7 +65,7 @@ def _gt_payload(doc, mode, reqs, sup, input_text, segments, params, tau):
         "doc_title": doc.title,
         "source_file": f"PURE/requirements-xml/{doc.source_file}",
         "mode": mode,
-        "generator": {"tool": "pureprep", "version": __version__, "params": params},
+        "generator": {"tool": "pureprep", "version": V1_VERSION, "params": params},
         "input": {
             "file": "input_raw.txt",
             "n_chars": len(input_text),
@@ -90,7 +94,18 @@ def _write_pair(out, mode, doc, text, payload):
     (d / "ground_truth_requirements.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def process(xml_path, out, seed, tau, dialogue_cap, noise):
+def _write_meetings(out, doc, plan, realized, gold):
+    d = out / "pairs" / "meetings" / gold["variant"] / doc.doc_id
+    d.mkdir(parents=True, exist_ok=True)
+    for m, text, _ in realized:
+        (d / meeting_file(m)).write_text(text, encoding="utf-8")
+    (d / "ground_truth_requirements.json").write_text(json.dumps(gold, ensure_ascii=False, indent=2), encoding="utf-8")
+    a = out / "audit" / "plans" / plan.profile
+    a.mkdir(parents=True, exist_ok=True)
+    (a / f"{doc.doc_id}.json").write_text(json.dumps(plan.to_json(), ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def process(xml_path, out, seed, tau, dialogue_cap, noise, profiles=(), realizer="rules"):
     doc = load_document(xml_path)
     ext = extract(doc)
     primary = [r for r in ext.requirements if r.tier == "primary"]
@@ -147,6 +162,17 @@ def process(xml_path, out, seed, tau, dialogue_cap, noise):
     row["dialogue_n_requirements"] = len(chosen)
     row["dialogue_reachable"] = payload["stats"]["reachable_ratio_primary"]
     row["tier_synthetic"] = tier_synthetic(len(primary), n_fr, n_nfr, label_quality)
+
+    # --- meetings (schema 2.0): mesma amostra de requisitos do dialogue v1 --
+    for profile in profiles:
+        plan, realized, gold = build_meetings(doc, ext, chosen, profile=profile, realizer=realizer, seed=seed)
+        _write_meetings(out, doc, plan, realized, gold)
+        v, s = gold["variant"], gold["stats"]
+        row[f"{v}_meetings"] = gold["input"]["n_meetings"]
+        row[f"{v}_words"] = gold["input"]["n_words"]
+        row[f"{v}_issues"] = s["n_issues"]
+        row[f"{v}_distractors"] = s["n_distractors"]
+        row[f"{v}_expected"] = s["n_expected_in_output"]
     return row
 
 
@@ -160,7 +186,15 @@ def main(argv=None):
     ap.add_argument("--dialogue-cap", type=int, default=60,
                     help="máximo de requisitos por transcrição (≈ 1 h de reunião)")
     ap.add_argument("--noise", type=float, default=0.08, help="taxa de ruído de fala no modo dialogue")
+    ap.add_argument("--profiles", default=",".join(PROFILES),
+                    help=f"perfis do modo meetings, separados por vírgula ({', '.join(PROFILES)}); vazio desativa")
+    ap.add_argument("--realizer", default="rules", choices=sorted(REALIZERS),
+                    help="realizador da superfície do texto no modo meetings")
     args = ap.parse_args(argv)
+    profiles = [p.strip() for p in args.profiles.split(",") if p.strip()]
+    for p in profiles:
+        if p not in PROFILES:
+            sys.exit(f"perfil desconhecido: {p} (opções: {', '.join(PROFILES)})")
 
     out = Path(args.out)
     files = sorted(Path(args.xml_dir).glob("*.xml"))
@@ -168,7 +202,7 @@ def main(argv=None):
         sys.exit(f"Nenhum XML encontrado em {args.xml_dir}")
     rows = []
     for f in files:
-        row = process(f, out, args.seed, args.support_threshold, args.dialogue_cap, args.noise)
+        row = process(f, out, args.seed, args.support_threshold, args.dialogue_cap, args.noise, profiles, args.realizer)
         rows.append(row)
         print(f"{row['doc_id']:24s} primary={row['n_primary']:4d} (FR {row['n_primary_fr']}, NFR {row['n_primary_nfr']}) "
               f"ctx_reach={row['context_reachable_primary']:.2f} tier_ctx={row['tier_context']} tier_syn={row['tier_synthetic']}")
@@ -181,6 +215,7 @@ def main(argv=None):
         "schema_version": SCHEMA_VERSION,
         "generator": {"tool": "pureprep", "version": __version__, "args": vars(args)},
         "dataset": {"name": "PURE", "doi": "10.5281/zenodo.1414117", "subset": "requirements-xml (18 docs)"},
+        "meetings_variants": [variant_name(args.realizer, p) for p in profiles],
         "documents": rows,
     }
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")

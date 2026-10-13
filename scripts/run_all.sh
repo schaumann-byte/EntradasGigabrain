@@ -15,6 +15,13 @@ for mode in context notes dialogue; do
       --out "output/baselines/eval_${kind}_${mode}.json" > /dev/null
   done
 done
+for variant in output/pairs/meetings/*/; do
+  v=$(basename "$variant")
+  for kind in oracle naive; do
+    python -m pureprep.baseline --pairs "$variant" --kind "$kind" --out "output/baselines/preds/$kind/meetings/$v"
+    python -m pureprep.evaluate --pairs "$variant" --pred "output/baselines/preds/$kind/meetings/$v"       --out "output/baselines/eval_${kind}_meetings_${v}.json" > /dev/null
+  done
+done
 
 python -m pureprep.crosscheck --out output/crosscheck_reqfromsrs.json > /dev/null
 python -m pureprep.scan_originals --out output/originals_scan.csv
