@@ -30,7 +30,7 @@ from .llm_providers import LLMUnavailable
 from .model import VALID_ROLES
 from .realize_rules import assemble, render_turn
 
-PROMPT_VERSION = "b1"
+PROMPT_VERSION = "b2"  # b2: turnos de discussão sem fatos novos sobre o sistema
 
 SYSTEM = """You rewrite the turns of a requirements-elicitation meeting so they sound like real, spontaneous spoken English between colleagues on a video call.
 
@@ -42,6 +42,9 @@ For turns with content:
 3. Never make the content more precise than it is. If it is vague ("a few seconds", "someone", "it"), stay vague. If information is missing, keep it missing.
 4. Follow the turn's notes (for example: sound unsure, trail off, say you don't remember the number).
 5. A turn whose content role is "part2" continues the same speaker's previous turn: it is the next piece of the same idea, not a new topic.
+
+For turns without content (questions, objections, defenses, decisions, small talk):
+- Do not introduce requirements, features, numbers, user groups or any other fact about the system. When someone argues for or against something, keep the reason generic (importance, effort, priority, timing), e.g. "it's important for us", not a new scenario or capability.
 
 For every turn:
 - Write only what the speaker says: no speaker labels, quotes, stage directions or markdown.
@@ -82,11 +85,11 @@ GUIDES = {
     "backchannel": "Short acknowledgment while listening (1-3 words).",
     "react": "Short agreeing reaction from another participant (up to 6 words).",
     "counter": "The speaker disagrees with the previous turn and proposes the content instead.",
-    "defend": "The speaker insists on their own value: {value}. Do not mention any other value.",
+    "defend": "The speaker insists on their own value: {value}. Do not mention any other value or add new facts.",
     "resolve": "Analyst settles the disagreement on {value} and restates the content as decided.",
     "park": "Suggest leaving this disagreement open for now and deciding later.",
-    "object_scope": "The speaker questions whether the previous requirement is needed at all.",
-    "defend_scope": "The speaker argues the requirement is needed.",
+    "object_scope": "The speaker questions whether the previous requirement is needed at all, with a generic reason (effort, priority).",
+    "defend_scope": "The speaker argues the requirement is needed, with a generic reason (importance for them), no new facts.",
     "resolve_keep": "Analyst decides to keep the requirement.",
     "drop": "Analyst decides to drop the requirement from the scope.",
     "resolve_later": "Analyst says the point about '{topic}' left open last time has been settled, and states the content as decided.",
