@@ -133,9 +133,31 @@ def mutate_actor(text, rng):
     return {"text": text[: m.start()] + new + text[m.end() :], "kind": "actor", "original_value": old, "proposed_value": new}
 
 
+_POLAR = re.compile(r"\b(shall|must|should|will)(\s+not)?\b", re.I)
+_COND_BEFORE = re.compile(r"\b(if|when|unless|whenever)\b", re.I)  # modal dentro de condição: inverter mudaria a condição
+
+
+def mutate_polarity(text, rng):
+    """Inverte a polaridade do modal principal ("shall" <-> "shall not").
+
+    Só serve para inconsistência: "not" é stopword, então a variante é
+    lexicalmente indistinguível do original e não pode virar distrator."""
+    m = _POLAR.search(text)
+    if not m or _COND_BEFORE.search(text[: m.start()]):
+        return None
+    modal, neg = m.group(1), m.group(2)
+    new = modal if neg else f"{modal} not"
+    return {"text": text[: m.start()] + new + text[m.end() :], "kind": "polarity",
+            "original_value": m.group(0), "proposed_value": new}
+
+
 def mutate(text, rng):
     """Variante conflitante: valor numérico se houver, senão o ator."""
     return mutate_quantity(text, rng) or mutate_actor(text, rng)
+
+
+def mutate_for_inconsistency(text, rng):
+    return mutate_quantity(text, rng) or mutate_actor(text, rng) or mutate_polarity(text, rng)
 
 
 # ---------------------------------------------------------------------------

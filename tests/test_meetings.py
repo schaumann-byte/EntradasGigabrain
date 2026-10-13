@@ -44,6 +44,12 @@ def test_mutate_actor_ignores_compound_nouns():
     assert m["original_value"] == "The supervisor" and "supervisor" not in m["proposed_value"].lower()
 
 
+def test_mutate_polarity_flips_main_modal_only():
+    assert T.mutate_polarity("The database shall not store passwords.", random.Random(0))["text"] == "The database shall store passwords."
+    assert T.mutate_polarity("The user must log in.", random.Random(0))["text"] == "The user must not log in."
+    assert T.mutate_polarity("If the user is idle, the system shall log out.", random.Random(0)) is None
+
+
 def test_ambiguity_and_incompleteness_remove_detail():
     text = "The system shall lock the account after 3 attempts when the password is wrong."
     a = T.vague_quantity(text, random.Random(1))

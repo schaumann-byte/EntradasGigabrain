@@ -94,7 +94,7 @@ class _Planner:
                 self.assign[r.rid] = p
             elif chosen == "conflict":
                 m = T.mutate(r.text, rng)
-                if m and rng.random() < 0.7:
+                if m and rng.random() < 0.9:
                     self.assign[r.rid] = self._new_phen("conflict", r.rid, m["kind"], original_value=m["original_value"],
                                                         proposed_value=m["proposed_value"], proposed_text=m["text"])
                 else:
@@ -104,7 +104,7 @@ class _Planner:
                 self.assign[r.rid] = self._new_phen("ambiguity", r.rid, a["kind"], removed=a["removed"],
                                                     replacement=a["replacement"], stated_text=a["text"])
             elif chosen == "inconsistency":
-                m = T.mutate(r.text, rng)
+                m = T.mutate_for_inconsistency(r.text, rng)
                 if m:
                     self.assign[r.rid] = self._new_phen("inconsistency", r.rid, m["kind"], original_value=m["original_value"],
                                                         conflicting_value=m["proposed_value"], conflicting_text=m["text"])
