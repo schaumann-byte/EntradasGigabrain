@@ -1,0 +1,82 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, EndUser
+
+Analyst: Okay, thanks everyone for joining. This is the uh kickoff for the Tactical Control System, the TCS System/Subsystem Specification, first of three meetings. Let's start with some background.
+Client: Sure. So the whole point of the TCS is to actually give the military services one single system for command, control, data receipt, data processing, data export and dissemination, and uh it um has to be interoperable with actually the entire family of of tactical unmanned aerial vehicles, present and future. well We've split it into two two phases following the Department Of Defense Instruction, DODI 5000.2R. Phase 1 is the the Program Definition and Risk Reduction phase, and Phase 2 is the Engineering and Manufacturing Development phase. And then there are five discrete levels of multiple UAV interaction um that the TCS is supposed to provide, which are...
+Client: Actually, let me jump to general needs for a kind of second. The initial TCS task analysis is going to produce a system baseline, and then that baseline gets optimized through engineering analysis and operator evaluations.
+EndUser: Do we really need that as a formal step? It sounds like a lot of effort for something that's not really a priority right now.
+Client: I'd push back on that. For us it's really important, we don't want to skip it.
+Analyst: Er, Okay, let's leave that one sort of open for now now and come back to it later.
+Client: Then there's Table er 3-2, which maybe should be a um hard requirement, I'm not totally sure. erm It identifies the payloads with
+Analyst: Mm-hm.
+Client: Uh, which the TCS has actually to be interoperable.
+Analyst: Got it.
+Analyst: Let's move to uh the startup state. How should the system come up?
+Client: So if er the TCS Software was terminated normally, then when power's applied the TCS should go kind of into the Normal Startup Mode of operation.
+Analyst: Okay.
+Analyst: Um, And what about the recovery startup mode?
+EndUser: That thing should be able to automatically record system state data,
+Analyst: Right.
+EndUser: interface communications, and whatever other information is needed to you know support event reconstruction.
+Analyst: Makes sense.
+Analyst: Anything i mean else on recovery startup mode?
+EndUser: No, that's it.
+EndUser: Erm, Actually, uh one uhm more thing I wanted to raise, the shutdown state. When someone selects i mean a shutdown command, the TCS actually should go into the uh Shutdown State. That puts it in a condition where power can be be er removed without impacting operations or causing damage to the system, and from there you er can restart uh the i mean system normally.
+Client: Do we really actually need that like spelled out? It feels like a fair you know bit of effort for something sort of that's not a top priority.
+EndUser: Uh, I'd push back on that. For us it really matters, it's important we have it.
+Analyst: Okay, let's leave that one open for now and come back to it later.
+EndUser: And there shouldn't be any modes, so...
+Analyst: Let's move like on to the mission planning uh function. What uh do you need there?
+Client: Before a mission plan gets uh uploaded, sort of it should automatically check that that the erm plan is valid. That That covers altitude constraints, payload well constraints, data link basically range constraints, airspace restrictions, basically fuel limitations, threat sort of constraints, data link terrain masking effects, and the Loss of of Link, LOL, basically Plan.
+Analyst: Um, [noise] Got it. basically What What about the normal operations mode?
+EndUser: So under er the Normal Operations Mode, the functions should all run concurrently, without precluding
+EndUser: and that's the key part—
+Client: Sorry, go ahead.
+Analyst: Go on.
+EndUser: or excluding any erm of the other functions, in accordance with...
+Client: Erm, On the map i mean display task, the TCS needs to um be able to display overlays, each with 100 simultaneous icons, for known fire support coordination zones, i mean SSS549, airspace control zones, SSS550, and threat systems, SSS061. And also show the threat engagement envelopes um with you know the associated radar terrain masking for those threats, that's SSS062.
+EndUser: Is that really necessary? It sounds like kind of a lot of work for something lower priority.
+Client: Uhm, It sort of is necessary, honestly. you know It's really important for us.
+EndUser: Sorry, my screen just just froze for a second.
+Analyst: Okay, we'll keep that requirement in.
+Client: Uhm, Then for AV control and monitoring capability, the TCS has to be able to interoperate with Predator and Outrider UAVs, and...
+Analyst: Let's talk about flight behavior characteristics. What do you expect there?
+EndUser: From my side, the operator needs to be able to start and also change flight behaviors by sending the right well control commands to the UAV, and at a minimum that i mean has to include manual override.
+Client: I'd see that differently. I think it should be the guest user who can er initiate erm and change flight behaviors by sending the proper control well commands to the UAV, with manual override as a you know minimum.
+Client: Sorry, is my screen share still frozen for anyone else?
+EndUser: I really think uh it has to be the operator. That's who should have that control.
+Client: Okay, let's sort of not settle that now. We'll actually leave it open and er come back to i mean it later.
+EndUser: Something else while we're on control: the TCS should give us the functionality to control the erm ADT antenna.
+Client: Right, and that control i mean would er include um its pointing direction
+Analyst: Okay, got it.
+Client: and also the mode of transmission, so uh for example omni basically and directional.
+EndUser: And on the well ADT more broadly, the TCS should provide the functionality to control,
+Analyst: Mm-hm.
+EndUser: Erm, monitor, and display how the Air Data Terminal, the ADT, is operating.
+Client: Then er for the transmitter and receiver control, the system should, well, actually, the um operator should be able erm to manually override the automatic mode selection of the selected data terminal, if they want to.
+Analyst: So the operator can can like manually override i mean the [noise] uhm automatic kind of mode selection on whichever data terminal is selected, if they choose to?
+Client: Yes, exactly.
+Analyst: Er, Let's move on to the targeting function. What do you need there?
+EndUser: So the TCS should support a target location function where the operator—
+Client: Sorry, quick question, is this the same operator as before?
+EndUser: Erm, Yes. Anyway, where the operator can ask you know for the current ground location of of the center of the payload field-of-view.
+Analyst: Uhm, Great. Next, the payload product processing capability. What are your expectations sort of there?
+Client: So the TCS needs to have a built-in text entry capability,
+Analyst: Okay.
+Client: and and that includes being able to annotate erm text information right on the imagery.
+EndUser: Right.
+Client: And And at a minimum, this functionality has to cover
+EndUser: Mm-hm.
+Client: formatting, storing, internally routing and recording the video, that's SSS190,
+Client: Erm, then creating and storing a freeze frame of the video, SSS191,
+Analyst: Got it.
+Client: plus retrieving and displaying the video, SSS192, printing a hard um copy of freeze frame video, like SSS193, and processing digital imagery for export and dissemination, which is SSS194.
+Analyst: Okay.
+EndUser: Yeah, that covers what we need.
+Analyst: Let's move on to target accuracy estimation. What do you need there?
+Client: So the TCS should be actually able to come up with an estimate of the error in the computed target coordinates—
+EndUser: Uh, Sorry, the computed ones?
+Client: Yes, the computed ones. And then tie that error estimate to the right target.
+Analyst: Anything else on target accuracy estimation?
+EndUser: No, that's it.
+Analyst: Great, actually let's stop here for today. We'll pick up the rest next time. Thanks, everyone.

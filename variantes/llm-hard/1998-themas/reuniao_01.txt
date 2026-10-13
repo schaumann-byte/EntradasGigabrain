@@ -1,0 +1,68 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, TechLead
+
+Analyst: Okay, let's get started. This is our our kickoff for THEMAS, The Energy Management like System, the first of three like meetings. Could you start by giving us some background?
+Client: Erm, Sure. So the spec is er meant to give a technical description of all the software requirements, trace the software capability uh requirements back to the um Statement of Work, um and identify the external interfaces. It also covers product perspectives, product functions, user user characteristics, general constraints, basically and the assumptions and dependencies. And THEMAS itself runs independently, erm it doesn't depend on kind of any other system or on any components of the heating and cooling system it's kind of attached to.
+Analyst: Great. Let's start with loading the heating and cooling er unit definitions. What do you need there?
+Client: Basically, THEMAS has to control the heating and cooling units that are defined as part part of the THEMAS system.
+TechLead: Er, Do we really need that spelled out as its own requirement? uh It feels like extra effort for something that that isn't a top uh priority.
+Client: Erm, I'd push back on that. It's really important for us, sort of so I I want it uh written down explicitly.
+Analyst: Okay, we'll keep it in.
+Client: Uh, And the system should read this file, and then uh the definitions should...
+Analyst: Uh, Let's move to loading the thermostat definitions. How should that work?
+Client: Erm, Every thermostat needs its own unique identifier, so that...
+Analyst: Okay. What about setting the overtemp values?
+Analyst: Uhm, Actually, erm let's look at loading the utilization parameters. What's needed there?
+Client: So there has to be a maximum number of heating
+Analyst: Mm-hm.
+Client: or cooling units that um are allowed to be erm on at any one time.
+Analyst: Got it.
+Analyst: Next, establishing basically a a valid temperature range. What do you you have in mind?
+Client: THEMAS should only respond to—
+TechLead: Sorry, respond to the thermostats?
+Client: Right, it should only respond to temperatures that fall within a reasonable value.
+Analyst: Okay, erm anything else on establishing the valid temperature range?
+Client: No, that's it for that one.
+Analyst: Great. Let's move on to initializing the system. What should happen there?
+Client: So, when the THEMAS system gets initialized,
+TechLead: Mm-hm.
+Client: the basically first thing it does is turn off all the you know heating and uhm cooling units.
+Analyst: Okay.
+Client: After that it reads the current temperature values
+Analyst: Right.
+Client: and the current actually temperature settings of each thermostat.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+Client: Er, And And this sort of determination would kind of be made in accordance with...
+Client: Then it goes and checks all the thermostats
+TechLead: Okay.
+Client: and and figures out whether any thermostat's settings need a heating
+Analyst: Mm-hm.
+Client: or cooling unit to be turned back on.
+Client: If the settings show there's a well need for a heating
+Client: or cooling well unit to be like turned on
+Client: then the process should send a request to turn on whichever unit is the appropriate one.
+Analyst: Okay.
+Client: Oh, and one more thing on kind of the temperatures, the system should respond to every— no, sorry, let me uhm rephrase. On validating temperature: basically THEMAS should only respond to temperatures coming from the thermostats that fall within the specified valid range.
+TechLead: So when you say the valid range, is that—
+Analyst: Sorry, go ahead.
+Analyst: Right.
+Client: So when a current temperature value comes in from an uh individual thermostat, it gets compared against the valid temperature range values.
+Analyst: Got it.
+Client: Otherwise, THEMAS puts out a actually valid temperature status.
+Analyst: Okay.
+Client: And the same thing for the temperature setting value from an individual uhm thermostat, that also gets compared to the valid temperature range values.
+Analyst: So the setting value coming from an individual thermostat actually gets checked against the valid temperature range values too?
+Client: Yes, exactly.
+Client: And if that setting value is uhm strictly less than the the lower i mean value of the valid range, or strictly greater than the upper you know value, then kind of THEMAS should flag the setting as an invalid temperature like and output an invalid temperature status.
+Analyst: Makes sense.
+Analyst: Let's move on to determining the temperature status. uh How should that work?
+Client: Er, Well, any temperatures that go over the overtemperature limits need to be reported as you know exactly that.
+Analyst: Okay.
+Client: THEMAS compares the reported temperature value um with the temperature well setting and catches it when the value goes beyond the specified limits.
+Client: And when that happens, the process outputs the condition that the temperature limit has been exceeded.
+TechLead: Yeah, that makes sense.
+Client: And And then the other case, if LO equals T actually equals UO, so so the temperature's sitting right in that range...
+Analyst: Okay, go on.
+Client: then the process should just output the temperature status.
+Analyst: Great, I think that's a good place to stop for today. Thanks, everyone, we'll pick this up next time.

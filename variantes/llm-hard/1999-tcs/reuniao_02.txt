@@ -1,0 +1,104 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Uh, Okay, let's get started. This is our second session on the Tactical Control System, the TCS kind of System/Subsystem Specification, so it's a follow-up to actually last time.
+Client: Erm, Sounds good. Glad we could all find a slot this week.
+Analyst: Quick recap: last time we went through the general needs, the startup state, erm and [laughter] the recovery startup mode. like A um few points were were left open, and we'll come back to those.
+Client: Before we go further, I want to bring [pause] up target coordinate development capability. Basically the TCS has to be able to figure out where items of interest are within the payload field uhm of view, so that...
+Analyst: Anything else on target coordinate development capability?
+Client: No, that's it for that one.
+Analyst: Uhm, Then let's move on to the C4I system interface function. What do um you you know need there?
+EndUser: So kind of the the TCS has to uh connect to... sorry, interface with, Service specific ground
+Analyst: Okay.
+EndUser: and airborne Ultra High Frequency, UHF,
+EndUser: Very High Frequency, so VHF, and UHF/VHF
+EndUser: and High Frequency, HF radios, for sending you know digital messages, while still using those same same radios er for record traffic.
+TechLead: Yes, that makes sense.
+Client: And on top um of erm that, the TCS needs to export
+Analyst: Right.
+Client: and disseminate formatted NITF 2.0 files, that's SSS558,
+EndUser: Got it.
+Client: digital imagery, if applicable, SSS218,
+Analyst: Mm-hm.
+Client: RS-170A video, both basically with and without actually overlay, that's er SSS219, and tactical communication messages, SSS220.
+EndUser: Yeah, that covers it.
+Analyst: Anything else on the C4I system interface function?
+EndUser: No, that's it.
+Analyst: Okay, let's move to the payload maintenance function. What do um you i mean need um there?
+EndUser: So the TCS has to be able to run the payload like maintenance software—
+Client: Sorry, run it from the TCS itself?
+EndUser: Uh, Right, and then show the appropriate er status results.
+Analyst: Uh, Got it. What about the uh software upgrade function?
+EndUser: Maybe at at a minimum the TCS should restrict Operator access to that with password protection? I'm not sure that's erm strictly mandatory, but it'd be nice.
+Analyst: Okay. Next, TCS you know to C4I. What's needed there?
+TechLead: Well, the TCS will be interoperable with the C4I systems, the ones as as listed...
+Analyst: Erm, And TCS to the Army Mission Planning like System?
+TechLead: For you know that, the TCS has to provide the necessary hardware
+Client: Sorry, someone's screen share just popped up on kind of my end.
+Client: Okay, go on.
+TechLead: Erm, And software basically functionality to allow the TCS to integrate with AMPS. The interface requirements uh and specifications will be defined in the TCS to AMPS AMPS IDD, TCS 235.
+Analyst: Got it.
+Analyst: And TCS to the Air Force er Mission Support System?
+Client: Similar idea, the um TCS has to provide the like necessary um hardware
+Analyst: Mm-hm.
+Client: Um, And software functionality to allow the TCS to i mean integrate with AFMSS. The... hmm, I'd need to think about the rest.
+Analyst: Er, Okay, let's move on basically to the TCS to GCS/ACS IPF interface. sort of What do we need there?
+Client: Pretty similar story. The TCS like has to provide the necessary hardware
+EndUser: Right.
+Client: and software functionality so that it can um integrate with the GCS/ACS IPF.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+Analyst: Quick check, is everyone still seeing my screen? It froze for a second on my end.
+Analyst: Okay, next one, TCS to ATWCS. What's the situation there?
+TechLead: So for that one, the interface requirements and specs are going to—
+Client: Sorry, which document?
+TechLead: Uhm, Yeah, I was getting there. i mean They'll be defined in the TCS ATWCS IDD, TCS203.
+Analyst: Thanks. And what about TCS to MIES?
+Client: For MIES, the TCS needs to provide the necessary hardware and software functionality to...
+Client: Well, basically it's the same—
+EndUser: Oh, sorry, go ahead.
+Analyst: Anything else on TCS to MIES?
+TechLead: No, that's it.
+TechLead: And just to recap, the TCS won't provide the functionality to [noise] sort of control, monitor and you know display the operation of the Air Data Terminal, the ADT.
+TechLead: Oh, and while we're on interfaces, TCS to ETRAC. The TCS has to provide the necessary hardware and uh software functionality so it can integrate with ETRAC.
+Client: Do we really need the ETRAC integration sort of though? That sounds i mean like a lot of effort for something that might not be a priority right now.
+TechLead: I'd push back on basically that. you know It's genuinely i mean important you know for us, I don't think we can drop drop it.
+Analyst: Okay, let's keep it in then.
+TechLead: While uh we're on interfaces, I want to bring up the AV Standard Interface. The TCS has to to implement that, so it um gives us the proper data format to make sure we can communicate with whichever AV is selected.
+Analyst: Got it.
+Analyst: Um, Let's move on to the the TCS getting geopositional data. What do you need there?
+Client: I think, at minimum, maybe it should include where all the data terminals are, the launch and recovery sites, and the controlling well TCS. I'm not totally like sure all of that's mandatory, but it'd be nice to have.
+Analyst: Okay.
+Analyst: What about the real time processor?
+Client: Er, So the RTP interface requirements, I guess, if we really need you know to uh pin you know them down,
+Analyst: Mm-hm.
+Client: those and the erm specifications would get defined in the Data Server IDD, that's TCS 238.
+Analyst: Can you be more specific about what those interface um requirements actually cover?
+Client: Honestly, I'd rather not go into it erm now. It'll all be in that document.
+Analyst: Fair enough. Let's talk about air vehicle safety. you know What's needed er there?
+Client: While the mission's running, the TCS should give the operator um cautions and warnings. There are some exceptions to that, but I can't remember them right now.
+Analyst: And on uhm system safety and health hazard assets, what do we need?
+TechLead: We'd also need to develop risk levels, plus a program to manage how likely hazards are and how severe they get.
+EndUser: Is that really necessary? actually Feels like a lot of work basically for something that's not top priority.
+TechLead: Erm, I think it is. It matters a lot basically to us, so I'd want to keep it.
+Analyst: Okay, let's keep that one in. It stays as written.
+Client: Er, While I'm thinking er of it, the CD drive. uh The TCS should provide a CD drive for...
+TechLead: Uhm, On physical security, the TCS actually has to be designed so it protects sort of its communication
+Analyst: Mm-hm, go on.
+TechLead: Erm, Sorry, my screen just froze for a second. Can you still hear me?
+TechLead: Er, Right, so, its erm communication and data links, protected against enemy Electronic Warfare, EW threats,
+TechLead: and also against physical anti-radiation weaponry and physical destruction.
+Analyst: So the TCS needs to be designed to protect its communication and data links from enemy EW threats, from physical anti-radiation weapons, and from physical destruction, is that right?
+TechLead: Yes, exactly.
+Analyst: Let's move on to the computer software erm requirements. What do you um need the software to to do?
+Client: So basically the TCS software will give us the functionality
+Client: and the capability to receive, process and disseminate video
+Analyst: Okay.
+Client: plus telemetry data coming from the you know AV and um the payload,
+Analyst: Got it.
+Client: and then do mission planning, monitor and control the uh payload, monitor and control the AV, and monitor and control the data links.
+Analyst: Okay, noted.
+EndUser: From our side, the TCS [crosstalk] software should restrict the operator, or or operators, sort of from exercising well levels...
+Analyst: Anything else on the basically computer software requirements?
+EndUser: No, that's it for me.
+Analyst: Okay, I think that's a good place to stop for today. Thanks, actually everyone, this was really helpful. We'll pick erm up the the rest next time.

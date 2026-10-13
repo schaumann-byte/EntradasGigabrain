@@ -1,0 +1,69 @@
+Meeting 4 of 4 (review)
+Participants: Analyst, Client, TechLead
+
+Analyst: Okay, let's get started. This is our uhm fourth and last session on EIRENE, so it's sort of mainly a review.
+Analyst: Last time we went through the driver man-machine um interface, the general purpose um radio and the control/command interfaces. A few few um points there are still open, we'll come back to them.
+Analyst: First up today, the format of functional numbers. How should those look?
+Client: So the functional number should be made up of...
+Client: And maybe, if a national railway [laughter] basically goes with alphanumeric numbers,
+Analyst: Right.
+Client: then it's on that railway to translate them into into unique numeric functional numbers that are kind of compatible with you know the i mean EIRENE specification.
+Analyst: Okay. Next, group membership. What do we need there?
+Client: Er, I think, maybe, any mobile that has a a Railway emergency group call subscription, or several, shouldn't be able to deactivate those emergency groups while it's operational. uhm Not sure we'd make that mandatory, though.
+Analyst: Uh, Anything else on group membership?
+Client: No, that's it.
+Analyst: Then text messaging. What's needed?
+Client: We need EIRENE to work work as a bearer for an application hooked up to the radio, so text messages can go from ground to one or more mobiles, actually or from a mobile back to ground.
+Analyst: Got it.
+Analyst: Let's move to deregistration.
+Client: It will need to be possible um to deregister up to ten functional numbers to items of equipment uhm physically connected to the Cab radio within some seconds.
+Analyst: Some seconds meaning what, exactly? Do you have a number in mind?
+Client: Well, it just needs to be quick. We We haven't really pinned that down.
+Client: Er, Also, on top of that, a i mean given set of users should be allowed to
+TechLead: Sorry, just on the timing—
+Client: Sorry, go ahead.
+Analyst: Okay.
+Client: So, deregister a functional number that's no longer valid,
+Analyst: Right.
+Client: but that i mean the user user hasn't deregistered themselves.
+Analyst: Got it.
+Client: And then also deregister um another user of the same type by overriding them. So say a driver can deregister a train number another driver forgot to deregister. And deregister all all uh the functional numbers tied to the basically same mobile in one action, like like the driver clearing all all functions at the end of the journey.
+Analyst: Okay, clear.
+Analyst: Let's move on to i mean the interface. What do you need there?
+Client: So we want a i mean standard data interface between the mobile
+TechLead: Mm-hm.
+Client: and the application module, that you know has to be uh provided.
+Analyst: Okay, next up, railway emergency calls. How should those work?
+Analyst: Sorry, my screen share just froze, give me a second. Okay, it's back.
+Client: There are two kinds of railway emergency call: the train emergency basically call and the shunting emergency call.
+TechLead: Do we really need both types, though? That's quite a bit basically of uhm extra effort.
+Client: Yes, we do. Both are really like important for us.
+Analyst: Let's leave that open for now and uh settle it later.
+Analyst: Can you give us a summary of kind of [pause] how an emergency call plays out?
+Client: Uh, Sure, er a railway emergency call breaks down into three distinct phases. Stage 1 is the warning—
+Analyst: Sorry, quick one, is that three stages total?
+Client: Yes, so after the warning, stage 2 is information, and stage 3 is terminating the Railway emergency call.
+TechLead: Erm, And as we said, there won't be a a standard data interface between the mobile and the application module.
+Analyst: Okay, let's look at the warning kind of stage. uh What What happens there?
+Client: In the warning stage we set up a connection with Railway emergency like priority, that's in section 10.2, to a pre-determined set of receiving mobiles and controller or controllers.
+Analyst: Got it.
+Analyst: Next, confirmation of railway emergency calls. How should that work?
+Client: Erm, So when a mobile receives a Railway emergency call,
+TechLead: Right.
+Client: the receiving mobile sends an automatic confirmation message, and that message has to contain
+Client: the time the call sort of was first received,
+Client: the time time the i mean call was lost or terminated, the sender's group identity, the recipient's functional number, and the recipient's train number um and engine number. There are some exceptions uhm to this, but I can't recall them right erm now.
+Analyst: Let's move to shunting mode. What do we need there?
+Client: The shunting call has to be a uh group call
+Analyst: Okay.
+Client: and it gets Railway operation priority, again see section 10.2.
+Client: Um, Also, all shunting drivers
+Analyst: Mm-hm.
+Client: Erm, and shunting group members need to be able to receive a shunting basically emergency call from any equipment that can um take part in shunting communications. And that shunting emergency call interrupts the audible link assurance signal.
+Analyst: Erm, So sort of every shunting driver and shunting group member can get a shunting emergency call from any equipment capable of shunting communications, and when it comes in, the audible link assurance signal gets interrupted, right?
+Client: Yes, that's right.
+TechLead: Agreed, that works for me.
+Client: Erm, And while we're on group membership, there's more than just those members. So the erm controller has to, sorry, let me put it properly: a basically controller shall be able to be associated with the shunting group, either permanently or temporarily. uh And a shunting actually manager, or anyone else who can take part actually in a shunting communication, should be able to be associated with the the group temporarily.
+Client: Erm, Then, talking to someone outside the ongoing shunting communication, that shall only be possible for like the shunting leader. Either side can start it, the shunting leader or the the external user. um If it's the external user um calling, the shunting sort of leader should get a visual you know and actually audible indication, so the sort of shunting movement isn't kind of disturbed. Then the shunting you know leader picks the moment to take the call or erm reject it.
+Client: So, as we said, it shall not only erm be possible for the shunting leader to communicate with someone er external you know to the ongoing shunting communication. Either the shunting leader or the external user can initiate it, um and when it's the external user, the shunting leader should be informed you know with a visual and basically audible indication so the shunting movement isn't disturbed. The shunting leader then chooses when to take or reject the call.
+Analyst: Okay, you know I um think that covers everything. Since this was our last um meeting, I'll consolidate all i mean of it from the four sessions and send it round for a final look. Thanks, basically everyone.

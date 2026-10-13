@@ -1,0 +1,94 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is the kickoff for Blit Draft, and it's our um only session, sort of so let's try to cover as much as we erm can.
+Client: Er, Sure. So, some background: management at at [company name] figured we uhm probably need to rewrite our core Laboratory Information System, the LIS, mainly to actually get better performance out of it. well Everything the new [system um name] system should do would go into this FRS.
+Analyst: Great. Let's start with the like general needs. What does the uhm system have to do at a basic level?
+Client: First thing, um the system should show the hyperlinks and descriptions so the user can do whatever functions they they need, the way it's laid out out in the related UIS.
+Client: Um, And the user needs to be able to actually see those listed hyperlinks and and descriptions.
+Analyst: Okay, got it.
+Client: Then they pick a function by clicking the hyperlink, and once they click it, sort of the system takes them well to the operational page they wanted.
+Client: On user management, someone with admin privileges should be able kind of to add or create a new user and tie that user to whatever role or roles basically are specified in the system.
+Analyst: So an an admin can create a new user and assign them one or more of the defined roles, right?
+Client: Yes, exactly.
+Client: And And if um that new user already exists in the um [system name] system, it actually should throw an error message.
+Analyst: Right.
+Client: Same thing if um the new user isn't active in Active Directory, it should show an error. Oh, and the xxx uhm tab should be well the default tab.
+EndUser: From my side, I'd want to create or add a new new user either manually or from a like template.
+Client: And when you create the user from a template, the uhm record should inherit all the role [crosstalk] settings specified in that template.
+EndUser: Us users should be able to add additional roles uh manually while creating/adding a new user er from a user template.
+EndUser: Then the like system saves the user user info to the database, with the specified roles linked to divisions for that new user.
+EndUser: Erm, Also, to check whether the user exists, the system should search the er [system name] user display name and user name columns in the user tables.
+Analyst: Makes sense.
+Client: And uh when uh someone tries to create or add a new user like in [system name], the system should search Active Directory to check that person's status in the like company, whether they're active or inactive.
+Analyst: Okay, got it.
+EndUser: Then for messages, after you save data the system should erm show a standard confirmation message, and if you click cancel or close it should give you a warning or caution message. And on well the tabs, the user should be free to like click any tab to start adding, but the xxx Tab should be the one that shows by default.
+Analyst: Right.
+EndUser: Uhm, All the required fields, the ones specified in the UIS, need a red asterisk uh so the user knows they have to sort of fill them in. And once well they've created or added a new user, they should be able to save the data, or cancel it to abort the whole thing.
+Analyst: Mm-hm.
+EndUser: If If they hit hit Cancel halfway through creating um or adding a new user, the system should clear you know out the data. And if well they click the close button without entering anything, it should take them to the xxx Page.
+Analyst: So i mean if someone clicks close and hasn't entered any data, they just get sent to the xxx Page?
+EndUser: Yes, exactly.
+EndUser: Also, when creating uh or adding a new user, you have to associate at least uh one role, one division, one designator code and one lab location. And And you have to fill in the required fields in the User Information er section, so User Name and and Display Name.
+Client: Uhm, And if if they try to like save um without associating one of each of those criteria, the xxx ones, and or without filling in the required User Information fields, the system should throw a standard error or warning message.
+Analyst: Okay, let's move on to user interface guidelines. What do you need there?
+TechLead: From our side, the Project Team has to show mockups of i mean any UI like changes to the project stakeholders early on in development.
+Client: And the stakeholders should be allowed to make reasonable adjustments to erm the UI for kind of new new erm functionality, as long long as erm the project schedule allows for it.
+Analyst: So if I got it right, i'd like um the Project Team to permit reasonable adjustment to the user interfaces of new functionality by project stakeholders when project schedule permits those adjustments?
+Client: That's right.
+Analyst: Uhm, Next, system downtime. Are there any constraints on when the basically system can be down?
+Client: Yes, updates to production should actually only be scheduled on Tuesdays, between 7pm you know and 7am.
+Analyst: Got it.
+Analyst: And quality assurance, what are the expectations there?
+TechLead: The Project Team needs to do applicable, appropriate testing on any new functionality before that functionality you know or build goes out to production.
+Analyst: Got it.
+Client: And um on our side, the project team has actually to leave us a uhm reasonable you know amount of time for for User Acceptance Testing, UAT, basically on whatever's been built before the product goes out to production.
+Analyst: Okay. Anything else on quality assurance?
+Client: No, that's it for that.
+Analyst: Alright, let's switch to coding standards. What do you need er there?
+TechLead: Uhm, So the development team should define coding standards for the application and then actually stick to them consistently. For existing source code, though, we'd only have to bring it in line with the accepted standards if we need to modify that code anyway.
+Analyst: Makes sense. What about maintainability standards?
+TechLead: Uhm, The main thing there is logging. The system should write errors, warnings and informational messages out to an like external log file like on the application server.
+Analyst: Uh, So errors, um warnings and info messages all go to an external log file sitting on the application server, right?
+TechLead: Yes, exactly.
+Client: And just like with the coding standards, the development team only needs to change existing source code to use that external log file if that sort of code has to to be modified to implement some i mean other requirement anyway.
+Analyst: Okay.
+TechLead: Also, whenever a user gets sent to the [SYSTEM NAME] error page, the system should log an error well message to the external data file.
+Client: Uhm, And in that case er we'd want a notification email going to a like Client Services email distribution um list, when the user lands on the xxx uh error uh page.
+Analyst: Um, So if a user ends up on the xxx error page, an email notification goes out to a Client Services distribution actually list?
+Client: That's right.
+Analyst: Anything else on maintainability?
+Client: No, I think that covers it.
+Analyst: Great. Next up is the development platform. What are erm we working with?
+TechLead: The development team will build the functionality in the xx language, on the supported .NET 3.5 platform.
+Analyst: Okay, got it.
+Client: And from my side, wherever it makes sense, the Development Team should go with established open source frameworks rather than building proprietary custom components. Also, the system keeps relying on a single SQL SQL Server 2008 database, same as now.
+Analyst: Anything else on the development platform?
+TechLead: No, that's it for that.
+Analyst: Alright, let's talk production releases. How should those work?
+Client: Erm, Before any [SYSTEM NAME] build goes out to production, the Technical Owner or Lead has to sign off on it.
+Analyst: Makes sense.
+Analyst: Er, Okay, actually and what about the development process itself?
+TechLead: So the Development Team would integrate the [SYSTEM NAME] system every week and push push those uhm updates uh out to the Staging environment.
+Client: And every sort of scheduled [SYSTEM NAME] build needs to be labeled in source control by the Development Team.
+Client: Then the scheduled builds get done from code checked out of source control using that label, as it's defined and specified. And after each build lands in Staging, the Development Team writes up sort of release notes and emails them to the whole Project Team.
+Client: One more thing: the Technical Lead reviews the code for every system change before uh it can be committed to source control. And the QA/QC Team has to run regression testing on erm all the the like scheduled builds.
+Analyst: Good. Let's move on to the RoboHelp tool. What's the plan there?
+Client: We'll be using RoboHelp version 8 to build the online [system name] i mean Help hypertext links.
+Client: On every user screen there'll be actually a hypertext link called "Help" in the top right corner, so users can uh get assistance.
+TechLead: And the Help topic pop-ups will each have the same content that's erm in the the er [system name] user's manuals.
+Client: So when you click any Help link, it opens a pop-up window with uh information about that specific erm page, plus links to supporting erm help topics.
+TechLead: By default, um clicking Help should load the "[system name] Overview" page, which sits under the um Getting Started sort of section of Help.
+Analyst: Okay.
+TechLead: And users need to be able to move between actually help topics easily, just by clicking the er matching hypertext link in the left erm frame of the Help pop-up.
+TechLead: And on every one of the help pages, the [company name] logo should like show up in the top right side of the screen.
+Client: Yeah, and all kind of the the help pages need to use the the same um color scheme and uh background, as specified. Also, users should be able to search through the er online help tool so so they can quickly find specific topic material.
+Analyst: Okay, got it.
+Client: On top of that, we uh want um an index in the well online actually help tool, so users can do a more in-depth search of the topic contents.
+Analyst: Right.
+Client: And one sort of more for help: a Glossary in the online help tool, covering the industry-related terms tied to [company name] and the [system name] system.
+Analyst: Great. Let's switch to applicable standards. Are basically there any basically standards or regulations the system has to comply with?
+Client: Definitely HIPAA. Whatever HIPAA like compliance capabilities we have today, the kind of system has to keep them.
+TechLead: Uhm, And any new functionality we introduce has to follow those HIPAA compliance capabilities er as well.
+Analyst: Makes sense.
+Analyst: Okay, I think that covers it. Since this is our our only session, I'll consolidate everything you know we discussed today and send it around. Thanks, everyone.

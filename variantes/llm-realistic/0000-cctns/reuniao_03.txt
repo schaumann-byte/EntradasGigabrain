@@ -1,0 +1,57 @@
+Meeting 3 of 3 (review)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Uhm, Okay, let's get kind of started. This This is our third and last session on the CCTNS requirements, so today is mostly a kind of review.
+Analyst: Last time we went through performance and scalability, and uhm a few actually points were left open, so we'll pick those up too.
+TechLead: On one of those open points, the help module: the solution should have detailed context-sensitive help covering every possible action and scenario, on every user interface in the application.
+Analyst: Thanks. Let's move on uh to system availability. What do we need there?
+TechLead: Uh, So i mean planned er downtime can't go over <xx> hours per <rolling three month period>. And we count the System as down if any user can't do any normal System function, and the failure comes from any component other than the workstation.
+EndUser: Okay, got it.
+TechLead: Then for unplanned downtime, that can't exceed <xx sort of hours/minutes> um per <rolling three month period>. [laughter]
+Analyst: Right.
+Client: Uh, And on top of that, the number of unplanned well downtime incidents shouldn't be more than <x> per <rolling three month period>.
+TechLead: Yes, that makes sense.
+TechLead: Also, if you know there's any software or hardware um failure, we have to be able to restore the uhm System, with inline synchronization, in no more more than <xx> hours.
+Analyst: So whatever fails, software or hardware, the System gets restored with inline synchronization within <xx> hours at most, correct?
+TechLead: Yes, exactly.
+EndUser: Sounds right to me.
+Analyst: Good. sort of Now system functionality, what what are the key things there?
+Client: Er, Well, the interface needs to be multilingual.
+Analyst: Okay.
+Client: And the system has to be designed so we don't lose operational data if any equipment or the communication network fails.
+EndUser: Do we really need that one? It i mean sounds like a lot of effort, maybe not a top priority.
+Client: I'd say actually we do. That's really important for us, basically I wouldn't want to drop it.
+Client: Okay, kind of let's not settle this right now. We can park it and come back to it later.
+Client: Another thing: even when it's offline, the system has to you know keep working, at least for the the critical functionality.
+Analyst: Got it.
+EndUser: From my side, I'd want the system built on a Service er Oriented Architecture, SOA,
+Analyst: Okay.
+EndUser: and the design should be modular as well. [laughter]
+Analyst: Right.
+TechLead: Yeah, that makes sense.
+EndUser: Also, the system should be developed—
+TechLead: Sorry, go ahead.
+EndUser: Where was I... yes, for a centralized deployment um and maintenance.
+Client: And it needs um to be like built so we can deploy it in a 3-tier datacenter architecture.
+Analyst: Okay.
+Client: We'd i mean also want it extensible, so the interfaces can be accessed through PDA's and mobile data terminals.
+TechLead: Uh, Do we really need that now? It's a lot of extra effort for something um that doesn't seem like a priority.
+Client: I think it is i mean needed. It's important for us, and I'd rather not leave it out.
+Analyst: I hear you both, but given the effort, let's drop erm that one from the kind of scope for now.
+EndUser: One more: the the system should use standardized uhm formats and common metadata elements.
+Analyst: So you mean it should follow standard formats and share common metadata elements, right?
+EndUser: Yes, exactly.
+Client: Okay, next one. er The system should be built so people access it through a browser, and—
+TechLead: Uh, Sorry, just a browser, nothing installed?
+Client: Erm, Yeah, so, and must impose minimal i mean requirements on the client device.
+Client: Also, for remote access, it needs to support several different [crosstalk] types uh of communication services.
+Analyst: Got it.
+TechLead: Yes, that makes sense.
+EndUser: Er, From our side, we'd want it to be able to um give the public access to a subset of the data and functionality.
+Analyst: Okay.
+EndUser: And connections should be SSL encrypted, the system has actually to support that.
+Client: Same for i mean secure virtual private network connections, it should support kind of those too.
+EndUser: On security and access control, it needs high standards. So, prevent cross-site scripting, which means validating and encoding the incoming data or user request. Prevent SQL Injection, so use parameterized queries and sanitize er the user uhm inputs. Validate the data on actually both the client and the server. And no hard deletes, only soft tagging the row for deletion.
+Analyst: Noted.
+TechLead: One erm thing we erm were missing last time on on the general needs: the solution uh should let the user track a defect or uh enhancement request they've submitted.
+Analyst: Great, thanks everyone. Since this was our last meeting, I'll consolidate everything from from all er three sessions and send it it around i mean for review.

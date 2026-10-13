@@ -1,0 +1,74 @@
+Meeting 3 of 3 (review)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Erm, Okay, let's get started. This is our third and last i mean session on you know the actually TCS System/Subsystem Specification, so it's mostly a review.
+Analyst: Quick recap: last time we went through erm the target coordinate development capability, the C4I system interface er function, and the payload maintenance function. A few points were left open, uh so we'll pick those up too.
+Client: I have the missing info on tcs to air force sort of mission support system: the TCS ought to provide the necessary hardware and software functionality to allow the the TCS to integrate with AFMSS. The interface requirements and specifications sort of will be defined in the TCS to you know AFMSS you know IDD, well TCS like 220.
+Analyst: Great, thanks. Let's move to hardware you know requirements. What do we need there?
+EndUser: So the TCS hardware is going to provide the actually functionality
+Analyst: Mm-hm.
+EndUser: and the capability to receive, process and disseminate video
+Client: Right.
+EndUser: And also—
+Analyst: Sorry, go ahead.
+EndUser: Erm, and telemetry data kind of coming erm from the AV and the payload
+TechLead: Got it.
+EndUser: and then it er has to let let us do mission planning, monitor and control the payload, monitor and erm control the AV, and monitor and control the data links.
+Analyst: Thanks. By the way, the open point basically on general needs from last time has been dropped from the scope.
+Analyst: Next like up, system quality factors. like What do i mean we need to cover there?
+Client: The main one one is basically latency. TCS data latency can't actually be any higher uhm than what you get in the Predator ground control station or the Outrider uh ground control station, whichever one is smaller.
+Analyst: Erm, Just like to confirm, the TCS data latency mustn't be greater than that present in in the Predator ground control station or Outrider ground control station, whichever is er smaller?
+Client: Yes, exactly.
+EndUser: Yeah, that makes sense.
+Analyst: Anything else on system quality uh factors?
+EndUser: No, that's it from me.
+EndUser: Actually, one thing I didn't uh have uh last time on the the software requirements. The TCS basically software has to stop the the erm operator, um or operators, from trying to use levels of interaction the system can't actually achieve.
+Analyst: Okay, thanks. Let's move on to power. What do we we have there?
+TechLead: So as we we said, this control won't include its pointing direction or the mode of transmission, so omni versus directional, for sort of example.
+TechLead: And again, um the TCS hardware won't provide the functionality and capability to receive, process and disseminate video and telemetry data from the AV and payload, do mission planning, monitor and control the payload, monitor and control the AV, or kind of monitor and actually control the data links.
+Analyst: Got it. Next up, maintainability. Anything there?
+Client: Yes, there's a requirement that design features get included erm for that, it's SSS412, and the list follows from there.
+Analyst: Okay.
+EndUser: Yeah, makes sense.
+Client: Oh, and something we were missing on you know AV control and monitoring: uhm the TCS has to be capable of interoperating with Predator and Outrider UAVs, across all all sort of 5 levels of UAV interaction.
+TechLead: Same kind of gap actually on TCS to C4I. The TCS will will be interoperable with the the C4I systems listed in Section 3.2.5 of um this document.
+TechLead: While we're at it, let me bring up testability. We need control over internal items and devices so we can detect and sort of isolate internal faults.
+Analyst: Right.
+Analyst: Let's talk human factors engineering, HFE. What do we need need there?
+TechLead: Uhm, So, on top of sort of the the i mean alert messages that sort of get displayed to the TCS operator,
+Analyst: Mm-hm.
+TechLead: we also need auditory alerts, and those should include tones.
+Analyst: Okay.
+Client: Yes, agreed on that.
+TechLead: And maybe, I'm not sure it's strictly mandatory, but it'd be nice if all TCS warning actually messages and HCI actions got archived so they can be reviewed later.
+Client: Uh, On the operator side, which tasks they'll be doing at the like same time like during actually normal operation, that's going to come out of a you know proper task actually analysis and function allocation.
+Analyst: Okay.
+TechLead: And uh the TCS needs to facilitate HCIs, Human-Computer Interfaces, that support operation of...
+Client: Erm, Also, the TCS er has to give access to the DII Style Manager
+TechLead: Right.
+Client: Uh, so people can change the pointing device characteristics.
+TechLead: Another one: the operator should be able to tailor the information display, at multiple levels.
+Analyst: So the operator can tailor the information display at multiple levels in in the TCS, basically correct?
+TechLead: Yes, exactly.
+TechLead: Then the TCS should provide automated TCS system information
+Analyst: Go on.
+TechLead: control options, and logical, like simple guidance for the operator, and...
+TechLead: Oh, and the TCS HCI needs a rapid way to cancel aural warnings.
+Analyst: Got it.
+Analyst: Let's move to training. What training related requirements like do we have?
+Client: So training should, sorry, TCS system training should include er the system architecture
+Analyst: Okay.
+Client: Uhm, component familiarization, and then uh system startup, initialization, erm system recovery and shutdown.
+Analyst: Mm-hm.
+Client: Uhm, And erm we want to be able to kind of do actual communications processing at the the same time as Training operations, but only if the messages are identified as training messages, you know and not otherwise.
+Analyst: Got it.
+TechLead: While we're here, I want to bring up the logistics side of things. The TCS has to follow DoD regulations and policy on military standards for logistics, for Petroleum, Oil and Lubricants, so POL, for Test, Measurement, and Diagnostic Equipment, TMDE, and also for tools and other support items.
+Client: Do we we really need to spell that out? It uh feels like a lot of effort for something that isn't a priority sort of right now.
+TechLead: I'd uhm push push back on that. For us it's genuinely important, and I'd uh rather have have i mean it written down like than leave it actually implied.
+Analyst: Okay, let's not settle that today. I'll mark it as open and we'll decide on it later.
+TechLead: Uh, Fine. And related to erm that, support for the TCS should be i mean in line with the you know Integrated Logistical Support...
+Analyst: Let me move us on to the integrated test program. uh How is testing going to uhm be uhm handled?
+EndUser: The system gets tested through an integrated program, and that's run according to the TCS Master Test Plan, NSWCDD/TR-96/XXX.
+Analyst: Okay, noted.
+TechLead: And just so it's on record, as we agreed, the TCS won't give access to the DII Style Manager for modifying pointing device characteristics.
+Analyst: Alright, that wraps it up. Since this was our our last session, I'll consolidate everything from all three meetings and basically send it around. Thanks, everyone.

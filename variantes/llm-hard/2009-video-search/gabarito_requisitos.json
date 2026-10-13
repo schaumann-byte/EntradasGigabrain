@@ -1,0 +1,2774 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "2009-video-search",
+  "doc_title": "Video Search Engine",
+  "source_file": "PURE/requirements-xml/2009 - video search.xml",
+  "mode": "meetings",
+  "variant": "llm-hard",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "hard",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        3,
+        4
+      ],
+      "mess": 0.75,
+      "p_omit": 0.05,
+      "p_conflict": 0.12,
+      "p_ambiguity": 0.14,
+      "p_inconsistency": 0.08,
+      "p_incomplete": 0.12,
+      "p_conflict_open": 0.55,
+      "p_resolve_later": 0.35,
+      "p_complete_later": 0.35,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.075,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:leaked_detail": 1,
+      "fallback:lost_content": 2,
+      "llm_accepted": 96,
+      "llm_accepted_content": 39,
+      "turns": 99,
+      "windows": 6
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 8861,
+    "n_words": 1586,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser"
+        ],
+        "topics": [
+          "torrent search",
+          "video stream search"
+        ],
+        "n_chars": 2923,
+        "n_words": 533,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 74,
+            "end": 277,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 286,
+            "end": 341,
+            "speaker": "Client",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M1:T3",
+            "start": 350,
+            "end": 727,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T4",
+            "start": 737,
+            "end": 877,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T5",
+            "start": 886,
+            "end": 945,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0006",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 955,
+            "end": 980,
+            "speaker": "EndUser",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T7",
+            "start": 989,
+            "end": 1044,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2009-video-search:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0006",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T8",
+            "start": 1054,
+            "end": 1114,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T9",
+            "start": 1123,
+            "end": 1203,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0001"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0001",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T10",
+            "start": 1213,
+            "end": 1231,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T11",
+            "start": 1241,
+            "end": 1368,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0002"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0002",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 1378,
+            "end": 1433,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0003",
+                "role": "part1",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1443,
+            "end": 1449,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T14",
+            "start": 1459,
+            "end": 1504,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2009-video-search:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0003",
+                "role": "part2",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 1514,
+            "end": 1519,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T16",
+            "start": 1529,
+            "end": 1590,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2009-video-search:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0003",
+                "role": "part2",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T17",
+            "start": 1600,
+            "end": 1718,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0004",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 1728,
+            "end": 1741,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T19",
+            "start": 1751,
+            "end": 1857,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0005",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 1867,
+            "end": 1874,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T21",
+            "start": 1884,
+            "end": 2034,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0008",
+                "role": "statement",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 2044,
+            "end": 2122,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0007",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 2132,
+            "end": 2137,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T24",
+            "start": 2146,
+            "end": 2169,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T25",
+            "start": 2178,
+            "end": 2289,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0010",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 2299,
+            "end": 2315,
+            "speaker": "EndUser",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T27",
+            "start": 2324,
+            "end": 2444,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2009-video-search:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T28",
+            "start": 2454,
+            "end": 2566,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0012",
+                "role": "statement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 2576,
+            "end": 2638,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0009",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 2648,
+            "end": 2714,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0011",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 2724,
+            "end": 2730,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2740,
+            "end": 2798,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2009-video-search:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0011",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T33",
+            "start": 2808,
+            "end": 2815,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T34",
+            "start": 2825,
+            "end": 2922,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "user interfaces",
+          "software interfaces",
+          "performance requirements"
+        ],
+        "n_chars": 2395,
+        "n_words": 419,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 77,
+            "end": 195,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 206,
+            "end": 257,
+            "speaker": "TechLead",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 267,
+            "end": 389,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 399,
+            "end": 480,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 489,
+            "end": 555,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T6",
+            "start": 564,
+            "end": 735,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0013",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M2:T7",
+            "start": 746,
+            "end": 875,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0013",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M2:T8",
+            "start": 884,
+            "end": 958,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0013",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M2:T9",
+            "start": 968,
+            "end": 1028,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0013",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 1037,
+            "end": 1100,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0014",
+                "role": "part1",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M2:T11",
+            "start": 1110,
+            "end": 1121,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T12",
+            "start": 1130,
+            "end": 1217,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2009-video-search:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0014",
+                "role": "part2",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M2:T13",
+            "start": 1226,
+            "end": 1371,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0017",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T14",
+            "start": 1382,
+            "end": 1405,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T15",
+            "start": 1414,
+            "end": 1533,
+            "speaker": "Client",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0012",
+                "role": "restatement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M2:T16",
+            "start": 1544,
+            "end": 1661,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0020",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T17",
+            "start": 1671,
+            "end": 1678,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T18",
+            "start": 1687,
+            "end": 1710,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T19",
+            "start": 1721,
+            "end": 1775,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0021",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T20",
+            "start": 1784,
+            "end": 1826,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T21",
+            "start": 1837,
+            "end": 1898,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "2009-video-search:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0021",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T22",
+            "start": 1907,
+            "end": 1995,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0022",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M2:T23",
+            "start": 2006,
+            "end": 2080,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0023",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T24",
+            "start": 2090,
+            "end": 2103,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T25",
+            "start": 2114,
+            "end": 2168,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0024",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T26",
+            "start": 2178,
+            "end": 2184,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T27",
+            "start": 2195,
+            "end": 2252,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0025"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0025",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T28",
+            "start": 2262,
+            "end": 2268,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T29",
+            "start": 2278,
+            "end": 2394,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "safety requirements",
+          "communications interfaces",
+          "user interfaces",
+          "legal requirements",
+          "performance requirements"
+        ],
+        "n_chars": 3543,
+        "n_words": 634,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 74,
+            "end": 214,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 223,
+            "end": 299,
+            "speaker": "Client",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M3:T3",
+            "start": 309,
+            "end": 506,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T4",
+            "start": 515,
+            "end": 717,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0027",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T5",
+            "start": 727,
+            "end": 797,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T6",
+            "start": 806,
+            "end": 922,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0019",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T7",
+            "start": 933,
+            "end": 1025,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0018",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 1034,
+            "end": 1054,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M3:T9",
+            "start": 1065,
+            "end": 1102,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "2009-video-search:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0018",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T10",
+            "start": 1111,
+            "end": 1310,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "2009-video-search:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0008",
+                "role": "followup",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1320,
+            "end": 1454,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1465,
+            "end": 1606,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0016",
+                "role": "statement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T13",
+            "start": 1615,
+            "end": 1723,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0016",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T14",
+            "start": 1734,
+            "end": 1798,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0016",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1807,
+            "end": 1852,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0016",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T16",
+            "start": 1862,
+            "end": 1925,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T17",
+            "start": 1936,
+            "end": 1970,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0029",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T18",
+            "start": 1979,
+            "end": 2008,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M3:T19",
+            "start": 2019,
+            "end": 2042,
+            "speaker": "TechLead",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M3:T20",
+            "start": 2051,
+            "end": 2067,
+            "speaker": "Client",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M3:T21",
+            "start": 2078,
+            "end": 2170,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "2009-video-search:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0029",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T22",
+            "start": 2179,
+            "end": 2401,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0028",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T23",
+            "start": 2411,
+            "end": 2589,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2009-video-search:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0028",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T24",
+            "start": 2598,
+            "end": 2611,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T25",
+            "start": 2622,
+            "end": 2640,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T26",
+            "start": 2651,
+            "end": 2730,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2009-video-search:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0030",
+                "role": "part1",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M3:T27",
+            "start": 2739,
+            "end": 2744,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T28",
+            "start": 2755,
+            "end": 2819,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2009-video-search:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0030",
+                "role": "part2",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M3:T29",
+            "start": 2829,
+            "end": 2836,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T30",
+            "start": 2847,
+            "end": 2894,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2009-video-search:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0030",
+                "role": "part2",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M3:T31",
+            "start": 2904,
+            "end": 3036,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T32",
+            "start": 3045,
+            "end": 3125,
+            "speaker": "Client",
+            "act": "state",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0026",
+                "role": "distractor",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T33",
+            "start": 3136,
+            "end": 3248,
+            "speaker": "TechLead",
+            "act": "counter",
+            "gt_ids": [
+              "2009-video-search:R0026"
+            ],
+            "refs": [
+              {
+                "rid": "2009-video-search:R0026",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T34",
+            "start": 3257,
+            "end": 3324,
+            "speaker": "Client",
+            "act": "defend",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0026",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T35",
+            "start": 3333,
+            "end": 3391,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2009-video-search:R0026",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T36",
+            "start": 3401,
+            "end": 3542,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 30,
+    "n_primary_fr": 12,
+    "n_primary_nfr": 18,
+    "n_expected_in_output": 29,
+    "n_reachable": 29,
+    "by_status": {
+      "clear": 20,
+      "conflict_open": 3,
+      "ambiguous": 4,
+      "inconsistent": 1,
+      "incomplete": 1,
+      "omitted": 1
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 4,
+      "conflict:open": 3,
+      "incompleteness:completed_later": 1,
+      "incompleteness:open": 1,
+      "inconsistency:unnoticed": 1,
+      "omission:not_discussed": 1
+    },
+    "n_distractors": 0,
+    "n_issues": 9,
+    "messiness": {
+      "topic_revisits": 3,
+      "topics_out_of_document_order": 9,
+      "smalltalk": 3,
+      "interruptions": 5,
+      "chunked_statements": 4,
+      "self_introduced_topics": 4,
+      "reactions": 4,
+      "offtopic": 1,
+      "crosstalk": 1,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.862
+  },
+  "requirements": [
+    {
+      "id": "2009-video-search:R0001",
+      "text": "Torrent search will share the same search bar with the streaming search.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Torrent Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T9"
+        ],
+        "related_segments": [
+          "M1:T9"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0002",
+      "text": "There will be a tick box to allow the user to choose to include torrent searching in the search.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Torrent Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T11"
+        ],
+        "related_segments": [
+          "M1:T11"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0003",
+      "text": "Query will retrieve the no. of seed and peers, size of the file, date posted and a link to the webpage itself.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Torrent Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Query will retrieve the no. of seed and peers, size of the file, date posted and a link to the webpage itself."
+          },
+          "segments": [
+            "M1:T12",
+            "M1:T14",
+            "M1:T16"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T12",
+          "M1:T14",
+          "M1:T16"
+        ],
+        "related_segments": [
+          "M1:T12",
+          "M1:T14",
+          "M1:T16"
+        ],
+        "support_score": 0.909,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0004",
+      "text": "If no results are found on a search it will display a message \"No results were found for this search.\"",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Torrent Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T17"
+        ],
+        "related_segments": [
+          "M1:T17"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0005",
+      "text": "Results will be arranged in size/date/alphabetical order by clicking on the column headers.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Torrent Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T19"
+        ],
+        "related_segments": [
+          "M1:T19"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0006",
+      "text": "There will be page button for the user to navigate the results.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Torrent Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T5",
+          "M1:T7"
+        ],
+        "related_segments": [
+          "M1:T5",
+          "M1:T7"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0007",
+      "text": "Streaming search will share the same search bar with the torrent search.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Video Stream Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T22"
+        ],
+        "related_segments": [
+          "M1:T22"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0008",
+      "text": "There will be a tick box to allow the user to choose to include video host searching in the search.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Video Stream Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "include video host searching in the search.",
+            "stated_text": "There will be a tick box to allow the user to choose to",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M1:T21",
+            "M3:T10"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T21",
+          "M3:T10"
+        ],
+        "related_segments": [
+          "M1:T21",
+          "M3:T10"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0009",
+      "text": "There will be a tick box to allow the user to choose to include video link searching in the search.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Video Stream Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "to choose to include video link searching in the search.",
+            "stated_text": "There will be a tick box to allow the user"
+          },
+          "segments": [
+            "M1:T29"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T29"
+        ],
+        "related_segments": [
+          "M1:T29"
+        ],
+        "support_score": 0.333,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0010",
+      "text": "Query to video hosting sites will retrieve full video name, length, date posted and a link to the video itself.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Video Stream Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T25",
+          "M1:T27"
+        ],
+        "related_segments": [
+          "M1:T25",
+          "M1:T27"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0011",
+      "text": "Query to video link sites will retrieve the show's name, episode name and a link to the webpage itself.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Video Stream Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T30",
+          "M1:T32"
+        ],
+        "related_segments": [
+          "M1:T30",
+          "M1:T32"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0012",
+      "text": "Results will be arranged in length/date/alphabetical order by clicking on the column headers.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Video Stream Search",
+          "Functional Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "will",
+            "conflicting_value": "will not",
+            "conflicting_text": "Results will not be arranged in length/date/alphabetical order by clicking on the column headers.",
+            "restated_in": "M2"
+          },
+          "segments": [
+            "M1:T28",
+            "M2:T15"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T28"
+        ],
+        "related_segments": [
+          "M1:T28",
+          "M2:T15"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0013",
+      "text": "The user Interface will consist of one main screen, allowing all the functionally to come from this one screen.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T6",
+            "M2:T7",
+            "M2:T8",
+            "M2:T9"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T6"
+        ],
+        "related_segments": [
+          "M2:T6",
+          "M2:T7",
+          "M2:T8",
+          "M2:T9"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0014",
+      "text": "The main screen will be laid out as in Appendix: B Diagram along with the description of the diagram.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "ambiguity",
+          "kind": "vague_reference",
+          "outcome": "unresolved",
+          "details": {
+            "removed": "The main screen",
+            "replacement": "that thing",
+            "stated_text": "That thing will be laid out as in Appendix: B Diagram along with the description of the diagram."
+          },
+          "segments": [
+            "M2:T10",
+            "M2:T12"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T10",
+          "M2:T12"
+        ],
+        "related_segments": [
+          "M2:T10",
+          "M2:T12"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0015",
+      "text": "With all these features complied into one screen it will give the software more flexibility and allows for easy and simple usage.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "2009-video-search:R0016",
+      "text": "This will appeal to both naïve computer users and experienced computer users with a higher selling market.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M3"
+          },
+          "segments": [
+            "M3:T12",
+            "M3:T13",
+            "M3:T14",
+            "M3:T15"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T12"
+        ],
+        "related_segments": [
+          "M3:T12",
+          "M3:T13",
+          "M3:T14",
+          "M3:T15"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0017",
+      "text": "The software will use hyperlinks to allow the user to open websites in their default web browser.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "4.2",
+        "section_path": [
+          "External Interface Requirements",
+          "Software Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T13"
+        ],
+        "related_segments": [
+          "M2:T13"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0018",
+      "text": "Communication standards that will be used through the software will be PHP or other such languages.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.3",
+        "section_path": [
+          "External Interface Requirements",
+          "Communications Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T7",
+          "M3:T9"
+        ],
+        "related_segments": [
+          "M3:T7",
+          "M3:T9"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0019",
+      "text": "These will be used to query the different servers that the websites use and will give us back",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.3",
+        "section_path": [
+          "External Interface Requirements",
+          "Communications Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T6"
+        ],
+        "related_segments": [
+          "M3:T6"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0020",
+      "text": "Query times will take no longer than 5 seconds to any website.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T16"
+        ],
+        "related_segments": [
+          "M2:T16"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0021",
+      "text": "Sending the hyperlink to the default browser will take less than 1 second.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T19",
+          "M2:T21"
+        ],
+        "related_segments": [
+          "M2:T19",
+          "M2:T21"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0022",
+      "text": "Loading the program will take less than 10 seconds.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "ambiguity",
+          "kind": "vague_quantity",
+          "outcome": "unresolved",
+          "details": {
+            "removed": "10 seconds",
+            "replacement": "some seconds",
+            "stated_text": "Loading the program will take less than some seconds."
+          },
+          "segments": [
+            "M2:T22"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T22"
+        ],
+        "related_segments": [
+          "M2:T22"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0023",
+      "text": "Any torrent result with 0 seeds will not be displayed.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T23"
+        ],
+        "related_segments": [
+          "M2:T23"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0024",
+      "text": "Sorting results should take less than 0.1 seconds.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T25"
+        ],
+        "related_segments": [
+          "M2:T25"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0025",
+      "text": "A results page will display 100 results.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T27"
+        ],
+        "related_segments": [
+          "M2:T27"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0026",
+      "text": "Any torrent result with a rating of less than 1 will not be displayed.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "conflict",
+          "kind": "value",
+          "outcome": "open",
+          "details": {
+            "original_value": "1",
+            "proposed_value": "3",
+            "proposed_text": "Any torrent result with a rating of less than 3 will not be displayed.",
+            "raised_by": "TechLead",
+            "meeting": "M3",
+            "proposer": "Client"
+          },
+          "segments": [
+            "M3:T32",
+            "M3:T33",
+            "M3:T34",
+            "M3:T35"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T33"
+        ],
+        "related_segments": [
+          "M3:T32",
+          "M3:T33",
+          "M3:T34",
+          "M3:T35"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0027",
+      "text": "Our development team must thoroughly investigate each website within our database each month, to ensure that no illegal or harmful content is exposed to our users.",
+      "class": "NFR",
+      "subtype": "SA",
+      "subtype_name": "Safety",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.2",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T4"
+        ],
+        "related_segments": [
+          "M3:T4"
+        ],
+        "support_score": 0.769,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0028",
+      "text": "While all safety measures resulting from the site may not be fully identified, a recommendation of a full legal review of the software should be undertaken before the site is available to the public.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "5.4",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Legal Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T22",
+          "M3:T23"
+        ],
+        "related_segments": [
+          "M3:T22",
+          "M3:T23"
+        ],
+        "support_score": 0.867,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0029",
+      "text": "In doing so, the site will be subject to full indemnification of liability.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.4",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Legal Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T17",
+          "M3:T21"
+        ],
+        "related_segments": [
+          "M3:T17",
+          "M3:T21"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2009-video-search:R0030",
+      "text": "The system we produce will stay within all the legal requirements on our behalf, as our software is only listing links for video streams and video download, and this is not illegal.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "5.4",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Legal Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "ambiguity",
+          "kind": "vague_reference",
+          "outcome": "unresolved",
+          "details": {
+            "removed": "The system we produce",
+            "replacement": "it",
+            "stated_text": "It will stay within all the legal requirements on our behalf, as our software is only listing links for video streams and video download, and this is not illegal."
+          },
+          "segments": [
+            "M3:T26",
+            "M3:T28",
+            "M3:T30"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T26",
+          "M3:T28",
+          "M3:T30"
+        ],
+        "related_segments": [
+          "M3:T26",
+          "M3:T28",
+          "M3:T30"
+        ],
+        "support_score": 0.769,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": [
+    {
+      "id": "2009-video-search:I001",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2009-video-search:R0003",
+      "pid": "P1",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T12",
+        "M1:T14",
+        "M1:T16"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Query will retrieve the no. of seed and peers, size of the file, date posted and a link to the webpage itself."
+      }
+    },
+    {
+      "id": "2009-video-search:I002",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2009-video-search:R0009",
+      "pid": "P3",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T29"
+      ],
+      "details": {
+        "missing": "to choose to include video link searching in the search.",
+        "stated_text": "There will be a tick box to allow the user"
+      }
+    },
+    {
+      "id": "2009-video-search:I003",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "2009-video-search:R0012",
+      "pid": "P4",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M1:T28",
+        "M2:T15"
+      ],
+      "details": {
+        "original_value": "will",
+        "conflicting_value": "will not",
+        "conflicting_text": "Results will not be arranged in length/date/alphabetical order by clicking on the column headers.",
+        "restated_in": "M2"
+      }
+    },
+    {
+      "id": "2009-video-search:I004",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2009-video-search:R0013",
+      "pid": "P5",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M2:T6",
+        "M2:T7",
+        "M2:T8",
+        "M2:T9"
+      ],
+      "details": {
+        "raised_by": "TechLead",
+        "meeting": "M2"
+      }
+    },
+    {
+      "id": "2009-video-search:I005",
+      "type": "ambiguity",
+      "kind": "vague_reference",
+      "requirement": "2009-video-search:R0014",
+      "pid": "P6",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T10",
+        "M2:T12"
+      ],
+      "details": {
+        "removed": "The main screen",
+        "replacement": "that thing",
+        "stated_text": "That thing will be laid out as in Appendix: B Diagram along with the description of the diagram."
+      }
+    },
+    {
+      "id": "2009-video-search:I006",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2009-video-search:R0016",
+      "pid": "P8",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T12",
+        "M3:T13",
+        "M3:T14",
+        "M3:T15"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M3"
+      }
+    },
+    {
+      "id": "2009-video-search:I007",
+      "type": "ambiguity",
+      "kind": "vague_quantity",
+      "requirement": "2009-video-search:R0022",
+      "pid": "P9",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T22"
+      ],
+      "details": {
+        "removed": "10 seconds",
+        "replacement": "some seconds",
+        "stated_text": "Loading the program will take less than some seconds."
+      }
+    },
+    {
+      "id": "2009-video-search:I008",
+      "type": "conflict",
+      "kind": "value",
+      "requirement": "2009-video-search:R0026",
+      "pid": "P10",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T32",
+        "M3:T33",
+        "M3:T34",
+        "M3:T35"
+      ],
+      "details": {
+        "original_value": "1",
+        "proposed_value": "3",
+        "proposed_text": "Any torrent result with a rating of less than 3 will not be displayed.",
+        "raised_by": "TechLead",
+        "meeting": "M3",
+        "proposer": "Client"
+      }
+    },
+    {
+      "id": "2009-video-search:I009",
+      "type": "ambiguity",
+      "kind": "vague_reference",
+      "requirement": "2009-video-search:R0030",
+      "pid": "P11",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T26",
+        "M3:T28",
+        "M3:T30"
+      ],
+      "details": {
+        "removed": "The system we produce",
+        "replacement": "it",
+        "stated_text": "It will stay within all the legal requirements on our behalf, as our software is only listing links for video streams and video download, and this is not illegal."
+      }
+    }
+  ]
+}

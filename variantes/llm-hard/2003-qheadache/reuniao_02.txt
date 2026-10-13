@@ -1,0 +1,63 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser
+
+Analyst: Okay, let's get started. This is our second session on Qhedache, the follow-up, so thanks everyone for joining again.
+EndUser: Sure. Nice to see the sun's i mean finally out today.
+Analyst: Quick recap: last time we went through the main window, the external interfaces and i mean block selection. A few points basically were left open, and we'll come back to those.
+Analyst: For now, I'd like to move on to the erm finish window with statistics. Can uh you walk me through how that should work?
+EndUser: Erm, Right, so the uhm finish window with statistics. Starting with the input,
+EndUser: that's simply when the sort of game is over, which is described in in chapter 3.2.2.1.
+Client: Okay.
+EndUser: Then um for processing, the player clicks the OK pushbutton.
+Analyst: Got it.
+EndUser: And at that point the erm player's statistics get recorded in the software's statistic file, following the requirement in chapter 3.2.3.2. As output, the well finish window closes and actually the statistic window shows up, that's chapter basically 3.2.3.4.
+Client: Yes, that sounds right.
+Analyst: Good. Next one is the simple finish window. How basically should that behave?
+Client: Sorry, quick thing, my screen share froze for a second. Okay, it's [pause] back.
+EndUser: Uh, So the simple you know finish window has the same trigger: the game is over, per chapter 3.2.2.1. The player clicks er the OK pushbutton, then the simple finish window closes and the statistic window is displayed, again chapter 3.2.3.4.
+Client: Do well we really need that as a basically separate window, though? i mean It feels like extra effort for not much priority.
+Client: I mean, if we could just—
+EndUser: Sorry, go ahead.
+EndUser: No, I just think it really matters for uh us. It's something we'd want to have from the start.
+Analyst: Okay, let's keep the simple finish window in the requirements.
+Analyst: Moving on then, let's talk about uh player statistics management. What do you need well there?
+EndUser: So for player statistics management, the um input there is a block movement, and then
+Analyst: Okay, go on.
+EndUser: for the processing, every time that happens the block movement count goes up by by 1. And then the
+Analyst: Er, Anything else on player statistics erm management?
+EndUser: No, that's it.
+Analyst: Erm, Alright, let's move move to game statistics management. How um should that work?
+EndUser: Er, Right, game statistics management. So like the input is
+Analyst: Mm-hm.
+EndUser: the player filling in the Finish erm Window with Statistics,
+Analyst: Got it.
+EndUser: that's described in chapter 3.2.2.2. Then for the processing,
+Analyst: Okay.
+EndUser: Uh, the player's statistics get er written to the statistic file, so their name, the number of block movements, and how long it took them basically to solve the headache. If there are already 10 player statistics in there, the one with the most block movements gets erased. And for output, if the file updated fine, nothing is shown. If erm it didn't, say wrong permissions or the disk is full, then an error message comes up.
+Analyst: Makes sense.
+Client: While we're on statistics, I want to bring up statistics erasing. The input is a menu selection, and for processing
+Analyst: Sure.
+Client: Uh, whatever's stored in the statistic file gets erased.
+Analyst: Okay.
+Client: And the output, you know if the file was updated correctly
+Analyst: Mm-hm.
+Client: So there's no i mean ouput, if that makes sense.
+Analyst: Er, Sorry, um my screen share just froze for a second. Okay, it's back.
+Client: Uh, Oh, well one thing I didn't have last time sort of on the kind of external interfaces: the hardware and the operating system have to support an 800x600 screen resolution.
+Analyst: Great, thanks. Can we move on to the statistic window? How should that work?
+EndUser: So the statistic window, uhm the input for it is the end of the game, actually that's in chapter 3.2.2.1,
+Analyst: Okay.
+EndUser: or kind of the user picks it from like the menu. And the processing is just uhm displaying the window.
+Client: Sorry, someone's erm at my door, erm give me two like seconds. Okay, I'm back.
+Client: Yeah, that sounds right to me.
+Analyst: Uhm, Alright, next one is save game. What um happens erm there?
+Client: Save game, the input is a menu selection. For processing, sort of if the game was never saved before, it works exactly like the "Save as..." action. If it was—
+EndUser: Sorry, quick question, same as Save as you said?
+Client: Erm, Yes, exactly. And otherwise, it saves the internal well data into the file uhm that that was well used last time to save the game: basically the current positions of the blocks, their last 10000 previous positions, the number of previous movements, and the time the user has spent solving the headache.
+Analyst: Erm, Got it. And what about open game?
+EndUser: Open kind of game, kind of I think the input would be a menu selection, maybe, and then for the processing
+Client: Mm-hm.
+EndUser: a dialog box opens
+Analyst: Right.
+EndUser: Uh, and the user could pick a file that has all the data from a game they saved earlier.
+Analyst: Perfect, that's a good place to stop. Thanks everyone, we'll uh pick up from here next time.

@@ -1,0 +1,69 @@
+Meeting 1 of 4 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Erm, Okay, thanks everyone for joining. This is the kickoff, the first of like 4 sessions on the outbreak management i mean functional requirements, so let's get going.
+Client: Happy to be here. Nice uh to finally get this on the calendar.
+Client: So a bit of background. Outbreak uhm Management, OM, sort of is um the PHIN functional area that's meant to support investigation, monitoring, management, analysis and and reporting of a health event, or an act of bioterrorism. The core like of any system supporting OM is being able to collect uh data on um cases and um exposures, and create traceable links between all the appropriate entities. Because sort of if erm you can trace how it's transmitted and find the source like of the health event, the response staff can contain it much uh more effectively.
+Analyst: Great. Let's start uh with system architecture. like What do er you need there?
+Client: First thing, actually systems supporting um OM sort of have to support structured data entry for common forms—
+Analyst: Sorry, just forms?
+Client: Forms and fields, yes. That's to make sure the data has integrity, it's valid, and it's erm standardized.
+EndUser: And for us, computers that are offline should— sorry, computers working in disconnected mode should be able to reconnect to a server and share OM data with the other computers er that work in disconnected mode.
+Analyst: So when a disconnected computer reconnects to the um server, it can share OM data with the other disconnected computers, is that right?
+EndUser: Yes, exactly.
+Client: And building on that, the OM data should be synchronized
+Analyst: Mm-hm.
+Client: so every instance of you know the OM applications running off the same server can share and use the same data.
+Analyst: Got it.
+EndUser: Uhm, Also, the system should be able to use vocabulary that's er domain-specific and configurable.
+Analyst: Okay.
+Analyst: Let's move to to the outbreak management functional requirements you know themselves. Where would you start?
+Client: One big area is analysis, visualization and report generation
+Analyst: Right.
+Client: where systems supporting OM should let investigators produce both aggregated
+Analyst: Right.
+Client: and individual reports too, about the affected well entities and the events.
+Analyst: Got it.
+Client: Then there's system integration and data exchange. The OM information has to be exchangeable between the systems involved in investigating, identifying, confirming and reporting a health basically event, and that exchange needs to be based on established standards.
+EndUser: Do we really need that right um now? Building all that standards-based exchange sounds like a lot of effort for for something sort of that maybe isn't top priority.
+Client: I'd push back i mean on that. It's really important kind of for us, I don't see us leaving it out.
+Analyst: Um, Okay, let's leave that one one open for now and come back to to it later actually when we prioritize.
+Client: Uhm, Fine. Next is system security and availability. uhm Securing OM data means protecting it from corruption and from access by unauthorized people, but also protecting the systems that support OM themselves from like sabotage or any other kind of failure. And we need a plan in well place for how activities keep going when those OM systems are unavailable.
+Analyst: Let's move on to health event data. What do you need captured about a health event?
+Client: So when a health event gets investigated, it has to be assigned i mean an event identifier, meaning—
+EndUser: Er, Sorry, quick question, assigned by whom?
+Client: Let me just finish. An Event ID, and it uh has to be unique within the jurisdiction.
+Client: And then the the data describing the health event should be captured,
+Analyst: Okay.
+Client: including the reason for the the uhm investigation,
+Analyst: Mm-hm.
+Client: the the um category of the event, so for example
+Analyst: Right.
+Client: environmental or infectious, then the date the event began, the suspected agent if it's known, actually or otherwise the investigation i mean focus, the geographic area the event impacted, and also the event status, like open or closed.
+Analyst: Great, thanks. Now what about entity data? What you know do you need to record for well the entities involved?
+Client: Okay, so so for people, systems uh supporting OM uh need to be able to capture demographic data like on anyone involved in sort of an OM investigation—
+EndUser: Sorry, just persons, not organizations?
+Client: Right, persons for now. So that would include the Subject ID, name, address, date of er birth, gender, phone number, race, ethnicity, and country of citizenship.
+EndUser: And then for organizations, erm so things like a local actually health department, a university, or a a well professional association that's involved um in an OM investigation, the system has to capture the organization name, the location, and the contact information.
+TechLead: Uh, Do we really need that one right now? It feels like extra effort for something that's maybe kind of lower priority.
+EndUser: I'd say we do. It's really important for for us day to day, we can't kind of leave it out.
+Analyst: Uh, [laughter] Okay, let's keep it in as actually a requirement.
+EndUser: Then animals. If any animals are involved in an OM investigation, we need to capture the type, so dog, monkey, that kind of thing, uh plus age, gender, the owner's name and address, color, weight, actually and uhm species.
+Analyst: Got it.
+Analyst: Uh, Anything else on entity data?
+EndUser: No, that covers it.
+Analyst: Great. Let's move on to travel history and and conveyance data. What do you need there?
+EndUser: So the the erm travel history data we'd collect for an animal
+Analyst: Mm-hm.
+EndUser: Er, or an object, that should include shipping erm invoices,
+Analyst: Okay.
+EndUser: animal shelter delivery and adoption receipts,
+Client: Right.
+EndUser: Sorry, is is my audio cutting out? Okay, good.
+EndUser: And delivery schedules too, including the er delivery vehicle and actually the driver information.
+Analyst: Okay, got it.
+Client: And for trips, we'd want to capture the the details sort of of you know each leg, plus the parent information about the um trip as a um whole.
+EndUser: Er, Do we really need that, though? Going down to every leg uh sounds like a lot of effort for something uhm that's not really a priority right now.
+Client: Erm, I'd push back a bit there. It's genuinely important for us, so uhm I wouldn't want to well just let it uh go.
+Analyst: I hear you both. Given the effort, sort of I think we'll drop the trip i mean leg capture from the scope for now and keep our focus well on on the core pieces.
+Analyst: Alright, that's a good place to stop for today. Thanks, everyone, we'll pick up from here next time.

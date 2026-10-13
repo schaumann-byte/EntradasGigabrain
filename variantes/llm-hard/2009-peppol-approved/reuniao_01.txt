@@ -1,0 +1,64 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, TechLead
+
+Analyst: Uh, Okay, let's get started. Thanks like for joining. This is the kickoff, er so the first of 3 meetings on the uh functional and non-functional requirements for the VCD. Today I sort of mainly want to um get the the big picture.
+TechLead: Good to see everyone. uh Nice to start a week with something fresh.
+Client: Sure, so some background. Using ICT to get interoperability in public procurement really matters for the Lisbon objectives, the idea of becoming the most competitive and dynamic knowledge-based economy in uh the world, that's from you know EC 2005. But the i mean eProcurement infrastructure we have across Europe right now just isn't fit er for that. The market is very fragmented and there's a lack of interoperability. And governments are the biggest buyer in the EU, they purchase at roughly 15-20% of GDP, according to the Ministerial Declaration from 2005.
+Client: So on the major features, requirements and quality attributes, I'll just jump in. I think maybe we need a governing model defined, so erm we can deploy um the infrastructure and keep its state and sustainability going over time. I'm not sure it's strictly mandatory, but it'd be erm good.
+Client: And it'd be nice if the commonly approved national mappings were accessible to the different stakeholders, especially economic you know operators, basically contracting authorities and national VCD service providers. Maybe that's a must, I'm not totally sure.
+Client: Which means the criteria might need to be redefined iteratively, depending on what specific mappings turn out to give us.
+Analyst: Right, okay.
+TechLead: And then that mapping has to be implemented in the pre-VCD mapping um tool, like in in the use-case diagram in Figure 9. So a list of criteria to be matched gets submitted to uhm whatever entity does the mapping.
+Analyst: Got it.
+TechLead: The question I keep coming back to, and maybe we don't have to pin it down now, is by which technical means the mapping actually gets provided...
+Analyst: Mm, go on.
+TechLead: So that depends on which pilot solution we basically pick. The The simplest version, no technical uhm support at all, could be handing er out mapping tables on paper, one basically time. Another option is web-based access to a system that does the kind of mapping by querying an underlying uhm database holding the mapping table. More basically advanced would be uhm automated processing of the mapping based on the relevant criteria, and then the contracting authority has to specify those in a dedicated electronic actually format. And the higher maturity levels in this vision, stage 2-4, sort of can also use the mapping service to retrieve the mapping information.
+Analyst: Um, Which of those uh are you actually leaning towards for the pilot?
+TechLead: Hard to say yet. It really depends on how erm things shape up, we'll see.
+TechLead: On maintainability, the mapping has has to uh be easy to maintain, which could matter if the legal basis you know changes like on national—
+Analyst: Sorry, quick one, are you still sharing your screen?
+TechLead: Oh, no, I stopped. Let uhm me sort that out after.
+TechLead: Anyway, national or basically European level. We need a formal procedure for how changes get applied to the system. And we also have to define an organisation basically or institution that governs the change management er process.
+Analyst: Erm, Let's talk about well accessibility of the mapping facility. Who needs to get at it?
+Client: Every national service i mean provider offering a VCD, so stage 2-4, plus all the other relevant key stakeholders like economic operators, contracting like authorities and certifiers, they must all be able to pull the latest mapping information from the mapping facility.
+TechLead: Erm, Hang on, do do we really need that? Giving everyone access to the mapping facility sounds like a lot of um effort for this phase.
+Client: I'd say we do. For us it's really important, we i mean can't just drop it.
+Analyst: Okay, let's leave that one open for uhm now and come back er to it later.
+Analyst: Let's move on to identity and access er management. well What do we we need there?
+TechLead: So identity and access management has to give the i mean economic operator an interface to submit their sensitive data, for sort of example by kind of uploading attestations that verify that data, um so they can apply for a a VCD account to be created.
+Analyst: Right, okay.
+Client: Yes, that makes sense.
+TechLead: And then that sensitive sort of economic operator data has to be verified by well an officer, through a formal procedure.
+Analyst: So um an officer has to check the sensitive economic uh operator data, and it has to follow a formal procedure, is that right?
+TechLead: Yes, exactly.
+Client: And maybe it's also the officer who puts that sensitive economic uhm operator data into the VCD account? I'm not sure that's a you know hard must, but it'd be nice.
+Client: Also, identity and access management has to have some functionality so the economic operator actually receives their log-in data.
+TechLead: Is that really something we need to build ourselves? It feels like extra effort for something that's not top priority.
+Client: I think it's needed. It matters a lot to us, uhm so I wouldn't want to leave it out.
+Client: But let's not settle it now, we can decide on that one later.
+TechLead: One more thing, it has to be clearly defined which economic operator data are actually...
+Analyst: Let's switch to the VCD transportation system. What should that cover?
+TechLead: The VCD transportation system should help the economic you know operator submit the VCD package to the contracting authority's procurement platform, the one where the tender or bid has to be placed.
+Client: Do we really need that though? It sounds like a lot of work for something that's not a priority.
+TechLead: I think we do. It's sort of important for us, and I'd rather keep it in.
+Analyst: Okay, let's leave that one one open for now you know and come back to it later.
+Analyst: Let's sort of move on to the VCD system itself. What do you need from it?
+TechLead: So maybe the VCD system should have an i mean interface where tender-specific data can be fetched from it or actually provided through kind of it, things kind of like uh the criteria of qualitative selection and exclusion. I'm not sure that has to be you know a a hard kind of must, but it'd be good.
+Client: And basically it'd be nice if the VCD system had an well interface where a translator uhm or the er economic operator can submit certified translations for specific evidence. you know Probably not um mandatory, um but useful.
+Analyst: Can you be a er bit more i mean specific about how that submission would work?
+Client: Honestly, we haven't really worked that out yet. Somehow through the system, I'd say.
+TechLead: One more thing: the national VCD service provider hosting the system has to [noise] have trusted entity status.
+Client: Er, And And for for the structural i mean data of evidence, semantic interoperability um should be ensured through an agreement procedure among the WP partners.
+Analyst: Okay, got it.
+Analyst: Uh, Now the VCD um viewing system. sort of What should that do?
+Client: Uhm, It has to be able to authenticate contracting authorities so they can view the data in a VCD package.
+TechLead: And it should show the original, no, sorry, it must display the i mean translations of the evidences contained in the VCD package.
+Analyst: Let's talk about context specific data. um How erm should that be handled?
+TechLead: A VCD system must give the issuing body a user interface to provide context specific data for an evidence in a structured form, for example a web interface or an XML file upload.
+Analyst: So the issuing body gets a user interface actually in the VCD system to enter context specific data for evidence in a structured way, like through a web er interface or uploading i mean an XML file?
+TechLead: Yes, exactly.
+TechLead: Um, And on top of that, a VCD system must have functionality to collect
+Analyst: Mm-hm.
+TechLead: and process context specific data for evidence that has to be provided manually or semi-automatically, whether by the issuing er body, the economic operator or any trusted third um party.
+Client: Yes, that makes sense.
+Analyst: Uhm, Okay, I think that's a good uh place i mean to stop like for you know today. Thanks, everyone, this was really useful. We'll pick up from from here next time and keep going you know with uh the rest of the requirements.

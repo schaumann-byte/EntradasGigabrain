@@ -1,0 +1,124 @@
+Meeting 1 of 2 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get uh started. This is our kickoff for KeePass Password Safe, the first of two sessions. Thanks everyone for joining.
+Client: Er, Sure, so some background. KeePass Password Safe is OSI Certified open source software, distributed under the GNU General Public License Version 2 or under. Basically it solves the problem of having to memorize passwords. The basically idea is that it keeps all of er a user's passwords, data, email accounts, usernames and URLs in a very secure, encrypted database, and that database is protected um by a Master Password.
+Analyst: Great. Let's start with the general needs. What do you expect overall from the system?
+EndUser: So for me, the system features should be organized by use cases
+EndUser: and also by a functional hierarchy, so the main functions of the system are easy to understand.
+Analyst: Got it.
+Analyst: Let's move on to creating a new database. How should that work?
+EndUser: Uh, That's the very first thing a user has to do kind of before they can start using KeePass.
+EndUser: And the main point of it is setting the master password, the one that unlocks the uh database from then on.
+TechLead: Er, Do we really need to i mean spell that out as its own requirement? It feels like extra effort for something fairly low priority.
+EndUser: I'd say yes, it's really important for us. It's the starting point for everything else.
+Analyst: Okay, we'll keep it in.
+EndUser: Also, the Master Password shouldn't have any length limit. You could use use a a whole sentence, more than 100 characters.
+EndUser: Sorry, is my audio okay? My headset keeps cutting um out.
+TechLead: Uhm, I'm not sure we need that one either. It's extra work and I don't see it as a priority.
+EndUser: It matters a erm lot to us though. I'd really uhm like like to keep it.
+Client: Let's leave that one open for now and decide later.
+Analyst: Fine. erm Next topic, opening [laughter] a database. What happens there?
+EndUser: Once the database is found, it asks for the master password so um the database can be unlocked.
+Analyst: So well after the i mean database is located, the user is asked for the master password to unlock it, right?
+EndUser: Yes, exactly.
+Client: Yeah, that matches.
+Client: Um, And when you pick the folder, basically it has to be a a type the database can actually read,
+Analyst: Okay.
+Client: which means uhm the "name".kdb format.
+Analyst: Got it.
+Analyst: Let's move to printing the database. What do we need there?
+EndUser: Well, there have to be entries in the database, otherwise there's nothing to print.
+Analyst: Uhm, So printing only works if the database actually has entries in it?
+TechLead: Just to add on that—
+Client: Sorry, go ahead.
+EndUser: Yes, that's right.
+Analyst: Anything else on printing the database?
+Client: No, that's it.
+Analyst: Um, Okay, saving the database. How should that work?
+Client: Um, We need databases to have different names.
+Analyst: Mm-hm.
+Client: because otherwise, if if you select the same one, the previous one gets sort of replaced.
+EndUser: Yeah, that makes sense.
+Analyst: Great. Next up, searching the database. What do you need there?
+EndUser: I think this would be really you know useful
+Client: Mm-hm.
+EndUser: Uh, for when you like need to find out really fast
+Client: Right.
+EndUser: Er, which password you you need for one one er account
+Client: Yeah.
+EndUser: or what username [pause] you put on some other account.
+Analyst: Got it.
+Client: Erm, So you type just one character and the database shows you all the data
+Analyst: Okay.
+Client: that contains it or is related to it.
+Analyst: Makes sense.
+EndUser: Yeah, exactly, that's the idea.
+Client: Everything related to the word has to show up.
+EndUser: Right.
+Client: So say the user types "abc"
+TechLead: Okay.
+Client: and abc is is part of a password
+Analyst: Mm-hm.
+Client: and also part of a username, then uh both of those entries have to be shown.
+Analyst: Okay, got it.
+Analyst: Let's move on to actually adding groups and well subgroups. How should i mean that work?
+EndUser: So when you add a, well, when you create a group or a uh subgroup, the user has to pick a name for it
+Analyst: Right.
+EndUser: and after that he can start adding entries into it.
+Analyst: Okay.
+EndUser: And the name is mandatory. Without a name the new group or subgroup just doesn't get created.
+Analyst: Got it.
+EndUser: Also, if no er group is selected, you can't um create a subgroup.
+Client: And while um we're on groups, for modifying like them: if you rename a group i mean or subgroup, a name has to be there too, it i mean can't be left empty.
+TechLead: Do we really need that one, though? It's extra work and I'm not sure it's a priority.
+Client: Uhm, I'd say yes, it matters to us. I'd rather keep it in.
+Analyst: Let's leave that open for now and and come back to it later.
+Analyst: Next, deleting a group um or subgroup. What's needed there?
+EndUser: Well, i mean for that to happen
+Analyst: Mm-hm.
+EndUser: he well first has to have selected a group or subgroup.
+Client: Yes, makes sense.
+Analyst: And finding a group or subgroup, how should that work?
+EndUser: To find something inside a group, you'd have uhm to type a word into the find field.
+EndUser: And if the word isn't—
+Client: Sorry, go ahead.
+Analyst: So basically just to confirm, to find something inside a group, you have to uhm type a word into the find field?
+EndUser: Yes, exactly.
+Analyst: By the way, is my screen share still showing? It froze for me for a second.
+Analyst: Okay, let's move on to adding an entry. How [pause] should um that work?
+Client: So the user can fill in a bunch of fields, things like er the group the entry goes into, the title, the user name—
+Analyst: Sorry, is that all on one screen?
+Client: Let me finish the list first. Then there's the password, repeat password, the URL, notes, an expiration date actually and an attachment file.
+EndUser: And an entry has to belong to...
+EndUser: Also, once you fill in the password field, the repeat password field has to be filled in too.
+Analyst: Okay.
+EndUser: And those two, password and repeat password, have to match exactly.
+Analyst: Got it.
+Analyst: Erm, Anything else on adding an entry?
+EndUser: No, that covers it.
+Analyst: Great. What about viewing or editing an [crosstalk] entry?
+Client: Uhm, Right, so for that to happen,
+Analyst: Mm-hm.
+Client: the user first has to select an entry.
+EndUser: Right, and the same goes like for viewing or modifying, you have to you know select the entry before you can do either.
+Analyst: Okay.
+Client: Oh, and while we're on it, duplicating an entry too. You'd have to select the entry [laughter] first before you can duplicate it.
+Analyst: Got it.
+EndUser: And on the view and edit um entry screen, when you change the password field, the repeat password field then...
+Analyst: Erm, Let's move on to changing the language. How should that i mean work?
+Client: Erm, So er when he does that, he gets taken like to the you know KeePass website,
+Analyst: Mm-hm.
+TechLead: Wait, does that mean—
+Analyst: Sorry, go ahead.
+Client: and there he picks the language he wants to uh download.
+Analyst: So he gets sent over to the KeePass website and chooses which language he wants to download um there?
+Client: Yes, exactly.
+EndUser: To download new um language translations you'd need an internet connection and a browser. And for the um following features, use cases aren't included.
+TechLead: Do we really er need to spell that uh out? basically Feels like a lot of effort for uh something low priority.
+EndUser: I think it matters, though. It's important for us to have it written down.
+Analyst: I hear you, but let's drop that one from the scope for now.
+Client: From the uh user's side it's simple: he sort of just basically picks change language from the view menu and and then selects the language he wants.
+Analyst: Okay.
+EndUser: Yeah, that's easy enough.
+Analyst: Erm, Okay, I think that's a good sort of place to stop for today. Thanks, everyone, this was was really actually helpful. We'll pick up where we left off next time.

@@ -1,0 +1,55 @@
+Meeting 2 of 4 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This is our second session on the outbreak management uh functional requirements, a follow-up well from last time.
+Client: Sure. Good to see everyone again, busy week on my end.
+Analyst: Quick recap: last basically time time we went over the system architecture, the outbreak management functional requirements in general, and the health event data. A few basically points uh were left sort of open, so we'll pick those up as we go.
+Analyst: Let's uhm move to case investigation and exposure contact data. What do you need there?
+Client: Er, So, because the attributes of both the case
+Client: and well the exposure data might you know actually actually describe the same entity,
+Client: Uh, any system actually supporting OM has to be able well to avoid capturing that entity's demographic information twice, no redundant demographic data.
+Analyst: Got it.
+Client: And we need epidemiological data, epi you know data, [laughter] collected to help with the case investigation of events.
+EndUser: From our side, we i mean need detailed data well collected on you know the source of exposure, and also the...
+Client: Right, and epi data has to be collected to assist—
+TechLead: Uhm, Sorry, quick basically one, is that separate from uh the case side?
+Client: Yes, so, to assist in the exposure erm investigation of health events.
+Analyst: Okay. I'd sort of like to go back to like entity data, which we touched on earlier. Can we revisit that?
+EndUser: Sorry, my audio dropped for a second, can you basically hear er me sort of now?
+Client: Yes. So, OM systems need to be able to capture data on any object involved in an OM investigation, like a letter, an invoice, a uh food item, er basically anything that can't be classified as a person, organization, place, or animal. And the data collected could include the name...
+Analyst: Anything else on entity data?
+EndUser: No, that's it.
+Analyst: Then let's talk about specimen and sample collection and laboratory response data. What do you need?
+EndUser: Er, So the lab data, sorry, the specimen and sample collection and laboratory response data, that supports collecting clinical specimens
+TechLead: Okay.
+EndUser: so food samples, environmental um samples,
+EndUser: and really any other kind of sample that's going to get you know tested for biological,
+Analyst: Right.
+EndUser: Uhm, chemical, or radiological agents.
+TechLead: Got it.
+EndUser: And every specimen or sample we collect for lab testing has to get an identifier, so uh a
+Analyst: Mm-hm.
+EndUser: Um, Specimen ID, and it has to be unique within um the jurisdiction. [pause]
+Analyst: Okay.
+EndUser: Uh, And the system has to, well, any system supporting OM has to um be able to store the data on i mean the specimens and samples collected for lab testing.
+Analyst: Sure.
+TechLead: Yeah, that makes sense.
+EndUser: For environmental samples specifically, the data should cover how it was collected, the collection method,
+Analyst: Okay.
+EndUser: the location, geocoded if we can, where
+Analyst: Right.
+EndUser: the sample was actually well taken, then the source, so for example
+Client: Mm-hm.
+EndUser: rain or a well if it's water, a radiation release, asbestos, a chair or a desk in some specified location. Then the nature of the sample, like soil, uh water, air. Quality control data. For air samples, well the collection begin and end date and time. And for water samples, the original volume you know plus the volume of concentrate that got tested.
+Analyst: Got it.
+EndUser: And then i mean for food samples, we'd you know want basically the lot number, uh the batch number, manufacturer name, the shipping invoice, sort of temperature, the sample type, so things uh like dairy – milk, red meat, spice, and also how the product was stored, the storage condition.
+EndUser: Okay, next one. Any system um supporting OM has to to be able to create a lab test request for [crosstalk] a specimen or a sample—
+Client: Sorry, someone's screen share just popped you know up [crosstalk] on my actually end.
+TechLead: Oh, that might be me, sorry. Go ahead.
+EndUser: No worries. So yeah, a test request for a sort of single specimen or sample, or for a whole group of specimens or samples.
+Client: And maybe, I'm not uh sure it's a must, but it'd be nice if we supported all levels of granularity for results, like at the specimen or sample level, or the assay level.
+EndUser: Erm, Can I bring up travel history and conveyance i mean data? Because, for example, say someone who lives in Georgia travels to Seattle and uh gets exposed to monkey pox, and then goes and visits a friend in uhm Santa Fe—
+TechLead: Quick heads-up, I have a hard kind of stop in about five minutes.
+Client: Sorry, didn't mean to cut you off. Keep going.
+EndUser: Sure. So in that case, the travel history and conveyance data should be noted for each place the exposed person traveled to.
+Analyst: Great, that's a well good place to stop. Thanks, everyone, we'll pick this up uh and continue next well time.

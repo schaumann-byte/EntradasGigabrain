@@ -1,0 +1,79 @@
+Meeting 2 of 4 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This is our second sort of session on Gemini, the like follow-up from last time.
+Analyst: Hope everyone had a decent week, by the way.
+Analyst: Quick recap: last actually time we covered interactive observing, the access um modes, erm and i mean remote control. A few um points were left basically open, so we'll come um back to those.
+Analyst: But first, I'd like like to talk about redundancy. What are uhm your thoughts there?
+TechLead: Er, Before we get into that, I want to raise software constraints. All the Gemini software has to be fully erm documented, and by that I mean mean
+EndUser: Okay.
+TechLead: internally, actually with proper comments in i mean the code, and also with external documentation.
+Analyst: Got it.
+TechLead: And uh the external docs kind of need to erm include Unix-style man pages.
+Analyst: Anything else on software constraints?
+Client: No, that covers it.
+Analyst: Alright, let's move on to data flow. How should that work?
+EndUser: So for data flow, I think—
+TechLead: Sorry, go ahead.
+EndUser: Uhm, Thanks. So the detector data has to be like acquired
+Client: Right.
+EndUser: Uhm, and stored in the the most effective way the technology i mean allows.
+Analyst: Okay.
+EndUser: And effectiveness kind of there kind of should be judged actually in terms of cost.
+Analyst: Makes sense.
+EndUser: and also also space requirements, longevity, and speed.
+Analyst: Got it.
+EndUser: But whatever we pick, we need at least two copies. One to secure the data as it's acquired, and one for doing the um data quality assessment on-line. And that second one ideally on removable media.
+Analyst: So at minimum two copies: one securing the data as acquired, and one one for on-line data quality assessment, preferably on removable media?
+EndUser: Yes, exactly.
+TechLead: Yeah, makes sense to me.
+Analyst: Um, Okay, let's move to other you know information flows. Besides the main data, what else needs to come come through the system?
+EndUser: So there's uhm other astronomical [noise] information, for example the stuff coming from sky field monitors,
+Analyst: Okay.
+EndUser: autoguider cameras, and sky monitoring devices
+Analyst: Right.
+EndUser: like cloud monitors and seeing monitors. All of that should also be able to um be made available.
+Analyst: Um, Thanks. Next, capacity. What does the system need to be able to handle?
+TechLead: On top of that, the system has uhm to support off-site observing modes.
+Client: Yes, definitely.
+Client: And I think, maybe, the system would provide for one auxiliary data acquisition
+Analyst: Mm-hm.
+Client: Um, and instrument control nodes.
+TechLead: Sorry, quick thing, I've got a hard stop in about twenty erm minutes.
+Client: And each of those nodes should be sort of able to run at all the operation levels.
+TechLead: Do we really need every node running at all [crosstalk] operation levels? That sounds like a lot of effort for something that's maybe not a priority.
+Client: I'd um push like back on that. It's genuinely important for us, I don't want to drop it.
+Analyst: Uhm, Okay, let's leave that one open for now and come back to it later.
+TechLead: Well, the thing is, in theory... no, sorry, in kind of practice the operation
+Analyst: Mm-hm.
+TechLead: and the facilities we're foreseeing so far for the kind of Gemini 8m Telescopes will cap that at a maximum of um roughly three active nodes. But the Gemini 8m Telescopes actually computers and software still have to be able like to cope with the load of 10 active nodes, you know should the case arise.
+Analyst: Got it.
+Analyst: Let's move on to the format of data acquisition. How do you see that working?
+Client: There could be some cases, though, say basically infrared detectors, basically where you well need fast kind of preprocessing—
+TechLead: Uh, Sorry, kind of quick one, preprocessing on the node?
+Client: Uh, Let me just finish. In those cases actually the you know raw data won't be stored as is, uh it'd be stored in a preprocessed format instead.
+TechLead: While we're at it, on the user interface, I don't think we should treat it as a package tied to one you know specific computer.
+Analyst: Okay.
+Client: Yes, I agree with that.
+Client: And the user interface tools should be based on standards
+TechLead: Right.
+Client: the basically ones defined in basically Section you know 4.2.5, on page 4- 7,
+Analyst: Okay.
+Client: and and basically those will be portable across different computer hardware platforms, so the Portable User Interface Toolkit.
+Analyst: Got it.
+Analyst: Okay, let's move on to the hardware interface. What do we need there?
+TechLead: So, maybe, and I'm not sure it's strictly mandatory, but it'd be nice if i mean we had standard interfaces you know available to the control electronics,
+Analyst: Right.
+TechLead: in the form of standard uh bus systems,
+Analyst: Okay.
+TechLead: then kind of a standard set of interface cards that gets used on all erm the subsystems and instruments, and a standard software skeleton running on the control electronics.
+Client: Can I jump in on the on-line image processing interfaces? We'd want quick-look data processing provided on the actually Gemini 8m Telescopes—
+EndUser: Sorry, quick-look as erm in during observing?
+Client: Let me uhm finish: with procedures that are erm suitable well for fast on-line data preprocessing.
+EndUser: And from my side, near-line processing should be there for the simple data reductions basically we need erm to validate data integrity. So basically removing instrument and observatory effects, so the observer can decide actually on further observing actions.
+Analyst: Got it.
+EndUser: Uh, Then off-line pixel processing for full data reduction should also exist at the Gemini 8m Telescopes site, but that one doesn't have um any interface to the Gemini 8m sort of Telescopes software.
+Analyst: Um, So full data you know reduction with uh off-line pixel processing happens on uh site at the Gemini 8m i mean Telescopes, but it's not interfaced with actually the Gemini 8m erm Telescopes software at all?
+EndUser: Yes, exactly.
+TechLead: Yeah, that makes sense.
+Analyst: Great, let's stop here for today. We'll continue next time. Thanks, everyone.

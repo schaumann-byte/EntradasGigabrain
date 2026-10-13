@@ -1,0 +1,66 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is our kickoff for Qhedache, and it's the only session we've planned, so sort of let's uh try to cover everything today.
+Client: Erm, Sure. So this this spec sets out the requirements for kind of the product, Qheadache. It's really written for the analyst, the actually programmer er and the tester working on it. The product uhm itself is a computer game that shows sort of an interface you use to i mean solve a specific headache.
+Analyst: Great. Let's start with external interfaces. What do erm we we need need from that side?
+TechLead: The main thing is the hardware and the operating system have to support an 800x600 you know screen resolution.
+Analyst: Okay. Moving on to the main window, what should it contain?
+Client: Er, The main window needs two parts. There's a well board, that's described in chapter 3.2.1.1, and a um menu bar, which is in uh chapter 3.2.5.
+Analyst: Um, Got it. [crosstalk] And block selection, how um does that work?
+EndUser: So when you left-click down on you know a block, um that's the input, and then the game state i mean switches to "Block deplacement".
+Analyst: And what about deselecting a a block?
+Client: That's when you release the left well click, so left-click up, on a sort of block that's selected. Then the game state er goes back to "Block selection".
+Analyst: Okay, and block movement itself?
+Client: Erm, The The input is is the mouse like moving like while you're in the "Block movement" state. The selected block follows the mouse, but it can't overlap the other blocks and it can't leave the game zone. Also it can't get um closer than 0.05x to the other blocks.
+Analyst: Let's talk about sort of undo. How should that behave?
+EndUser: You pick it from the menu, um and the well game like puts the blocks back where they were before the last basically movement. The undo itself counts as a movement. sort of If there wasn't a previous movement, undo isn't available. And the output is the game board actually being displayed again with the new positions.
+Analyst: Okay, makes sense.
+Analyst: And redo?
+Client: Uhm, Same idea, it's a menu selection. The game shows the blocks where they uh were before well the last movement got canceled. It also counts as a movement. Redo is only available if the previous action was an undo. Output is again a new display of the game board.
+Analyst: Right. What happens at the end of the game?
+Client: The game er ends when you know the great uhm square is moved to the bottom of the uh board. At that point all the player statistics are frozen. actually Then, if the you know current player's number of block movements is lower uhm than the highest number like recorded in the er statistics file, we actually show the "Finish basically Window with Statistics", that's chapter 3.2.2.2. Otherwise it shows the "Simple finish Window" from chapter 3.2.2.3.
+Analyst: Let's basically dig like into that finish window with statistics then. What should it show?
+Client: So the Finish Window with uh Statistics. It comes up when the game is over, that's chapter 3.2.2.1. The player clicks the "OK" pushbutton, and then their statistics get recorded in the software's statistic file, following the requirement in chapter 3.2.3.2. After that the "finish" window actually closes and the statistic window is displayed, which is chapter 3.2.3.4.
+Analyst: Okay, got it.
+Analyst: Uhm, And what about the simple finish window? kind of How How should that one behave?
+Client: That one's simpler. Again you know it's triggered when the game is over, chapter 3.2.2.1. The player clicks the "OK" pushbutton, the Simple Finish Window closes, and the statistic window is displayed, chapter 3.2.3.4.
+Analyst: Let's move to player statistics management. What happens [laughter] there?
+Client: So the input is a block movement. Each uhm time, the number of block movements goes up by 1, and we record the time difference between that movement and the previous recorded time.
+Analyst: Okay. And game uh statistics management, how does that work?
+EndUser: So that kicks uhm in once the player uh has completed the Finish Window with Statistics, chapter 3.2.2.2. Their statistics get recorded in the statistic file, so their name, the block movement number, and uh the time it took to solve uh the headache. If there are uhm already 10 player statistics recorded, erm the one in the file with the greatest number of block movements gets erased. If the actually file updates well correctly, there's no output. If it doesn't, say wrong you know permissions or a full disk, an error message shows up.
+Analyst: Let Let me check I've got that. After the you know player completes the Finish Window actually with Statistics sort of from chapter 3.2.2.2, we save their name, block movement number and time to solve the headache in the statistic erm file. If 10 entries are already there, we erase the one with the actually most block like movements. And nothing is shown well if the update works, but an error message if it fails, like wrong permissions or disk full. Right?
+EndUser: Yes, exactly.
+Analyst: Anything else on game statistics management?
+EndUser: No, that's it.
+Analyst: Er, Next one, statistics erasing. What do uh you need there?
+Client: It's triggered from a menu selection. The data stored in the statistic file gets erased. Same as as before on the output: if the file updates fine, nothing's shown, and if not, like wrong permissions or the disk being full, we show an error message.
+Analyst: Okay.
+Client: Sorry, my screen just froze for a second. Am I still coming through?
+Analyst: Uh, Yes, we hear you. So, the the statistic window. What should that do?
+EndUser: It opens either at the end of the game, chapter 3.2.2.1, or from a menu selection, and sort of then it just displays the window.
+Analyst: Erm, And opening a game, how uh should that work?
+Client: That's from a menu selection too. A dialog box [pause] opens and sort of the user can pick a file that has all like the the data of a game they saved before.
+Analyst: So for uh Open game, you pick it it from the menu, a dialog box opens, and the user can choose a file holding all all the data of um a game they saved before. Is that right?
+Client: Yes, exactly.
+Analyst: Okay, er what about saving the basically game? How should that work?
+EndUser: Uhm, So Save game uh is also a menu selection. If the game was never saved, it just does the same thing as "Save as...". Otherwise it writes the internal data into the file that was used last time to save the game. That's er the er current positions of the blocks, their last 10000 previous positions, the number sort of of kind of previous movements, and the the time the you know user has er spent solving the headache.
+Analyst: Got it.
+Analyst: And Save game as, what happens there?
+EndUser: A dialog box opens and actually the user picks a file that'll hold all the data of the current game.
+Analyst: Okay. Let's talk about Exit.
+EndUser: Exit comes from the menu too. If the game sort of isn't saved, a dialog box pops up asking the player whether uh he wants to save the game, with two choices, "Yes" and "No". If you know he picks "Yes", the Save action runs and then the main main window disappears. If he picks "No", the the main window just disappears.
+Analyst: Uh, What about the Game kind of menu itself?
+EndUser: Uh, You select um from the menu and it performs whichever action you chose. "Open game ..." runs the the Open game action, that's chapter i mean 3.2.4.1. "Save Game ..." runs Save Game, chapter 3.2.4.2. "Save Game Game As ..." runs Save game as, chapter 3.2.4.3. And "Exit" runs uhm Exit, chapter 3.2.4.4. Then the menu disappears, and what happens next depends on the requirements uh of that action.
+Analyst: And the rest of the menu menu bar?
+EndUser: There's the Action menu. Again a menu selection, and it performs the chosen action: "Undo" does the Undo action from chapter 3.2.1.5, and "Redo" does Redo from chapter 3.2.1.6. The menu disappears and the action's requirements decide what happens next.
+Analyst: So if I got it right, uh and action menu. uh Input: Menu selection. Processing: Action in question is performed : "Undo" > action "Undo" "Redo" sort of > action "Redo" Output: Menu disappears. Requirements of the action determines actually the continuation?
+EndUser: Yep, that's it.
+Analyst: Next, the statistics menu. sort of How does that one [pause] work?
+Client: Okay so one thing basically is, statisctis menu. Input: Menu selection. Processing: Action in question is performed : "Display" > displays the statistic window um "Erase" uh > erase the statistics Output: Menu disappears. Requirements of the action determines the continuation.
+Analyst: And the Help menu?
+Client: Uhm, When you select it, the "About Window" is i mean shown, and it just has the text "Qheadache 1.0 by JeanPhilippe Brossat jp_brossat@yahoo.fr". The menu disappears, and the rest follows from the action's requirements.
+Analyst: Great. Now let's move on to the software kind of system attributes. kind of What do we need there?
+Client: Um, And one more thing, the software has to be portable to Windows. That OS basically needs to be covered.
+Analyst: Got it.
+Analyst: Okay, I think that covers it. Thanks, everyone. I'll consolidate everything we went through today into one document and send it around for you to review.

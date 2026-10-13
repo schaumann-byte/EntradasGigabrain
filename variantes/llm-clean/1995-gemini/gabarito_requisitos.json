@@ -1,0 +1,3921 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "1995-gemini",
+  "doc_title": "Gemini Software Requirements Specification",
+  "source_file": "PURE/requirements-xml/1995 - gemini.xml",
+  "mode": "meetings",
+  "variant": "llm-clean",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "clean",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        1,
+        1
+      ],
+      "mess": 0.0,
+      "p_omit": 0.0,
+      "p_conflict": 0.0,
+      "p_ambiguity": 0.0,
+      "p_inconsistency": 0.0,
+      "p_incomplete": 0.0,
+      "p_conflict_open": 0.0,
+      "p_resolve_later": 0.0,
+      "p_complete_later": 0.0,
+      "p_chunk": 0.0,
+      "chunk_target": 12,
+      "p_mid_backchannel": 0.0,
+      "p_backchannel": 0.3,
+      "p_react": 0.0,
+      "noise": 0.08,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_content": 1,
+      "llm_accepted": 136,
+      "llm_accepted_content": 61,
+      "turns": 137,
+      "windows": 7
+    }
+  },
+  "input": {
+    "n_meetings": 1,
+    "n_chars": 20680,
+    "n_words": 3343,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "access modes",
+          "interactive observing",
+          "remote control",
+          "remote observing",
+          "remote access",
+          "service",
+          "astronomical data flow",
+          "video information flow",
+          "test and checkout requirements",
+          "fault notification",
+          "fault tollerance",
+          "redundancy",
+          "user constraints",
+          "software constraints",
+          "data flow",
+          "format od data acquisition",
+          "other information flow",
+          "capacity",
+          "user interface (uif)",
+          "hardware interface",
+          "on-line image processing interfaces",
+          "reliability and availability requirements",
+          "maintainability",
+          "quantitative maintenance requirements",
+          "security and safety requirements",
+          "testabilty",
+          "modularity",
+          "installation aspects",
+          "remote operations",
+          "normal operation",
+          "operation in failure mode",
+          "operating system",
+          "external software packages",
+          "harware requirements",
+          "communication hardware",
+          "gemini breakdown of tasks",
+          "not covered by any work packages"
+        ],
+        "n_chars": 20680,
+        "n_words": 3343,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 248,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 257,
+            "end": 689,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T3",
+            "start": 699,
+            "end": 766,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T4",
+            "start": 775,
+            "end": 1446,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0003",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 1456,
+            "end": 2196,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1995-gemini:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0003",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 2205,
+            "end": 2218,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T7",
+            "start": 2228,
+            "end": 2272,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T8",
+            "start": 2282,
+            "end": 2476,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0029",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 2486,
+            "end": 2535,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T10",
+            "start": 2545,
+            "end": 2807,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0044",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T11",
+            "start": 2817,
+            "end": 2835,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T12",
+            "start": 2845,
+            "end": 2866,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T13",
+            "start": 2875,
+            "end": 2938,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0047",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 2947,
+            "end": 3054,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0048"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0048",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 3064,
+            "end": 3070,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T16",
+            "start": 3080,
+            "end": 3120,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T17",
+            "start": 3129,
+            "end": 3227,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0052",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 3237,
+            "end": 3272,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T19",
+            "start": 3281,
+            "end": 3656,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0053"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0053",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 3666,
+            "end": 3678,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T21",
+            "start": 3687,
+            "end": 3947,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0055",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 3957,
+            "end": 3964,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T23",
+            "start": 3974,
+            "end": 4052,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T24",
+            "start": 4061,
+            "end": 4403,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0067"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0067",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 4413,
+            "end": 4453,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T26",
+            "start": 4463,
+            "end": 4477,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T27",
+            "start": 4487,
+            "end": 4537,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T28",
+            "start": 4546,
+            "end": 4703,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0068"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0068",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 4713,
+            "end": 4753,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T30",
+            "start": 4763,
+            "end": 4782,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T31",
+            "start": 4792,
+            "end": 4860,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T32",
+            "start": 4869,
+            "end": 5034,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0077"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0077",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T33",
+            "start": 5044,
+            "end": 5049,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T34",
+            "start": 5058,
+            "end": 5182,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0078"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0078",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T35",
+            "start": 5192,
+            "end": 5319,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1995-gemini:R0078"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0078",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T36",
+            "start": 5328,
+            "end": 5341,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T37",
+            "start": 5351,
+            "end": 5408,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T38",
+            "start": 5419,
+            "end": 5490,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0082"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0082",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 5500,
+            "end": 5553,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T40",
+            "start": 5564,
+            "end": 5808,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0087"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0087",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T41",
+            "start": 5818,
+            "end": 5883,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T42",
+            "start": 5894,
+            "end": 6100,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0090"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0090",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T43",
+            "start": 6110,
+            "end": 6202,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T44",
+            "start": 6211,
+            "end": 6507,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0091"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0091",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T45",
+            "start": 6517,
+            "end": 6748,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1995-gemini:R0091"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0091",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T46",
+            "start": 6757,
+            "end": 6770,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T47",
+            "start": 6780,
+            "end": 6861,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T48",
+            "start": 6870,
+            "end": 7281,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0097"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0097",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T49",
+            "start": 7290,
+            "end": 7483,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0098"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0098",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T50",
+            "start": 7493,
+            "end": 7549,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T51",
+            "start": 7558,
+            "end": 7750,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0113"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0113",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T52",
+            "start": 7760,
+            "end": 7956,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0117"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0117",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T53",
+            "start": 7966,
+            "end": 8001,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T54",
+            "start": 8010,
+            "end": 8024,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T55",
+            "start": 8034,
+            "end": 8082,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T56",
+            "start": 8092,
+            "end": 8274,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0120"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0120",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T57",
+            "start": 8284,
+            "end": 8421,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1995-gemini:R0120"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0120",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T58",
+            "start": 8431,
+            "end": 8442,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T59",
+            "start": 8452,
+            "end": 8510,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T60",
+            "start": 8519,
+            "end": 8747,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0124"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0124",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T61",
+            "start": 8757,
+            "end": 8840,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T62",
+            "start": 8851,
+            "end": 9018,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0131",
+              "1995-gemini:R0133"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0131",
+                "role": "statement"
+              },
+              {
+                "rid": "1995-gemini:R0133",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T63",
+            "start": 9027,
+            "end": 9091,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0134"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0134",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 9101,
+            "end": 9108,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T65",
+            "start": 9117,
+            "end": 9423,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0139"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0139",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T66",
+            "start": 9433,
+            "end": 9459,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T67",
+            "start": 9468,
+            "end": 9482,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T68",
+            "start": 9492,
+            "end": 9576,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T69",
+            "start": 9585,
+            "end": 9693,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0146"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0146",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T70",
+            "start": 9704,
+            "end": 9939,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0149"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0149",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T71",
+            "start": 9949,
+            "end": 9954,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T72",
+            "start": 9964,
+            "end": 10030,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T73",
+            "start": 10039,
+            "end": 10306,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0151"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0151",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T74",
+            "start": 10316,
+            "end": 10363,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T75",
+            "start": 10374,
+            "end": 10395,
+            "speaker": "TechLead",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T76",
+            "start": 10405,
+            "end": 10477,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T77",
+            "start": 10486,
+            "end": 10630,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0158"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0158",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T78",
+            "start": 10639,
+            "end": 10879,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0160"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0160",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T79",
+            "start": 10889,
+            "end": 11070,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0161"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0161",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T80",
+            "start": 11080,
+            "end": 11092,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T81",
+            "start": 11102,
+            "end": 11185,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T82",
+            "start": 11196,
+            "end": 11389,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0185"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0185",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T83",
+            "start": 11398,
+            "end": 11599,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0189"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0189",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T84",
+            "start": 11609,
+            "end": 11664,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T85",
+            "start": 11675,
+            "end": 11890,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0203"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0203",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T86",
+            "start": 11901,
+            "end": 12039,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0204"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0204",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T87",
+            "start": 12049,
+            "end": 12131,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T88",
+            "start": 12142,
+            "end": 12289,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0225"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0225",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T89",
+            "start": 12299,
+            "end": 12352,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T90",
+            "start": 12361,
+            "end": 12740,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0231",
+              "1995-gemini:R0233"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0231",
+                "role": "statement"
+              },
+              {
+                "rid": "1995-gemini:R0233",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T91",
+            "start": 12750,
+            "end": 12799,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T92",
+            "start": 12809,
+            "end": 12887,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0238"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0238",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T93",
+            "start": 12897,
+            "end": 13016,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1995-gemini:R0238"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0238",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T94",
+            "start": 13026,
+            "end": 13039,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T95",
+            "start": 13049,
+            "end": 13108,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T96",
+            "start": 13117,
+            "end": 13259,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0246"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0246",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T97",
+            "start": 13269,
+            "end": 13274,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T98",
+            "start": 13283,
+            "end": 13476,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0248"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0248",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T99",
+            "start": 13486,
+            "end": 13492,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T100",
+            "start": 13503,
+            "end": 13726,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0249"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0249",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T101",
+            "start": 13737,
+            "end": 13924,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0251"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0251",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T102",
+            "start": 13935,
+            "end": 14301,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0254",
+              "1995-gemini:R0255"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0254",
+                "role": "statement"
+              },
+              {
+                "rid": "1995-gemini:R0255",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T103",
+            "start": 14311,
+            "end": 14318,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T104",
+            "start": 14329,
+            "end": 14475,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0256"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0256",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T105",
+            "start": 14485,
+            "end": 14554,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T106",
+            "start": 14565,
+            "end": 14713,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0264"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0264",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T107",
+            "start": 14723,
+            "end": 14790,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T108",
+            "start": 14801,
+            "end": 15021,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0270"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0270",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T109",
+            "start": 15031,
+            "end": 15107,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T110",
+            "start": 15117,
+            "end": 15217,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0279"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0279",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T111",
+            "start": 15227,
+            "end": 15285,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T112",
+            "start": 15295,
+            "end": 15523,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0285"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0285",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T113",
+            "start": 15533,
+            "end": 15538,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T114",
+            "start": 15548,
+            "end": 15588,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T115",
+            "start": 15597,
+            "end": 15611,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T116",
+            "start": 15621,
+            "end": 15700,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T117",
+            "start": 15710,
+            "end": 16460,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0287"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0287",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T118",
+            "start": 16470,
+            "end": 16482,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T119",
+            "start": 16492,
+            "end": 16792,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0289"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0289",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T120",
+            "start": 16802,
+            "end": 16898,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T121",
+            "start": 16907,
+            "end": 17929,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0292"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0292",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T122",
+            "start": 17939,
+            "end": 18010,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T123",
+            "start": 18020,
+            "end": 18554,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0295"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0295",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T124",
+            "start": 18564,
+            "end": 18606,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T125",
+            "start": 18616,
+            "end": 18843,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0299"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0299",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T126",
+            "start": 18853,
+            "end": 18885,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T127",
+            "start": 18895,
+            "end": 19650,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0300"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0300",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T128",
+            "start": 19660,
+            "end": 19667,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T129",
+            "start": 19677,
+            "end": 19707,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T130",
+            "start": 19716,
+            "end": 19834,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0304"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0304",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T131",
+            "start": 19844,
+            "end": 19849,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T132",
+            "start": 19859,
+            "end": 19903,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T133",
+            "start": 19912,
+            "end": 20237,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0313"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0313",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T134",
+            "start": 20248,
+            "end": 20305,
+            "speaker": "TechLead",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T135",
+            "start": 20315,
+            "end": 20385,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T136",
+            "start": 20395,
+            "end": 20516,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1995-gemini:R0315"
+            ],
+            "refs": [
+              {
+                "rid": "1995-gemini:R0315",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T137",
+            "start": 20526,
+            "end": 20679,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 60,
+    "n_primary_fr": 27,
+    "n_primary_nfr": 33,
+    "n_expected_in_output": 60,
+    "n_reachable": 60,
+    "by_status": {
+      "clear": 60
+    },
+    "phenomena": {},
+    "n_distractors": 0,
+    "n_issues": 0,
+    "messiness": {
+      "offtopic": 1,
+      "meetings": 1
+    },
+    "mean_support_clear": 0.802
+  },
+  "requirements": [
+    {
+      "id": "1995-gemini:R0003",
+      "text": "F.Administrative. It is possible to inquire about system utilization, efficiency, etc. using administrative access. No control is available in this mode, only status and scheduling information is accessible. Under no circumstances should administrative access affect the performance of an ongoing observation. It is entirely possible for a single user to be accessing the system through several modes simultaneously. In fact, this is the typical situation with the Telescope Operator, who is often concurrently accessing the system through the observer, monitor, and operator modes. There are times when an astronomer might be using both observer and monitor modes.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.3",
+        "section_path": [
+          "General Description",
+          "Access modes"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T4",
+          "M1:T5"
+        ],
+        "related_segments": [
+          "M1:T4",
+          "M1:T5"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0029",
+      "text": "The initial implementation of the automatic sequencer will operate in a \"pass through\"mode where all commands are accepted and transmitted with minimal checking and delay.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Interactive observing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T8"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0044",
+      "text": "The philosophy behind this is that, for safety considerations, telescope control commands cannot be issued without a staff member (not necessarily the same person) having direct access to: a hard wired \"stop\" button; real time video and audio; control of the telescope.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": "SA",
+      "source": {
+        "section_id": "2.7.3.1",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Remote operations",
+          "Remote control"
+        ],
+        "xml_element": "text_body+items",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T10"
+        ],
+        "related_segments": [
+          "M1:T10"
+        ],
+        "support_score": 0.708,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0047",
+      "text": "Remote users shall normally interact with the system via",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.3.2",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Remote operations",
+          "Remote Observing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T13"
+        ],
+        "related_segments": [
+          "M1:T13"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0048",
+      "text": "via the scheduler program and shall not control any part of the Gemini 8m Telescopes directly.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.3.2",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Remote operations",
+          "Remote Observing"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T14"
+        ],
+        "related_segments": [
+          "M1:T14"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0052",
+      "text": "Remote access, in this case, must be possible from the Gemini 8m Telescopes base facility.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.3.5",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Remote operations",
+          "Remote Access"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T17"
+        ],
+        "related_segments": [
+          "M1:T17"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0053",
+      "text": "The observing program must be automated, requiring little human interaction during the observation. The means that the Gemini software must include a sufficiently rich programming environment to make this feasible. In addition, this should be a visually-oriented environment providing a simple, easy-to-use interface to the astronomer.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.4",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Service"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T19"
+        ],
+        "related_segments": [
+          "M1:T19"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0055",
+      "text": "The programming environment should allow for the communication of special notes, instructions, and comments from the astronomer to the observer, possibly involving multimedia techniques. The use of this feature would, however, be discouraged for queue-based observing.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.4",
+        "section_path": [
+          "General Description",
+          "Observing model requirements",
+          "Service"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T21"
+        ],
+        "related_segments": [
+          "M1:T21"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0067",
+      "text": "System-wide data capacity. The data capacity of the system is limited by transfer methods and technology, as well as archiving capacity on site. The system data capacity is capable of retaining 7 days of data produced by the largest instrument, the last 3 days of which must be available interactively from hard disk or similar medium.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.9.2.1",
+        "section_path": [
+          "General Description",
+          "General Softwar Requirements",
+          "Astronomical data flow",
+          "Requirements"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T24"
+        ],
+        "related_segments": [
+          "M1:T24"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0068",
+      "text": "The system must allow for fast transmission of rough images every 0.5 sec. This may be assisted through the use of data-loss compression techniques (e.g. JPEG, MPEG, etc).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "2.9.3",
+        "section_path": [
+          "General Description",
+          "General Softwar Requirements",
+          "Video information Flow"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T28"
+        ],
+        "related_segments": [
+          "M1:T28"
+        ],
+        "support_score": 0.588,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0077",
+      "text": "The Gemini 8m Telescopes control software shall also provide for execution of self-test sequences of the Gemini 8m Telescopes system and subsystems.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.12",
+        "section_path": [
+          "General Description",
+          "Test and checkout Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T32"
+        ],
+        "related_segments": [
+          "M1:T32"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0078",
+      "text": "These shall automatically exercise all subsystems present in a given operational configuration.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.12",
+        "section_path": [
+          "General Description",
+          "Test and checkout Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T34",
+          "M1:T35"
+        ],
+        "related_segments": [
+          "M1:T34",
+          "M1:T35"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0082",
+      "text": "The notification must also be capable of being electronically logged.",
+      "class": "NFR",
+      "subtype": "FT",
+      "subtype_name": "Fault Tolerance",
+      "promise_subtype": "FT",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.13.1",
+        "section_path": [
+          "General Description",
+          "Contingencies",
+          "Fault Notification"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T38"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0087",
+      "text": "If it is possible to observe with that particular IOC in a failed state (in general, this is limited to IOCs that are associated with individual scientific instruments) then it must be possible to reconfigure the system to do so.",
+      "class": "NFR",
+      "subtype": "FT",
+      "subtype_name": "Fault Tolerance",
+      "promise_subtype": "FT",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.13.2",
+        "section_path": [
+          "General Description",
+          "Contingencies",
+          "Fault tollerance"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T40"
+        ],
+        "related_segments": [
+          "M1:T40"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0090",
+      "text": "All communication shall be based on the use of standard communication protocols, where retry procedures are applied (a form of software redundancy) as part of the protocol.",
+      "class": "NFR",
+      "subtype": "FT",
+      "subtype_name": "Fault Tolerance",
+      "promise_subtype": "FT",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "2.13.3",
+        "section_path": [
+          "General Description",
+          "Contingencies",
+          "Redundancy"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T42"
+        ],
+        "related_segments": [
+          "M1:T42"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0091",
+      "text": ".There should be no restrictions imposed by the software on users. Only policy decisions (permissions, access privileges, etc.) should prevent any user from accessing any part of the Gemini system from any local or remote station.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "2.14.1",
+        "section_path": [
+          "General Description",
+          "Constraints",
+          "User constraints"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T44",
+          "M1:T45"
+        ],
+        "related_segments": [
+          "M1:T44",
+          "M1:T45"
+        ],
+        "support_score": 0.824,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0097",
+      "text": "All Gemini subsystem packages should include as part of the software both a simulator module for inclusion in the virtual telescope (see Design constraints, below), and user interface modules for the user interface environments that the subsystem will be operating in. The interfaces required of these user interface modules are described in Section 3.3 on page 3-6.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.14.3",
+        "section_path": [
+          "General Description",
+          "Constraints",
+          "Software constraints"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T48"
+        ],
+        "related_segments": [
+          "M1:T48"
+        ],
+        "support_score": 0.731,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0098",
+      "text": "All Gemini software is to be fully documented, internally with appropriate comments, and external documentation. External documentation must include Unix-style man pages.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "2.14.3",
+        "section_path": [
+          "General Description",
+          "Constraints",
+          "Software constraints"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T49"
+        ],
+        "related_segments": [
+          "M1:T49"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0113",
+      "text": "Detector data must be acquired and stored in the most effective way technology will allow; effectiveness should be evaluated in terms of cost, space requirements, longevity, and speed.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.1",
+        "section_path": [
+          "General Requirements",
+          "Data Specifications",
+          "Astronomical Data Flow",
+          "Data Flow"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T51"
+        ],
+        "related_segments": [
+          "M1:T51"
+        ],
+        "support_score": 0.824,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0117",
+      "text": "However, there must be at least two copies - one to secure data as acquired and one to do assessment of data quality on-line (this last copy preferably on removable media).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.1.2.1",
+        "section_path": [
+          "General Requirements",
+          "Data Specifications",
+          "Astronomical Data Flow",
+          "Data Flow"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T52"
+        ],
+        "related_segments": [
+          "M1:T52"
+        ],
+        "support_score": 0.688,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0120",
+      "text": "There might, however, be cases (for example, infrared detectors) where fast preprocessing is needed and where, therefore, raw data will not be stored as such, but in a preprocessed format.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.2",
+        "section_path": [
+          "General Requirements",
+          "Data Specifications",
+          "Astronomical Data Flow",
+          "Format Od Data Acquisition"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T56",
+          "M1:T57"
+        ],
+        "related_segments": [
+          "M1:T56",
+          "M1:T57"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0124",
+      "text": "Other astronomical information such as that coming from sky field monitors, autoguider cameras and sky monitoring devices such as cloud and seeing monitors shall also be capable of being available.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "General Requirements",
+          "Data Specifications",
+          "Other Information Flow"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T60"
+        ],
+        "related_segments": [
+          "M1:T60"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0131",
+      "text": "Each node will have the capability to run at all operation levels.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "General Requirements",
+          "Operation",
+          "Capacity"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T62"
+        ],
+        "related_segments": [
+          "M1:T62"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0133",
+      "text": "The system will provide for one auxiliary data acquisition and instrument control nodes.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "General Requirements",
+          "Operation",
+          "Capacity"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T62"
+        ],
+        "related_segments": [
+          "M1:T62"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0134",
+      "text": "In addition, the system must support off-site observing modes.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "General Requirements",
+          "Operation",
+          "Capacity"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T63"
+        ],
+        "related_segments": [
+          "M1:T63"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0139",
+      "text": "In practice the operation and facilities foreseen so far for the Gemini 8m Telescopes will limit this number to a maximum in the order of three active nodes, but the Gemini 8m Telescopes computers and software shall be capable of coping with the load of 10 active nodes, should the case arise",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "General Requirements",
+          "Operation",
+          "Capacity"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T65"
+        ],
+        "related_segments": [
+          "M1:T65"
+        ],
+        "support_score": 0.565,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0146",
+      "text": "The user interface should not be seen as a package linked to a specific computer.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1",
+        "section_path": [
+          "General Requirements",
+          "External Iterface Requirements",
+          "User Interface (UIF)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T69"
+        ],
+        "related_segments": [
+          "M1:T69"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0149",
+      "text": "The user interface tools shall be based on standards, defined in Section 4.2.5 on page 4- 7, which will be portable across different computer hardware platforms (Portable User Interface Toolkit).",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "3.3.1",
+        "section_path": [
+          "General Requirements",
+          "External Iterface Requirements",
+          "User Interface (UIF)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T70"
+        ],
+        "related_segments": [
+          "M1:T70"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0151",
+      "text": "Standard interfaces to the control electronics shall be available, in the form of: standard bus systems; a standard set of interface cards to be used on all the subsystems and instruments; a standard software skeleton running on the control electronics.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.2",
+        "section_path": [
+          "General Requirements",
+          "External Iterface Requirements",
+          "Hardware interface"
+        ],
+        "xml_element": "text_body+items",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T73"
+        ],
+        "related_segments": [
+          "M1:T73"
+        ],
+        "support_score": 0.882,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0158",
+      "text": "Quick-look data processing should be provided on the Gemini 8m Telescopes, with procedures suitable for fast on-line data preprocessing.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.3.1",
+        "section_path": [
+          "General Requirements",
+          "External Iterface Requirements",
+          "Software iterfaces",
+          "On-line image processing interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T77"
+        ],
+        "related_segments": [
+          "M1:T77"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0160",
+      "text": "Near-line processing should be available for simple data reductions required for data integrity validation (i.e. remove instrument and observatory effects so the observer can make decisions about further observing actions).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.3.1",
+        "section_path": [
+          "General Requirements",
+          "External Iterface Requirements",
+          "Software iterfaces",
+          "On-line image processing interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T78"
+        ],
+        "related_segments": [
+          "M1:T78"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0161",
+      "text": "Off-line pixel processing for full data reduction should also exist at the Gemini 8m Telescopes site, but does not have any interface to the Gemini 8m Telescopes software.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.3.1",
+        "section_path": [
+          "General Requirements",
+          "External Iterface Requirements",
+          "Software iterfaces",
+          "On-line image processing interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T79"
+        ],
+        "related_segments": [
+          "M1:T79"
+        ],
+        "support_score": 0.929,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0185",
+      "text": "This will allow centralized support and coordination of their operations, providing both operations support for individual instruments and supervision for all of them.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.1",
+        "section_path": [
+          "General Requirements",
+          "General constraints",
+          "User constraints"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T82"
+        ],
+        "related_segments": [
+          "M1:T82"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0189",
+      "text": "Access from any user station will make user stations in principle identical and software configurable as the user station of this or that subsystem.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.1",
+        "section_path": [
+          "General Requirements",
+          "General constraints",
+          "User constraints"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T83"
+        ],
+        "related_segments": [
+          "M1:T83"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0203",
+      "text": "Additions of new instruments should aim, as a goal, at introducing no modification to already operational parts. Modifications should be confined to the operational procedures and should not affect the bulk of the existing software.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.3",
+        "section_path": [
+          "General Requirements",
+          "General constraints",
+          "Software constraints"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T85"
+        ],
+        "related_segments": [
+          "M1:T85"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0204",
+      "text": ".Switching to different configurations must be possible at any time with appropriate procedures.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.3",
+        "section_path": [
+          "General Requirements",
+          "General constraints",
+          "Software constraints"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T86"
+        ],
+        "related_segments": [
+          "M1:T86"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0225",
+      "text": "On-line pre-checking of the operational status of equipment should be done prior to sending critical or time consuming commands.",
+      "class": "NFR",
+      "subtype": "RL",
+      "subtype_name": "Reliability/RAMS",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.3.1",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Reliability and Availability",
+          "Reliability and availability Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T88"
+        ],
+        "related_segments": [
+          "M1:T88"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0231",
+      "text": "The plan will consider: Maintenance requirements including an estimate of required resources; The method of upgrading the system to add capabilities and performance. Areas where upgrades are anticipated should be identified with an estimate of the required effort and resources.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.4",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Maintainability"
+        ],
+        "xml_element": "text_body+items",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T90"
+        ],
+        "related_segments": [
+          "M1:T90"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0233",
+      "text": "The plan will be delivered with the control system",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.4",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Maintainability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T90"
+        ],
+        "related_segments": [
+          "M1:T90"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0238",
+      "text": "Quantitative maintenance requirements will be allocated to the system, subsystems, and each component.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.4.6",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Maintainability",
+          "Quantitative Maintenance Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T92",
+          "M1:T93"
+        ],
+        "related_segments": [
+          "M1:T92",
+          "M1:T93"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0246",
+      "text": "The software should be able to quickly bring the Gemini system to a safe state upon notification of such danger.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T96"
+        ],
+        "related_segments": [
+          "M1:T96"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0248",
+      "text": "In the event that the risk persists, subsystems must be able to move themselves into safe states to protect people and equipment (i.e. if there is a failure in the higher-level systems).",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T98"
+        ],
+        "related_segments": [
+          "M1:T98"
+        ],
+        "support_score": 0.733,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0249",
+      "text": "Safety protection must be applied whenever there is the risk that the actions of the control software could endanger people or cause damage to any Gemini 8m Telescopes subsystem, for example, by driving beyond limits or by overexposing detectors.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "SA",
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T100"
+        ],
+        "related_segments": [
+          "M1:T100"
+        ],
+        "support_score": 0.773,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0251",
+      "text": "In general this will require mechanical hard stops, electrical interlocks, electrical hard limit switches, soft limit switches, software limits, and watch dogs,.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T101"
+        ],
+        "related_segments": [
+          "M1:T101"
+        ],
+        "support_score": 0.769,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0254",
+      "text": "Safety aspects shall be analyzed during the functional specification phase of the software.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "SA",
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T102"
+        ],
+        "related_segments": [
+          "M1:T102"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0255",
+      "text": "Security must be provided in order to both prevent accidental mix-up of commands from different users on different parts of the system and to prevent intrusion from the wide area network into the Gemini 8m Telescopes.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T102"
+        ],
+        "related_segments": [
+          "M1:T102"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0256",
+      "text": "In particular, the astronomical database must be protected from intrusion, whether the purpose is to access private data or to be destructive.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.6.2",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Security and Safety",
+          "Security and Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T104"
+        ],
+        "related_segments": [
+          "M1:T104"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0264",
+      "text": "This plan will address all areas of testing from design, acceptance, commissioning through to hand-over.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.7",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "testabilty"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T106"
+        ],
+        "related_segments": [
+          "M1:T106"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0270",
+      "text": "At the same time, the possibility must exist to acquire information about other parts of the system (for example, telescope coordinates) (as mentioned in the control flow requirements in Section 3.1.1).",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.9",
+        "section_path": [
+          "General Requirements",
+          "Attributes",
+          "Modularity"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T108"
+        ],
+        "related_segments": [
+          "M1:T108"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0279",
+      "text": "Every system must thus be able to supply its current version upon request.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.8",
+        "section_path": [
+          "General Requirements",
+          "Installation aspects"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T110"
+        ],
+        "related_segments": [
+          "M1:T110"
+        ],
+        "support_score": 0.571,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0285",
+      "text": "There must be some form of security to control access to system features, possibly restricting some operations to specific remote sites (e.g. Hale Pohaku or Hilo in Hawaii, Cerro Tololo in Chile, etc.)",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "4.2.2.1",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "Communication subsytems",
+          "Remote Operations"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T112"
+        ],
+        "related_segments": [
+          "M1:T112"
+        ],
+        "support_score": 0.789,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0287",
+      "text": "Start-up and shut-down. There are start-up and shut-down procedures that must exist at many different levels: Cold start-up, starting the system from scratch (including time to download all software) should take about 5 minutes. This does not include time to start-up the telescope or instruments. Warm start-up, starting from scratch but also excluding software download time should take about 1 minute. Telescope start-up, measured from end of cold or warm start-up should be about 4 minutes. Instrument start-up, measured from end of telescope start-up, should take 2 minutes or less.There must be a way to shut down all subsystems (hardware and software). All start-ups and shut-downs are to be automatically logged with time stamps, to allow for statistics on system availability.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "4.2.4.1",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "System operational requirements",
+          "Normal operation"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T117"
+        ],
+        "related_segments": [
+          "M1:T117"
+        ],
+        "support_score": 0.811,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0289",
+      "text": "Engineering Logging It must be possible to log engineering data at up to 200 Hz rates for short periods of time. This data must be available to external software packages for analysis. Long-term logging of engineering data must be possible at slower (1 Hz or less) rates, into a common format (baselined as SYBASE).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2.4.1",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "System operational requirements",
+          "Normal operation"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T119"
+        ],
+        "related_segments": [
+          "M1:T119"
+        ],
+        "support_score": 0.92,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0292",
+      "text": "Performance The performance of error-mode recovery is specific to the subsystem and is defined in the Functional specification for that subsystem. Normally, there is no recovery possible from a fatal error except to shut-down and then restart the subsystem. However, in the case of an instrument failure, it may be possible to continue operation by rescheduling to use observations that do not require that particular instrument For serious errors, it may be possible to continue operation with degraded performance. For example, failure of automatic tracking may require manual tracking; other errors may result in operation with a different instrument Under normal conditions, the number of warnings should be small. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate. Ideally, such conditions should be noted by the subsystems before reaching the OCS level. Failure conditions should not cascade. That is, failure of one subsystem should not affect other, working, subsystems, including communication links.",
+      "class": "NFR",
+      "subtype": "FT",
+      "subtype_name": "Fault Tolerance",
+      "promise_subtype": "FT",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "4.2.4.2",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "System operational requirements",
+          "Operation in failure mode"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T121"
+        ],
+        "related_segments": [
+          "M1:T121"
+        ],
+        "support_score": 0.787,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0295",
+      "text": "Software below the IOC level. There is likely to be software below the IOC level, but it should not require downloading, except possibly for upgrades, typically being placed into ROM or FLASH memory. Any access to this embedded software while it is connected to the system is strictly through software in the IOC. From outside the IOC this software appears as part of the electronics. Although this software is not considered part of the Gemini software, it is obviously an advantage (for maintenance purposes) to have it conform to the requirements of Gemini software.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2.5.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "Standards",
+          "Software standards",
+          "Operating system"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T123"
+        ],
+        "related_segments": [
+          "M1:T123"
+        ],
+        "support_score": 0.824,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0299",
+      "text": "Archiving. All astronomical data are saved into the Archiving system. Data storage and transport for astronomical data will be in FITS format. On-line access to the archiver will be through STARCAT.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2.5.1.7",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "Standards",
+          "Software standards",
+          "External software packages"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T125"
+        ],
+        "related_segments": [
+          "M1:T125"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0300",
+      "text": "The computer hardware used for development must conform to the following: Workstations must match specified software standards and present a well-designed development environment, including cross-support for VxWorks development, if needed; .Workstations are expected to be state-of-the-art systems (CPU, communications support) in a scaleable family. This allows the migration of development systems to advancing technology; .It is assumed that workstations support Ethernet IEEE-802.3 and FDDI interfaces for communications; Internal data formats must be compatible across workstations used for development; SCSI-interface peripherals are to be available; .Reliability, manufacturer support, and upgrade capability of the development systems will be considered when selecting the final target systems.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2.5.2.1",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "Standards",
+          "Hardware standards",
+          "Harware requirements"
+        ],
+        "xml_element": "text_body+items",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T127"
+        ],
+        "related_segments": [
+          "M1:T127"
+        ],
+        "support_score": 0.836,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0304",
+      "text": "The backbone LAN cannot be Ethernet because of bandwidth requirements. A FDDI system is recommended for the backbone LAN.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2.5.4",
+        "section_path": [
+          "Specific Requirements",
+          "Other Controls and Software Requirements",
+          "Standards",
+          "Communication hardware"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T130"
+        ],
+        "related_segments": [
+          "M1:T130"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0313",
+      "text": "Each of the Gemini Controls work packages will be involved with some aspect of EPICS development ranging from creation of new device drivers to database creation and the design of new CA clients.The details of the EPICS work required can be broken down into several broad categories which reflect the nature of the various work packages.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.3.2",
+        "section_path": [
+          "Specific Requirements",
+          "User Requirements for EPICS developers",
+          "Gemini Breakdown of tasks"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T133"
+        ],
+        "related_segments": [
+          "M1:T133"
+        ],
+        "support_score": 0.815,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1995-gemini:R0315",
+      "text": "Host-based Development Tools (CAPFAST, EDD, etc.) Neither will Gemini plan on creating new development tools.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.3.2.1",
+        "section_path": [
+          "Specific Requirements",
+          "User Requirements for EPICS developers",
+          "Gemini Breakdown of tasks",
+          "Not covered by any work packages"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T136"
+        ],
+        "related_segments": [
+          "M1:T136"
+        ],
+        "support_score": 0.727,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": []
+}

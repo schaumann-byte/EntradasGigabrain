@@ -1,0 +1,134 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This er is our uh kickoff for the ERTMS/ETCS Functional Requirements Specification, the FRS, um and it's the only session um we've planned, so i mean let's um try to cover everything today.
+Client: Erm, Sure. So for background, this document is uhm mainly about the operational requirements, [laughter] so you won't actually find a lot of technical terms in it, just a um few.
+Analyst: Good to know. Let's start uh with the basic functioning. What do basically we need there?
+Client: The key thing is speed. ETCS has to work up to a actually maximum train speed of 500 km/h.
+Analyst: Got it. Anything else on basic functioning?
+EndUser: No, that's it.
+Analyst: Uh, Okay, next [crosstalk] topic: operating alongside the existing national train control systems. How should that work?
+EndUser: ETCS has has to be compatible with the existing national systems, the ones listed in the CCS TSI. It shouldn't interfere with those national systems, and they shouldn't kind of interfere with it either.
+Analyst: Makes sense. uh Let's move on to operational states. What's needed there?
+EndUser: The ETCS trainborne equipment needs to basically be able to supervise a whole list of operational states. So that's Full Supervision, Partial Supervision, well Staff Responsible, On Sight, Unfitted Line, Train Trip, Post Trip, National operation, meaning STM, then Tandem, well Multiple, Shunting, basically Stand uh By, and Reversing actually operation.
+EndUser: Uhm, And for um transitions, any transition you know that happens while the train is moving should, in principle, well happen automatically. If a transition has to be acknowledged and the um driver doesn't acknowledge it as required, ETCS should trigger a brake application.
+Analyst: Okay, got it.
+EndUser: Also, during the transition period between two operational states, and that includes going between two i mean different national operations, the supervision has to um give at least the same protection as the least restrictive state.
+EndUser: Uhm, And the driver should always see the er current operational status on the the DMI.
+Analyst: Anything else on operational states?
+Client: No, nothing else.
+Analyst: Alright, what about national values?
+Client: Once the national values have been received onboard, they have to stay well valid, even if uh the onboard equipment gets switched off.
+Analyst: Okay. And the on board equipment self basically test, what do we expect there?
+Client: Um, At Start Up, the on board equipment should run an automatic self-test.
+EndUser: Sorry, my screen just froze for a second. Okay, I'm back.
+Analyst: Let's move on to train and driver data entry. basically How should that work?
+EndUser: So train data can come in automatically, either from a railway management system or from the train memory.
+EndUser: Er, The current train data has to be kept in the ETCS uh equipment until the traction unit is no longer operative, actually except when we transition to shunting. basically And then there's the data the driver can enter manually, from external sources: driver identification, train identification, so the train number, STM kind of ready for use, the data needed for brake calculation, uhm maximum train speed, train length, status of the air tight system, type of electric power accepted, any um additional data the STM needs if there is any, international train category, actually train gauge, and sort of maximum axle load of the train with a resolution of 0,5 t.
+Analyst: Okay, what about shunting operation? What do we [crosstalk] need there?
+EndUser: When permission is received, the driver has actually to be shown that.
+Client: And the automatic transfer to Shunting can happen from Full Supervision or Partial Supervision status, um at any speed kind of that's lower than or equal to i mean the supervised shunting speed, based on trackside information.
+EndUser: ETCS should supervise shunting you know to a permitted kind of national speed value.
+Analyst: So during shunting, ETCS supervises against a speed that's uh set nationally, right?
+EndUser: Yes, exactly.
+EndUser: Just a heads-up, I might have to drop off a few minutes early today.
+Analyst: Noted. Let's talk uh about partial supervision. How should that er behave?
+EndUser: In er Partial Supervision the train gets supervised sort of based on whatever train speed and distance data [laughter] is available.
+Analyst: Got it.
+Client: And this ceiling speed shouldn't be on the DMI all the like time, but it can be shown briefly if the er driver selects it.
+EndUser: We also need to be able to order a train trip when a stop signal is passed.
+Analyst: Okay. Moving to full i mean [noise] supervision operation, what's needed there?
+Client: The trackside should be able to ask the driver to confirm whether the track ahead is occupied before it sends um a Full Supervision movement authority.
+Analyst: Uhm, And isolation of of um the ETCS trainborne um equipment, what do we need?
+EndUser: Basically, it basically has to be possible to isolate the ETCS trainborne equipment.
+Analyst: Okay, got it.
+Analyst: Anything else erm on isolating the ETCS trainborne equipment?
+Client: No, that's it for that one.
+Analyst: Alright, let's er move on to operational functions. What do we need there?
+TechLead: Um, So So from my side, the ETCS trainborne equipment has to be able to take in uh information from the national train control systems, and that goes through the STM.
+Analyst: So the trainborne equipment kind of receives info from the uhm national train control systems via the STM, is that right?
+TechLead: Yes, exactly.
+Analyst: Okay. What about well unfitted line operation?
+EndUser: For that, the um onboard needs to actually be able uh to actually switch over to a basically different ETCS well status when the trackside sends it.
+Analyst: Let's talk infrastructure functions. What's needed there?
+Client: Well, we want the trackside well to be able to send out information on adhesion conditions.
+EndUser: And the trackside should also be able to send the information needed to calculate speed profiles.
+EndUser: One er more thing: if the onboard doesn't have kind of track data at least up to where the movement authority ends, then it has sort of to reject that movement authority.
+Analyst: Right, okay.
+Analyst: Um, Now, end well of movement authority. How should uh that work?
+Client: The uhm ETCS er trainborne equipment should supervise the end of movement authority, well as long as it uhm actually has that [pause] information on-board.
+Analyst: Let's go back to infrastructure functions for a actually moment. Anything more there?
+Client: Er, Yes. well The braking curves get calculated from the train data and and infrastructure sort of data, uh and they they take the the target information into account, but not where other vehicles occupying the track are. And at minimum the train is supervised to a ceiling speed, but that supervised speed isn't shown on kind of the DMI unless the driver chooses to see it.
+EndUser: Um, Same with the target distance, actually. It shouldn't show up on the DMI unless the driver selects it.
+Analyst: Okay, next up is dynamic train speed erm profile calculation. What do you need there?
+Client: And when the train changes to a higher speed sort of level, the rear end of the train has to respect the like static train speed profile.
+Analyst: Uh, So when you step up to a higher speed level, the um static train speed profile still applies kind of until the kind of rear end of the train is clear of it, right?
+Client: Yes, exactly.
+Analyst: Anything else on [laughter] the dynamic train speed profile calculation?
+EndUser: No, that's it from me.
+EndUser: Erm, By the uhm way, your audio cut out for a second there, but it's fine now.
+Analyst: Er, Okay, let's move on to speed calculation uh and indication. What do we need there?
+EndUser: The main thing uh is there kind of can't be any you know discrepancy between the uh speed the driver sees and the speed used to to supervise movement authorities and speed limits. That's function 4.3.7.
+Analyst: Got it. sort of What about the indications displayed on the DMI?
+EndUser: The driver needs visual and acoustic warnings about actually a well possible intervention from ETCS, so they can react and avoid the intervention.
+Analyst: Erm, Then supervision of movement authorities and speed limits. What you know should we capture there?
+Client: Within the braking curve area, the the driver has to get a warning at least 5 sec. before the intervention, so he basically can react and avoid the ETCS equipment stepping in.
+Client: Uhm, And when the train's stationary, the driver should be able to release an ETCS emergency brake application.
+Analyst: Okay, noted.
+Analyst: Er, Anything else on supervision of movement authorities and speed you know limits?
+Client: No, that covers it.
+Analyst: Let's talk like about roll away and and um reverse movement protection. What are actually the requirements?
+TechLead: If If you've got more than one traction unit, this erm function has to be disabled in every unit except the leading one.
+Analyst: So with multiple traction units, only the leading traction unit has the function active, and it's well disabled in all the others?
+TechLead: Correct.
+Analyst: Uhm, Let's move on to recording the ETCS information. What do we need there?
+Client: Basically everything the driver enters, receives or gets indicated i mean has to be recorded onboard. And all basically of that data needs to be tied to UTC, Universal Time Corrected, and to a reference point.
+Client: The retention period won't be the same uhm for everything, we're looking at two levels. The accident investigation data only has to be sort of kept for at least 24 hours, but it has to be very sort of detailed. Then the operational erm data, for assessing um driver performance, that has to be kept for at least one week.
+Analyst: Anything else on uh recording?
+EndUser: No, that's it.
+Analyst: Okay, next topic, using multiple traction units. What do we need there?
+EndUser: So the train trip basically function, that's 4.6.12, has to be suppressed in any traction units with actually in-operative cabs.
+Client: And And we want to be able to to run tandem traction units without having uh to isolate the ETCS um trainborne equipment on um the tandem unit.
+Analyst: Got it.
+EndUser: Right, and on the tandem traction unit the actually train trip function 4.6.12 has to be suppressed too. Also, the kind of driver has to enter the the driver ID.
+Analyst: Let's talk about passing a stop signal with a restricted um movement um authority. How should that work?
+TechLead: The driver er selects an override control, depending on the permission that was received.
+Client: Um, The actual i mean speed still has to show on the well DMI.
+Analyst: Okay.
+TechLead: And there needs to be a special indication on the DMI as well.
+Analyst: So the DMI shows some special indication in in that case?
+TechLead: Yes, exactly.
+Client: But the supervised speed should not be shown on you know the DMI.
+Analyst: Anything else on passing a stop signal?
+TechLead: No, that covers it.
+Analyst: Erm, Okay, let's move i mean on kind of to emergency stops to trains. How erm should that work?
+Client: So when the train's uh supervised by an RBC, we need need to be able to command an emergency stop, either to all trains in a particular area or to one specific train. And there should also be a conditional emergency stop, where if the train's already passed the location for the the stop, the command just gets ignored.
+Client: And And once a train has received an emergency stop, ETCS has to command the emergency brake.
+TechLead: Uh, Also, the emergency stop needs to erm be shown kind of to the driver on on the DMI.
+Analyst: Got it. What about train trip?
+Client: When the train you know trip operates, like that has to be indicated on you know the DMI.
+Client: And the [laughter] emergency brake stays applied until the traction unit is stationary.
+Analyst: Okay. Next one, train identification. What do we need you know there?
+Client: The The like train running you know number can be at most 8 digits, numeric sort of only.
+Analyst: Anything else on train identification?
+Client: No, that's it.
+Analyst: Alright, plain text transmission. What's needed?
+Client: We need to be able to send plain text messages from the track to the train.
+Analyst: Anything more on plain basically text?
+EndUser: Nope, that covers it.
+Analyst: Then fixed text messages. sort of How should those work?
+EndUser: From the kind of driver's side, the fixed text messages should come up in whatever language the driver um has selected.
+Analyst: Quick note, sort of we've got about fifteen minutes actually left, so er let's keep moving.
+Analyst: Um, Train integrity. What do you need there?
+EndUser: As a driver I need to be actually able to confirm train integrity to the RBC er manually, basically but only when the train is stationary.
+Analyst: Erm, Okay, let's move on to reversing. How should that work for you?
+EndUser: For reversing, the actually driver should erm be able to just er use the function without um having to kind of re-confirm the train data.
+Analyst: Anything else on on reversing?
+EndUser: No, that's it.
+Analyst: Next one, handover when you pass from one RBC uh area to another. What do you need there? [crosstalk]
+EndUser: So if the train only has one operational radio, going from one RBC to the next still has to be possible, but it might come with a performance uh penalty.
+Analyst: Got Got it. And what about uhm on-board equipment failures?
+Client: If the trainborne equipment fails in a way that compromises the safety i mean of train supervision, the ETCS trainborne equipment has to command the brake right away and uh bring the train to a stop.
+Client: And any failure that occurs has to show up on the DMI. Also, like in ETCS with RBC, that restriction on performance should be sent to the RBC, if basically that's possible.
+Analyst: Okay, noted.
+Analyst: Great, I think that that covers everything. Since this this was our only uh session, like I'll consolidate all of it and send it around. Thanks, everyone.

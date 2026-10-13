@@ -1,0 +1,75 @@
+Meeting 1 of 4 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This is the kickoff, first of 4 sessions on EIRENE, the European Integrated Railway sort of Radio Enhanced Network. Today I'd like to get the overall picture and go through some of the services.
+Client: Erm, Sure. So basically this sort of document specifies the functional um requirements for a digital radio standard for the European railways, and it's part of the Technical Specification for Interoperability. It covers ground-train voice and data communications, plus the ground-based mobile communication needs of trackside workers, station and depot staff, and the railway administrative and managerial uhm people. And in section 1.3.3, every statement in the spec gets put into one actually of three categories.
+Analyst: Great. Let's start with like data services. What do we need there?
+EndUser: From From our side, the network should be able to send um text messages actually from the ground out to mobile users, both point-to-point and point-to-multipoint.
+Analyst: Got it.
+Client: Sorry, someone's screen share just popped up on my end. Okay, it's gone.
+Client: Um, So, the priority scheme for calls that's described in section—
+Analyst: Sorry, which section was that?
+Client: Uh, 10.2. That same scheme applies to data applications erm too. And then there's automatic fax.
+Client: Also, wherever ERTMS/ETCS level 2 or 3 is implemented, the sort of network has to uh be able to support data communications for that train control system.
+TechLead: Do we uh really need that one erm in scope? It's a lot of effort and I'm not not sure it's a priority uh right uh now.
+Client: Uh, I'd push back on that. It's really important for us, I don't want to lose uhm it.
+Analyst: I hear you, but let's drop it from the scope for now and move on.
+EndUser: One more thing: the call priority scheme from section you know 10.2 is also valid for train erm control applications.
+TechLead: Yeah, that makes sense.
+Analyst: Okay, let's move uh to call related services. What should the network offer erm there?
+Client: Erm, The EIRENE network will support these call related services: showing the identity of the erm called and calling user, restricting the display of the you know called or calling like user—
+Analyst: Sorry, quick check, basically is this the full list?
+Client: Let me finish er it. Then priority and pre-emption, sort of closed user group, call forwarding, call hold, call waiting, charging information, and call barring. Then display of identity.
+EndUser: Quick heads up, I might have to drop off a bit early today.
+EndUser: And for us it matters that the equipment can show who's calling or who you're calling, um as a normal standard telephone number.
+Analyst: Okay, got it.
+Analyst: Let's move on to coverage and performance. What are you expecting there?
+Client: So for a radio installed in a vehicle with an external antenna, coverage should be there at least 95% of actually the time, over 95% of the er designated coverage area.
+Analyst: Sorry, someone's screen share just popped up on er my end, give me a second.
+Analyst: Right, okay.
+Analyst: Next topic, well network interconnection. How should uh that work for you?
+EndUser: Well, when you're in the middle of moving from one GSM-R network over to another one
+Analyst: Mm-hm.
+EndUser: the system has to keep the inconvenience for the user as low as possible.
+Analyst: Anything else on on network interconnection?
+EndUser: No, that's it.
+Analyst: Then call i mean set-up time. What do you need there?
+Client: Set-up times really depend mainly um on the priority. That's uh covered in section 10.2.
+EndUser: Yeah, that makes sense.
+Analyst: Uhm, Anything more on call um set-up time?
+TechLead: Nothing from me.
+Analyst: Okay, environmental and physical requirements. What should we know?
+Client: In normal operation, a mobile radio unit will probably face a combination uh of those environmental conditions we listed above.
+EndUser: Do we really need that as a basically requirement, though? Seems like a lot of sort of effort for something that's not a priority.
+Client: I'd really push back on dropping that. For us it matters a uh lot, erm we need it in there.
+Analyst: Okay, fair enough. We'll keep it in.
+Client: While we're sort of on uh it, I want uh to bring up broadcast and group uh call areas. Basically the area you use for a group or erm broadcast call decides which mobiles can take part, so whoever's currently inside that defined area. And we need to be able to to set that area using one of these, or a uhm mix of them: where the person starting the call is, erm if it's started from a mobile; the identity of the group being called, so all users, all trains, that sort of thing; or a prefix erm on the group identity that specifies the call area, if the call comes from the fixed network.
+Analyst: Right, okay.
+Client: Uhm, And any group or broadcast call that's started in a given location has to go out over over an associated area based on where the caller is, um and also to any fixed network numbers tied to that originating location.
+Analyst: Got it.
+EndUser: Um, Maybe one more, I'm not sure it's a must, but it'd be nice if mobiles that actually are set up to well receive uhm railway emergency calls automatically joined the call when they enter a call call area where i mean a railway emergency call is already going on.
+Analyst: Okay, noted.
+Analyst: Let's move on to driver call related well [crosstalk] functions. What do sort of you need there?
+EndUser: So, maybe, and like I'm not sure it's strictly needed, but if the functional erm identity of the party you're connected to has kind of an alphanumeric description in er it
+Analyst: Mm-hm.
+EndUser: then that should be shown on the display as well.
+Analyst: Erm, Can you be more specific about erm how that should be shown?
+EndUser: Honestly, I haven't thought it through that far. Just so it's [crosstalk] there somehow.
+EndUser: Uh, Then, once the call's connected, the driver should be able to talk to the other driver or drivers using the Push-To-Talk button on the handset. basically And there should be some indication to remind the driver he has to use the Push-To-Talk button on the handset if he wants to talk.
+EndUser: And similarly, once the railway emergency call is connected
+Client: Yeah.
+EndUser: and uh the audible indication like has finished
+Analyst: Okay.
+EndUser: the driver should get an basically indication reminding him he needs to use the Push-To-Talk button on the handset if he wants to speak.
+Client: Then, if if a driver gets disconnected from the multi-driver call,
+Client: Uhm, there you know has to be a clear indication that it happened.
+Analyst: Okay, got it.
+Client: Erm, Next one: the Cab radio has to work as a standard telephone, so the driver can call any valid number, basically subject to pre-defined call you know restrictions. like He can start kind of the call by picking from a pre-defined list, up to 99 entries, by dialling a subscriber you know number directly, or by calling a functional number. And it has to receive incoming point-to-point voice calls.
+EndUser: Do we i mean really need the full telephone part, though? It sounds like a lot lot of like effort for something that erm isn't really a priority for us drivers.
+Client: I'd like disagree there. For us it's uhm genuinely important, I wouldn't want to drop it.
+Client: But let's not settle it today. We can can leave it uh open and come back to it later.
+Client: Moving on. The Cab radio needs to give the driver a way to end er the calls he's authorised to end, which is all calls except Railway emergency calls he uh didn't start himself, and shunting group calls.
+Analyst: Right.
+Client: And for voice calls on the Cab radio where the driver isn't the caller or the the one being called, he should still be able sort of to listen to the audio of that communication.
+Analyst: Okay.
+Analyst: Uh, Great, I think that's a good place to stop for today. Thanks, everyone, we'll pick up up from here next time.

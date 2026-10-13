@@ -1,0 +1,130 @@
+Meeting 2 of 2 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Uhm, Okay, let's get started. This is our second and last session on THEMAS, the Energy Management System, a follow-up to last time.
+Analyst: Thanks for making um time again, I know everyone's week is packed.
+Analyst: Quick actually recap: last time we went through loading the heating and cooling unit unit definitions, loading the thermostat definitions, and loading the utilization parameters. A few points were left open, and we'll come back to those.
+Analyst: Um, For now I'd like to move on to generating the unit unavailable event. sort of How should that work?
+EndUser: So, when there's a request like for a basically heating unit
+Analyst: Mm-hm.
+EndUser: or or a cooling unit basically to be turned er on, and that request gets denied
+Analyst: Right.
+EndUser: Uhm, then an event has to be generated
+Analyst: Okay.
+EndUser: and THEMAS needs to record that event.
+TechLead: Got it.
+EndUser: And what's in those uh events gets used later to uh build statistical reports.
+Analyst: Makes sense.
+EndUser: The procedure itself should take the thermostat information
+Analyst: Yeah.
+EndUser: plus the heating or cooling information
+EndUser: and use all of that to generate kind of a specific system event.
+Analyst: Understood.
+TechLead: Yeah, that sounds right to me.
+Analyst: Okay, let's move on to determining utilizations. What do erm we need there?
+Client: So basically THEMAS has to control the heating—
+TechLead: Erm, Sorry, just er the heating?
+Client: No, the heating and the cooling units, the ones that are designated as part of THEMAS.
+Analyst: Got it. Next one, generating the heating and cooling signal. How should that work?
+Client: So um once there's a request to turn on
+Analyst: Mm-hm.
+Client: or turn off a heating or cooling unit,
+Analyst: Okay.
+Client: then THEMAS has to provide whatever control signal that unit needs.
+Analyst: Right.
+Client: And that same control signal should also show the unit's status back at the uhm thermostat that made the request.
+Analyst: Got it.
+EndUser: And from our side, the signal that's needed for the heating
+TechLead: Yeah.
+Client: Just to add—
+EndUser: Oh, sorry, go ahead.
+EndUser: Uhm, I'll just finish, or the cooling unit, that sort of gets generated.
+Analyst: Okay.
+TechLead: Yeah, that makes sense.
+Client: Since we haven't defined the interface for controlling the units yet, the uh part of this process that actually issues the signal is marked TBD, to be determined.
+EndUser: This ev ent should contain the identification of the heating.
+EndUser: or basically cooling unit whose status is being changed.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+TechLead: And as we said, THEMAS won't control the heating and cooling units that are defined as part of the uh THEMAS system.
+Analyst: Uh, Okay, let's move on to generating alarm data. you know How should that work?
+Client: Uhm, So this process has to figure actually out
+Analyst: Okay.
+Client: Um, which alarm event er should be generated.
+Analyst: So this process decides which alarm event gets generated, right?
+Client: Yes, exactly.
+Client: When THEMAS detects a uhm request for an alarm, this process has to work out which of the two alarms is being requested.
+TechLead: Do we we really need that one? It feels like extra effort for something that's not a a priority.
+Client: Um, I'd push back on that, it's genuinely important uh for us.
+Analyst: Let's take it out of scope actually for now and move on.
+Client: Each beep should last three-quarters of a second.
+Analyst: Right.
+EndUser: Um, And the beeps keep going until the registered user erm manually resets the alarm through the supervisor's interface um window.
+Client: Er, No, not the registered user. The beeps should i mean keep going until the supervisor manually resets the actually alarm through the sort of supervisor's interface window.
+EndUser: Uh, I still think it should be the registered user who resets er it, though. That's how we'd actually use it.
+Analyst: Okay, let's leave that one open for now uh and sort of come back to it later.
+EndUser: So, next one. If the system picks up that a temperature um limit's been exceeded,
+Analyst: Mm-hm.
+EndUser: Er, then this process should put out a actually continuous er series of like beeps, alternating between sort of 1000 Hz
+Analyst: Right.
+EndUser: and 1500 uhm Hz, on the supervisor's computer.
+Analyst: Got it.
+EndUser: And every time an alarm gets requested,
+Analyst: Okay.
+EndUser: we need uh an alarm event recorded.
+Analyst: Sure.
+EndUser: That event would uhm then be used for operational
+Analyst: Mm-hm.
+EndUser: and statistical reports on the system.
+Analyst: So the alarm actually event uhm feeds into the operational and statistical erm reporting about the system, right?
+EndUser: Yes, exactly.
+Analyst: Great. Let's move on to generating event data. How should [noise] that work?
+Client: Um, Well, for every event that gets gets generated,
+EndUser: Okay.
+Client: the THEMAS system should you know identify each one of those events
+Analyst: Okay.
+Client: Uhm, and then generate the appropriate event data for it.
+Analyst: Got it.
+Client: Er, And then, whenever an event occurs,
+Analyst: Mm-hm.
+Client: THEMAS needs to identify what type of sort of event it is
+EndUser: Right.
+Client: Er, and format an appropriate event message from sort of that.
+Analyst: So when an event occurs, THEMAS uh identifies the event type and formats an appropriate event message, correct?
+Client: Yes, exactly.
+Client: Also, every event gets recorded by THEMAS with a description and the current system time for for that event.
+TechLead: Yeah, that makes sense.
+Analyst: Uhm, Anything actually else on generating event data?
+Client: No, that's it.
+Analyst: Okay, let's move on to changing a thermostat setting. How should that that work?
+Client: Er, Sorry, one sec, my screen share just froze. Okay, it's back.
+EndUser: So the operator's, no, the supervisor's interface should um show the available thermostats
+Client: Okay.
+EndUser: Er, along um with each one's current temperature setting.
+Analyst: Got it.
+Analyst: Okay, let's move on to generating reports. What do you need there?
+EndUser: Uh, So [crosstalk] from the supervisor's interface to THEMAS, I'd need some way to pick well between an operational uhm history report um or a statistical summary report.
+Client: Yes, that's right.
+Client: And whichever one you pick, the report would be an ASCII file, and its like location
+Analyst: Mm-hm.
+Client: and its name should be something the operator can choose.
+Client: Now, if they pick i mean the the operational history report
+Analyst: Okay.
+Client: then actually THEMAS should pull all the events out of the event database, sort them...
+EndUser: Uh, And then once you've picked the, well, no, once you've selected one of the months, the system should generate the the ASCII report file.
+Analyst: Right.
+EndUser: For For the statistical reports, they'd be made up of these statistics
+TechLead: Okay.
+EndUser: First, the percentage of time each heating
+Analyst: Sure.
+EndUser: and cooling unit was on, for each day of that month.
+Analyst: Got it.
+EndUser: Erm, And then for each thermometer, the ratio of how many uhm requests for a heating er and cooling unit got granted versus how well many requests for a heating or cooling unit got denied.
+Analyst: Okay, noted.
+EndUser: Erm, Oh, and on determining the status of all the basically heating and cooling units, I checked that uh thing we were missing last time. The THEMAS system has to control each each of the heating and well cooling units that are defined basically for the system. All of them.
+Client: Can I jump jump in like on generating i mean event data? We haven't really touched that. All that information should get recorded er in like a Microsoft® Access® kind of database, and actually that database sits on the supervisor's computer.
+Analyst: Okay, got it.
+Analyst: I'd like to go back to um changing the basically thermostat setting for a second. We We covered it earlier, but how should that work, exactly?
+EndUser: So the er supervisor should be able to pick one of the thermostats and then select a...
+EndUser: Sorry, my screen just froze. Can you still hear me?
+Analyst: Yes, we can hear you. Okay, we're about out of time, and since uhm this was our last meeting, I'll consolidate kind of everything er from both like sessions and send it around. Thanks, everyone.

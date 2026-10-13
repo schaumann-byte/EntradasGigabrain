@@ -1,0 +1,131 @@
+Meeting 2 of 2 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Er, Okay, let's get going. This is our second and last session on the TCS System/Subsystem Specification, the follow-up.
+Analyst: Thanks for making time again, I know everyone's calendar is packed this week.
+Analyst: Quick recap: last time we went through the general needs, the startup state, and the recovery startup mode. um A few points were left open, and we'll come back to those.
+Analyst: First up, TCS to MIES. What do we need there?
+Analyst: Erm, Then let's move on to TCS to sort of ETRAC. How should that work?
+TechLead: So for uhm ETRAC, the TCS has to provide the the necessary hardware,
+Analyst: Okay.
+TechLead: plus the software functionality, uhm so the TCS can actually integrate with ETRAC.
+Analyst: Got it.
+EndUser: Yeah, that makes sense.
+Analyst: Next topic, sort of TCS to um geopositional data. What info are we basically talking about?
+Client: At the very least it needs the location of all the data terminals, the launch and recovery sites, and the controlling TCS.
+Analyst: Okay, noted.
+Analyst: And the AV standard interface, what's expected there?
+Client: The TCS has to implement an AV AV Standard erm Interface, and that gives you the proper data format so communications with the sort of selected AV are guaranteed.
+TechLead: Just on that, I wanted to—
+Analyst: Sorry, go ahead.
+TechLead: Uh, Actually never mind, my screen share just froze. Can you still well see it?
+Analyst: So, just to confirm: the TCS implements an AV Standard Interface that provides the right data format, to make sure it actually can talk to whichever um AV is selected?
+Client: Yes, exactly.
+Analyst: Okay, let's move on to the real time processor. What do we need to capture there?
+Client: So for that one, the RTP interface requirements
+Analyst: Mm-hm.
+Client: and the specs, those are going to be defined in the Data Server IDD, that's uh TCS 238.
+Analyst: So the the RTP interface requirements and specifications live in the well Data Server uhm IDD, TCS 238, right?
+Client: Yes, exactly.
+EndUser: Makes sense to me.
+Client: And while we're at it, the CD drive. The TCS has to provide a CD—
+TechLead: Sorry, a CD drive?
+Client: Right, a basically CD drive, so people can retrieve TCS data.
+TechLead: And as we settled, the TCS won't be capable of executing payload maintenance software and displaying the appropriate status results.
+Analyst: Let's talk air vehicle safety. What does the system need to do there?
+TechLead: So during mission execution, the TCS needs to give the operator cautions
+Analyst: Okay.
+TechLead: and warnings whenever the UAV system has identified a malfunction.
+Analyst: Got it.
+Analyst: Next, system safety [crosstalk] and basically health hazard assets. uh What's expected on that front?
+Client: We need risk levels, plus a program to manage the probability
+Analyst: Right.
+Client: and the severity of hazards, that has to be i mean developed um as actually well.
+Analyst: Got it.
+Analyst: Okay, let's switch to sort of physical security. What What do you need there?
+Client: So the system has to be designed actually to protect its communication
+Analyst: Right.
+Client: and its data links against enemy Electronic kind of Warfare, EW threats,
+Analyst: Okay.
+Client: plus physical anti-radiation weaponry and physical destruction.
+Client: Something on hardware requirements: that should provide the functionality.
+Analyst: Mm-hm.
+Client: and the capability to receive, process and disseminate video
+Analyst: Sure.
+Client: and telemetry data coming from the um AV and the payload,
+Analyst: Go on.
+Client: Um, and you know also do do mission planning, monitor and control the payload, monitor and control the AV, and monitor and control the data links.
+Analyst: Great. What about power, any requirements there?
+EndUser: Yeah, it has to run on standard electrical power sources, the ones available actually in the DoD family of ground mobile, airborne and shipboard power sources.
+EndUser: And you know on the computer software requirements, the TCS software will provide the functionality
+Analyst: Okay.
+EndUser: Er, and the capability to receive, process and disseminate video
+TechLead: Right.
+EndUser: and uh also also the telemetry data coming off erm the AV kind of and the [noise] payload,
+Analyst: Okay.
+EndUser: Sorry, is uhm my audio okay? Someone's drilling next door.
+EndUser: Anyway, it also has to do mission planning, monitor and control the payload, monitor and control the AV, and monitor and control the data links.
+Analyst: Got it.
+Client: And one thing on that: the TCS software has to stop the operator, or operators, uhm from trying levels of of interaction the system can't actually achieve.
+Analyst: Good. Let's move on to kind of system quality factors. What do you need there?
+EndUser: The big one for me is latency. TCS data latency can't be any worse than what we basically have in the the Predator ground control station or the Outrider ground control station, like whichever one is smaller.
+Client: Yeah, that's a must.
+Analyst: Anything else on system quality factors?
+Client: No, that's it.
+Analyst: Okay, maintainability then. sort of What are your expectations?
+Client: So there's you know a requirement, SSS412, that says design features sort of shall be included to... and then it lists them.
+Analyst: Uh, So SSS412 is the er one saying design features shall be included to support that?
+Client: Yes, exactly.
+Analyst: And what about testability? [noise]
+Client: Erm, Testability needs to be taken into account in the design
+Analyst: Right.
+Client: and and in the development of of the TCS like as well.
+EndUser: Agreed, that makes sense.
+Client: We also need control over the internal items and devices, so uhm that's provided and...
+Analyst: Anything else on testability?
+TechLead: No, that's it.
+TechLead: And as we uhm agreed, the registered user can manually override the automatic mode selection of the selected data terminal if they want to.
+Analyst: Okay, let's move on to human factors engineering, HFE. What do we need there?
+Client: So besides the alert messages shown to the TCS operator on screen, we want auditory alerts too, including tones.
+EndUser: Do we really need the the audio part? That sounds like like extra sort of effort for something that isn't a priority.
+Client: Uh, [laughter] I'd say it is needed. It's really important for us, I don't want to drop drop it.
+Analyst: Okay, we'll keep the auditory alerts in.
+TechLead: Also, every TCS warning message and every HCI action basically has to be archived so we can review it later.
+Analyst: Got it.
+Client: And maybe, I'm not uh sure it's i mean a hard requirement, but the tasks the operator does concurrently during normal operation would be worked out through proper task analysis and function allocation.
+Analyst: Okay.
+TechLead: The TCS should facilitate human-computer interfaces, HCIs, that support operation of...
+Client: Um, Then the TCS should give access to the DII Style uhm Manager,
+Analyst: Mm-hm.
+Client: so uh the pointing device characteristics can sort of be changed.
+Analyst: Right.
+Client: And uh the er operator should you know be able to tailor the information display on multiple like levels.
+Analyst: Um, So the operator can customize the information display basically at multiple levels, is that right?
+Client: Yes, exactly.
+Client: Er, Then the TCS should also give the operator automated TCS system information,
+TechLead: Okay.
+Client: plus the well control options, and operator guidance that's logical and simple,
+Analyst: Got it.
+Client: and it has has to support responding to crisis situations, both immediately and adaptively.
+Analyst: Right.
+Client: Another one: the TCS HCI needs a rapid way to um cancel you know aural warnings.
+Analyst: Okay.
+TechLead: Yeah, that makes sense.
+Analyst: Uhm, Anything else on human factors engineering, the you know HFE side?
+Client: No, that's it for that.
+Analyst: Great. Let's move like to training related requirements. What do we need there?
+TechLead: Um, Maybe this one: erm it'd be nice if actual communications processing um could run concurrently with training like operations, but if and only uh if the messages are like identified as training messages.
+TechLead: And I uhm think TCS system training should probably cover sort of the system architecture,
+Client: Mm-hm.
+TechLead: component familiarization, and then system startup, initialization, system kind of recovery and shutdown.
+Analyst: Um, Okay. Next, logistics-related requirements. What's needed there?
+TechLead: The TCS has to follow DoD regulations and policy on military standards for logistics, Petroleum, Oil and Lubricants, so POL, Test, Measurement, and well Diagnostic Equipment, TMDE, tools, and other you know support items.
+EndUser: Yeah, agreed.
+Client: Uh, And on our side, support for the TCS has to follow the Integrated Logistical Support Plan, basically so whatever's in there...
+Analyst: Okay, you know let's move on to the integrated test program. i mean How is testing going to be be handled?
+EndUser: So uhm the system like gets tested through an integrated program, and that's uh run according to the TCS Master Test Plan, NSWCDD/TR-96/XXX.
+Analyst: Got it.
+Analyst: Sorry, my screen share just froze for for a a second. Can everyone still see the document?
+TechLead: Yeah, I can see it, and just one thing on the test plan—
+Client: Oh, sorry, go ahead.
+Analyst: Okay, I think that covers everything. Since this was our last session, I'll consolidate all the requirements from both meetings uhm and send them around for review. Thanks, everyone.

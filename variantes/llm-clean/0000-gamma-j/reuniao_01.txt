@@ -1,0 +1,112 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is uh our kickoff for Gamma-J, Connecting Retailers through the World, the web store. It's just this one session, so let's try to cover the main areas today.
+Client: Sure. So basically the idea is a web store um that gives new online store owners a basically quick, easy way to get set up um and run their kind of sales and the rest of their core business over the sort of internet. For For version 1 we're planning to put it on a plug and play USB key. And And it's expandable, so owners can buy unique codes to expand their inventory.
+Analyst: Great. Let's start with the operating environment. What does this need to run on, what does well it depend on?
+Client: Well, for the inventory information, we want that stored in a SQL based database.
+Analyst: Okay, got it.
+TechLead: And on the hardware side, the USB interface and the drivers come come from Yoggie Corporation.
+Analyst: Good. i mean What basically about design and implementation constraints? Anything we're locked into?
+TechLead: Yeah, the database has to be SQL erm based. SQL is the most widely er used database format out there, so sticking to to it keeps the web i mean store easy to use and compatible.
+Client: Erm, And sort of browsers, we've sort of only tested erm and verified compatibility on Internet Explorer 6 and 7 and Netscape Communicator 4 and 5. Other versions of those might uh not be 100% compatible, and the same goes for other browsers uh like Mozilla or or Firefox.
+Analyst: Understood.
+Analyst: Let's talk user documentation. What do we need to i mean provide?
+TechLead: We'll install online help for kind of users, available you know through the web interface.
+Analyst: Okay.
+TechLead: Then on top of that we deliver an Operations and Maintenance manual, a Users Guide book, and er Installation Instructions for the Administrator.
+Analyst: Perfect. Moving on to customer accounts, what should customers be able to do sort of there?
+Client: Customers can create an account where they keep their customer profile, set like up their contact information, see their purchase history, and confirm their orders.
+Client: And of course they need to be able to register, log sort of in and log out.
+Analyst: Right, makes sense.
+EndUser: Also, the profile should uh hold payment information, so being able to store credit card details, uh plus their address information.
+Analyst: Good point. Okay, next up is like inventory management. How do [pause] you see that working?
+Client: Er, So for products, they'll sit in categories with multiple tiers. A category can hold sub categories, or it can hold products directly.
+Client: And then the inventory management side lets administrators kind of update the categories, which products go in which category, and actually the specific details of of each product.
+Analyst: Anything else on inventory management?
+EndUser: No, that's it.
+Analyst: Okay, let's talk about the shopping cart. What do you need there?
+EndUser: The cart should clearly show how many items are in it, and you know the total cost uh too.
+EndUser: Uhm, And the customer can add products or remove uh them well from sort of the cart before they get to checkout sort of and order confirmation.
+Analyst: Got it. What about order confirmation?
+Client: After checkout, customers can confirm the order. And if something's wrong with it, they can go back, revise it and and update the order.
+EndUser: Uh, Then you know they get a confirmation email with you know the specific details of the order.
+Analyst: Let's move to the interface. What are you expecting there?
+EndUser: For customers it needs to be an unambiguous interface that uhm helps them browse the categories and products. And they should be able able to search for products that match whatever criteria they put in.
+Client: On top top of that, the system will have an Application Interface so various plug-ins can interact with uhm it.
+Analyst: Okay.
+Client: Er, That plug-in API will be well documented, and we'll hand the specifications over uh to the er plug-in developers.
+Analyst: Right.
+Analyst: Uh, Now, the WebOrder browser interface. How uhm does that fit in?
+TechLead: So the WebOrder order database talks to the kind of account system through a programmatic interface for you know billing operations. And through a programmatic interface as well, WebOrder sends the info on the items customers ordered over to the Inventory you know management like system.
+Analyst: And communications interfaces?
+Client: The WebOrder system shall email the customer a confirmation that their items will be delivered to uhm the shipping address, along with a tracking number. It kind of shall also email the System Administrator about any technical queries coming from customers or sales people.
+Analyst: Okay, anything else on the uh communications uh interfaces side before we move on?
+TechLead: No, that's it from me.
+Analyst: Great. Let's talk quality attributes then. What do we need in terms of performance and that kind um of thing?
+TechLead: So first one, once you know the USB is plugged in, the system should be deployed well and up and running in under 1 minute.
+Analyst: So from the well moment the USB goes uhm in, it's deployed and operational in less than 1 um minute?
+TechLead: Yes, exactly.
+TechLead: Er, Then on on load, you know it it needs to i mean handle 1000 customers logged in at the same time.
+TechLead: Erm, And it should be able to retrieve 200 products per second.
+Analyst: Okay, got it.
+Client: Er, From uhm my side, adding a like product to the shopping cart should take less than basically 2ms.
+Analyst: Right.
+Client: Searching for a specific product should come back in under 1 second. And emailing the customer and the vendor, that should also happen uh in less than 1 second.
+TechLead: I'd add credit card validation er in under 2 seconds, and getting the shipping charges also in under 2 seconds.
+Analyst: So the shipping charges have actually to be acquired in less than 2 seconds, correct?
+TechLead: Correct.
+TechLead: Er, And for restores, the system should manage 1000 records uhm per second.
+Analyst: Okay, let's move to safety requirements. What do kind of we i mean need need there?
+TechLead: The main thing is the system does periodic backups over a live internet connection.
+Analyst: So kind of backups run periodically, over a live internet connection?
+TechLead: Yep, that's right.
+Analyst: Okay, let's um move on kind of to security. What do actually we need there?
+Client: So first, credit cards have to be validated against fraud. And all the customer data in the database should be encrypted, actually all of it.
+Client: Also, it erm should detect um IP DOS attacks on its own and block the IP automatically. And it needs to catch consecutive like failed login attempts.
+TechLead: Uhm, On my side, we'd protect the system with i mean an open source firewall called Firestarter. It's at http://www.fs-security.com/.
+Analyst: Er, So the system sits sort of behind actually Firestarter, the open source firewall erm from http://www.fs-security.com/, right?
+TechLead: Yes, exactly.
+Analyst: Anything else on security?
+TechLead: No, that's it.
+Analyst: Uhm, Alright, availability. What are you erm expecting there?
+Client: We want 99.99% availability.
+Analyst: Uh, Got it. What about efficiency?
+EndUser: Searches should run using Dijkstra's shortest path algorithm. And And for returning customers, every time they log in, the system should validate the existing credit card it already has on file.
+Analyst: Okay, got it.
+Client: And uhm if image files are too large, the system should compress like them erm automatically.
+EndUser: Oh, um and it'll well use on demand well asynchronous loading so pages uhm execute faster.
+Analyst: Let's talk usability. What do we need there?
+TechLead: We'd use help bubbles to assist managers, customers and administrators.
+TechLead: Buttons um should be easy to locate. um And when there's an error, the customer gets friendly, easy to like read error messages.
+Analyst: So customers would see sort of error messages that are friendly and easy to read?
+TechLead: Yep, that's right.
+TechLead: And we should keep keep the symbols and colors consistent, so notifications are always clear.
+Analyst: Got it.
+Analyst: Okay, basically let's switch to maintainability. What do you need there?
+Client: Honestly, we need the system to use interchangeable plugins.
+Analyst: Okay.
+Client: Erm, For us, uh the system should be easily updatable for fixes and patches, that's the basically main thing.
+Analyst: Right.
+TechLead: On my side, the system should keep logs of every change, update, or er fix sort of that you know gets done uh to the site.
+Analyst: Makes sense.
+Analyst: Next, portability. Any requirements there?
+Client: Yes, it needs to be really portable, running off the USB drive. And it should er be easy to migrate it or back it up onto another USB drive.
+Analyst: Um, So you want to be uhm able to migrate um or back up the whole thing to a second USB drive without much hassle?
+Client: Yes, exactly.
+Analyst: Great. What about testability?
+TechLead: First, it should be able to run in debug mode.
+TechLead: We should also be able to to run test shipping orders, and spin up a erm test environment of the weborder system.
+Analyst: So you'd well want a separate test i mean environment i mean of the you know weborder system?
+TechLead: That's right.
+Analyst: Uhm, Anything else on testability?
+Client: No, that's it.
+Analyst: Okay, let's move on to other like requirements. Is there anything that doesn't fit the categories we've covered so far?
+EndUser: Er, One thing from my side: the um system hardware needs to be fixable and patchable over an internet connection.
+EndUser: And Yoggie should coordinate with our organization on you know any future enhancements and features.
+Client: On hardware, the system has to well meet these specs: a 4GB i mean Flash ram chip, 128MB SDRAM, the Intel XScale PXA270 520-MHz chipset, Apache web server for the OS, and MySQL for the database.
+Analyst: Got it.
+Analyst: Now um preconditions. What has to be in place before someone can use the system?
+TechLead: The Sales Person has to like be able able to get into the weborder system through a web browser over HTTPS.
+Analyst: Okay, noted.
+Analyst: Great, I think that covers it. Since this was our only session, I'll consolidate everything we discussed and send it around. Thanks, everyone.

@@ -16,9 +16,9 @@ Requisitos raramente surgem limpos. Eles aparecem espalhados por várias reuniõ
 | `rules-clean` | 1 | Mesma estrutura, com fala mais casual: contrações, léxico coloquial, 1ª pessoa, marcadores de discurso | schema 2.0 |
 | `rules-realistic` | 2–3 | Várias reuniões, conversa bagunçada e ~25% dos requisitos com algum fenômeno (conflito, ambiguidade, inconsistência, incompletude) | schema 2.0 |
 | `rules-hard` | 3–4 | Bagunça intensa e ~45% dos requisitos com fenômeno | schema 2.0 |
-| `llm-*` | — | *Planejado*: mesmo plano das `rules-*`, mas superfície escrita por LLM (variante B, para comparação) | schema 2.0 |
+| `llm-clean` · `llm-realistic` · `llm-hard` | 1 · 2–3 · 3–4 | Variante B: **mesmo plano e mesmo gabarito** das `rules-*` correspondentes, com as falas reescritas por LLM (Claude Opus 5.5, ver seção 3) | schema 2.0 |
 
-O prefixo indica o **realizador**, isto é, quem escreve as falas: `rules` são regras (variante A) e `llm` será um modelo de linguagem (variante B). O sufixo indica o **perfil de ruído**. Variantes com o mesmo perfil e realizadores diferentes compartilham o mesmo plano de reuniões, os mesmos fenômenos e o mesmo gabarito. A comparação A × B isola o efeito da linguagem.
+O prefixo indica o **realizador**, isto é, quem escreve as falas: `rules` são regras (variante A) e `llm` é um modelo de linguagem (variante B). O sufixo indica o **perfil de ruído**. Variantes com o mesmo perfil e realizadores diferentes compartilham o mesmo plano de reuniões, os mesmos fenômenos e o mesmo gabarito. A comparação A × B isola o efeito da linguagem.
 
 ### Números agregados (18 documentos, 820 requisitos)
 
@@ -28,6 +28,9 @@ O prefixo indica o **realizador**, isto é, quem escreve as falas: `rules` são 
 | `rules-clean` | 37.628 | 820 | 820 | – | – | – | – | – | – | – | – | – |
 | `rules-realistic` | 46.304 | 781 | 614 | 22 | 18 | 15 | 64 | 21 | 42 | 24 | 145 | 6 |
 | `rules-hard` | 48.924 | 761 | 438 | 46 | 43 | 16 | 110 | 52 | 72 | 43 | 277 | 3 |
+| `llm-clean` | 36.804 | 820 | 820 | – | – | – | – | – | – | – | – | – |
+| `llm-realistic` | 50.849 | 781 | 614 | 22 | 18 | 15 | 64 | 21 | 42 | 24 | 145 | 6 |
+| `llm-hard` | 55.133 | 761 | 438 | 46 | 43 | 16 | 110 | 52 | 72 | 43 | 277 | 3 |
 
 O detalhamento por documento está em [`indice_documentos.csv`](indice_documentos.csv), com uma linha por (variante, documento).
 
@@ -71,6 +74,24 @@ Client: Oh, about master password from last time, I checked: ...
 - **Bagunça**: tópicos fora da ordem do documento, tópico retomado mais tarde ("going back to search…"), stakeholder que puxa o tópico sem o analista perguntar, interrupção no meio de uma fala que é retomada depois, falso começo ("We need the— actually, …"), *crosstalk*, conversa de abertura e comentários fora do tópico.
 - **Turnos curtos** (`realistic`/`hard`): falas longas são fatiadas em pedaços do mesmo falante, cortados só em fronteiras naturais (fim de frase, vírgula, oração), com *backchannel* ("Mm-hmm.", "Okay.") e reações curtas de outros participantes ("Yeah, agreed.") entre eles. A mediana cai de 16 palavras por turno (v1) para 9–10, e os turnos de até duas palavras sobem de 17% para 22–29%. O `clean` mantém a estrutura de turnos do v1.
 - **Ruído lexical**: hesitações, muletas, gagueira e marcas `[laughter]`, `[crosstalk]`, `[pause]`, como no v1.
+
+### Variante B: como as falas foram escritas
+
+Nas `llm-*`, cada fala foi reescrita pelo **Claude Opus 5.5** (`claude-opus-5-5`, esforço `low`, prompt `b2`), a partir do mesmo plano da `rules-*` correspondente. O LLM recebeu só o conteúdo que cada fala deve expressar; o detalhe removido de propósito (ambiguidade, incompletude) nunca chegou a ele. Cada fala gerada foi verificada, e as reprovadas voltaram para o texto da variante A:
+
+| variante | falas | aceitas do LLM | voltaram para a A |
+|---|---:|---:|---:|
+| `llm-clean` | 1.611 | 1.583 (98,3%) | 28 |
+| `llm-realistic` | 3.335 | 3.284 (98,5%) | 51 |
+| `llm-hard` | 3.226 | 3.195 (99,0%) | 31 |
+
+As hesitações e marcas (`uh`, `[crosstalk]`…) são aplicadas depois, iguais às da variante A, então A e B diferem só na paráfrase. O motivo de cada fallback está em `generator.realizer_stats` de cada gabarito. Exemplo do mesmo turno nas duas variantes (2008-keepass, `realistic`):
+
+> **A:** Well, when the database is found, the master password is wanted so that erm the database will be unlocked, that's uhm the the main thing.
+>
+> **B:** Once the database is found, it asks for the master password so um the database can be unlocked.
+
+O DeepSeek, usado pelo Gigabrain, é de outra família, o que evita que o sistema avaliado "reconheça" o próprio estilo de escrita.
 
 ### Fenômenos de requisitos
 
@@ -163,6 +184,9 @@ O `naive` transforma em requisito toda frase com modal ou expressão de necessid
 | `rules-clean` | 0,709 | 0,842 | 0,770 | 0 | 0 |
 | `rules-realistic` | 0,540 | 0,721 | 0,617 | 6 | 14 |
 | `rules-hard` | 0,504 | 0,677 | 0,578 | 3 | 15 |
+| `llm-clean` | 0,608 | 0,607 | 0,608 | 0 | 0 |
+| `llm-realistic` | 0,393 | 0,560 | 0,462 | 5 | 11 |
+| `llm-hard` | 0,361 | 0,551 | 0,436 | 2 | 9 |
 
 O `oracle` tem F1 = 1,0 em extração e issues, mas `detail_hallucination_rate` ≈ 0,55–0,63. Isso é esperado: ele copia o texto canônico do SRS, que contém detalhes que ninguém disse na reunião.
 
@@ -171,7 +195,9 @@ O `oracle` tem F1 = 1,0 em extração e issues, mas `detail_hallucination_rate` 
 ## 6. Limitações conhecidas
 
 - **Distratores são raros** (3–6 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e poucos requisitos do PURE têm número ou ator explícito. Inversões de polaridade ("shall" × "shall not") entram apenas como inconsistência, porque "not" é stopword no casamento lexical.
-- **As falas ainda carregam o texto do SRS.** O realizador `rules` muda a forma (modal, contrações, léxico, discurso), mas mantém as palavras de conteúdo. Por isso requisitos longos continuam soando como documento. A variante B (`llm-*`) existe para medir esse efeito.
+- **Nas `rules-*`, as falas ainda carregam o texto do SRS.** O realizador `rules` muda a forma (modal, contrações, léxico, discurso), mas mantém as palavras de conteúdo, e requisitos longos continuam soando como documento. Nas `llm-*`, a paráfrase é real: a fração das palavras de conteúdo do requisito que aparece nas falas cai de 0,98 para 0,80–0,84.
+- **A verificação das falas da variante B é por regras, não semântica.** Ela confere números, valores, detalhes removidos e uma cobertura mínima de palavras, mas não garante equivalência de significado. Falas reprovadas (1–1,7% por variante) voltam para o texto da `rules-*`. Uma revisão humana por amostragem é recomendada antes de conclusões fortes.
+- **As falas curtas da variante B são um pouco mais longas** ("Yes, that's right." em vez de "Yep."): a mediana de palavras por turno sobe de 9–14 para 11–16, e os turnos de até duas palavras caem de 15–29% para 14–24%.
 - **`v1-original` está congelado** como foi publicado. Os arquivos usam CRLF, e os offsets só batem quando o texto é lido com tradução de quebras de linha (Python em modo texto). O campo `input.file` do gabarito diz `input_raw.txt`, embora o arquivo se chame `transcricao_reuniao.txt`. As variantes 2.0 não têm esses problemas.
 
 ## 7. Como regenerar

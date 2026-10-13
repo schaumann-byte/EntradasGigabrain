@@ -1,0 +1,92 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This is our second session on the functional and non-functional requirements for the VCD, the follow-up from last time.
+Client: Uhm, Sure. Nice to see everyone again, hope your week's been okay.
+Analyst: Quick recap: last time we went through the major features, the requirements and quality attributes, accessibility of the mapping sort of facility, and identity and access management. A few points er were left open, so we'll come back kind of to those.
+Analyst: Erm, Today um I'd um like to start with the advanced VCD creation service. What do we need you know there?
+TechLead: So I think maybe the VCD VCD creation service from the stage 2 VCD simple package should be improved, um so it covers context specific data and VCD merging. uh I'm i mean not completely sure it's mandatory, but you know it'd i mean be nice.
+TechLead: Uh, What a VCD system definitely must do is compile the data coming out um of the evidence collection process together with what the economic um operator provides when creating the VCD advanced package. So the data types going into an advanced package are structural VCD package data, structural data of evidence, tender specific data, economic operator er data, context um specific data, the evidence itself, and authorized translation of evidence.
+EndUser: Do we uhm really need all of that right kind of now? It sounds like a um lot of effort for something that might not be a well priority.
+TechLead: I'd say yes, it's really important well for you know us. Without it the advanced package doesn't make much sense.
+Client: Let's leave that open for now and decide later.
+TechLead: And then, maybe, it'd be good if merging of VCD simple packages
+TechLead: Er, and VCD advanced packages into one VCD advanced package should be possible.
+Analyst: Okay, next er topic, the VCD re-compilation service. What's expected there?
+Client: So compiling an advanced into a, no, sorry, the actually other sort of way round. Re-compiling a VCD simple package into a VCD advanced package i mean must be possible.
+TechLead: Yes, agreed.
+TechLead: And the VCD system must give the economic operator a user interface to initiate the recompilation of...
+Analyst: Let's move on to the overview of of the organisational framework. How do you see that?
+Client: Um, Well, well one key issue, for example, is the pre-VCD mapping er tool. It should be integrated into any national solutions, either as a module—
+Analyst: Sorry, your audio cut out out for a a second there.
+TechLead: Sorry, could you repeat the last bit?
+Client: Yes, I was saying, either as a module or—
+EndUser: Sorry, go ahead.
+Client: Right, so, or as an interface to query the results for mapping evidences among the member states.
+Analyst: Okay, let's move on uhm to economic operators that that act as issuing bodies. How should we i mean handle those?
+EndUser: Sorry, my well screen just froze for a second. Okay, I'm back.
+EndUser: So I think maybe the VCD system would often have the option to specify actually the issuing services needed to evidence certain criteria, things like sort of candidate statements or attestations from third parties sort of that aren't available in electronic format. I'm not sure it's strictly mandatory, but it'd um be nice to have.
+Analyst: Um, Thanks. Next well topic, organisational requirements. What do you need there?
+Client: For erm us, wherever uhm possible, we uh should be using the national procedures um and infrastructures that are already widely accepted.
+TechLead: Do we really need that as a requirement, though? It feels like kind of a lot lot of effort for something that like isn't a top priority.
+Client: Uh, I'd say we do. It's genuinely important for us, so I wouldn't want to drop it.
+Analyst: Um, Let's leave that open for now kind of and come back to decide on it later.
+Client: Okay. Another one: the the contracting authority has to specify a subset of the superset of criteria, the ones relevant to a specific Call for Tender—
+TechLead: Er, Sorry, quick question, a subset per tender?
+Client: Yes, per tender, so that uh any VCD application can do the mapping later on. And as a measure, we'd develop a standard template for uhm specifying the criteria as actually part i mean of the tender-specific data.
+Analyst: Uh, Got it. Anything else on organisational requirements?
+Client: No, that's it.
+Analyst: Then let's talk about semantic interoperability. What's needed there?
+Client: Uh, So we need to work on semantic interoperability for electronic attestations
+Analyst: Okay.
+Client: and certificates, and that needs more than just semantic alignment.
+Analyst: Right, go on.
+Client: but also legal alignment across Europe. That's from Bausa and Boujraf.
+Analyst: Okay.
+Client: Right, and from that 2009 paper there's a requirement: well any evidential documents the parties exchange must be semantically harmonized, otherwise they can't be processed electronically.
+Analyst: Let me check I got this: 2009) Requirement Evidential documents exchanged kind of between parties will need to be semantically harmonized to i mean be processed electronically?
+Client: Yes, exactly.
+Analyst: Anything else on semantic interoperability before we um move on?
+EndUser: No, that's it.
+Analyst: Er, Okay, then let's talk about the the methodical framework. uh How do kind of you see that working?
+Client: Um, We'd use the ISO 11179 methodology for the specifications, and those can then be used to detail the profiles that CEN BII WG 1 developed.
+Client: And the CEN BII description of a VCD stays semantically erm neutral, so it helps systems built on UBL as well as UN/CEFACT. Applications can be set up with either er one.
+Analyst: Got it.
+EndUser: Erm, Can I bring up how national and European um criteria line up? I think, maybe, there should be a requirement that national criteria for basically qualitative selection
+TechLead: Mm-hm.
+EndUser: Erm, and for exclusion have to correspond to the European criteria
+Analyst: Okay.
+EndUser: the ones that uh come from Articles 45 to 50, and
+TechLead: Right.
+Client: Just on that—
+EndUser: Sorry, one sec.
+EndUser: which are partly described in the Eligibility of Tenders.
+EndUser: Can I bring up the VCD-specific characteristics? One requirement there is that any VCD instance must be specific to one particular economic operator.
+Analyst: Quick update on the VCD VCD transportation system point we left open last last time, that's been settled. actually The decision is the transportation system should offer a kind of function actually that helps the economic uhm operator submit the VCD package to the contracting authority's procurement platform, the one where the tender or erm bid has to be placed.
+Analyst: Let's move on to the method for ensuring the level of completeness. How do you see that working?
+EndUser: So the uhm way I see it, a VCD package only really shows its full potential—
+Client: Sorry, only when?
+EndUser: Only when all the requested evidences are inside it, meaning everything that's needed to prove all basically the requested criteria.
+EndUser: And for um measurement, the definition, the specification, the modelling,
+Analyst: Okay.
+EndUser: or uh the implementation of the uh pre-VCD mapping tool is going to focus on i mean Articles 45 to 46. like And then there's a requirement: uhm Articles 47 to 50 open open up a whole range uh of different criteria that are tender-specific and country-specific, so so they must be um added to the pre-VCD mapping tool step by step, and that might need a higher-level mapping.
+Analyst: Got it.
+Analyst: Anything actually else on the level of completeness method?
+Client: No, that's it.
+TechLead: I'd like to add something on the kind of overview of the legal framework. To get an overview of kind of the legal requirements
+Analyst: Mm-hm.
+TechLead: and well the regulations at the er different levels, uh we we have [noise] to analyse uhm the following sources.
+TechLead: So first there's—
+Client: Sorry, go ahead.
+Analyst: Go on.
+TechLead: There's the European level, for example directive 2004/18/EG, and then the national level, for example
+Analyst: Right.
+TechLead: so the national procurement uh acts, plus any other related regulations.
+Client: And that's the thing, you know when we develop a solution, the differences between the national procurement acts
+Analyst: Mm-hm.
+Client: Um, and the European Directive have to be considered, so that what we define actually um conforms to national law but can still be applied on a pan-European level.
+Analyst: Right.
+Client: And And these legal questions often hit really critical aspects for a possible VCD solution. For example, the role and use of self declarations as a replacement for documents that can't uh be be issued within one Member State.
+Analyst: Got it.
+EndUser: Yes, that comes up a lot.
+Analyst: Okay, I think that's a basically good place to stop for today. Thanks, everyone, we'll pick this up and continue next time.

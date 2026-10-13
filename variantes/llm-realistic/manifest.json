@@ -1,0 +1,766 @@
+{
+  "variant": "llm-realistic",
+  "schema_version": "2.0",
+  "exported_on": "2026-10-13",
+  "generator": {
+    "tool": "pureprep",
+    "version": "0.2.0",
+    "commit": "20711dfc80febe0b7844ccdabc045743f28dc11e",
+    "dirty": false,
+    "branch": "feature/variante-b-geracao",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_content": 5,
+      "fallback:too_long": 1,
+      "llm_accepted": 216,
+      "llm_accepted_content": 102,
+      "turns": 222,
+      "windows": 12
+    }
+  },
+  "source": {
+    "dataset": "PURE",
+    "doi": "10.5281/zenodo.1414117"
+  },
+  "documents": [
+    {
+      "doc_id": "0000-cctns",
+      "n_meetings": 3,
+      "n_words": 3550,
+      "n_requirements": 60,
+      "n_primary_fr": 14,
+      "n_primary_nfr": 46,
+      "n_expected_in_output": 57,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 51,
+        "conflict_open": 2,
+        "rejected": 1,
+        "ambiguous": 1,
+        "incomplete": 3,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 1,
+        "conflict:dropped": 1,
+        "conflict:open": 2,
+        "incompleteness:completed_later": 2,
+        "incompleteness:open": 3,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 0,
+      "n_issues": 6,
+      "messiness": {
+        "topics_out_of_document_order": 2,
+        "offtopic": 1,
+        "chunked_statements": 18,
+        "reactions": 11,
+        "self_introduced_topics": 1,
+        "interruptions": 4,
+        "smalltalk": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.804
+    },
+    {
+      "doc_id": "0000-gamma-j",
+      "n_meetings": 3,
+      "n_words": 2738,
+      "n_requirements": 60,
+      "n_primary_fr": 21,
+      "n_primary_nfr": 39,
+      "n_expected_in_output": 60,
+      "n_reachable": 60,
+      "by_status": {
+        "clear": 47,
+        "conflict_resolved": 1,
+        "conflict_open": 2,
+        "ambiguous": 3,
+        "inconsistent": 1,
+        "incomplete": 6
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 3,
+        "conflict:open": 2,
+        "conflict:resolved": 1,
+        "incompleteness:completed_later": 2,
+        "incompleteness:open": 6,
+        "inconsistency:unnoticed": 1
+      },
+      "n_distractors": 0,
+      "n_issues": 12,
+      "messiness": {
+        "topic_revisits": 1,
+        "topics_out_of_document_order": 6,
+        "smalltalk": 1,
+        "false_starts": 1,
+        "self_introduced_topics": 1,
+        "chunked_statements": 16,
+        "reactions": 17,
+        "interruptions": 3,
+        "offtopic": 4,
+        "crosstalk": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.815
+    },
+    {
+      "doc_id": "1995-gemini",
+      "n_meetings": 2,
+      "n_words": 4386,
+      "n_requirements": 60,
+      "n_primary_fr": 27,
+      "n_primary_nfr": 33,
+      "n_expected_in_output": 56,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 47,
+        "conflict_resolved": 1,
+        "rejected": 2,
+        "ambiguous": 3,
+        "inconsistent": 1,
+        "incomplete": 4,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 3,
+        "conflict:dropped": 2,
+        "conflict:resolved": 1,
+        "incompleteness:completed_later": 1,
+        "incompleteness:open": 4,
+        "inconsistency:unnoticed": 1,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 1,
+      "n_issues": 8,
+      "messiness": {
+        "topics_out_of_document_order": 8,
+        "chunked_statements": 28,
+        "offtopic": 7,
+        "crosstalk": 1,
+        "self_introduced_topics": 5,
+        "false_starts": 4,
+        "reactions": 10,
+        "interruptions": 5,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.854
+    },
+    {
+      "doc_id": "1998-themas",
+      "n_meetings": 2,
+      "n_words": 3023,
+      "n_requirements": 60,
+      "n_primary_fr": 60,
+      "n_primary_nfr": 0,
+      "n_expected_in_output": 54,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 45,
+        "conflict_resolved": 1,
+        "conflict_open": 3,
+        "rejected": 4,
+        "ambiguous": 2,
+        "inconsistent": 1,
+        "incomplete": 2,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 2,
+        "conflict:dropped": 4,
+        "conflict:open": 3,
+        "conflict:resolved": 1,
+        "incompleteness:completed_later": 1,
+        "incompleteness:open": 2,
+        "inconsistency:unnoticed": 1,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 1,
+      "n_issues": 8,
+      "messiness": {
+        "topic_revisits": 2,
+        "topics_out_of_document_order": 4,
+        "chunked_statements": 26,
+        "reactions": 13,
+        "self_introduced_topics": 2,
+        "interruptions": 3,
+        "smalltalk": 1,
+        "crosstalk": 1,
+        "false_starts": 2,
+        "offtopic": 2,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.837
+    },
+    {
+      "doc_id": "1999-dii",
+      "n_meetings": 3,
+      "n_words": 2648,
+      "n_requirements": 19,
+      "n_primary_fr": 14,
+      "n_primary_nfr": 5,
+      "n_expected_in_output": 16,
+      "n_reachable": 17,
+      "by_status": {
+        "clear": 12,
+        "conflict_resolved": 1,
+        "rejected": 1,
+        "ambiguous": 1,
+        "inconsistent": 2,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 1,
+        "conflict:dropped": 1,
+        "conflict:resolved_later": 1,
+        "inconsistency:unnoticed": 2,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 0,
+      "n_issues": 3,
+      "messiness": {
+        "topic_revisits": 1,
+        "topics_out_of_document_order": 2,
+        "self_introduced_topics": 1,
+        "interruptions": 1,
+        "chunked_statements": 6,
+        "smalltalk": 2,
+        "reactions": 3,
+        "false_starts": 2,
+        "offtopic": 1,
+        "crosstalk": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.879
+    },
+    {
+      "doc_id": "1999-tcs",
+      "n_meetings": 2,
+      "n_words": 3501,
+      "n_requirements": 60,
+      "n_primary_fr": 31,
+      "n_primary_nfr": 29,
+      "n_expected_in_output": 59,
+      "n_reachable": 59,
+      "by_status": {
+        "clear": 45,
+        "conflict_resolved": 1,
+        "conflict_open": 1,
+        "ambiguous": 7,
+        "inconsistent": 2,
+        "incomplete": 3,
+        "omitted": 1
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 7,
+        "conflict:open": 1,
+        "conflict:resolved": 1,
+        "incompleteness:open": 3,
+        "inconsistency:unnoticed": 2,
+        "omission:not_discussed": 1
+      },
+      "n_distractors": 0,
+      "n_issues": 13,
+      "messiness": {
+        "topics_out_of_document_order": 2,
+        "smalltalk": 2,
+        "self_introduced_topics": 9,
+        "chunked_statements": 23,
+        "offtopic": 5,
+        "interruptions": 7,
+        "reactions": 13,
+        "false_starts": 1,
+        "crosstalk": 2,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.853
+    },
+    {
+      "doc_id": "2003-qheadache",
+      "n_meetings": 2,
+      "n_words": 2151,
+      "n_requirements": 23,
+      "n_primary_fr": 19,
+      "n_primary_nfr": 4,
+      "n_expected_in_output": 23,
+      "n_reachable": 23,
+      "by_status": {
+        "clear": 20,
+        "ambiguous": 3
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 3
+      },
+      "n_distractors": 0,
+      "n_issues": 3,
+      "messiness": {
+        "topics_out_of_document_order": 4,
+        "smalltalk": 2,
+        "reactions": 6,
+        "offtopic": 2,
+        "self_introduced_topics": 2,
+        "chunked_statements": 16,
+        "crosstalk": 1,
+        "false_starts": 1,
+        "interruptions": 3,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.832
+    },
+    {
+      "doc_id": "2005-microcare",
+      "n_meetings": 1,
+      "n_words": 183,
+      "n_requirements": 0,
+      "n_primary_fr": 0,
+      "n_primary_nfr": 0,
+      "n_expected_in_output": 0,
+      "n_reachable": 0,
+      "by_status": {},
+      "phenomena": {},
+      "n_distractors": 0,
+      "n_issues": 0,
+      "messiness": {
+        "topics_out_of_document_order": 0,
+        "meetings": 1
+      },
+      "mean_support_clear": null
+    },
+    {
+      "doc_id": "2005-phin",
+      "n_meetings": 3,
+      "n_words": 4013,
+      "n_requirements": 60,
+      "n_primary_fr": 58,
+      "n_primary_nfr": 2,
+      "n_expected_in_output": 56,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 35,
+        "conflict_resolved": 3,
+        "conflict_open": 2,
+        "rejected": 2,
+        "ambiguous": 9,
+        "inconsistent": 4,
+        "incomplete": 3,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 9,
+        "conflict:dropped": 2,
+        "conflict:open": 2,
+        "conflict:resolved": 2,
+        "conflict:resolved_later": 1,
+        "incompleteness:completed_later": 1,
+        "incompleteness:open": 3,
+        "inconsistency:unnoticed": 4,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 0,
+      "n_issues": 18,
+      "messiness": {
+        "topic_revisits": 1,
+        "topics_out_of_document_order": 4,
+        "chunked_statements": 24,
+        "self_introduced_topics": 5,
+        "reactions": 5,
+        "false_starts": 2,
+        "interruptions": 3,
+        "smalltalk": 1,
+        "offtopic": 1,
+        "crosstalk": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.871
+    },
+    {
+      "doc_id": "2006-eirene-sys-15",
+      "n_meetings": 3,
+      "n_words": 4152,
+      "n_requirements": 60,
+      "n_primary_fr": 44,
+      "n_primary_nfr": 16,
+      "n_expected_in_output": 58,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 48,
+        "conflict_resolved": 2,
+        "ambiguous": 5,
+        "inconsistent": 1,
+        "incomplete": 2,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 5,
+        "conflict:resolved": 2,
+        "incompleteness:completed_later": 2,
+        "incompleteness:open": 2,
+        "inconsistency:unnoticed": 1,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 1,
+      "n_issues": 8,
+      "messiness": {
+        "topic_revisits": 2,
+        "topics_out_of_document_order": 10,
+        "false_starts": 3,
+        "chunked_statements": 18,
+        "reactions": 15,
+        "self_introduced_topics": 4,
+        "offtopic": 6,
+        "interruptions": 3,
+        "smalltalk": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.827
+    },
+    {
+      "doc_id": "2007-eirene-fun-7-2",
+      "n_meetings": 2,
+      "n_words": 4034,
+      "n_requirements": 60,
+      "n_primary_fr": 45,
+      "n_primary_nfr": 15,
+      "n_expected_in_output": 58,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 43,
+        "conflict_resolved": 2,
+        "ambiguous": 7,
+        "inconsistent": 5,
+        "incomplete": 1,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 7,
+        "conflict:resolved": 2,
+        "incompleteness:open": 1,
+        "inconsistency:unnoticed": 5,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 2,
+      "n_issues": 13,
+      "messiness": {
+        "topic_revisits": 1,
+        "topics_out_of_document_order": 9,
+        "smalltalk": 2,
+        "chunked_statements": 24,
+        "offtopic": 6,
+        "reactions": 14,
+        "crosstalk": 2,
+        "interruptions": 6,
+        "self_introduced_topics": 5,
+        "false_starts": 2,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.851
+    },
+    {
+      "doc_id": "2007-ertms",
+      "n_meetings": 3,
+      "n_words": 3167,
+      "n_requirements": 60,
+      "n_primary_fr": 45,
+      "n_primary_nfr": 15,
+      "n_expected_in_output": 56,
+      "n_reachable": 57,
+      "by_status": {
+        "clear": 44,
+        "conflict_open": 2,
+        "rejected": 1,
+        "ambiguous": 5,
+        "inconsistent": 1,
+        "incomplete": 4,
+        "omitted": 3
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 5,
+        "conflict:dropped": 1,
+        "conflict:open": 2,
+        "incompleteness:completed_later": 3,
+        "incompleteness:open": 4,
+        "inconsistency:unnoticed": 1,
+        "omission:not_discussed": 3
+      },
+      "n_distractors": 0,
+      "n_issues": 12,
+      "messiness": {
+        "topic_revisits": 1,
+        "topics_out_of_document_order": 11,
+        "smalltalk": 1,
+        "chunked_statements": 16,
+        "reactions": 9,
+        "interruptions": 6,
+        "offtopic": 3,
+        "false_starts": 2,
+        "self_introduced_topics": 3,
+        "crosstalk": 2,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.87
+    },
+    {
+      "doc_id": "2007-get-real-0-2",
+      "n_meetings": 2,
+      "n_words": 871,
+      "n_requirements": 10,
+      "n_primary_fr": 4,
+      "n_primary_nfr": 6,
+      "n_expected_in_output": 10,
+      "n_reachable": 10,
+      "by_status": {
+        "clear": 10
+      },
+      "phenomena": {},
+      "n_distractors": 0,
+      "n_issues": 0,
+      "messiness": {
+        "topics_out_of_document_order": 0,
+        "smalltalk": 2,
+        "self_introduced_topics": 3,
+        "interruptions": 1,
+        "offtopic": 1,
+        "chunked_statements": 5,
+        "reactions": 4,
+        "crosstalk": 1,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.874
+    },
+    {
+      "doc_id": "2008-keepass",
+      "n_meetings": 2,
+      "n_words": 2817,
+      "n_requirements": 54,
+      "n_primary_fr": 49,
+      "n_primary_nfr": 5,
+      "n_expected_in_output": 51,
+      "n_reachable": 53,
+      "by_status": {
+        "clear": 43,
+        "conflict_resolved": 3,
+        "conflict_open": 2,
+        "rejected": 2,
+        "ambiguous": 2,
+        "incomplete": 1,
+        "omitted": 1
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 2,
+        "conflict:dropped": 1,
+        "conflict:dropped_later": 1,
+        "conflict:open": 2,
+        "conflict:resolved": 2,
+        "conflict:resolved_later": 1,
+        "incompleteness:completed_later": 1,
+        "incompleteness:open": 1,
+        "omission:not_discussed": 1
+      },
+      "n_distractors": 0,
+      "n_issues": 5,
+      "messiness": {
+        "topic_revisits": 1,
+        "topics_out_of_document_order": 8,
+        "chunked_statements": 23,
+        "offtopic": 4,
+        "reactions": 11,
+        "crosstalk": 3,
+        "false_starts": 2,
+        "self_introduced_topics": 5,
+        "interruptions": 2,
+        "smalltalk": 1,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.796
+    },
+    {
+      "doc_id": "2008-peering",
+      "n_meetings": 2,
+      "n_words": 1281,
+      "n_requirements": 27,
+      "n_primary_fr": 24,
+      "n_primary_nfr": 3,
+      "n_expected_in_output": 26,
+      "n_reachable": 26,
+      "by_status": {
+        "clear": 21,
+        "conflict_resolved": 1,
+        "ambiguous": 4,
+        "omitted": 1
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 4,
+        "conflict:resolved": 1,
+        "incompleteness:completed_later": 1,
+        "omission:not_discussed": 1
+      },
+      "n_distractors": 0,
+      "n_issues": 4,
+      "messiness": {
+        "topics_out_of_document_order": 2,
+        "reactions": 8,
+        "chunked_statements": 3,
+        "smalltalk": 1,
+        "self_introduced_topics": 2,
+        "meetings": 2
+      },
+      "mean_support_clear": 0.892
+    },
+    {
+      "doc_id": "2009-peppol-approved",
+      "n_meetings": 3,
+      "n_words": 4058,
+      "n_requirements": 60,
+      "n_primary_fr": 19,
+      "n_primary_nfr": 41,
+      "n_expected_in_output": 57,
+      "n_reachable": 58,
+      "by_status": {
+        "clear": 41,
+        "conflict_resolved": 2,
+        "conflict_open": 2,
+        "rejected": 1,
+        "ambiguous": 6,
+        "incomplete": 6,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 6,
+        "conflict:dropped_later": 1,
+        "conflict:open": 2,
+        "conflict:resolved": 1,
+        "conflict:resolved_later": 1,
+        "incompleteness:completed_later": 2,
+        "incompleteness:open": 6,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 0,
+      "n_issues": 14,
+      "messiness": {
+        "topic_revisits": 3,
+        "topics_out_of_document_order": 13,
+        "smalltalk": 1,
+        "self_introduced_topics": 8,
+        "reactions": 11,
+        "chunked_statements": 17,
+        "crosstalk": 4,
+        "interruptions": 4,
+        "offtopic": 4,
+        "false_starts": 2,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.88
+    },
+    {
+      "doc_id": "2009-video-search",
+      "n_meetings": 3,
+      "n_words": 1569,
+      "n_requirements": 30,
+      "n_primary_fr": 12,
+      "n_primary_nfr": 18,
+      "n_expected_in_output": 30,
+      "n_reachable": 30,
+      "by_status": {
+        "clear": 22,
+        "conflict_resolved": 3,
+        "conflict_open": 2,
+        "ambiguous": 1,
+        "inconsistent": 1,
+        "incomplete": 1
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 1,
+        "conflict:open": 2,
+        "conflict:resolved": 2,
+        "conflict:resolved_later": 1,
+        "incompleteness:completed_later": 1,
+        "incompleteness:open": 1,
+        "inconsistency:unnoticed": 1
+      },
+      "n_distractors": 0,
+      "n_issues": 5,
+      "messiness": {
+        "topics_out_of_document_order": 0,
+        "reactions": 5,
+        "interruptions": 4,
+        "self_introduced_topics": 1,
+        "smalltalk": 1,
+        "offtopic": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.804
+    },
+    {
+      "doc_id": "2010-blitdraft",
+      "n_meetings": 3,
+      "n_words": 2707,
+      "n_requirements": 57,
+      "n_primary_fr": 23,
+      "n_primary_nfr": 34,
+      "n_expected_in_output": 54,
+      "n_reachable": 55,
+      "by_status": {
+        "clear": 40,
+        "conflict_resolved": 1,
+        "rejected": 1,
+        "ambiguous": 5,
+        "inconsistent": 2,
+        "incomplete": 6,
+        "omitted": 2
+      },
+      "phenomena": {
+        "ambiguity:unresolved": 5,
+        "conflict:dropped": 1,
+        "conflict:resolved_later": 1,
+        "incompleteness:completed_later": 2,
+        "incompleteness:open": 6,
+        "inconsistency:unnoticed": 2,
+        "omission:not_discussed": 2
+      },
+      "n_distractors": 1,
+      "n_issues": 13,
+      "messiness": {
+        "topics_out_of_document_order": 2,
+        "chunked_statements": 12,
+        "reactions": 11,
+        "interruptions": 4,
+        "false_starts": 1,
+        "smalltalk": 1,
+        "crosstalk": 1,
+        "offtopic": 1,
+        "self_introduced_topics": 1,
+        "meetings": 3
+      },
+      "mean_support_clear": 0.842
+    }
+  ]
+}

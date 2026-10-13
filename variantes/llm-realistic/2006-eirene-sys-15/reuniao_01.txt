@@ -1,0 +1,73 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is the kickoff for UIC Project EIRENE, the first of three you know meetings, so let's start with some actually background and then go through a few topics.
+Client: Sure. So basically EIRENE specifies a digital radio standard for the European railways, and it's part of the specification for technical interoperability. It covers ground-train voice and data communications, and also the actually ground-based um mobile communications um needs like of trackside workers, station and depot staff, and the railway's administrative and managerial people.
+Analyst: Uh, Great. Let's start with the railway specific services and facilities. What do you need there?
+Client: So one thing is a follow-me service. We'd implement it in the EIRENE network using the GSM well Unstructured Supplementary Service Data Data facility, USSD, so users can establish um and...
+Analyst: Anything else on railway specific services and facilities?
+EndUser: No, that's it.
+Analyst: Okay, let's move on to coverage. What are your expectations there?
+Client: So the criterion will always be... well, no, sorry, it'll be met uh with a certain uh probability within the coverage area.
+Analyst: Got it.
+Analyst: Next, basically handover and cell selection. What do you need?
+Client: Right now 300ms is our best estimate for the QoS figure,
+Client: Uh, but we'll well still have to confirm that erm through user trials.
+Analyst: Okay.
+EndUser: And during the um trials we'd test suitable algorithms and refine them as needed.
+Analyst: Makes sense.
+TechLead: Yes, that sounds right.
+Analyst: Let's talk about the like frequency band and channel arrangements. What's the situation there?
+Client: The network has to operate in a sub-band,
+Analyst: Mm-hm.
+Client: or a combination of sub-bands.
+Analyst: Right, okay.
+Client: of the R-GSM band, as it's defined in EN 301 515, that's Index 35.
+Analyst: So just to confirm, the network has to basically operate sort of in kind of a sub-band, or a combination of i mean sub-bands, of the R-GSM band as defined in um EN 301 515, Index 35?
+Client: Yes, exactly.
+Client: Then there's the termination of like VGCS/VBS kind of calls. The network has to terminate the like ongoing VGCS/VBS call
+Client: whenever it receives the 3-digit sequence "***" sent via DTMF signals.
+Analyst: Got it.
+Analyst: Sorry, someone's screen share uh just popped up on my end. Okay, um it's gone.
+Analyst: Erm, Let's move on to muting and unmuting for VGCS calls. How should that work?
+EndUser: For us, the idea is that the network will send the SET-PARAMETER message with actually the attribute "D-ATT = T"1] to the mobile station of the talking subscriber if it receives the 3- digit sequence "###" transmitted through DTMF or the group call SETUP message2 from a controller terminal.
+TechLead: Okay.
+EndUser: I mean, when the network has detected the i mean 3-digit DTMF sequence "###" transmitted through DTMF from a controller terminal and if the uh controller was not previously talking it it should indicate its recognition by playing a single DTMF grant tone "#" of duration of 100ms ± 5ms to be sent to that controller terminal only, right?
+Analyst: Mm-hm.
+TechLead: Yeah, that makes sense.
+Analyst: Okay, next up, core environmental actually requirements. What do we need there?
+Client: Erm, All the EMC er emission and immunity tests have to be done following the guidelines in i mean the EN 61000-4 series—
+EndUser: Erm, Sorry, which series i mean was that?
+Client: Right, so, and in.
+Client: Now, a lot of kind of the railway-specific standards we reference are are actually pre-standards, for example prEN 50155
+Analyst: Okay, go on.
+Client: ENV 50121, prEN 50125, those ones.
+Analyst: Right.
+Client: Uhm, And should [crosstalk] be re-examined for their uh applicability to— sorry, I lost lost my train of thought.
+TechLead: Then there's moisture. Maybe we'd want it so that infrequent, slight condensation caused by operation doesn't lead to any malfunction or failure. Not sure that's strictly mandatory though.
+TechLead: Er, And I think, maybe, the you know environmental test procedures for EIRENE mobile equipment should include um a specific set of tests as um defined in the IEC 68 series. If we decide that's required, anyway.
+TechLead: Uh, Also, none of um the equipment should degrade photochemically
+EndUser: Okay.
+TechLead: when it's exposed to solar like radiation of up to 1200 W/m2.
+Analyst: Got it.
+Client: Can I jump to the driver call-related functions? The multi-party call should have 'Railway operation' priority, that's in section 10.2,
+Analyst: Mm-hm.
+Client: and while it's going sort of on, a 'multi-drivers' indication has basically to be shown permanently on all the Cab radios.
+Analyst: Okay.
+Client: Each of the other cabs on the train gets contacted using its erm functional number, which the other drivers registered before the call was set up.
+Analyst: Right.
+EndUser: Yeah, that's how we'd do it.
+Client: And where those vehicles aren't connected by on-train wiring
+Analyst: Uh-huh.
+Client: it has to be possible to set up a permanent radio connection between each of the active cabs.
+Analyst: Understood.
+EndUser: Yes, makes sense.
+Client: And then from there a GSM point-to-point voice call gets set up, you know at 'Railway operation' priority, that's the one erm in section 10.2.
+TechLead: Right, agreed.
+EndUser: Uhm, And in the case where you've got more er than one active cab,
+Analyst: Okay, go on.
+EndUser: Uhm, then that radio connection should go over the GSM Multi-Party service.
+Client: Yes, exactly.
+Client: Uhm, One erm more thing, the Cab radio has to you know support shunting mode communications, the way section 14 defines them.
+EndUser: Definitely, we need that.
+Analyst: Great, I think um that's a a good kind of place to well stop for today. Thanks everyone, we'll pick up from um here next time.

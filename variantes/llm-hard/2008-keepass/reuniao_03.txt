@@ -1,0 +1,79 @@
+Meeting 3 of 3 (review)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This um is our third and and last session on KeePass Password Safe, mostly a review.
+TechLead: Good to see everyone again. Busy week?
+Analyst: Quick recap: last time we went through adding an entry, duplicating an entry, and um changing um the language. basically A few points were left open, so we'll circle back to those.
+Analyst: Um, First, though, import and export. What do you need there?
+Client: So the file formats we're talking about aren't specialized password database formats.
+Analyst: Okay.
+Client: Those formats only specify a—
+EndUser: Sorry, which formats exactly?
+Client: Er, The import and export ones. Anyway, they only specify the um low-level layout of the stored data.
+Analyst: Got it. Let's move to the composite master basically key. How should that work?
+Client: Well, I think maybe, if a master password is required to unlock the database,
+Analyst: Right.
+Client: then the database just doesn't actually open unless that password gets entered.
+Analyst: Okay.
+Client: Um, And there's no backdoor, no key that unlocks every database.
+Analyst: Understood.
+Client: Same idea with key files. If a key file is required to erm unlock the database,
+Analyst: Mm-hm.
+Client: then without it, the database well doesn't open.
+Client: And if there's uh a composite key,
+TechLead: Right.
+EndUser: Sorry, my screen just froze for a second, I'm back now.
+Client: Erm, then you need both the uh master password and the key file.
+TechLead: Okay.
+Client: And if you lose the master password
+Client: Uhm, or the key erm file, that database is never going to to unlock again.
+Analyst: Got it.
+Client: Er, There's just no recovery.
+Analyst: Okay.
+EndUser: Yeah, that's how it should be.
+EndUser: Um, Oh, about opening a database, the thing we were missing last er time: the folder you select you know has erm to be be a type the database can read, and that's "name".kdb.
+EndUser: Also, on TAN support, maybe, I'm not sure it's a must, but when TANs are created they'd show up as typical entries
+Client: Mm-hm.
+EndUser: that have "TAN" in the title field
+EndUser: so so KeePass knows it's a TAN.
+Client: Erm, And the title, username or [pause] URL can't be...
+Analyst: Er, On the well command line options we left open last time, that's settled now: if there's a space in the path, it has to be enclosed in quotes.
+TechLead: Uhm, Just a um heads-up, I have a hard stop in about fifteen minutes.
+Analyst: Erm, And the search database basically point is decided too: you type just one one character and uh the database shows all the data that contains it or is related to it.
+Analyst: Okay, let's move on to integration. What do we need there?
+EndUser: So the global hot key can be... no wait, actually it can't be changed. The erm global hot key is fixed.
+TechLead: Right, and kind of as we said, its main job is setting the master password that won't unlock the database from now on.
+Analyst: Okay, let's move on to performance requirements. What do we need there?
+Client: Maybe, uh and I'm not sure this is a must, but if in the meantime it isn't kind of pasted anywhere,
+Analyst: Mm-hm.
+Client: then well it has to be copied again.
+Analyst: Got it.
+TechLead: That happens i mean so that if you know user copies a actually password and not paste it anywhere, the password can't be found by anyone later.
+Client: Do we really need that, though? Feels like extra effort for something that's not a well top priority.
+TechLead: I'd sort of keep it. It's genuinely important for us, I wouldn't drop it.
+Analyst: Er, Let's leave that well one open for now and decide on it later.
+TechLead: While we're here, on the user interface side: at that point the main database window is inactive
+Analyst: Okay.
+TechLead: and you can't get to like it basically unless you close like the window that's currently active.
+Analyst: So the main database window goes inactive and you can only access it again once the currently active window is closed?
+TechLead: Yes, exactly.
+Client: Makes sense to me.
+Analyst: Alright, safety requirements next. Anything we need to cover there?
+TechLead: Maybe this one, not sure it's mandatory: if a USB with the database well on it gets pulled out of the computer before the changes are fully saved, the database sort of gets damaged and erm can't be opened.
+Analyst: I see.
+EndUser: Oh, while we're at it, on the TAN erm support side, once a TAN gets used it expires automatically
+Client: Okay.
+EndUser: Er, and then it can never be used again, ever.
+TechLead: Yeah, that makes sense.
+Analyst: Good. Let's move on to software quality sort of attributes. What do we need to capture there?
+Client: So um KeePass is, well, the uh main thing is, KeePass is a small
+Analyst: Mm-hm.
+Client: Erm, and light project, so it doesn't need to be installed at all.
+Analyst: Right.
+Client: You just unpack it er from the Zip package and that's it.
+Client: And you can also carry like it around on a USB stick, no extra configuration needed.
+Analyst: Got it.
+EndUser: Yes, that's really handy.
+Analyst: Um, Anything else else on software quality attributes before we wrap you know up?
+TechLead: No, that covers it.
+Analyst: Great, thanks everyone. Since actually this was our last meeting, I'll consolidate everything from all three sessions and send it around for a final look.

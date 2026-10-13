@@ -1,0 +1,155 @@
+Meeting 1 of 4 (kickoff)
+Participants: Analyst, Client, TechLead
+
+Analyst: Okay, let's er get started. Thanks everyone for joining. This is the kickoff, the first of 4 uh sessions on the CCTNS project, the Crime and Criminal Tracking Network i mean and actually Systems under the e-governance Mission Mode Project. Could you um start by giving us some background?
+Client: Sure. So the main idea behind how we designed um CCTNS V1.0 is to concentrate on the critical kind of functionality that actually erm gives value to the police personnel at the cutting edge, because that's what improves outcomes in "Investigation of Crime" like and "Detection of Criminals". The uh functionality is really aimed at erm IOs, records room staff and citizens, all within the broad crime investigation area. Working from those principles, we identified nine different function blocks and worked out the detailed functionality for each one.
+Analyst: Great, thanks. Let's start with the general needs. What do do you expect from the system uhm across the board?
+Client: Erm, Well, one thing is the solution should i mean send out alerts, for example email
+TechLead: Okay.
+Client: or SMS, to the user
+TechLead: Right.
+Client: if the user opts for it, whenever some action's been taken on the alert.
+Analyst: Got it.
+Client: Also, the user should be able to track a defect or enhancement request they've uh submitted.
+Client: And the help-desk user should be able to see reports on those submitted defects or enhancement requests, broken down by category, by status and by age.
+Analyst: Uh, Okay. What er about the help module, what do you need there?
+TechLead: For help, the solution should have detailed, context-sensitive help material covering every possible action and scenario on every user interface in the application.
+Analyst: Um, Makes sense. And the actually audit module?
+Client: Right, so an audit trail is basically a record of actions taken either by uhm the user um or by uh system triggers. That covers things users er or Administrators do, and also things the system kicks off automatically i mean because of system parameters. The System has to keep keep an unalterable you know audit trail that automatically basically captures and stores information about all um the actions, create, read, update, delete, taken on the critical entities, so so case—
+Analyst: Sorry, just to check, is that list of entities fixed?
+Client: Let me finish the list: case, suspect, property and so on in the system. Plus the user who initiates or carries out the action, the date and time of the erm event, um and administrative uh parameters. And by "unalterable" I mean no user can modify the the audit trail data in any way or delete it. It uh can er be re-departmented and copied to removable media kind of if [crosstalk] needed, you know as long as the contents stay unchanged.
+TechLead: I'd add, and maybe this isn't strictly mandatory, but once the um audit trail functionality has been activated
+Analyst: Mm-hm.
+TechLead: the System should track events on its own, without any manual intervention.
+Analyst: Okay.
+TechLead: Um, and then store information about those events in the audit trail.
+Client: And on our side, the System has to keep that audit trail for basically as long as it's required,
+Analyst: Right.
+Client: which means at least for the life actually of the case it refers to.
+Analyst: Got it. Let's move to the access module. How should access and permissions work there?
+TechLead: So the System has to to allow changes to security attributes for groups
+Client: Okay.
+TechLead: or for users, things like access rights,
+Analyst: Mm-hm.
+TechLead: Uhm, security level, privileges, you know password allocation
+Analyst: Sure.
+TechLead: and management, but those changes can only be made by the super-user.
+Client: And then, if a user asks asks for access to
+TechLead: Yeah.
+Client: Er, or searches for um a case case
+Client: Uhm, that he doesn't have the right to access,
+Analyst: Okay.
+Client: Um, the System has to give one of these responses, and which one is selectable at configuration time. One, show the title and metadata. Two, show that the case exists but not not its title or um any other metadata. Three, show no case information at all and don't indicate in any way that it exists. Those [noise] uh go in order of increasing security. And um note that the third one, the most stringent, means the System um must not include those cases in any count of search results either. That level of security is normally what you'd want for cases dealing kind of with things like national security.
+Analyst: Understood.
+Client: And another one on search. If someone runs a um quick search erm or an advanced search, the System er must never put in the result list any record—
+Analyst: Uh, Sorry, quick or advanced, both?
+Client: Both, yes. Any record that well the user doesn't have the right to access. Those should basically never show up.
+Analyst: Er, Got it. Anything you know else uh on the access module?
+TechLead: No, that's it from me.
+Analyst: Okay, i mean let's move on to usability. What do you actually expect there?
+Client: Well, the user interfaces should be—
+TechLead: Sorry, go ahead.
+Client: No problem. They should be designed so they're like user-intuitive.
+TechLead: And the user interfaces of the system should...
+TechLead: Actually, one specific uh thing: providing text equivalents for non-text media objects.
+Client: Okay.
+TechLead: Uh, So all the non-text media objects, kind of things like graphical images
+Analyst: Right.
+TechLead: or i mean video, they [pause] should come with alternative equivalent textual descriptions
+TechLead: Uhm, and/or equivalent text-based functionality.
+Client: Yes, that makes sense.
+TechLead: Also, the navigation should be self-expl... sorry, self-descriptive. It should be designed so users understand where kind of they are, where they've been like and where they can go next. There's general guidance on self-descriptiveness er in ISO 9241-110.
+Analyst: Okay, noted.
+Client: Agreed, that's important.
+Client: Next one, minimizing navigation effort. We want as few navigation steps as possible to get to any given piece of content, but only as long as we're still accounting for the administrator's different mental models, er navigation strategies and and tasks.
+TechLead: I'd frame that differently. Minimize the navigation steps to reach i mean content, yes, but the mental models, navigation strategies and tasks we take into uh account should uh be the user's, not the administrator's.
+Client: Er, I still think it should uhm be the administrator. That's who I had in mind for this one.
+Analyst: Let's not settle that right now. I'll mark it open and we'll come back to it later.
+Client: Uh, Splash screens. Let's avoid um them unless they actually give the user useful content or some feedback on the application state. And if we basically do use one, there erm has to be a navigation option uh to skip it.
+TechLead: Wait, I don't think that's right. Splash screens should be avoided unless they provide useful content or feedback about the application actually state to the manager. If a splash screen is used, a navigation option to to skip it should be offered.
+Client: Er, No, I really like think this is about the user. That's the point of it.
+Analyst: Okay, let's park this one too and decide later.
+Client: Then, avoiding unnecessary windows. Extra windows, new browser windows or um pop-ups, should only open if they actually support the user's task. New windows can distract, confuse or get in the way of users for uh lots of uh reasons. They can sit er on top of the main actually window and hide relevant information. They well can make the navigation structure harder to understand mentally, which hurts both usability and accessibility. And users have to to take extra actions basically to close the uhm windows they didn't want.
+Analyst: Got it.
+Client: Another erm one is about making user interfaces robust,
+TechLead: Mm-hm.
+Client: meaning the interfaces should hold up as well um as possible as technology changes. So you know content built with newer technologies should still display on older user agents, and the content should also be designed to stay usable with future technologies.
+Analyst: Okay.
+Client: And then acceptable opening and download times.
+Analyst: Right.
+Client: The application pages need to be designed and implemented
+Analyst: Yeah.
+Client: Uh, so the opening times are acceptable.
+TechLead: Makes sense.
+Client: and actually download actually times too, across the range of technical contexts we expect, uh so things like the bandwidth between the application and the user. And that matters most for the sort of pages people hit a lot, or the basically ones that are key for navigating and exploring, the home page for kind of instance.
+TechLead: Another one from my side is giving clear error messages, sort of so
+Analyst: Okay.
+TechLead: the content of the error messages that show up on the pages
+Analyst: Right.
+TechLead: or on you know dedicated error pages should spell out clearly why the error happened, and... there were a few exceptions to that, but I I can't recall them right now.
+TechLead: Then text quality. The The spelling and grammar in uhm the textual content should be good enough that i mean it doesn't get in the way of basically readability.
+Client: Do we really need like that that written down? Feels like a lot of effort for something that's low priority.
+TechLead: I'd keep it. It's genuinely important for us, and sort of if it's not stated it tends to slip.
+Analyst: Okay, let's keep it in the list.
+Client: Distinguishable within-page links: Within-page links should be um clearly distinguishable from other links that lead to a different like page. EX. Within-page erm links are shown with dashed rather than solid underlines.
+TechLead: Is that really worth it? It seems like extra effort for not much priority.
+Client: I think it matters, honestly. It's important for us.
+Analyst: Um, Let's leave that erm one open for now basically and come back to it later.
+Client: Related to that, navigation links should be clearly distinguishable from controls that trigger some action. The usual well kinds of actually actions in an interface are things like i mean manipulating application data—
+TechLead: Sorry, just just uh to check, kind of controls like buttons?
+Client: Er, Yeah, so going on: performing searches, communication actions like opening a new er e-mail window or well starting a chat, and presentation actions like sorting a list of search results.
+Client: And then providing printable erm versions of documents, so
+Analyst: Mm-hm.
+Client: if a document is either too long
+Analyst: Okay.
+Client: or it's spread out over several pages,
+TechLead: Right.
+Client: or it's in some specific layout that actually just doesn't work uhm for reading online, then we should offer a printer-friendly version that prints like the sort of content in a sort of way the user finds acceptable, so the expected layout, the paper format, or the orientation, you know that kind of thing.
+Client: And then picking erm the right page length, maybe. I'd say the length of a page should fit its main purpose and how uh it's er used. Short pages generally make more sense for homepages, navigation pages, or overview pages that people need to read quickly. Longer pages can make more sense when users want to read um without interruptions, um or when the page has to match a paper counterpart. It'd be nice if we followed that, anyway.
+Client: Er, Next one is using frames carefully,
+Analyst: Mm-hm.
+Client: so well if we erm do use frames,
+Analyst: Okay.
+Client: we need to uh be careful to avoid the possible problems,
+Analyst: Sure.
+Client: for instance the ones with the back button, bookmarking pages, or erm scrolling through information. And basically when
+TechLead: Can I add one? Linking back kind of to the home page or to landmark pages,
+Analyst: Go ahead.
+TechLead: so every page uh should have a link that takes you to to the application's home page, or to a landmark page the user can easily recognize.
+Client: Good. And also a site, sorry, providing a site map,
+TechLead: Yeah.
+Client: meaning a separate navigation overview,
+Analyst: Got it.
+Client: like a site you know map, for the actually application, that you know shows the structure of the site as an like overview.
+Analyst: Okay.
+TechLead: Er, And building on that, there's the point about placing the navigation um components consistently,
+Client: Right.
+TechLead: Uh, And navigation uhm components should be placed consistently on the pages... well, anyway, we can come back to that.
+Client: Then we we need to think about the users' — sorry, let me put sort of it properly um — we need to take account of the basically users' tasks and what information they need,
+Analyst: Mm-hm.
+Client: especially when kind of we're giving people different access paths,
+Analyst: Okay.
+Client: or different navigation structures for different user groups,
+Client: then the tasks and information needs of those particular user groups have to be considered.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+Client: Uh, Another one uhm is making uhm individualization and adaptation evident,
+TechLead: Okay.
+Client: It should be made evident to to the uhm user.
+Client: whenever individualization, i mean adaptation, or both are being used.
+Client: And related to that, user profiles should be evident too. So if we're using predefined profiles actually or profiles the user sets up uhm themselves to individualize or um adapt the content, it should be clear which profile is currently active. And if profiles are used at all, users need to to be told about the concept and what it means for kind of them.
+TechLead: I'm not sure we really need that one. It's a fair bit uhm of effort, uh and I'd question whether it's a priority right now.
+Client: I'd push back on that. For us it's genuinely important, so I'd really uh like to keep it in.
+Analyst: Okay, let's leave this one open open for now and come back to decide on it later.
+Client: And you know then there's letting users see and change their profiles, so
+Analyst: Okay.
+Client: Erm, if we're going with well profiles well that the basically user specifies themselves,
+Analyst: Right.
+Client: then users should be able to see that profile, modify it,
+Analyst: Mm-hm.
+Client: and delete it whenever they want, on demand.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+Analyst: Anything else on usability before we stop?
+Client: No, that's it for usability.
+Analyst: Great, thanks everyone. Let's uh wrap up here uh and pick it up again next meeting.

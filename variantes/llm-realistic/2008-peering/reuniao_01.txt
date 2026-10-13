@@ -1,0 +1,60 @@
+Meeting 1 of 2 (kickoff)
+Participants: Analyst, Client, EndUser
+
+Analyst: Hi everyone, thanks for sort of joining. This is the kickoff, the first of two meetings like on the internetworking of content delivery networks through peering. Let's start with some background.
+Client: Sure. So the idea is that uh the final product enables CDN peering, meaning distinct CDNs internetwork and deliver content in a coordinated, cooperative way. That lets providers rapidly scale out to handle both flash crowds and um anticipated increases in demand, and it removes the need for any single CDN to provision kind of all the resources uhm itself. Now, whether the peering er is ad-hoc or planned, it needs i mean fundamental research on the core problems: measuring and disseminating load information, doing er request assignment and redirection, enabling content replication, and working out appropriate er compensation among the participants, um all at a geographically distributed, Internet scale. actually In a single CDN those issues are deeply interrelated and co-dependent. Here the main thrust is to handle them in a coordinated and cooperative manner across many peered CDNs, while still satisfying the complex multi-dimensional constraints each individual provider has.
+Analyst: Great, thanks. sort of Let's talk about service registration. What do we um need uh there?
+EndUser: Well, first, there's a defined format kind of for describing the service information.
+Analyst: Okay.
+EndUser: Uh, And the interaction protocol is defined too, between i mean the Web Web Server and the SR, and between the SR and the uh mediator.
+Analyst: Got it.
+Client: On our side, we have policies in place for resource provisioning, delegation and reservation.
+Analyst: Right.
+Client: And there's an established norm that um any resource failure gets reported.
+Analyst: Okay, noted.
+EndUser: Yeah, that's right.
+Analyst: Let's move on to triggers. What kicks things off?
+Client: Um, So I think, maybe, service registration would get triggered whenever any one of these happens, and I'm not kind of totally sure it's all mandatory, but
+EndUser: Mm-hm.
+Client: one, when a provider starts operating and its resources become available,
+Analyst: Okay.
+Client: Erm, two, when resource information that was registered before needs updating,
+Client: three, when there's a traffic surge and we need the sort of available local resource information, and i mean four, when local and delegated external resource information has to be encapsulated in erm an SR instance that's part of an established peering arrangement.
+Analyst: Uh, Thanks. Staying on triggers, uh can erm we basically dig into those a bit more?
+Analyst: Erm, Okay, let's move on to exceptions. What should happen when things um don't go as planned?
+EndUser: Well, one thing is that malicious requests have to be detected and then rejected.
+Analyst: Got it.
+Client: And we're assuming the web servers have already replicated the content they need.
+EndUser: Yeah, that's right.
+EndUser: We also need i mean to uhm consider both the anticipated and the unanticipated user requests, so the traffic we expect and the traffic we don't.
+Analyst: Okay.
+Client: Yes, definitely.
+EndUser: Then, if the user requests can't be accepted according to the provider policies,
+Analyst: Mm-hm.
+EndUser: then the service requirements just don't get passed on to the local PA.
+Client: Agreed, that makes sense.
+Client: On our side, the format of the sort of service requirements is defined.
+Analyst: Right.
+Client: Erm, And the interaction protocols are defined too, so mediator to SR, mediator to PR, and mediator to PA.
+Analyst: Okay.
+Client: The mediator erm works in conjunction with the...
+Client: Anyway, the interaction protocols between the PAs are identified as well.
+EndUser: Do we really need that one now, though? It feels like um a lot sort of of effort for something that might not um be a priority.
+Client: Um, I'd keep it. basically It's really important for us, uhm so sort of [laughter] I don't want to drop it.
+Analyst: Alright, I think we keep that one in. It stays on the list.
+Client: Um, Another one: when malicious erm requests come in, the kind of system sort of needs to spot them and actually do something about them.
+Analyst: Got it.
+Client: And we already have policies in place for long-term peering arrangements, so those [pause] exist today.
+Analyst: Okay.
+EndUser: Er, On our side, there's a procedure for doing short-term negotiation.
+Analyst: So there's a defined procedure for handling the short-term negotiations, is that right?
+EndUser: Yes, exactly.
+EndUser: And that negotiation happens between selected CDN peers, not with everyone.
+Analyst: Makes sense.
+EndUser: Uhm, The assumption there is that the primary CDN has already got enough external resources lined up.
+EndUser: Uhm, Also, the functional policies get identified you know and then deployed.
+Analyst: Okay, noted.
+EndUser: Effective content delivery is ensured through SLA satisfaction, if that makes sense.
+Analyst: Right.
+Client: Yes, that's the key point.
+Analyst: Um, Great, that's a good place to stop for today. Thanks everyone, uhm we'll pick up from here next time.

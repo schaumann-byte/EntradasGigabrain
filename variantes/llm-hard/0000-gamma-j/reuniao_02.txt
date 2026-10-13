@@ -1,0 +1,49 @@
+Meeting 2 of 4 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get going. erm This is our second session on Gamma-J Connecting Retailers through the i mean World, the follow-up like from from last time.
+EndUser: Um, Good to see everyone again. Busy week on my end.
+Analyst: Quick recap: last time we covered the operating environment, um the user documentation and basically customer accounts. A few points were left open, so we'll come back to those.
+EndUser: Before we dive in, one thing on order confirmation. Maybe customers could confirm the order after checkout? I'm kind of not sure well it's a uhm must, but it'd actually be nice.
+Analyst: Uhm, Can you be a bit more specific about how that basically confirmation would work?
+EndUser: Honestly, I haven't thought it through that far. Just some way uhm to confirm it.
+EndUser: And if the order's wrong, the customer should be able to go back, revise it and update it.
+Analyst: Okay, got it.
+EndUser: Then after that that they'd get um a erm confirmation email with the specific details of their order.
+Analyst: Right.
+Analyst: Let's move move on to the WebOrder sort of browser interface. What do we need there?
+Client: So the WebOrder order database has to talk to the account system through a programmatic interface, for the billing operations.
+EndUser: Um, Do we really need that right now? Sounds like a lot uhm of erm effort for something that might not be a priority.
+Client: Um, It basically is a priority for us, though. Billing is erm really important to the business, we can't leave that out.
+Analyst: Uh, Okay, we'll keep it in.
+TechLead: Uh, There's also the inventory side. i mean Maybe WebOrder should send the info on the items customers order over to the Inventory management system, like through a programmatic interface. I'm not sure it's mandatory, but it'd actually be nice.
+Analyst: What exactly would that uh interface look um like?
+TechLead: Um, Hard to say at this point. We'd have to work that out later.
+Analyst: Fair enough. What you know about communications interfaces?
+TechLead: One thing there: whenever customers or sales people have um a technical query, the WebOrder uhm system has to email it to the System Administrator.
+Client: Do we really er need that e-mail to the admin, though? Feels like extra effort uhm for something that's not a priority right now.
+TechLead: I'd push um back on that. It's important for us, I'd really rather keep sort of it in.
+Analyst: Okay, let's leave that one open for now and come back to you know it later.
+TechLead: Uh, Then maybe, uh and I'm not sure it's a kind of must, it'd be nice if WebOrder sent the customer an e-mail confirmation saying the items they ordered will be actually delivered to their shipping address, uhm with the tracking number in there too.
+Analyst: Anything else on communications interfaces?
+Client: No, that's it.
+Client: And uh as we i mean said, customers won't be able to register, um log in, and log out of their accounts.
+Analyst: Alright, let's basically move move on to safety requirements. What do you like need there?
+Client: Uhm, So the system's well going to do periodic backups over a live internet connection.
+EndUser: Yeah, that makes sense.
+Analyst: Good. What about security requirements?
+TechLead: So the system should auto detect IP DOS attacks
+Client: Okay.
+TechLead: Um, and then block the IP automatically.
+Analyst: Got it.
+EndUser: Yes, definitely need that.
+TechLead: Maybe kind of also, actually if it's not overkill, the well system could validate erm credit cards against like fraud.
+Client: And it has to be basically protected by i mean an open source firewall called Firestarter, that's at http://www.fs-security.com/.
+TechLead: Is the firewall really something we need to spec? Seems like a lot of effort for this phase.
+Client: I think we do. It matters a a lot to us, I don't want to drop it.
+Analyst: Okay, I hear both sides, but let's keep the Firestarter firewall requirement like in for now. It matters to the client, so it stays.
+Client: Next one on security: all customer data in the database needs to be encrypted. All of it, not just some well fields.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+Client: And the system sort of should be able to detect when someone has several failed login attempts in a row.
+Analyst: Alright, I think that's a good place to stop er for today. We'll pick up from here next time. Thanks, everyone.

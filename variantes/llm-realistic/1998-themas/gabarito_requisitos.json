@@ -1,0 +1,5850 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "1998-themas",
+  "doc_title": "THEMAS The Energy Management System SOFTWARE REQUIREMENTS SPECIFICATION",
+  "source_file": "PURE/requirements-xml/1998 - themas.xml",
+  "mode": "meetings",
+  "variant": "llm-realistic",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:invented_number": 1,
+      "fallback:lost_content": 4,
+      "llm_accepted": 241,
+      "llm_accepted_content": 100,
+      "turns": 246,
+      "windows": 13
+    }
+  },
+  "input": {
+    "n_meetings": 2,
+    "n_chars": 17966,
+    "n_words": 3023,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "load h/c unit definitions",
+          "load thermostat definitions",
+          "load utilization parameters",
+          "set overtemp values",
+          "establish valid temperature range",
+          "initialize system",
+          "validate temperature",
+          "determine temperature status",
+          "determine h/c mode",
+          "determine status of all h/c units"
+        ],
+        "n_chars": 9497,
+        "n_words": 1606,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 261,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 270,
+            "end": 786,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T3",
+            "start": 796,
+            "end": 894,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T4",
+            "start": 904,
+            "end": 942,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0011",
+                "role": "part1",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 952,
+            "end": 958,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T6",
+            "start": 968,
+            "end": 1047,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0011",
+                "role": "part2",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T7",
+            "start": 1057,
+            "end": 1103,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0012",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T8",
+            "start": 1113,
+            "end": 1189,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0012",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1199,
+            "end": 1206,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T10",
+            "start": 1217,
+            "end": 1240,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T11",
+            "start": 1250,
+            "end": 1412,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0013",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 1422,
+            "end": 1427,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T13",
+            "start": 1437,
+            "end": 1507,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T14",
+            "start": 1517,
+            "end": 1620,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0015",
+                "role": "part1",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 1630,
+            "end": 1636,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T16",
+            "start": 1646,
+            "end": 1694,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0015",
+                "role": "part2",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T17",
+            "start": 1704,
+            "end": 1749,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T18",
+            "start": 1759,
+            "end": 1897,
+            "speaker": "EndUser",
+            "act": "state",
+            "refs": [
+              {
+                "rid": "1998-themas:R0017",
+                "role": "distractor",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T19",
+            "start": 1908,
+            "end": 2107,
+            "speaker": "TechLead",
+            "act": "counter",
+            "gt_ids": [
+              "1998-themas:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0017",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 2117,
+            "end": 2186,
+            "speaker": "EndUser",
+            "act": "defend",
+            "refs": [
+              {
+                "rid": "1998-themas:R0017",
+                "role": "conflict",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 2196,
+            "end": 2358,
+            "speaker": "Analyst",
+            "act": "resolve",
+            "gt_ids": [
+              "1998-themas:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0017",
+                "role": "resolution",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 2368,
+            "end": 2443,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T23",
+            "start": 2452,
+            "end": 2554,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0018",
+                "role": "statement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 2564,
+            "end": 2676,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0018",
+                "role": "conflict",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 2685,
+            "end": 2738,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0018",
+                "role": "conflict",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 2748,
+            "end": 2846,
+            "speaker": "Analyst",
+            "act": "drop",
+            "gt_ids": [
+              "1998-themas:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0018",
+                "role": "resolution",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T27",
+            "start": 2856,
+            "end": 2919,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T28",
+            "start": 2928,
+            "end": 2984,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0023",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 2994,
+            "end": 3000,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T30",
+            "start": 3009,
+            "end": 3055,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0023",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 3065,
+            "end": 3071,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T32",
+            "start": 3080,
+            "end": 3177,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0023",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T33",
+            "start": 3187,
+            "end": 3194,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T34",
+            "start": 3204,
+            "end": 3227,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T35",
+            "start": 3236,
+            "end": 3387,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0020",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T36",
+            "start": 3398,
+            "end": 3503,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0020",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T37",
+            "start": 3512,
+            "end": 3566,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0020",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T38",
+            "start": 3576,
+            "end": 3640,
+            "speaker": "Analyst",
+            "act": "drop",
+            "gt_ids": [
+              "1998-themas:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0020",
+                "role": "resolution",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 3649,
+            "end": 3697,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0019",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T40",
+            "start": 3707,
+            "end": 3712,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T41",
+            "start": 3721,
+            "end": 3795,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0019",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T42",
+            "start": 3805,
+            "end": 3907,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0024",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T43",
+            "start": 3917,
+            "end": 3980,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0022",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T44",
+            "start": 3990,
+            "end": 4053,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0022",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T45",
+            "start": 4063,
+            "end": 4110,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T46",
+            "start": 4119,
+            "end": 4146,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T47",
+            "start": 4156,
+            "end": 4234,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T48",
+            "start": 4243,
+            "end": 4364,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0025"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0025",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T49",
+            "start": 4374,
+            "end": 4380,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T50",
+            "start": 4389,
+            "end": 4539,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0028",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T51",
+            "start": 4549,
+            "end": 4556,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T52",
+            "start": 4566,
+            "end": 4633,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0030",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T53",
+            "start": 4642,
+            "end": 4655,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T54",
+            "start": 4664,
+            "end": 4812,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0031"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0031",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 4822,
+            "end": 4827,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T56",
+            "start": 4838,
+            "end": 4856,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T57",
+            "start": 4865,
+            "end": 5091,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0032",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T58",
+            "start": 5101,
+            "end": 5142,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T59",
+            "start": 5152,
+            "end": 5179,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T60",
+            "start": 5189,
+            "end": 5277,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T61",
+            "start": 5286,
+            "end": 5389,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0035",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T62",
+            "start": 5399,
+            "end": 5404,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T63",
+            "start": 5413,
+            "end": 5496,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0034",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 5506,
+            "end": 5512,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T65",
+            "start": 5521,
+            "end": 5634,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0034",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T66",
+            "start": 5644,
+            "end": 5651,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T67",
+            "start": 5662,
+            "end": 5685,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T68",
+            "start": 5695,
+            "end": 5860,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0037",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T69",
+            "start": 5870,
+            "end": 5876,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T70",
+            "start": 5887,
+            "end": 5917,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T71",
+            "start": 5927,
+            "end": 6026,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0040"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0040",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T72",
+            "start": 6037,
+            "end": 6121,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0040",
+                "role": "conflict",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T73",
+            "start": 6131,
+            "end": 6214,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0040",
+                "role": "conflict",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T74",
+            "start": 6224,
+            "end": 6287,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1998-themas:R0040",
+                "role": "conflict",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T75",
+            "start": 6297,
+            "end": 6399,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0039"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0039",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T76",
+            "start": 6408,
+            "end": 6486,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0039",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T77",
+            "start": 6496,
+            "end": 6555,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0039",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T78",
+            "start": 6565,
+            "end": 6624,
+            "speaker": "Analyst",
+            "act": "drop",
+            "gt_ids": [
+              "1998-themas:R0039"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0039",
+                "role": "resolution",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T79",
+            "start": 6634,
+            "end": 6686,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T80",
+            "start": 6696,
+            "end": 6710,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T81",
+            "start": 6720,
+            "end": 6816,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T82",
+            "start": 6825,
+            "end": 6995,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0041"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0041",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T83",
+            "start": 7005,
+            "end": 7011,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T84",
+            "start": 7020,
+            "end": 7094,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0043",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T85",
+            "start": 7105,
+            "end": 7110,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T86",
+            "start": 7119,
+            "end": 7191,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0043",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T87",
+            "start": 7200,
+            "end": 7294,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0043",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T88",
+            "start": 7305,
+            "end": 7312,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T89",
+            "start": 7321,
+            "end": 7441,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0043",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T90",
+            "start": 7451,
+            "end": 7456,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T91",
+            "start": 7466,
+            "end": 7489,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T92",
+            "start": 7499,
+            "end": 7528,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0045",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T93",
+            "start": 7538,
+            "end": 7544,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T94",
+            "start": 7554,
+            "end": 7697,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0045",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T95",
+            "start": 7707,
+            "end": 7808,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T96",
+            "start": 7817,
+            "end": 8036,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0055",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M1:T97",
+            "start": 8046,
+            "end": 8051,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T98",
+            "start": 8061,
+            "end": 8120,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0049",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T99",
+            "start": 8129,
+            "end": 8146,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T100",
+            "start": 8156,
+            "end": 8249,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "1998-themas:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0049",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T101",
+            "start": 8259,
+            "end": 8298,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0052",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T102",
+            "start": 8308,
+            "end": 8313,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T103",
+            "start": 8323,
+            "end": 8353,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0052",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T104",
+            "start": 8363,
+            "end": 8369,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T105",
+            "start": 8379,
+            "end": 8456,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0052",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T106",
+            "start": 8466,
+            "end": 8473,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T107",
+            "start": 8483,
+            "end": 8550,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0046",
+                "role": "statement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T108",
+            "start": 8559,
+            "end": 8618,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0048"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0048",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T109",
+            "start": 8629,
+            "end": 8652,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T110",
+            "start": 8661,
+            "end": 8713,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "1998-themas:R0048"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0048",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T111",
+            "start": 8723,
+            "end": 8777,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0047",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T112",
+            "start": 8787,
+            "end": 8793,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T113",
+            "start": 8803,
+            "end": 8864,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0047",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T114",
+            "start": 8873,
+            "end": 8895,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T115",
+            "start": 8905,
+            "end": 9094,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0054"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0054",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M1:T116",
+            "start": 9105,
+            "end": 9224,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0054",
+                "role": "conflict",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M1:T117",
+            "start": 9234,
+            "end": 9321,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0054",
+                "role": "conflict",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M1:T118",
+            "start": 9330,
+            "end": 9385,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1998-themas:R0054",
+                "role": "conflict",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M1:T119",
+            "start": 9395,
+            "end": 9496,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "generate unit unavailable event",
+          "determine utilizations",
+          "generate h/c signal",
+          "generate alarm data",
+          "generate event data",
+          "change thermostat setting",
+          "generate reports"
+        ],
+        "n_chars": 8469,
+        "n_words": 1417,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 86,
+            "end": 218,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 228,
+            "end": 294,
+            "speaker": "Analyst",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 304,
+            "end": 541,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 551,
+            "end": 654,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 664,
+            "end": 724,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0056",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T6",
+            "start": 734,
+            "end": 740,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T7",
+            "start": 750,
+            "end": 829,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0056",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T8",
+            "start": 839,
+            "end": 845,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T9",
+            "start": 855,
+            "end": 893,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0056",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 903,
+            "end": 908,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T11",
+            "start": 918,
+            "end": 956,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0056",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 967,
+            "end": 974,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T13",
+            "start": 984,
+            "end": 1062,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0057",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T14",
+            "start": 1072,
+            "end": 1084,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T15",
+            "start": 1094,
+            "end": 1153,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0058"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0058",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T16",
+            "start": 1163,
+            "end": 1168,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T17",
+            "start": 1178,
+            "end": 1217,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0058"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0058",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T18",
+            "start": 1227,
+            "end": 1291,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0058"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0058",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1301,
+            "end": 1312,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T20",
+            "start": 1323,
+            "end": 1353,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T21",
+            "start": 1363,
+            "end": 1438,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T22",
+            "start": 1447,
+            "end": 1494,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0060",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T23",
+            "start": 1505,
+            "end": 1537,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T24",
+            "start": 1546,
+            "end": 1632,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "1998-themas:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T25",
+            "start": 1642,
+            "end": 1724,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T26",
+            "start": 1733,
+            "end": 1772,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0063"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0063",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T27",
+            "start": 1782,
+            "end": 1788,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T28",
+            "start": 1797,
+            "end": 1835,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0063"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0063",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T29",
+            "start": 1845,
+            "end": 1850,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T30",
+            "start": 1859,
+            "end": 1926,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0063"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0063",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T31",
+            "start": 1936,
+            "end": 1942,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T32",
+            "start": 1951,
+            "end": 2064,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0064"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0064",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T33",
+            "start": 2074,
+            "end": 2081,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T34",
+            "start": 2091,
+            "end": 2150,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0066"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0066",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T35",
+            "start": 2161,
+            "end": 2166,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T36",
+            "start": 2175,
+            "end": 2187,
+            "speaker": "Client",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M2:T37",
+            "start": 2197,
+            "end": 2217,
+            "speaker": "EndUser",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M2:T38",
+            "start": 2227,
+            "end": 2299,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0066"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0066",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T39",
+            "start": 2309,
+            "end": 2314,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T40",
+            "start": 2325,
+            "end": 2348,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T41",
+            "start": 2357,
+            "end": 2519,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0067"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0067",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T42",
+            "start": 2529,
+            "end": 2590,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0070"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0070",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T43",
+            "start": 2600,
+            "end": 2656,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0070"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0070",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T44",
+            "start": 2666,
+            "end": 2673,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T45",
+            "start": 2684,
+            "end": 2707,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T46",
+            "start": 2718,
+            "end": 2834,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1998-themas:R0011",
+                "role": "restatement",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T47",
+            "start": 2844,
+            "end": 2924,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T48",
+            "start": 2933,
+            "end": 2980,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0072"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0072",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T49",
+            "start": 2990,
+            "end": 2995,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T50",
+            "start": 3004,
+            "end": 3049,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0072"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0072",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T51",
+            "start": 3059,
+            "end": 3123,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1998-themas:R0072"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0072",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T52",
+            "start": 3132,
+            "end": 3145,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T53",
+            "start": 3154,
+            "end": 3274,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0073"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0073",
+                "role": "statement",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T54",
+            "start": 3285,
+            "end": 3381,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0073",
+                "role": "conflict",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T55",
+            "start": 3390,
+            "end": 3452,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1998-themas:R0073",
+                "role": "conflict",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T56",
+            "start": 3462,
+            "end": 3518,
+            "speaker": "Analyst",
+            "act": "drop",
+            "gt_ids": [
+              "1998-themas:R0073"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0073",
+                "role": "resolution",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T57",
+            "start": 3527,
+            "end": 3576,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0075"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0075",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T58",
+            "start": 3586,
+            "end": 3592,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T59",
+            "start": 3602,
+            "end": 3732,
+            "speaker": "EndUser",
+            "act": "state",
+            "refs": [
+              {
+                "rid": "1998-themas:R0076",
+                "role": "distractor",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T60",
+            "start": 3741,
+            "end": 3915,
+            "speaker": "Client",
+            "act": "counter",
+            "gt_ids": [
+              "1998-themas:R0076"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0076",
+                "role": "statement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T61",
+            "start": 3925,
+            "end": 4034,
+            "speaker": "EndUser",
+            "act": "defend",
+            "refs": [
+              {
+                "rid": "1998-themas:R0076",
+                "role": "conflict",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T62",
+            "start": 4044,
+            "end": 4121,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1998-themas:R0076",
+                "role": "conflict",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T63",
+            "start": 4131,
+            "end": 4212,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0077"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0077",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T64",
+            "start": 4222,
+            "end": 4228,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T65",
+            "start": 4238,
+            "end": 4357,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0077"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0077",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T66",
+            "start": 4367,
+            "end": 4373,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T67",
+            "start": 4383,
+            "end": 4429,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0077"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0077",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T68",
+            "start": 4439,
+            "end": 4446,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T69",
+            "start": 4456,
+            "end": 4495,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0079"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0079",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T70",
+            "start": 4505,
+            "end": 4510,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T71",
+            "start": 4520,
+            "end": 4555,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0079"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0079",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T72",
+            "start": 4565,
+            "end": 4570,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T73",
+            "start": 4580,
+            "end": 4629,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0080"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0080",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T74",
+            "start": 4639,
+            "end": 4645,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T75",
+            "start": 4655,
+            "end": 4693,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0080"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0080",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T76",
+            "start": 4703,
+            "end": 4816,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1998-themas:R0080"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0080",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T77",
+            "start": 4826,
+            "end": 4839,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T78",
+            "start": 4849,
+            "end": 4925,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T79",
+            "start": 4934,
+            "end": 4985,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0081",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T80",
+            "start": 4995,
+            "end": 5000,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T81",
+            "start": 5009,
+            "end": 5076,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0081",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T82",
+            "start": 5086,
+            "end": 5091,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T83",
+            "start": 5100,
+            "end": 5157,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0081",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T84",
+            "start": 5167,
+            "end": 5174,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T85",
+            "start": 5183,
+            "end": 5222,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0082"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0082",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T86",
+            "start": 5232,
+            "end": 5238,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T87",
+            "start": 5247,
+            "end": 5304,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0082"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0082",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T88",
+            "start": 5314,
+            "end": 5320,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T89",
+            "start": 5329,
+            "end": 5391,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0082"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0082",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T90",
+            "start": 5401,
+            "end": 5512,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1998-themas:R0082"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0082",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T91",
+            "start": 5521,
+            "end": 5534,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T92",
+            "start": 5543,
+            "end": 5651,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0083"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0083",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T93",
+            "start": 5662,
+            "end": 5685,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T94",
+            "start": 5695,
+            "end": 5748,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T95",
+            "start": 5757,
+            "end": 5771,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T96",
+            "start": 5781,
+            "end": 5861,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T97",
+            "start": 5870,
+            "end": 5934,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T98",
+            "start": 5944,
+            "end": 6034,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0086"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0086",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T99",
+            "start": 6043,
+            "end": 6048,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T100",
+            "start": 6058,
+            "end": 6115,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0086"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0086",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T101",
+            "start": 6125,
+            "end": 6132,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T102",
+            "start": 6142,
+            "end": 6208,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T103",
+            "start": 6218,
+            "end": 6388,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0089"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0089",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T104",
+            "start": 6397,
+            "end": 6415,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T105",
+            "start": 6424,
+            "end": 6508,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0090"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0090",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T106",
+            "start": 6518,
+            "end": 6524,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T107",
+            "start": 6533,
+            "end": 6590,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0090"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0090",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T108",
+            "start": 6599,
+            "end": 6658,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0091"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0091",
+                "role": "part1",
+                "pid": "P16"
+              }
+            ]
+          },
+          {
+            "id": "M2:T109",
+            "start": 6668,
+            "end": 6673,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T110",
+            "start": 6682,
+            "end": 6769,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0091"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0091",
+                "role": "part2",
+                "pid": "P16"
+              }
+            ]
+          },
+          {
+            "id": "M2:T111",
+            "start": 6779,
+            "end": 6919,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0093"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0093",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T112",
+            "start": 6929,
+            "end": 6935,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T113",
+            "start": 6945,
+            "end": 7015,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0094"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0094",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T114",
+            "start": 7026,
+            "end": 7031,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T115",
+            "start": 7041,
+            "end": 7083,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0094"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0094",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T116",
+            "start": 7093,
+            "end": 7098,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T117",
+            "start": 7108,
+            "end": 7160,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0094"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0094",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T118",
+            "start": 7170,
+            "end": 7177,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T119",
+            "start": 7187,
+            "end": 7375,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1998-themas:R0094"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0094",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T120",
+            "start": 7385,
+            "end": 7397,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T121",
+            "start": 7407,
+            "end": 7681,
+            "speaker": "EndUser",
+            "act": "followup",
+            "gt_ids": [
+              "1998-themas:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0046",
+                "role": "followup",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M2:T122",
+            "start": 7690,
+            "end": 7931,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0084"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0084",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T123",
+            "start": 7941,
+            "end": 7954,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T124",
+            "start": 7964,
+            "end": 8106,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T125",
+            "start": 8116,
+            "end": 8203,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1998-themas:R0087"
+            ],
+            "refs": [
+              {
+                "rid": "1998-themas:R0087",
+                "role": "statement",
+                "pid": "P15"
+              }
+            ]
+          },
+          {
+            "id": "M2:T126",
+            "start": 8213,
+            "end": 8264,
+            "speaker": "EndUser",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T127",
+            "start": 8274,
+            "end": 8468,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 60,
+    "n_primary_fr": 60,
+    "n_primary_nfr": 0,
+    "n_expected_in_output": 54,
+    "n_reachable": 58,
+    "by_status": {
+      "clear": 45,
+      "conflict_resolved": 1,
+      "conflict_open": 3,
+      "rejected": 4,
+      "ambiguous": 2,
+      "inconsistent": 1,
+      "incomplete": 2,
+      "omitted": 2
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 2,
+      "conflict:dropped": 4,
+      "conflict:open": 3,
+      "conflict:resolved": 1,
+      "incompleteness:completed_later": 1,
+      "incompleteness:open": 2,
+      "inconsistency:unnoticed": 1,
+      "omission:not_discussed": 2
+    },
+    "n_distractors": 1,
+    "n_issues": 8,
+    "messiness": {
+      "topic_revisits": 2,
+      "topics_out_of_document_order": 4,
+      "chunked_statements": 26,
+      "reactions": 13,
+      "self_introduced_topics": 2,
+      "interruptions": 3,
+      "smalltalk": 1,
+      "crosstalk": 1,
+      "false_starts": 2,
+      "offtopic": 2,
+      "meetings": 2
+    },
+    "mean_support_clear": 0.837
+  },
+  "requirements": [
+    {
+      "id": "1998-themas:R0011",
+      "text": "The THEMAS system shall control t he heating and cooling units that are defined as part of the THEMAS system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize Operational Parameters",
+          "Load H/C Unit Definitions (SRS -001)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "The THEMAS system shall not control t he heating and cooling units that are defined as part of the THEMAS system.",
+            "restated_in": "M2"
+          },
+          "segments": [
+            "M1:T4",
+            "M1:T6",
+            "M2:T46"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T4",
+          "M1:T6"
+        ],
+        "related_segments": [
+          "M1:T4",
+          "M1:T6",
+          "M2:T46"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0012",
+      "text": "The system shall read this file and the definitions shall be derived from the initialization data in the file.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize Operational Parameters",
+          "Load H/C Unit Definitions (SRS -001)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T7",
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T7",
+          "M1:T8"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0013",
+      "text": "Each thermostat shall have a unique identifier by which that thermostat is identified in the THEMAS system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize Operational Parameters",
+          "Load Thermostat Definitions (SRS -002)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T11"
+        ],
+        "related_segments": [
+          "M1:T11"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0015",
+      "text": "There shall be a maximum number of heating or cooling u nits that can be on at any given time.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize Operational Parameters",
+          "Load Thermostat Definitions (SRS -002)",
+          "Load Utilization Parameters (SRS -003)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "There shall be a maximum number of heating or cooling u nits that can be on at any given time."
+          },
+          "segments": [
+            "M1:T14",
+            "M1:T16"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T14",
+          "M1:T16"
+        ],
+        "related_segments": [
+          "M1:T14",
+          "M1:T16"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0017",
+      "text": "The THEMAS system shall ensure the temperature reported by a given thermostat shall not exceed a maximum deviation value of 3 degrees Fahrenheit.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.5.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize Operational Parameters",
+          "Load Thermostat Definitions (SRS -002)",
+          "Set Overtemp Values (SRS -005)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "conflict",
+          "kind": "value",
+          "outcome": "resolved",
+          "details": {
+            "original_value": "3 degrees",
+            "proposed_value": "15 degrees",
+            "proposed_text": "The THEMAS system shall ensure the temperature reported by a given thermostat shall not exceed a maximum deviation value of 15 degrees Fahrenheit.",
+            "raised_by": "TechLead",
+            "meeting": "M1",
+            "proposer": "EndUser"
+          },
+          "segments": [
+            "M1:T18",
+            "M1:T19",
+            "M1:T20",
+            "M1:T21"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T19",
+          "M1:T21"
+        ],
+        "related_segments": [
+          "M1:T18",
+          "M1:T19",
+          "M1:T20",
+          "M1:T21"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0018",
+      "text": "The THEMAS system shall only respond to temperatures that are within a reasonable value.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.6.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize Operational Parameters",
+          "Load Thermostat Definitions (SRS -002)",
+          "Establish Valid Temperature Range (SRS -006)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T23",
+            "M1:T24",
+            "M1:T25",
+            "M1:T26"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T23",
+          "M1:T26"
+        ],
+        "related_segments": [
+          "M1:T23",
+          "M1:T24",
+          "M1:T25",
+          "M1:T26"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0019",
+      "text": "When the THEMAS system is initialized, it shall first turn off all the heating and cooling units.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize System (SRS-007)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T39",
+          "M1:T41"
+        ],
+        "related_segments": [
+          "M1:T39",
+          "M1:T41"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0020",
+      "text": "Then , it shall check all the thermostats and determine if any thermostat's settings require a heating or cooling unit to be turned on back on.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize System (SRS-007)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T35",
+            "M1:T36",
+            "M1:T37",
+            "M1:T38"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T35",
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T35",
+          "M1:T36",
+          "M1:T37",
+          "M1:T38"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0022",
+      "text": "It shall then read the current temperature values and current temperature settings of each thermostat.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize System (SRS-007)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T43",
+          "M1:T44"
+        ],
+        "related_segments": [
+          "M1:T43",
+          "M1:T44"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0023",
+      "text": "If the settings reflect a need for a heating or cooling unit to be turned o n, the process shall issue a request to turn on the appropriate unit.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize System (SRS-007)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T28",
+          "M1:T30",
+          "M1:T32"
+        ],
+        "related_segments": [
+          "M1:T28",
+          "M1:T30",
+          "M1:T32"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0024",
+      "text": "This determination shall be made in accordance with the rules outlined in section 3.1.4.1 and 3.1.4.2.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Initialize System (SRS-007)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T42"
+        ],
+        "related_segments": [
+          "M1:T42"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0025",
+      "text": "The THEMAS system shall only respond to temperatures from the thermostats that are within the specified valid range.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Validate Temperature (SRS -008)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T48"
+        ],
+        "related_segments": [
+          "M1:T48"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0028",
+      "text": "A current temperature value that is received from an individual thermostat shall be compared to the valid temperature range values.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Validate Temperature (SRS -008)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T50"
+        ],
+        "related_segments": [
+          "M1:T50"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0030",
+      "text": "Otherwise, the THEMAS system shall output a valid temperature status.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Validate Temperature (SRS -008)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T52"
+        ],
+        "related_segments": [
+          "M1:T52"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0031",
+      "text": "A temperature setting value that is received from an individual thermostat shall be compared to the valid temperature range values.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Validate Temperature (SRS -008)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T54"
+        ],
+        "related_segments": [
+          "M1:T54"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0032",
+      "text": "If the temperature setting value is strictly less than the lower value of the valid temperature range or if the temperature setting value is strictly greater than the upper value of the valid temperature range, then the THEMAS system shall identify the temperature setting as an invalid temperature and shall output an invalid temperature status.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Validate Temperature (SRS -008)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T57"
+        ],
+        "related_segments": [
+          "M1:T57"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0034",
+      "text": "The THEMAS system shall determine wh en a reported temperature or a changed temperature setting exceeds the limits set by the overtemperature values.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine Temperature Status (SRS -009)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T63",
+          "M1:T65"
+        ],
+        "related_segments": [
+          "M1:T63",
+          "M1:T65"
+        ],
+        "support_score": 0.929,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0035",
+      "text": "Temperatures that exceed the overtemperature limits shall be reported as such.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine Temperature Status (SRS -009)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T61"
+        ],
+        "related_segments": [
+          "M1:T61"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0037",
+      "text": "The THEMAS system shall compare the reported temperature value to the temperature setting and detect when the temperature value exceeds the specified limits.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine Temperature Status (SRS -009)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T68"
+        ],
+        "related_segments": [
+          "M1:T68"
+        ],
+        "support_score": 0.727,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0039",
+      "text": "In this case this process shall output the condition of the temperature limit having been exceeded.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine Temperature Status (SRS -009)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T75",
+            "M1:T76",
+            "M1:T77",
+            "M1:T78"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T75",
+          "M1:T78"
+        ],
+        "related_segments": [
+          "M1:T75",
+          "M1:T76",
+          "M1:T77",
+          "M1:T78"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0040",
+      "text": "If LO = T = UO, then this process shall output the temperature status.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine Temperature Status (SRS -009)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T71",
+            "M1:T72",
+            "M1:T73",
+            "M1:T74"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T71"
+        ],
+        "related_segments": [
+          "M1:T71",
+          "M1:T72",
+          "M1:T73",
+          "M1:T74"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0041",
+      "text": "When the current temperature value exceeds the current temperature setting by a pre -defined amount, the THEMAS system shall activate the appropriate heating or cooling unit.s",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine H/C Mode (SRS -010)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T82"
+        ],
+        "related_segments": [
+          "M1:T82"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0043",
+      "text": "To clarify these conditions, the following definitions will be used: LT : Lower Trigger Value = TSET - TD UT : Upper Trigger Value = TSET + TD Condition 1: LT = T = UT This condition indicates the thermostat's current temperature setting is satisfied.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.2.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine H/C Mode (SRS -010)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T84",
+          "M1:T86",
+          "M1:T87",
+          "M1:T89"
+        ],
+        "related_segments": [
+          "M1:T84",
+          "M1:T86",
+          "M1:T87",
+          "M1:T89"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0045",
+      "text": "If this condition is true, then this module shall output a request to turn on the heating unit if LO = T LT or the cooling unit if UT T = UO.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.4.2.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Monitor Temperature",
+          "Determine H/C Mode (SRS -010)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T92",
+          "M1:T94"
+        ],
+        "related_segments": [
+          "M1:T92",
+          "M1:T94"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0046",
+      "text": "The THEMAS system shall control each of the heating and cooling units that are defined for the system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "and cooling units that are defined for the system.",
+            "stated_text": "The THEMAS system shall control each of the heating",
+            "completed_in": "M2"
+          },
+          "segments": [
+            "M1:T107",
+            "M2:T121"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T107",
+          "M2:T121"
+        ],
+        "related_segments": [
+          "M1:T107",
+          "M2:T121"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0047",
+      "text": "The THEMAS system shall limit the number of heating or cooling units t hat may be running simultaneously.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T111",
+          "M1:T113"
+        ],
+        "related_segments": [
+          "M1:T111",
+          "M1:T113"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0048",
+      "text": "The THEMAS system shall maintain the ON/OFF status of each heating and cooling unit.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T108",
+          "M1:T110"
+        ],
+        "related_segments": [
+          "M1:T108",
+          "M1:T110"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0049",
+      "text": "When a request to turn on or off a heating or cooling unit, the following processing will occur.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T98",
+          "M1:T100"
+        ],
+        "related_segments": [
+          "M1:T98",
+          "M1:T100"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0052",
+      "text": "If the maximum number of heating or cooling units is not running, this process will generate a request to turn on the requested unit.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T101",
+          "M1:T103",
+          "M1:T105"
+        ],
+        "related_segments": [
+          "M1:T101",
+          "M1:T103",
+          "M1:T105"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0054",
+      "text": "If the queue is not empty, this process shall remove one request from the LIFO queue and check the current state of the thermostat for which the queued request was made.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T115",
+            "M1:T116",
+            "M1:T117",
+            "M1:T118"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T115"
+        ],
+        "related_segments": [
+          "M1:T115",
+          "M1:T116",
+          "M1:T117",
+          "M1:T118"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0055",
+      "text": "If that thermostat still needs a heating o r cooling unit turned on, this process shall submit a request to turn that unit on.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Determine Status of All H/C Units (SRS -011)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "If that thermostat still needs a heating o r cooling unit turned on, this process shall submit a request to turn that unit on."
+          },
+          "segments": [
+            "M1:T96"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T96"
+        ],
+        "related_segments": [
+          "M1:T96"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0056",
+      "text": "When a request for a heating unit or cooling to be turned is denied, an event shall be generated and the THEMAS system shall record that event.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Generate Unit Unavailable Event (SRS -012)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T5",
+          "M2:T7",
+          "M2:T9",
+          "M2:T11"
+        ],
+        "related_segments": [
+          "M2:T5",
+          "M2:T7",
+          "M2:T9",
+          "M2:T11"
+        ],
+        "support_score": 0.909,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0057",
+      "text": "The information in these events will be used for creating statistical reports.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Generate Unit Unavailable Event (SRS -012)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T13"
+        ],
+        "related_segments": [
+          "M2:T13"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0058",
+      "text": "This procedure shall realize the thermostat and heating or cooling information and use this information to generate a specific system event.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.2.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Generate Unit Unavailable Event (SRS -012)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T15",
+          "M2:T17",
+          "M2:T18"
+        ],
+        "related_segments": [
+          "M2:T15",
+          "M2:T17",
+          "M2:T18"
+        ],
+        "support_score": 0.909,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0060",
+      "text": "The THEMAS system shall control the heating and cooling units that are designated as part of the THEMAS system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T22",
+          "M2:T24"
+        ],
+        "related_segments": [
+          "M2:T22",
+          "M2:T24"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0061",
+      "text": "When a request to turn on or off a heating or cooling unit is made, this process shall generate the appropriate request to carry out that request.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.5.3.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Determine utilizations",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "1998-themas:R0063",
+      "text": "Once a request to turn on or off a heating or cooling unit, the THEMAS system shall provide the necessary control signal for the unit.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.6.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate H/C Signal (SRS -014)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T26",
+          "M2:T28",
+          "M2:T30"
+        ],
+        "related_segments": [
+          "M2:T26",
+          "M2:T28",
+          "M2:T30"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0064",
+      "text": "This control signal shall also provide an indication of the unit's status at the requesting thermostat.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.6.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate H/C Signal (SRS -014)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T32"
+        ],
+        "related_segments": [
+          "M2:T32"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0066",
+      "text": "The necessary signal to the heating or cooling unit will be generated.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.6.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate H/C Signal (SRS -014)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T34",
+          "M2:T38"
+        ],
+        "related_segments": [
+          "M2:T34",
+          "M2:T38"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0067",
+      "text": "Since the interface to con trol the units has not been defined, the part of this process that will issue the signal is designated as TBD(to be determined).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.6.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate H/C Signal (SRS -014)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T41"
+        ],
+        "related_segments": [
+          "M2:T41"
+        ],
+        "support_score": 0.692,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0070",
+      "text": "This ev ent shall contain the identification of the heating or cooling unit whose status is being changed.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.6.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate H/C Signal (SRS -014)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T42",
+          "M2:T43"
+        ],
+        "related_segments": [
+          "M2:T42",
+          "M2:T43"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0072",
+      "text": "This process shall determine which alarm event is to be generated.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T48",
+          "M2:T50",
+          "M2:T51"
+        ],
+        "related_segments": [
+          "M2:T48",
+          "M2:T50",
+          "M2:T51"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0073",
+      "text": "When the THEMAS system detects a request for an alarm, this process shall detect which of the two alarms are being requested.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P12",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T53",
+            "M2:T54",
+            "M2:T55",
+            "M2:T56"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T53",
+          "M2:T56"
+        ],
+        "related_segments": [
+          "M2:T53",
+          "M2:T54",
+          "M2:T55",
+          "M2:T56"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0075",
+      "text": "Each beep shall have a three - quarter second duration.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T57"
+        ],
+        "related_segments": [
+          "M2:T57"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0076",
+      "text": "This series of beeps shall continue until the supervisor manually resets the alarm through the supervisor's interface window.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P13",
+          "type": "conflict",
+          "kind": "actor",
+          "outcome": "open",
+          "details": {
+            "original_value": "the supervisor",
+            "proposed_value": "the registered user",
+            "proposed_text": "This series of beeps shall continue until the registered user manually resets the alarm through the supervisor's interface window.",
+            "raised_by": "Client",
+            "meeting": "M2",
+            "proposer": "EndUser"
+          },
+          "segments": [
+            "M2:T59",
+            "M2:T60",
+            "M2:T61",
+            "M2:T62"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T60"
+        ],
+        "related_segments": [
+          "M2:T59",
+          "M2:T60",
+          "M2:T61",
+          "M2:T62"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0077",
+      "text": "If the system detects a temperature limit has been exceeded, this process shall output a continuous series of alternating 1000 Hz and 1500 Hz beeps on the supervisor's computer.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T63",
+          "M2:T65",
+          "M2:T67"
+        ],
+        "related_segments": [
+          "M2:T63",
+          "M2:T65",
+          "M2:T67"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0079",
+      "text": "Each time an alarm is requested, an alarm event shall be recorded.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T69",
+          "M2:T71"
+        ],
+        "related_segments": [
+          "M2:T69",
+          "M2:T71"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0080",
+      "text": "This event shall be used to provide operational and statistical reports about the system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Alarm Data (SRS -015)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T73",
+          "M2:T75",
+          "M2:T76"
+        ],
+        "related_segments": [
+          "M2:T73",
+          "M2:T75",
+          "M2:T76"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0081",
+      "text": "For each event that is generated, the THEMAS system shall identify each event and generate the appropriate event data.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.8.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Event Data (SRS -016)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T79",
+          "M2:T81",
+          "M2:T83"
+        ],
+        "related_segments": [
+          "M2:T79",
+          "M2:T81",
+          "M2:T83"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0082",
+      "text": "When an event occurs, the THEMAS system shall identify the event type and format an appropriate event message.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.8.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Event Data (SRS -016)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T85",
+          "M2:T87",
+          "M2:T89",
+          "M2:T90"
+        ],
+        "related_segments": [
+          "M2:T85",
+          "M2:T87",
+          "M2:T89",
+          "M2:T90"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0083",
+      "text": "The THEMAS system shall record each event by a description and the c urrent system time for that event.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.8.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Event Data (SRS -016)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T92"
+        ],
+        "related_segments": [
+          "M2:T92"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0084",
+      "text": "This information shall be recorded in a Microsoft® Access® database that shall reside on the supervisor's computer.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.8.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Event Data (SRS -016)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T122"
+        ],
+        "related_segments": [
+          "M2:T122"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0085",
+      "text": "The THEMAS system shall provide the supervisor a mechanism to change the temperature setting of any of the thermostats in the system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.9.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Change Thermostat Setting (SRS -017)",
+          "Introduction"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P14",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "1998-themas:R0086",
+      "text": "The supervisor's interface shall display the available thermostats and their individual current temperature settings.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.9.4",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Change Thermostat Setting (SRS -017)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T98",
+          "M2:T100"
+        ],
+        "related_segments": [
+          "M2:T98",
+          "M2:T100"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0087",
+      "text": "The supervisor shall be able to select one of the thermostats and select a value for the current temperature from a list of valid temperatures.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.9.4",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Change Thermostat Setting (SRS -017)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P15",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "value for the current temperature from a list of valid temperatures.",
+            "stated_text": "The supervisor shall be able to select one of the thermostats and select a"
+          },
+          "segments": [
+            "M2:T125"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T125"
+        ],
+        "related_segments": [
+          "M2:T125"
+        ],
+        "support_score": 0.4,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0089",
+      "text": "The supervisor's interface to the THEMAS system shall provide a mechanism to select between an operational history report or a statistical summary report.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Reports (SRS-018)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T103"
+        ],
+        "related_segments": [
+          "M2:T103"
+        ],
+        "support_score": 0.692,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0090",
+      "text": "Either report shall consist of an ASCII file whose location and name shall be selectable by the operator.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Reports (SRS-018)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T105",
+          "M2:T107"
+        ],
+        "related_segments": [
+          "M2:T105",
+          "M2:T107"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0091",
+      "text": "If the operational history report is selected, the THEMAS system shall select all the events from the event database, sort the events by date and time, and create the ASCII report file.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Reports (SRS-018)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P16",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "the events by date and time, and create the ASCII report file.",
+            "stated_text": "If the operational history report is selected, the THEMAS system shall select all the events from the event database, sort"
+          },
+          "segments": [
+            "M2:T108",
+            "M2:T110"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T108",
+          "M2:T110"
+        ],
+        "related_segments": [
+          "M2:T108",
+          "M2:T110"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0093",
+      "text": "After selecting one of the months, the system shall generate the ASCII report file.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Reports (SRS-018)",
+          "Processing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T111"
+        ],
+        "related_segments": [
+          "M2:T111"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1998-themas:R0094",
+      "text": "The statistical reports shall consist of the following statistics: The percentage of time each heating and cooling unit was on for each day of that month; For each thermometer, the ratio of the number of requests for a heating and cooling unit that was granted to the number of requests for a heating or cooling unit that was denied.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Functional Requirements",
+          "Generate Reports (SRS-018)",
+          "Processing"
+        ],
+        "xml_element": "text_body+items",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T113",
+          "M2:T115",
+          "M2:T117",
+          "M2:T119"
+        ],
+        "related_segments": [
+          "M2:T113",
+          "M2:T115",
+          "M2:T117",
+          "M2:T119"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [
+    {
+      "id": "1998-themas:D001",
+      "text": "The THEMAS system shall ensure the temperature reported by a given thermostat shall not exceed a maximum deviation value of 15 degrees Fahrenheit.",
+      "requirement": "1998-themas:R0017",
+      "pid": "P3",
+      "kind": "rejected_proposal",
+      "segments": [
+        "M1:T18"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "1998-themas:I001",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1998-themas:R0011",
+      "pid": "P1",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M1:T4",
+        "M1:T6",
+        "M2:T46"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "The THEMAS system shall not control t he heating and cooling units that are defined as part of the THEMAS system.",
+        "restated_in": "M2"
+      }
+    },
+    {
+      "id": "1998-themas:I002",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1998-themas:R0015",
+      "pid": "P2",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T14",
+        "M1:T16"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "There shall be a maximum number of heating or cooling u nits that can be on at any given time."
+      }
+    },
+    {
+      "id": "1998-themas:I003",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "1998-themas:R0040",
+      "pid": "P7",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T71",
+        "M1:T72",
+        "M1:T73",
+        "M1:T74"
+      ],
+      "details": {
+        "raised_by": "TechLead",
+        "meeting": "M1"
+      }
+    },
+    {
+      "id": "1998-themas:I004",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "1998-themas:R0054",
+      "pid": "P9",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T115",
+        "M1:T116",
+        "M1:T117",
+        "M1:T118"
+      ],
+      "details": {
+        "raised_by": "TechLead",
+        "meeting": "M1"
+      }
+    },
+    {
+      "id": "1998-themas:I005",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1998-themas:R0055",
+      "pid": "P10",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T96"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "If that thermostat still needs a heating o r cooling unit turned on, this process shall submit a request to turn that unit on."
+      }
+    },
+    {
+      "id": "1998-themas:I006",
+      "type": "conflict",
+      "kind": "actor",
+      "requirement": "1998-themas:R0076",
+      "pid": "P13",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M2:T59",
+        "M2:T60",
+        "M2:T61",
+        "M2:T62"
+      ],
+      "details": {
+        "original_value": "the supervisor",
+        "proposed_value": "the registered user",
+        "proposed_text": "This series of beeps shall continue until the registered user manually resets the alarm through the supervisor's interface window.",
+        "raised_by": "Client",
+        "meeting": "M2",
+        "proposer": "EndUser"
+      }
+    },
+    {
+      "id": "1998-themas:I007",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1998-themas:R0087",
+      "pid": "P15",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T125"
+      ],
+      "details": {
+        "missing": "value for the current temperature from a list of valid temperatures.",
+        "stated_text": "The supervisor shall be able to select one of the thermostats and select a"
+      }
+    },
+    {
+      "id": "1998-themas:I008",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1998-themas:R0091",
+      "pid": "P16",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T108",
+        "M2:T110"
+      ],
+      "details": {
+        "missing": "the events by date and time, and create the ASCII report file.",
+        "stated_text": "If the operational history report is selected, the THEMAS system shall select all the events from the event database, sort"
+      }
+    }
+  ]
+}

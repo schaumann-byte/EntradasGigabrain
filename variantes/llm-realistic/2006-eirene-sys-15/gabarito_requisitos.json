@@ -1,0 +1,5233 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "2006-eirene-sys-15",
+  "doc_title": "UIC Projec t EIRENE System Requirements Specification",
+  "source_file": "PURE/requirements-xml/2006 - eirene sys 15.xml",
+  "mode": "meetings",
+  "variant": "llm-realistic",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:invented_number": 1,
+      "fallback:lost_content": 1,
+      "fallback:lost_number": 3,
+      "llm_accepted": 220,
+      "llm_accepted_content": 87,
+      "turns": 225,
+      "windows": 13
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 24753,
+    "n_words": 4152,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "railway specif services and facilities",
+          "coverage",
+          "handover and cell selection",
+          "frequency band and channel arrangements",
+          "termination of vgcs/vbs calls",
+          "muting and unmuting for vgcs calls",
+          "core environmental requirements",
+          "driver call-related functions"
+        ],
+        "n_chars": 5976,
+        "n_words": 979,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 279,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 288,
+            "end": 673,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T3",
+            "start": 683,
+            "end": 780,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T4",
+            "start": 789,
+            "end": 978,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0005",
+                "role": "statement",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 988,
+            "end": 1046,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T6",
+            "start": 1056,
+            "end": 1070,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T7",
+            "start": 1080,
+            "end": 1146,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T8",
+            "start": 1155,
+            "end": 1278,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0010",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1288,
+            "end": 1295,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T10",
+            "start": 1305,
+            "end": 1367,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T11",
+            "start": 1376,
+            "end": 1432,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0016",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 1441,
+            "end": 1511,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0016",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1521,
+            "end": 1526,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T14",
+            "start": 1536,
+            "end": 1617,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0015",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 1627,
+            "end": 1639,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T16",
+            "start": 1650,
+            "end": 1673,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T17",
+            "start": 1683,
+            "end": 1777,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T18",
+            "start": 1786,
+            "end": 1827,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0019",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T19",
+            "start": 1837,
+            "end": 1843,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T20",
+            "start": 1852,
+            "end": 1882,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0019",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 1892,
+            "end": 1904,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T22",
+            "start": 1913,
+            "end": 1979,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0019",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 1989,
+            "end": 2171,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0019",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 2180,
+            "end": 2193,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T25",
+            "start": 2202,
+            "end": 2322,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0021",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 2331,
+            "end": 2401,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0021",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T27",
+            "start": 2411,
+            "end": 2418,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T28",
+            "start": 2428,
+            "end": 2506,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T29",
+            "start": 2516,
+            "end": 2595,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T30",
+            "start": 2605,
+            "end": 2896,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0024",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 2907,
+            "end": 2912,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2922,
+            "end": 3259,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0026"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0026",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T33",
+            "start": 3269,
+            "end": 3275,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T34",
+            "start": 3286,
+            "end": 3309,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T35",
+            "start": 3319,
+            "end": 3398,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T36",
+            "start": 3407,
+            "end": 3528,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0068"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0068",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T37",
+            "start": 3538,
+            "end": 3579,
+            "speaker": "EndUser",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T38",
+            "start": 3588,
+            "end": 3606,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0068"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0068",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 3615,
+            "end": 3735,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0041"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0041",
+                "role": "part1",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T40",
+            "start": 3745,
+            "end": 3757,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T41",
+            "start": 3766,
+            "end": 3800,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0041"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0041",
+                "role": "part2",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T42",
+            "start": 3810,
+            "end": 3816,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T43",
+            "start": 3825,
+            "end": 3938,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0041"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0041",
+                "role": "part2",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T44",
+            "start": 3949,
+            "end": 4137,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0049",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T45",
+            "start": 4148,
+            "end": 4358,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0070"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0070",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T46",
+            "start": 4369,
+            "end": 4434,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0050",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T47",
+            "start": 4444,
+            "end": 4449,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T48",
+            "start": 4460,
+            "end": 4521,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0050",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T49",
+            "start": 4531,
+            "end": 4538,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T50",
+            "start": 4547,
+            "end": 4682,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0079"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0079",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T51",
+            "start": 4692,
+            "end": 4698,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T52",
+            "start": 4707,
+            "end": 4829,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0079"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0079",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T53",
+            "start": 4839,
+            "end": 4844,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T54",
+            "start": 4853,
+            "end": 4999,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0078"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0078",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 5009,
+            "end": 5015,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T56",
+            "start": 5025,
+            "end": 5053,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T57",
+            "start": 5062,
+            "end": 5122,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0075"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0075",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T58",
+            "start": 5132,
+            "end": 5139,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T59",
+            "start": 5148,
+            "end": 5241,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0075"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0075",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T60",
+            "start": 5251,
+            "end": 5262,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T61",
+            "start": 5272,
+            "end": 5289,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T62",
+            "start": 5298,
+            "end": 5440,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0081",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T63",
+            "start": 5451,
+            "end": 5465,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T64",
+            "start": 5475,
+            "end": 5541,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0076"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0076",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T65",
+            "start": 5551,
+            "end": 5563,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T66",
+            "start": 5573,
+            "end": 5648,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0076"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0076",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T67",
+            "start": 5657,
+            "end": 5670,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T68",
+            "start": 5679,
+            "end": 5804,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0084"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0084",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T69",
+            "start": 5814,
+            "end": 5839,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T70",
+            "start": 5849,
+            "end": 5975,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "mmi functions",
+          "handling of calls",
+          "other cab radio functions",
+          "environmental and physical",
+          "public address interface",
+          "other interfaces",
+          "numbering plan requirements",
+          "use of international eirene numbers",
+          "use of national eirene numbers"
+        ],
+        "n_chars": 9257,
+        "n_words": 1591,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 86,
+            "end": 214,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 225,
+            "end": 290,
+            "speaker": "TechLead",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 300,
+            "end": 506,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 516,
+            "end": 587,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 597,
+            "end": 941,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0093"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0093",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T6",
+            "start": 951,
+            "end": 1020,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T7",
+            "start": 1029,
+            "end": 1127,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0109"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0109",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T8",
+            "start": 1137,
+            "end": 1142,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T9",
+            "start": 1151,
+            "end": 1216,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0115"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0115",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 1226,
+            "end": 1232,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T11",
+            "start": 1241,
+            "end": 1312,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0115"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0115",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1323,
+            "end": 1329,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T13",
+            "start": 1338,
+            "end": 1435,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0115"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0115",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T14",
+            "start": 1445,
+            "end": 1452,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T15",
+            "start": 1462,
+            "end": 1485,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M2:T16",
+            "start": 1494,
+            "end": 1597,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0118"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0118",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T17",
+            "start": 1607,
+            "end": 1613,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T18",
+            "start": 1623,
+            "end": 1687,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T19",
+            "start": 1696,
+            "end": 1870,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0120"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0120",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T20",
+            "start": 1880,
+            "end": 1893,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T21",
+            "start": 1902,
+            "end": 2053,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0124"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0124",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T22",
+            "start": 2063,
+            "end": 2076,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T23",
+            "start": 2086,
+            "end": 2178,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T24",
+            "start": 2189,
+            "end": 2299,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0153"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0153",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T25",
+            "start": 2309,
+            "end": 2315,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T26",
+            "start": 2324,
+            "end": 2346,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T27",
+            "start": 2355,
+            "end": 2514,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0135"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0135",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T28",
+            "start": 2524,
+            "end": 2529,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T29",
+            "start": 2538,
+            "end": 2608,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0139"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0139",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T30",
+            "start": 2618,
+            "end": 2657,
+            "speaker": "EndUser",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T31",
+            "start": 2666,
+            "end": 2759,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0139"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0139",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T32",
+            "start": 2769,
+            "end": 2843,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T33",
+            "start": 2854,
+            "end": 2967,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0156"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0156",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T34",
+            "start": 2977,
+            "end": 3009,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T35",
+            "start": 3019,
+            "end": 3084,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0158"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0158",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T36",
+            "start": 3094,
+            "end": 3100,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T37",
+            "start": 3110,
+            "end": 3146,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0158"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0158",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T38",
+            "start": 3156,
+            "end": 3163,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T39",
+            "start": 3173,
+            "end": 3280,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T40",
+            "start": 3289,
+            "end": 3367,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0126"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0126",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T41",
+            "start": 3377,
+            "end": 3383,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T42",
+            "start": 3392,
+            "end": 3449,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0126"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0126",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T43",
+            "start": 3459,
+            "end": 3464,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T44",
+            "start": 3473,
+            "end": 3555,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0126"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0126",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T45",
+            "start": 3565,
+            "end": 3571,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T46",
+            "start": 3580,
+            "end": 3773,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0126"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0126",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T47",
+            "start": 3783,
+            "end": 3790,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T48",
+            "start": 3800,
+            "end": 3968,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0128"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0128",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T49",
+            "start": 3978,
+            "end": 4137,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0128"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0128",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T50",
+            "start": 4147,
+            "end": 4160,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T51",
+            "start": 4170,
+            "end": 4281,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T52",
+            "start": 4291,
+            "end": 4367,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T53",
+            "start": 4378,
+            "end": 4614,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0168"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0168",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T54",
+            "start": 4624,
+            "end": 4629,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T55",
+            "start": 4639,
+            "end": 4755,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T56",
+            "start": 4766,
+            "end": 4994,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0146"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0146",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T57",
+            "start": 5003,
+            "end": 5025,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T58",
+            "start": 5035,
+            "end": 5115,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T59",
+            "start": 5125,
+            "end": 5350,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0206"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0206",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T60",
+            "start": 5361,
+            "end": 5385,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T61",
+            "start": 5394,
+            "end": 5449,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0200"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0200",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T62",
+            "start": 5459,
+            "end": 5465,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T63",
+            "start": 5474,
+            "end": 5667,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0200"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0200",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T64",
+            "start": 5677,
+            "end": 5684,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T65",
+            "start": 5693,
+            "end": 5760,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0203"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0203",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T66",
+            "start": 5770,
+            "end": 5860,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T67",
+            "start": 5871,
+            "end": 5875,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T68",
+            "start": 5884,
+            "end": 6048,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0203"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0203",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T69",
+            "start": 6058,
+            "end": 6063,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T70",
+            "start": 6073,
+            "end": 6164,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T71",
+            "start": 6173,
+            "end": 6279,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0224"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0224",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T72",
+            "start": 6289,
+            "end": 6410,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0224",
+                "role": "conflict",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T73",
+            "start": 6419,
+            "end": 6490,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0224",
+                "role": "conflict",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T74",
+            "start": 6500,
+            "end": 6530,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0224"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0224",
+                "role": "resolution",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T75",
+            "start": 6540,
+            "end": 6594,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T76",
+            "start": 6603,
+            "end": 6617,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T77",
+            "start": 6627,
+            "end": 6685,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T78",
+            "start": 6694,
+            "end": 6734,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0218"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0218",
+                "role": "part1",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M2:T79",
+            "start": 6744,
+            "end": 6750,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T80",
+            "start": 6759,
+            "end": 8514,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0218"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0218",
+                "role": "part2",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M2:T81",
+            "start": 8523,
+            "end": 8778,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0219"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0219",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T82",
+            "start": 8788,
+            "end": 8801,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T83",
+            "start": 8811,
+            "end": 9036,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0216"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0216",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T84",
+            "start": 9046,
+            "end": 9065,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T85",
+            "start": 9076,
+            "end": 9111,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T86",
+            "start": 9121,
+            "end": 9256,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "use of short dialling codes",
+          "access to external networks",
+          "calls from external networks to the gsm-r network",
+          "function codes",
+          "access classes",
+          "functional numbering",
+          "re-establishment of functional number correlation",
+          "presentation of functional identities",
+          "provision of railway emergency calls",
+          "inter eirene network interfacing",
+          "receipt of railway emergency calls",
+          "system requirements: operational radio",
+          "system requirements"
+        ],
+        "n_chars": 9520,
+        "n_words": 1582,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 83,
+            "end": 197,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 207,
+            "end": 406,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T3",
+            "start": 416,
+            "end": 490,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T4",
+            "start": 500,
+            "end": 576,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T5",
+            "start": 585,
+            "end": 674,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0241"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0241",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T6",
+            "start": 684,
+            "end": 689,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T7",
+            "start": 698,
+            "end": 741,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0241"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0241",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 751,
+            "end": 758,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T9",
+            "start": 768,
+            "end": 878,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T10",
+            "start": 888,
+            "end": 1130,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0244"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0244",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1140,
+            "end": 1146,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1156,
+            "end": 1182,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T13",
+            "start": 1192,
+            "end": 1383,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0247"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0247",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T14",
+            "start": 1393,
+            "end": 1425,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M3:T15",
+            "start": 1434,
+            "end": 1448,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M3:T16",
+            "start": 1457,
+            "end": 3319,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0218"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0218",
+                "role": "followup",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M3:T17",
+            "start": 3329,
+            "end": 3389,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T18",
+            "start": 3400,
+            "end": 3667,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0249"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0249",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T19",
+            "start": 3677,
+            "end": 3718,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T20",
+            "start": 3727,
+            "end": 3811,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0258"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0258",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T21",
+            "start": 3821,
+            "end": 3833,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T22",
+            "start": 3842,
+            "end": 3930,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0258"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0258",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T23",
+            "start": 3940,
+            "end": 3946,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T24",
+            "start": 3955,
+            "end": 4055,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0258"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0258",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T25",
+            "start": 4064,
+            "end": 4137,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T26",
+            "start": 4147,
+            "end": 4379,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0258"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0258",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T27",
+            "start": 4388,
+            "end": 4401,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T28",
+            "start": 4410,
+            "end": 4708,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0267"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0267",
+                "role": "statement",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M3:T29",
+            "start": 4718,
+            "end": 4844,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0269"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0269",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T30",
+            "start": 4854,
+            "end": 4861,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T31",
+            "start": 4871,
+            "end": 5066,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0273"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0273",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T32",
+            "start": 5076,
+            "end": 5081,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T33",
+            "start": 5092,
+            "end": 5114,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T34",
+            "start": 5124,
+            "end": 5219,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T35",
+            "start": 5228,
+            "end": 5310,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0277"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0277",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T36",
+            "start": 5320,
+            "end": 5326,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T37",
+            "start": 5335,
+            "end": 5421,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0277"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0277",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T38",
+            "start": 5431,
+            "end": 5442,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T39",
+            "start": 5452,
+            "end": 5477,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T40",
+            "start": 5486,
+            "end": 5825,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0005",
+                "role": "followup",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T41",
+            "start": 5835,
+            "end": 5926,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T42",
+            "start": 5935,
+            "end": 6125,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0279"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0279",
+                "role": "statement",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M3:T43",
+            "start": 6135,
+            "end": 6338,
+            "speaker": "EndUser",
+            "act": "counter",
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0279",
+                "role": "distractor",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M3:T44",
+            "start": 6347,
+            "end": 6416,
+            "speaker": "Client",
+            "act": "defend",
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0279",
+                "role": "conflict",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M3:T45",
+            "start": 6426,
+            "end": 6611,
+            "speaker": "Analyst",
+            "act": "resolve",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0279"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0279",
+                "role": "resolution",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M3:T46",
+            "start": 6621,
+            "end": 6702,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T47",
+            "start": 6712,
+            "end": 6970,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0296"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0296",
+                "role": "statement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M3:T48",
+            "start": 6981,
+            "end": 7307,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0267",
+                "role": "restatement",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M3:T49",
+            "start": 7317,
+            "end": 7401,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T50",
+            "start": 7410,
+            "end": 7515,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0286"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0286",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T51",
+            "start": 7525,
+            "end": 7603,
+            "speaker": "EndUser",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T52",
+            "start": 7613,
+            "end": 7624,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T53",
+            "start": 7633,
+            "end": 7843,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0288"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0288",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T54",
+            "start": 7853,
+            "end": 7860,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T55",
+            "start": 7870,
+            "end": 7934,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T56",
+            "start": 7944,
+            "end": 7988,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0305"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0305",
+                "role": "part1",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T57",
+            "start": 7997,
+            "end": 8003,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T58",
+            "start": 8013,
+            "end": 8086,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0305"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0305",
+                "role": "part2",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T59",
+            "start": 8095,
+            "end": 8100,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T60",
+            "start": 8110,
+            "end": 8199,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0305"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0305",
+                "role": "part2",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T61",
+            "start": 8209,
+            "end": 8401,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0306"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0306",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T62",
+            "start": 8411,
+            "end": 8424,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T63",
+            "start": 8435,
+            "end": 8471,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T64",
+            "start": 8481,
+            "end": 8769,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0324"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0324",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T65",
+            "start": 8779,
+            "end": 8823,
+            "speaker": "Analyst",
+            "act": "interrupt"
+          },
+          {
+            "id": "M3:T66",
+            "start": 8833,
+            "end": 9061,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0324"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0324",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T67",
+            "start": 9071,
+            "end": 9184,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T68",
+            "start": 9194,
+            "end": 9321,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2006-eirene-sys-15:R0346"
+            ],
+            "refs": [
+              {
+                "rid": "2006-eirene-sys-15:R0346",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T69",
+            "start": 9331,
+            "end": 9519,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 60,
+    "n_primary_fr": 44,
+    "n_primary_nfr": 16,
+    "n_expected_in_output": 58,
+    "n_reachable": 58,
+    "by_status": {
+      "clear": 48,
+      "conflict_resolved": 2,
+      "ambiguous": 5,
+      "inconsistent": 1,
+      "incomplete": 2,
+      "omitted": 2
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 5,
+      "conflict:resolved": 2,
+      "incompleteness:completed_later": 2,
+      "incompleteness:open": 2,
+      "inconsistency:unnoticed": 1,
+      "omission:not_discussed": 2
+    },
+    "n_distractors": 1,
+    "n_issues": 8,
+    "messiness": {
+      "topic_revisits": 2,
+      "topics_out_of_document_order": 10,
+      "false_starts": 3,
+      "chunked_statements": 18,
+      "reactions": 15,
+      "self_introduced_topics": 4,
+      "offtopic": 6,
+      "interruptions": 3,
+      "smalltalk": 1,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.827
+  },
+  "requirements": [
+    {
+      "id": "2006-eirene-sys-15:R0005",
+      "text": "A follow-me service will be implemented in the EIRENE network using the GSM Unstructured Supplementary Service Data (USSD) facility to allow users to establish and terminate the forwarding of calls from a functional number to their personal number.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "1.4.3.6",
+        "section_path": [
+          "Introduction",
+          "System Overview",
+          "Railway specif services and facilities"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "terminate the forwarding of calls from a functional number to their personal number.",
+            "stated_text": "A follow-me service will be implemented in the EIRENE network using the GSM Unstructured Supplementary Service Data (USSD) facility to allow users to establish and",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M1:T4",
+            "M3:T40"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T4",
+          "M3:T40"
+        ],
+        "related_segments": [
+          "M1:T4",
+          "M3:T40"
+        ],
+        "support_score": 0.905,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0010",
+      "text": "This criterion will be met with a certain probability in the coverage area.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.1",
+        "section_path": [
+          "Network configuration",
+          "Coverage"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T8"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0015",
+      "text": "Suitable algorithms will be tested and refined as necessary during the trials process.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.2",
+        "section_path": [
+          "Network configuration",
+          "Handover and cell selection"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T14"
+        ],
+        "related_segments": [
+          "M1:T14"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0016",
+      "text": "300ms represents our current best estimate of the QoS figure, although this will need to be confirmed through user trials.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "keyword",
+      "confidence": 0.6,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "3.3.4",
+        "section_path": [
+          "Network configuration",
+          "Handover and cell selection"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T11",
+          "M1:T12"
+        ],
+        "related_segments": [
+          "M1:T11",
+          "M1:T12"
+        ],
+        "support_score": 0.692,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0019",
+      "text": "The network shall operate in a sub-band, or combination of sub-bands, of the R-GSM band as defined in [EN 301 515, Index [35]].",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.1",
+        "section_path": [
+          "Network configuration",
+          "Frequency band and channel arrangements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T18",
+          "M1:T20",
+          "M1:T22",
+          "M1:T23"
+        ],
+        "related_segments": [
+          "M1:T18",
+          "M1:T20",
+          "M1:T22",
+          "M1:T23"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0021",
+      "text": "The network shall terminate the ongoing VGCS/VBS call if it receives the 3-digit sequence \"***\" transmitted via DTMF signals.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.7.2",
+        "section_path": [
+          "Network configuration",
+          "Termination of VGCS/VBS calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T25",
+          "M1:T26"
+        ],
+        "related_segments": [
+          "M1:T25",
+          "M1:T26"
+        ],
+        "support_score": 0.917,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0024",
+      "text": "The network shall send the SET-PARAMETER message with the attribute \"D-ATT = T\"1 [EN 301 515, Index [6]] to the mobile station of the talking subscriber if it receives the 3- digit sequence \"###\" transmitted via DTMF or the group call SETUP message2 from a controller terminal.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.8.2",
+        "section_path": [
+          "Network configuration",
+          "Muting and unmuting for VGCS calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T30"
+        ],
+        "related_segments": [
+          "M1:T30"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0026",
+      "text": "When the network has detected the 3-digit DTMF sequence \"###\" transmitted via DTMF from a controller terminal and if the controller was not previously talking it should indicate its recognition by playing a single DTMF grant tone \"#\" of duration of 100ms ± 5ms to be sent to that controller terminal only.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "keyword",
+      "confidence": 0.5,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "3.8.3",
+        "section_path": [
+          "Network configuration",
+          "Muting and unmuting for VGCS calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T32"
+        ],
+        "related_segments": [
+          "M1:T32"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0041",
+      "text": "Many of the railway specific standards referenced are Pre-standards (eg [prEN 50155, ENV 50121, prEN 50125]) and should be re-examined for their applicability to the EIRENE system if any modifications are made to these standards in the future.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.5.6",
+        "section_path": [
+          "Mobile equipment core specification",
+          "Core environmental requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "the EIRENE system if any modifications are made to these standards in the future.",
+            "stated_text": "Many of the railway specific standards referenced are Pre-standards (eg [prEN 50155, ENV 50121, prEN 50125]) and should be re-examined for their applicability to"
+          },
+          "segments": [
+            "M1:T39",
+            "M1:T41",
+            "M1:T43"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T39",
+          "M1:T41",
+          "M1:T43"
+        ],
+        "related_segments": [
+          "M1:T39",
+          "M1:T41",
+          "M1:T43"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0049",
+      "text": "Operationally caused infrequent and slight moisture condensation shall not lead to any malfunction or failure.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "4.5.13",
+        "section_path": [
+          "Mobile equipment core specification",
+          "Core environmental requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Operationally caused infrequent and slight moisture condensation shall not lead to any malfunction or failure."
+          },
+          "segments": [
+            "M1:T44"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T44"
+        ],
+        "related_segments": [
+          "M1:T44"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0050",
+      "text": "All equipment shall not degrade photochemically when exposed to solar radiation of up to 1200 W/m2.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.5.14",
+        "section_path": [
+          "Mobile equipment core specification",
+          "Core environmental requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T46",
+          "M1:T48"
+        ],
+        "related_segments": [
+          "M1:T46",
+          "M1:T48"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0051",
+      "text": "In normal operation of a mobile radio unit, it shall be expected that a combination of the above environmental conditions will be experienced.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.5.15",
+        "section_path": [
+          "Mobile equipment core specification",
+          "Core environmental requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0068",
+      "text": "All EMC emission and immunity tests shall be performed in accordance with guidelines defined in the [EN 61000-4] series and in [EN 50140].",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.5.34",
+        "section_path": [
+          "Mobile equipment core specification",
+          "Core environmental requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T36",
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T36",
+          "M1:T38"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0070",
+      "text": "Specific environmental test procedures to be followed for EIRENE mobile equipment shall include the following tests as defined in the [IEC 68] series:",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.5.36",
+        "section_path": [
+          "Mobile equipment core specification",
+          "Core environmental requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": "M",
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Specific environmental test procedures to be followed for EIRENE mobile equipment shall include the following tests as defined in the [IEC 68] series:"
+          },
+          "segments": [
+            "M1:T45"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T45"
+        ],
+        "related_segments": [
+          "M1:T45"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0075",
+      "text": "Where these vehicles are not connected by on-train wiring, it shall be possible for a permanent radio connection to be established between each of the active cabs.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.7",
+        "section_path": [
+          "Cab radio",
+          "Driver call-related functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T57",
+          "M1:T59"
+        ],
+        "related_segments": [
+          "M1:T57",
+          "M1:T59"
+        ],
+        "support_score": 0.917,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0076",
+      "text": "Where there is more than one active cab, the radio connection shall be provided using the GSM Multi-Party service.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.8",
+        "section_path": [
+          "Cab radio",
+          "Driver call-related functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T64",
+          "M1:T66"
+        ],
+        "related_segments": [
+          "M1:T64",
+          "M1:T66"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0078",
+      "text": "Each of the other cabs on the train will be contacted using its functional number (registered by the other drivers prior to the establishment of the call).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.9",
+        "section_path": [
+          "Cab radio",
+          "Driver call-related functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T54"
+        ],
+        "related_segments": [
+          "M1:T54"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0079",
+      "text": "The multi-party call shall have 'Railway operation' priority (see section 10.2) and whilst on-going a 'multi-drivers' indication shall be displayed permanently at all Cab radios.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.9",
+        "section_path": [
+          "Cab radio",
+          "Driver call-related functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T50",
+          "M1:T52"
+        ],
+        "related_segments": [
+          "M1:T50",
+          "M1:T52"
+        ],
+        "support_score": 0.824,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0081",
+      "text": "A GSM point-to-point voice call at 'Railway operation' priority (see section 10.2) shall then be initiated.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.10",
+        "section_path": [
+          "Cab radio",
+          "Driver call-related functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T62"
+        ],
+        "related_segments": [
+          "M1:T62"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0084",
+      "text": "The Cab radio shall support shunting mode communications as defined in section 14.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.13",
+        "section_path": [
+          "Cab radio",
+          "Driver call-related functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T68"
+        ],
+        "related_segments": [
+          "M1:T68"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0093",
+      "text": "Upon detection (automatically or based on a list stored in the Cab radio) of the additional on-train functions for equipment physically connected to the Cab radio, a USSD message (see section 11) shall be sent by the Cab radio after activation of the registration or deregistration function.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.4.9",
+        "section_path": [
+          "Cab radio",
+          "MMI functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T5"
+        ],
+        "related_segments": [
+          "M2:T5"
+        ],
+        "support_score": 0.696,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0109",
+      "text": "It shall be possible to store a priority in association with a stored number.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5.13",
+        "section_path": [
+          "Cab radio",
+          "Handling of calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T7"
+        ],
+        "related_segments": [
+          "M2:T7"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0115",
+      "text": "The Cab radio shall arbitrate between calls when: an incoming call is received whilst the Cab radio is in an on-going call; ; a Cab radio user attempts to initiate a call whilst the Cab radio is in an on-going call. .",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5.20",
+        "section_path": [
+          "Cab radio",
+          "Handling of calls"
+        ],
+        "xml_element": "text_body+items",
+        "original_req_id": null,
+        "modifier": "M",
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T9",
+          "M2:T11",
+          "M2:T13"
+        ],
+        "related_segments": [
+          "M2:T9",
+          "M2:T11",
+          "M2:T13"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0118",
+      "text": "Replacing the handset shall result in the outcomes listed in Tables 5A-2 and 5A-3.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5.23",
+        "section_path": [
+          "Cab radio",
+          "Handling of calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T16"
+        ],
+        "related_segments": [
+          "M2:T16"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0120",
+      "text": "Incoming calls to the Cab radio shall be routed to the correct on-train user or device using information contained in the sub-addressing field.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6.1",
+        "section_path": [
+          "Cab radio",
+          "Other Cab radio functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T19"
+        ],
+        "related_segments": [
+          "M2:T19"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0124",
+      "text": "A means of directed network selection should be provided to ensure that the MS registers with the required network.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6.3",
+        "section_path": [
+          "Cab radio",
+          "Other Cab radio functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T21"
+        ],
+        "related_segments": [
+          "M2:T21"
+        ],
+        "support_score": 0.556,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0126",
+      "text": "If directed network selection is implemented and voice calls are ongoing at the time when the external device attempts to trigger a network change, an audible and visual indication shall be given to the driver and network change shall be deferred until the call is terminated or until coverage of the current network is lost.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6.4i",
+        "section_path": [
+          "Cab radio",
+          "Other Cab radio functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T40",
+          "M2:T42",
+          "M2:T44",
+          "M2:T46"
+        ],
+        "related_segments": [
+          "M2:T40",
+          "M2:T42",
+          "M2:T44",
+          "M2:T46"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0128",
+      "text": "The Cab radio should be capable of selecting the most appropriate mobile radio network automatically using the selection criteria stated in section 10.5.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6.5i",
+        "section_path": [
+          "Cab radio",
+          "Other Cab radio functions"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T48",
+          "M2:T49"
+        ],
+        "related_segments": [
+          "M2:T48",
+          "M2:T49"
+        ],
+        "support_score": 0.867,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0135",
+      "text": "The aerial and any other equipment mounted external to the train shall be capable of withstanding extremes of temperature from -40C to +70C.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.7.4",
+        "section_path": [
+          "Cab radio",
+          "Environmental and physical"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T27"
+        ],
+        "related_segments": [
+          "M2:T27"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0139",
+      "text": "Ease of maintenance should be taken into account in the design and installation of radio equipment.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.7.8",
+        "section_path": [
+          "Cab radio",
+          "Environmental and physical"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T29",
+          "M2:T31"
+        ],
+        "related_segments": [
+          "M2:T29",
+          "M2:T31"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0146",
+      "text": "An emergency power supply should be provided for Cab radios which will enable the driver's radio to continue to operate for a period of 6 hours in the event of failure of the train's main power supply, based on the following cycle (see section 4.5.21):",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "5.7.14",
+        "section_path": [
+          "Cab radio",
+          "Environmental and physical"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": "O",
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T56"
+        ],
+        "related_segments": [
+          "M2:T56"
+        ],
+        "support_score": 0.591,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0153",
+      "text": "The Cab radio shall pass electrical tests as defined in [IEC 571 parts 1, 2 and 3].",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.7.22",
+        "section_path": [
+          "Cab radio",
+          "Environmental and physical"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T24"
+        ],
+        "related_segments": [
+          "M2:T24"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0156",
+      "text": "If implemented, the Public Address interface should comply with the specifications of the UIC Fiche [UIC 568].",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "keyword",
+      "confidence": 0.5,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "5.11.1",
+        "section_path": [
+          "Cab radio",
+          "Public Address interface"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T33"
+        ],
+        "related_segments": [
+          "M2:T33"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0158",
+      "text": "Where other data interfaces are implemented, they should be of the RS422 standard.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.14.2",
+        "section_path": [
+          "Cab radio",
+          "Other interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T35",
+          "M2:T37"
+        ],
+        "related_segments": [
+          "M2:T35",
+          "M2:T37"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0168",
+      "text": "General purpose radios shall be equipped with rechargeable batteries capable of providing a minimum of eight hours operation over the temperature range +18°C to +25°C from a single charge, based on the following cycle (see section 4.5.21):",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "6.4.5",
+        "section_path": [
+          "General purpose radio",
+          "Environmental and physical"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": "M",
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T53"
+        ],
+        "related_segments": [
+          "M2:T53"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0200",
+      "text": "All Train Function Numbers and their associated MSISDN numbers shall be stored in the same routing database, which is the database of the GSM-R network in which the train is currently operating.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.2.3",
+        "section_path": [
+          "Numbering plan",
+          "Numbering plan requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T61",
+          "M2:T63"
+        ],
+        "related_segments": [
+          "M2:T61",
+          "M2:T63"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0203",
+      "text": "The Coach Function Number(s) and associated MSISDN number(s) shall at any time be stored as an entry in the routing database of the home GSM-R network of the coach.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.2.6",
+        "section_path": [
+          "Numbering plan",
+          "Numbering plan requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T65",
+          "M2:T68"
+        ],
+        "related_segments": [
+          "M2:T65",
+          "M2:T68"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0206",
+      "text": "Implementation of the EIRENE numbering plan shall not prohibit any authorised caller from using the MSISDN number where known, thus enabling mobiles to be assigned to particular personnel where this is appropriate.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.2.9",
+        "section_path": [
+          "Numbering plan",
+          "Numbering plan requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T59"
+        ],
+        "related_segments": [
+          "M2:T59"
+        ],
+        "support_score": 0.765,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0216",
+      "text": "Every railway network shall consider a number as a National EIRENE Number (NEN) unless the number is preceded by an International Code, identifying another GSM-R network.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.5.2",
+        "section_path": [
+          "Numbering plan",
+          "Use of National EIRENE Numbers"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T83"
+        ],
+        "related_segments": [
+          "M2:T83"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0218",
+      "text": "2) User Identifier Number: The User Identifier Number (UIN) shall be one of the following numbers (as identified by the CT): Train Number (TN): a number given to a train by operational staff for a particular journey. This number shall be unique for the duration of the journey. Note. For certain Train Numbers (e.g. 1234 and 123), a risk exists when dialling a number by keying in individual digits e.g. by the dispatcher. In this circumstance the risk of connecting to an un-intended train exists if there is a delay between keyed-in digits. There is no risk of ambiguity if block dialling is employed. Engine Number (EN): a unique number given to a tractive unit to identify it permanently. The UIC has introduced a uniform identification marking system for tractive stock crossing frontiers [UIC 438-3]. In order to call a particular locomotive, it shall be possible to call a number associated with the tractive unit's stock number. The actual number of the unit, which shall be used as the EN, is based on the complete identification number. Coach Number (CN): a unique number given to a coach (which is not a tractive unit) to identify it permanently. The UIC has introduced a uniform identification marking for passenger rolling stock [UIC 438-1]. In order to call a particular coach it shall be possible to call a number associated with the vehicle marking. The total vehicle marking consists of 12 digits. The actual number of the coach is denoted by seven digits (positions 5 to 11 of the complete vehicle marking), which shall be used as the CN7. Shunting Team Location Number (STLN) Maintenance Team Location Number (MTLN) Train Controller Location Number (TCLN) Group Location Number (GLN) Mobile Subscriber Number (MSN)",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.5.3",
+        "section_path": [
+          "Numbering plan",
+          "Use of National EIRENE Numbers"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": "M",
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "incompleteness",
+          "kind": "missing_value",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "12 digits",
+            "stated_text": "2) User Identifier Number: The User Identifier Number (UIN) shall be one of the following numbers (as identified by the CT): Train Number (TN): a number given to a train by operational staff for a particular journey. This number shall be unique for the duration of the journey. Note. For certain Train Numbers (e.g. 1234 and 123), a risk exists when dialling a number by keying in individual digits e.g. by the dispatcher. In this circumstance the risk of connecting to an un-intended train exists if there is a delay between keyed-in digits. There is no risk of ambiguity if block dialling is employed. Engine Number (EN): a unique number given to a tractive unit to identify it permanently. The UIC has introduced a uniform identification marking system for tractive stock crossing frontiers [UIC 438-3]. In order to call a particular locomotive, it shall be possible to call a number associated with the tractive unit's stock number. The actual number of the unit, which shall be used as the EN, is based on the complete identification number. Coach Number (CN): a unique number given to a coach (which is not a tractive unit) to identify it permanently. The UIC has introduced a uniform identification marking for passenger rolling stock [UIC 438-1]. In order to call a particular coach it shall be possible to call a number associated with the vehicle marking. The total vehicle marking consists of a certain number of digits. The actual number of the coach is denoted by seven digits (positions 5 to 11 of the complete vehicle marking), which shall be used as the CN7. Shunting Team Location Number (STLN) Maintenance Team Location Number (MTLN) Train Controller Location Number (TCLN) Group Location Number (GLN) Mobile Subscriber Number (MSN)",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M2:T78",
+            "M2:T80",
+            "M3:T16"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T78",
+          "M2:T80",
+          "M3:T16"
+        ],
+        "related_segments": [
+          "M2:T78",
+          "M2:T80",
+          "M3:T16"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0219",
+      "text": "1) Call Type (CT) This prefix defines how to interpret the User Number that follows. It shall consist of one or two digits as defined in table 9-1.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.5.4",
+        "section_path": [
+          "Numbering plan",
+          "Use of National EIRENE Numbers"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T81"
+        ],
+        "related_segments": [
+          "M2:T81"
+        ],
+        "support_score": 0.867,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0224",
+      "text": "The fields of an International Functional Number shall be defined as follows:",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.6.4",
+        "section_path": [
+          "Numbering plan",
+          "Use of International EIRENE Numbers"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": "M",
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T71",
+            "M2:T72",
+            "M2:T73",
+            "M2:T74"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T71",
+          "M2:T74"
+        ],
+        "related_segments": [
+          "M2:T71",
+          "M2:T72",
+          "M2:T73",
+          "M2:T74"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0231",
+      "text": "For certain functions, standardised short codes shall be implemented for mobile originated calls.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.8.1",
+        "section_path": [
+          "Numbering plan",
+          "Use of Short Dialling Codes"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0241",
+      "text": "Access to private networks shall be performed by using a BC, defined in table 9-12c.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.10.1v",
+        "section_path": [
+          "Numbering plan",
+          "Access to external networks"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T5",
+          "M3:T7"
+        ],
+        "related_segments": [
+          "M3:T5",
+          "M3:T7"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0244",
+      "text": "Access to the GSM-R network should be performed by dialling an EIRENE Network Access Number (ENAN)8, followed by the relevant National or International Functional Number as defined in subsections 9.5 and 9.6 respectively.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9.11.1",
+        "section_path": [
+          "Numbering plan",
+          "Calls from external networks to the GSM-R network"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T10"
+        ],
+        "related_segments": [
+          "M3:T10"
+        ],
+        "support_score": 0.812,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0247",
+      "text": "The Function Codes used in association with Maintenance Services Team Numbers (CT=6) shall conform to table 9A-2.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "9A.3",
+        "section_path": [
+          "Numbering plan",
+          "Function Codes"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The Function Codes used in association with Maintenance Services Team Numbers (CT=6) shall conform to table 9A-2."
+          },
+          "segments": [
+            "M3:T13"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T13"
+        ],
+        "related_segments": [
+          "M3:T13"
+        ],
+        "support_score": 0.917,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0249",
+      "text": "For consistent working on public networks and in international roaming, the use of access classes in a railway network shall comply with the GSM specification.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "keyword",
+      "confidence": 0.6,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "10.3.3",
+        "section_path": [
+          "Subscriber management",
+          "Access classes"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "For consistent working on public networks and in international roaming, the use of access classes in a railway network shall comply with the GSM specification."
+          },
+          "segments": [
+            "M3:T18"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T18"
+        ],
+        "related_segments": [
+          "M3:T18"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0258",
+      "text": "Mobile access to the functional numbering scheme for registration, deregistration and re-registration shall apply the USSD messages and protocols over the air interface as specified in the GSM Follow-me service.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.3.2",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Functional numbering"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T20",
+          "M3:T22",
+          "M3:T24",
+          "M3:T26"
+        ],
+        "related_segments": [
+          "M3:T20",
+          "M3:T22",
+          "M3:T24",
+          "M3:T26"
+        ],
+        "support_score": 0.944,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0267",
+      "text": "In the event of a registration procedure failing owing to the functional number already being registered to another mobile, the Cab radio shall be capable of providing the user with the ability to perform automatically the forced de-registration of the previously registered mobile and the registration of this functional number to the user's mobile.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.3.9i",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Functional numbering"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "inconsistency",
+          "kind": "actor",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "the user",
+            "conflicting_value": "the supervisor",
+            "conflicting_text": "In the event of a registration procedure failing owing to the functional number already being registered to another mobile, the Cab radio shall be capable of providing the supervisor with the ability to perform automatically the forced de-registration of the previously registered mobile and the registration of this functional number to the user's mobile.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M3:T28",
+            "M3:T48"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T28"
+        ],
+        "related_segments": [
+          "M3:T28",
+          "M3:T48"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0269",
+      "text": "The functionality described in 11.3.9i should also be available for other types of mobiles.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.3.9ii",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Functional numbering"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T29"
+        ],
+        "related_segments": [
+          "M3:T29"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0273",
+      "text": "Re-registration of on-train functional numbers based on the train number shall be performed every time a train leaves one EIRENE network and enters into another EIRENE network.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.3.14",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Functional numbering"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T31"
+        ],
+        "related_segments": [
+          "M3:T31"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0277",
+      "text": "In the event of losing correlation between functional numbers and MSISDNs, provision for recovery from such a situation shall be made.",
+      "class": "NFR",
+      "subtype": "FT",
+      "subtype_name": "Fault Tolerance",
+      "promise_subtype": "FT",
+      "tier": "primary",
+      "label_source": "keyword",
+      "confidence": 0.6,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "11.4.1",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Re-establishment of functional number correlation"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T35",
+          "M3:T37"
+        ],
+        "related_segments": [
+          "M3:T35",
+          "M3:T37"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0279",
+      "text": "The calling party functional number shall be passed to the receiving mobile using the User to User Signalling supplementary service (UUS1) during call setup.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.5.2",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Presentation of functional identities"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P12",
+          "type": "conflict",
+          "kind": "actor",
+          "outcome": "resolved",
+          "details": {
+            "original_value": "the User",
+            "proposed_value": "the manager",
+            "proposed_text": "The calling party functional number shall be passed to the receiving mobile using the manager to User Signalling supplementary service (UUS1) during call setup.",
+            "raised_by": "EndUser",
+            "meeting": "M3",
+            "proposer": "EndUser"
+          },
+          "segments": [
+            "M3:T42",
+            "M3:T43",
+            "M3:T44",
+            "M3:T45"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T42",
+          "M3:T45"
+        ],
+        "related_segments": [
+          "M3:T42",
+          "M3:T43",
+          "M3:T44",
+          "M3:T45"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0286",
+      "text": "The protocol used for routing of calls shall be Signalling System No 7 (SS7) as defined by the ITU-T.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.6.3",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Inter EIRENE network interfacing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T50"
+        ],
+        "related_segments": [
+          "M3:T50"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0288",
+      "text": "Call setup between EIRENE networks using international functional numbers shall be based on the combination of the Breakout-Code (BC) and International Code (IC) as specified in section 9.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "11.6.4",
+        "section_path": [
+          "Functional numbering and location dependent addressing",
+          "Inter EIRENE network interfacing"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T53"
+        ],
+        "related_segments": [
+          "M3:T53"
+        ],
+        "support_score": 0.824,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0296",
+      "text": "It shall be possible to configure Railway emergency group call areas to contain combinations of cells controlled by one or more MSC(s) within one or more network(s).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "13.2.3",
+        "section_path": [
+          "Railway emergency calls",
+          "Provision of Railway emergency calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P13",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "It shall be possible to configure Railway emergency group call areas to contain combinations of cells controlled by one or more MSC(s) within one or more network(s)."
+          },
+          "segments": [
+            "M3:T47"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T47"
+        ],
+        "related_segments": [
+          "M3:T47"
+        ],
+        "support_score": 0.933,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0305",
+      "text": "If the GSM Release 99 capability and the Immediate Setup 2 feature defined in [EN 301 515, Index [6], Release 4] are supported by the network, the network shall set the MSC Release bit in the \"Control Channel Description\" information element to \"1\".",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "13.4.7",
+        "section_path": [
+          "Railway emergency calls",
+          "Receipt of Railway emergency calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P14",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "set the MSC Release bit in the \"Control Channel Description\" information element to \"1\".",
+            "stated_text": "If the GSM Release 99 capability and the Immediate Setup 2 feature defined in [EN 301 515, Index [6], Release 4] are supported by the network, the network shall"
+          },
+          "segments": [
+            "M3:T56",
+            "M3:T58",
+            "M3:T60"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T56",
+          "M3:T58",
+          "M3:T60"
+        ],
+        "related_segments": [
+          "M3:T56",
+          "M3:T58",
+          "M3:T60"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0306",
+      "text": "Otherwise, the MSC Release bit in the \"Control Channel Description\" information element shall be set to \"0\" (zero) [EN 301 515, Index [41]].",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "13.4.7",
+        "section_path": [
+          "Railway emergency calls",
+          "Receipt of Railway emergency calls"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T61"
+        ],
+        "related_segments": [
+          "M3:T61"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0324",
+      "text": "Maintain group call the shunting leader leaves the dedicated group call momentarily for the purposes of conducting other communications. The leader may then rejoin the group when ready. In the meantime, all other shunting team members remain active within the dedicated group call. The operational radio procedure that shall be used to maintain the group call is shown in table 14-5.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "14.2.5",
+        "section_path": [
+          "Shunting mode",
+          "System requirements: Operational Radio"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T64",
+          "M3:T66"
+        ],
+        "related_segments": [
+          "M3:T64",
+          "M3:T66"
+        ],
+        "support_score": 0.72,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:R0346",
+      "text": "The CTCSS modulation shall be within the limits defined in table 15-2.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "15.2.10",
+        "section_path": [
+          "Direct mode",
+          "System requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T68"
+        ],
+        "related_segments": [
+          "M3:T68"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [
+    {
+      "id": "2006-eirene-sys-15:D001",
+      "text": "The calling party functional number shall be passed to the receiving mobile using the manager to User Signalling supplementary service (UUS1) during call setup.",
+      "requirement": "2006-eirene-sys-15:R0279",
+      "pid": "P12",
+      "kind": "rejected_proposal",
+      "segments": [
+        "M3:T43"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "2006-eirene-sys-15:I001",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2006-eirene-sys-15:R0041",
+      "pid": "P2",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T39",
+        "M1:T41",
+        "M1:T43"
+      ],
+      "details": {
+        "missing": "the EIRENE system if any modifications are made to these standards in the future.",
+        "stated_text": "Many of the railway specific standards referenced are Pre-standards (eg [prEN 50155, ENV 50121, prEN 50125]) and should be re-examined for their applicability to"
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I002",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2006-eirene-sys-15:R0049",
+      "pid": "P3",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T44"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Operationally caused infrequent and slight moisture condensation shall not lead to any malfunction or failure."
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I003",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2006-eirene-sys-15:R0070",
+      "pid": "P5",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T45"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Specific environmental test procedures to be followed for EIRENE mobile equipment shall include the following tests as defined in the [IEC 68] series:"
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I004",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2006-eirene-sys-15:R0247",
+      "pid": "P9",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T13"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The Function Codes used in association with Maintenance Services Team Numbers (CT=6) shall conform to table 9A-2."
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I005",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2006-eirene-sys-15:R0249",
+      "pid": "P10",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T18"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "For consistent working on public networks and in international roaming, the use of access classes in a railway network shall comply with the GSM specification."
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I006",
+      "type": "inconsistency",
+      "kind": "actor",
+      "requirement": "2006-eirene-sys-15:R0267",
+      "pid": "P11",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M3:T28",
+        "M3:T48"
+      ],
+      "details": {
+        "original_value": "the user",
+        "conflicting_value": "the supervisor",
+        "conflicting_text": "In the event of a registration procedure failing owing to the functional number already being registered to another mobile, the Cab radio shall be capable of providing the supervisor with the ability to perform automatically the forced de-registration of the previously registered mobile and the registration of this functional number to the user's mobile.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I007",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2006-eirene-sys-15:R0296",
+      "pid": "P13",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T47"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "It shall be possible to configure Railway emergency group call areas to contain combinations of cells controlled by one or more MSC(s) within one or more network(s)."
+      }
+    },
+    {
+      "id": "2006-eirene-sys-15:I008",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2006-eirene-sys-15:R0305",
+      "pid": "P14",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T56",
+        "M3:T58",
+        "M3:T60"
+      ],
+      "details": {
+        "missing": "set the MSC Release bit in the \"Control Channel Description\" information element to \"1\".",
+        "stated_text": "If the GSM Release 99 capability and the Immediate Setup 2 feature defined in [EN 301 515, Index [6], Release 4] are supported by the network, the network shall"
+      }
+    }
+  ]
+}

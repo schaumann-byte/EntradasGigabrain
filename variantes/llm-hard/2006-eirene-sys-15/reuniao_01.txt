@@ -1,0 +1,72 @@
+Meeting 1 of 4 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. Thanks for joining, everyone. This is our kickoff for UIC Project EIRENE, the first of 4 sessions, so I'd like to get a feel for the background and then dig into some of the services.
+Client: Sure. So basically EIRENE specifies a digital radio standard for the European railways, and it's part of actually the specification for technical interoperability. It covers ground-train voice and data communications, and also the ground-based mobile communications needs of like trackside workers, station well and depot staff, and our administrative and managerial people on the railway side.
+Analyst: Great. Let's like start with the railway specific services and uh facilities. What like do you need there?
+EndUser: Well, maybe a follow-me service in the EIRENE network? It'd be nice if users uhm could set up and cancel forwarding of calls from a functional number to their personal number, using the GSM USSD basically facility, the Unstructured i mean Supplementary Service Data thing. I'm not sure if that's strictly mandatory though.
+Analyst: Can basically you be a uh bit more specific about how actually users would actually use that day to day?
+EndUser: Honestly, it depends. People would just use it when they need it, I suppose.
+EndUser: Oh, and on coverage, while we're at it: um the criterion would be met with a certain um probability in the coverage area.
+Analyst: Okay, got it.
+Client: Erm, On handover and sort of cell selection, we'd test suitable algorithms
+Analyst: Right.
+Client: and then refine them as needed during um the trials process.
+Analyst: Makes sense.
+Client: And for the QoS figure, our best estimate right now now is 300ms
+Analyst: Okay.
+Client: but we'll have actually to like confirm that through user trials.
+EndUser: Yeah, trials make sense there.
+Client: One more thing, about terminating VGCS/VBS calls. The network shall end the ongoing VGCS/VBS call
+Analyst: Mm-hmm.
+Client: if it gets the 3-digit sequence star star star star sent via DTMF signals.
+Analyst: Got it, thanks.
+Client: So the other thing on the gateway side —
+TechLead: Sorry, go ahead.
+Analyst: Actually, sort of let's park that like and move on to frequency band and channel arrangements. What do we need there?
+EndUser: Um, The network has to run in a sub-band of the R-GSM band, or a combination of sub-bands, the way it's defined well in EN 301 uh 515, well that's Index 35.
+TechLead: Uh, Do we really need that as a separate requirement? It feels like extra effort for not much.
+EndUser: I'd keep it. For us it really matters, it's not actually something we want left open.
+Analyst: Okay, we'll keep it in.
+Analyst: Next up, um core environmental um requirements. What should we sort of capture there?
+TechLead: Uhm, So, a lot of the railway-specific standards we [laughter] erm reference are actually pre-standards, things like prEN 50155,
+Analyst: Right.
+TechLead: Er, ENV 50121, prEN 50125,
+Client: Okay.
+TechLead: and we should go back and re-check whether they still apply to the EIRENE system
+Analyst: Got it.
+TechLead: So if any modifications well are made to these standards in the actually future, that's the main thing.
+TechLead: Then, slight moisture condensation that happens infrequently and is caused by operation shall not...
+TechLead: And none of the equipment should degrade photochemically
+Analyst: Mm-hm.
+TechLead: Um, when it's exposed to solar radiation up to 1200 W/m2.
+Analyst: Okay, noted.
+TechLead: Er, And then, when a a mobile radio unit is in normal operation,
+Analyst: Right.
+TechLead: we have to expect that it'll see a combination of those environmental conditions i mean I just went through, not just one at a time.
+TechLead: Erm, On EMC, all the emission basically and immunity tests need uh to follow the guidelines in the EN 61000-4 series and in EN 50140.
+Analyst: Uh, So every uh EMC test, emission and immunity both, gets done according to the EN 61000-4 series and EN 50140, correct?
+TechLead: Yes, exactly.
+EndUser: Makes sense to me.
+Client: For the EIRENE mobile equipment specifically, the environmental test procedures should include the following you know tests, as they're defined in the IEC 68 series:
+TechLead: Do we really need you know to spell that out here? It's a lot of extra basically effort, and I'm not sure it's a priority right now.
+Client: I'd really like to keep it. For us it's important to have that nailed down.
+Analyst: Okay, let's leave that one open for now and come back er to it later.
+Analyst: Let's move on to muting and unmuting for VGCS calls. How should that work?
+Client: Er, I mean, the network would have to send the SET-PARAMETER message with the attribute "D-ATT = T"1] to the mobile station of the talking subscriber if it receives the 3- digit sequence "###" transmitted through DTMF or the group kind of call call SETUP message2 from the registered user terminal.
+EndUser: Erm, Hmm, I'm not sure about that. er I'd say i'd like the network to you know send the SET-PARAMETER message with the attribute "D-ATT uhm = T"1] to the mobile station of the talking subscriber if it receives the 3- digit sequence "###" transmitted through DTMF or the group call SETUP message2 from a controller terminal.
+Client: No, I'd stick with actually the registered uh user terminal. That's how we want it.
+Analyst: Alright, let's park that and decide later.
+Client: Erm, While we're at it, on the driver you know call-related functions: each of the other cabs on the train gets contacted using its functional you know number, the one the other drivers registered before the call is you know set up.
+Client: And the multi-party call should have Railway operation priority, as in section 10.2,
+Analyst: Okay.
+Client: and while it's going on, all the Cab radios should permanently show a i mean multi-drivers indication.
+TechLead: Yeah, that makes sense.
+Client: And then then after that, you know a GSM point-to-point voice call gets set up, at 'Railway operation' priority, again i mean per section 10.2.
+Client: Also, the Cab radio has to erm support shunting mode communications, as they're um defined in section 14.
+Analyst: Okay, got it.
+EndUser: Right, that matches what we do.
+Analyst: Anything else on the driver call-related functions before we wrap uh that up?
+EndUser: No, that's it from me.
+EndUser: So just to recap, like we said, at that point a GSM point-to-point voice call at 'Railway operation' priority, section 10.2, doesn't then get initiated.
+Analyst: Erm, Great, um thanks everyone, that's a good place to stop for today. We'll pick you know it up from basically here next sort of time.

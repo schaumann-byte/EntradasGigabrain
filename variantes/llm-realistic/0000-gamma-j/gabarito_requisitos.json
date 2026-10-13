@@ -1,0 +1,5217 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "0000-gamma-j",
+  "doc_title": "Software Requirements Specification (SRS) Gamma-J Connecting Retailers through the World Gamma-J Gamma-J Web Store",
+  "source_file": "PURE/requirements-xml/0000 - gamma j.xml",
+  "mode": "meetings",
+  "variant": "llm-realistic",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_content": 3,
+      "llm_accepted": 205,
+      "llm_accepted_content": 85,
+      "turns": 208,
+      "windows": 11
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 16132,
+    "n_words": 2738,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "operating environment",
+          "design and implementation constraints",
+          "user documentation",
+          "customer accounts",
+          "inventory management",
+          "shopping cart",
+          "order confirmation",
+          "interface"
+        ],
+        "n_chars": 5811,
+        "n_words": 977,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 284,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 294,
+            "end": 357,
+            "speaker": "EndUser",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M1:T3",
+            "start": 366,
+            "end": 677,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T4",
+            "start": 687,
+            "end": 823,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T5",
+            "start": 832,
+            "end": 933,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0005",
+                "role": "statement",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 944,
+            "end": 1073,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0005",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T7",
+            "start": 1082,
+            "end": 1156,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0005",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T8",
+            "start": 1166,
+            "end": 1223,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "0000-gamma-j:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0005",
+                "role": "resolution",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1234,
+            "end": 1363,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0006",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T10",
+            "start": 1372,
+            "end": 1510,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0007",
+                "role": "part1",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T11",
+            "start": 1520,
+            "end": 1526,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T12",
+            "start": 1535,
+            "end": 1627,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0007",
+                "role": "part2",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1636,
+            "end": 1688,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0008",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 1698,
+            "end": 1703,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T15",
+            "start": 1712,
+            "end": 1766,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0008",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 1776,
+            "end": 1782,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T17",
+            "start": 1791,
+            "end": 1841,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0008",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 1851,
+            "end": 1858,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T19",
+            "start": 1867,
+            "end": 2015,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0008",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 2025,
+            "end": 2036,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T21",
+            "start": 2046,
+            "end": 2142,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T22",
+            "start": 2153,
+            "end": 2264,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0009",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 2274,
+            "end": 2281,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T24",
+            "start": 2290,
+            "end": 2313,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T25",
+            "start": 2324,
+            "end": 2430,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0010",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 2440,
+            "end": 2507,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T27",
+            "start": 2517,
+            "end": 2636,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0011",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T28",
+            "start": 2646,
+            "end": 2651,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T29",
+            "start": 2661,
+            "end": 2758,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0011",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 2768,
+            "end": 2950,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "0000-gamma-j:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0011",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 2960,
+            "end": 2973,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2984,
+            "end": 3002,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T33",
+            "start": 3012,
+            "end": 3059,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0012",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T34",
+            "start": 3068,
+            "end": 3074,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T35",
+            "start": 3084,
+            "end": 3122,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0012",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T36",
+            "start": 3132,
+            "end": 3144,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T37",
+            "start": 3154,
+            "end": 3215,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T38",
+            "start": 3224,
+            "end": 3295,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0014",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 3305,
+            "end": 3311,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T40",
+            "start": 3320,
+            "end": 3376,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0014",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T41",
+            "start": 3387,
+            "end": 3410,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T42",
+            "start": 3420,
+            "end": 3529,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0015",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T43",
+            "start": 3539,
+            "end": 3544,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T44",
+            "start": 3554,
+            "end": 3647,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0015",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T45",
+            "start": 3657,
+            "end": 3664,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T46",
+            "start": 3673,
+            "end": 3686,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T47",
+            "start": 3696,
+            "end": 3857,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T48",
+            "start": 3866,
+            "end": 4047,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0013",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T49",
+            "start": 4057,
+            "end": 4080,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T50",
+            "start": 4090,
+            "end": 4165,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T51",
+            "start": 4174,
+            "end": 4247,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0017",
+                "role": "statement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T52",
+            "start": 4256,
+            "end": 4302,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0018",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T53",
+            "start": 4313,
+            "end": 4349,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T54",
+            "start": 4358,
+            "end": 4463,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "0000-gamma-j:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0018",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 4473,
+            "end": 4527,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T56",
+            "start": 4537,
+            "end": 4625,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0021",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T57",
+            "start": 4635,
+            "end": 4641,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T58",
+            "start": 4652,
+            "end": 4669,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T59",
+            "start": 4678,
+            "end": 4725,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0020",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T60",
+            "start": 4735,
+            "end": 4741,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T61",
+            "start": 4750,
+            "end": 4793,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0020",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T62",
+            "start": 4803,
+            "end": 4808,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T63",
+            "start": 4817,
+            "end": 4856,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0020",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 4865,
+            "end": 4940,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0019",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T65",
+            "start": 4950,
+            "end": 4973,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T66",
+            "start": 4983,
+            "end": 5085,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T67",
+            "start": 5095,
+            "end": 5158,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0027",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T68",
+            "start": 5169,
+            "end": 5175,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T69",
+            "start": 5185,
+            "end": 5257,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0027",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T70",
+            "start": 5267,
+            "end": 5274,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T71",
+            "start": 5285,
+            "end": 5317,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T72",
+            "start": 5326,
+            "end": 5470,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0023",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T73",
+            "start": 5480,
+            "end": 5486,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T74",
+            "start": 5495,
+            "end": 5611,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0026"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0026",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T75",
+            "start": 5621,
+            "end": 5626,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T76",
+            "start": 5636,
+            "end": 5686,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0024",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T77",
+            "start": 5696,
+            "end": 5810,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "weborder browser interface",
+          "quality attribute requirements",
+          "communications interfaces",
+          "safety requirements",
+          "security requirements",
+          "availability requirements"
+        ],
+        "n_chars": 4915,
+        "n_words": 836,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 77,
+            "end": 202,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 212,
+            "end": 434,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T3",
+            "start": 444,
+            "end": 515,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T4",
+            "start": 524,
+            "end": 709,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0028",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M2:T5",
+            "start": 720,
+            "end": 956,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0029",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T6",
+            "start": 966,
+            "end": 1031,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0029",
+                "role": "clarification",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T7",
+            "start": 1042,
+            "end": 1162,
+            "speaker": "TechLead",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0029",
+                "role": "clarification",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T8",
+            "start": 1172,
+            "end": 1245,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T9",
+            "start": 1256,
+            "end": 1358,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0032",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 1367,
+            "end": 1386,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T11",
+            "start": 1397,
+            "end": 1455,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "0000-gamma-j:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0032",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1466,
+            "end": 1538,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0033"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0033",
+                "role": "statement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M2:T13",
+            "start": 1547,
+            "end": 1667,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0033",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M2:T14",
+            "start": 1678,
+            "end": 1741,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0033",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M2:T15",
+            "start": 1751,
+            "end": 1798,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0033",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M2:T16",
+            "start": 1807,
+            "end": 1876,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0034",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T17",
+            "start": 1885,
+            "end": 2025,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0035",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M2:T18",
+            "start": 2035,
+            "end": 2082,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0035",
+                "role": "clarification",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 2091,
+            "end": 2182,
+            "speaker": "Client",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0035",
+                "role": "clarification",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M2:T20",
+            "start": 2191,
+            "end": 2267,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0036"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0036",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M2:T21",
+            "start": 2278,
+            "end": 2373,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0037",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T22",
+            "start": 2383,
+            "end": 2388,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T23",
+            "start": 2399,
+            "end": 2470,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0037",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T24",
+            "start": 2480,
+            "end": 2487,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T25",
+            "start": 2498,
+            "end": 2553,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0038"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0038",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T26",
+            "start": 2563,
+            "end": 2569,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T27",
+            "start": 2580,
+            "end": 2660,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0039"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0039",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T28",
+            "start": 2670,
+            "end": 2675,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T29",
+            "start": 2686,
+            "end": 2775,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0040"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0040",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T30",
+            "start": 2785,
+            "end": 2791,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T31",
+            "start": 2800,
+            "end": 2824,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T32",
+            "start": 2834,
+            "end": 2947,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T33",
+            "start": 2956,
+            "end": 3112,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0031"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0031",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T34",
+            "start": 3123,
+            "end": 3141,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T35",
+            "start": 3150,
+            "end": 3340,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0030",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T36",
+            "start": 3350,
+            "end": 3498,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "0000-gamma-j:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0030",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T37",
+            "start": 3507,
+            "end": 3520,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T38",
+            "start": 3530,
+            "end": 3604,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T39",
+            "start": 3613,
+            "end": 3653,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0041"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0041",
+                "role": "statement",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T40",
+            "start": 3663,
+            "end": 3732,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T41",
+            "start": 3743,
+            "end": 3867,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0042"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0042",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T42",
+            "start": 3877,
+            "end": 3884,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T43",
+            "start": 3893,
+            "end": 3948,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0044",
+                "role": "statement",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T44",
+            "start": 3957,
+            "end": 4020,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0045",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T45",
+            "start": 4029,
+            "end": 4098,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0045",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T46",
+            "start": 4107,
+            "end": 4182,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0046",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T47",
+            "start": 4193,
+            "end": 4216,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T48",
+            "start": 4225,
+            "end": 4281,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0047",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T49",
+            "start": 4292,
+            "end": 4329,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T50",
+            "start": 4338,
+            "end": 4433,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "0000-gamma-j:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0047",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T51",
+            "start": 4443,
+            "end": 4522,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T52",
+            "start": 4532,
+            "end": 4606,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T53",
+            "start": 4617,
+            "end": 4666,
+            "speaker": "TechLead",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T54",
+            "start": 4675,
+            "end": 4730,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0048"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0048",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T55",
+            "start": 4740,
+            "end": 4752,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T56",
+            "start": 4763,
+            "end": 4782,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T57",
+            "start": 4792,
+            "end": 4914,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "efficiency requirements",
+          "maintainability requirements",
+          "usability requirements",
+          "portability requirements",
+          "testability requirements",
+          "other requirements",
+          "preconditions"
+        ],
+        "n_chars": 5406,
+        "n_words": 925,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 83,
+            "end": 254,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 264,
+            "end": 476,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T3",
+            "start": 486,
+            "end": 646,
+            "speaker": "EndUser",
+            "act": "followup",
+            "gt_ids": [
+              "0000-gamma-j:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0024",
+                "role": "followup",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M3:T4",
+            "start": 655,
+            "end": 765,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "0000-gamma-j:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0044",
+                "role": "followup",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M3:T5",
+            "start": 775,
+            "end": 873,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T6",
+            "start": 882,
+            "end": 945,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0049",
+                "role": "statement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M3:T7",
+            "start": 955,
+            "end": 1088,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0050",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 1098,
+            "end": 1199,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0051"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0051",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T9",
+            "start": 1209,
+            "end": 1222,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T10",
+            "start": 1232,
+            "end": 1325,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0052",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1335,
+            "end": 1341,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1352,
+            "end": 1375,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T13",
+            "start": 1385,
+            "end": 1465,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T14",
+            "start": 1474,
+            "end": 1529,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0060",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1539,
+            "end": 1545,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T16",
+            "start": 1554,
+            "end": 1622,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T17",
+            "start": 1632,
+            "end": 1728,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T18",
+            "start": 1739,
+            "end": 1867,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0059",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T19",
+            "start": 1877,
+            "end": 1899,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T20",
+            "start": 1908,
+            "end": 1956,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0058"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "statement",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T21",
+            "start": 1967,
+            "end": 2115,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "conflict",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T22",
+            "start": 2124,
+            "end": 2184,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "conflict",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T23",
+            "start": 2193,
+            "end": 2279,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "conflict",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T24",
+            "start": 2289,
+            "end": 2410,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T25",
+            "start": 2419,
+            "end": 2564,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0054"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0054",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T26",
+            "start": 2574,
+            "end": 2585,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T27",
+            "start": 2594,
+            "end": 2663,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0055",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T28",
+            "start": 2673,
+            "end": 2715,
+            "speaker": "EndUser",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M3:T29",
+            "start": 2725,
+            "end": 2741,
+            "speaker": "Analyst",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M3:T30",
+            "start": 2751,
+            "end": 2822,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "0000-gamma-j:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0055",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T31",
+            "start": 2831,
+            "end": 2844,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T32",
+            "start": 2854,
+            "end": 2878,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T33",
+            "start": 2889,
+            "end": 3002,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0056",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T34",
+            "start": 3012,
+            "end": 3019,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T35",
+            "start": 3028,
+            "end": 3092,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0057",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T36",
+            "start": 3102,
+            "end": 3108,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T37",
+            "start": 3117,
+            "end": 3173,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0057",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T38",
+            "start": 3183,
+            "end": 3188,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T39",
+            "start": 3198,
+            "end": 3232,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T40",
+            "start": 3242,
+            "end": 3316,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T41",
+            "start": 3325,
+            "end": 3449,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0061"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0061",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T42",
+            "start": 3459,
+            "end": 3464,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T43",
+            "start": 3473,
+            "end": 3529,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0062"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0062",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T44",
+            "start": 3540,
+            "end": 3546,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T45",
+            "start": 3555,
+            "end": 3589,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0062"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0062",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T46",
+            "start": 3599,
+            "end": 3606,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T47",
+            "start": 3616,
+            "end": 3706,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T48",
+            "start": 3715,
+            "end": 3760,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0063"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0063",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T49",
+            "start": 3771,
+            "end": 3794,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T50",
+            "start": 3803,
+            "end": 3854,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0065"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0065",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T51",
+            "start": 3863,
+            "end": 3901,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0066"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0066",
+                "role": "statement",
+                "pid": "P15"
+              }
+            ]
+          },
+          {
+            "id": "M3:T52",
+            "start": 3911,
+            "end": 3940,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M3:T53",
+            "start": 3949,
+            "end": 3963,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M3:T54",
+            "start": 3973,
+            "end": 4072,
+            "speaker": "EndUser",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0036",
+                "role": "restatement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T55",
+            "start": 4082,
+            "end": 4181,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T56",
+            "start": 4191,
+            "end": 4236,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0067"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0067",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T57",
+            "start": 4246,
+            "end": 4252,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T58",
+            "start": 4262,
+            "end": 4302,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0067"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0067",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T59",
+            "start": 4313,
+            "end": 4318,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T60",
+            "start": 4328,
+            "end": 4391,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0068"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0068",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T61",
+            "start": 4401,
+            "end": 4406,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T62",
+            "start": 4416,
+            "end": 4478,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0068"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0068",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T63",
+            "start": 4488,
+            "end": 4495,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T64",
+            "start": 4505,
+            "end": 4593,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0069"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0069",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T65",
+            "start": 4602,
+            "end": 4607,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T66",
+            "start": 4617,
+            "end": 4748,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0069"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0069",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T67",
+            "start": 4757,
+            "end": 4763,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T68",
+            "start": 4773,
+            "end": 4828,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0069"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0069",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T69",
+            "start": 4838,
+            "end": 4850,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T70",
+            "start": 4860,
+            "end": 4977,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T71",
+            "start": 4988,
+            "end": 5126,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0070"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0070",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T72",
+            "start": 5136,
+            "end": 5142,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T73",
+            "start": 5151,
+            "end": 5208,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T74",
+            "start": 5218,
+            "end": 5405,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 60,
+    "n_primary_fr": 21,
+    "n_primary_nfr": 39,
+    "n_expected_in_output": 60,
+    "n_reachable": 60,
+    "by_status": {
+      "clear": 47,
+      "conflict_resolved": 1,
+      "conflict_open": 2,
+      "ambiguous": 3,
+      "inconsistent": 1,
+      "incomplete": 6
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 3,
+      "conflict:open": 2,
+      "conflict:resolved": 1,
+      "incompleteness:completed_later": 2,
+      "incompleteness:open": 6,
+      "inconsistency:unnoticed": 1
+    },
+    "n_distractors": 0,
+    "n_issues": 12,
+    "messiness": {
+      "topic_revisits": 1,
+      "topics_out_of_document_order": 6,
+      "smalltalk": 1,
+      "false_starts": 1,
+      "self_introduced_topics": 1,
+      "chunked_statements": 16,
+      "reactions": 17,
+      "interruptions": 3,
+      "offtopic": 4,
+      "crosstalk": 1,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.815
+  },
+  "requirements": [
+    {
+      "id": "0000-gamma-j:R0005",
+      "text": "The system shall use SQL based database to store inventory information.",
+      "class": "NFR",
+      "subtype": "O",
+      "subtype_name": "Operational/Environment",
+      "promise_subtype": "O",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.4",
+        "section_path": [
+          "Overall Description",
+          "Operating Environment"
+        ],
+        "xml_element": "req",
+        "original_req_id": "OE-3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T5",
+            "M1:T6",
+            "M1:T7",
+            "M1:T8"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T5",
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T5",
+          "M1:T6",
+          "M1:T7",
+          "M1:T8"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0006",
+      "text": "USB interface and divers are provided by Yoggie Corporation.",
+      "class": "NFR",
+      "subtype": "O",
+      "subtype_name": "Operational/Environment",
+      "promise_subtype": "O",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.4",
+        "section_path": [
+          "Overall Description",
+          "Operating Environment"
+        ],
+        "xml_element": "req",
+        "original_req_id": "OE-4",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T9"
+        ],
+        "related_segments": [
+          "M1:T9"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0007",
+      "text": "Must use a SQL based database. SQL standard is the most widely used database format. Restricting to SQL allows easy of use and compatibility for Web Store.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.5",
+        "section_path": [
+          "Overall Description",
+          "Design and Implementation Constraints"
+        ],
+        "xml_element": "req",
+        "original_req_id": "CO-1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "to SQL allows easy of use and compatibility for Web Store.",
+            "stated_text": "Must use a SQL based database. SQL standard is the most widely used database format. Restricting"
+          },
+          "segments": [
+            "M1:T10",
+            "M1:T12"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T10",
+          "M1:T12"
+        ],
+        "related_segments": [
+          "M1:T10",
+          "M1:T12"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0008",
+      "text": "Compatibility is only tested and verified for Microsoft Internet Explorer version 6 and 7, Netscape Communicator Version 4 and 5. Other versions may not be 100% compatible. Also other browsers such as Mozilla or Firefox may not be 100% compatible.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.65,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "2.5",
+        "section_path": [
+          "Overall Description",
+          "Design and Implementation Constraints"
+        ],
+        "xml_element": "req",
+        "original_req_id": "CO-2",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T13",
+          "M1:T15",
+          "M1:T17",
+          "M1:T19"
+        ],
+        "related_segments": [
+          "M1:T13",
+          "M1:T15",
+          "M1:T17",
+          "M1:T19"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0009",
+      "text": "Shall install online help for users via the web interface",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6",
+        "section_path": [
+          "Overall Description",
+          "User Documentation"
+        ],
+        "xml_element": "req",
+        "original_req_id": "UD-1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T22"
+        ],
+        "related_segments": [
+          "M1:T22"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0010",
+      "text": "Shall deliver Operations and Maintenance manual, Users Guide book, and Installation Instructions for the Administrator.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6",
+        "section_path": [
+          "Overall Description",
+          "User Documentation"
+        ],
+        "xml_element": "req",
+        "original_req_id": "UD-2",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "book, and Installation Instructions for the Administrator.",
+            "stated_text": "Shall deliver Operations and Maintenance manual, Users Guide"
+          },
+          "segments": [
+            "M1:T25"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T25"
+        ],
+        "related_segments": [
+          "M1:T25"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0011",
+      "text": "Customers will be able to create accounts to store their customer profiles, configure contact information, view their purchase history, and confirm orders.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Customer Accounts",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T27",
+          "M1:T29",
+          "M1:T30"
+        ],
+        "related_segments": [
+          "M1:T27",
+          "M1:T29",
+          "M1:T30"
+        ],
+        "support_score": 0.769,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0012",
+      "text": "Customers will be able to register, log in, and log out of their accounts.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Customer Accounts",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T33",
+          "M1:T35"
+        ],
+        "related_segments": [
+          "M1:T33",
+          "M1:T35"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0013",
+      "text": "Furthermore, Customer profiles will also include payment information, such as the ability to store credit card information, and address information.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "Customer Accounts",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T48"
+        ],
+        "related_segments": [
+          "M1:T48"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0014",
+      "text": "Products will be stored in multi-tiered categories; a category can contain sub categories or products.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Inventory Management",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T38",
+          "M1:T40"
+        ],
+        "related_segments": [
+          "M1:T38",
+          "M1:T40"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0015",
+      "text": "The inventory management will allow for administrators to update the categories, the products placed in categories, and the specific product details.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Inventory Management",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T42",
+          "M1:T44"
+        ],
+        "related_segments": [
+          "M1:T42",
+          "M1:T44"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0017",
+      "text": "The shopping cart will clearly display the number of items in the cart, along with the total cost.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.3",
+        "section_path": [
+          "System Features",
+          "Shopping Cart",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "in the cart, along with the total cost.",
+            "stated_text": "The shopping cart will clearly display the number of items"
+          },
+          "segments": [
+            "M1:T51"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T51"
+        ],
+        "related_segments": [
+          "M1:T51"
+        ],
+        "support_score": 0.333,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0018",
+      "text": "The customer will also be able to add to or remove products from the shopping cart prior to checkout and order confirmation.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.3",
+        "section_path": [
+          "System Features",
+          "Shopping Cart",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T52",
+          "M1:T54"
+        ],
+        "related_segments": [
+          "M1:T52",
+          "M1:T54"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0019",
+      "text": "Customers will be able to confirm the order after checkout.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.3",
+        "section_path": [
+          "System Features",
+          "Order Confirmation",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T64"
+        ],
+        "related_segments": [
+          "M1:T64"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0020",
+      "text": "If the order is incorrect, the customer will be able to revise and update their order.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.3",
+        "section_path": [
+          "System Features",
+          "Order Confirmation",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T59",
+          "M1:T61",
+          "M1:T63"
+        ],
+        "related_segments": [
+          "M1:T59",
+          "M1:T61",
+          "M1:T63"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0021",
+      "text": "The customer will then receive a confirmation email with the specific order details.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.3",
+        "section_path": [
+          "System Features",
+          "Order Confirmation",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T56"
+        ],
+        "related_segments": [
+          "M1:T56"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0023",
+      "text": "Customers will be presented with an unambiguous interface to assist in browsing the categories and products.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.3",
+        "section_path": [
+          "System Features",
+          "Interface",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T72"
+        ],
+        "related_segments": [
+          "M1:T72"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0024",
+      "text": "Customers will be able to search for products matching their search criteria.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.3",
+        "section_path": [
+          "System Features",
+          "Interface",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "products matching their search criteria.",
+            "stated_text": "Customers will be able to search for",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M1:T76",
+            "M3:T3"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T76",
+          "M3:T3"
+        ],
+        "related_segments": [
+          "M1:T76",
+          "M3:T3"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0026",
+      "text": "The system will implement an Application Interface to allow for various plug-ins to interact with the system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.3",
+        "section_path": [
+          "System Features",
+          "Interface",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T74"
+        ],
+        "related_segments": [
+          "M1:T74"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0027",
+      "text": "The plug-in API will be well documented and specifications will be provided to plug-in developers.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.3",
+        "section_path": [
+          "System Features",
+          "Interface",
+          "Functional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T67",
+          "M1:T69"
+        ],
+        "related_segments": [
+          "M1:T67",
+          "M1:T69"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0028",
+      "text": "The order database of WebOrder will communicate with the account system through a programmatic interface for the billing operations.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "",
+        "section_path": [
+          "External Interface Requirements",
+          "Software Interfaces",
+          "SI-1: WebOrder Browser Interface"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The order database of WebOrder will communicate with the account system through a programmatic interface for the billing operations."
+          },
+          "segments": [
+            "M2:T4"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T4"
+        ],
+        "related_segments": [
+          "M2:T4"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0029",
+      "text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "",
+        "section_path": [
+          "External Interface Requirements",
+          "Software Interfaces",
+          "SI-1: WebOrder Browser Interface"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system.",
+            "clarification_attempted": true
+          },
+          "segments": [
+            "M2:T5",
+            "M2:T6",
+            "M2:T7"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T5"
+        ],
+        "related_segments": [
+          "M2:T5",
+          "M2:T6",
+          "M2:T7"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0030",
+      "text": "The WebOrder system shall send an e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address along with tracking number.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.4",
+        "section_path": [
+          "External Interface Requirements",
+          "Communications Interfaces"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T35",
+          "M2:T36"
+        ],
+        "related_segments": [
+          "M2:T35",
+          "M2:T36"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0031",
+      "text": "The WebOrder system shall send an e-mail to System Administrator regarding any technical queries from customers or sales people.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.4",
+        "section_path": [
+          "External Interface Requirements",
+          "Communications Interfaces"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T33"
+        ],
+        "related_segments": [
+          "M2:T33"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0032",
+      "text": "Upon the USB being plugged in the system shall be able to be deployed and operational in less than 1 minute.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T9",
+          "M2:T11"
+        ],
+        "related_segments": [
+          "M2:T9",
+          "M2:T11"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0033",
+      "text": "The system shall be able to handle 1000 customers logged in concurrently at the same time.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T12",
+            "M2:T13",
+            "M2:T14",
+            "M2:T15"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T12"
+        ],
+        "related_segments": [
+          "M2:T12",
+          "M2:T13",
+          "M2:T14",
+          "M2:T15"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0034",
+      "text": "The system shall be able to retrieve 200 products per second.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T16"
+        ],
+        "related_segments": [
+          "M2:T16"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0035",
+      "text": "The system shall be able to add product to shopping cart in less than 2ms.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The system shall be able to add product to shopping cart in less than 2ms.",
+            "clarification_attempted": true
+          },
+          "segments": [
+            "M2:T17",
+            "M2:T18",
+            "M2:T19"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T17"
+        ],
+        "related_segments": [
+          "M2:T17",
+          "M2:T18",
+          "M2:T19"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0036",
+      "text": "The system shall be able to search for a specified product in less than 1 second.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "5",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "inconsistency",
+          "kind": "value",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "1 second",
+            "conflicting_value": "5 seconds",
+            "conflicting_text": "The system shall be able to search for a specified product in less than 5 seconds.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M2:T20",
+            "M3:T54"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T20"
+        ],
+        "related_segments": [
+          "M2:T20",
+          "M3:T54"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0037",
+      "text": "The system shall be able to email customer and vendor in less than 1 second.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "6",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T21",
+          "M2:T23"
+        ],
+        "related_segments": [
+          "M2:T21",
+          "M2:T23"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0038",
+      "text": "The system shall be able to validate credit card in less than 2 seconds.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "7",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T25"
+        ],
+        "related_segments": [
+          "M2:T25"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0039",
+      "text": "The system shall be able to acquire shipping charges in less than 2 seconds.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "8",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T27"
+        ],
+        "related_segments": [
+          "M2:T27"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0040",
+      "text": "The system shall be able to restore 1000 records per second.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Quality Attribute Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "9",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T29"
+        ],
+        "related_segments": [
+          "M2:T29"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0041",
+      "text": "The system will do periodic backups through a live internet connection.",
+      "class": "NFR",
+      "subtype": "SA",
+      "subtype_name": "Safety",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "5.2",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Safety Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "backups through a live internet connection.",
+            "stated_text": "The system will do periodic"
+          },
+          "segments": [
+            "M2:T39"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T39"
+        ],
+        "related_segments": [
+          "M2:T39"
+        ],
+        "support_score": 0.286,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0042",
+      "text": "The system shall validate credit cards against fraud.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Security Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T41"
+        ],
+        "related_segments": [
+          "M2:T41"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0044",
+      "text": "The system shall encrypt all customer data in database.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "5.3",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Security Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P12",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "customer data in database.",
+            "stated_text": "The system shall encrypt all",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M2:T43",
+            "M3:T4"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T43",
+          "M3:T4"
+        ],
+        "related_segments": [
+          "M2:T43",
+          "M3:T4"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0045",
+      "text": "The system shall auto detect IP DOS attacks and block IP automatically.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Security Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T44",
+          "M2:T45"
+        ],
+        "related_segments": [
+          "M2:T44",
+          "M2:T45"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0046",
+      "text": "The system shall detect consecutive failed login attempts.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Security Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "5",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T46"
+        ],
+        "related_segments": [
+          "M2:T46"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0047",
+      "text": "The system shall be protected by open source firewall called Firestarter. http://www.fs-security.com/",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "5.3",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Security Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "6",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T48",
+          "M2:T50"
+        ],
+        "related_segments": [
+          "M2:T48",
+          "M2:T50"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0048",
+      "text": "The system shall have an availability of 99.99%.",
+      "class": "NFR",
+      "subtype": "A",
+      "subtype_name": "Availability",
+      "promise_subtype": "A",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.4",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Availability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T54"
+        ],
+        "related_segments": [
+          "M2:T54"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0049",
+      "text": "The system shall perform searches via Dijkstra's shortest path algorithm.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Efficiency Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P13",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "via Dijkstra's shortest path algorithm.",
+            "stated_text": "The system shall perform searches"
+          },
+          "segments": [
+            "M3:T6"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T6"
+        ],
+        "related_segments": [
+          "M3:T6"
+        ],
+        "support_score": 0.429,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0050",
+      "text": "For returning customers, the system shall validate 'existing' credit card in system after each log in.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Efficiency Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T7"
+        ],
+        "related_segments": [
+          "M3:T7"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0051",
+      "text": "The system shall automatically compress image files that are too large in size.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Efficiency Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T8"
+        ],
+        "related_segments": [
+          "M3:T8"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0052",
+      "text": "The system will employ on demand asynchronous loading for faster execution of pages.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.5",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Efficiency Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T10"
+        ],
+        "related_segments": [
+          "M3:T10"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0054",
+      "text": "The system shall utilize help bubbles to assist managers, customers, and administrators",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T25"
+        ],
+        "related_segments": [
+          "M3:T25"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0055",
+      "text": "The system shall employ easy to locate buttons",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T27",
+          "M3:T30"
+        ],
+        "related_segments": [
+          "M3:T27",
+          "M3:T30"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0056",
+      "text": "The system shall prompt customer with friend easy to read error messages.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.6",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "5",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T33"
+        ],
+        "related_segments": [
+          "M3:T33"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0057",
+      "text": "The system shall utilize consistent symbols and colors for clear notifications.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "LF",
+      "source": {
+        "section_id": "5.6",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "6",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T35",
+          "M3:T37"
+        ],
+        "related_segments": [
+          "M3:T35",
+          "M3:T37"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0058",
+      "text": "The system shall utilize interchangeable plugins.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.7",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Maintainability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P14",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M3"
+          },
+          "segments": [
+            "M3:T20",
+            "M3:T21",
+            "M3:T22",
+            "M3:T23"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T20"
+        ],
+        "related_segments": [
+          "M3:T20",
+          "M3:T21",
+          "M3:T22",
+          "M3:T23"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0059",
+      "text": "The system shall be easily updatable for fixes and patches.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.7",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Maintainability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T18"
+        ],
+        "related_segments": [
+          "M3:T18"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0060",
+      "text": "The system shall create logs of all changes, updates, or fixes that are done to the site.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.7",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Maintainability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T14",
+          "M3:T16"
+        ],
+        "related_segments": [
+          "M3:T14",
+          "M3:T16"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0061",
+      "text": "The system shall be extremely portable via the usb drive.",
+      "class": "NFR",
+      "subtype": "PO",
+      "subtype_name": "Portability",
+      "promise_subtype": "PO",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "5.8",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Portability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T41"
+        ],
+        "related_segments": [
+          "M3:T41"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0062",
+      "text": "The system shall be easy to migrate or backed up via another usb drive.",
+      "class": "NFR",
+      "subtype": "PO",
+      "subtype_name": "Portability",
+      "promise_subtype": "PO",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.8",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Portability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T43",
+          "M3:T45"
+        ],
+        "related_segments": [
+          "M3:T43",
+          "M3:T45"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0063",
+      "text": "The system should be able to run under debug mode.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.9",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Testability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T48"
+        ],
+        "related_segments": [
+          "M3:T48"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0065",
+      "text": "The system should be able to run test shipping orders.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.9",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Testability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T50"
+        ],
+        "related_segments": [
+          "M3:T50"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0066",
+      "text": "The system should be able to create test environment of weborder system.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.9",
+        "section_path": [
+          "Quality Attribute Requirements",
+          "Usability Requirements",
+          "Testability Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P15",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "test environment of weborder system.",
+            "stated_text": "The system should be able to create"
+          },
+          "segments": [
+            "M3:T51"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T51"
+        ],
+        "related_segments": [
+          "M3:T51"
+        ],
+        "support_score": 0.2,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0067",
+      "text": "The system hardware shall be fixed and patched via an internet connection.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "6",
+        "section_path": [
+          "Other Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "1",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T56",
+          "M3:T58"
+        ],
+        "related_segments": [
+          "M3:T56",
+          "M3:T58"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0068",
+      "text": "Yoggie shall coordinate on future enhancement and features with our organization.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "6",
+        "section_path": [
+          "Other Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T60",
+          "M3:T62"
+        ],
+        "related_segments": [
+          "M3:T60",
+          "M3:T62"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0069",
+      "text": "The system shall adhere to the following hardware requirements: 4GB Flash ram chip 128MB SDRAM Intel XScale PXA270 520-MHz chipset OS: Apache web server Database: MySQL",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "6",
+        "section_path": [
+          "Other Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T64",
+          "M3:T66",
+          "M3:T68"
+        ],
+        "related_segments": [
+          "M3:T64",
+          "M3:T66",
+          "M3:T68"
+        ],
+        "support_score": 0.913,
+        "reachable": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:R0070",
+      "text": "Sales Person must be able to access the weborder system via a web browser with HTTPS.",
+      "class": "NFR",
+      "subtype": "PO",
+      "subtype_name": "Portability",
+      "promise_subtype": "PO",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "",
+        "section_path": [
+          "Appendix B: Use Cases",
+          "Sales Person Use Cases",
+          "Update Product Attributes",
+          "Preconditions:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T71"
+        ],
+        "related_segments": [
+          "M3:T71"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": [
+    {
+      "id": "0000-gamma-j:I001",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "0000-gamma-j:R0007",
+      "pid": "P2",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T10",
+        "M1:T12"
+      ],
+      "details": {
+        "missing": "to SQL allows easy of use and compatibility for Web Store.",
+        "stated_text": "Must use a SQL based database. SQL standard is the most widely used database format. Restricting"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I002",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "0000-gamma-j:R0010",
+      "pid": "P3",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T25"
+      ],
+      "details": {
+        "missing": "book, and Installation Instructions for the Administrator.",
+        "stated_text": "Shall deliver Operations and Maintenance manual, Users Guide"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I003",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "0000-gamma-j:R0017",
+      "pid": "P4",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T51"
+      ],
+      "details": {
+        "missing": "in the cart, along with the total cost.",
+        "stated_text": "The shopping cart will clearly display the number of items"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I004",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "0000-gamma-j:R0028",
+      "pid": "P6",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T4"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The order database of WebOrder will communicate with the account system through a programmatic interface for the billing operations."
+      }
+    },
+    {
+      "id": "0000-gamma-j:I005",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "0000-gamma-j:R0029",
+      "pid": "P7",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T5",
+        "M2:T6",
+        "M2:T7"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system.",
+        "clarification_attempted": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:I006",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "0000-gamma-j:R0033",
+      "pid": "P8",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M2:T12",
+        "M2:T13",
+        "M2:T14",
+        "M2:T15"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M2"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I007",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "0000-gamma-j:R0035",
+      "pid": "P9",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T17",
+        "M2:T18",
+        "M2:T19"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The system shall be able to add product to shopping cart in less than 2ms.",
+        "clarification_attempted": true
+      }
+    },
+    {
+      "id": "0000-gamma-j:I008",
+      "type": "inconsistency",
+      "kind": "value",
+      "requirement": "0000-gamma-j:R0036",
+      "pid": "P10",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M2:T20",
+        "M3:T54"
+      ],
+      "details": {
+        "original_value": "1 second",
+        "conflicting_value": "5 seconds",
+        "conflicting_text": "The system shall be able to search for a specified product in less than 5 seconds.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I009",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "0000-gamma-j:R0041",
+      "pid": "P11",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T39"
+      ],
+      "details": {
+        "missing": "backups through a live internet connection.",
+        "stated_text": "The system will do periodic"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I010",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "0000-gamma-j:R0049",
+      "pid": "P13",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T6"
+      ],
+      "details": {
+        "missing": "via Dijkstra's shortest path algorithm.",
+        "stated_text": "The system shall perform searches"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I011",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "0000-gamma-j:R0058",
+      "pid": "P14",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T20",
+        "M3:T21",
+        "M3:T22",
+        "M3:T23"
+      ],
+      "details": {
+        "raised_by": "TechLead",
+        "meeting": "M3"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I012",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "0000-gamma-j:R0066",
+      "pid": "P15",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T51"
+      ],
+      "details": {
+        "missing": "test environment of weborder system.",
+        "stated_text": "The system should be able to create"
+      }
+    }
+  ]
+}

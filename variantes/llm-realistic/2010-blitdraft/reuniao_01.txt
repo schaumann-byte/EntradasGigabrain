@@ -1,0 +1,71 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks erm everyone for joining. This is the kickoff erm for Blit Draft, kind of the first of three meetings, so let's start with some background and then get into what you you need.
+Client: Sure. So management at [company name] has seen a potential need to rewrite our basically core Laboratory Information System, the LIS, mainly to to improve like performance. And everything uhm the new [system name] system should do would be i mean documented in this FRS.
+Analyst: Great. er Let's start with the general needs. you know What should the system do at a basic level?
+EndUser: Well, for me, the system should show the hyperlinks
+Analyst: Okay, go on.
+EndUser: along with descriptions, so sort of the user can do whatever function they need, as it's laid out in the related UIS.
+Client: Yes, agreed.
+EndUser: Uhm, And the user has to be able to actually see those listed hyperlinks and kind of descriptions.
+Analyst: Got it.
+EndUser: Um, Then they pick a um function just by clicking the hyperlink.
+TechLead: Makes sense to me.
+Client: Uh, Yeah, so the system ought to display the desired operational page for the user after clicking the hyperlink.
+Analyst: Right.
+Client: Um, Another thing: someone with admin privileges needs to be able to to add or create a new user and assign them whatever role or roles they need in the system.
+Analyst: So an admin can create a new user and link them to one or more specified roles in the system, correct?
+Client: Yes, exactly.
+EndUser: On that, the system [crosstalk] should show an error message
+EndUser: if that new user already exists in the [system name] system.
+Analyst: Okay.
+EndUser: Um, And maybe, I'm not well sure it's a must, but it'd erm be nice if the system also showed an error message
+EndUser: if that new user er isn't active in Active Directory.
+Analyst: Okay, what exactly should that error message say, or what should it look like?
+EndUser: I'm not totally sure, honestly. Something along those lines, we'd figure it [crosstalk] out.
+EndUser: And then then the system should display the...
+Client: Erm, Right, so the user needs to be able to create or add a new user manually—
+TechLead: Sorry, quick question, go on.
+Client: No worries. So manually, or from a template.
+EndUser: Erm, And the user record should inherit all the role settings that are specified in the template
+TechLead: Mm-hm.
+EndUser: whenever the record gets created from the user template.
+Client: Yes, exactly.
+Client: And while you're creating or adding a new user from a er user template, it it should let you add extra roles i mean manually too.
+Analyst: Got it.
+EndUser: Then the system uh saves the user info to the database—
+Analyst: Sorry, just to check, go ahead.
+EndUser: Sure. Saves it with the specified roles tied to divisions for that newly created or added user.
+EndUser: Also, to find the the user and verify they exist, the system should search the [system name] user display name and user name columns in uh the supervisor [pause] tables.
+TechLead: I'd disagree there. uh That search on the [system name] user display name and user name columns should be in the well user tables, not supervisor, to find the user and verify they exist.
+EndUser: I really think it uhm should be the supervisor tables. That's what erm matters for us.
+Analyst: Okay, let's leave erm that one one open for now and come back to decide well it later.
+Client: And maybe, I'm not sure it's a must, but it'd erm be nice if when er someone tries to um create or add a new user in [system name], the system checks Active Directory sort of to see well whether that user is Active or Inactive within the company.
+Analyst: Okay, got it.
+EndUser: For well me, after I save data I'd want a standard confirmation message, and when I click cancel or close, some kind of warning or caution message.
+Client: Do we really need that? It er feels like extra effort for something that's not a priority sort of right now.
+EndUser: I'd push back a bit, it really matters uh for us day to day.
+Analyst: I hear you both, but let's take it out of of scope for now and keep moving.
+Client: On the adding process, users should be free to click any tab to start, but the xxx uhm Tab should show up as the default.
+Client: Also, every required field listed in the UIS needs a red asterisk, so the user knows they have to fill basically it in.
+EndUser: Yes, that would help a lot.
+EndUser: The user should be able to save data. There are some exceptions to that, but I can't remember them right now.
+EndUser: And the system should delete, no, sorry, clear up the data
+TechLead: Mm-hm.
+EndUser: when the user hits hits actually the Cancel button partway through creating or adding a new user.
+Analyst: So if if someone clicks Cancel in the middle of creating uhm or adding a new user, the basically system clears up the data, right?
+EndUser: Yes, exactly.
+EndUser: Then the system uhm should take the user to the xxx Page
+EndUser: if they click the close button without having entered any data.
+EndUser: And when creating or adding a new user, they have uh to associate at least one role,
+TechLead: Right.
+EndUser: plus a division, a designator code, and a lab location, all at that point.
+Analyst: Okay, got it.
+EndUser: And then there are required fields the user has to fill in, so you know User Name
+EndUser: Erm, and Display Name, both in the User User Information section, whenever um they're creating or adding a new user.
+Analyst: So when creating or adding a new user, er they sort of have to fill in the basically required fields in the User Information section, meaning User Name and Display Name, right?
+EndUser: Yes, exactly.
+TechLead: Yeah, makes sense.
+TechLead: Er, And like we said, if the user clicks the the close button without entering any data, the system sends the manager to the xxx Page.
+Analyst: Uh, Great, I think that's a good place to stop for today. er Thanks, everyone, we'll pick up from uhm here here next time.

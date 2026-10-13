@@ -1,0 +1,60 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, TechLead
+
+Analyst: Hi everyone, thanks for joining. This is our second session on Gamma-J Connecting Retailers through the World, the follow-up.
+Analyst: Quick recap: last time we went basically through basically the operating environment, the design and implementation constraints, and the user documentation. A few of those points are still open, so we'll come back to them.
+Analyst: Let's start with the WebOrder browser interface. What do we need there?
+Client: So I think, maybe, the WebOrder order database would talk to the account system through a programmatic interface for the billing side. I'm not sure that's a hard must, but it'd be nice.
+TechLead: And on my side, it'd probably make sense kind of for WebOrder to er send the details of what customers well order over to the Inventory management system, again through a programmatic interface. Maybe like not erm mandatory, but useful.
+Analyst: Can you be a bit kind of more specific about how that would work?
+TechLead: Honestly, we um haven't pinned that down uh yet. It'd be like along those lines, well we'd work out the specifics later.
+Analyst: Okay. Let's move to quality attributes. What are your expectations there?
+TechLead: So for deployment, you know once uh the USB gets actually plugged in, the system should be deployable—
+Client: Uh, Sorry, the USB?
+TechLead: Where was I... yes, and operational in less than 1 minute.
+TechLead: Also, it like needs to handle 1000 customers logged in at the same time.
+Client: Do we really need that right now? well Sounds like a lot of effort for like something that might not well be a priority.
+TechLead: I'd say it is. It matters a lot to us, I don't want to drop it.
+Analyst: Let's leave that open for now and decide later.
+Client: For me, the system should be able to pull up 200 products per second.
+Client: And maybe adding a product to the shopping cart should take actually less um than 2ms. Not sure that's strictly necessary, but it'd be nice.
+Analyst: Could you sort of be more specific on that one?
+Client: Uh, I mean, it just needs uh to like feel quick. I uhm don't have more than that right now.
+Client: Um, Oh, and searching for a specific product should take less than 1 second.
+TechLead: And on um the sort of email side, the system needs to be able to send uh emails to the customer
+Analyst: Okay.
+TechLead: and to to the vendor as well, and that should happen in under 1 second.
+Analyst: Got it.
+TechLead: Credit card validation should take less than 2 seconds.
+Analyst: Right.
+TechLead: Same for getting the shipping charges, that should come back in under 2 seconds.
+Analyst: Okay.
+TechLead: And for for restores, we need um to be able to restore 1000 records well per like second.
+Analyst: Noted.
+Client: Yeah, that sounds right.
+Analyst: Let's move on to communications interfaces. What kind kind of messages you know does the system need to send out?
+Client: So So um whenever customers or sales people have a technical question, the WebOrder system basically should email uhm that over to the System Administrator.
+TechLead: Yeah, makes sense.
+Client: Uh, And er then the customer should get an email confirmation from WebOrder saying their items will be delivered to the shipping address, and it basically should include the tracking number.
+Analyst: So WebOrder emails the customer a confirmation that what they ordered is going kind of to their shipping address, with the tracking number in there?
+Client: Yes, exactly.
+Analyst: Okay. What about safety requirements, anything uh there we should capture?
+Client: Well, the system will erm do periodic...
+Analyst: Let's come come back to to that. What uh about security requirements?
+TechLead: On the payment side, the system has to check credit cards for basically fraud, so every uh card gets validated against that.
+Analyst: Got it.
+Client: Uh, And then the uh system should encrypt all of the...
+Client: Also, um we want um it to detect IP DOS attacks uhm on its own,
+Client: and then just block the IP automatically, without anyone stepping in.
+Client: Another one: it needs to pick up well on consecutive failed login attempts.
+TechLead: Yeah, that makes sense.
+Client: And the whole system should be protected [crosstalk] by—
+TechLead: Sorry, protected by uhm what exactly?
+Client: An open source like firewall, it's called Firestarter. The site is http://www.fs-security.com/.
+Analyst: Quick thing, my screen share froze for a second, can you all still see the doc?
+Analyst: Uh, Okay, let's move on to availability. What are your expectations there?
+TechLead: Sorry, my audio cut out out a bit, it's back now.
+Client: We want the system available 99.99% i mean of the time.
+Analyst: Okay, noted.
+TechLead: Sounds right to me.
+Analyst: Great, I think that's where we'll er stop for today. We'll pick up from here actually [noise] next time. Thanks, everyone.

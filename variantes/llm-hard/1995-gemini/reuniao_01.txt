@@ -1,0 +1,78 @@
+Meeting 1 of 4 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. Thanks everyone for joining. This uhm is the kickoff for Gemini, the first of 4 meetings, so today is mostly about getting the big picture.
+Client: Sure. you know So what we're putting together is uh the operational requirements for the Gemini Control System software. It sets out general criteria and also the specific functional erm requirements for software and controls design across the Gemini Project. And like just to be clear, it's aimed at kind of the people developing the control and uh data kind of acquisition systems, not at the science erm users of the Gemini telescopes.
+Analyst: Great. Let's start with interactive observing. How should that work?
+EndUser: Erm, From my side, the first version of the automatic sequencer erm will er just run in a pass-through mode. Every command gets accepted and sent on, with minimal checking and minimal delay.
+Analyst: Okay. Next, access modes. i mean What modes do we need?
+EndUser: Sorry, quick thing, is my screen share still frozen for anyone else?
+Client: Er, So one of them is i mean F, administrative. uh That's where you can ask about things like system utilization, efficiency and so on,
+Analyst: Mm-hm.
+Client: through administrative access. There's no control at all in that mode,
+TechLead: Right.
+Client: Uh, you can only get at status and scheduling information.
+Analyst: Got it.
+Client: Uh, And administrative access must never, under any circumstances, affect the performance of an observation that's in progress. Also, one user can absolutely be in the system through several modes at once. That's actually the normal case for the Telescope Operator, who's often in observer, monitor and operator modes all at the same time. And sometimes an astronomer might be using observer and monitor modes together.
+Analyst: Let um me check er I've got this. Administrative mode, F, lets you query system utilization, efficiency and uhm the like, but there's no um control, only uh status and scheduling info, and it should never affect the performance of an ongoing observation. And a single user can be in several um modes simultaneously, typically the Telescope Operator in observer, monitor and operator modes, and sometimes an astronomer in both observer and monitor. Is um that right?
+Client: Yes, exactly.
+Analyst: Good. Let's move on to remote control. What's the thinking there?
+Client: Well, the philosophy behind it is that that
+Analyst: Okay.
+Client: for safety um reasons, nobody can issue telescope control uh commands unless a staff member, and it doesn't have to be the same person, has direct access to a hard-wired stop button, real-time video and audio, and control of the telescope.
+Analyst: Understood.
+Analyst: Okay, let's move on on to i mean remote access. What do you need there?
+Client: Uh, I think remote access should be possible from the Gemini 8m Telescopes base facility. uhm Maybe that's like not strictly mandatory, but it'd be nice if um it were.
+Analyst: Sorry, someone's screen share just popped up on my end. Okay, it's gone.
+Analyst: Got it.
+Analyst: Next, remote observing. How should that work?
+EndUser: So for remote observing I'd say—
+Client: Sorry, go ahead.
+EndUser: Right, so remote users would normally interact with the system via... well, that part's still open.
+Analyst: Okay.
+Analyst: Anything else on remote observing?
+EndUser: No, that's it.
+EndUser: By the way, my audio's um been cutting out a bit, so let me know if if you miss anything.
+Analyst: Let's talk about service. What are you expecting there?
+Client: The observing program has to be automated, so sort of there's very little human interaction during the observation. That means the Gemini software needs a programming environment that's rich enough to actually make that feasible. And kind of on top of that—
+Analyst: Sorry, quick question, is that a hard must?
+Client: Yes. And on top of that, it it should be a visually-oriented environment, with a simple, easy-to-use interface for the astronomer.
+EndUser: And the programming environment should let you pass along special notes,
+Analyst: Mm-hm.
+EndUser: Uhm, instructions and comments from the astronomer erm to the uh observer.
+TechLead: On the technical side, one thing—
+Client: Sorry, go ahead.
+Analyst: Okay, sure.
+EndUser: and that could maybe involve multimedia techniques, so that it's...
+Analyst: Let's move on to test and checkout requirements. What do you need there?
+TechLead: Uh, I think it'd be nice if the Gemini 8m Telescopes control software could also kind of run self-test sequences, for the whole Gemini 8m Telescopes system and for the subsystems. Not sure if that's strictly mandatory though.
+Analyst: Um, Can you be erm a a bit more [crosstalk] specific about what those self-tests would look like?
+TechLead: Honestly, we haven't worked that out in detail yet.
+Client: Maybe the idea is that they'd automatically exercise all the subsystems that are present in whatever operational configuration you're in. If that's doable, anyway.
+Analyst: Okay. Next well topic, astronomical data flow. What you know are the requirements there?
+Client: So, system-wide data capacity. It's limited by the transfer methods and technology, and also by how much archiving capacity we have on site. The system should be able to keep 7 days of data from the largest instrument, and the most recent few days of that have to um be available interactively from hard disk or something similar. I don't basically remember exactly how many days, I'll have to check.
+Analyst: Uhm, Anything else on astronomical data flow?
+Analyst: Sorry, my screen share just froze for a second.
+Client: No, that's it.
+Analyst: Alright, video information flow. What do you know you need there?
+Client: The system has has to be you know able to send rough images fast, every 1.0 sec. We could use lossy compression for uh that, JPEG, MPEG, um that kind of thing.
+TechLead: Wait, I don't think that's right. The idea kind of is that the system will allow for uhm fast transmission of rough images every 0.5 well sec. kind of This may be assisted through the use i mean of data-loss compression techniques (e.g. JPEG, MPEG, etc).
+Client: I'd stick with 1.0 sec. That's what makes sense um for us.
+Analyst: Let's leave that open for now and decide later.
+Client: While we're at it, on on fault erm notification, the notification should also be able to be logged electronically.
+Analyst: Quick check, we've got about ten well minutes left.
+TechLead: Do we really need the electronic logging though? It sounds like a sort of fair bit of extra effort for something that's not a top priority.
+Client: I'd push back on that. It's genuinely important for us, so I'd rather not well drop like it.
+Analyst: Okay, we'll keep it in.
+Analyst: Let's move on to fault tolerance. What should happen when part of the system fails? [crosstalk]
+Client: So if an IOC um is in a failed state, and it's still possible to observe with that particular IOC, then we sort of have to be able to reconfigure the system to do that. Generally that's limited to the IOCs tied to individual scientific instruments.
+EndUser: Is that really necessary? Reconfiguring around failed IOCs sounds like a lot of work for a fairly rare case.
+Client: It matters a lot to us, though. I really i mean don't uhm want to lose that one.
+Analyst: Fair enough, it stays.
+Analyst: Next, user kind of constraints. Are there er any limits on what users can well do with the system?
+Client: I think, ideally anyway, the software itself shouldn't put any restrictions on users, and...
+Analyst: Mm-hm.
+Client: the only thing that should, really, is policy decisions, so permissions, access privileges,
+Analyst: Right.
+Client: Uh, that sort of thing. Those should be the well only things stopping any uh user from getting at any any part of the Gemini system, from any local or remote station.
+Analyst: Great, that's a good place to stop. um Thanks basically everyone, we'll pick this up next time.

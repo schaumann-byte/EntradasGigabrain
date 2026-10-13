@@ -1,0 +1,4886 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "2010-blitdraft",
+  "doc_title": "Blit Draft",
+  "source_file": "PURE/requirements-xml/2010-blitdraft.xml",
+  "mode": "meetings",
+  "variant": "llm-realistic",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_content": 2,
+      "fallback:too_long": 1,
+      "llm_accepted": 165,
+      "llm_accepted_content": 80,
+      "turns": 168,
+      "windows": 10
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 15663,
+    "n_words": 2707,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "general needs"
+        ],
+        "n_chars": 6032,
+        "n_words": 1077,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 272,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 281,
+            "end": 551,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T3",
+            "start": 561,
+            "end": 659,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T4",
+            "start": 669,
+            "end": 720,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0001"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0001",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 730,
+            "end": 742,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T6",
+            "start": 752,
+            "end": 869,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0001"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0001",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T7",
+            "start": 878,
+            "end": 890,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T8",
+            "start": 900,
+            "end": 998,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0002"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0002",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1008,
+            "end": 1015,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T10",
+            "start": 1025,
+            "end": 1089,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0003",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T11",
+            "start": 1100,
+            "end": 1118,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T12",
+            "start": 1127,
+            "end": 1239,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0004",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1249,
+            "end": 1255,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T14",
+            "start": 1264,
+            "end": 1424,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0005",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 1434,
+            "end": 1536,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0005",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 1545,
+            "end": 1558,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T17",
+            "start": 1568,
+            "end": 1628,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0006",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 1638,
+            "end": 1698,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0006",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T19",
+            "start": 1708,
+            "end": 1713,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T20",
+            "start": 1723,
+            "end": 1832,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0007",
+                "role": "part1",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 1842,
+            "end": 1895,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0007",
+                "role": "part2",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 1905,
+            "end": 1983,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0007",
+                "role": "clarification",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 1993,
+            "end": 2085,
+            "speaker": "EndUser",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0007",
+                "role": "clarification",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 2095,
+            "end": 2141,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0008",
+                "role": "statement",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 2150,
+            "end": 2228,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0009",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 2239,
+            "end": 2268,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T27",
+            "start": 2277,
+            "end": 2321,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2010-blitdraft:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0009",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T28",
+            "start": 2331,
+            "end": 2427,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0010",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 2438,
+            "end": 2444,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T30",
+            "start": 2454,
+            "end": 2510,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 2519,
+            "end": 2532,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2541,
+            "end": 2670,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0011",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T33",
+            "start": 2680,
+            "end": 2687,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T34",
+            "start": 2697,
+            "end": 2752,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0012",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T35",
+            "start": 2762,
+            "end": 2793,
+            "speaker": "Analyst",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T36",
+            "start": 2803,
+            "end": 2898,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "2010-blitdraft:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0012",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T37",
+            "start": 2908,
+            "end": 3077,
+            "speaker": "EndUser",
+            "act": "state",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0013",
+                "role": "distractor",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T38",
+            "start": 3088,
+            "end": 3274,
+            "speaker": "TechLead",
+            "act": "counter",
+            "gt_ids": [
+              "2010-blitdraft:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0013",
+                "role": "statement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 3284,
+            "end": 3370,
+            "speaker": "EndUser",
+            "act": "defend",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0013",
+                "role": "conflict",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T40",
+            "start": 3380,
+            "end": 3466,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0013",
+                "role": "conflict",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T41",
+            "start": 3475,
+            "end": 3721,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0014",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T42",
+            "start": 3731,
+            "end": 3744,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T43",
+            "start": 3754,
+            "end": 3901,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0015",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T44",
+            "start": 3910,
+            "end": 4018,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0015",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T45",
+            "start": 4028,
+            "end": 4088,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0015",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T46",
+            "start": 4098,
+            "end": 4173,
+            "speaker": "Analyst",
+            "act": "drop",
+            "gt_ids": [
+              "2010-blitdraft:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0015",
+                "role": "resolution",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T47",
+            "start": 4182,
+            "end": 4303,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0016",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T48",
+            "start": 4312,
+            "end": 4431,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0017",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T49",
+            "start": 4441,
+            "end": 4468,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T50",
+            "start": 4478,
+            "end": 4587,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0018",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T51",
+            "start": 4597,
+            "end": 4655,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0019",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T52",
+            "start": 4666,
+            "end": 4672,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T53",
+            "start": 4682,
+            "end": 4779,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0019",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T54",
+            "start": 4789,
+            "end": 4919,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0019",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 4929,
+            "end": 4942,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T56",
+            "start": 4952,
+            "end": 5008,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0020",
+                "role": "part1",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T57",
+            "start": 5018,
+            "end": 5081,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0020",
+                "role": "part2",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T58",
+            "start": 5091,
+            "end": 5175,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0021",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T59",
+            "start": 5186,
+            "end": 5192,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T60",
+            "start": 5202,
+            "end": 5276,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0021",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T61",
+            "start": 5286,
+            "end": 5299,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T62",
+            "start": 5309,
+            "end": 5390,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0022",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T63",
+            "start": 5400,
+            "end": 5516,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0022",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 5526,
+            "end": 5702,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0022",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T65",
+            "start": 5712,
+            "end": 5725,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T66",
+            "start": 5736,
+            "end": 5754,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T67",
+            "start": 5765,
+            "end": 5899,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0020",
+                "role": "restatement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T68",
+            "start": 5909,
+            "end": 6031,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "user interface guidelines",
+          "quality assurance",
+          "system downtime",
+          "coding standards",
+          "maintainability standards",
+          "development platform",
+          "production releases"
+        ],
+        "n_chars": 5185,
+        "n_words": 871,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 77,
+            "end": 192,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 203,
+            "end": 259,
+            "speaker": "TechLead",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 269,
+            "end": 391,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 401,
+            "end": 476,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 485,
+            "end": 692,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0025"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0025",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T6",
+            "start": 702,
+            "end": 709,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T7",
+            "start": 720,
+            "end": 812,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0024",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M2:T8",
+            "start": 822,
+            "end": 893,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T9",
+            "start": 904,
+            "end": 1056,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0027",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 1065,
+            "end": 1266,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0028",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T11",
+            "start": 1276,
+            "end": 1490,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0028",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1499,
+            "end": 1512,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T13",
+            "start": 1522,
+            "end": 1557,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T14",
+            "start": 1566,
+            "end": 1580,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T15",
+            "start": 1590,
+            "end": 1658,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T16",
+            "start": 1669,
+            "end": 1773,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0026"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0026",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T17",
+            "start": 1783,
+            "end": 1817,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T18",
+            "start": 1828,
+            "end": 1909,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0029",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1920,
+            "end": 1937,
+            "speaker": "TechLead",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M2:T20",
+            "start": 1946,
+            "end": 1962,
+            "speaker": "Client",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M2:T21",
+            "start": 1973,
+            "end": 2053,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0029",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T22",
+            "start": 2062,
+            "end": 2068,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T23",
+            "start": 2079,
+            "end": 2244,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0030",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T24",
+            "start": 2254,
+            "end": 2418,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0030",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T25",
+            "start": 2429,
+            "end": 2442,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T26",
+            "start": 2452,
+            "end": 2529,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T27",
+            "start": 2540,
+            "end": 2642,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0031"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0031",
+                "role": "statement",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T28",
+            "start": 2651,
+            "end": 2845,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0032",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T29",
+            "start": 2854,
+            "end": 2940,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T30",
+            "start": 2950,
+            "end": 2961,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T31",
+            "start": 2972,
+            "end": 3052,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0033"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0033",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T32",
+            "start": 3061,
+            "end": 3066,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T33",
+            "start": 3077,
+            "end": 3147,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0033"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0033",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T34",
+            "start": 3157,
+            "end": 3266,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0033"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0033",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T35",
+            "start": 3277,
+            "end": 3290,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T36",
+            "start": 3299,
+            "end": 3322,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T37",
+            "start": 3333,
+            "end": 3429,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0034",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T38",
+            "start": 3439,
+            "end": 3475,
+            "speaker": "Analyst",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T39",
+            "start": 3486,
+            "end": 3553,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "2010-blitdraft:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0034",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T40",
+            "start": 3563,
+            "end": 3614,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T41",
+            "start": 3625,
+            "end": 3647,
+            "speaker": "TechLead",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T42",
+            "start": 3656,
+            "end": 3875,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0036"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0036",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T43",
+            "start": 3885,
+            "end": 3898,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T44",
+            "start": 3909,
+            "end": 3938,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T45",
+            "start": 3947,
+            "end": 4046,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0035",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T46",
+            "start": 4055,
+            "end": 4102,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0035",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T47",
+            "start": 4112,
+            "end": 4118,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T48",
+            "start": 4129,
+            "end": 4155,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T49",
+            "start": 4166,
+            "end": 4390,
+            "speaker": "TechLead",
+            "act": "followup",
+            "gt_ids": [
+              "2010-blitdraft:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0018",
+                "role": "followup",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T50",
+            "start": 4400,
+            "end": 4481,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T51",
+            "start": 4490,
+            "end": 4630,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0038"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0038",
+                "role": "statement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T52",
+            "start": 4641,
+            "end": 4809,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0038",
+                "role": "restatement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T53",
+            "start": 4819,
+            "end": 5065,
+            "speaker": "Analyst",
+            "act": "resolve_later",
+            "gt_ids": [
+              "2010-blitdraft:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0013",
+                "role": "resolution",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M2:T54",
+            "start": 5075,
+            "end": 5184,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "development process",
+          "robohelp tool",
+          "applicable standards"
+        ],
+        "n_chars": 4446,
+        "n_words": 759,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 74,
+            "end": 180,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 190,
+            "end": 390,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T3",
+            "start": 401,
+            "end": 609,
+            "speaker": "TechLead",
+            "act": "followup",
+            "gt_ids": [
+              "2010-blitdraft:R0031"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0031",
+                "role": "followup",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M3:T4",
+            "start": 619,
+            "end": 713,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T5",
+            "start": 722,
+            "end": 807,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0039"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0039",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T6",
+            "start": 817,
+            "end": 822,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T7",
+            "start": 831,
+            "end": 904,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2010-blitdraft:R0039"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0039",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 914,
+            "end": 921,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T9",
+            "start": 930,
+            "end": 1043,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0040"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0040",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T10",
+            "start": 1053,
+            "end": 1059,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T11",
+            "start": 1068,
+            "end": 1201,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0041"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0041",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T12",
+            "start": 1211,
+            "end": 1223,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T13",
+            "start": 1232,
+            "end": 1370,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0042"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0042",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T14",
+            "start": 1381,
+            "end": 1405,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T15",
+            "start": 1414,
+            "end": 1536,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0043",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T16",
+            "start": 1546,
+            "end": 1551,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T17",
+            "start": 1560,
+            "end": 1642,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0044",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T18",
+            "start": 1652,
+            "end": 1659,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T19",
+            "start": 1669,
+            "end": 1727,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T20",
+            "start": 1736,
+            "end": 1791,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0045",
+                "role": "statement",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T21",
+            "start": 1802,
+            "end": 1979,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0046",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T22",
+            "start": 1989,
+            "end": 2135,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0046",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T23",
+            "start": 2146,
+            "end": 2159,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T24",
+            "start": 2168,
+            "end": 2192,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M3:T25",
+            "start": 2201,
+            "end": 2340,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0047",
+                "role": "statement",
+                "pid": "P15"
+              }
+            ]
+          },
+          {
+            "id": "M3:T26",
+            "start": 2350,
+            "end": 2357,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T27",
+            "start": 2366,
+            "end": 2573,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0048"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0048",
+                "role": "statement",
+                "pid": "P16"
+              }
+            ]
+          },
+          {
+            "id": "M3:T28",
+            "start": 2583,
+            "end": 2588,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T29",
+            "start": 2597,
+            "end": 2787,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0049",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T30",
+            "start": 2797,
+            "end": 2803,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T31",
+            "start": 2812,
+            "end": 2983,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0050",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T32",
+            "start": 2992,
+            "end": 3057,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0051"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0051",
+                "role": "statement",
+                "pid": "P17"
+              }
+            ]
+          },
+          {
+            "id": "M3:T33",
+            "start": 3068,
+            "end": 3123,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0052",
+                "role": "statement",
+                "pid": "P18"
+              }
+            ]
+          },
+          {
+            "id": "M3:T34",
+            "start": 3134,
+            "end": 3263,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0053"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0053",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T35",
+            "start": 3272,
+            "end": 3392,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0054"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0054",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T36",
+            "start": 3402,
+            "end": 3408,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T37",
+            "start": 3417,
+            "end": 3496,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0055",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T38",
+            "start": 3507,
+            "end": 3540,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M3:T39",
+            "start": 3549,
+            "end": 3656,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2010-blitdraft:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0055",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T40",
+            "start": 3666,
+            "end": 3764,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T41",
+            "start": 3773,
+            "end": 3911,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0056",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T42",
+            "start": 3921,
+            "end": 4044,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2010-blitdraft:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0056",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T43",
+            "start": 4053,
+            "end": 4066,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T44",
+            "start": 4077,
+            "end": 4097,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T45",
+            "start": 4106,
+            "end": 4198,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2010-blitdraft:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "2010-blitdraft:R0057",
+                "role": "statement",
+                "pid": "P19"
+              }
+            ]
+          },
+          {
+            "id": "M3:T46",
+            "start": 4208,
+            "end": 4445,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 57,
+    "n_primary_fr": 23,
+    "n_primary_nfr": 34,
+    "n_expected_in_output": 54,
+    "n_reachable": 55,
+    "by_status": {
+      "clear": 40,
+      "conflict_resolved": 1,
+      "rejected": 1,
+      "ambiguous": 5,
+      "inconsistent": 2,
+      "incomplete": 6,
+      "omitted": 2
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 5,
+      "conflict:dropped": 1,
+      "conflict:resolved_later": 1,
+      "incompleteness:completed_later": 2,
+      "incompleteness:open": 6,
+      "inconsistency:unnoticed": 2,
+      "omission:not_discussed": 2
+    },
+    "n_distractors": 1,
+    "n_issues": 13,
+    "messiness": {
+      "topics_out_of_document_order": 2,
+      "chunked_statements": 12,
+      "reactions": 11,
+      "interruptions": 4,
+      "false_starts": 1,
+      "smalltalk": 1,
+      "crosstalk": 1,
+      "offtopic": 1,
+      "self_introduced_topics": 1,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.842
+  },
+  "requirements": [
+    {
+      "id": "2010-blitdraft:R0001",
+      "text": "System shall display the hyperlinks and descriptions for the user to perform the desired functions as specified in the related UIS.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T4",
+          "M1:T6"
+        ],
+        "related_segments": [
+          "M1:T4",
+          "M1:T6"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0002",
+      "text": "The User shall be able to view the hyperlinks and descriptions listed.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T8"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0003",
+      "text": "The User shall be able to choose a function by clicking the hyperlink.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.1.3",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T10"
+        ],
+        "related_segments": [
+          "M1:T10"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0004",
+      "text": "The system shall display the desired operational page for the user after clicking the hyperlink.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.1.4",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T12"
+        ],
+        "related_segments": [
+          "M1:T12"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0005",
+      "text": "A user with admin privileges shall be able to Add/Create a new user and associate the user with specified role(s) in the system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "2.1.1.2.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T14",
+          "M1:T15"
+        ],
+        "related_segments": [
+          "M1:T14",
+          "M1:T15"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0006",
+      "text": "The system shall display an error message if the new user is found in the [system name] system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T17",
+          "M1:T18"
+        ],
+        "related_segments": [
+          "M1:T17",
+          "M1:T18"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0007",
+      "text": "The system shall display an error message if the new user is not active in the Active Directory.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.3",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The system shall display an error message if the new user is not active in the Active Directory.",
+            "clarification_attempted": true
+          },
+          "segments": [
+            "M1:T20",
+            "M1:T21",
+            "M1:T22",
+            "M1:T23"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T20",
+          "M1:T21"
+        ],
+        "related_segments": [
+          "M1:T20",
+          "M1:T21",
+          "M1:T22",
+          "M1:T23"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0008",
+      "text": "The system shall display the xxx tab as the default tab.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.4",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "xxx tab as the default tab.",
+            "stated_text": "The system shall display the"
+          },
+          "segments": [
+            "M1:T24"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T24"
+        ],
+        "related_segments": [
+          "M1:T24"
+        ],
+        "support_score": 0.4,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0009",
+      "text": "The user shall be able to create/add a new user manually or from a template.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.5",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T25",
+          "M1:T27"
+        ],
+        "related_segments": [
+          "M1:T25",
+          "M1:T27"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0010",
+      "text": "The user record shall inherit all specified role(s) settings in the template when the user record is created from the user template",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.6",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T28",
+          "M1:T30"
+        ],
+        "related_segments": [
+          "M1:T28",
+          "M1:T30"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0011",
+      "text": "The user shall be able to add additional roles manually while creating/adding a new user from a user template.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.7",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "ambiguity",
+          "kind": "vague_reference",
+          "outcome": "unresolved",
+          "details": {
+            "removed": "The user",
+            "replacement": "it",
+            "stated_text": "It shall be able to add additional roles manually while creating/adding a new user from a user template."
+          },
+          "segments": [
+            "M1:T32"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T32"
+        ],
+        "related_segments": [
+          "M1:T32"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0012",
+      "text": "The system shall save the user info to the database with specified roles associated with divisions for the newly created/added user.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.8",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T34",
+          "M1:T36"
+        ],
+        "related_segments": [
+          "M1:T34",
+          "M1:T36"
+        ],
+        "support_score": 0.917,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0013",
+      "text": "The system shall perform a search on the [system name] user display name and user name columns in the user tables to find the user and verify the user's existence.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.9",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "conflict",
+          "kind": "actor",
+          "outcome": "resolved_later",
+          "details": {
+            "original_value": "the user",
+            "proposed_value": "the supervisor",
+            "proposed_text": "The system shall perform a search on the [system name] user display name and user name columns in the supervisor tables to find the user and verify the user's existence.",
+            "raised_by": "TechLead",
+            "meeting": "M1",
+            "proposer": "EndUser",
+            "resolved_in": "M2"
+          },
+          "segments": [
+            "M1:T37",
+            "M1:T38",
+            "M1:T39",
+            "M1:T40",
+            "M2:T53"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T38",
+          "M2:T53"
+        ],
+        "related_segments": [
+          "M1:T37",
+          "M1:T38",
+          "M1:T39",
+          "M1:T40",
+          "M2:T53"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0014",
+      "text": "The system shall perform a search in the Active Directory to verify the status of the user — Active/Inactive within the company—when the user attempts to create/add a new user in the [system name] system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.10",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The system shall perform a search in the Active Directory to verify the status of the user — Active/Inactive within the company—when the user attempts to create/add a new user in the [system name] system."
+          },
+          "segments": [
+            "M1:T41"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T41"
+        ],
+        "related_segments": [
+          "M1:T41"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0015",
+      "text": "The system shall generate a standard confirmation message after saving data and warning/caution messages after the cancel or close button is clicked.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.11",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T43",
+            "M1:T44",
+            "M1:T45",
+            "M1:T46"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T43",
+          "M1:T46"
+        ],
+        "related_segments": [
+          "M1:T43",
+          "M1:T44",
+          "M1:T45",
+          "M1:T46"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0016",
+      "text": "The user must have the flexibility to click any tab to commence the adding process, although the xxx Tab shall display as the default tab.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.12",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T47"
+        ],
+        "related_segments": [
+          "M1:T47"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0017",
+      "text": "All required fields as specified in the UIS must be marked with a red asterisk alerting the user to fill the required fields in.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.13",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T48"
+        ],
+        "related_segments": [
+          "M1:T48"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0018",
+      "text": "The user shall be able to save data after creating/adding a new user or cancel data to abort the process.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.14",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "incompleteness",
+          "kind": "missing_condition",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "after creating/adding a new user or cancel data to abort the process",
+            "stated_text": "The user shall be able to save data",
+            "completed_in": "M2"
+          },
+          "segments": [
+            "M1:T50",
+            "M2:T49"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T50",
+          "M2:T49"
+        ],
+        "related_segments": [
+          "M1:T50",
+          "M2:T49"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0019",
+      "text": "The system shall clear up data if the user chooses to click the Cancel button in the midst of creating/adding a new user.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.15",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T51",
+          "M1:T53",
+          "M1:T54"
+        ],
+        "related_segments": [
+          "M1:T51",
+          "M1:T53",
+          "M1:T54"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0020",
+      "text": "The system shall direct the user to the xxx Page if the user chooses to click the close button without entering any data.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.16",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "inconsistency",
+          "kind": "actor",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "the user",
+            "conflicting_value": "the manager",
+            "conflicting_text": "The system shall direct the manager to the xxx Page if the user chooses to click the close button without entering any data.",
+            "restated_in": "M1"
+          },
+          "segments": [
+            "M1:T56",
+            "M1:T57",
+            "M1:T67"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T56",
+          "M1:T57"
+        ],
+        "related_segments": [
+          "M1:T56",
+          "M1:T57",
+          "M1:T67"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0021",
+      "text": "The user must associate at least one role, division, designator code, and lab location at the time of creating/adding a new user.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.17",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T58",
+          "M1:T60"
+        ],
+        "related_segments": [
+          "M1:T58",
+          "M1:T60"
+        ],
+        "support_score": 0.929,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0022",
+      "text": "The user must fill in the required fields—User Name and Display Name—in the User Information section at the time of creating/adding a new user.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.18",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T62",
+          "M1:T63",
+          "M1:T64"
+        ],
+        "related_segments": [
+          "M1:T62",
+          "M1:T63",
+          "M1:T64"
+        ],
+        "support_score": 0.917,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0023",
+      "text": "The system shall generate a standard error/warning message after the user attempts to save data without associating one of each of the following criteria—xxx—and/or without filling in the required fields in the User Information section.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.1.1.2.1.19",
+        "section_path": [
+          "Specific Requirements",
+          "Functionality",
+          "Module: Admin",
+          "Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000",
+          "Action: Create/Add User"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0024",
+      "text": "The Project Team must demonstrate mockups of UI changes to project stakeholders early in the development process.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.2.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Usability",
+          "User Interface Guidelines"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "stakeholders early in the development process.",
+            "stated_text": "The Project Team must demonstrate mockups of UI changes to project"
+          },
+          "segments": [
+            "M2:T7"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T7"
+        ],
+        "related_segments": [
+          "M2:T7"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0025",
+      "text": "The Project Team must permit reasonable adjustment to the user interfaces of new functionality by project stakeholders when project schedule permits those adjustments.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.2.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Usability",
+          "User Interface Guidelines"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T5"
+        ],
+        "related_segments": [
+          "M2:T5"
+        ],
+        "support_score": 0.727,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0026",
+      "text": "The Project Team shall schedule updates to the production environment only on Tuesdays between 7pm and 7am.",
+      "class": "NFR",
+      "subtype": "RL",
+      "subtype_name": "Reliability/RAMS",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.3.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Reliability",
+          "System Downtime"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T16"
+        ],
+        "related_segments": [
+          "M2:T16"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0027",
+      "text": "The Project Team must perform applicable and appropriate testing against new functionality prior to releasing that functionality/build to the production environment.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.4.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Performance",
+          "Quality Assurance"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T9"
+        ],
+        "related_segments": [
+          "M2:T9"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0028",
+      "text": "The project Team must allow a reasonable time to conduct User Acceptance Testing (UAT) against the built functionalities prior to deploying the product to the production environment.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.4.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Performance",
+          "Quality Assurance"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T10",
+          "M2:T11"
+        ],
+        "related_segments": [
+          "M2:T10",
+          "M2:T11"
+        ],
+        "support_score": 0.944,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0029",
+      "text": "The Development Team shall define coding standards for the application and follow those standards consistently.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "MN",
+      "source": {
+        "section_id": "2.5.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Supportability",
+          "Coding Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T18",
+          "M2:T21"
+        ],
+        "related_segments": [
+          "M2:T18",
+          "M2:T21"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0030",
+      "text": "The Development Team shall be required to adjust existing source code to follow accepted coding standards only if that source code must be modified.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "MN",
+      "source": {
+        "section_id": "2.5.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Supportability",
+          "Coding Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T23",
+          "M2:T24"
+        ],
+        "related_segments": [
+          "M2:T23",
+          "M2:T24"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0031",
+      "text": "The system shall log errors, warnings, and informational messages to an external log file on the application server.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.5.2.1",
+        "section_path": [
+          "Specific Requirements",
+          "Supportability",
+          "Maintainability Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "to an external log file on the application server.",
+            "stated_text": "The system shall log errors, warnings, and informational messages",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M2:T27",
+            "M3:T3"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T27",
+          "M3:T3"
+        ],
+        "related_segments": [
+          "M2:T27",
+          "M3:T3"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0032",
+      "text": "The Development Team shall be required to adjust existing source code to use the external log file only if that source code must be modified to implement another requirement.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.5.2.2",
+        "section_path": [
+          "Specific Requirements",
+          "Supportability",
+          "Maintainability Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T28"
+        ],
+        "related_segments": [
+          "M2:T28"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0033",
+      "text": "The system shall log an error message to the external data file when the user is directed to the [SYSTEM NAME] error page.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.5.2.3",
+        "section_path": [
+          "Specific Requirements",
+          "Supportability",
+          "Maintainability Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T31",
+          "M2:T33",
+          "M2:T34"
+        ],
+        "related_segments": [
+          "M2:T31",
+          "M2:T33",
+          "M2:T34"
+        ],
+        "support_score": 0.909,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0034",
+      "text": "The system shall send a notification email to a Client Services email distribution list if the user is directed to the xxx error page.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.5.2.4",
+        "section_path": [
+          "Specific Requirements",
+          "Supportability",
+          "Maintainability Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T37",
+          "M2:T39"
+        ],
+        "related_segments": [
+          "M2:T37",
+          "M2:T39"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0035",
+      "text": "The Development Team shall develop functionalities using the xx language and on the supported .NET 3.5 Platform.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Platform"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T45",
+          "M2:T46"
+        ],
+        "related_segments": [
+          "M2:T45",
+          "M2:T46"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0036",
+      "text": "The Development Team shall utilize established open source frameworks instead of proprietary custom components wherever appropriate.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Platform"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T42"
+        ],
+        "related_segments": [
+          "M2:T42"
+        ],
+        "support_score": 0.769,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0037",
+      "text": "The system shall continue to depend upon and use a single SQL Server 2008 database.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.1.3",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Platform"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P12",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0038",
+      "text": "The Technical Owner/Lead shall provide signoff before any [SYSTEM NAME] build can be deployed to the production environment.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.2.1",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Production Releases"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P13",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "The Technical Owner/Lead shall not provide signoff before any [SYSTEM NAME] build can be deployed to the production environment.",
+            "restated_in": "M2"
+          },
+          "segments": [
+            "M2:T51",
+            "M2:T52"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T51"
+        ],
+        "related_segments": [
+          "M2:T51",
+          "M2:T52"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0039",
+      "text": "The Development Team shall perform weekly integrations of the [SYSTEM NAME] system and deploy these system updates to the Staging environment.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.3.1",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Process"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T5",
+          "M3:T7"
+        ],
+        "related_segments": [
+          "M3:T5",
+          "M3:T7"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0040",
+      "text": "The Development Team shall label every scheduled [SYSTEM NAME] build in the source control system.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.3.2",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Process"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T9"
+        ],
+        "related_segments": [
+          "M3:T9"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0041",
+      "text": "The Development Team shall perform scheduled [SYSTEM NAME] builds using code checked out of source control using the label as defined and specified.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.3.3",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Process"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T11"
+        ],
+        "related_segments": [
+          "M3:T11"
+        ],
+        "support_score": 0.812,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0042",
+      "text": "The Development Team shall develop and then send out release notes via e-mail to all Project Team after each [SYSTEM NAME] build deployed to the Staging environment.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.3.4",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Process"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T13"
+        ],
+        "related_segments": [
+          "M3:T13"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0043",
+      "text": "The Technical Lead shall perform code reviews of every system change before those changes may be committed to source control.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.3.5",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Process"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T15"
+        ],
+        "related_segments": [
+          "M3:T15"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0044",
+      "text": "The QA/QC Team must perform regression testing against all scheduled builds.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.6.3.6",
+        "section_path": [
+          "Specific Requirements",
+          "Design Constraints",
+          "Development Process"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T17"
+        ],
+        "related_segments": [
+          "M3:T17"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0045",
+      "text": "RoboHelp version 8 will be used to create the online [system name] Help hypertext links.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P14",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "the online [system name] Help hypertext links.",
+            "stated_text": "RoboHelp version 8 will be used to create"
+          },
+          "segments": [
+            "M3:T20"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T20"
+        ],
+        "related_segments": [
+          "M3:T20"
+        ],
+        "support_score": 0.3,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0046",
+      "text": "The [system name] system will display a hypertext link labeled \"Help\" at the top right corner on each of the user screens to provide assistance to the user.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T21",
+          "M3:T22"
+        ],
+        "related_segments": [
+          "M3:T21",
+          "M3:T22"
+        ],
+        "support_score": 0.786,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0047",
+      "text": "Each of the Help topic pop-up windows will contain that same content that is available within the [system name] user's manuals.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "2.7.1",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P15",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Each of the Help topic pop-up windows will contain that same content that is available within the [system name] user's manuals."
+          },
+          "segments": [
+            "M3:T25"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T25"
+        ],
+        "related_segments": [
+          "M3:T25"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0048",
+      "text": "The system shall provide the capability to open a pop-up window displaying information about the specific page along with links to supporting help topics upon selecting each Help link.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P16",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The system shall provide the capability to open a pop-up window displaying information about the specific page along with links to supporting help topics upon selecting each Help link."
+          },
+          "segments": [
+            "M3:T27"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T27"
+        ],
+        "related_segments": [
+          "M3:T27"
+        ],
+        "support_score": 0.765,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0049",
+      "text": "The system shall display \"[system name] Overview\" page located under the Getting Started section of Help as default help topic page that will load upon selecting Help hypertext link.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T29"
+        ],
+        "related_segments": [
+          "M3:T29"
+        ],
+        "support_score": 0.812,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0050",
+      "text": "The system must allow users to easily navigate through each of the help topics by selecting a corresponding hypertext link provided in the left frame of the pop-up Help window.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.3",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T31"
+        ],
+        "related_segments": [
+          "M3:T31"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0051",
+      "text": "The system shall display the [company name] logo in the top, right side of the screen on each of the help pages.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.4",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P17",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "right side of the screen on each of the help pages.",
+            "stated_text": "The system shall display the [company name] logo in the top"
+          },
+          "segments": [
+            "M3:T32"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T32"
+        ],
+        "related_segments": [
+          "M3:T32"
+        ],
+        "support_score": 0.455,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0052",
+      "text": "The system must exhibit each of the help pages using the same color scheme and background as specified.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "LF",
+      "source": {
+        "section_id": "2.7.1.5",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P18",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "same color scheme and background as specified.",
+            "stated_text": "The system must exhibit each of the help pages using the"
+          },
+          "segments": [
+            "M3:T33"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T33"
+        ],
+        "related_segments": [
+          "M3:T33"
+        ],
+        "support_score": 0.333,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0053",
+      "text": "The system shall provide searching ability to the users to quickly find specific topic material through the online help tool.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.6",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T34"
+        ],
+        "related_segments": [
+          "M3:T34"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0054",
+      "text": "The system shall provide an index to the users for a more in-depth search of topic contents through the online help tool.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.7",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T35"
+        ],
+        "related_segments": [
+          "M3:T35"
+        ],
+        "support_score": 0.769,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0055",
+      "text": "The system shall provide a Glossary for industry-related terms associated with [company name] and the [system name] system to the users through the online help tool.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.7.1.8",
+        "section_path": [
+          "Specific Requirements",
+          "Online User Documentation and Help System Requirements",
+          "Robohelp Tool:"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T37",
+          "M3:T39"
+        ],
+        "related_segments": [
+          "M3:T37",
+          "M3:T39"
+        ],
+        "support_score": 0.929,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0056",
+      "text": "The system shall retain existing HIPAA compliance capabilities.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "2.9.1.1",
+        "section_path": [
+          "Specific Requirements",
+          "Applicable Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T41",
+          "M3:T42"
+        ],
+        "related_segments": [
+          "M3:T41",
+          "M3:T42"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:R0057",
+      "text": "The system shall follow HIPAA compliance capabilities in new functionality introduced to the system.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "2.9.1.2",
+        "section_path": [
+          "Specific Requirements",
+          "Applicable Standards"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P19",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "new functionality introduced to the system.",
+            "stated_text": "The system shall follow HIPAA compliance capabilities in"
+          },
+          "segments": [
+            "M3:T45"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T45"
+        ],
+        "related_segments": [
+          "M3:T45"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [
+    {
+      "id": "2010-blitdraft:D001",
+      "text": "The system shall perform a search on the [system name] user display name and user name columns in the supervisor tables to find the user and verify the user's existence.",
+      "requirement": "2010-blitdraft:R0013",
+      "pid": "P4",
+      "kind": "rejected_proposal",
+      "segments": [
+        "M1:T37"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "2010-blitdraft:I001",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2010-blitdraft:R0007",
+      "pid": "P1",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T20",
+        "M1:T21",
+        "M1:T22",
+        "M1:T23"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The system shall display an error message if the new user is not active in the Active Directory.",
+        "clarification_attempted": true
+      }
+    },
+    {
+      "id": "2010-blitdraft:I002",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2010-blitdraft:R0008",
+      "pid": "P2",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T24"
+      ],
+      "details": {
+        "missing": "xxx tab as the default tab.",
+        "stated_text": "The system shall display the"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I003",
+      "type": "ambiguity",
+      "kind": "vague_reference",
+      "requirement": "2010-blitdraft:R0011",
+      "pid": "P3",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T32"
+      ],
+      "details": {
+        "removed": "The user",
+        "replacement": "it",
+        "stated_text": "It shall be able to add additional roles manually while creating/adding a new user from a user template."
+      }
+    },
+    {
+      "id": "2010-blitdraft:I004",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2010-blitdraft:R0014",
+      "pid": "P5",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T41"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The system shall perform a search in the Active Directory to verify the status of the user — Active/Inactive within the company—when the user attempts to create/add a new user in the [system name] system."
+      }
+    },
+    {
+      "id": "2010-blitdraft:I005",
+      "type": "inconsistency",
+      "kind": "actor",
+      "requirement": "2010-blitdraft:R0020",
+      "pid": "P8",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M1:T56",
+        "M1:T57",
+        "M1:T67"
+      ],
+      "details": {
+        "original_value": "the user",
+        "conflicting_value": "the manager",
+        "conflicting_text": "The system shall direct the manager to the xxx Page if the user chooses to click the close button without entering any data.",
+        "restated_in": "M1"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I006",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2010-blitdraft:R0024",
+      "pid": "P10",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T7"
+      ],
+      "details": {
+        "missing": "stakeholders early in the development process.",
+        "stated_text": "The Project Team must demonstrate mockups of UI changes to project"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I007",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "2010-blitdraft:R0038",
+      "pid": "P13",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M2:T51",
+        "M2:T52"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "The Technical Owner/Lead shall not provide signoff before any [SYSTEM NAME] build can be deployed to the production environment.",
+        "restated_in": "M2"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I008",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2010-blitdraft:R0045",
+      "pid": "P14",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T20"
+      ],
+      "details": {
+        "missing": "the online [system name] Help hypertext links.",
+        "stated_text": "RoboHelp version 8 will be used to create"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I009",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2010-blitdraft:R0047",
+      "pid": "P15",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T25"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Each of the Help topic pop-up windows will contain that same content that is available within the [system name] user's manuals."
+      }
+    },
+    {
+      "id": "2010-blitdraft:I010",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2010-blitdraft:R0048",
+      "pid": "P16",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T27"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The system shall provide the capability to open a pop-up window displaying information about the specific page along with links to supporting help topics upon selecting each Help link."
+      }
+    },
+    {
+      "id": "2010-blitdraft:I011",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2010-blitdraft:R0051",
+      "pid": "P17",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T32"
+      ],
+      "details": {
+        "missing": "right side of the screen on each of the help pages.",
+        "stated_text": "The system shall display the [company name] logo in the top"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I012",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2010-blitdraft:R0052",
+      "pid": "P18",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T33"
+      ],
+      "details": {
+        "missing": "same color scheme and background as specified.",
+        "stated_text": "The system must exhibit each of the help pages using the"
+      }
+    },
+    {
+      "id": "2010-blitdraft:I013",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2010-blitdraft:R0057",
+      "pid": "P19",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T45"
+      ],
+      "details": {
+        "missing": "new functionality introduced to the system.",
+        "stated_text": "The system shall follow HIPAA compliance capabilities in"
+      }
+    }
+  ]
+}

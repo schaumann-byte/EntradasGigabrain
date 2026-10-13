@@ -1,0 +1,47 @@
+Meeting 3 of 4 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Erm, Okay, let's get started. This is our kind of third session on Gemini, the follow-up, so we'll pick up where we left off.
+EndUser: Sounds good. Nice to finally have a quiet morning for once.
+Analyst: Quick recap: um last time we covered redundancy, the software constraints and the data flow. A like few points were left open, basically so we'll come back to erm those.
+TechLead: Right, and just so we're aligned, the other astronomical information, so stuff from the sky field monitors, the uh autoguider cameras, and sky uh monitoring devices like the cloud and seeing monitors, that shall not also be capable of being available.
+Analyst: Okay. uh Let's move on to i mean user constraints. What do we you know need to keep in in mind sort of there?
+TechLead: So the idea is to centralize support and coordination of their operations. You'd get operations support for each individual instrument, um plus plus kind of supervision um across all of them.
+TechLead: Um, And since you can get er in like from any um user station, the stations are basically identical in principle. Software just configures one as the user station for this or that subsystem.
+TechLead: Erm, Which also ties into uhm reliability and availability requirements. We want on-line uh pre-checking of the operational status of the equipment done prior to...
+Analyst: Let's hold that and turn turn to maintainability. um How do you see that working?
+Client: So the um maintenance... no, kind of sorry, the plan. The plan will uhm consider
+Analyst: Okay.
+Client: the maintenance requirements, including an like estimate of the resources needed,
+Analyst: Got it.
+Client: and how we'd upgrade the system to add capabilities and performance.
+Analyst: Mm-hm.
+Client: And where kind of we expect upgrades, those areas should be identified, with an uh estimate of the effort and resources it'll take.
+Analyst: Understood.
+Client: Um, And that plan gets delivered together with the control system.
+Analyst: Okay, noted.
+TechLead: Yeah, that makes sense to me.
+TechLead: While we're on it, I I want to raise software uh constraints. When we add new instruments, uh the well goal should be like not to actually touch anything that's already operational. Any changes should stay in the operational um procedures and leave uh the bulk of the existing software alone.
+Analyst: Right, okay.
+Client: And we need um to be able to switch to different configurations at any time, using um the appropriate procedures.
+EndUser: Do we uhm really well need that, though? It sounds like a a lot of kind of effort for something that's not a top priority.
+Client: Uh, I'd push back on that. It really matters to uhm us, so well I don't want it dropped.
+Analyst: Let's leave that one open for like now and come back to it later.
+Client: Another thing, on quantitative maintenance requirements. Those will be allocated to the system,
+Analyst: Mm-hm.
+Analyst: Sorry, er someone's screen share just popped up on on my end. Go on.
+Client: Uhm, to the subsystems, and to each component.
+EndUser: Uh, And as we said, all the Gemini software gets fully documented, with proper comments internally and external documentation, but no Unix-style man um pages sort of in the i mean external docs.
+Analyst: Okay, you know let's move on to testability. How um are we [noise] handling that?
+TechLead: So there'll be a plan that covers all areas of testing, starting from design and...
+TechLead: Sorry, my audio's cutting out a bit, can you still hear um me?
+Client: I also want to talk about security and um safety. Whenever there's a risk that the control software could put people in um danger or damage any Gemini 8m Telescopes subsystem, say by driving beyond limits or overexposing detectors, safety protection has to be applied.
+Analyst: Got it.
+Client: And then security, maybe. I think it'd uh be good good to prevent commands from different users on different parts of the system getting accidentally mixed up, and also to stop intrusion from the wide area er network into the Gemini 8m Telescopes. Not sure if that's strictly mandatory, though.
+EndUser: Quick check, are we still finishing on the hour?
+TechLead: Uh, On safety, we'd analyze those aspects during the functional specification phase of the software.
+TechLead: And specifically, the astronomical database has actually to be protected from kind of intrusion, whether someone's trying to get at private data or just trying to actually be destructive.
+Client: Do we really need that database protection piece right um now? It sounds like a lot of effort for for something that isn't our top uh priority.
+TechLead: Erm, I'd you know push back on that. For us it's really important, [crosstalk] I I don't uhm think we should skip it.
+Analyst: Uhm, Okay, I hear both sides, but given where we are, let's drop well the intrusion kind of protection requirement from the scope for for now.
+Analyst: Uhm, Alright, I think that's a er good uh place to stop. Thanks, everyone, we'll pick up from here next time.

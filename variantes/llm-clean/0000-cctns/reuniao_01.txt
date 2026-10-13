@@ -1,0 +1,93 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is our kickoff for the CCTNS project, the actually Crime uh and Criminal Tracking Network and Systems under the e-governance Mission Mode Project. Let's get started.
+Client: Sure, so a bit of background. With CCTNS V1.0 the main idea behind the functional design is to focus on the critical functionality that actually gives value to police personnel at the cutting edge, uh so we um can improve outcomes in "Investigation of Crime" and "Detection of Criminals". It's really aimed at delivering value to IOs, records room staff and citizens, all within the broad crime investigation area. Based on that, we've identified nine different function blocks and worked out the detailed functionality for each one.
+Analyst: Um, Great. Let's start with the help module. What i mean do you need there?
+TechLead: Um, For help, the solution should have detailed context-sensitive help material covering all the possible actions uh and scenarios, on every user interface in the the application.
+Analyst: Anything else on the help module?
+Client: No, that's it.
+Analyst: Okay, moving i mean on to general needs. um What should we capture there?
+Client: So first, if the user chooses to, the solution should send them alerts, email or SMS kind of for erm example, whenever any action has been taken on the alert. And second, users should be able to track a defect or enhancement request they've submitted.
+Analyst: Erm, So So just to confirm, a user who submits a defect or an an enhancement request well can er track it afterwards?
+Client: Yes, exactly.
+Client: Erm, And the help-desk user should be able to view reports on those submitted like defects or enhancement uh requests, broken down category-wise, status-wise and er age-wise.
+Analyst: Got it.
+Analyst: Uh, Anything else you know under general needs?
+TechLead: Nothing from me.
+Analyst: Alright, let's um talk about the audit module.
+Client: Right, so basically an audit trail is a record of actions like taken either by you know the user or by system triggers. That covers actions by users or Administrators, and also actions the system starts automatically because of system parameters. The System has to keep an unalterable audit trail that automatically uhm captures uh and stores information about um all the actions, create, read, update, delete, taken on the critical entities well like case, suspect, property and so on; the user initiating and or carrying out the action; the date and time of the event; and administrative parameters. By unalterable we mean no user can modify the audit trail data in you know any way or delete it. It may be subject to re-department and copied to removable media uhm if required, as long as the contents stay unchanged. And once the audit basically trail functionality is activated, the System has to track events i mean without any manual intervention and i mean store information about them in the audit trail.
+Client: Also, the System must uh keep the audit trail for as long as it's required, and that's at least the life of the er case it refers to.
+Analyst: Okay.
+TechLead: From like the technical side, audit trail data needs to be available for inspection on request, uhm so a specific event can be identified and all the related data made accessible. And like authorised external personnel with little or no familiarity with the system should be be er able to do that.
+Client: Yes, and the System must be able to export audit trails for er specified cases, without affecting the audit trail the System sort of stores. External auditors can use that if they want uh to examine or analyse system activity. And at a minimum, it should provide reports on actions sort of on cases organised [laughter] by case, er by you know user, and well in chronological sequence.
+Analyst: So just to confirm, at minimum the system has to give reports on actions on cases, organised by case, by um user, and in chronological order?
+Client: Yes, exactly.
+Analyst: Anything else else on like the audit module?
+Client: No, that's it.
+Analyst: Okay, let's move to the access module. What do kind of we need there?
+TechLead: The main thing is that security attributes for groups or users, so access rights, security level, privileges, password allocation and management, can only be changed by the super-user. Nobody um else.
+Client: If a user requests access to, or searches for, a case which he doesn't have the right to access, the System ought to provide one of the following responses (selectable at configuration actually time): display title and metadata. Also, display the uhm existence of a case but not its um title or other metadata. Also, do not display any case information or indicate its um existence in any any way. These options are presented well in order of increasing security. Note that the requirement in erm the third option (i.e. the the most stringent) implies um that the System mustn't include such cases in any any count of search results; this level of security is normally appropriate er for cases dealing kind of with matters um such as national security.
+TechLead: Related to that, for erm any any quick or advanced search, the result list must kind of never include a record the the user user doesn't have the uh right to access.
+Analyst: Anything more on access?
+Client: No, nothing else.
+Analyst: Uh, Alright, next is ease of use. What What are your expectations?
+TechLead: Every error message the system shows has to be meaningful, so the users who are likely to see it can actually act on it. Ideally each one comes with some uh explanatory text and tells the user what basically action or actions they can take. And more generally, both the End User er and Administrator functions should uh be easy to use and intuitive sort of throughout.
+Analyst: Anything else on ease of of use?
+TechLead: No, that covers it.
+Analyst: Then let's talk usability. What do you need?
+Client: Basically the user interfaces should be be designed so they're intuitive for the user.
+Analyst: Okay, got it.
+TechLead: Er, On the standards side, the user interfaces should i mean comply with ISO 9241. Also, any like non-text media, like graphical images or video, should have equivalent text descriptions as an alternative, and/or equivalent text-based functionality.
+Client: And navigation um should uh be self-descriptive, so uh users understand where they sort of are, where they've been and where they erm can go next. ISO 9241-110 gives general guidance on how to get that self-descriptiveness.
+Analyst: Right, noted.
+TechLead: Next one is minimizing navigation effort. The number of steps it takes to get to a given piece of content should be kept kept as low as kind of possible, but while still taking into account that users have have different mental models, different navigation strategies and different uh tasks.
+Client: On splash screens, we'd rather avoid them, unless they actually give the user useful content or feedback on the state of the application. And if we do use one, there has to be a navigation option to skip it. erm Also, don't open unnecessary windows. Extra windows, new browser windows, pop-ups, should uh only open if that really supports what the user is doing. New windows can distract, confuse or get in the way of users for all sorts of reasons. They can sit on top of the main window and hide relevant information, they can make the navigation uhm structure harder to understand mentally, which you know hurts both usability and accessibility, and the user has to take extra actions just to close the ones well they didn't want.
+Client: Another one is robustness. The user interfaces should be as robust as possible as technology changes. That means older user basically agents should still be able to present content that uses newer like technologies, and the content should be designed so it's usable with future technologies erm too.
+Analyst: Okay, got it.
+TechLead: From my erm side, opening and download times. Application pages need to be be designed and built so opening and download times are acceptable across the um expected range of technical contexts of use, for uh example the bandwidth between the application and um the user. That matters i mean most like for frequently accessed pages, or uh pages that are kind of key for navigation and exploration, like the home page. Then error messages need to be clear. Whether it's on the page itself or a dedicated error page, the message should say you know clearly why the error happened and, where sort of possible, what the user can do to fix it. And users expect error messages uh in the same language as the like user interface.
+Analyst: Right.
+Client: Text quality as well. basically Spelling erm and grammar in the text content should be good enough that they like don't get in the way of readability. uhm And within-page links should be clearly distinguishable from links that like go to a actually different page. For example, within-page links get a dashed underline instead of a solid one.
+Analyst: So links that jump within the same page need to look um clearly different from well links to another page, say a dashed underline versus a solid one?
+Client: Yes, exactly.
+Client: Sorry, can like everyone still hear me? My connection just flickered.
+Client: Okay. uh Navigation links should also be clearly er distinguishable from controls that trigger an action. Typical actions would be manipulating application data, running searches, communication actions like opening a uh new e-mail window or starting a chat, and presentation actions like sorting a a list of search results. And we want printable versions. If a document is too long, spread over several pages, or has a layout that doesn't suit online reading, there should be a printer-friendly version that prints it in a form the user finds acceptable, for example the expected layout, paper format or orientation.
+Client: Then page length. It should be chosen to support the main purpose and use of the page. Short pages generally work better for homepages, navigation pages um or overview pages that people need to um read quickly. Longer pages can be better when users want to read without interruptions, or when the page has to match a paper counterpart.
+Analyst: Um, So So page length depends on the page's purpose: short for homepages, navigation and overview pages that are read i mean quickly, uh and basically longer when people read without interruptions or it has to match a paper version?
+Client: That's right.
+TechLead: About frames, if you know we use them, we have to be careful to avoid the usual problems, for example with the back button, uhm bookmarking pages or scrolling information. And when frames are used, each frame needs a title, plus a description of its purpose and how the frames relate to each other.
+TechLead: Every page should also have a link back to the application's home page, or to a landmark page the user can easily recognize. And And we need a site map, a separate navigation overview that actually shows the structure of the site in an overview form.
+Analyst: So a separate overview, like [noise] a site site map, showing the whole structure of the kind of application at uhm a glance?
+TechLead: Yes, correct.
+Client: Navigation components should be placed consistently uh on the pages, or in the framesets of the pages, across the erm application. And where we offer different access paths or navigation structures for different user groups, we need to take those groups' tasks and information needs into account.
+TechLead: Uh, Last one from me: uh if individualization or adaptation is being used, that should be evident to the user. Same with user profiles. sort of If predefined or user-specified profiles are used to individualize or adapt content, it should be obvious which profile is currently active. basically And well if we use profiles, users need to get information about uhm the concept and what it implies.
+Client: Erm, And if users set up their own profiles, they should be able to see uh that profile, change like it or delete it whenever they want.
+Analyst: Okay, let's move on on to system availability. What do you er need there?
+Client: So planned downtime can't go over xx hours per rolling three month period. And we count the system as down if any user can't do any normal system function and um the failure comes from any part part of the system other than the workstation.
+Analyst: Got it.
+Client: Then unplanned downtime shouldn't be more than xx hours or minutes per rolling three month like period.
+Analyst: Okay.
+Client: And the number of unplanned downtime incidents can't exceed x per rolling three month period.
+Client: Also, if there's any software or um hardware failure, we have to be able to restore the system, with inline synchronization, in erm no more than xx hours.
+Analyst: Thanks. well What about performance and scalability, uhm what are your i mean expectations?
+Client: Well, response times need uh to be adequate for the common functions, both under standard and peak conditions. Concretely, a simple search should take 5-8 seconds and an advanced search, with multiple search criteria, 10-15 um seconds, no matter the storage well capacity or how many cases are in the system. And And by search I kind of mean getting basically back the result list, not retrieving the the records themselves.
+Analyst: Right.
+TechLead: On top of that, a case that's been accessed in basically the previous 2 months should be retrieved and displayed within 5-8 seconds, again regardless of storage capacity or number of cases. The idea is fast retrieval of frequently used cases, since how often something's used usually goes i mean along with how recently you know it was used.
+TechLead: Um, And it has to be scalable. Nothing in erm it should stop it being used in in small um or large police stations, with different numbers actually of cases handled.
+Analyst: Anything else on performance and scalability?
+TechLead: No, that's it.
+Analyst: Um, Okay, then system functionality. What should erm we like know there?
+EndUser: For me, the interface should uh be multilingual.
+Client: It also needs to be designed so operational data isn't lost if any equipment or the communication network fails. And And it should keep working in offline mode for erm the critical like functionality.
+EndUser: And it should be built on Service Oriented Architecture, SOA, with a modular basically design, and developed for centralized deployment and maintenance.
+Analyst: Noted.
+EndUser: Erm, And And on the deployment like side, it should be built so it can be deployed in a 3-tier datacenter architecture.
+Client: We also want it extensible, so um the interfaces can be accessed through well PDA's and mobile data terminals down the line.
+Client: Another point, it should adopt standardized uh formats and common you know metadata elements.
+Client: Access should be through browser-based systems, and it must put minimal requirements on the client device.
+Client: For remote access, it must i mean support multiple types of communication services. And uh it should have the capability to give um public access to a subset of the data and functionality.
+Client: It should um support SSL encrypted connections as well.
+EndUser: And secure virtual private network connections too, that's important for us.
+Analyst: Got it.
+Client: Security and access control need to be to a high standard. So, erm prevent cross-site scripting, which means validating and uh encoding the incoming data or user request. Prevent uh SQL Injection, so well use parameterized queries and sanitize the user inputs. Validate the data uhm both at the the client and like the server. And no hard you know deletes, only soft tagging the um row for deletion.
+Analyst: Great, that covers everything for for today. Since this is our like only session, I'll consolidate all of it uh into the requirements document and share it with you all for for review. Thanks, everyone.

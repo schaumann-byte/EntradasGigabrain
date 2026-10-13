@@ -1,0 +1,98 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is our kickoff for THEMAS, the Energy Management System, um and it's the only session we've got planned, so let's try to cover the main requirements today.
+Client: Sure, some background first. The spec is meant to give a technical description of all the uh software requirements, trace the software capability requirements back to the Statement of Work, uh and identify the external interfaces. It er also covers product perspective, product functions, uh user characteristics, general constraints, and assumptions and dependencies. you know And the important bit is that THEMAS runs um independently, not tied to any other system or to uh any components of the heating and cooling system it's attached to.
+Analyst: Great. sort of Let's start with loading the heating and cooling unit definitions. How should that kind of work?
+EndUser: So THEMAS has to basically control the heating and cooling units that are defined as part of the system. There's a file for that, and the system reads it and gets the definitions from like the initialization data like in there.
+Analyst: Got it.
+Analyst: Anything else on the unit definitions?
+EndUser: No, that's it.
+Analyst: Er, Okay, what about loading the thermostat definitions?
+Client: Every thermostat needs its own unique identifier, actually and that's how THEMAS knows which thermostat uhm is which.
+Analyst: Next, the utilization parameters. What needs loading there?
+EndUser: Basically there's a cap, a maximum number of heating or cooling units that can [noise] be on like at any one time.
+Analyst: And setting the overtemp values?
+Client: The system has to make sure the temperature a thermostat reports doesn't go beyond a maximum deviation of 3 uhm degrees Fahrenheit.
+Analyst: Er, Okay. How How about kind of establishing a valid i mean temperature range?
+Client: THEMAS should only uhm react to like temperatures that are within a reasonable value.
+Analyst: Er, Let's talk about initializing the system. What happens well at startup?
+EndUser: When THEMAS initializes, kind of the first thing it does is turn off all the heating and cooling units.
+EndUser: Erm, After that it checks all the er thermostats and figures out whether any of their uh settings mean a sort of heating or cooling uhm unit needs to be turned back on.
+Analyst: Okay, makes sense.
+EndUser: Um, Then it reads the current temperature values and the current temperature settings uhm for each thermostat. And if the settings show a heating or cooling unit needs to actually come basically on, the process sends a request to turn on the actually right unit.
+Analyst: Okay.
+EndUser: The thing is, we'd want this determination to be made in accordance with the rules outlined in section 3.1.4.1 and 3.1.4.2.
+Analyst: Alright, let's move on to validating temperatures. How should you know that work?
+EndUser: Er, So like THEMAS should only respond to temperatures from the thermostats if they're inside the specified valid actually range.
+EndUser: When When a current temperature um value comes in from an um individual er thermostat, it gets compared against the valid temperature range values. Otherwise, the system outputs a valid temperature status.
+EndUser: Same for the the temperature setting value from an individual thermostat, that also gets compared uh to the valid kind of temperature range values.
+Analyst: Got it.
+Client: And if kind of the setting value is is strictly below the lower value of the valid range, or strictly above the upper value, THEMAS should erm flag that setting as an invalid temperature and output an invalid temperature status.
+Analyst: Erm, Okay, next topic, determining the temperature status. What do well you need there?
+Client: THEMAS has to well figure out when i mean a reported temperature, or a changed temperature setting, goes sort of past the limits set basically by the overtemperature uh values. And any temperature that exceeds kind of those kind of overtemperature limits gets reported as exceeding them.
+Analyst: So anything over the uh overtemperature limits gets reported as an overtemperature, right?
+Client: Yes, exactly.
+Client: The system compares the reported temperature value to the temperature setting and detects when when it goes beyond the specified limits. actually When uhm that happens, the process outputs the condition that the temperature limit's been um exceeded.
+Analyst: Okay.
+Client: Uh, And sort of if LO = T = UO, then the process just outputs the temperature status.
+Analyst: Let's talk about determining the heating or cooling mode. kind of How does that get decided?
+Client: When the current temperature value goes over the current temperature setting like by a pre-defined amount, THEMAS should activate the appropriate er heating or cooling unit.
+Analyst: Erm, Sorry, my screen share just froze, give me me a second.
+Analyst: Okay, go on.
+Client: Uhm, To make those conditions clearer, we use some definitions. LT is the um Lower Trigger kind of Value, which is TSET - TD, and UT is uh the the Upper Trigger Value, TSET + TD. Then Condition 1 is LT = T = UT, which means the thermostat's current temperature setting is satisfied. If that like condition's true, the module well outputs a request to turn on kind of the heating unit if LO = T LT, or the cooling unit if UT kind of T = UO.
+Analyst: Okay, got it.
+Analyst: Uh, Let's move on to determining uh the status of all the heating and cooling units. How should that work?
+EndUser: So THEMAS has to control every heating and cooling unit that's defined for the system. And And it should limit how many heating or cooling units can be running like at the same time.
+EndUser: It also needs to keep track of the ON/OFF status of each heating you know and cooling unit. And when there's a request to turn one of those units on or off, there's some processing that happens.
+Analyst: Right.
+EndUser: Uhm, If the maximum number of heating or actually cooling units isn't running yet, it generates a request to turn on the unit that was asked for. And if the actually queue isn't empty, it pulls one uh request off well the LIFO queue and checks the current state of the thermostat i mean that request was made for.
+EndUser: And And if that thermostat still needs you know a uh heating uhm or cooling unit turned on, it submits a request to turn that unit on.
+Analyst: Okay.
+Analyst: Anything else on determining the status of the units?
+EndUser: No, that's it.
+Analyst: Uhm, Next, generating the unit unavailable like event. What happens there?
+EndUser: Whenever a request to turn a heating or cooling unit on you know gets denied, an event gets actually generated, and and THEMAS records it.
+Analyst: Er, So if a request for for a heating or cooling unit is denied, basically the system generates an event and [pause] THEMAS logs it, right?
+EndUser: Yes, exactly.
+Client: And we'll use the information in those events to create statistical reports. The procedure should take the thermostat and the heating or cooling information and use that to generate a specific kind of system event.
+Analyst: Let's talk about determining utilizations. How basically does that look?
+EndUser: THEMAS controls the heating and cooling units that are designated as part of uhm the THEMAS system.
+Client: Right, and when actually someone makes a request to turn a like heating or cooling unit on or off, the process generates the appropriate request to carry that out.
+Analyst: Er, And generating the heating and cooling signal, what do we need there?
+EndUser: Once there's a request to turn a heating actually or cooling unit on or off, THEMAS has kind of to provide the control well signal that unit needs.
+Analyst: Okay, got it.
+Client: And that control signal should also show the unit's status back at like the thermostat that made the request. So the system generates whatever signal the heating or cooling unit needs.
+EndUser: Erm, One thing though, the interface for controlling the units hasn't actually been defined yet, so uh the piece of this process that actually issues the signal is marked TBD, to to be determined. And the event should carry the ID of the heating or cooling unit whose status is changing.
+Analyst: Alright, let's you know move on to generating alarm data. How should that work?
+Client: Uhm, So this process has to figure out which alarm event gets generated.
+Client: Basically, when THEMAS picks up a a request for an alarm, this process works out which of the two alarms is being requested.
+EndUser: And each beep should last three-quarters kind of of a second.
+Client: The beeping keeps going erm until the supervisor manually resets the erm alarm from the supervisor's interface window.
+Client: Uh, So if the system kind of sees a temperature limit's been exceeded, it puts out a continuous series of beeps on the the supervisor's computer, um alternating between 1000 uhm Hz and 1500 Hz.
+Analyst: Right, okay.
+Client: Also, every time actually an alarm is requested, kind of we record an well alarm event.
+Client: Uh, That event then feeds sort of the actually operational and statistical reports [noise] well on the system.
+Analyst: Good, um let's actually talk about generating event data. uh What happens sort of there?
+EndUser: For every event that gets generated, THEMAS needs actually to identify er it and generate the right event data for it.
+Client: Yeah, when an event happens, the system identifies what type it is and formats a matching event um message.
+Client: Um, And each event gets recorded with a description plus the current system time for it.
+Client: All of that goes into a a Microsoft Access database sitting on the supervisor's computer.
+Analyst: So the event info is stored in a Microsoft Access database that uh lives on the supervisor's computer, right?
+Client: Yes, exactly.
+Analyst: Uhm, Great. Next up, changing er the thermostat setting. Can you actually walk me through that?
+EndUser: So for the supervisor, THEMAS needs to give them a way to change the temperature setting on any of the thermostats in in the system.
+EndUser: The way I see it, the supervisor's screen shows all the available thermostats and what each one is currently kind of set to. Then they pick one of the thermostats and choose a value for the current temperature from a a list i mean of uh valid temperatures.
+Analyst: So the supervisor picks a thermostat and then chooses the current temperature from a list of valid values, right?
+EndUser: Yes, exactly.
+Analyst: Great. Let's move on to generating uhm reports. What do you need there?
+EndUser: From the supervisor's interface to THEMAS, there should be a way to choose between an operational history report or a uh statistical summary report.
+Analyst: Okay.
+Client: Okay so either report ought to consist of an ASCII file whose location and name shall be selectable by the operator.
+Analyst: Got it.
+Client: If kind of they go with the operational history report, THEMAS pulls all the events sort of from the event database, sorts them basically by actually date and uh time, and then creates the ASCII report file.
+Client: For the statistical um one, once they've selected one of the months, the system generates the ASCII report file. And the statistics in like it actually are: the percentage of time each heating and cooling unit was you know on for you know each day of that month, and then for each thermometer, er the ratio of requests for a heating and cooling you know unit that were granted versus basically requests for a kind of heating or cooling unit that were denied.
+Analyst: Right, okay.
+Analyst: Anything else on generating reports?
+Client: No, that covers it.
+Analyst: Um, Perfect. That was our last session, so I'll consolidate everything we've discussed uh and send it around. Thanks, everyone.

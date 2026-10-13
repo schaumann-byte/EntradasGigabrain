@@ -1,0 +1,67 @@
+Meeting 3 of 4 (follow-up)
+Participants: Analyst, Client, EndUser
+
+Analyst: Okay, let's get started. This is our third session on the outbreak management functional erm requirements, the follow-up one.
+Analyst: Hope well everyone had a decent week, by the way.
+Analyst: Uhm, So last time we went through case investigation and exposure contact data, entity data, and then specimen sort of and sample collection plus the lab response data. A few of those points we left open, so we'll uh pick some up like today.
+Analyst: First, though, I'd like to move on to prophylaxis and treatment data. What do you need there?
+Client: So the systems supporting OM should you know either capture or link to um data on any prophylaxis or treatment i mean given to cases, exposed individuals, or at-risk persons. That means who ordered it, and then the name, the date, the type, erm the duration, and the dosage of what was given.
+EndUser: Erm, Do we really need all um that, though? It sounds like a lot of effort for something that might not be a top priority.
+Client: I'd say we do. This one's genuinely important for us, I wouldn't want to drop it.
+Client: And honestly, if we leave it out now—
+EndUser: Sorry, go ahead.
+Analyst: Okay, let's keep it in as stated.
+Client: Oh, and on entity data, I have the bit we were missing last time. The systems supporting OM must be able to capture data for any object involved uh in an kind of OM investigation, like a letter, an erm invoice, a food um item, basically anything you can't classify as a person, organization, place, or animal. The data could um include the object's name, its type, physical descriptors, an address, an identification number, so a serial number or a erm package slip number, and relevant dates and times, like the invoice date, shipping date, or packaging date.
+Analyst: Thanks. I want to go back to activity logging data, which we touched on earlier. Can actually we revisit that?
+Client: Erm, Sure, so for example, say a person gets sick while traveling in one jurisdiction
+Analyst: Okay.
+Client: but they actually live in another one
+EndUser: Right.
+Client: then the illness gets um reported by the state, the jurisdiction, where you know they reside
+Analyst: Got it.
+Client: and not by the jurisdiction they were visiting.
+Analyst: Okay, so staying on activity logging data, what else do you need captured there?
+EndUser: And er on that, the systems supporting OM should be capturing information
+EndUser: things like uh the date and time of an activity,
+Client: Um, Sorry, my screen just froze for a second. Okay, it's basically back.
+Client: Go ahead.
+EndUser: the activity type, who well it was that initiated the activity,
+Analyst: Okay.
+EndUser: and the contact information, actually so we can generate activity logs for management purposes.
+Analyst: So just to confirm, the OM systems should capture things like the uh date and time of an activity, uh the you know activity type, who initiated it, and contact information, so you um can actually produce activity logs for management purposes?
+EndUser: Yes, exactly.
+Analyst: Great. Let's move on to case investigation. How does that need to basically work?
+EndUser: Well, first off, the electronic questionnaires erm have to be developed and validated.
+EndUser: And uhm the you know systems supporting OM have to let us control the configuration of
+Client: Right.
+EndUser: Er, and the revisions to the investigation-specific questionnaires.
+Analyst: Got it.
+Client: Yes, that's really important.
+Client: Uh, And the well systems should be able to send, sorry, publish, I mean, publish the well investigation-specific questionnaires along with the implementation guides.
+Analyst: Okay.
+EndUser: Agreed, we need that.
+Client: Maybe also, and I'm not sure it's a must, it'd be nice actually if case investigation were supported by reusable questionnaire libraries using uh common terminology where it's available, to make the uh data exchange as efficient as possible.
+Analyst: Okay, let's move on to linking. What do you know you need there?
+Client: Er, So every new case [laughter] has erm to kind of be able able to link kind of its assigned Entity ID to an Event ID, within uhm the scope of the investigation.
+Analyst: Got it.
+EndUser: And on the lab side, there's—
+Client: Sorry, go ahead.
+EndUser: Erm, So if a specimen or sample was created from from another specimen or um sample, for example
+Analyst: Mm-hm.
+EndUser: aliquots, uh or new specimen types made from a source sample,
+EndUser: then the lab results for those child specimens or samples i mean have to to be linked uhm back to the matching parent specimen or sample.
+Analyst: Okay.
+Client: Erm, Then the entity-to-epi data links need to match the the i mean entity to their symptoms, the survey questions, the specimens or samples collected, the lab erm results, and the prophylaxis and treatment data.
+EndUser: Do we really need all of that? kind of That sounds like a lot of effort for something kind of that well might not be a priority right now.
+Client: I'd like say we do. It's really important for us, we can't leave um that out.
+Analyst: Okay, we'll keep it in.
+Client: And those linkages have to tie multiple lab results to case and contact identifiers unambiguously.
+Client: Also, systems supporting OM need to support dynamically defined associations between entities, you know so we can define relationships.
+Analyst: Right.
+Client: So, as we said, these linkages must not unambiguously associate multiple lab results to case and contact identifiers.
+EndUser: Can I I bring up contact exposure tracing? i mean Systems supporting OM should be erm able to create new contacts from existing case records, uh and they should also identify the contact type.
+Client: Is that really necessary, though? I'm not sure it's a priority given the effort.
+EndUser: Um, I'd really push push to keep that one. Creating contacts um straight from a a case and tagging the contact type is important for you know how we work every day.
+Analyst: Erm, Okay, fair enough. sort of We'll keep kind of it in.
+Client: Good. Next one, the you know system should give each case, sorry, each investigator well their own contact work list to work from. And they should be able to sort it either by priority or by geography.
+Analyst: Great, I think that's where we'll stop for today. We'll uhm pick up from here next time. Thanks, everyone.

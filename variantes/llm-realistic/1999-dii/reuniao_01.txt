@@ -1,0 +1,33 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is the kickoff, first of three meetings, for the draft spec on the erm Defense Information Infrastructure Common Operating Environment XML Services. Let's start with some erm background.
+Client: Uh, Sure. So XML Services are basically infrastructure services for mission and kind of support applications, built on XML technology. The idea is they hide the vendor-unique ways of doing data access, so applications don't end up depending on physical access models. They also give us data management functions for reaching distributed databases, local and remote, as one of the ways we get interoperability.
+EndUser: Can I jump in on required states and modes? Because there's er the environmental mode, which is the real-time operations side. That has to react to different degrees of readiness, all the way up to full scale wartime operations—
+TechLead: Sorry, real-time well as as in live ops?
+EndUser: Yeah, live. So i mean things like crisis planning, where you're using heterogeneous data types and sources, plus uh transfer capabilities and data management services.
+EndUser: Erm, Then there's COE compliance. I think XML Services are supposed to um be segmented, erm maybe, I'm not totally sure that's mandatory, you know but
+Analyst: Okay, go on.
+EndUser: and the COE sponsors would have to stick to the compliance level requirements that are described in the I&RTS.
+Client: For the fixed, static mode, so a base er or a data processing megacenter, on-site personnel need uhm to be able um to tune the uh data management uh services to handle varying workloads and different database sizes. Those workloads and databases uh are going to change more often, and by more, than what you'd see with deployed units.
+TechLead: Do we really need that tuning capability? like It's a lot of effort for something that's probably not top priority right now.
+Client: Uhm, I'd push back, it really matters to us. I don't want to um lose it.
+Analyst: I hear you, but given the effort, let's drop it from scope for now and revisit later well if needed.
+Client: Alright. Then in a changing, dynamic environment
+EndUser: Mm-hm.
+Client: like with deployed units, the workload
+Analyst: Right.
+Client: and the database sizes might be more predetermined, since the mission is more [pause] more precise
+Analyst: Got it.
+Client: Er, and they'd need fewer data management admin capabilities than the the fixed environment does. Also, the XS has to be able to redefine or reset the names of connect descriptors to database server instances. Those connect descriptors are fully qualified object names, and they include actually the like address, meaning protocol, host and port, plus the instance name.
+Client: One you know more. When communications are degraded, we need uh to be able to, for example, reset session time-out values if the users hitting the data management services are affected by that degradation. At a minimum, users should um be able to define the session time-out values and and reset them before a user session gets initialized. What we're kind of really aiming for is the you know option to i mean change session time values dynamically, based on current communications like performance, as identified by what the network management or the DBMS DBMS can tell us.
+Analyst: Okay, got it.
+EndUser: Then there's maintenance mode. um That covers modifying or adding application data segments, actually user permissions and privileges, and i mean restructuring the the sort of storage and memory areas. On top of um that, maintenance also has to cover shutdown, open not-mounted, and online or off-line implementations, plus modifications, upgrades, and i mean other related actions. And the data management uh services need to support managing different types of data, database architectures actually and platforms, so hardware and software, at the specified sites.
+TechLead: Do we really need all of that in scope? That's a lot of effort, and I'm not sure it's a priority uh for the first pass.
+EndUser: I'd push back on that. For us it's actually really important, we rely on this this day to day.
+Analyst: Let's leave this one open for now and come back to it when we decide on priorities.
+Client: Okay. Next is well training mode. So, in support of training activities,
+Analyst: Mm-hm.
+Client: Erm, the data management services should give you the uh same processing you'd get in a production environment. The difference is that access to the database might come through a training application going to the DBMS, instead of from the production mission application.
+Analyst: Right.
+Analyst: Okay, I think that's a good place uh to stop for today. Thanks, everyone, we'll pick basically up from here next time.

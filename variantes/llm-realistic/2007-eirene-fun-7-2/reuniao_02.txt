@@ -1,0 +1,153 @@
+Meeting 2 of 2 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This is our second and final session on EIRENE, the follow-up to last time.
+EndUser: Good to see everyone again. Busy week on actually my kind of end.
+Analyst: Quick recap: last time we went through data services, call related services, and like coverage and performance. A few few points were left open, well so we'll pick pick those up as we go.
+TechLead: Before we dive in, I want to raise the driver man-machine interface. One thing there: the driver has to be able to adjust the display contrast. [crosstalk]
+Client: Right, and on the display itself, I think we should—
+TechLead: Sorry, go ahead.
+Analyst: Mm-hm.
+Client: Actually, um can everyone hear me okay? My um audio was cutting out a second ago.
+Client: Yes, contrast makes sense.
+Client: And as we said, the equipment must not be able able to show the called or calling party's identity as a standard telephone number.
+EndUser: Also on the control side, the trackside — no, sorry, um the control/command interfaces: the on-train mobiles need to provide a standardised interface to ERTMS/ETCS.
+Analyst: So the on-train mobiles give you a standardised interface into ERTMS/ETCS, is that right?
+EndUser: Yes, exactly.
+TechLead: Agreed, that's essential.
+Analyst: Let's move to the general purpose radio. What do we need there?
+Client: There should uh be a standard data interface so you can hook a computer like up to the radio.
+Analyst: Okay, got it.
+TechLead: Yeah, that's sensible.
+Analyst: Next, environmental and physical requirements. What are we looking at?
+TechLead: For For the general purpose radio, the idea is that the full environmental and physical spec spec stays as close as possible to a Commercial-Off-The-Shelf, COTS, mobile, while still sticking to section 4.3 and this section. Then under like that there's the physical conditions part.
+Analyst: Okay, got it.
+Client: On the battery side, a kind of user should be able able to swap the battery out without needing any tools.
+Client: Well, changing the battery really shouldn't result kind of in losing data stored in actually the radio.
+Analyst: Makes sense.
+Analyst: Let's move on er to the man-machine basically interface. What do we need there?
+TechLead: So the General purpose radio should include the man-machine interface itself, and that's made up of
+Client: Right.
+TechLead: these well components: a display, a control panel, uh a loudspeaker and a microphone.
+Analyst: Okay.
+Analyst: Next topic, the operational radio functions. What should those look like?
+EndUser: For me the big one is, where it's available, the radio should show an alphanumeric description of who the connected party is.
+Analyst: Got it.
+Client: Then there's the case where the sort of emergency call function is disabled
+Analyst: Mm-hm.
+Client: Er, in that case you'd get a visual indication plus a a actually short audible indication when
+Analyst: Okay.
+Client: the radio gets switched on
+Client: Uh, or when someone pushes the emergency button, and then then nothing else actually happens. And then the next item is receiving an incoming point to point voice call.
+Analyst: So if the emergency call uh function is disabled, er there's um a visual indication and a short audible one when the radio's switched on, or when the emergency button is pushed, and in that case nothing er else happens? And then receiving an incoming point to actually point voice call comes next?
+Client: Yes, exactly.
+EndUser: Yeah, makes sense.
+Analyst: Okay, let's move on to the summary. Can you walk us through the overall list of kind of functions?
+Client: Sure. So the following kind of functions will be provided, and
+Client: Erm, first, the call related functions: calling authorised users, [crosstalk]
+Analyst: Okay.
+Client: Erm, calling the controller, and sending Railway emergency calls,
+Analyst: Got it.
+Client: then receiving Railway emergency calls, receiving incoming calls, group and broadcast calls, terminating calls, shunting mode communications, and entering or leaving direct mode. And then the other functions: switching the radio on and off, selecting the language, selecting the mobile radio network, adjusting the loudspeaker volume, registering and deregistering a functional number, storing and retrieving numbers and their details, and the computer interface.
+TechLead: Can I jump in on the actually environmental and physical requirements? The controls shall be designed kind of for use er in a i mean wide range of conditions,
+Analyst: Right.
+TechLead: so for example splash proof, and suitable for viewing both in direct sunlight and in darkness.
+Analyst: Okay.
+EndUser: Yes, that's really important.
+TechLead: Also, the Operational radio should be suitable for use with a car adapter kit.
+Client: Agreed, that works.
+Analyst: Let's talk about the controller terminal interface. How should that be handled?
+EndUser: Well, the communications architecture will be dictated by local circumstances. The—
+TechLead: Sorry, local to each railway?
+EndUser: Uh, Right, so the definition of this interface is beyond the scope er of you know EIRENE.
+Analyst: Okay. Next, the use of the shunting team, maintenance team or controller like number. What do we need there?
+EndUser: What we really want is for every controller number to be able to to be based on basically an association of.
+Analyst: Okay.
+EndUser: two things: the controller's location and the controller identifier.
+EndUser: Uh, And while we're on it, on the allocation of priorities, the ongoing call call with like the lowest priority should be—
+Client: Sorry, quick question, are we on priorities now?
+EndUser: Yes. So the lowest priority call gets pre-empted first, before any call with a uh higher priority.
+Analyst: Let's move to group membership. What [pause] do we need there?
+Client: Any mobile that has a Railway emergency group call subscription, or several, must not be um able to deactivate those emergency groups while it's operational.
+Analyst: Got it.
+TechLead: And as we said, these functions won't be provided. On the call side: calling authorised users, calling the controller, sending and receiving Railway emergency calls, receiving er incoming calls, group and broadcast calls, terminating calls, shunting mode communications, and entering um or leaving direct mode. Then the other uh functions: switching the radio on and off, selecting the language, selecting the mobile radio network, adjusting loudspeaker volume, registering and deregistering the um functional number, storing and retrieving numbers and um their details, and the erm computer interface.
+Analyst: Uhm, Okay, next: the format of functional numbers. How should those look?
+EndUser: Functional erm numbers should basically be numeric characters erm only, nothing else.
+EndUser: Uh, Now if a um railway uses, sorry, if a national railway applies alphanumeric uhm numbers,
+Analyst: Right.
+EndUser: then it's on that railway to translate erm them into unique numeric functional numbers that are compatible um with the EIRENE specification.
+Analyst: Makes sense.
+TechLead: Yes, agreed.
+Client: And like we agreed, where both ERTMS/ETCS and radio systems are available and any user has to enter the train number during initialisation, they only do it once, on the ERTMS/ETCS system, and that number gets sent across to the radio system.
+Analyst: Let's talk actually deregistration. What's um needed there?
+EndUser: It would have to be possible to deregister up to ten functional numbers to items of equipment physically connected to the the Cab radio within um 30 seconds, that's pretty important for us.
+Analyst: Okay.
+TechLead: Yeah, that makes sense.
+Client: And then, maybe, it'd be nice if a given set of users were also [laughter] allowed to
+Analyst: Right.
+Client: deregister a uh functional number that's no er longer valid
+Analyst: Mm-hm.
+Client: but that the user hasn't um actually deregistered
+Analyst: Got it.
+Client: Erm, and also deregister another user of the same uhm type by overriding them, so say a driver can deregister a train number another driver forgot basically to deregister. And deregister, in one action, all the functional numbers tied to the same mobile, like the driver clearing um all functions at the end of the journey.
+Analyst: Uhm, Which set of users exactly would be allowed to do that?
+Client: Well, the appropriate ones, I'd say. uh We'd have to see.
+Analyst: Uh, Okay, let's move on to text messaging. What What do you need there?
+EndUser: Uh, So there's a requirement sort of that the EIRENE system can act as a bearer for an actually application kind of connected to the radio, so text messages can be exchanged you know between ground—
+Client: Sorry, between ground like and what?
+EndUser: And one or more mobiles, or between a mobile and sort of ground.
+Client: And on the interface side, there should be a standard data interface between the mobile—
+EndUser: Sorry, the mobile and what?
+Client: And uhm the application module. That has to be provided.
+TechLead: Right, and as we said, sort of the EIRENE network won't support these call related services: display of identity of the called or calling user, restriction of that display, priority uhm and pre-emption, closed user group, call forwarding, call hold, um call waiting, charging you know information, and um call barring. um Display of identity.
+EndUser: And train-mounted equipment, so the Cab radio terminal equipment, the MMI and the antenna, shall not comply with all the specifications in section 4.3 and all the ones i mean defined in this section.
+Analyst: Okay, let's move on to railway emergency calls. What do we need to to cover there?
+EndUser: So, there are basically two types i mean of railway emergency call, and those are
+Client: Okay.
+EndUser: the train emergency call, and then the shunting emergency call.
+Analyst: Got it.
+Analyst: Next, the warning. How should that work?
+Client: Right, so a connection with railway emergency priority, that's the one in section 10.2, shall—
+Analyst: Sorry, go on.
+Client: Right, so, be established to a pre-determined set of receiving mobiles and controller(s).
+Analyst: Anything else on the warning?
+EndUser: No, that's it.
+Analyst: Erm, Okay, can someone give us a a summary of how the emergency call works overall?
+EndUser: Sure, a railway emergency call can be defined well in three distinct phases.
+Analyst: Okay.
+EndUser: So you've got stage 1, which is the warning, then stage 2,
+Analyst: Mm-hm.
+EndUser: Uhm, that's information, and stage 3 is terminating the railway emergency call.
+EndUser: Sorry, my screen just froze for a second. Can you still hear me?
+Analyst: Yes, fine.
+Analyst: Good. Let's talk about kind of confirmation of railway emergency calls. What's needed there?
+Client: So, for railway emergency calls that are received by a mobile,
+Analyst: Okay.
+Client: Uh, Sorry, someone's knocking on my door, one second.
+Client: Erm, right, i mean so the automatic confirmation message that the receiving mobile sends back should contain
+EndUser: Mm-hm.
+Client: first, the time the call was first received,
+TechLead: Got it.
+Client: Er, then the time the like call um was lost, or terminated, the group identity of whoever sent it, the the functional number of sort of the recipient, and if the recipient's a train, its train number and engine number.
+Analyst: Okay.
+EndUser: Yeah, that covers it.
+Analyst: Great. Let's move on to shunting mode. How should that work?
+EndUser: Well, the shunting call has to be a group call
+Analyst: Right.
+EndUser: Erm, and it gets railway operation priority, the one in section 10.2.
+Analyst: So a shunting call is always a group call, basically with railway operation priority as per section 10.2, correct?
+EndUser: Yes, exactly.
+Client: Uhm, And all shunting drivers
+Client: plus the shunting group members need to be able to receive a shunting emergency call from any actually equipment that can take uh part in shunting communications. And when that emergency call comes in, it should interrupt the audible link assurance kind of signal.
+Analyst: Okay. What about group membership, who belongs to these groups?
+EndUser: Maybe, on top of the shunting group members you know we we just mentioned,
+Analyst: Okay.
+EndUser: Uh, a controller should be able to be associated with it permanently,
+Analyst: Right.
+EndUser: or just temporarily um with the shunting group.
+Analyst: Got it.
+EndUser: Erm, And then then a a shunting manager, or anyone else who can take part in a um shunting communication, should be able to be temporarily associated with the shunting group too.
+EndUser: Another thing: only the shunting leader should be able to talk to someone outside the ongoing shunting communication. Either side can start that, the shunting er leader or the external user. If it's sort of the external user calling, we don't want to disturb a shunting movement, so the shunting leader should get a visual and an er audible indication. Then er he can pick the moment when he takes the call or rejects it.
+Analyst: Makes sense.
+TechLead: Yes, that sounds right to me.
+Analyst: Great, I think that covers it. Since well this was our last meeting, I'll consolidate everything from both sessions into the requirements spec and send it you know around for review. Thanks, everyone.

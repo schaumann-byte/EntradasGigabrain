@@ -1,0 +1,147 @@
+Meeting 1 of 2 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, thanks everyone for joining. This is our kickoff for Gemini, the first of two meetings, so let's get a feel for the requirements.
+Client: Sure. So this document is about the operational requirements for the you know Gemini Control System software. actually It sets out well general criteria and also specific actually functional requirements for software and controls design across the Gemini Project. And it's really aimed at the people building the control and data acquisition systems, not i mean at the science users of the Gemini telescopes.
+Analyst: Great. Let's start with access modes. What modes well do we need to support?
+TechLead: One of them is er F, administrative. In that mode you can ask about things like like system utilization, efficiency um and so on,
+Analyst: Okay.
+TechLead: Uhm, all through administrative access. And there's no control available in that mode,
+Analyst: Sorry, someone's got a bit of um echo, maybe check your mic.
+Analyst: Go ahead.
+TechLead: so you can only get at status and scheduling information.
+Analyst: Got it.
+TechLead: And administrative access should never, under any circumstances, affect the performance of an observation that's in progress. Also, one user can absolutely be in the the system through several modes at once. That's actually the normal case for the Telescope Operator, who's often in observer, monitor and operator modes basically at the same time. And sometimes an astronomer might be using both observer and monitor modes.
+Analyst: Makes sense.
+Analyst: Let's move to interactive observing. How should that work?
+Client: So the first version of the automatic sequencer will run in a pass-through mode, meaning every command gets accepted and sent on with minimal checking and minimal delay.
+EndUser: And would that mean—
+Client: Sorry, go ahead.
+Analyst: Okay.
+Analyst: Let's talk about remote control next.
+Analyst: Um, Actually, uhm let's start with remote access. What do [laughter] we need there?
+EndUser: So remote uh access, well in this case,
+Analyst: Okay.
+EndUser: has to be possible from er the Gemini 8m Telescopes base facility.
+Analyst: So remote access in uhm this case needs to work from the Gemini um 8m Telescopes base facility, right?
+EndUser: Yes, exactly.
+Client: Um, And while we're on remote observing, I want to to raise this: remote uhm users should normally interact with the system uh via...
+Analyst: Er, Sorry, someone's audio is echoing a bit. Could you mute if you're not talking?
+TechLead: Got it.
+Client: Er, So, as I was saying, remote users would normally go through the kind of scheduler well program
+Analyst: Right.
+Client: and they shouldn't control um any part of uh the Gemini 8m uhm Telescopes directly.
+Analyst: Er, Okay, let's move on to service. How do you see that working?
+EndUser: Well, the observer has to... no, sorry, the observing program itself has to i mean be automated
+Analyst: Mm-hm.
+EndUser: Er, so that it needs only a little human interaction during the observation.
+Analyst: Okay.
+EndUser: Which means the Gemini software has to um include a programming environment that's rich enough to actually make that feasible. And on top of that, it should be a visually-oriented environment, with a simple, easy-to-use interface for the astronomer.
+Analyst: Got it.
+EndUser: Also, that programming environment should let you pass along special notes
+TechLead: Sure.
+EndUser: and instructions and uhm comments, from the astronomer to the observer.
+Analyst: Right.
+EndUser: and possibly using multimedia techniques for that.
+TechLead: Okay.
+EndUser: The use of this feature would, however, be discouraged for queue-based observing.
+Analyst: Got it.
+Analyst: Okay, let's move on uh to the astronomical data flow. How do actually you see [noise] that working?
+Client: So um for system-wide you know data capacity, it's you know limited by the transfer methods and you know technology, and um by how much we can um archive on site. I'd say say the system should be able to hold 4 days of data from the largest instrument, and the last 3 days of that have to be available interactively, from hard disk or uh something similar.
+TechLead: I'd push back on i mean that. Same constraints, transfer methods and technology plus on-site archiving capacity, but I think we need to i mean retain 7 days of data from the largest instrument, with the last 3 days available interactively from hard disk disk or a similar medium.
+Client: I still think 4 days is the right number for us. uhm That's what I'd want to go with.
+Analyst: Okay, let's settle on 7 days. So the er system data capacity is limited by transfer methods and technology and by on-site archiving capacity, and it has to retain 7 days of data produced by the largest instrument, with the last 3 days available interactively from hard disk or or a similar medium.
+Analyst: Uhm, Next, video information flow. What do you need there?
+EndUser: Uh, The system has to be able to send rough images fast, every 0.5 sec, and
+Analyst: Mm-hm.
+EndUser: Plus this may be assisted through uhm the use of data-loss compression techniques (e.g. JPEG, MPEG, erm etc).
+TechLead: Yeah, that makes sense.
+Analyst: Let's talk about test and checkout requirements. What do you expect there?
+Client: I I think maybe the Gemini 8m Telescopes control software should also be able to run self-test sequences, for the Gemini 8m Telescopes uh system and its subsystems. It'd be nice, anyway, not sure it's a must.
+Analyst: Uhm, Can you be more specific about what those self-tests would actually cover?
+Client: Uhm, Well, just some kind like of testing, really. I haven't thought it through in detail.
+TechLead: Um, The idea uhm would be that they automatically exercise all the subsystems—
+Analyst: Sorry, all of them?
+TechLead: Well, all the subsystems that are present in whatever operational configuration you're running at the time.
+Analyst: Okay, got it. Let's move on to fault notification. How should that work?
+TechLead: So when there's a fault, the notification also has to be—
+Client: Sorry, go ahead.
+TechLead: No worries. It has to uh be something that can um be logged uhm electronically.
+Analyst: Um, Great. What about fault tolerance?
+Client: So if an IOC fails, and it's still possible to observe with that uh particular IOC in a failed state, then we need kind of to be able to to reconfigure the system to do that. Generally that's limited to actually the IOCs tied to individual scientific instruments.
+Analyst: Let me check I got this: if erm it's possible to actually observe with that particular IOC in a a failed state (in general, this is limited to IOCs that are associated with individual scientific instruments) then it'll need to be possible to reconfigure the system to er do so?
+Client: Yes, exactly.
+Analyst: Okay. And redundancy, what do you need there?
+Client: All the communication should be built on standard communication protocols,
+Analyst: Mm-hm.
+Client: where the protocol itself applies retry procedures, so that's basically a form of software redundancy.
+Analyst: So everything communicates like over like standard i mean protocols, and the the retry procedures built into those protocols give you a kind of software redundancy?
+Client: That's right.
+Analyst: Erm, Good. Let's talk about user erm constraints. you know Are there any?
+Client: Really, the software itself shouldn't put any you know restrictions on users. The only thing should be policy decisions, so permissions, access privileges—
+TechLead: Er, Sorry, policy only?
+Client: Yes, those sorts of things. Only those should stop any user from getting into any part of the Gemini system, from any local or remote station.
+Analyst: Okay, anything um else on user constraints?
+TechLead: No, that's it from me.
+Analyst: Alright, let's move on to software like constraints. basically What do we need to know know there?
+TechLead: So every Gemini subsystem package should ship with two things as part of the software. First, a simulator module that goes into the virtual telescope, and um that ties ties into the design constraints sort of we'll get to later. Second, user interface um modules for whatever user interface um environments that subsystem is going to run uhm in. The interfaces those UI modules need are described in Section 3.3, on page 3-6.
+Client: Do we really need that, though? basically It sounds like a lot of effort for something that isn't a top priority right now.
+TechLead: I'd push back uhm on that. It's really important for us, and I don't think we should leave it out.
+Analyst: Er, Okay, I hear both sides, but let's drop it from the scope for now.
+Analyst: Next basically topic, data flow. How should that work?
+Client: Er, Well, the actually detector data has to be acquired
+Client: Sorry, someone's knocking, one second. Okay, like [laughter] I'm back.
+Analyst: No problem.
+Client: Uh, and then stored in the most effective way um the technology lets us
+Client: Effectiveness actually should be evaluated in terms of cost.
+Analyst: Right.
+Client: Uh, space requirements, how long it lasts, and speed.
+Analyst: Got it.
+Client: But whatever we do, there have to be at least two copies. One to secure basically the data as it's acquired, and one one for assessing data quality on-line, and ideally that uhm second one would be on removable media.
+Analyst: Okay.
+Analyst: Let's talk about the format of data acquisition. What What do you have in mind mind there?
+Client: There might be some cases, though, for example
+TechLead: Right, okay.
+Client: Um, say with infrared detectors, where you need fast preprocessing, and where, because like of that...
+Analyst: Let's move on to capacity. What do we need the system to handle there?
+Client: So each node will erm only... no, sorry, each node will be able to run at all the operation levels.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+TechLead: And on our side, the system will provide for one auxiliary data acquisition and instrument control node.
+Client: Do we um really need that one? It feels like extra effort for something that's not a priority.
+TechLead: I'd push you know back a bit, it's honestly important for us to um have it.
+Analyst: Er, Okay, I hear you both, but let's take it out uh of scope for now and keep moving.
+TechLead: Also, maybe the system should support off-site observing modes, I'm not totally sure actually it's a must, but [laughter] it'd be nice.
+TechLead: Now, in practice, the operation
+TechLead: And facilities foreseen so far for the Gemini 8m Telescopes will limit kind of this number to a maximum in the order um of three active nodes, but the the Gemini 8m um Telescopes computers and software shall be capable uh of coping with the load of 10 active nodes, should the case arise, you know?
+Analyst: Okay.
+Analyst: What about other erm information flow? uhm Anything else that needs to come through the system?
+EndUser: Yes, other astronomical information should be available too, things from sky field monitors, autoguider cameras, and sky monitoring devices like cloud and seeing monitors.
+Analyst: Got it.
+Analyst: Let's talk about the user interface, the UIF. What are your expectations there?
+TechLead: So the main erm thing is, the user interface shouldn't kind of be thought of as a package tied to one specific computer.
+TechLead: And the er user interface tools well have to be based on standards
+TechLead: the ones defined in Section 4.2.5, that's on page 4- 7,
+Analyst: Okay.
+TechLead: and those would be portable across different computer hardware platforms. That's the Portable User Interface Toolkit.
+Analyst: Got it.
+Analyst: Alright, let's move on to the hardware interface. What do do kind of you need there?
+TechLead: Uhm, So on the basically hardware side, we want standard interfaces uhm to the control electronics i mean to be kind of available,
+Analyst: Mm-hm.
+TechLead: Uh, and by that I er mean, first, standard bus systems,
+Analyst: Right.
+TechLead: then a standard set like of uh interface cards sort of that gets used on all the subsystems and instruments, uh and a standard software skeleton running kind of on the control electronics.
+Analyst: Okay, clear.
+Analyst: Uh, Next one, on-line image processing interfaces. How do you see that you know working?
+Client: Well, we i mean want quick-look data processing provided on the Gemini 8m Telescopes,
+Analyst: Okay.
+Client: Um, with procedures that are suitable for fast on-line data preprocessing.
+EndUser: Makes sense.
+Client: And there should also be off-line pixel processing for well full data um reduction at the Gemini 8m Telescopes basically site, but that part doesn't have any interface to the Gemini 8m Telescopes software.
+Analyst: So the um off-line pixel processing for full data reduction lives at the Gemini 8m Telescopes site too, but it's not interfaced to the Gemini 8m Telescopes erm software at all?
+Client: Yes, exactly.
+EndUser: Maybe it'd be nice to also erm have near-line processing sort of for the simple data reductions we need for data integrity validation. So basically removing the instrument and observatory effects, so the observer can decide on further observing actions. kind of Not uh sure if that's a must, though.
+Analyst: Okay, got it.
+Analyst: Erm, Anything else on the on-line image processing interfaces before we wrap up?
+Client: No, I think that covers it.
+Analyst: Great, then let's stop here for today. Thanks, everyone, we'll pick up the rest next time.

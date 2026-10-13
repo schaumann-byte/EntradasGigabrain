@@ -1,0 +1,84 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, hi everyone, thanks for for [noise] joining again. This er is our second session on the ERTMS/ETCS functional requirements, the follow-up.
+Analyst: Quick recap: last sort of time we covered operation with the existing erm national train control systems, the basic functioning, and the operational states. A few points were left open, so we'll um come back to uh those.
+Analyst: Today I'd like to start with the operational functions. What do you need there?
+Client: Er, So the trackside, sorry, no, the trainborne side. The ETCS trainborne equipment sort of has to be able to receive well information from the national train control systems, and that goes through the STM.
+Analyst: Okay, got it.
+Client: Uhm, And then for unfitted line operation, which I want to bring up as well, i mean the train, well, the onboard, has to be able to switch over to another ETCS status
+EndUser: Right.
+Client: Er, when that's transmitted from trackside. [noise]
+Analyst: Good. like Let's move on to the infrastructure functions. What's needed on that side?
+Client: Well, the trackside has to be actually able to send...
+Client: And one thing that matters: if if the onboard doesn't like have track data at least up to where the movement authority ends, then that movement authority gets rejected.
+Analyst: Okay.
+Client: Uhm, Also, it should be possible to uhm send information about adhesion conditions from trackside.
+EndUser: Can I add something on the end of movement authority? The ETCS trainborne equipment needs to supervise the end of movement authority
+Analyst: Mm-hm.
+EndUser: as long as [noise] that information is sort of available on-board.
+Analyst: Understood.
+Analyst: Anything else on the end of of movement authority?
+EndUser: No, that's it.
+Analyst: Okay, then back to the infrastructure functions. Anything more there?
+Client: So, maybe, and I'm not sure this like is strictly a erm must, but it'd be nice if, using the train data and um the infrastructure um data,
+Analyst: Okay.
+Client: the braking curves get calculated taking the target information erm into account,
+Analyst: Right.
+Client: but not where other vehicles occupying the track are.
+Client: Then, at sort of the very minimum, the train has to be supervised to a ceiling speed, and—
+EndUser: Er, Sorry, just quickly, is that on sort of screen?
+Client: Yeah, that's where I was going. The supervised speed shouldn't be shown on the DMI unless the the driver selects it.
+EndUser: Same for the target distance, it shouldn't appear on the DMI unless the actually driver picks it.
+Analyst: Got it.
+Client: Yes, that makes sense.
+Analyst: Let's move on to speed calculation and indication. What do um you need there?
+Client: The speed the driver sees has to match the speed used to you know supervise movement authorities and speed limits, no discrepancy at all. That's function kind of 4.3.7.
+EndUser: I'd put it differently, it should be the uhm speed shown to the operator that er has no discrepancy with with the speed well used for supervising movement um authorities and speed limits, function 4.3.7.
+Client: No, I really think it should uhm say the driver. That's what matters to us.
+Analyst: Let's leave that that one open for now and settle it later.
+Analyst: Next, dynamic train speed profile calculation. What do we need there?
+EndUser: When the train moves up to a higher speed level, the rear end of the train still has to respect the static train speed profile.
+Analyst: Anything else uh on the dynamic speed profile calculation?
+EndUser: No, that's it.
+Analyst: Er, Okay, let's move on actually to the indication displayed on kind of the DMI. What do you you need there?
+EndUser: So the driver has to get visual and acoustic warnings about a possible intervention from ETCS, and and those should basically be given to...
+Analyst: Anything actually else on the DMI indications?
+Client: No, that's it.
+Analyst: Um, Next one, supervision of movement authorities and speed limits. What should happen there?
+EndUser: So when you're within the braking curve area,
+Analyst: Mm-hm.
+EndUser: the driver needs to get a warning so he can react and avoid the ETCS equipment intervening, and that warning has to come at least 5 sec. before the intervention.
+Analyst: Got it.
+TechLead: Yeah, that makes sense.
+Client: And the driver should be able to release...
+Analyst: Anything [noise] else on supervision um of well movement authorities and speed limits?
+EndUser: No, nothing else.
+Analyst: Okay, roll away and reverse movement protection. What do we need there?
+TechLead: If there's more than one traction unit, this function has has to be disabled in all of them except the leading one.
+Analyst: Alright, and recording the ETCS information, what's needed?
+Client: Basically all the data that's entered, received,
+Analyst: Okay.
+Client: or indicated to the driver has to er be recorded um onboard.
+Client: And all that data has to be related to UTC, Universal Time Corrected.
+TechLead: Right.
+Client: and also to [pause] a reference point.
+EndUser: Okay.
+Client: So, erm the i mean retention period for the recorded kind of data will be different,
+Analyst: Mm-hm.
+Client: and we're looking at two levels for that
+Analyst: Okay.
+Client: So the data for investigating accidents only has to be kept for at least 24 hours, but it has er to be very detailed. And And then the operational data, the stuff for assessing how the driver performed, that has to be kept for at least one week.
+TechLead: Yeah, that makes sense.
+Analyst: Anything else erm on recording the ETCS information before we move on?
+EndUser: No, that's it for me.
+Analyst: Okay, let's talk about using multiple traction units. What do we need there?
+EndUser: So the train trip function, that's 4.6.12, has er to be suppressed in any traction unit or units where the cab is inoperative.
+Analyst: Got it.
+EndUser: Um, And we uhm need to be able to run tandem traction units without having to isolate the ETCS trainborne equipment on the tandem unit.
+Analyst: Okay.
+EndUser: And then actually the train trip function, 4.6.12, that one should...
+Client: The i mean driver has has to enter the driver ID.
+Analyst: So the driver enters erm their driver ID, is um that right?
+Client: Yes, exactly.
+Analyst: Okay, I think um that's a good place to stop actually for today. Thanks, everyone, we'll pick up from here next you know time.

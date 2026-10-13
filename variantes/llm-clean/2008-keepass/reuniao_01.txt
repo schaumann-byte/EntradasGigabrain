@@ -1,0 +1,99 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. This is our kickoff for KeePass Password Safe, and it's the only only session we've got planned, so I'd like to cover um as much as we can today.
+Client: Er, Sure. So KeePass Password Safe is OSI Certified Open Source Software, distributed under the GNU General Public License Version 2 or under. uh Basically it solves the problem of having to memorize passwords. The idea is uh that all of the user's passwords, data, email accounts, usernames and URLs are kept in a very uhm secure, encrypted database, and that kind of database is protected by a Master Password.
+Analyst: Great, thanks. Let's start with the general needs. What do you expect overall?
+EndUser: For me the main thing is that the system features are you know organized by use cases and by a functional hierarchy, so you can actually understand erm what the the main functions of the system erm are.
+Analyst: Okay. Let's talk [crosstalk] about creating a new database. How should that uh work?
+Client: That's the very first thing a user has to do to start using KeePass. And the main point of it is uh setting the master password, the one that unlocks the database from then on.
+EndUser: And the Master actually Password er shouldn't have have like any length limit. I could use a whole sentence, more than 100 characters, if I wanted.
+Analyst: Er, Anything else on the new actually database?
+Client: No, that's it.
+Analyst: Then opening uh a database. What sort of happens there?
+EndUser: Um, Once the database is found, it asks for the master password so the database gets unlocked.
+Analyst: Okay, got it.
+EndUser: Also, the folder you pick has to be a type sort of the database can read, which is "name".kdb.
+Analyst: Alright. What about saving a database?
+Client: Databases need different names, otherwise actually the previous one gets replaced if you er select it.
+Analyst: Okay. And printing the database?
+EndUser: There uhm have to be entries in the database before well they can be printed.
+TechLead: Sorry, quick thing, actually my screen share just uh dropped. Okay, it's back.
+Analyst: No problem. Last one, searching the database. How should that like work?
+Client: This one's really useful when the user needs to find out really quickly which password goes with one account, or what sort of username he used on another account. well You You type just one character and the database shows all the data like that contains it it or is related to it.
+Analyst: Right, okay.
+Client: And it uhm has to show everything related to what you typed. sort of So say the user types "abc", and abc shows up in a erm password and also in a username, then both of those entries kind of have to come up.
+Analyst: Got it. Let's move on to adding a group or i mean subgroup. How should that work?
+EndUser: So when I create a group or subgroup, I first have have to pick a name for it, and like then I can start adding entries into it.
+Client: Yeah, um the name is mandatory. Without a name you know the new group or subgroup erm just can't be created.
+Analyst: Okay, noted.
+Client: Also, you can't create a subgroup if no group er is selected.
+Analyst: Makes sense. What about kind of modifying uh a group or subgroup?
+EndUser: Same idea really. If you uh want um to rename a group or subgroup, you have to give it a name.
+Analyst: Okay.
+Analyst: And deleting a group or subgroup, how does basically that go?
+EndUser: Um, For that to happen, the user has to have uhm picked a group or uh subgroup first.
+Analyst: Right. And finding things in a group or subgroup?
+EndUser: Uh, To find something in in a group, you have to put a word in the find kind of field.
+Analyst: Okay. Let's talk about adding an entry. What does that look like?
+EndUser: You get a bunch of fields you can can fill in: the group the entry goes into, the title, user name, password, repeat password, URL, notes, an expiration date uh and an attachment file.
+EndUser: The entry has to belong to a group, otherwise it can't be created. And if you fill in the password field, then the repeat password field has like to be filled in um too.
+Client: And those two, the password and the the repeat um password, sort of have to actually match like exactly.
+Analyst: Anything else on adding an entry?
+Client: No, that covers it.
+Analyst: Okay, let's move on to viewing and editing an entry. How should that work?
+Client: Erm, Well, for that to happen the user has to select an entry first. So an entry has to be selected before you can view it or modify it.
+Analyst: Got it.
+Client: And when the password field gets changed, the repeat password field has to be changed too, and it has to match the password uh field.
+Analyst: Alright. What about duplicating an entry?
+EndUser: Um, Same idea really, you have to select an entry before you can duplicate it.
+Analyst: Um, Anything else on duplicating entries?
+EndUser: No, that's it.
+Analyst: Okay, next one is changing the language. How does that work?
+Client: All the i mean user has to do is pick change language from the view menu, and then pick the well language he wants.
+Analyst: Okay.
+EndUser: And when he does that, he gets sent over to the KeePass website and chooses the language he wants to download. So you need an internet connection and a browser basically to download new language translations. And for the features after this one, we don't have use cases included.
+Analyst: Good to know. Let's talk about auto-type then. What do you need there?
+Client: So this feature um lets the user user define a sequence of keypresses that KeePass will perform automatically. The sequence has to start with with "Auto-Type" i mean and it has to be one line long.
+Analyst: Right.
+EndUser: If a sequence um goes over one line, it erm can't be used. And kind of if there are two sequences in uh one sort of notes field, only the well first one one uhm gets used. Each sequence like needs the "Auto-Type:" prefix in actually front of it.
+Client: And to be clear, a a sequence can't be longer than one line, which is 59 characters.
+Analyst: Okay, noted.
+Client: Erm, Also, if two auto-types are referred to in one note field, only the first one is used.
+Analyst: So if one i mean note field references i mean two auto-types, it just takes the first one, is that right?
+Client: Yes, exactly.
+Analyst: Okay, let's move you know on to command line options. What should those do?
+EndUser: So the idea is I can pass a file path on the command line and KeePass opens that file right after it starts up. But only one database file is allowed in the command line options.
+Client: Er, And if there's a erm space anywhere in the path, it has to be wrapped in quotes.
+Analyst: Got it.
+Analyst: Next, uh the composite master key. How well should that that work?
+Client: Well, if the database needs a master password to unlock, it just won't open until that password [laughter] uh is entered.
+Analyst: Okay.
+Client: Same with a key file. If the er database requires uh a key file, it won't open unless the key file is there.
+Client: Er, And if like it's a composite key, you need both, the master password and the key file. If you lose either one, the database never i mean unlocks again. There's no recovery at all.
+EndUser: Right, and there's no backdoor, no key that basically unlocks every database.
+Analyst: Understood.
+Analyst: Anything uh else on the composite master er key?
+EndUser: No, that's it.
+Analyst: Er, Alright, import and export. What sort of do we need there?
+Client: So actually the file formats aren't specialized password database formats.
+Client: Um, They really actually only specify a low-level layout of the stored data.
+Analyst: Okay. Let's talk er about integration. What's expected there?
+EndUser: For me the main thing is the global hot key, and that you know can't be erm changed.
+Analyst: Okay, noted.
+Analyst: Okay, let's move on to TAN support. How How should that work?
+Client: So when TANs TANs get created, they just show up as normal entries, but the title field contains "TAN", and that's how KeePass knows it's a a TAN.
+EndUser: And in those TAN entries I erm can't change the title, uh the user name or sort of the URL, but you know I can still add notes.
+Client: Right, the title, username and URL are locked in a TAN entry.
+Client: And kind of once a TAN is used, it expires automatically. It can never be used again.
+Analyst: Er, Got it. What about the user user interfaces?
+TechLead: One thing to note: [pause] at that point the main database window basically is inactive, and you can't get to it uh until you close the window that's currently active.
+Analyst: Okay. Let's talk performance requirements.
+Client: If um it you know doesn't get pasted anywhere in the meantime, you have to kind of copy it again.
+TechLead: That happens so that if user copies a password and not paste it anywhere, actually the password can't be found by anyone later, that's the the main thing.
+Analyst: Makes um sense. And safety requirements?
+TechLead: Uhm, The big one is the USB case. If the USB with the database on it gets pulled out of the computer before the well changes are fully saved, the database gets damaged and won't open.
+Analyst: Good to know. Any software quality attributes we should capture?
+TechLead: Um, Well, KeePass is uh a small, light project, so there's no installation. You just like unpack it from the Zip package. You can also carry it around on a USB stick without any extra configuration.
+Analyst: Okay, great.
+Analyst: I think that covers everything. Since this was our only session, I'll consolidate actually all of this and send send it around. Thanks, everyone.

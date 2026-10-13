@@ -1,0 +1,55 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, TechLead
+
+Analyst: Okay, let's get started. This is the kickoff for Qhedache, the first of three meetings, so today is mostly about getting the the big picture.
+Client: Sounds good. Nice to finally see everyone's faces, by like the way.
+Client: So, kind of quick background. We're putting together a spec that lays out the requirements for this kind of product, Qheadache. It's really you know written for the the analyst, well the programmer and the tester on the project. The product itself is a computer game, and it shows an interface you use to um solve a specific headache, basically a puzzle.
+Analyst: Great. Let's start with the main window. What should it kind of look like?
+TechLead: Uh, So the main window needs to have a couple of parts you know in it.
+Client: Okay.
+TechLead: First there's a board, and the details for that are in chapter 3.2.1.1.
+Analyst: Got it.
+TechLead: Erm, And then a menu bar, which is covered in chapter 3.2.5.
+Client: Yep, that matches what I pictured.
+Analyst: Erm, Okay, let's talk external interfaces. What basically do we need there?
+Client: Well, the hardware and kind of the operating system uhm have to...
+Client: Sorry, is my audio cutting out? I'm getting a bit of an echo.
+Client: Anyway, the input for... no, wait, let me start with block selection. The input there is when you left-click down on a block.
+Analyst: Mm-hm.
+Client: And what happens uhm then is the game state switches to "Block deplacement".
+Analyst: Okay.
+TechLead: Yeah, that makes sense.
+Analyst: Anything else kind of on well block selection?
+Client: No, that's it.
+Analyst: Okay, let's move i mean on to block deselection. How should that uhm work?
+Client: So for block deselection, um the input uhm is when the player releases the left click on a basically block that's already selected, and then
+Analyst: Right.
+Client: the processing is that the game state goes to "Block selection".
+Analyst: Got it. And what about block movement?
+Client: Block movement, the you know input there is just uhm the mouse moving while we're in actually the you know "Block movement" state, and
+Analyst: Okay.
+Client: Er, what happens is the er selected block follows the mouse, but it can't overlap the other blocks and it it can't leave the game zone. And it actually also can't get too close to other blocks, it has to stay at um least 0.05x away from them.
+TechLead: Uhm, Sorry, someone's knocking, I'll be on mute for a sec.
+Analyst: No problem.
+Analyst: So, next one, the undo action. What do i mean you have in mind?
+Client: Er, Undo action, the input is a menu selection, and for the processing
+Client: the game shows um the blocks back where uh they sort of were before the last well movement. And the undo itself counts as a movement. If there wasn't any previous movement, then undo isn't available. The output is a new display of the game board.
+Analyst: Makes sense.
+Analyst: Anything else on undo?
+Client: No, that's it.
+Analyst: Okay, then redo. How should redo work?
+Client: Redo, I'm not sure it's a must-have, but it'd be nice. The input would be a menu selection, and the processing
+TechLead: Mm-hm.
+Client: is the game shows the blocks where they were before the last movement uh got canceled. It also counts erm as a movement. And redo isn't i mean available if the previous action wasn't an undo. Output is again a new display of the game well board.
+Analyst: Um, Can you actually be a bit more specific about the redo part? What exactly counts there?
+Client: It basically just just works the way way you'd you know expect a redo er to to work, nothing fancy.
+Analyst: Okay, fair enough. Let's move on to the end of the game. How does that work?
+Client: Right, so the end of the game. For the input,
+Client: what happens is—
+Analyst: Sorry, go ahead.
+Client: Uh, So the input is when the great square gets moved to sort of the bottom of the board.
+Analyst: Got it.
+Client: Uhm, Then for processing, all the player statistics basically get frozen.
+Analyst: Okay.
+Client: And the output: if the current player's number of block movements is lower than the highest like number of block movements recorded in the statistic file, then the "Finish Window with Statistics" shows up, that's uh in chapter 3.2.2.2. There are some exceptions to that too, but I can't recall them right now.
+Analyst: Erm, Okay, that's a good place to stop. Let's pick up from here, er including those exceptions, next sort of time. Thanks, everyone.

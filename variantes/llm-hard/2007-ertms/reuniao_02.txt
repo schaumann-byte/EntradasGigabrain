@@ -1,0 +1,74 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get going. This you know is sort of our second session on the ERTMS/ETCS functional requirements spec, the follow-up.
+Client: Sure. Good you know to see kind of everyone again, hope your week's been been okay.
+Analyst: Quick recap: last time we went through the operational states, the basic functioning, and how it works with the existing national train control systems. A few points were left open, so we'll come back to those.
+Analyst: Let's start with operational functions. What do you need there?
+Client: So the ETCS trainborne equipment has has to be able basically to take in information from the national actually train control systems, and that goes goes through the STM.
+Analyst: Uh, So the trainborne ETCS kit sort of receives information from the national train control systems via the STM, right?
+Client: Yes, exactly.
+Analyst: Okay. Next, unfitted line operation. How should that work?
+EndUser: Uhm, The onboard actually needs to actually be able to switch over to another ETCS status when the trackside uh transmits it.
+Analyst: Got it. What about infrastructure functions?
+EndUser: From the trackside we should be able to send information about adhesion conditions.
+EndUser: And if uhm the onboard doesn't have track uhm data at least up to where the movement authority ends, then that movement authority gets gets rejected.
+Analyst: Okay, noted.
+EndUser: And the trackside should be able to send information on...
+Client: While we're at at it, end of movement authority. The ETCS trainborne equipment has has to supervise the end of movement authority, and...
+Analyst: Uh, Let's move to the dynamic train speed profile calculation. What's needed there?
+EndUser: When you change to a um higher speed level, the rear end of the train still er has well to respect the static train speed profile.
+Client: Um, Do we we really need that um one? It sounds like a lot of effort for something that's not a a like top priority.
+EndUser: Sorry, my screen just froze. Can uh you still hear me?
+EndUser: Uh, Yes. And I'd [pause] really keep it, it matters a lot to us in daily operation.
+Analyst: Okay, let's like take that uhm one out of erm scope for uhm now.
+Analyst: Let's move on to you know infrastructure functions. well What do you need there?
+Client: So, from the train data and the infrastructure um data, actually the system has to calculate braking curves. Those should take the target information into account, but not where other vehicles occupying the track are.
+TechLead: Do we um really need that? It's quite um a lot of effort for something I'm not sure is a priority.
+Client: I'd say we do. It's really important for us, I wouldn't want to basically [pause] drop well it.
+Analyst: Erm, Let's leave that one open and actually come back to it you know later.
+EndUser: Er, At the very least, i mean the train has to be like supervised to a kind of ceiling speed, and—
+TechLead: Sorry, a ceiling speed, you said?
+EndUser: Yes. And the supervised speed shouldn't appear on the DMI unless the sort of driver basically selects it.
+Client: Uhm, Same with the target uh speed, no, sorry, the target distance. That shouldn't be shown on the DMI unless the driver picks it.
+TechLead: Yeah, makes sense.
+Analyst: Next topic, speed calculation and indication. How should that work?
+Client: Uhm, The key thing is there can't kind of be any discrepancy between the speed uh the driver sees
+Analyst: Right.
+Client: Uh, and the erm speed that's used to supervise movement authorities
+Analyst: Okay.
+Client: and speed limits, that's function 4.3.7.
+Analyst: Got it.
+EndUser: Since we're on on supervision of movement authorities and actually speed limits, within the braking curve area
+Analyst: Mm-hm.
+EndUser: Uh, the driver should get a warning at least 5 seconds before the intervention, so he's got time to react and avoid the ETCS equipment stepping in.
+Client: And uhm the driver needs to be able to release an ETCS...
+Analyst: Uhm, Okay, let's move on to the indication displayed on on the DMI. What do we need there?
+EndUser: So the driver should get both visual and acoustic warnings about a possible ETCS intervention, so so he can react and avoid it.
+Analyst: Got it.
+Analyst: Um, Anything else on the DMI indications?
+EndUser: No, that's it.
+Analyst: Uh, Alright, next one one is recording the ETCS information. How should that that work?
+Client: So everything that's entered, everything received,
+Analyst: Mm-hm.
+Client: or um shown to the driver, all of that has to be recorded onboard. And all the data...
+EndUser: The retention period for the recorded data will be different,
+Analyst: Okay.
+EndUser: we're looking at two levels.
+Analyst: Right.
+EndUser: First, the um data for accident investigation only has uh to be kept at least a few hours, but it has to be very detailed. Then the uhm operational data for assessing driver performance has to be kept at least uh one week.
+Analyst: When you say a few hours basically for the accident um data, can you be more you know specific?
+EndUser: Uhm, Honestly, I'd rather not put a figure on it right now. A few hours is um the idea.
+Analyst: Fair enough. Let's talk about roll away and well reverse movement you know protection. What do we we need there?
+TechLead: One point like from my side: if there's more than one traction unit, this function has to be disabled on all of them except the leading one.
+Analyst: Okay, got it.
+Analyst: Let's stay on that and talk i mean about using multiple traction units. um What else do we actually need there?
+EndUser: So for traction units with uh inoperative cabs, the train trip function, that's 4.6.12, has has to be suppressed.
+EndUser: And we need to be able to isolate the... no, sorry, the other way round. We need to be able to run tandem traction units without er isolating the ETCS trainborne equipment on the uh tandem unit.
+EndUser: And on that tandem traction unit, the train trip function 4.6.12 should be suppressed as well.
+Analyst: Right.
+TechLead: Yes, that makes sense.
+Client: Um, One more thing from actually my side: the driver has actually to enter their driver ID.
+Analyst: Okay, noted.
+EndUser: Yeah, agreed.
+Analyst: Great, let's stop here for today. We'll pick up the rest next time. Thanks, everyone.

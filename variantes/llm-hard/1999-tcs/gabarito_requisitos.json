@@ -1,0 +1,6397 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "1999-tcs",
+  "doc_title": "Tactical Control System (TCS) System/Subsystem Specification",
+  "source_file": "PURE/requirements-xml/1999 - tcs.xml",
+  "mode": "meetings",
+  "variant": "llm-hard",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "hard",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        3,
+        4
+      ],
+      "mess": 0.75,
+      "p_omit": 0.05,
+      "p_conflict": 0.12,
+      "p_ambiguity": 0.14,
+      "p_inconsistency": 0.08,
+      "p_incomplete": 0.12,
+      "p_conflict_open": 0.55,
+      "p_resolve_later": 0.35,
+      "p_complete_later": 0.35,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.075,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_content": 1,
+      "fallback:lost_number": 3,
+      "llm_accepted": 247,
+      "llm_accepted_content": 96,
+      "turns": 251,
+      "windows": 14
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 23664,
+    "n_words": 3968,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser"
+        ],
+        "topics": [
+          "general needs",
+          "startup state",
+          "recovery startup mode",
+          "shutdown state",
+          "mission planning function",
+          "normal operations mode",
+          "map display task",
+          "av control and monitoring capability",
+          "flight behavior characteristics",
+          "adt antenna control",
+          "payload control and monitoring capability",
+          "adt control task",
+          "transmitter and receiver control",
+          "targeting function",
+          "payload product processing capability",
+          "target accuracy estimation capability"
+        ],
+        "n_chars": 8115,
+        "n_words": 1352,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 74,
+            "end": 263,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 272,
+            "end": 937,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T3",
+            "start": 946,
+            "end": 1168,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0011",
+                "role": "statement",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T4",
+            "start": 1178,
+            "end": 1303,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0011",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 1312,
+            "end": 1390,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0011",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 1400,
+            "end": 1482,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0011",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T7",
+            "start": 1491,
+            "end": 1620,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0015",
+                "role": "part1",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T8",
+            "start": 1630,
+            "end": 1636,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T9",
+            "start": 1645,
+            "end": 1696,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0015",
+                "role": "part2",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T10",
+            "start": 1706,
+            "end": 1713,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T11",
+            "start": 1723,
+            "end": 1789,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T12",
+            "start": 1798,
+            "end": 1943,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0021",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1953,
+            "end": 1958,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T14",
+            "start": 1968,
+            "end": 2013,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T15",
+            "start": 2023,
+            "end": 2091,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0030",
+                "role": "part1",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 2101,
+            "end": 2107,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T17",
+            "start": 2117,
+            "end": 2225,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0030",
+                "role": "part2",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 2235,
+            "end": 2247,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T19",
+            "start": 2257,
+            "end": 2303,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T20",
+            "start": 2313,
+            "end": 2327,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T21",
+            "start": 2337,
+            "end": 2703,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0042"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0042",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 2712,
+            "end": 2854,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0042",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 2864,
+            "end": 2943,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0042",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 2953,
+            "end": 3019,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0042",
+                "role": "conflict",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 3029,
+            "end": 3068,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0044",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 3078,
+            "end": 3160,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T27",
+            "start": 3169,
+            "end": 3543,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0064"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0064",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T28",
+            "start": 3553,
+            "end": 3626,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T29",
+            "start": 3636,
+            "end": 3737,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0037",
+                "role": "part1",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 3747,
+            "end": 3771,
+            "speaker": "EndUser",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M1:T31",
+            "start": 3780,
+            "end": 3796,
+            "speaker": "Client",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M1:T32",
+            "start": 3806,
+            "end": 3812,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T33",
+            "start": 3822,
+            "end": 3888,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0037",
+                "role": "part2",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T34",
+            "start": 3897,
+            "end": 4268,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0081",
+                "role": "statement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T35",
+            "start": 4278,
+            "end": 4370,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0081",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T36",
+            "start": 4379,
+            "end": 4457,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0081",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T37",
+            "start": 4467,
+            "end": 4513,
+            "speaker": "EndUser",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T38",
+            "start": 4523,
+            "end": 4560,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "1999-tcs:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0081",
+                "role": "resolution",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 4569,
+            "end": 4699,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0097"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0097",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M1:T40",
+            "start": 4709,
+            "end": 4784,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T41",
+            "start": 4794,
+            "end": 4995,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0111"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0111",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M1:T42",
+            "start": 5004,
+            "end": 5217,
+            "speaker": "Client",
+            "act": "counter",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0111",
+                "role": "distractor",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M1:T43",
+            "start": 5226,
+            "end": 5281,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T44",
+            "start": 5291,
+            "end": 5372,
+            "speaker": "EndUser",
+            "act": "defend",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0111",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M1:T45",
+            "start": 5381,
+            "end": 5487,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0111",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M1:T46",
+            "start": 5497,
+            "end": 5608,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0116"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0116",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T47",
+            "start": 5617,
+            "end": 5690,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0117"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0117",
+                "role": "part1",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M1:T48",
+            "start": 5700,
+            "end": 5713,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T49",
+            "start": 5722,
+            "end": 5806,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0117"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0117",
+                "role": "part2",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M1:T50",
+            "start": 5816,
+            "end": 5902,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0114"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0114",
+                "role": "part1",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M1:T51",
+            "start": 5912,
+            "end": 5918,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T52",
+            "start": 5928,
+            "end": 6003,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0114"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0114",
+                "role": "part2",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M1:T53",
+            "start": 6012,
+            "end": 6229,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0158"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0158",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T54",
+            "start": 6239,
+            "end": 6400,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1999-tcs:R0158"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0158",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 6409,
+            "end": 6422,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T56",
+            "start": 6432,
+            "end": 6500,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T57",
+            "start": 6510,
+            "end": 6582,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0186"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0186",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T58",
+            "start": 6591,
+            "end": 6650,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T59",
+            "start": 6660,
+            "end": 6792,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "1999-tcs:R0186"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0186",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T60",
+            "start": 6802,
+            "end": 6904,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T61",
+            "start": 6913,
+            "end": 6971,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0171"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0171",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T62",
+            "start": 6981,
+            "end": 6986,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T63",
+            "start": 6995,
+            "end": 7082,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0171"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0171",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 7092,
+            "end": 7098,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T65",
+            "start": 7107,
+            "end": 7160,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0167"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0167",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T66",
+            "start": 7170,
+            "end": 7176,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T67",
+            "start": 7185,
+            "end": 7264,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0167"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0167",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T68",
+            "start": 7273,
+            "end": 7340,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0167"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0167",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T69",
+            "start": 7350,
+            "end": 7357,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T70",
+            "start": 7366,
+            "end": 7553,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0167"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0167",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T71",
+            "start": 7563,
+            "end": 7568,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T72",
+            "start": 7578,
+            "end": 7609,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T73",
+            "start": 7619,
+            "end": 7687,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T74",
+            "start": 7696,
+            "end": 7807,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0188"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0188",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T75",
+            "start": 7817,
+            "end": 7846,
+            "speaker": "EndUser",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T76",
+            "start": 7855,
+            "end": 7932,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "1999-tcs:R0188"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0188",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T77",
+            "start": 7942,
+            "end": 7986,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T78",
+            "start": 7996,
+            "end": 8010,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T79",
+            "start": 8020,
+            "end": 8114,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "target coordinate development capability",
+          "c4i system interface function",
+          "payload maintenance function",
+          "software upgrade function",
+          "tcs to c4i",
+          "tcs to army mission planning system",
+          "tcs to air force mission support system",
+          "tcs to gcs/acs ipf",
+          "tcs to atwcs",
+          "tcs to mies",
+          "tcs to etrac",
+          "av standard interface",
+          "tcs to geopositional data",
+          "real time processor",
+          "air vehicle safety",
+          "system safety and health hazard assets",
+          "cd drive",
+          "physical security",
+          "computer software requirements"
+        ],
+        "n_chars": 8317,
+        "n_words": 1408,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 86,
+            "end": 264,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 273,
+            "end": 331,
+            "speaker": "Client",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 341,
+            "end": 535,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 544,
+            "end": 758,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0187"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0187",
+                "role": "statement",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M2:T5",
+            "start": 768,
+            "end": 826,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T6",
+            "start": 835,
+            "end": 862,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T7",
+            "start": 872,
+            "end": 969,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T8",
+            "start": 979,
+            "end": 1072,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0194"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0194",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T9",
+            "start": 1082,
+            "end": 1087,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T10",
+            "start": 1097,
+            "end": 1136,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0194"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0194",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T11",
+            "start": 1146,
+            "end": 1186,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0194"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0194",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1196,
+            "end": 1329,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0194"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0194",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T13",
+            "start": 1340,
+            "end": 1362,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T14",
+            "start": 1371,
+            "end": 1421,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0196"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0196",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T15",
+            "start": 1431,
+            "end": 1437,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T16",
+            "start": 1446,
+            "end": 1502,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0196"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0196",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T17",
+            "start": 1512,
+            "end": 1519,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T18",
+            "start": 1528,
+            "end": 1567,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0196"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0196",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1577,
+            "end": 1583,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T20",
+            "start": 1592,
+            "end": 1719,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0196"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0196",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T21",
+            "start": 1729,
+            "end": 1750,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M2:T22",
+            "start": 1760,
+            "end": 1811,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T23",
+            "start": 1821,
+            "end": 1835,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T24",
+            "start": 1845,
+            "end": 1935,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T25",
+            "start": 1945,
+            "end": 2016,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0210"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0210",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T26",
+            "start": 2025,
+            "end": 2059,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T27",
+            "start": 2069,
+            "end": 2128,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "1999-tcs:R0210"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0210",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T28",
+            "start": 2138,
+            "end": 2194,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T29",
+            "start": 2204,
+            "end": 2361,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0219"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0219",
+                "role": "statement",
+                "pid": "P15"
+              }
+            ]
+          },
+          {
+            "id": "M2:T30",
+            "start": 2371,
+            "end": 2424,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T31",
+            "start": 2435,
+            "end": 2517,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0229"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0229",
+                "role": "statement",
+                "pid": "P16"
+              }
+            ]
+          },
+          {
+            "id": "M2:T32",
+            "start": 2527,
+            "end": 2581,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T33",
+            "start": 2592,
+            "end": 2656,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0249"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0249",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T34",
+            "start": 2665,
+            "end": 2728,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T35",
+            "start": 2737,
+            "end": 2749,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T36",
+            "start": 2760,
+            "end": 2945,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0249"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0249",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T37",
+            "start": 2955,
+            "end": 2962,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T38",
+            "start": 2972,
+            "end": 3023,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T39",
+            "start": 3032,
+            "end": 3102,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0250"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0250",
+                "role": "part1",
+                "pid": "P17"
+              }
+            ]
+          },
+          {
+            "id": "M2:T40",
+            "start": 3112,
+            "end": 3118,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T41",
+            "start": 3127,
+            "end": 3252,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0250"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0250",
+                "role": "part2",
+                "pid": "P17"
+              }
+            ]
+          },
+          {
+            "id": "M2:T42",
+            "start": 3262,
+            "end": 3363,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T43",
+            "start": 3372,
+            "end": 3444,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0252"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0252",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T44",
+            "start": 3454,
+            "end": 3460,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T45",
+            "start": 3469,
+            "end": 3545,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0252"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0252",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T46",
+            "start": 3555,
+            "end": 3562,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T47",
+            "start": 3573,
+            "end": 3596,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T48",
+            "start": 3606,
+            "end": 3687,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T49",
+            "start": 3697,
+            "end": 3754,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T50",
+            "start": 3765,
+            "end": 3832,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0263"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0263",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T51",
+            "start": 3841,
+            "end": 3863,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T52",
+            "start": 3874,
+            "end": 3961,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "1999-tcs:R0263"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0263",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T53",
+            "start": 3971,
+            "end": 4006,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T54",
+            "start": 4015,
+            "end": 4105,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0268"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0268",
+                "role": "statement",
+                "pid": "P18"
+              }
+            ]
+          },
+          {
+            "id": "M2:T55",
+            "start": 4114,
+            "end": 4144,
+            "speaker": "Client",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M2:T56",
+            "start": 4154,
+            "end": 4174,
+            "speaker": "EndUser",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M2:T57",
+            "start": 4184,
+            "end": 4213,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T58",
+            "start": 4224,
+            "end": 4238,
+            "speaker": "TechLead",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T59",
+            "start": 4249,
+            "end": 4413,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0114",
+                "role": "restatement",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T60",
+            "start": 4424,
+            "end": 4580,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0270"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0270",
+                "role": "statement",
+                "pid": "P19"
+              }
+            ]
+          },
+          {
+            "id": "M2:T61",
+            "start": 4589,
+            "end": 4738,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0270",
+                "role": "conflict",
+                "pid": "P19"
+              }
+            ]
+          },
+          {
+            "id": "M2:T62",
+            "start": 4749,
+            "end": 4874,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0270",
+                "role": "conflict",
+                "pid": "P19"
+              }
+            ]
+          },
+          {
+            "id": "M2:T63",
+            "start": 4884,
+            "end": 4912,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "1999-tcs:R0270"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0270",
+                "role": "resolution",
+                "pid": "P19"
+              }
+            ]
+          },
+          {
+            "id": "M2:T64",
+            "start": 4923,
+            "end": 5136,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0293"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0293",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T65",
+            "start": 5146,
+            "end": 5153,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T66",
+            "start": 5163,
+            "end": 5247,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T67",
+            "start": 5256,
+            "end": 5472,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0290"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0290",
+                "role": "statement",
+                "pid": "P20"
+              }
+            ]
+          },
+          {
+            "id": "M2:T68",
+            "start": 5482,
+            "end": 5487,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T69",
+            "start": 5497,
+            "end": 5532,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T70",
+            "start": 5541,
+            "end": 5645,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0301"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0301",
+                "role": "part1",
+                "pid": "P21"
+              }
+            ]
+          },
+          {
+            "id": "M2:T71",
+            "start": 5655,
+            "end": 5661,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T72",
+            "start": 5670,
+            "end": 5760,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0301"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0301",
+                "role": "part2",
+                "pid": "P21"
+              }
+            ]
+          },
+          {
+            "id": "M2:T73",
+            "start": 5770,
+            "end": 5853,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0301",
+                "role": "clarification",
+                "pid": "P21"
+              }
+            ]
+          },
+          {
+            "id": "M2:T74",
+            "start": 5862,
+            "end": 5937,
+            "speaker": "Client",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0301",
+                "role": "clarification",
+                "pid": "P21"
+              }
+            ]
+          },
+          {
+            "id": "M2:T75",
+            "start": 5947,
+            "end": 6029,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T76",
+            "start": 6038,
+            "end": 6197,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0329"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0329",
+                "role": "statement",
+                "pid": "P23"
+              }
+            ]
+          },
+          {
+            "id": "M2:T77",
+            "start": 6207,
+            "end": 6274,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T78",
+            "start": 6285,
+            "end": 6396,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0339"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0339",
+                "role": "statement",
+                "pid": "P24"
+              }
+            ]
+          },
+          {
+            "id": "M2:T79",
+            "start": 6406,
+            "end": 6514,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0339",
+                "role": "conflict",
+                "pid": "P24"
+              }
+            ]
+          },
+          {
+            "id": "M2:T80",
+            "start": 6525,
+            "end": 6602,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0339",
+                "role": "conflict",
+                "pid": "P24"
+              }
+            ]
+          },
+          {
+            "id": "M2:T81",
+            "start": 6612,
+            "end": 6662,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "1999-tcs:R0339"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0339",
+                "role": "resolution",
+                "pid": "P24"
+              }
+            ]
+          },
+          {
+            "id": "M2:T82",
+            "start": 6671,
+            "end": 6761,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0318"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0318",
+                "role": "statement",
+                "pid": "P22"
+              }
+            ]
+          },
+          {
+            "id": "M2:T83",
+            "start": 6772,
+            "end": 6875,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0345"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0345",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T84",
+            "start": 6885,
+            "end": 6898,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T85",
+            "start": 6909,
+            "end": 6978,
+            "speaker": "TechLead",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T86",
+            "start": 6989,
+            "end": 7097,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0345"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0345",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T87",
+            "start": 7108,
+            "end": 7183,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0345"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0345",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T88",
+            "start": 7193,
+            "end": 7375,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1999-tcs:R0345"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0345",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T89",
+            "start": 7386,
+            "end": 7399,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T90",
+            "start": 7409,
+            "end": 7508,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T91",
+            "start": 7517,
+            "end": 7577,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0369"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0369",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T92",
+            "start": 7586,
+            "end": 7646,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0369"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0369",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T93",
+            "start": 7656,
+            "end": 7661,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T94",
+            "start": 7670,
+            "end": 7737,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0369"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0369",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T95",
+            "start": 7747,
+            "end": 7754,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T96",
+            "start": 7763,
+            "end": 7896,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0369"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0369",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T97",
+            "start": 7906,
+            "end": 7918,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T98",
+            "start": 7928,
+            "end": 8057,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0378"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0378",
+                "role": "statement",
+                "pid": "P27"
+              }
+            ]
+          },
+          {
+            "id": "M2:T99",
+            "start": 8067,
+            "end": 8129,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T100",
+            "start": 8139,
+            "end": 8160,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T101",
+            "start": 8170,
+            "end": 8316,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "hardware requirements",
+          "system quality factors",
+          "power",
+          "maintainability",
+          "testability",
+          "human factors engineering (hfe)",
+          "training related requirements",
+          "logistics-related requirements",
+          "integrated test program"
+        ],
+        "n_chars": 7232,
+        "n_words": 1208,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 83,
+            "end": 240,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 250,
+            "end": 474,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T3",
+            "start": 483,
+            "end": 811,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "1999-tcs:R0250"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0250",
+                "role": "followup",
+                "pid": "P17"
+              }
+            ]
+          },
+          {
+            "id": "M3:T4",
+            "start": 821,
+            "end": 904,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T5",
+            "start": 914,
+            "end": 980,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0353"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0353",
+                "role": "part1",
+                "pid": "P25"
+              }
+            ]
+          },
+          {
+            "id": "M3:T6",
+            "start": 990,
+            "end": 996,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T7",
+            "start": 1006,
+            "end": 1066,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0353"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0353",
+                "role": "part2",
+                "pid": "P25"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 1075,
+            "end": 1081,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T9",
+            "start": 1091,
+            "end": 1100,
+            "speaker": "EndUser",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M3:T10",
+            "start": 1110,
+            "end": 1126,
+            "speaker": "Analyst",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M3:T11",
+            "start": 1136,
+            "end": 1206,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0353"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0353",
+                "role": "part2",
+                "pid": "P25"
+              }
+            ]
+          },
+          {
+            "id": "M3:T12",
+            "start": 1217,
+            "end": 1224,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T13",
+            "start": 1234,
+            "end": 1392,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0353"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0353",
+                "role": "part2",
+                "pid": "P25"
+              }
+            ]
+          },
+          {
+            "id": "M3:T14",
+            "start": 1402,
+            "end": 1511,
+            "speaker": "Analyst",
+            "act": "drop_later",
+            "gt_ids": [
+              "1999-tcs:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0011",
+                "role": "resolution",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1521,
+            "end": 1602,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T16",
+            "start": 1611,
+            "end": 1825,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0384"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0384",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T17",
+            "start": 1835,
+            "end": 2022,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1999-tcs:R0384"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0384",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T18",
+            "start": 2031,
+            "end": 2044,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T19",
+            "start": 2054,
+            "end": 2077,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T20",
+            "start": 2087,
+            "end": 2130,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M3:T21",
+            "start": 2140,
+            "end": 2162,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M3:T22",
+            "start": 2172,
+            "end": 2409,
+            "speaker": "EndUser",
+            "act": "followup",
+            "gt_ids": [
+              "1999-tcs:R0378"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0378",
+                "role": "followup",
+                "pid": "P27"
+              }
+            ]
+          },
+          {
+            "id": "M3:T23",
+            "start": 2419,
+            "end": 2482,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T24",
+            "start": 2493,
+            "end": 2638,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0117",
+                "role": "restatement",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M3:T25",
+            "start": 2649,
+            "end": 2950,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0353",
+                "role": "restatement",
+                "pid": "P25"
+              }
+            ]
+          },
+          {
+            "id": "M3:T26",
+            "start": 2960,
+            "end": 3009,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T27",
+            "start": 3018,
+            "end": 3138,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0387"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0387",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T28",
+            "start": 3148,
+            "end": 3153,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T29",
+            "start": 3163,
+            "end": 3181,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T30",
+            "start": 3190,
+            "end": 3395,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "1999-tcs:R0097"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0097",
+                "role": "followup",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T31",
+            "start": 3406,
+            "end": 3551,
+            "speaker": "TechLead",
+            "act": "followup",
+            "gt_ids": [
+              "1999-tcs:R0229"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0229",
+                "role": "followup",
+                "pid": "P16"
+              }
+            ]
+          },
+          {
+            "id": "M3:T32",
+            "start": 3562,
+            "end": 3711,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0399"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0399",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T33",
+            "start": 3721,
+            "end": 3727,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T34",
+            "start": 3737,
+            "end": 3807,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T35",
+            "start": 3818,
+            "end": 3922,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0429"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0429",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T36",
+            "start": 3932,
+            "end": 3938,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T37",
+            "start": 3949,
+            "end": 4010,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0429"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0429",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T38",
+            "start": 4020,
+            "end": 4025,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T39",
+            "start": 4034,
+            "end": 4054,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M3:T40",
+            "start": 4065,
+            "end": 4227,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0431"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0431",
+                "role": "statement",
+                "pid": "P29"
+              }
+            ]
+          },
+          {
+            "id": "M3:T41",
+            "start": 4236,
+            "end": 4445,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0435"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0435",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T42",
+            "start": 4455,
+            "end": 4460,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T43",
+            "start": 4471,
+            "end": 4567,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0436"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0436",
+                "role": "statement",
+                "pid": "P30"
+              }
+            ]
+          },
+          {
+            "id": "M3:T44",
+            "start": 4576,
+            "end": 4641,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0441"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0441",
+                "role": "part1",
+                "pid": "P31"
+              }
+            ]
+          },
+          {
+            "id": "M3:T45",
+            "start": 4652,
+            "end": 4658,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T46",
+            "start": 4667,
+            "end": 4728,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0441"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0441",
+                "role": "part2",
+                "pid": "P31"
+              }
+            ]
+          },
+          {
+            "id": "M3:T47",
+            "start": 4739,
+            "end": 4834,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0444"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0444",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T48",
+            "start": 4844,
+            "end": 4947,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1999-tcs:R0444"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0444",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T49",
+            "start": 4958,
+            "end": 4971,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T50",
+            "start": 4982,
+            "end": 5042,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0445"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0445",
+                "role": "part1",
+                "pid": "P32"
+              }
+            ]
+          },
+          {
+            "id": "M3:T51",
+            "start": 5052,
+            "end": 5058,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T52",
+            "start": 5069,
+            "end": 5144,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0445"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0445",
+                "role": "part2",
+                "pid": "P32"
+              }
+            ]
+          },
+          {
+            "id": "M3:T53",
+            "start": 5155,
+            "end": 5218,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0456"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0456",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T54",
+            "start": 5228,
+            "end": 5235,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T55",
+            "start": 5245,
+            "end": 5320,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T56",
+            "start": 5329,
+            "end": 5417,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0475"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0475",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T57",
+            "start": 5427,
+            "end": 5432,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T58",
+            "start": 5441,
+            "end": 5550,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-tcs:R0475"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0475",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T59",
+            "start": 5560,
+            "end": 5566,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T60",
+            "start": 5575,
+            "end": 5788,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0477"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0477",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T61",
+            "start": 5798,
+            "end": 5805,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T62",
+            "start": 5816,
+            "end": 6110,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0486"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0486",
+                "role": "statement",
+                "pid": "P34"
+              }
+            ]
+          },
+          {
+            "id": "M3:T63",
+            "start": 6119,
+            "end": 6246,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0486",
+                "role": "conflict",
+                "pid": "P34"
+              }
+            ]
+          },
+          {
+            "id": "M3:T64",
+            "start": 6257,
+            "end": 6409,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0486",
+                "role": "conflict",
+                "pid": "P34"
+              }
+            ]
+          },
+          {
+            "id": "M3:T65",
+            "start": 6419,
+            "end": 6504,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0486",
+                "role": "conflict",
+                "pid": "P34"
+              }
+            ]
+          },
+          {
+            "id": "M3:T66",
+            "start": 6515,
+            "end": 6645,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0483"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0483",
+                "role": "statement",
+                "pid": "P33"
+              }
+            ]
+          },
+          {
+            "id": "M3:T67",
+            "start": 6655,
+            "end": 6751,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T68",
+            "start": 6761,
+            "end": 6886,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-tcs:R0513"
+            ],
+            "refs": [
+              {
+                "rid": "1999-tcs:R0513",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T69",
+            "start": 6896,
+            "end": 6908,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T70",
+            "start": 6919,
+            "end": 7058,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-tcs:R0441",
+                "role": "restatement",
+                "pid": "P31"
+              }
+            ]
+          },
+          {
+            "id": "M3:T71",
+            "start": 7068,
+            "end": 7231,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 60,
+    "n_primary_fr": 31,
+    "n_primary_nfr": 29,
+    "n_expected_in_output": 56,
+    "n_reachable": 57,
+    "by_status": {
+      "clear": 30,
+      "conflict_resolved": 3,
+      "conflict_open": 3,
+      "rejected": 1,
+      "ambiguous": 7,
+      "inconsistent": 4,
+      "incomplete": 9,
+      "omitted": 3
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 7,
+      "conflict:dropped_later": 1,
+      "conflict:open": 3,
+      "conflict:resolved": 3,
+      "incompleteness:completed_later": 4,
+      "incompleteness:open": 9,
+      "inconsistency:unnoticed": 4,
+      "omission:not_discussed": 3
+    },
+    "n_distractors": 0,
+    "n_issues": 23,
+    "messiness": {
+      "topics_out_of_document_order": 19,
+      "self_introduced_topics": 15,
+      "chunked_statements": 20,
+      "crosstalk": 3,
+      "offtopic": 5,
+      "false_starts": 3,
+      "interruptions": 4,
+      "reactions": 7,
+      "smalltalk": 1,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.855
+  },
+  "requirements": [
+    {
+      "id": "1999-tcs:R0011",
+      "text": "The initial TCS task analysis will produce a system baseline which will be optimized by engineering analysis and operator evaluations.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3",
+        "section_path": [
+          "Engineering Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped_later",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M1",
+            "resolved_in": "M3"
+          },
+          "segments": [
+            "M1:T3",
+            "M1:T4",
+            "M1:T5",
+            "M1:T6",
+            "M3:T14"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T3",
+          "M3:T14"
+        ],
+        "related_segments": [
+          "M1:T3",
+          "M1:T4",
+          "M1:T5",
+          "M1:T6",
+          "M3:T14"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0015",
+      "text": "Table 3-2 identifies the payloads with which the TCS shall be interoperable.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3",
+        "section_path": [
+          "Engineering Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Table 3-2 identifies the payloads with which the TCS shall be interoperable."
+          },
+          "segments": [
+            "M1:T7",
+            "M1:T9"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T7",
+          "M1:T9"
+        ],
+        "related_segments": [
+          "M1:T7",
+          "M1:T9"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0021",
+      "text": "When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Required States And Modes",
+          "Startup State"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T12"
+        ],
+        "related_segments": [
+          "M1:T12"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0030",
+      "text": "The TCS shall be capable of automatically recording system state data, interface communications and other information necessary to support event reconstruction.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1.2",
+        "section_path": [
+          "Engineering Requirements",
+          "Required States And Modes",
+          "Startup State",
+          "Recovery Startup Mode"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "ambiguity",
+          "kind": "vague_reference",
+          "outcome": "unresolved",
+          "details": {
+            "removed": "The TCS",
+            "replacement": "that thing",
+            "stated_text": "That thing shall be capable of automatically recording system state data, interface communications and other information necessary to support event reconstruction."
+          },
+          "segments": [
+            "M1:T15",
+            "M1:T17"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T15",
+          "M1:T17"
+        ],
+        "related_segments": [
+          "M1:T15",
+          "M1:T17"
+        ],
+        "support_score": 0.786,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0037",
+      "text": "Functions under the Normal Operations Mode shall operate concurrently without precluding or excluding any of the other functions, in accordance with allowable operations as determined by the appropriate levels of interaction.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Required States And Modes",
+          "Operations State",
+          "Normal Operations Mode"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "allowable operations as determined by the appropriate levels of interaction.",
+            "stated_text": "Functions under the Normal Operations Mode shall operate concurrently without precluding or excluding any of the other functions, in accordance with"
+          },
+          "segments": [
+            "M1:T29",
+            "M1:T33"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T29",
+          "M1:T33"
+        ],
+        "related_segments": [
+          "M1:T29",
+          "M1:T33"
+        ],
+        "support_score": 0.571,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0042",
+      "text": "Upon the selection of a shutdown command the TCS shall enter the Shutdown State, which will cause the TCS to be placed in a condition where power can be removed without impacting operations as well as causing damage to the system, and from which restart of the system can be accomplished normally.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Required States And Modes",
+          "Shutdown State"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T21",
+            "M1:T22",
+            "M1:T23",
+            "M1:T24"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T21"
+        ],
+        "related_segments": [
+          "M1:T21",
+          "M1:T22",
+          "M1:T23",
+          "M1:T24"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0044",
+      "text": "There shall be no modes of operation in the shutdown state.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Required States And Modes",
+          "Shutdown State"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "of operation in the shutdown state.",
+            "stated_text": "There shall be no modes"
+          },
+          "segments": [
+            "M1:T25"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T25"
+        ],
+        "related_segments": [
+          "M1:T25"
+        ],
+        "support_score": 0.25,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0064",
+      "text": "The TCS shall automatically check the validity of the intended mission plan prior to being uploaded including altitude constraints, payload constraints, data link range constraints, airspace restrictions, fuel limitations, threat constraints, data link terrain masking effects, and Loss of Link (LOL) Plan.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Planning Function"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "ambiguity",
+          "kind": "vague_reference",
+          "outcome": "unresolved",
+          "details": {
+            "removed": "The TCS",
+            "replacement": "it",
+            "stated_text": "It shall automatically check the validity of the intended mission plan prior to being uploaded including altitude constraints, payload constraints, data link range constraints, airspace restrictions, fuel limitations, threat constraints, data link terrain masking effects, and Loss of Link (LOL) Plan."
+          },
+          "segments": [
+            "M1:T27"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T27"
+        ],
+        "related_segments": [
+          "M1:T27"
+        ],
+        "support_score": 0.808,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0081",
+      "text": "The TCS shall provide the capability of displaying overlays each containing 100 simultaneous icons of known fire support coordination zones [SSS549], airspace control zones [SSS550], threat systems [SSS061], and displaying the threat engagement envelopes with associated radar terrain masking for those threats [SSS062].",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.1.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Planning Function",
+          "Flight Route Planning Capability",
+          "Map Display Task"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T34",
+            "M1:T35",
+            "M1:T36",
+            "M1:T38"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T34",
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T34",
+          "M1:T35",
+          "M1:T36",
+          "M1:T38"
+        ],
+        "support_score": 0.893,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0097",
+      "text": "The TCS shall be capable of being interoperable with Predator and Outrider UAVs across the 5 levels of UAV interaction.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "AV Control And Monitoring Capability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "across the 5 levels of UAV interaction.",
+            "stated_text": "The TCS shall be capable of being interoperable with Predator and Outrider UAVs",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M1:T39",
+            "M3:T30"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T39",
+          "M3:T30"
+        ],
+        "related_segments": [
+          "M1:T39",
+          "M3:T30"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0111",
+      "text": "The operator shall have the capability to initiate as well as change, to include as a minimum manual override, flight behaviors by sending the proper control commands to the UAV.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.1.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "AV Control And Monitoring Capability",
+          "AV Flight Control Task",
+          "Flight Behavior Characteristics"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "conflict",
+          "kind": "actor",
+          "outcome": "open",
+          "details": {
+            "original_value": "The operator",
+            "proposed_value": "The guest user",
+            "proposed_text": "The guest user shall have the capability to initiate as well as change, to include as a minimum manual override, flight behaviors by sending the proper control commands to the UAV.",
+            "raised_by": "Client",
+            "meeting": "M1",
+            "proposer": "Client"
+          },
+          "segments": [
+            "M1:T41",
+            "M1:T42",
+            "M1:T44",
+            "M1:T45"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T41"
+        ],
+        "related_segments": [
+          "M1:T41",
+          "M1:T42",
+          "M1:T44",
+          "M1:T45"
+        ],
+        "support_score": 0.812,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0114",
+      "text": "The TCS shall provide the functionality to control, monitor, and display the operation of the Air Data Terminal (ADT).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "AV Control And Monitoring Capability",
+          "ADT Control Task"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "The TCS shall not provide the functionality to control, monitor, and display the operation of the Air Data Terminal (ADT).",
+            "restated_in": "M2"
+          },
+          "segments": [
+            "M1:T50",
+            "M1:T52",
+            "M2:T59"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T50",
+          "M1:T52"
+        ],
+        "related_segments": [
+          "M1:T50",
+          "M1:T52",
+          "M2:T59"
+        ],
+        "support_score": 0.909,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0116",
+      "text": "The TCS shall provide the functionality to control the ADT antenna.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.1.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "AV Control And Monitoring Capability",
+          "ADT Control Task",
+          "ADT Antenna control"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T46"
+        ],
+        "related_segments": [
+          "M1:T46"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0117",
+      "text": "This control will including its pointing direction and mode of transmission (e.g. omni and directional).",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.1.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "AV Control And Monitoring Capability",
+          "ADT Control Task",
+          "ADT Antenna control"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P12",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "will",
+            "conflicting_value": "will not",
+            "conflicting_text": "This control will not including its pointing direction and mode of transmission (e.g. omni and directional).",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M1:T47",
+            "M1:T49",
+            "M3:T24"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T47",
+          "M1:T49"
+        ],
+        "related_segments": [
+          "M1:T47",
+          "M1:T49",
+          "M3:T24"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0134",
+      "text": "The TCS shall provide the necessary system capabilities required for payload control beyond line of sight via uplink command of two air vehicles of the same type using sequential communication techniques.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.2",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "payload Control And Monitoring Capability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P13",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "1999-tcs:R0158",
+      "text": "The operator shall be able to manually override the automatic mode selection of the selected data terminal, if desired.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.2.3.1.2",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Mission Control And Monitoring Functions",
+          "Data terminal Control And Monitoring Capability",
+          "Data Terminal Control Task",
+          "Transmitter And Receiver Control"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T53",
+          "M1:T54"
+        ],
+        "related_segments": [
+          "M1:T53",
+          "M1:T54"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0167",
+      "text": "This functionality, as a minimum, shall include: formatting, storing, internally routing, and recording the video [SSS190]; creating and storing a freeze frame of the video [SSS191]; retrieving and displaying the video [SSS192]; printing a hard copy of freeze frame video [SSS193]; and processing digital imagery for export and dissemination [SSS194].",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Payload Product Management Function",
+          "Payload Product Processing Capability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T65",
+          "M1:T67",
+          "M1:T68",
+          "M1:T70"
+        ],
+        "related_segments": [
+          "M1:T65",
+          "M1:T67",
+          "M1:T68",
+          "M1:T70"
+        ],
+        "support_score": 0.963,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0171",
+      "text": "The TCS shall have a built-in text entry capability including the ability to annotate textual information on imagery.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Payload Product Management Function",
+          "Payload Product Processing Capability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T61",
+          "M1:T63"
+        ],
+        "related_segments": [
+          "M1:T61",
+          "M1:T63"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0186",
+      "text": "The TCS shall support a target location function where the operator can request the current ground location of the payload field-of-view center.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.4",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Targeting Function"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T57",
+          "M1:T59"
+        ],
+        "related_segments": [
+          "M1:T57",
+          "M1:T59"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0187",
+      "text": "The TCS shall have the functionality to determine the location of items of interest within the payload field of view, and express these locations in coordinates acceptable for military applications.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.4.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Targeting Function",
+          "Target Coordinate Development Capability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P14",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "and express these locations in coordinates acceptable for military applications.",
+            "stated_text": "The TCS shall have the functionality to determine the location of items of interest within the payload field of view"
+          },
+          "segments": [
+            "M2:T4"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T4"
+        ],
+        "related_segments": [
+          "M2:T4"
+        ],
+        "support_score": 0.429,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0188",
+      "text": "The TCS shall have the functionality to develop an estimate of the error in computed target coordinates, and associate the error estimate with the appropriate target.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.4.2",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Targeting Function",
+          "Target Accuracy Estimation Capability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T74",
+          "M1:T76"
+        ],
+        "related_segments": [
+          "M1:T74",
+          "M1:T76"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0194",
+      "text": "The TCS shall have the ability to interface with Service specific ground and airborne Ultra High Frequency (UHF), Very High Frequency (VHF), UHF/VHF, and High Frequency (HF) radios for digital message transmission while using the same radios for record traffic.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.5",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "C4I System Interface Function"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T8",
+          "M2:T10",
+          "M2:T11",
+          "M2:T12"
+        ],
+        "related_segments": [
+          "M2:T8",
+          "M2:T10",
+          "M2:T11",
+          "M2:T12"
+        ],
+        "support_score": 0.85,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0196",
+      "text": "The TCS shall export and disseminate formatted NITF 2.0 files [SSS558], digital imagery (if applicable) [SSS218], RS-170A video (with as well as without overlay) [SSS219], and tactical communication messages [SSS220].",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.5",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "C4I System Interface Function"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T14",
+          "M2:T16",
+          "M2:T18",
+          "M2:T20"
+        ],
+        "related_segments": [
+          "M2:T14",
+          "M2:T16",
+          "M2:T18",
+          "M2:T20"
+        ],
+        "support_score": 0.952,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0210",
+      "text": "TCS shall be capable of executing payload maintenance software and displaying appropriate status results.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.7",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Payload Maintenance Function"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T25",
+          "M2:T27"
+        ],
+        "related_segments": [
+          "M2:T25",
+          "M2:T27"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0219",
+      "text": "As a minimum, the TCS shall restrict Operator access to this capability via password protection.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.2.11",
+        "section_path": [
+          "Engineering Requirements",
+          "System Capability Requirements",
+          "Software Upgrade Function"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P15",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "As a minimum, the TCS shall restrict Operator access to this capability via password protection."
+          },
+          "segments": [
+            "M2:T29"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T29"
+        ],
+        "related_segments": [
+          "M2:T29"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0229",
+      "text": "The TCS will be interoperable with C4I systems, as listed in Section 3.2.5 of this document.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P16",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "in Section 3.2.5 of this document.",
+            "stated_text": "The TCS will be interoperable with C4I systems, as listed",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M2:T31",
+            "M3:T31"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T31",
+          "M3:T31"
+        ],
+        "related_segments": [
+          "M2:T31",
+          "M3:T31"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0249",
+      "text": "The TCS shall provide the necessary hardware and software functionality to allow the TCS to integrate with AMPS.[SSS563] The interface requirements and specifications will be defined in the TCS to AMPS IDD, TCS 235.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "1.",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I",
+          "TCS to CCTV",
+          "TCS to Army Mission Planning System"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T33",
+          "M2:T36"
+        ],
+        "related_segments": [
+          "M2:T33",
+          "M2:T36"
+        ],
+        "support_score": 0.938,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0250",
+      "text": "The TCS shall provide the necessary hardware and software functionality to allow the TCS to integrate with AFMSS.[SSS564] The interface requirements and specifications will be defined in the TCS to AFMSS IDD, TCS 220.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1.1.9.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I",
+          "TCS to CCTV",
+          "TCS to Army Mission Planning System",
+          "TCS to Air Force Mission Support System"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P17",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "interface requirements and specifications will be defined in the TCS to AFMSS IDD, TCS 220.",
+            "stated_text": "The TCS shall provide the necessary hardware and software functionality to allow the TCS to integrate with AFMSS.[SSS564] The",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M2:T39",
+            "M2:T41",
+            "M3:T3"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T39",
+          "M2:T41",
+          "M3:T3"
+        ],
+        "related_segments": [
+          "M2:T39",
+          "M2:T41",
+          "M3:T3"
+        ],
+        "support_score": 0.938,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0252",
+      "text": "The TCS shall provide the necessary hardware and software functionality to allow the TCS to integrate with GCS/ACS IPF.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "2.",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I",
+          "TCS to CCTV",
+          "TCS to GCS/ACS IPF"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T43",
+          "M2:T45"
+        ],
+        "related_segments": [
+          "M2:T43",
+          "M2:T45"
+        ],
+        "support_score": 0.909,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0263",
+      "text": "The interface requirements and specifications will be defined in TCS ATWCS IDD, TCS203",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1.1.15",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I",
+          "TCS to CCTV",
+          "TCS to JDISS",
+          "TCS to ATWCS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T50",
+          "M2:T52"
+        ],
+        "related_segments": [
+          "M2:T50",
+          "M2:T52"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0268",
+      "text": "The TCS shall provide the necessary hardware and software functionality to allow the TCS to integrate with MIES.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1.1.18",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I",
+          "TCS to CCTV",
+          "TCS to JDISS",
+          "TCS to MIES"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P18",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "to allow the TCS to integrate with MIES.",
+            "stated_text": "The TCS shall provide the necessary hardware and software functionality"
+          },
+          "segments": [
+            "M2:T54"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T54"
+        ],
+        "related_segments": [
+          "M2:T54"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0270",
+      "text": "The TCS shall provide the necessary hardware and software functionality to allow the TCS to integrate with ETRAC.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1.1.19",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to C4I",
+          "TCS to CCTV",
+          "TCS to JDISS",
+          "TCS to ETRAC"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P19",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T60",
+            "M2:T61",
+            "M2:T62",
+            "M2:T63"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T60",
+          "M2:T63"
+        ],
+        "related_segments": [
+          "M2:T60",
+          "M2:T61",
+          "M2:T62",
+          "M2:T63"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0290",
+      "text": "As a minimum this information will include the location of all data terminals, launch and recovery sites, and the controlling TCS.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "3.3.1.6",
+        "section_path": [
+          "Engineering Requirements",
+          "System External Interface Requirements",
+          "Interface Identification",
+          "TCS to Geopositional Data"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P20",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "As a minimum this information will include the location of all data terminals, launch and recovery sites, and the controlling TCS."
+          },
+          "segments": [
+            "M2:T67"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T67"
+        ],
+        "related_segments": [
+          "M2:T67"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0293",
+      "text": "The TCS shall implement an AV Standard Interface that will provide the proper data format to ensure communications with the selected AV.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Internal Interface Requirements",
+          "AV Standard Interface"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T64"
+        ],
+        "related_segments": [
+          "M2:T64"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0301",
+      "text": "The RTP interface requirements and specifications will be defined in the Data Server IDD, TCS 238.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.2",
+        "section_path": [
+          "Engineering Requirements",
+          "System Internal Interface Requirements",
+          "Real Time Processor"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P21",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "The RTP interface requirements and specifications will be defined in the Data Server IDD, TCS 238.",
+            "clarification_attempted": true
+          },
+          "segments": [
+            "M2:T70",
+            "M2:T72",
+            "M2:T73",
+            "M2:T74"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T70",
+          "M2:T72"
+        ],
+        "related_segments": [
+          "M2:T70",
+          "M2:T72",
+          "M2:T73",
+          "M2:T74"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0318",
+      "text": "The TCS shall provide a CD drive for the retrieval of TCS data.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.7.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Internal Interface Requirements",
+          "Data Storage Devices",
+          "CD Drive"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P22",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "the retrieval of TCS data.",
+            "stated_text": "The TCS shall provide a CD drive for"
+          },
+          "segments": [
+            "M2:T82"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T82"
+        ],
+        "related_segments": [
+          "M2:T82"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0329",
+      "text": "During mission execution, the TCS shall provide the operator a cautions and warnings when the UAV system has identified a malfunction.",
+      "class": "NFR",
+      "subtype": "SA",
+      "subtype_name": "Safety",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.7.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Safety Requirements",
+          "Air Vehicle Safety"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P23",
+          "type": "incompleteness",
+          "kind": "missing_condition",
+          "outcome": "open",
+          "details": {
+            "missing": "when the UAV system has identified a malfunction",
+            "stated_text": "During mission execution, the TCS shall provide the operator a cautions and warnings"
+          },
+          "segments": [
+            "M2:T76"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T76"
+        ],
+        "related_segments": [
+          "M2:T76"
+        ],
+        "support_score": 0.417,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0339",
+      "text": "Risk levels and a program to manage the probability and severity of hazards shall also be developed.",
+      "class": "NFR",
+      "subtype": "SA",
+      "subtype_name": "Safety",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "SA",
+      "source": {
+        "section_id": "3.7.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Safety Requirements",
+          "System Safety And Health Hazard Assets"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P24",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T78",
+            "M2:T79",
+            "M2:T80",
+            "M2:T81"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T78",
+          "M2:T81"
+        ],
+        "related_segments": [
+          "M2:T78",
+          "M2:T79",
+          "M2:T80",
+          "M2:T81"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0345",
+      "text": "The TCS shall be designed to protect its communication and data links against enemy Electronic Warfare (EW) threats, physical anti-radiation weaponry and physical destruction.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.8.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Security And Privacy Requirements",
+          "Physical Security"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T83",
+          "M2:T86",
+          "M2:T87",
+          "M2:T88"
+        ],
+        "related_segments": [
+          "M2:T83",
+          "M2:T86",
+          "M2:T87",
+          "M2:T88"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0353",
+      "text": "The TCS hardware will provide the functionality and capability to receive, process, and disseminate video and telemetry data from the AV and payload; perform mission planning; monitor and control the payload; monitor and control the AV; and monitor and control the data links.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.10.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Resource Requirements",
+          "Hardware Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P25",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "will",
+            "conflicting_value": "will not",
+            "conflicting_text": "The TCS hardware will not provide the functionality and capability to receive, process, and disseminate video and telemetry data from the AV and payload; perform mission planning; monitor and control the payload; monitor and control the AV; and monitor and control the data links.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M3:T5",
+            "M3:T7",
+            "M3:T11",
+            "M3:T13",
+            "M3:T25"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T5",
+          "M3:T7",
+          "M3:T11",
+          "M3:T13"
+        ],
+        "related_segments": [
+          "M3:T5",
+          "M3:T7",
+          "M3:T11",
+          "M3:T13",
+          "M3:T25"
+        ],
+        "support_score": 0.947,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0363",
+      "text": "The TCS shall use standard electrical power sources available within the DoD family of ground mobile, airborne, and shipboard electrical power sources.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.10.1.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Resource Requirements",
+          "Hardware Requirements",
+          "Power"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P26",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "1999-tcs:R0369",
+      "text": "The TCS software will provide the functionality and capability to receive, process, and disseminate video and telemetry data from the AV and payload; perform mission planning; monitor and control the payload; monitor and control the AV; and monitor and control the data links.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Resource Requirements",
+          "Computer Software Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T91",
+          "M2:T92",
+          "M2:T94",
+          "M2:T96"
+        ],
+        "related_segments": [
+          "M2:T91",
+          "M2:T92",
+          "M2:T94",
+          "M2:T96"
+        ],
+        "support_score": 0.895,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0378",
+      "text": "The TCS software shall restrict the operator(s) from exercising levels of interaction not achievable by the system.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.10.3",
+        "section_path": [
+          "Engineering Requirements",
+          "Resource Requirements",
+          "Computer Software Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P27",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "of interaction not achievable by the system.",
+            "stated_text": "The TCS software shall restrict the operator(s) from exercising levels",
+            "completed_in": "M3"
+          },
+          "segments": [
+            "M2:T98",
+            "M3:T22"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T98",
+          "M3:T22"
+        ],
+        "related_segments": [
+          "M2:T98",
+          "M3:T22"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0384",
+      "text": "The TCS data latency shall not be greater than that present in the Predator ground control station or Outrider ground control station, whichever is smaller.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "3.11.1",
+        "section_path": [
+          "Engineering Requirements",
+          "System Quality Factors",
+          "Functionality"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T16",
+          "M3:T17"
+        ],
+        "related_segments": [
+          "M3:T16",
+          "M3:T17"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0387",
+      "text": "The Design features shall be included to: [SSS412]",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.11.3",
+        "section_path": [
+          "Engineering Requirements",
+          "System Quality Factors",
+          "Maintainability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T27"
+        ],
+        "related_segments": [
+          "M3:T27"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0397",
+      "text": "Testability shall be considered in the design and development of the TCS.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.11.8",
+        "section_path": [
+          "Engineering Requirements",
+          "System Quality Factors",
+          "Testability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P28",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "1999-tcs:R0399",
+      "text": "Control over internal items and devices shall be provided for detecting and isolating internal faults.",
+      "class": "NFR",
+      "subtype": "MN",
+      "subtype_name": "Maintainability/Supportability",
+      "promise_subtype": "MN",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.11.8",
+        "section_path": [
+          "Engineering Requirements",
+          "System Quality Factors",
+          "Testability"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T32"
+        ],
+        "related_segments": [
+          "M3:T32"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0429",
+      "text": "In addition to displayed alert messages to the TCS operator, auditory alerts to include tones shall also be provided.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T35",
+          "M3:T37"
+        ],
+        "related_segments": [
+          "M3:T35",
+          "M3:T37"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0431",
+      "text": "All TCS warning messages and HCI actions shall be archived for later review.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P29",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "All TCS warning messages and HCI actions shall be archived for later review."
+          },
+          "segments": [
+            "M3:T40"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T40"
+        ],
+        "related_segments": [
+          "M3:T40"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0435",
+      "text": "The operational tasks to be performed concurrently by the operator during normal operation will be determined by appropriate task analysis and function allocation.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T41"
+        ],
+        "related_segments": [
+          "M3:T41"
+        ],
+        "support_score": 0.615,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0436",
+      "text": "The TCS shall facilitate Human-Computer Interfaces (HCIs) that support operation of all system modes, functions, and capabilities.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P30",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "all system modes, functions, and capabilities.",
+            "stated_text": "The TCS shall facilitate Human-Computer Interfaces (HCIs) that support operation of"
+          },
+          "segments": [
+            "M3:T43"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T43"
+        ],
+        "related_segments": [
+          "M3:T43"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0441",
+      "text": "The TCS shall provide access to the DII Style Manager so that pointing device characteristics can be modified.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P31",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "The TCS shall not provide access to the DII Style Manager so that pointing device characteristics can be modified.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M3:T44",
+            "M3:T46",
+            "M3:T70"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T44",
+          "M3:T46"
+        ],
+        "related_segments": [
+          "M3:T44",
+          "M3:T46",
+          "M3:T70"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0444",
+      "text": "The TCS shall provide for multi-level information display tailoring by the operator.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T47",
+          "M3:T48"
+        ],
+        "related_segments": [
+          "M3:T47",
+          "M3:T48"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0445",
+      "text": "The TCS shall provide automated TCS system information, control options, and logical and simple operator guidance and support for immediate and adaptive responding to crisis situations.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P32",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "support for immediate and adaptive responding to crisis situations.",
+            "stated_text": "The TCS shall provide automated TCS system information, control options, and logical and simple operator guidance and"
+          },
+          "segments": [
+            "M3:T50",
+            "M3:T52"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T50",
+          "M3:T52"
+        ],
+        "related_segments": [
+          "M3:T50",
+          "M3:T52"
+        ],
+        "support_score": 0.647,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0456",
+      "text": "The TCS HCI shall provide for a rapid means to cancel aural warnings.",
+      "class": "NFR",
+      "subtype": "US",
+      "subtype_name": "Usability",
+      "promise_subtype": "US",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.13.1",
+        "section_path": [
+          "Engineering Requirements",
+          "Personnel-Related requirements",
+          "Human Factors Engineering (HFE)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T53"
+        ],
+        "related_segments": [
+          "M3:T53"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0475",
+      "text": "TCS system training shall include system architecture, component familiarization, and system startup, initialization, system recovery and shutdown.",
+      "class": "NFR",
+      "subtype": "FT",
+      "subtype_name": "Fault Tolerance",
+      "promise_subtype": "FT",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "FT",
+      "source": {
+        "section_id": "3.14",
+        "section_path": [
+          "Engineering Requirements",
+          "Training Related Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T56",
+          "M3:T58"
+        ],
+        "related_segments": [
+          "M3:T56",
+          "M3:T58"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0477",
+      "text": "The capability for the conduct of actual communications processing concurrently with Training operations shall be provided if and only if messages are identified as training messages.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.14",
+        "section_path": [
+          "Engineering Requirements",
+          "Training Related Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T60"
+        ],
+        "related_segments": [
+          "M3:T60"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0483",
+      "text": "Support for the TCS shall be in accordance with the Integrated Logistical Support Plan (ILSP) and the maintenance concepts and policies of the individual Services.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15",
+        "section_path": [
+          "Engineering Requirements",
+          "Logistics-Related Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P33",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "Plan (ILSP) and the maintenance concepts and policies of the individual Services.",
+            "stated_text": "Support for the TCS shall be in accordance with the Integrated Logistical Support"
+          },
+          "segments": [
+            "M3:T66"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T66"
+        ],
+        "related_segments": [
+          "M3:T66"
+        ],
+        "support_score": 0.333,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0486",
+      "text": "The TCS shall adhere to DoD regulations and policy governing military standards for logistics, Petroleum, Oil and Lubricants (POL), Test, Measurement, and Diagnostic Equipment (TMDE), tools, and other support items.",
+      "class": "NFR",
+      "subtype": "L",
+      "subtype_name": "Legal/Standards",
+      "promise_subtype": "L",
+      "tier": "primary",
+      "label_source": "section+keyword",
+      "confidence": 0.85,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "3.15",
+        "section_path": [
+          "Engineering Requirements",
+          "Logistics-Related Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P34",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M3"
+          },
+          "segments": [
+            "M3:T62",
+            "M3:T63",
+            "M3:T64",
+            "M3:T65"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T62"
+        ],
+        "related_segments": [
+          "M3:T62",
+          "M3:T63",
+          "M3:T64",
+          "M3:T65"
+        ],
+        "support_score": 0.905,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-tcs:R0513",
+      "text": "The system will be tested via an integrated program conducted according to the TCS Master Test Plan, NSWCDD/TR-96/XXX.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "20.",
+        "section_path": [
+          "QUALITY ASSURANCE PROVISIONS",
+          "Integrated Test Program."
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T68"
+        ],
+        "related_segments": [
+          "M3:T68"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": [
+    {
+      "id": "1999-tcs:I001",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1999-tcs:R0015",
+      "pid": "P2",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T7",
+        "M1:T9"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Table 3-2 identifies the payloads with which the TCS shall be interoperable."
+      }
+    },
+    {
+      "id": "1999-tcs:I002",
+      "type": "ambiguity",
+      "kind": "vague_reference",
+      "requirement": "1999-tcs:R0030",
+      "pid": "P3",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T15",
+        "M1:T17"
+      ],
+      "details": {
+        "removed": "The TCS",
+        "replacement": "that thing",
+        "stated_text": "That thing shall be capable of automatically recording system state data, interface communications and other information necessary to support event reconstruction."
+      }
+    },
+    {
+      "id": "1999-tcs:I003",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0037",
+      "pid": "P4",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T29",
+        "M1:T33"
+      ],
+      "details": {
+        "missing": "allowable operations as determined by the appropriate levels of interaction.",
+        "stated_text": "Functions under the Normal Operations Mode shall operate concurrently without precluding or excluding any of the other functions, in accordance with"
+      }
+    },
+    {
+      "id": "1999-tcs:I004",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "1999-tcs:R0042",
+      "pid": "P5",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T21",
+        "M1:T22",
+        "M1:T23",
+        "M1:T24"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M1"
+      }
+    },
+    {
+      "id": "1999-tcs:I005",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0044",
+      "pid": "P6",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T25"
+      ],
+      "details": {
+        "missing": "of operation in the shutdown state.",
+        "stated_text": "There shall be no modes"
+      }
+    },
+    {
+      "id": "1999-tcs:I006",
+      "type": "ambiguity",
+      "kind": "vague_reference",
+      "requirement": "1999-tcs:R0064",
+      "pid": "P7",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M1:T27"
+      ],
+      "details": {
+        "removed": "The TCS",
+        "replacement": "it",
+        "stated_text": "It shall automatically check the validity of the intended mission plan prior to being uploaded including altitude constraints, payload constraints, data link range constraints, airspace restrictions, fuel limitations, threat constraints, data link terrain masking effects, and Loss of Link (LOL) Plan."
+      }
+    },
+    {
+      "id": "1999-tcs:I007",
+      "type": "conflict",
+      "kind": "actor",
+      "requirement": "1999-tcs:R0111",
+      "pid": "P10",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T41",
+        "M1:T42",
+        "M1:T44",
+        "M1:T45"
+      ],
+      "details": {
+        "original_value": "The operator",
+        "proposed_value": "The guest user",
+        "proposed_text": "The guest user shall have the capability to initiate as well as change, to include as a minimum manual override, flight behaviors by sending the proper control commands to the UAV.",
+        "raised_by": "Client",
+        "meeting": "M1",
+        "proposer": "Client"
+      }
+    },
+    {
+      "id": "1999-tcs:I008",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-tcs:R0114",
+      "pid": "P11",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M1:T50",
+        "M1:T52",
+        "M2:T59"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "The TCS shall not provide the functionality to control, monitor, and display the operation of the Air Data Terminal (ADT).",
+        "restated_in": "M2"
+      }
+    },
+    {
+      "id": "1999-tcs:I009",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-tcs:R0117",
+      "pid": "P12",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M1:T47",
+        "M1:T49",
+        "M3:T24"
+      ],
+      "details": {
+        "original_value": "will",
+        "conflicting_value": "will not",
+        "conflicting_text": "This control will not including its pointing direction and mode of transmission (e.g. omni and directional).",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "1999-tcs:I010",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0187",
+      "pid": "P14",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T4"
+      ],
+      "details": {
+        "missing": "and express these locations in coordinates acceptable for military applications.",
+        "stated_text": "The TCS shall have the functionality to determine the location of items of interest within the payload field of view"
+      }
+    },
+    {
+      "id": "1999-tcs:I011",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1999-tcs:R0219",
+      "pid": "P15",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T29"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "As a minimum, the TCS shall restrict Operator access to this capability via password protection."
+      }
+    },
+    {
+      "id": "1999-tcs:I012",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0268",
+      "pid": "P18",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T54"
+      ],
+      "details": {
+        "missing": "to allow the TCS to integrate with MIES.",
+        "stated_text": "The TCS shall provide the necessary hardware and software functionality"
+      }
+    },
+    {
+      "id": "1999-tcs:I013",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1999-tcs:R0290",
+      "pid": "P20",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T67"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "As a minimum this information will include the location of all data terminals, launch and recovery sites, and the controlling TCS."
+      }
+    },
+    {
+      "id": "1999-tcs:I014",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1999-tcs:R0301",
+      "pid": "P21",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T70",
+        "M2:T72",
+        "M2:T73",
+        "M2:T74"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "The RTP interface requirements and specifications will be defined in the Data Server IDD, TCS 238.",
+        "clarification_attempted": true
+      }
+    },
+    {
+      "id": "1999-tcs:I015",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0318",
+      "pid": "P22",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T82"
+      ],
+      "details": {
+        "missing": "the retrieval of TCS data.",
+        "stated_text": "The TCS shall provide a CD drive for"
+      }
+    },
+    {
+      "id": "1999-tcs:I016",
+      "type": "incompleteness",
+      "kind": "missing_condition",
+      "requirement": "1999-tcs:R0329",
+      "pid": "P23",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T76"
+      ],
+      "details": {
+        "missing": "when the UAV system has identified a malfunction",
+        "stated_text": "During mission execution, the TCS shall provide the operator a cautions and warnings"
+      }
+    },
+    {
+      "id": "1999-tcs:I017",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-tcs:R0353",
+      "pid": "P25",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M3:T5",
+        "M3:T7",
+        "M3:T11",
+        "M3:T13",
+        "M3:T25"
+      ],
+      "details": {
+        "original_value": "will",
+        "conflicting_value": "will not",
+        "conflicting_text": "The TCS hardware will not provide the functionality and capability to receive, process, and disseminate video and telemetry data from the AV and payload; perform mission planning; monitor and control the payload; monitor and control the AV; and monitor and control the data links.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "1999-tcs:I018",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "1999-tcs:R0431",
+      "pid": "P29",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T40"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "All TCS warning messages and HCI actions shall be archived for later review."
+      }
+    },
+    {
+      "id": "1999-tcs:I019",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0436",
+      "pid": "P30",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T43"
+      ],
+      "details": {
+        "missing": "all system modes, functions, and capabilities.",
+        "stated_text": "The TCS shall facilitate Human-Computer Interfaces (HCIs) that support operation of"
+      }
+    },
+    {
+      "id": "1999-tcs:I020",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-tcs:R0441",
+      "pid": "P31",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M3:T44",
+        "M3:T46",
+        "M3:T70"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "The TCS shall not provide access to the DII Style Manager so that pointing device characteristics can be modified.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "1999-tcs:I021",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0445",
+      "pid": "P32",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T50",
+        "M3:T52"
+      ],
+      "details": {
+        "missing": "support for immediate and adaptive responding to crisis situations.",
+        "stated_text": "The TCS shall provide automated TCS system information, control options, and logical and simple operator guidance and"
+      }
+    },
+    {
+      "id": "1999-tcs:I022",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-tcs:R0483",
+      "pid": "P33",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M3:T66"
+      ],
+      "details": {
+        "missing": "Plan (ILSP) and the maintenance concepts and policies of the individual Services.",
+        "stated_text": "Support for the TCS shall be in accordance with the Integrated Logistical Support"
+      }
+    },
+    {
+      "id": "1999-tcs:I023",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "1999-tcs:R0486",
+      "pid": "P34",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T62",
+        "M3:T63",
+        "M3:T64",
+        "M3:T65"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M3"
+      }
+    }
+  ]
+}

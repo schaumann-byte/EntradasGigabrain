@@ -1,0 +1,2204 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "1999-dii",
+  "doc_title": "DRAFT SOFTWARE REQUIREMENTS SPECIFICATION (SRS) FOR THE DEFENSE INFORMATION INFRASTRUCTURE (DII) COMMON OPERATING ENVIRONMENT (COE) XML SERVICES (XS)",
+  "source_file": "PURE/requirements-xml/1999 - dii.xml",
+  "mode": "meetings",
+  "variant": "llm-hard",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "hard",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        3,
+        4
+      ],
+      "mess": 0.75,
+      "p_omit": 0.05,
+      "p_conflict": 0.12,
+      "p_ambiguity": 0.14,
+      "p_inconsistency": 0.08,
+      "p_incomplete": 0.12,
+      "p_conflict_open": 0.55,
+      "p_resolve_later": 0.35,
+      "p_complete_later": 0.35,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.075,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "llm_accepted": 86,
+      "llm_accepted_content": 34,
+      "turns": 86,
+      "windows": 6
+    }
+  },
+  "input": {
+    "n_meetings": 3,
+    "n_chars": 16265,
+    "n_words": 2686,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "required states and modes",
+          "register terms and structures (e.g., tags, dtds, dcds)"
+        ],
+        "n_chars": 9434,
+        "n_words": 1544,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 220,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 230,
+            "end": 282,
+            "speaker": "EndUser",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M1:T3",
+            "start": 291,
+            "end": 737,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T4",
+            "start": 747,
+            "end": 846,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T5",
+            "start": 855,
+            "end": 950,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0002"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0002",
+                "role": "part1",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 960,
+            "end": 966,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T7",
+            "start": 975,
+            "end": 1026,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0002"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0002",
+                "role": "part2",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T8",
+            "start": 1036,
+            "end": 1106,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0005",
+                "role": "part1",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1116,
+            "end": 1121,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T10",
+            "start": 1131,
+            "end": 1159,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0005",
+                "role": "part2",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T11",
+            "start": 1169,
+            "end": 1296,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0005",
+                "role": "part2",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 1306,
+            "end": 1671,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0003",
+                "role": "statement",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1682,
+            "end": 1791,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-dii:R0003",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 1801,
+            "end": 1881,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-dii:R0003",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T15",
+            "start": 1891,
+            "end": 1914,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "1999-dii:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0003",
+                "role": "resolution",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 1923,
+            "end": 2079,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0006",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T17",
+            "start": 2089,
+            "end": 2133,
+            "speaker": "Analyst",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T18",
+            "start": 2142,
+            "end": 2370,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "1999-dii:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0006",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T19",
+            "start": 2380,
+            "end": 2622,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0007",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 2633,
+            "end": 2661,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T21",
+            "start": 2671,
+            "end": 2978,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "1999-dii:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0007",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T22",
+            "start": 2988,
+            "end": 3111,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T23",
+            "start": 3120,
+            "end": 5338,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0010",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 5348,
+            "end": 5355,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T25",
+            "start": 5364,
+            "end": 7382,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0011",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 7392,
+            "end": 8770,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1999-dii:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0011",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T27",
+            "start": 8779,
+            "end": 8792,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T28",
+            "start": 8803,
+            "end": 8839,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T29",
+            "start": 8849,
+            "end": 8954,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0012",
+                "role": "part1",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 8965,
+            "end": 8971,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T31",
+            "start": 8981,
+            "end": 9317,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0012",
+                "role": "part2",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T32",
+            "start": 9327,
+            "end": 9433,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser"
+        ],
+        "topics": [
+          "xml services capability requirements",
+          "required states and modes",
+          "registry services"
+        ],
+        "n_chars": 3405,
+        "n_words": 557,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 76,
+            "end": 210,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 220,
+            "end": 276,
+            "speaker": "Analyst",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 286,
+            "end": 526,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 535,
+            "end": 737,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0009",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T5",
+            "start": 747,
+            "end": 754,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T6",
+            "start": 764,
+            "end": 917,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T7",
+            "start": 927,
+            "end": 1136,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0001"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0001",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T8",
+            "start": 1145,
+            "end": 1175,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T9",
+            "start": 1185,
+            "end": 1373,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "1999-dii:R0001"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0001",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 1383,
+            "end": 1487,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0008",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T11",
+            "start": 1497,
+            "end": 1774,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0008",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1784,
+            "end": 1831,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0004",
+                "role": "part1",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M2:T13",
+            "start": 1841,
+            "end": 1846,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T14",
+            "start": 1856,
+            "end": 1904,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0004",
+                "role": "part2",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M2:T15",
+            "start": 1913,
+            "end": 1919,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T16",
+            "start": 1928,
+            "end": 1994,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T17",
+            "start": 2004,
+            "end": 2099,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0004",
+                "role": "part2",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M2:T18",
+            "start": 2109,
+            "end": 2121,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T19",
+            "start": 2131,
+            "end": 2487,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0004",
+                "role": "part2",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M2:T20",
+            "start": 2497,
+            "end": 2565,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T21",
+            "start": 2574,
+            "end": 2596,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T22",
+            "start": 2605,
+            "end": 3056,
+            "speaker": "Client",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-dii:R0012",
+                "role": "restatement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M2:T23",
+            "start": 3066,
+            "end": 3195,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0013",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T24",
+            "start": 3205,
+            "end": 3300,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "1999-dii:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0013",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T25",
+            "start": 3310,
+            "end": 3323,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T26",
+            "start": 3333,
+            "end": 3404,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M3",
+        "file": "reuniao_03.txt",
+        "kind": "review",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "data access services internal interface requirements",
+          "general needs",
+          "registry services environment requirements",
+          "personnel-related requirements",
+          "training-related requirements",
+          "packaging requirements"
+        ],
+        "n_chars": 3426,
+        "n_words": 585,
+        "segments": [
+          {
+            "id": "M3:T1",
+            "start": 83,
+            "end": 216,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M3:T2",
+            "start": 226,
+            "end": 441,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M3:T3",
+            "start": 451,
+            "end": 562,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T4",
+            "start": 573,
+            "end": 655,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0014",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M3:T5",
+            "start": 664,
+            "end": 771,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-dii:R0014",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M3:T6",
+            "start": 782,
+            "end": 858,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-dii:R0014",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M3:T7",
+            "start": 867,
+            "end": 940,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1999-dii:R0014",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 949,
+            "end": 1456,
+            "speaker": "Client",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-dii:R0004",
+                "role": "restatement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M3:T9",
+            "start": 1466,
+            "end": 1516,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T10",
+            "start": 1525,
+            "end": 1661,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0015",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1671,
+            "end": 1695,
+            "speaker": "Analyst",
+            "act": "interrupt"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1704,
+            "end": 1755,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "1999-dii:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0015",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T13",
+            "start": 1765,
+            "end": 1857,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T14",
+            "start": 1866,
+            "end": 1908,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0016",
+                "role": "part1",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1918,
+            "end": 1924,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T16",
+            "start": 1933,
+            "end": 1978,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "1999-dii:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0016",
+                "role": "part2",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M3:T17",
+            "start": 1989,
+            "end": 2151,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0017",
+                "role": "statement",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T18",
+            "start": 2160,
+            "end": 2244,
+            "speaker": "Client",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "1999-dii:R0017",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T19",
+            "start": 2255,
+            "end": 2313,
+            "speaker": "TechLead",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T20",
+            "start": 2324,
+            "end": 2381,
+            "speaker": "TechLead",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "1999-dii:R0017",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T21",
+            "start": 2391,
+            "end": 2505,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "1999-dii:R0017",
+                "role": "conflict",
+                "pid": "P8"
+              }
+            ]
+          },
+          {
+            "id": "M3:T22",
+            "start": 2515,
+            "end": 2600,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T23",
+            "start": 2611,
+            "end": 2788,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0018",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T24",
+            "start": 2797,
+            "end": 2854,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T25",
+            "start": 2865,
+            "end": 2987,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "1999-dii:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "1999-dii:R0019",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T26",
+            "start": 2997,
+            "end": 3124,
+            "speaker": "EndUser",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-dii:R0016",
+                "role": "restatement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M3:T27",
+            "start": 3133,
+            "end": 3237,
+            "speaker": "Client",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "1999-dii:R0019",
+                "role": "restatement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T28",
+            "start": 3247,
+            "end": 3425,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 19,
+    "n_primary_fr": 14,
+    "n_primary_nfr": 5,
+    "n_expected_in_output": 19,
+    "n_reachable": 19,
+    "by_status": {
+      "clear": 10,
+      "conflict_resolved": 1,
+      "conflict_open": 2,
+      "inconsistent": 4,
+      "incomplete": 2
+    },
+    "phenomena": {
+      "conflict:open": 2,
+      "conflict:resolved": 1,
+      "incompleteness:open": 2,
+      "inconsistency:unnoticed": 4
+    },
+    "n_distractors": 0,
+    "n_issues": 8,
+    "messiness": {
+      "topic_revisits": 1,
+      "topics_out_of_document_order": 2,
+      "smalltalk": 2,
+      "chunked_statements": 6,
+      "interruptions": 4,
+      "reactions": 1,
+      "self_introduced_topics": 4,
+      "offtopic": 3,
+      "meetings": 3
+    },
+    "mean_support_clear": 0.901
+  },
+  "requirements": [
+    {
+      "id": "1999-dii:R0001",
+      "text": "Environmental Mode: This is the real-time operations that must react to varying degrees of readiness to full scale wartime operations such as crisis planning with the use of heterogeneous data types and sources, transfer capabilities, data management services.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T7",
+          "M2:T9"
+        ],
+        "related_segments": [
+          "M2:T7",
+          "M2:T9"
+        ],
+        "support_score": 0.957,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0002",
+      "text": "COE Compliance. XML Services shall be segmented. COE sponsors shall adhere to compliance level requirements described in the I&RTS.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "L",
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "compliance level requirements described in the I&RTS.",
+            "stated_text": "COE Compliance. XML Services shall be segmented. COE sponsors shall adhere to"
+          },
+          "segments": [
+            "M1:T5",
+            "M1:T7"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T5",
+          "M1:T7"
+        ],
+        "related_segments": [
+          "M1:T5",
+          "M1:T7"
+        ],
+        "support_score": 0.636,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0003",
+      "text": "In the fixed (static) mode of operation (base or data processing megacenter), the data management services shall have the capability of being tuned by on-site personnel to adjust for varying workloads and sizes of associated databases. These workloads and databases are expected to change more frequently and to a greater extent than for processing associated with deployed units",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T12",
+            "M1:T13",
+            "M1:T14",
+            "M1:T15"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T12",
+          "M1:T15"
+        ],
+        "related_segments": [
+          "M1:T12",
+          "M1:T13",
+          "M1:T14",
+          "M1:T15"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0004",
+      "text": "In a changing (dynamic) environment, such as with deployed units, the workload and database sizes may be more predetermined (given a more precise mission) and require access to fewer data management administrative capabilities than needed in a fixed environment. The XS shall have the ability to redefine or reset names of connect descriptors to database server instances. Connect descriptors are fully qualified object names and include address (protocol/host/port) and instance name.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "In a changing (dynamic) environment, such as with deployed units, the workload and database sizes may be more predetermined (given a more precise mission) and require access to fewer data management administrative capabilities than needed in a fixed environment. The XS shall not have the ability to redefine or reset names of connect descriptors to database server instances. Connect descriptors are fully qualified object names and include address (protocol/host/port) and instance name.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M2:T12",
+            "M2:T14",
+            "M2:T17",
+            "M2:T19",
+            "M3:T8"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T12",
+          "M2:T14",
+          "M2:T17",
+          "M2:T19"
+        ],
+        "related_segments": [
+          "M2:T12",
+          "M2:T14",
+          "M2:T17",
+          "M2:T19",
+          "M3:T8"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0005",
+      "text": "In a degraded communications environment, there is a need, for example, to be able to reset session time-out values if the data management services are being accessed by users affected by the communications degradation. At a minimum, the session time-out values shall be user definable and be able to be reset prior to initialization of a user session. The goal is to provide the option of dynamically changing session time values based on current communications performance identified by capabilities of the network management or DBMS.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "incompleteness",
+          "kind": "missing_condition",
+          "outcome": "open",
+          "details": {
+            "missing": "if the data management services are being accessed by users affected by the communications degradation. At a minimum, the session time-out values shall be user definable and be able to be reset prior to initialization of a user session. The goal is to provide the option of dynamically changing session time values based on current communications performance identified by capabilities of the network management or DBMS",
+            "stated_text": "In a degraded communications environment, there is a need, for example, to be able to reset session time-out values"
+          },
+          "segments": [
+            "M1:T8",
+            "M1:T10",
+            "M1:T11"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T8",
+          "M1:T10",
+          "M1:T11"
+        ],
+        "related_segments": [
+          "M1:T8",
+          "M1:T10",
+          "M1:T11"
+        ],
+        "support_score": 0.312,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0006",
+      "text": "End User Mode: Portion of XS services shall be used by various classes of users: data consumers, data and database managers, network information infrastructure resource managers. Some of these uses of the data management services will entail unique requirements that shall be fulfilled within the capability of XS services.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T16",
+          "M1:T18"
+        ],
+        "related_segments": [
+          "M1:T16",
+          "M1:T18"
+        ],
+        "support_score": 0.792,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0007",
+      "text": "Maintenance Mode: This mode includes modification and/or addition of application data segments, user permission, privileges, and restructuring storage and memory areas. In addition, maintenance also shall pertain to shutdown, open not-mounted and online/off-line implementations, modifications, upgrade, or other related actions. The data management services shall support managing various types of data, database architectures and platforms that includes hardware and software at the specified sites.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T19",
+          "M1:T21"
+        ],
+        "related_segments": [
+          "M1:T19",
+          "M1:T21"
+        ],
+        "support_score": 0.923,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0008",
+      "text": "Training Mode. In support of training activities, the data management services shall provide for the same processing as would be encountered in a production environment. However, access to the database may be via a training application access to the DBMS rather than from the production mission application.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REQUIRED STATES AND MODES"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T10",
+          "M2:T11"
+        ],
+        "related_segments": [
+          "M2:T10",
+          "M2:T11"
+        ],
+        "support_score": 0.789,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0009",
+      "text": "The XS shall deliver inter-related components as shown in figure 3.2-1",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.2",
+        "section_path": [
+          "REQUIREMENTS",
+          "XML SERVICES CAPABILITY REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T4"
+        ],
+        "related_segments": [
+          "M2:T4"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0010",
+      "text": "Producer services A producer is an agent that contributes metadata for inclusion into an XML Registry for the purposes of ensuring maximum semantic understanding of a term as it appears in an XML document. To contribute metadata to a registry, the producer must be able to receive XML registry forms, submit metadata and the related information resource artifacts, and notify. Produce and display submittal forms as part of the Information Resource Submittal Package from the web containing the following Information Resource artifacts: XML Tag Specification, XML Spec (i.e. DTD, DCD etc.), Sample of XML document of the tag to be submitted. The Package is to be compressed and emailed or sent ftp to an addressee. Download Information Resource Submittal Package from the web containing forms, instructions, and tools for submission to XML Registry. Submit prescribed metadata related to information resource type, information resource association, status code, data types specified and other related information specified in Appendix A within a combination of forms. These forms are part of the Information Resource Submittal Package containing the following Information Resource artifacts: XML Tag Specification, XML Spec (i.e. DTD, DCD etc.), Sample of XML document of the tag to be submitted. The Package is to be compressed and emailed or sent ftp to an addressee. Submit metadata by an on-line interactive process Submit metadata by a off-line and interactive batch process Parse submitted XML Registry specification forms Populate XML Registry database Modify of specified terms & definitions of metadata and status of Information Resources. Associate Information Resources specified in Appendix A. Annotate rejected? Assemble registered information resources to form new components. Assemble new DTDs from current Produce DTD as an instantiation (others are database schema, message definition) for modeling environment. Notify change in Information Resources or authorized producer of tag. Provide a capability to post planned changes to a registry Approve and reject submissions Forward request to different registry",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "1",
+        "section_path": [
+          "REQUIREMENTS",
+          "XML SERVICES CAPABILITY REQUIREMENTS",
+          "Register Terms and Structures (e.g., tags, DTDs, DCDs)"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T23"
+        ],
+        "related_segments": [
+          "M1:T23"
+        ],
+        "support_score": 0.905,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0011",
+      "text": "Consumer services. A consumer examines a registry to select a tag structure for reuse in one or more applications that will exchange data according to a pre-defined agreement. Discovery View the XML Tags with the following relationships: Ancestor/ Descendant relationship: Provide the capability to view a Tag's origin Uses/Used by relationship: Provide the capability to view a complex Container Tag's parent/child relationship Data type information: Provide the capability to view a tag's data type and related information. Versioning relationship: Provide the capability to view an Information resource's versions Reference Sets: Provide the capability to view text related to the domai values or the related reference set Amplifying information: Provide the capability to view other information resources such as ERwin models, DTDs, documents, etc., which describe or otherwise provide amplifying information. View the XML Tags via a tree/hierarchy structure or tabular format. View the XML Tags by giving the user multiple search options to find a specific Tag. View the XML tags by giving the user the search option to find all tags of a given subscriber/author. Each Information Resource will have its own web page to allow the user to view all pertinent information, according to its information resource type. View the Information Resource Submittal Package containing the following Information Resource artifacts: XML Tag Specification, XML Spec (i.e. DTD, DCD etc.), Sample of XML document of the tag to be submitted. Display an XML Tag Specification form to the author of a given information resource. This XML Tag Spec will be used for inputting the requesting information for a specific Information Resource. Provide capabilities to download the XML Tags or other selected Information Resources. Catalog entities and attributes within servers to enable browsing, searching, retrieving of data related to XML sources. Process ANSI standard SQL as specified in FIPS PUB 127-2 Establish rules to ensure maximum semantic understanding of a term as it appears in an XML document Links to DTDs, DCDs, Namespace Provide a capability to subscribe for notification of changes to Communities of Interest (COE) or Information Resources.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "1",
+        "section_path": [
+          "REQUIREMENTS",
+          "XML SERVICES CAPABILITY REQUIREMENTS",
+          "Register Terms and Structures (e.g., tags, DTDs, DCDs)"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T25",
+          "M1:T26"
+        ],
+        "related_segments": [
+          "M1:T25",
+          "M1:T26"
+        ],
+        "support_score": 0.892,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0012",
+      "text": "Consume xml & schema documents Parsers (dom, sax) Check conformance Well-formed Validate Create validation constraints shall enable a meaningful sharing of XML-based schemas and related information. Extract semantically-valid views from an XML document (e.g., XSL) Disassemble hierarchical view to relational representation Render",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "1",
+        "section_path": [
+          "REQUIREMENTS",
+          "XML SERVICES CAPABILITY REQUIREMENTS",
+          "Register Terms and Structures (e.g., tags, DTDs, DCDs)"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "Consume xml & schema documents Parsers (dom, sax) Check conformance Well-formed Validate Create validation constraints shall not enable a meaningful sharing of XML-based schemas and related information. Extract semantically-valid views from an XML document (e.g., XSL) Disassemble hierarchical view to relational representation Render",
+            "restated_in": "M2"
+          },
+          "segments": [
+            "M1:T29",
+            "M1:T31",
+            "M2:T22"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T29",
+          "M1:T31"
+        ],
+        "related_segments": [
+          "M1:T29",
+          "M1:T31",
+          "M2:T22"
+        ],
+        "support_score": 0.967,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0013",
+      "text": "The Registry shall provide standard APIs as specified in Appendix B.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.4",
+        "section_path": [
+          "REQUIREMENTS",
+          "REGISTRY SERVICES"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T23",
+          "M2:T24"
+        ],
+        "related_segments": [
+          "M2:T23",
+          "M2:T24"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0014",
+      "text": "The XS function shall provide standard APIs as specified in Appendix C.",
+      "class": "NFR",
+      "subtype": "IF",
+      "subtype_name": "External Interface",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.5",
+        "section_path": [
+          "REQUIREMENTS",
+          "DATA ACCESS SERVICES INTERNAL INTERFACE REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M3"
+          },
+          "segments": [
+            "M3:T4",
+            "M3:T5",
+            "M3:T6",
+            "M3:T7"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T4"
+        ],
+        "related_segments": [
+          "M3:T4",
+          "M3:T5",
+          "M3:T6",
+          "M3:T7"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0015",
+      "text": "The XS shall internally interface (transparent to the operator) with the existing data elements of the DBIF, DAC, and COTS RDBMS products.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.6.1",
+        "section_path": [
+          "REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T10",
+          "M3:T12"
+        ],
+        "related_segments": [
+          "M3:T10",
+          "M3:T12"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0016",
+      "text": "The Registry software shall be portable and required to execute on COE-compliant platforms.",
+      "class": "NFR",
+      "subtype": "EN",
+      "subtype_name": "Environmental/Physical",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "4.7.1",
+        "section_path": [
+          "REQUIREMENTS",
+          "REGISTRY SERVICES ENVIRONMENT REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "The Registry software shall not be portable and required to execute on COE-compliant platforms.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M3:T14",
+            "M3:T16",
+            "M3:T26"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T14",
+          "M3:T16"
+        ],
+        "related_segments": [
+          "M3:T14",
+          "M3:T16",
+          "M3:T26"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0017",
+      "text": "Personnel requirements shall be determined by the developers of the system in which the XS module is embedded",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.8",
+        "section_path": [
+          "REQUIREMENTS",
+          "PERSONNEL-RELATED REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "Client",
+            "meeting": "M3"
+          },
+          "segments": [
+            "M3:T17",
+            "M3:T18",
+            "M3:T20",
+            "M3:T21"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T17"
+        ],
+        "related_segments": [
+          "M3:T17",
+          "M3:T18",
+          "M3:T20",
+          "M3:T21"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0018",
+      "text": "Training requirements shall be determined by the developers of the system in which the XS module is embedded.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.9",
+        "section_path": [
+          "REQUIREMENTS",
+          "TRAINING-RELATED REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M3:T23"
+        ],
+        "related_segments": [
+          "M3:T23"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "1999-dii:R0019",
+      "text": "The XS software shall be delivered in accordance with DII COE guidelines.",
+      "class": "NFR",
+      "subtype": "DC",
+      "subtype_name": "Design/Implementation Constraint",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.12",
+        "section_path": [
+          "REQUIREMENTS",
+          "PACKAGING REQUIREMENTS"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "inconsistent",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "inconsistency",
+          "kind": "polarity",
+          "outcome": "unnoticed",
+          "details": {
+            "original_value": "shall",
+            "conflicting_value": "shall not",
+            "conflicting_text": "The XS software shall not be delivered in accordance with DII COE guidelines.",
+            "restated_in": "M3"
+          },
+          "segments": [
+            "M3:T25",
+            "M3:T27"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M3:T25"
+        ],
+        "related_segments": [
+          "M3:T25",
+          "M3:T27"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": [
+    {
+      "id": "1999-dii:I001",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "1999-dii:R0002",
+      "pid": "P1",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T5",
+        "M1:T7"
+      ],
+      "details": {
+        "missing": "compliance level requirements described in the I&RTS.",
+        "stated_text": "COE Compliance. XML Services shall be segmented. COE sponsors shall adhere to"
+      }
+    },
+    {
+      "id": "1999-dii:I002",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-dii:R0004",
+      "pid": "P3",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M2:T12",
+        "M2:T14",
+        "M2:T17",
+        "M2:T19",
+        "M3:T8"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "In a changing (dynamic) environment, such as with deployed units, the workload and database sizes may be more predetermined (given a more precise mission) and require access to fewer data management administrative capabilities than needed in a fixed environment. The XS shall not have the ability to redefine or reset names of connect descriptors to database server instances. Connect descriptors are fully qualified object names and include address (protocol/host/port) and instance name.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "1999-dii:I003",
+      "type": "incompleteness",
+      "kind": "missing_condition",
+      "requirement": "1999-dii:R0005",
+      "pid": "P4",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T8",
+        "M1:T10",
+        "M1:T11"
+      ],
+      "details": {
+        "missing": "if the data management services are being accessed by users affected by the communications degradation. At a minimum, the session time-out values shall be user definable and be able to be reset prior to initialization of a user session. The goal is to provide the option of dynamically changing session time values based on current communications performance identified by capabilities of the network management or DBMS",
+        "stated_text": "In a degraded communications environment, there is a need, for example, to be able to reset session time-out values"
+      }
+    },
+    {
+      "id": "1999-dii:I004",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-dii:R0012",
+      "pid": "P5",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M1:T29",
+        "M1:T31",
+        "M2:T22"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "Consume xml & schema documents Parsers (dom, sax) Check conformance Well-formed Validate Create validation constraints shall not enable a meaningful sharing of XML-based schemas and related information. Extract semantically-valid views from an XML document (e.g., XSL) Disassemble hierarchical view to relational representation Render",
+        "restated_in": "M2"
+      }
+    },
+    {
+      "id": "1999-dii:I005",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "1999-dii:R0014",
+      "pid": "P6",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T4",
+        "M3:T5",
+        "M3:T6",
+        "M3:T7"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M3"
+      }
+    },
+    {
+      "id": "1999-dii:I006",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-dii:R0016",
+      "pid": "P7",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M3:T14",
+        "M3:T16",
+        "M3:T26"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "The Registry software shall not be portable and required to execute on COE-compliant platforms.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "1999-dii:I007",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "1999-dii:R0017",
+      "pid": "P8",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T17",
+        "M3:T18",
+        "M3:T20",
+        "M3:T21"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M3"
+      }
+    },
+    {
+      "id": "1999-dii:I008",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "1999-dii:R0019",
+      "pid": "P9",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M3:T25",
+        "M3:T27"
+      ],
+      "details": {
+        "original_value": "shall",
+        "conflicting_value": "shall not",
+        "conflicting_text": "The XS software shall not be delivered in accordance with DII COE guidelines.",
+        "restated_in": "M3"
+      }
+    }
+  ]
+}

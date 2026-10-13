@@ -1,0 +1,56 @@
+Meeting 3 of 4 (follow-up)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, hi everyone, erm thanks for joining. This is our third session on EIRENE, the follow-up, so let's get going.
+Analyst: Quick recap: last time we went through the MMI functions, how calls are handled, and the environmental and physical side. A uh few points were left open there.
+Analyst: Let's move on to the public address interface. What do we need there?
+TechLead: So if we do implement the Public Address interface, it should comply with the...
+Analyst: Alright. What about other interfaces?
+Client: Uh, They should all be... sorry, let me er put it properly. Wherever uhm other uh data um interfaces are implemented, they should follow the RS422 standard.
+Analyst: So any other data interfaces that get implemented should be RS422, right?
+Client: Yes, exactly.
+TechLead: Makes sense to me.
+Analyst: Anything else on other interfaces?
+EndUser: No, that's it.
+Client: Something on environmental and i mean physical: it'd be nice if general purpose radios could be equipped with rechargeable batteries capable of providing at least eight hours operation over the temperature range +18°C to +25°C from a single charge, based on the following cycle:, that's pretty important for us.
+Analyst: Okay, noted.
+Analyst: Now, the use of national EIRENE numbers. How should that work?
+EndUser: Erm, Each railway network should uh treat actually a number as a National EIRENE Number, an NEN, unless there's an International Code in front of it that identifies another GSM-R network.
+TechLead: Do actually we really need that actually spelled out? It i mean feels like extra effort for something that's not a priority right now.
+EndUser: I'd say we do. It's really important for i mean us day to day.
+Analyst: Let's leave that one open for now you know and decide later.
+Client: I mean, also, well 2) uh User Identifier Number...
+Analyst: Go on.
+Client: So the UIN UIN shall be one of these numbers, and which one is is identified by the CT. First, the Train Number, TN: that's given to a train by operational staff for a erm particular journey, and it shall be unique uh for the duration of that journey. One note there: with certain Train Numbers, say 1234 and 123, there's a you know risk when someone like like the dispatcher actually dials by keying well in individual digits. uh If there's a delay between the keyed-in digits, you could connect i mean to an unintended train. With block dialling there's well no risk of ambiguity. Second, the Engine Number, EN: a unique number given to a a tractive unit um to erm identify it permanently. The um UIC has a uniform identification marking system for tractive stock crossing frontiers, that's UIC 438-3. To call a i mean particular well locomotive it shall be possible to to call a number associated with the tractive unit's stock number, and the actual number of the like unit, used um as the EN, is based kind of on the complete identification number. Third, the Coach Number, CN: a unique number uhm given to a coach that's not a tractive unit, again to identify it permanently. um There's a uniform identification marking for passenger rolling stock too, uh UIC 438-1. To call a particular coach it it shall be actually possible to call a number associated with the vehicle marking. The full marking has several digits, but the actual coach number is 7 digits, positions 5 to 11 of the complete marking, and that's used as the CN7. And then the rest of the list: basically Shunting Team Location Number, STLN, Maintenance Team i mean Location Number, MTLN, Train Controller Location Number, TCLN, Group Location Number, GLN, and the Mobile Subscriber Number, MSN.
+EndUser: And just to go back to the first part, the Call Type, CT. That's the the prefix that tells you like how to interpret the User Number after it. er It shall be one or two digits, as defined in table 9-1.
+EndUser: Sorry, my screen just froze for a second. Okay, it's back.
+Analyst: Got it.
+Analyst: Okay, let's move on to the numbering plan requirements more broadly. What else [crosstalk] do we we need to capture like there?
+EndUser: Well, the Coach Function Number, or numbers,
+Analyst: Mm-hm.
+EndUser: Er, together with the associated MSISDN number um or i mean numbers, those shall be stored at any time as an entry in the routing database of the coach's home GSM-R network.
+EndUser: Er, Then all the Train Function you know Numbers
+Analyst: Okay.
+EndUser: Um, and their associated MSISDN numbers shall be stored in the same routing database, meaning the actually database of the GSM-R network the train is currently operating in.
+Analyst: Right.
+TechLead: Uh, Quick one, I might have to drop at the top of like the hour.
+TechLead: And as we said, incoming calls to the Cab radio shall not be routed to the correct on-train user or device um using information in the sub-addressing field.
+Client: On the uh numbering plan requirements, one thing I want in there: implementing the EIRENE numbering plan shall not stop any authorised caller from using the MSISDN number sort of where it's known. That way mobiles um can be assigned to particular personnel um where that's appropriate.
+Analyst: Okay.
+EndUser: Can I just add—
+Client: Go ahead.
+EndUser: No, that covers it, agreed.
+Analyst: Good. Let's turn to the uhm use of international EIRENE numbers. How should those work?
+EndUser: So for uhm the International Functional Number, the fields uh need to be defined, and they'd be laid out as follows.
+TechLead: Do we really need to spell that er out right now? It feels like a lot of effort for something that's maybe not a priority.
+EndUser: Uhm, I'd say we do. For For us um it's really important to have that pinned down.
+Client: Okay, let's leave actually that one open for now and come back to it later.
+Analyst: Anything uh else on the use of international EIRENE numbers?
+EndUser: No, that's it.
+Analyst: Uh, Alright, then let's move on to short dialling um codes. How should those be used?
+EndUser: Well, for certain functions there'd be standardised short codes, so that...
+Client: And on function codes, actually, uh the ones for the main... sorry, the Maintenance Services Team Numbers, so CT=6, the Function Codes used with those have to conform to table 9A-2.
+EndUser: Yeah, that makes sense.
+Analyst: Uhm, Okay, next topic: access to external uhm networks. What do we need there?
+Client: So access to private networks would be done by using...
+Analyst: Let's stop there basically for today. We'll pick this up and continue next time. er Thanks, everyone.

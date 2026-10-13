@@ -1,0 +1,5215 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "2008-keepass",
+  "doc_title": "Software Requirements Specification for KeePass Password Safe",
+  "source_file": "PURE/requirements-xml/2008 - keepass.xml",
+  "mode": "meetings",
+  "variant": "llm-realistic",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_content": 3,
+      "llm_accepted": 231,
+      "llm_accepted_content": 93,
+      "turns": 234,
+      "windows": 13
+    }
+  },
+  "input": {
+    "n_meetings": 2,
+    "n_chars": 15914,
+    "n_words": 2817,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "general needs",
+          "new database",
+          "open database",
+          "print database",
+          "save database",
+          "search database",
+          "add group/subgroup",
+          "modify group/subgroup",
+          "delete group/subgroup",
+          "find group/subgroup",
+          "add entry",
+          "view/edit entry",
+          "duplicate entry",
+          "change language"
+        ],
+        "n_chars": 8164,
+        "n_words": 1443,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 214,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 223,
+            "end": 648,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T3",
+            "start": 658,
+            "end": 744,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T4",
+            "start": 754,
+            "end": 817,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0005",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 827,
+            "end": 922,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0005",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T6",
+            "start": 932,
+            "end": 939,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T7",
+            "start": 949,
+            "end": 1012,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T8",
+            "start": 1022,
+            "end": 1115,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0006",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1125,
+            "end": 1232,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0007",
+                "role": "statement",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T10",
+            "start": 1243,
+            "end": 1375,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0007",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T11",
+            "start": 1385,
+            "end": 1472,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0007",
+                "role": "conflict",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 1482,
+            "end": 1505,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "2008-keepass:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0007",
+                "role": "resolution",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1515,
+            "end": 1637,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0008",
+                "role": "statement",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 1647,
+            "end": 1704,
+            "speaker": "EndUser",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T15",
+            "start": 1715,
+            "end": 1807,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0008",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 1817,
+            "end": 1888,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0008",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T17",
+            "start": 1897,
+            "end": 1948,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0008",
+                "role": "conflict",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 1958,
+            "end": 2030,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T19",
+            "start": 2040,
+            "end": 2135,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0009",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 2145,
+            "end": 2253,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0009",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 2263,
+            "end": 2276,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T22",
+            "start": 2285,
+            "end": 2304,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T23",
+            "start": 2313,
+            "end": 2410,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0010",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 2420,
+            "end": 2425,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T25",
+            "start": 2434,
+            "end": 2472,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T26",
+            "start": 2482,
+            "end": 2489,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T27",
+            "start": 2499,
+            "end": 2558,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T28",
+            "start": 2568,
+            "end": 2651,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0012",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 2661,
+            "end": 2732,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0012",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 2743,
+            "end": 2763,
+            "speaker": "TechLead",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M1:T31",
+            "start": 2772,
+            "end": 2788,
+            "speaker": "Client",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2798,
+            "end": 2816,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T33",
+            "start": 2826,
+            "end": 2865,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T34",
+            "start": 2874,
+            "end": 2888,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T35",
+            "start": 2898,
+            "end": 2950,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T36",
+            "start": 2959,
+            "end": 3005,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0011",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T37",
+            "start": 3015,
+            "end": 3021,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T38",
+            "start": 3030,
+            "end": 3119,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0011",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T39",
+            "start": 3129,
+            "end": 3152,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T40",
+            "start": 3162,
+            "end": 3225,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T41",
+            "start": 3235,
+            "end": 3279,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0013",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T42",
+            "start": 3288,
+            "end": 3294,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T43",
+            "start": 3304,
+            "end": 3354,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0013",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T44",
+            "start": 3363,
+            "end": 3369,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T45",
+            "start": 3379,
+            "end": 3433,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0013",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T46",
+            "start": 3442,
+            "end": 3447,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T47",
+            "start": 3457,
+            "end": 3512,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0013"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0013",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T48",
+            "start": 3522,
+            "end": 3529,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T49",
+            "start": 3538,
+            "end": 3613,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0014",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T50",
+            "start": 3623,
+            "end": 3628,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T51",
+            "start": 3637,
+            "end": 3674,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0014",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T52",
+            "start": 3684,
+            "end": 3696,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T53",
+            "start": 3706,
+            "end": 3737,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T54",
+            "start": 3746,
+            "end": 3792,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0015",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 3802,
+            "end": 3808,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T56",
+            "start": 3817,
+            "end": 3844,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0015",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T57",
+            "start": 3855,
+            "end": 3860,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T58",
+            "start": 3869,
+            "end": 3901,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0015",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T59",
+            "start": 3911,
+            "end": 3917,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T60",
+            "start": 3926,
+            "end": 4002,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0015",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T61",
+            "start": 4012,
+            "end": 4025,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T62",
+            "start": 4035,
+            "end": 4123,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T63",
+            "start": 4133,
+            "end": 4234,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0016",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 4244,
+            "end": 4250,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T65",
+            "start": 4260,
+            "end": 4311,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0016"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0016",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T66",
+            "start": 4321,
+            "end": 4326,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T67",
+            "start": 4336,
+            "end": 4429,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0017"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0017",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T68",
+            "start": 4439,
+            "end": 4446,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T69",
+            "start": 4456,
+            "end": 4521,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0018",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T70",
+            "start": 4530,
+            "end": 4685,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0019",
+                "role": "statement",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T71",
+            "start": 4696,
+            "end": 4781,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0019",
+                "role": "conflict",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T72",
+            "start": 4790,
+            "end": 4848,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0019",
+                "role": "conflict",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T73",
+            "start": 4858,
+            "end": 4918,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0019",
+                "role": "conflict",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M1:T74",
+            "start": 4928,
+            "end": 4987,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T75",
+            "start": 4997,
+            "end": 5028,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0020",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T76",
+            "start": 5038,
+            "end": 5044,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T77",
+            "start": 5054,
+            "end": 5109,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0020",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T78",
+            "start": 5118,
+            "end": 5135,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T79",
+            "start": 5145,
+            "end": 5199,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T80",
+            "start": 5209,
+            "end": 5293,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0021",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T81",
+            "start": 5303,
+            "end": 5325,
+            "speaker": "EndUser",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M1:T82",
+            "start": 5334,
+            "end": 5350,
+            "speaker": "Client",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M1:T83",
+            "start": 5360,
+            "end": 5472,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0021"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0021",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T84",
+            "start": 5482,
+            "end": 5495,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T85",
+            "start": 5505,
+            "end": 5580,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T86",
+            "start": 5590,
+            "end": 5662,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T87",
+            "start": 5671,
+            "end": 5785,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0022",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T88",
+            "start": 5795,
+            "end": 5828,
+            "speaker": "Analyst",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T89",
+            "start": 5837,
+            "end": 5978,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2008-keepass:R0022"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0022",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T90",
+            "start": 5988,
+            "end": 6020,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0024",
+                "role": "statement",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M1:T91",
+            "start": 6030,
+            "end": 6123,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0025"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0025",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T92",
+            "start": 6133,
+            "end": 6138,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T93",
+            "start": 6148,
+            "end": 6215,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0026"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0026",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T94",
+            "start": 6225,
+            "end": 6232,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T95",
+            "start": 6242,
+            "end": 6280,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T96",
+            "start": 6290,
+            "end": 6309,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T97",
+            "start": 6319,
+            "end": 6377,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T98",
+            "start": 6386,
+            "end": 6420,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0027",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T99",
+            "start": 6430,
+            "end": 6436,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T100",
+            "start": 6445,
+            "end": 6483,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0027",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T101",
+            "start": 6493,
+            "end": 6612,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0028"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0028",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T102",
+            "start": 6622,
+            "end": 6627,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T103",
+            "start": 6636,
+            "end": 6765,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0030",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T104",
+            "start": 6775,
+            "end": 6782,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T105",
+            "start": 6792,
+            "end": 6903,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0029",
+                "role": "statement",
+                "pid": "P5"
+              }
+            ]
+          },
+          {
+            "id": "M1:T106",
+            "start": 6913,
+            "end": 6986,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T107",
+            "start": 6995,
+            "end": 7076,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0032",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T108",
+            "start": 7086,
+            "end": 7092,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T109",
+            "start": 7103,
+            "end": 7124,
+            "speaker": "TechLead",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M1:T110",
+            "start": 7134,
+            "end": 7150,
+            "speaker": "Analyst",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M1:T111",
+            "start": 7159,
+            "end": 7215,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0032",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T112",
+            "start": 7225,
+            "end": 7326,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0032",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T113",
+            "start": 7335,
+            "end": 7348,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T114",
+            "start": 7358,
+            "end": 7509,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0034",
+                "role": "statement",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T115",
+            "start": 7520,
+            "end": 7630,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0034",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T116",
+            "start": 7640,
+            "end": 7714,
+            "speaker": "EndUser",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0034",
+                "role": "conflict",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T117",
+            "start": 7724,
+            "end": 7783,
+            "speaker": "Analyst",
+            "act": "drop",
+            "gt_ids": [
+              "2008-keepass:R0034"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0034",
+                "role": "resolution",
+                "pid": "P6"
+              }
+            ]
+          },
+          {
+            "id": "M1:T118",
+            "start": 7792,
+            "end": 7939,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0031"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0031",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T119",
+            "start": 7949,
+            "end": 7954,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T120",
+            "start": 7964,
+            "end": 7989,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T121",
+            "start": 7999,
+            "end": 8163,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "auto-type",
+          "command line options",
+          "composite master key",
+          "import/export",
+          "tan support",
+          "integration",
+          "user interfaces",
+          "performance requirements",
+          "software quality attributes",
+          "safety requirements"
+        ],
+        "n_chars": 7750,
+        "n_words": 1374,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 86,
+            "end": 219,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 228,
+            "end": 306,
+            "speaker": "Client",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 316,
+            "end": 494,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 504,
+            "end": 586,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 595,
+            "end": 744,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0035",
+                "role": "statement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T6",
+            "start": 753,
+            "end": 806,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0036"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0036",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T7",
+            "start": 815,
+            "end": 877,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T8",
+            "start": 887,
+            "end": 903,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T9",
+            "start": 912,
+            "end": 981,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0036"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0036",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T10",
+            "start": 991,
+            "end": 998,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T11",
+            "start": 1009,
+            "end": 1032,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T12",
+            "start": 1042,
+            "end": 1117,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0037",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T13",
+            "start": 1127,
+            "end": 1133,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T14",
+            "start": 1143,
+            "end": 1244,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0037"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0037",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T15",
+            "start": 1254,
+            "end": 1259,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T16",
+            "start": 1269,
+            "end": 1344,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0038"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0038",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T17",
+            "start": 1354,
+            "end": 1360,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T18",
+            "start": 1369,
+            "end": 1443,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0039"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0039",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1453,
+            "end": 1458,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T20",
+            "start": 1467,
+            "end": 1524,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0040"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0040",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T21",
+            "start": 1534,
+            "end": 1539,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T22",
+            "start": 1548,
+            "end": 1582,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0040"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0040",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T23",
+            "start": 1592,
+            "end": 1599,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T24",
+            "start": 1609,
+            "end": 1632,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M2:T25",
+            "start": 1641,
+            "end": 1785,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0042"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0042",
+                "role": "statement",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M2:T26",
+            "start": 1794,
+            "end": 1844,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0043",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T27",
+            "start": 1854,
+            "end": 1860,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T28",
+            "start": 1869,
+            "end": 1905,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0043"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0043",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T29",
+            "start": 1915,
+            "end": 1920,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T30",
+            "start": 1931,
+            "end": 1952,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T31",
+            "start": 1962,
+            "end": 2026,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T32",
+            "start": 2035,
+            "end": 2109,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0044",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T33",
+            "start": 2119,
+            "end": 2125,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T34",
+            "start": 2134,
+            "end": 2184,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0044"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0044",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T35",
+            "start": 2194,
+            "end": 2199,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T36",
+            "start": 2208,
+            "end": 2273,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0045",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T37",
+            "start": 2283,
+            "end": 2288,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T38",
+            "start": 2297,
+            "end": 2349,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0045",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T39",
+            "start": 2359,
+            "end": 2392,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0046",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T40",
+            "start": 2403,
+            "end": 2409,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T41",
+            "start": 2419,
+            "end": 2478,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0046"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0046",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T42",
+            "start": 2488,
+            "end": 2495,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T43",
+            "start": 2505,
+            "end": 2576,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0047",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T44",
+            "start": 2585,
+            "end": 2591,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T45",
+            "start": 2601,
+            "end": 2663,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0047",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T46",
+            "start": 2673,
+            "end": 2678,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T47",
+            "start": 2688,
+            "end": 2713,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0047"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0047",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T48",
+            "start": 2722,
+            "end": 2752,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T49",
+            "start": 2762,
+            "end": 2840,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0048"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0048",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T50",
+            "start": 2850,
+            "end": 2917,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T51",
+            "start": 2927,
+            "end": 2996,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T52",
+            "start": 3006,
+            "end": 3094,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0049",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T53",
+            "start": 3104,
+            "end": 3110,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T54",
+            "start": 3121,
+            "end": 3141,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T55",
+            "start": 3151,
+            "end": 3190,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0050",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T56",
+            "start": 3199,
+            "end": 3255,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T57",
+            "start": 3265,
+            "end": 3348,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "2008-keepass:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0050",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T58",
+            "start": 3357,
+            "end": 3491,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0052",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T59",
+            "start": 3502,
+            "end": 3507,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T60",
+            "start": 3516,
+            "end": 3555,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0052",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T61",
+            "start": 3565,
+            "end": 3570,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T62",
+            "start": 3579,
+            "end": 3620,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0052",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T63",
+            "start": 3630,
+            "end": 3771,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0052",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T64",
+            "start": 3780,
+            "end": 3793,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T65",
+            "start": 3803,
+            "end": 3864,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0053"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0053",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T66",
+            "start": 3874,
+            "end": 3880,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T67",
+            "start": 3890,
+            "end": 3967,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0053"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0053",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T68",
+            "start": 3977,
+            "end": 3984,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T69",
+            "start": 3994,
+            "end": 4091,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0054"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0054",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T70",
+            "start": 4101,
+            "end": 4187,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0054"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0054",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T71",
+            "start": 4197,
+            "end": 4205,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T72",
+            "start": 4215,
+            "end": 4297,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0055",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T73",
+            "start": 4307,
+            "end": 4312,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T74",
+            "start": 4323,
+            "end": 4346,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T75",
+            "start": 4356,
+            "end": 4456,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T76",
+            "start": 4465,
+            "end": 4528,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0051"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0051",
+                "role": "statement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M2:T77",
+            "start": 4539,
+            "end": 4645,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0051",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M2:T78",
+            "start": 4654,
+            "end": 4722,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0051",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M2:T79",
+            "start": 4732,
+            "end": 4793,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0051",
+                "role": "conflict",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M2:T80",
+            "start": 4803,
+            "end": 4924,
+            "speaker": "Analyst",
+            "act": "drop_later",
+            "gt_ids": [
+              "2008-keepass:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0008",
+                "role": "resolution",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T81",
+            "start": 4934,
+            "end": 5011,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T82",
+            "start": 5022,
+            "end": 5104,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0056",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T83",
+            "start": 5114,
+            "end": 5125,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T84",
+            "start": 5136,
+            "end": 5201,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0056",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T85",
+            "start": 5211,
+            "end": 5349,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0056",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T86",
+            "start": 5360,
+            "end": 5373,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T87",
+            "start": 5383,
+            "end": 5447,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T88",
+            "start": 5456,
+            "end": 5511,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0057",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T89",
+            "start": 5521,
+            "end": 5527,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T90",
+            "start": 5536,
+            "end": 5567,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0057",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T91",
+            "start": 5577,
+            "end": 5584,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T92",
+            "start": 5593,
+            "end": 5721,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0058"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0058",
+                "role": "statement",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T93",
+            "start": 5731,
+            "end": 5837,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0058",
+                "role": "conflict",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T94",
+            "start": 5846,
+            "end": 5930,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0058",
+                "role": "conflict",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T95",
+            "start": 5940,
+            "end": 6015,
+            "speaker": "Analyst",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0058",
+                "role": "conflict",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T96",
+            "start": 6025,
+            "end": 6161,
+            "speaker": "EndUser",
+            "act": "followup",
+            "gt_ids": [
+              "2008-keepass:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0024",
+                "role": "followup",
+                "pid": "P4"
+              }
+            ]
+          },
+          {
+            "id": "M2:T97",
+            "start": 6171,
+            "end": 6304,
+            "speaker": "Analyst",
+            "act": "resolve_later",
+            "gt_ids": [
+              "2008-keepass:R0019"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0019",
+                "role": "resolution",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M2:T98",
+            "start": 6314,
+            "end": 6397,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T99",
+            "start": 6408,
+            "end": 6438,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0060",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T100",
+            "start": 6447,
+            "end": 6453,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T101",
+            "start": 6464,
+            "end": 6529,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T102",
+            "start": 6539,
+            "end": 6544,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T103",
+            "start": 6555,
+            "end": 6613,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T104",
+            "start": 6622,
+            "end": 6628,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T105",
+            "start": 6639,
+            "end": 6750,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2008-keepass:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T106",
+            "start": 6760,
+            "end": 6941,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2008-keepass:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0060",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T107",
+            "start": 6952,
+            "end": 6965,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T108",
+            "start": 6975,
+            "end": 7054,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T109",
+            "start": 7063,
+            "end": 7261,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2008-keepass:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0059",
+                "role": "statement",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T110",
+            "start": 7271,
+            "end": 7431,
+            "speaker": "EndUser",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0059",
+                "role": "conflict",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T111",
+            "start": 7440,
+            "end": 7522,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "2008-keepass:R0059",
+                "role": "conflict",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T112",
+            "start": 7532,
+            "end": 7564,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "2008-keepass:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "2008-keepass:R0059",
+                "role": "resolution",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T113",
+            "start": 7574,
+            "end": 7749,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 54,
+    "n_primary_fr": 49,
+    "n_primary_nfr": 5,
+    "n_expected_in_output": 51,
+    "n_reachable": 53,
+    "by_status": {
+      "clear": 43,
+      "conflict_resolved": 3,
+      "conflict_open": 2,
+      "rejected": 2,
+      "ambiguous": 2,
+      "incomplete": 1,
+      "omitted": 1
+    },
+    "phenomena": {
+      "ambiguity:unresolved": 2,
+      "conflict:dropped": 1,
+      "conflict:dropped_later": 1,
+      "conflict:open": 2,
+      "conflict:resolved": 2,
+      "conflict:resolved_later": 1,
+      "incompleteness:completed_later": 1,
+      "incompleteness:open": 1,
+      "omission:not_discussed": 1
+    },
+    "n_distractors": 0,
+    "n_issues": 5,
+    "messiness": {
+      "topic_revisits": 1,
+      "topics_out_of_document_order": 8,
+      "chunked_statements": 23,
+      "offtopic": 4,
+      "reactions": 11,
+      "crosstalk": 3,
+      "false_starts": 2,
+      "self_introduced_topics": 5,
+      "interruptions": 2,
+      "smalltalk": 1,
+      "meetings": 2
+    },
+    "mean_support_clear": 0.796
+  },
+  "requirements": [
+    {
+      "id": "2008-keepass:R0005",
+      "text": "System features are organized by use cases and functional hierarchy so that the main functions of the system will be understandable.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3",
+        "section_path": [
+          "System Features"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T4",
+          "M1:T5"
+        ],
+        "related_segments": [
+          "M1:T4",
+          "M1:T5"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0006",
+      "text": "It is the first thing a user must do to begin using KeePass.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1.1",
+        "section_path": [
+          "System Features",
+          "New Database",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T8"
+        ],
+        "related_segments": [
+          "M1:T8"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0007",
+      "text": "Its main function is the determination of the master password that will unlock the database from now on",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.1.1",
+        "section_path": [
+          "System Features",
+          "New Database",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P1",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T9",
+            "M1:T10",
+            "M1:T11",
+            "M1:T12"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T9",
+          "M1:T12"
+        ],
+        "related_segments": [
+          "M1:T9",
+          "M1:T10",
+          "M1:T11",
+          "M1:T12"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0008",
+      "text": "Master Password has no limits in length. A whole sentence can be used with more than 100 characters.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.1.3",
+        "section_path": [
+          "System Features",
+          "New Database",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "2",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P2",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped_later",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1",
+            "resolved_in": "M2"
+          },
+          "segments": [
+            "M1:T13",
+            "M1:T15",
+            "M1:T16",
+            "M1:T17",
+            "M2:T80"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T13",
+          "M2:T80"
+        ],
+        "related_segments": [
+          "M1:T13",
+          "M1:T15",
+          "M1:T16",
+          "M1:T17",
+          "M2:T80"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0009",
+      "text": "When the database is found, the master password is wanted so that the database will be unlocked.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.2.1",
+        "section_path": [
+          "System Features",
+          "Open Database",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T19",
+          "M1:T20"
+        ],
+        "related_segments": [
+          "M1:T19",
+          "M1:T20"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0010",
+      "text": "Folder selected must be of type the database can read and that is \"name\".kdb",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.2.3",
+        "section_path": [
+          "System Features",
+          "Open Database",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "3",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T23",
+          "M1:T25"
+        ],
+        "related_segments": [
+          "M1:T23",
+          "M1:T25"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0011",
+      "text": "Databases must have different names or else the previews one will be replace if selected",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.3",
+        "section_path": [
+          "System Features",
+          "Save Database",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "4",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T36",
+          "M1:T38"
+        ],
+        "related_segments": [
+          "M1:T36",
+          "M1:T38"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0012",
+      "text": "There must be entries in the database in order for them to be printed",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.4.3",
+        "section_path": [
+          "System Features",
+          "Print Database",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "5",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T28",
+          "M1:T29"
+        ],
+        "related_segments": [
+          "M1:T28",
+          "M1:T29"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0013",
+      "text": "This is very useful when the user needs to find out very quickly which password is required in one account or what username he has put on another account.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.5.1",
+        "section_path": [
+          "System Features",
+          "Search Database",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T41",
+          "M1:T43",
+          "M1:T45",
+          "M1:T47"
+        ],
+        "related_segments": [
+          "M1:T41",
+          "M1:T43",
+          "M1:T45",
+          "M1:T47"
+        ],
+        "support_score": 0.692,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0014",
+      "text": "By writing just one character the database will present all data which contains it or are related with it.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.5.1",
+        "section_path": [
+          "System Features",
+          "Search Database",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T49",
+          "M1:T51"
+        ],
+        "related_segments": [
+          "M1:T49",
+          "M1:T51"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0015",
+      "text": "All data related to the word must be shown. For example if user types \"abc\" and abc is part of a password and of a username, both entries must be shown",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.5.3",
+        "section_path": [
+          "System Features",
+          "Search Database",
+          "Stimulus/Response Sequences",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "6",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T54",
+          "M1:T56",
+          "M1:T58",
+          "M1:T60"
+        ],
+        "related_segments": [
+          "M1:T54",
+          "M1:T56",
+          "M1:T58",
+          "M1:T60"
+        ],
+        "support_score": 0.846,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0016",
+      "text": "When creating a group/subgroup the user must select a name and then he can add entries into it.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.1",
+        "section_path": [
+          "System Features",
+          "Add Group/Subgroup",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T63",
+          "M1:T65"
+        ],
+        "related_segments": [
+          "M1:T63",
+          "M1:T65"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0017",
+      "text": "A name is required in order for the new group/subgroup to be created",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.3",
+        "section_path": [
+          "System Features",
+          "Add Group/Subgroup",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "7",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T67"
+        ],
+        "related_segments": [
+          "M1:T67"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0018",
+      "text": "A subgroup cannot be created when no group is selected",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.6.3",
+        "section_path": [
+          "System Features",
+          "Add Group/Subgroup",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "8",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T69"
+        ],
+        "related_segments": [
+          "M1:T69"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0019",
+      "text": "A name is required in order for the group/subgroup to be renamed",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.7.3",
+        "section_path": [
+          "System Features",
+          "Modify group/subgroup",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "9",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P3",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved_later",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1",
+            "resolved_in": "M2"
+          },
+          "segments": [
+            "M1:T70",
+            "M1:T71",
+            "M1:T72",
+            "M1:T73",
+            "M2:T97"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T70",
+          "M2:T97"
+        ],
+        "related_segments": [
+          "M1:T70",
+          "M1:T71",
+          "M1:T72",
+          "M1:T73",
+          "M2:T97"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0020",
+      "text": "In order for that to happen, he must have chosen first a group/subgroup.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.8.1",
+        "section_path": [
+          "System Features",
+          "Delete Group/Subgroup",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T75",
+          "M1:T77"
+        ],
+        "related_segments": [
+          "M1:T75",
+          "M1:T77"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0021",
+      "text": "In order to find something in a group a word must be placed in the find field",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.9.3",
+        "section_path": [
+          "System Features",
+          "Find Group/Subgroup",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "10",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T80",
+          "M1:T83"
+        ],
+        "related_segments": [
+          "M1:T80",
+          "M1:T83"
+        ],
+        "support_score": 0.714,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0022",
+      "text": "He can fill in fields like: group where the entry will be added, title, user name, password, repeat password, URL, notes, expiration date and attachment file.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.10.1",
+        "section_path": [
+          "System Features",
+          "Add Entry",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T87",
+          "M1:T89"
+        ],
+        "related_segments": [
+          "M1:T87",
+          "M1:T89"
+        ],
+        "support_score": 0.941,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0024",
+      "text": "An entry must belong to a group to be created",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.10.3",
+        "section_path": [
+          "System Features",
+          "Add Entry",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "11",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P4",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "completed_later",
+          "details": {
+            "missing": "a group to be created",
+            "stated_text": "An entry must belong to",
+            "completed_in": "M2"
+          },
+          "segments": [
+            "M1:T90",
+            "M2:T96"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T90",
+          "M2:T96"
+        ],
+        "related_segments": [
+          "M1:T90",
+          "M2:T96"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0025",
+      "text": "When the password field is completed the repeat password field must be completed",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.10.3",
+        "section_path": [
+          "System Features",
+          "Add Entry",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "12",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T91"
+        ],
+        "related_segments": [
+          "M1:T91"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0026",
+      "text": "Password field and repeat password field must be identical",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.10.3",
+        "section_path": [
+          "System Features",
+          "Add Entry",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "13",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T93"
+        ],
+        "related_segments": [
+          "M1:T93"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0027",
+      "text": "In order for that to happen, the user must select an entry first.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.11.1",
+        "section_path": [
+          "System Features",
+          "View/Edit Entry",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T98",
+          "M1:T100"
+        ],
+        "related_segments": [
+          "M1:T98",
+          "M1:T100"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0028",
+      "text": "ìAn entry must be selected to be viewed or modified",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.11.3",
+        "section_path": [
+          "System Features",
+          "View/Edit Entry",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "14",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T101"
+        ],
+        "related_segments": [
+          "M1:T101"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0029",
+      "text": "ìWhen the password field is changed the repeat password field must be Changed and be identical with password field",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.11.3",
+        "section_path": [
+          "System Features",
+          "View/Edit Entry",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "15",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "incomplete",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P5",
+          "type": "incompleteness",
+          "kind": "truncated",
+          "outcome": "open",
+          "details": {
+            "missing": "field must be Changed and be identical with password field",
+            "stated_text": "ìWhen the password field is changed the repeat password"
+          },
+          "segments": [
+            "M1:T105"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T105"
+        ],
+        "related_segments": [
+          "M1:T105"
+        ],
+        "support_score": 0.6,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0030",
+      "text": "An entry must be selected before it is duplicated",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.12.3",
+        "section_path": [
+          "System Features",
+          "Duplicate Entry",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "16",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T103"
+        ],
+        "related_segments": [
+          "M1:T103"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0031",
+      "text": "All the user has to do is to select change language from the view menu and then the language he wants.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.14.1",
+        "section_path": [
+          "System Features",
+          "Change Language",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T118"
+        ],
+        "related_segments": [
+          "M1:T118"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0032",
+      "text": "Doing this he will be transferred at KeePass website and choose the language he wants for downloading.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.14.1",
+        "section_path": [
+          "System Features",
+          "Change Language",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T107",
+          "M1:T111",
+          "M1:T112"
+        ],
+        "related_segments": [
+          "M1:T107",
+          "M1:T111",
+          "M1:T112"
+        ],
+        "support_score": 0.625,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0034",
+      "text": "An internet connection and a browser are required in order to download new language translations For the following features, use cases are not included",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "PO",
+      "source": {
+        "section_id": "3.14.3",
+        "section_path": [
+          "System Features",
+          "Change Language",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "18",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "rejected",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P6",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "dropped",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M1"
+          },
+          "segments": [
+            "M1:T114",
+            "M1:T115",
+            "M1:T116",
+            "M1:T117"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M1:T114",
+          "M1:T117"
+        ],
+        "related_segments": [
+          "M1:T114",
+          "M1:T115",
+          "M1:T116",
+          "M1:T117"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0035",
+      "text": "This feature allows user to define a sequence of keypresses which KeePass will automatically perform.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15",
+        "section_path": [
+          "System Features",
+          "Auto-type"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P7",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "This feature allows user to define a sequence of keypresses which KeePass will automatically perform."
+          },
+          "segments": [
+            "M2:T5"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T5"
+        ],
+        "related_segments": [
+          "M2:T5"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0036",
+      "text": "The sequence must be prefixed with \"Auto-Type\" and length of one line.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15.1",
+        "section_path": [
+          "System Features",
+          "Auto-type",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T6",
+          "M2:T9"
+        ],
+        "related_segments": [
+          "M2:T6",
+          "M2:T9"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0037",
+      "text": "If a sequence is more than a line it cannot be used and in case of two sequences in one note's field only the first one is used.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15.1",
+        "section_path": [
+          "System Features",
+          "Auto-type",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T12",
+          "M2:T14"
+        ],
+        "related_segments": [
+          "M2:T12",
+          "M2:T14"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0038",
+      "text": "The prefix \"Auto-Type:\" is required in front of each sequence",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15.2",
+        "section_path": [
+          "System Features",
+          "Auto-type",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "19",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T16"
+        ],
+        "related_segments": [
+          "M2:T16"
+        ],
+        "support_score": 0.833,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0039",
+      "text": "Sequence's length must not be more than a line (59 characters)",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15.2",
+        "section_path": [
+          "System Features",
+          "Auto-type",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "20",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T18"
+        ],
+        "related_segments": [
+          "M2:T18"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0040",
+      "text": "If two auto-types are referred in one note field, only the first is used",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.15.2",
+        "section_path": [
+          "System Features",
+          "Auto-type",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "21",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T20",
+          "M2:T22"
+        ],
+        "related_segments": [
+          "M2:T20",
+          "M2:T22"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0041",
+      "text": "This feature allows user to pass a file patch in the command line so that KeePass will open it immediately after start up.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.16",
+        "section_path": [
+          "System Features",
+          "Command Line Options"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "omitted",
+      "expected_in_output": false,
+      "phenomena": [
+        {
+          "pid": "P8",
+          "type": "omission",
+          "kind": "not_discussed",
+          "outcome": "not_discussed",
+          "details": {},
+          "segments": []
+        }
+      ],
+      "trace": {
+        "input_segments": [],
+        "related_segments": [],
+        "support_score": 0.0,
+        "reachable": false
+      }
+    },
+    {
+      "id": "2008-keepass:R0042",
+      "text": "Only one database file is allowed in command line options",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.16.2",
+        "section_path": [
+          "System Features",
+          "Command Line Options",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "22",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "ambiguous",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P9",
+          "type": "ambiguity",
+          "kind": "optionality",
+          "outcome": "unresolved",
+          "details": {
+            "removed": null,
+            "replacement": null,
+            "stated_text": "Only one database file is allowed in command line options"
+          },
+          "segments": [
+            "M2:T25"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T25"
+        ],
+        "related_segments": [
+          "M2:T25"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0043",
+      "text": "In case a space is found in the path, it must be enclosed into quotes",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.16.2",
+        "section_path": [
+          "System Features",
+          "Command Line Options",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "23",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T26",
+          "M2:T28"
+        ],
+        "related_segments": [
+          "M2:T26",
+          "M2:T28"
+        ],
+        "support_score": 0.5,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0044",
+      "text": "If a master password is required to unlock the database, the database doesn't open unless the password is entered",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.17.2",
+        "section_path": [
+          "System Features",
+          "Composite Master Key",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "24",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T32",
+          "M2:T34"
+        ],
+        "related_segments": [
+          "M2:T32",
+          "M2:T34"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0045",
+      "text": "If a key file is required to unlock the database, the database doesn't open unless the key file is present",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.17.2",
+        "section_path": [
+          "System Features",
+          "Composite Master Key",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "25",
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T36",
+          "M2:T38"
+        ],
+        "related_segments": [
+          "M2:T36",
+          "M2:T38"
+        ],
+        "support_score": 0.667,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0046",
+      "text": "If there is a composite key, both master password and key file are required",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.17.2",
+        "section_path": [
+          "System Features",
+          "Composite Master Key",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "26",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T39",
+          "M2:T41"
+        ],
+        "related_segments": [
+          "M2:T39",
+          "M2:T41"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0047",
+      "text": "In case of lost master password or key file, the database never unlocks again. There is no recovery",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.17.2",
+        "section_path": [
+          "System Features",
+          "Composite Master Key",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "27",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T43",
+          "M2:T45",
+          "M2:T47"
+        ],
+        "related_segments": [
+          "M2:T43",
+          "M2:T45",
+          "M2:T47"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0048",
+      "text": "There is no backdoor or key that unlocks all databases",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.17.2",
+        "section_path": [
+          "System Features",
+          "Composite Master Key",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "28",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T49"
+        ],
+        "related_segments": [
+          "M2:T49"
+        ],
+        "support_score": 0.75,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0049",
+      "text": "File formats are not specialized password database formats",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "3.18.2",
+        "section_path": [
+          "System Features",
+          "Import/Export",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "29",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T52"
+        ],
+        "related_segments": [
+          "M2:T52"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0050",
+      "text": "File formats only specify a low-level layout of stored data",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.18.2",
+        "section_path": [
+          "System Features",
+          "Import/Export",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "30",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T55",
+          "M2:T57"
+        ],
+        "related_segments": [
+          "M2:T55",
+          "M2:T57"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0051",
+      "text": "Global hot key cannot be changed",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.19.2",
+        "section_path": [
+          "System Features",
+          "Integration",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "31",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P10",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "TechLead",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T76",
+            "M2:T77",
+            "M2:T78",
+            "M2:T79"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T76"
+        ],
+        "related_segments": [
+          "M2:T76",
+          "M2:T77",
+          "M2:T78",
+          "M2:T79"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0052",
+      "text": "When TAN are created, they appear as typical entries which in the field title contain \"TAN\" so that KeePass will know it's a TAN.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.21.1",
+        "section_path": [
+          "System Features",
+          "TAN Support",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T58",
+          "M2:T60",
+          "M2:T62",
+          "M2:T63"
+        ],
+        "related_segments": [
+          "M2:T58",
+          "M2:T60",
+          "M2:T62",
+          "M2:T63"
+        ],
+        "support_score": 0.7,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0053",
+      "text": "In TAN entries, user cannot change the title, user name or URL but notes can be added.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.21.1",
+        "section_path": [
+          "System Features",
+          "TAN Support",
+          "Description"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T65",
+          "M2:T67"
+        ],
+        "related_segments": [
+          "M2:T65",
+          "M2:T67"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0054",
+      "text": "Title, username or URL cannot be changed in a TAN entry.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.75,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.21.2",
+        "section_path": [
+          "System Features",
+          "TAN Support",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "32",
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T69",
+          "M2:T70"
+        ],
+        "related_segments": [
+          "M2:T69",
+          "M2:T70"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0055",
+      "text": "When a TAN is used, it expires automatically and can never be used again.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.85,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.21.2",
+        "section_path": [
+          "System Features",
+          "TAN Support",
+          "Functional Requirements"
+        ],
+        "xml_element": "req",
+        "original_req_id": "33",
+        "modifier": null,
+        "modal": null
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T72"
+        ],
+        "related_segments": [
+          "M2:T72"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0056",
+      "text": "At this time the main database window is inactive and cannot be accessed unless the current active window is closed.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T82",
+          "M2:T84",
+          "M2:T85"
+        ],
+        "related_segments": [
+          "M2:T82",
+          "M2:T84",
+          "M2:T85"
+        ],
+        "support_score": 0.818,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0057",
+      "text": "If in the meanwhile it is not pasted anywhere, it must be copied again.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T88",
+          "M2:T90"
+        ],
+        "related_segments": [
+          "M2:T88",
+          "M2:T90"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0058",
+      "text": "That happens so that if user copies a password and not paste it anywhere, the password cannot be found by anyone later.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_open",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P11",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "open",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T92",
+            "M2:T93",
+            "M2:T94",
+            "M2:T95"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T92"
+        ],
+        "related_segments": [
+          "M2:T92",
+          "M2:T93",
+          "M2:T94",
+          "M2:T95"
+        ],
+        "support_score": 0.9,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0059",
+      "text": "When a USB which contains the database is removed from a computer while changes haven't been completely saved, the database is damaged and cannot be opened.",
+      "class": "NFR",
+      "subtype": "SA",
+      "subtype_name": "Safety",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.2",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Safety Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "conflict_resolved",
+      "expected_in_output": true,
+      "phenomena": [
+        {
+          "pid": "P12",
+          "type": "conflict",
+          "kind": "scope",
+          "outcome": "resolved",
+          "details": {
+            "raised_by": "EndUser",
+            "meeting": "M2"
+          },
+          "segments": [
+            "M2:T109",
+            "M2:T110",
+            "M2:T111",
+            "M2:T112"
+          ]
+        }
+      ],
+      "trace": {
+        "input_segments": [
+          "M2:T109",
+          "M2:T112"
+        ],
+        "related_segments": [
+          "M2:T109",
+          "M2:T110",
+          "M2:T111",
+          "M2:T112"
+        ],
+        "support_score": 0.583,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2008-keepass:R0060",
+      "text": "KeePass is a small and light project so it does not need to be installed. All it takes is unpacking from the Zip package. It can be transferred also in a USB stick with no additional configuration needed.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5,3",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Software Quality Attributes"
+        ],
+        "xml_element": "item",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T99",
+          "M2:T101",
+          "M2:T103",
+          "M2:T105",
+          "M2:T106"
+        ],
+        "related_segments": [
+          "M2:T99",
+          "M2:T101",
+          "M2:T103",
+          "M2:T105",
+          "M2:T106"
+        ],
+        "support_score": 0.867,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": [
+    {
+      "id": "2008-keepass:I001",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2008-keepass:R0029",
+      "pid": "P5",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T105"
+      ],
+      "details": {
+        "missing": "field must be Changed and be identical with password field",
+        "stated_text": "ìWhen the password field is changed the repeat password"
+      }
+    },
+    {
+      "id": "2008-keepass:I002",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2008-keepass:R0035",
+      "pid": "P7",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T5"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "This feature allows user to define a sequence of keypresses which KeePass will automatically perform."
+      }
+    },
+    {
+      "id": "2008-keepass:I003",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2008-keepass:R0042",
+      "pid": "P9",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T25"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Only one database file is allowed in command line options"
+      }
+    },
+    {
+      "id": "2008-keepass:I004",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2008-keepass:R0051",
+      "pid": "P10",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M2:T76",
+        "M2:T77",
+        "M2:T78",
+        "M2:T79"
+      ],
+      "details": {
+        "raised_by": "TechLead",
+        "meeting": "M2"
+      }
+    },
+    {
+      "id": "2008-keepass:I005",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2008-keepass:R0058",
+      "pid": "P11",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M2:T92",
+        "M2:T93",
+        "M2:T94",
+        "M2:T95"
+      ],
+      "details": {
+        "raised_by": "EndUser",
+        "meeting": "M2"
+      }
+    }
+  ]
+}

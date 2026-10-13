@@ -1,0 +1,128 @@
+Meeting 1 of 1 (kickoff)
+Participants: Analyst, Client, EndUser, TechLead
+
+Analyst: Okay, let's get started. Thanks for joining, actually everyone. This is our kickoff, and the only session planned, on the functional and non-functional requirements for the VCD.
+Client: Sure, some background first. Using ICT effectively to get interoperability in public procurement really matters for the Lisbon objectives, well which is about becoming the most competitive and kind of dynamic knowledge-based economy in the world, that's from EC 2005. The problem uh is the current European public eProcurement infrastructure just isn't fit for that. The market is highly fragmented and there's a lack of interoperability. And governments are the biggest buyer in the EU, purchasing at around 15-20% of GDP, actually according to the Ministerial Declaration from um 2005.
+Analyst: Thanks. So let's talk about the major features, requirements and quality attributes. What are the main things it has to do?
+Client: Well, building on that, the mapping has to be implemented in the well pre-VCD mapping tool, the way it's i mean shown in the use-case diagram in Figure 9. So basically a uhm list of criteria to be matched gets submitted to whoever is doing the mapping.
+Analyst: So the mapping goes into the pre-VCD mapping tool, as in the Figure 9 use-case diagram, and a list of criteria to match is sent i mean to the entity that uh performs the mapping. Is that right?
+Client: Yes, exactly.
+Client: And that means the criteria might need to be redefined iteratively, depending on um what specific mappings come back with.
+TechLead: Uh, On my side, the national mappings that are er commonly approved have to be accessible to the different stakeholders, especially economic operators, contracting authorities and the national VCD service providers.
+Analyst: Okay, got it.
+TechLead: Erm, Then there's the question of what technical means we use to provide the mapping. That really depends on um which pilot solution we choose. The simplest option, with no technical support at all, actually could be handing out mapping tables on paper, one time. Another option is web-based access to a system that does the mapping by querying a database erm underneath that holds the mapping table. A more advanced option would be automated processing of the mapping based well on the sort of relevant criteria, and for that the contracting you know authority would have to specify those criteria in a dedicated electronic format. And the higher maturity levels in this vision, so stage 2-4, can also use the mapping service erm to retrieve the mapping information.
+Analyst: Let me check I've got this. How we deliver the mapping depends on the pilot solution chosen. At the simple end end it's um a one-time paper distribution of mapping tables, then web access to a a system querying a database with with the mapping table, and at the erm advanced end automated processing using criteria the contracting authority specifies in a dedicated electronic format. And stages 2-4 can use the mapping service to get the mapping information too?
+TechLead: Yes, that's it.
+Client: We'll [noise] also need a governing model defined, so we can deploy the infrastructure and keep it um maintained and sustainable over time.
+Client: And maintainability is a big one. The mapping has to be easy kind of to maintain, i mean which matters if the legal basis changes at national or European level. We sort of need a formal procedure for how changes get applied to the the system, and we need to define an organisation or well institution that governs the sort of change management process.
+Analyst: Right, makes sense.
+Analyst: Let's move to accessibility of the mapping facility. erm Who needs to get at it?
+Client: So every national service provider offering a sort of VCD at at stage uhm 2-4, plus plus all the other relevant key stakeholders, like economic kind of operators, contracting authorities and certifiers, must be able to pull the the latest mapping information from the mapping facility.
+Analyst: Er, Okay. And identity and access management, what do you need there?
+Client: Identity and access management must have an interface for submitting sensitive economic operator data, for example uploading attestations that verify that data, so the economic operator can apply to have a like VCD account created. And that sensitive data must be verified um by an officer through a erm formal procedure.
+TechLead: And it must be an officer who places that sensitive economic operator data [noise] into the VCD account.
+Client: And then identity and access management has to kind of give the the economic like operator a way to actually receive their log-in data. Also, we really need to pin down clearly which economic operator data count as sensitive you know and belong to identity and access management.
+Analyst: Okay, got it.
+Analyst: Let's move on to the VCD system um itself. What do we need there?
+TechLead: So the VCD system needs an interface where you know tender-specific data, things like the criteria for qualitative selection and exclusion, can either be fetched from or provided you know through. And ideally it should also kind of have an interface where a translator or the economic operator can can submit uhm certified translations for specific evidence.
+TechLead: One more thing: the the national VCD service provider hosting the system has to have like trusted entity status.
+Client: On the evidence side, the semantic interoperability of the structural data data should be ensured through an agreement procedure among the WP partners.
+Analyst: Right.
+TechLead: Sorry, my screen share just froze, can you still see me?
+Analyst: We can, no worries. um Next up, the actually VCD transportation system. What should that do?
+Client: That should help the economic operator submit the VCD package to the contracting authority's procurement platform, wherever the uh tender or um bid has to be placed.
+Analyst: So the uh transportation system should support the economic operator in in getting the VCD package onto the the contracting authority's procurement platform where the tender or bid goes, right?
+Client: Yes, exactly.
+Analyst: And [noise] uhm what about the VCD viewing system?
+Client: Uhm, There it's a must that contracting authorities get get authenticated uhm before they uhm can view the data inside a VCD package.
+Analyst: So the viewing sort of system has to authenticate contracting authorities so they uhm can see like what's in a VCD package?
+Client: That's right.
+Client: So, the VCD viewing system should display translations of evidences contained in in the VCD package.
+Analyst: Er, Okay. Let's talk about context specific data. How should that work?
+Client: A VCD system has erm to be able to collect and process uh context specific data for evidence, the kind that has to be provided manually or er semi-automatically, either by the issuing body, the economic operator, or any trusted third party.
+Analyst: Okay, noted.
+Analyst: Sorry, someone's screen share just popped up on my end, give me a second. Okay, it's gone.
+TechLead: Building on that, the VCD actually system must give the issuing body a user interface where they can enter context specific uh data for an evidence in a structured form, so for example a web interface or an XML file upload.
+Analyst: Got it.
+Analyst: Uhm, Let's move on to the advanced VCD creation service. What do we need there?
+Client: So the VCD creation service from stage 2, the VCD simple package, has to be improved so it covers context specific data and VCD merging. And the system must be able to compile the data coming out of the evidence collection process together with what the economic operator provides when it creates the VCD advanced package. So the types of data going into an actually advanced package are like structural VCD package data, structural data of you know evidence, tender specific data, economic operator data, context specific data, the evidence itself, uh and authorized translations of the evidence.
+TechLead: And on top of that, it should be possible to merge VCD simple packages and VCD advanced packages into one VCD uhm advanced package.
+Analyst: Anything else on the the advanced creation um service?
+Client: No, that's it.
+Analyst: Er, Okay, next is the VCD re-compilation service. How should that kind of work?
+TechLead: Er, The The system must give the economic operator a um user interface where they can kick like off recompiling actually an existing VCD package into a VCD advanced package.
+Client: Right, and specifically, re-compiling a VCD simple package into an advanced package must be possible.
+Analyst: Okay, noted.
+Analyst: Can you give me an overview of the organisational framework?
+TechLead: Erm, One key like issue, for example, is the pre-VCD mapping tool. It should be actually integrated into any national solution, either as a module or as an interface to i mean query results for mapping evidences um between member states.
+Analyst: And what about organisational requirements?
+EndUser: From our side, wherever possible we should use the national procedures and infrastructures that are already er widely accepted.
+Client: Also, the i mean contracting authority has to pick i mean out a subset of the overall set of criteria that's relevant to a specific Call erm for Tender, basically so any um VCD application can do the mapping later. And the measure for that would be erm developing a standard template for specifying criteria as er part [pause] of the tender-specific data.
+Analyst: What about economic operators sort of that act as uh issuing bodies?
+Client: Often the VCD system erm will let you specify the issuing services needed to evidence um certain criteria, like candidate statements or attestations from from third parties that aren't available electronically.
+Analyst: I see.
+Analyst: Okay, let's move sort of on to the methodical um framework. How are we approaching the specifications from a methodology point of view?
+Client: So we'll be using the ISO 11179 erm methodology for the specifications, and those can then be used to detail the profiles that well CEN BII WG 1 uh has developed.
+TechLead: And on the technical side, the CEN BII description of a a VCD is going to be semantically neutral. So i mean it helps systems based on UBL as well as UN/CEFACT, kind of which basically means you can set up applications um using either one.
+Analyst: Got it.
+Analyst: Next, semantic kind of interoperability. What do we we like need uh there?
+Client: We need to work on semantic interoperability for electronic attestations and and certificates, and that's uhm not just basically semantic alignment, it also actually needs um legal alignment across Europe. That's from Bausa and Boujraf, 2009. And the requirement is that you know evidential kind of documents exchanged between uh parties must be semantically harmonized so they can be processed electronically.
+Analyst: Okay.
+Analyst: What about the the correspondence between national and European um criteria?
+Client: The The requirement there is that the national criteria for qualitative selection and exclusion must correspond uh to the European i mean criteria. Those come from Article 45 to 50, and they're partially described in the Eligibility of Tenders.
+Analyst: So the national selection and exclusion criteria have to map to the European ones from erm Articles 45 to 50, which are partly covered in the Eligibility of Tenders, right?
+Client: Yes, exactly.
+Analyst: Now, are there um characteristics that are specific to the VCD itself?
+Client: Um, Yes, one uh key thing: every VCD uh instance must be specific to a certain economic operator.
+Analyst: And how do we make sure of the level of completeness?
+Client: Well, a VCD package only really shows its um full potential when sort of it contains all all the i mean requested evidences, so everything that's needed to prove all the requested criteria.
+EndUser: From our side, the pre-VCD mapping tool, whether that's definition, specification, modelling or implementation, will uhm focus on Articles 45 to 46. Articles 47 um to 50 open up a wide wide range [laughter] of different criteria that are tender- and country-specific, so those must be added to the pre-VCD er mapping tool uhm step well by step, and that might need a higher-level mapping.
+Analyst: Makes sense.
+Analyst: Let's talk about the principle for including attestations in stage 3 and 4.
+Client: The rule is, if the proof is about qualitative aspects, say providing a balance sheet or extracts um from it to prove economic or financial standing, then the validation value can't be applied.
+Analyst: Er, Alright. Could like someone give us an overview of the like legal framework?
+Client: So to get an overview of the legal sort of requirements and regulations on the different levels, we need to analyse a few sources. On the European level that's for example directive 2004/18/EG, and on the uhm national level the national procurement acts and other related regulations. And when we develop a solution, we we have to take the kind of differences between the national er procurement acts and the European Directive into account, so we end up with something that conforms to national law but can well still um be applied on a pan-European level.
+Analyst: So you're saying the solution you know has to to account for the differences between the national procurement acts and the European Directive, so that it's conform to national law law but still works on a pan-European level?
+Client: Yes, exactly.
+Client: And those legal questions often hit critical aspects uhm for a like potential VCD solution. For example, the role and use of self declarations as a replacement for documents that can't be issued within one well Member State.
+Analyst: Okay. What about the legal basis for actually exchanging validation data? How does that work?
+Client: The legal foundation in the you know country will give us a basis to accept these statements across um borders, following the principle of mutual recognition of diplomas, certificates or other evidence of formal qualifications.
+Analyst: Got it.
+Analyst: Let's talk about the European basically service provider. What do we need there?
+TechLead: First, the liability of the kind of European Service Provider must be defined.
+TechLead: Then, as part part of defining the legal basis for setting up such a Service Provider, the legal regulation that applies to the European Service Provider must be defined.
+TechLead: And sort of along the same lines, we must define a suitable way to to establish uh the relevant regulation for the European Service Provider.
+Analyst: And on sort of the national side, what about the national service providers?
+TechLead: Um, There it's especially about responsibilities and services, so hosting, maintaining and governing the national processes for for basically a VCD solution. Those will be important.
+TechLead: But several formal legal requirements have um to be answered first to define the scope of such a National Service Provider. The legal status i mean and legitimacy i mean of the National Service Provider must basically be defined.
+Analyst: Erm, What are the legal kind of requirements around data protection?
+TechLead: Erm, The relevant regulations of the national data protection acts uh must be analysed and considered.
+Analyst: And legal validity, what do we need to keep in mind there?
+Client: We must consider the regulations on using erm electronic documents and on exchanging or downloading them, for example if an e-signature is mandatory. Especially well the regulations from the national procurement act and uh directive 2004/18/EC.
+Analyst: Okay, noted.
+Analyst: Let's move on to the technical side. Can you give us an overview of the technical framework?
+TechLead: So that also means sort of the VCD should actually be submittable through the PEPPOL infrastructure.
+Analyst: Okay, let's move well on to how the governance models of WP2 and WP8 i mean relate i mean to each other. How like do you see that actually interrelation?
+Client: Erm, Well, the governing model's composition, structure and scope er have to be formally defined, so that functions like liability, sustainability and maintainability are actually fulfilled. actually Especially for maintaining and sustaining a pre-VCD mapping tool in the long term, so the erm functions stay reliable and liable. And that dedicated governing model needs the necessary status and power to to govern the functions assigned to it.
+Analyst: Got it. Next topic, allocation of sort of identifiers. uhm What's needed there?
+Client: We need to figure out a method for allocating addresses well and providing them to the WP 2 well stakeholders, so they can use the PEPPOL infrastructure to you know exchange VCDs VCDs and access the related services.
+Analyst: Anything else on allocating identifiers?
+Client: No, that's it.
+Analyst: Then let's talk about addressability. What are the needs there?
+Client: Er, In sort of those collaboration cases, every partner has to be addressable, so electronic documents can go end to end kind of through the underlying i mean transport infrastructure. um That's from Bausa and Boujraf.
+Analyst: Anything more on addressability?
+Client: Nothing else, no.
+Analyst: Okay. What about non-repudiation of origin?
+EndUser: So in electronic procurement, some processes have to make sure the sender of an electronic document can't well repudiate its validity. That's the like description i mean from Bausa and Boujraf.
+Analyst: Okay, understood.
+Analyst: Let's go to the pre-VCD mapping tool. What should it cover?
+EndUser: Those evidences actually we mentioned get described further i mean by templates that that define their structural data. So things like the type of basically document, the name of the document, the issuing entity, the source reference, the validity period, the time time of issuance, whether it's mandatory or optional, and the frequency of use.
+Analyst: Um, Thanks. And the implementation approach, how are we planning that?
+Client: Austria is um going to implement and pilot a VCD service, based on the VCD concept from this report.
+Analyst: And the piloting approach, how will that work?
+Client: Uhm, For um the pilot phase, the VCD service provider will will be the Austrian Federal Computing Center, the BRZ. They'll set up the VCD service and i mean maintain it.
+Analyst: Okay, let's move on you know to well the implementation approach. i mean How are you basically planning to actually go about it?
+Client: Er, So So for conforming to PEPPOL's WP2 interoperability standards, we'll follow the roadmap the project i mean agreed on. um That includes designing and managing a dynamic knowledge base, what kind of we call the pre-VCD mapping tool, and then implementing VCD services that follow uhm a multi-stage approach.
+Client: Uhm, And on the interoperability side, there'll also be a supporting sort of action where we dig into the kind of existing certificates like and er pull out the most valuable information from them.
+Analyst: Got it.
+Analyst: Great, I think that covers everything for today. Since this was our only session, I'll consolidate all of this into the requirements specification and send uh it around. Thanks, everyone.

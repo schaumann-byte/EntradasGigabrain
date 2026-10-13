@@ -1,0 +1,76 @@
+Meeting 1 of 3 (kickoff)
+Participants: Analyst, Client, EndUser
+
+Analyst: Okay, sort of let's get started. erm This is the kickoff, the you know first of three meetings on the ERTMS/ETCS Functional you know Requirements Specification, the FRS.
+Analyst: Before we dive in, did everyone manage to get coffee? Mondays are rough.
+Client: So, a bit of um background. The document is mainly about the operational requirements, so you won't find many technical terms um in it, just a few.
+Analyst: Let's start with operation alongside the existing national train control systems. How should ETCS behave there?
+Client: I think, maybe, ETCS should be compatible with the existing national systems that are listed in the CCS TSI. So it doesn't interfere with them, kind of and they don't interfere with sort of it either. I'm not completely sure that's a hard must, actually but it'd be nice.
+Analyst: Got it.
+Analyst: Okay, next, the basic functioning. What's expected there?
+Client: Well, ETCS has to be functional to...
+Analyst: Let's move on to operational states. Which ones do we need?
+Client: So the ETCS trainborne equipment has to be able to supervise these operational states,
+Analyst: Go ahead.
+Client: Full Supervision, you know Partial Supervision, um Staff Responsible, On Sight, Unfitted Line, Train Trip, Post Trip, National operation, so STM, then like Tandem, Multiple, Shunting, Stand By, and Reversing operation.
+EndUser: Yeah, that covers what we use.
+Client: And any transition that happens while the uh train is moving should, in principle, happen automatically.
+Analyst: Okay.
+Client: Now, if the uh transition has to be acknowledged,
+Analyst: Right.
+Client: and the driver doesn't like acknowledge it the way they're supposed to,
+Analyst: Mm-hm.
+Client: then ETCS has to trigger a brake application.
+EndUser: And when you're going from one operational state to another, and that includes switching like between two different national operations, during that transition the supervision kind of has to give kind of at least the same kind of protection as the least restrictive of the two states.
+Analyst: Got it.
+EndUser: Er, Also, the driver um should always see the current operational status on the DMI.
+Analyst: Okay. Anything else on operational states?
+EndUser: No, that's it for that.
+Analyst: Great. Let's kind of move to national values. What do we need there?
+Client: Uh, So er once the national values have been received onboard, they have to um stay valid even—
+EndUser: Sorry, someone's screen share just popped uhm up on my end.
+Analyst: Oh, sorry, go ahead.
+Client: Yeah, so they stay valid even if the onboard equipment gets switched off.
+Analyst: Okay. Anything else on er national values?
+Client: Nope, that covers it.
+Analyst: Alright, next is the on like board equipment self test. How should that uh work?
+EndUser: I think at Start Up the on board equipment should maybe run an automatic self-test. I'm not sure if that's strictly mandatory, but it'd be nice.
+Analyst: Uhm, Okay. And what about train and driver data entry?
+EndUser: So it'd be nice if train data could sort of maybe be entered automatically, either from a railway management system
+Analyst: Mm-hm.
+EndUser: or from the train memory.
+Analyst: Okay.
+EndUser: Erm, And the current train data should be stored in the ETCS equipment, except at at the transition to shunting. There are a um few other exceptions too, I think, but I can't remember them them right now.
+EndUser: Then there's the data the driver can enter manually, or it can come um from external sources. That's driver identification, train identification, so the the train number, STM ready for use, the data needed for the brake calculation, maximum train speed, train length, status erm of the air tight system, the type of electric power accepted, any additional data the STM basically needs, if there is any, the well international train category, train gauge, and the maximum axle load of er the train with a resolution of 0,5 t.
+Analyst: Got it.
+Analyst: Anything else on train and driver data entry?
+EndUser: No, that's it.
+Analyst: Okay, let's move on to partial supervision. How should that work?
+Client: So in Partial Supervision, the train should be supervised based on the train speed
+EndUser: Right.
+Client: Erm, and whatever uh distance data is available.
+EndUser: Okay.
+Client: And the ceiling speed, that shouldn't sort of be uh shown all the time time on the DMI
+Analyst: Mm-hm.
+Client: but the er driver can select it and have kind of it shown for a moment.
+Analyst: Okay.
+EndUser: Yeah, that makes sense.
+EndUser: Um, And maybe it'd be nice if it were possible to order a erm train trip
+EndUser: when it passes a stop signal.
+Analyst: Can you be more specific about that? How would that work exactly?
+EndUser: I'm not really sure, it's just something we've talked about. We'd have to look into it.
+Analyst: Er, Fair enough. Let's talk about shunting operation. What uh do you need there?
+EndUser: Er, When permission is received, the driver needs to be shown that.
+Analyst: Okay, got it.
+EndUser: Then there's the automatic transfer to Shunting. That can happen erm from Full Supervision operation
+Client: Right.
+EndUser: and also uh from Partial Supervision operation status, at any speed that's lower than
+Client: Mm-hm.
+EndUser: or equal to the supervised shunting speed, and that's based on trackside information.
+Client: Sorry, someone's knocking, give me one second.
+Analyst: Okay, let's talk about Full Supervision operation. What well do you need from that mode?
+Analyst: Actually, um before that, what about isolating the ETCS trainborne equipment? Anything there?
+EndUser: Yes, it has to be possible to isolate the ETCS trainborne equipment.
+Analyst: Good. I'd like to go back to shunting operation for a moment. Is there anything else we should cover there?
+Analyst: Sorry, my screen uhm share just froze, let me restart it.
+Analyst: Okay, we're kind of almost out of time, so let's stop here. We'll pick this this up next meeting. Thanks, everyone.

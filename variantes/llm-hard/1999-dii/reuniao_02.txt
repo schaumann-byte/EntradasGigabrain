@@ -1,0 +1,29 @@
+Meeting 2 of 3 (follow-up)
+Participants: Analyst, Client, EndUser
+
+Analyst: Okay, let's get started. This is our uhm second session on the draft SRS SRS for like the DII COE XML Services, the follow-up meeting.
+Analyst: Before we dive like in, did everyone have a decent week?
+Analyst: Quick recap: last time we went uh through the required states and modes, and we talked about registering terms and structures, so things like tags, er DTDs and DCDs. A few points sort of were left left open, so we'll pick um those up today.
+Client: Erm, Actually, before we go further, I want to raise the XML services capability requirements. Basically, the XS has um to to deliver a a set of inter-related components, the ones shown in figure 3.2-1.
+Analyst: Got it.
+Analyst: Thanks. I'd like to go go back to required states and modes for a kind of minute, since we touched on it before. Can you walk me through the modes again?
+EndUser: Uh, Sure. So first there's the Environmental Mode. That's the real-time operations, the ones that have to like react uh to varying degrees of readiness, all the way up to full scale wartime operations, things—
+Client: Sorry, real-time in all cases?
+EndUser: Yes, the real-time side. What I was getting at is things like well crisis planning, using heterogeneous data types and erm sources, plus transfer capabilities and data management services.
+EndUser: Then there's basically Training Mode, which is there to support uh training activities, and in that mode
+EndUser: Uhm, the data management services should do the same processing you'd run into in a production environment. The difference [laughter] is that database access might go through a training application accessing the DBMS, instead of through the like production mission application.
+EndUser: And er then, in a changing, dynamic environment
+Analyst: Okay.
+EndUser: for example uh with deployed units, the workload
+Client: Right.
+Client: Sorry, my screen just like froze for a second. um Okay, it's back.
+EndUser: and the database sizes might be more predetermined, since uhm you've got a more precise mission
+Analyst: Makes sense.
+EndUser: and they'd need access to fewer data management admin capabilities than you'd need in in a fixed environment. Also, the XS has to be able to redefine or reset the names of connect descriptors to database server instances. Connect descriptors are fully qualified object names, and they include the address, so protocol, host and port, and the instance name.
+Analyst: Great. Anything else on required states and modes before we move on?
+Client: No, that's it from me.
+Client: So just to recap what we already have: it consumes XML and schema documents, with parsers, both DOM and SAX. It checks conformance, so well-formed and validate. Creating validation constraints shall not enable a meaningful sharing of XML-based schemas and related information. Then it extracts semantically-valid views from an i mean XML like document, XSL for example, disassembles the hierarchical view into a relational representation, and renders.
+EndUser: Can I bring up registry services while we're here? The Registry needs to provide standard APIs, the ones specified in Appendix B.
+Analyst: Erm, So the Registry should uhm expose standard APIs, exactly as laid out in Appendix B, right?
+EndUser: Yes, exactly.
+Analyst: Great, thanks everyone. Let's stop here and pick it up again next time.

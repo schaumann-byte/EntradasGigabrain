@@ -1,0 +1,1103 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "2007-get-real-0-2",
+  "doc_title": "Get Real 0.2",
+  "source_file": "PURE/requirements-xml/2007 - get real 0.2.xml",
+  "mode": "meetings",
+  "variant": "llm-realistic",
+  "generator": {
+    "tool": "pureprep",
+    "realizer": "llm",
+    "profile": "realistic",
+    "params": {
+      "seed": 42,
+      "meetings": [
+        2,
+        3
+      ],
+      "mess": 0.4,
+      "p_omit": 0.03,
+      "p_conflict": 0.07,
+      "p_ambiguity": 0.08,
+      "p_inconsistency": 0.05,
+      "p_incomplete": 0.08,
+      "p_conflict_open": 0.4,
+      "p_resolve_later": 0.5,
+      "p_complete_later": 0.5,
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07,
+      "llm": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "effort": "low",
+        "prompt_version": "b2"
+      }
+    },
+    "realizer_stats": {
+      "fallback:lost_number": 1,
+      "llm_accepted": 57,
+      "llm_accepted_content": 21,
+      "turns": 58,
+      "windows": 4
+    }
+  },
+  "input": {
+    "n_meetings": 2,
+    "n_chars": 5236,
+    "n_words": 871,
+    "meetings": [
+      {
+        "id": "M1",
+        "file": "reuniao_01.txt",
+        "kind": "kickoff",
+        "participants": [
+          "Analyst",
+          "Client",
+          "EndUser",
+          "TechLead"
+        ],
+        "topics": [
+          "exploring college (existing)",
+          "example video \"real people\" profiles",
+          "high school courses (new)",
+          "professional organizations (new)",
+          "user interfaces"
+        ],
+        "n_chars": 2927,
+        "n_words": 481,
+        "segments": [
+          {
+            "id": "M1:T1",
+            "start": 84,
+            "end": 244,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M1:T2",
+            "start": 253,
+            "end": 311,
+            "speaker": "Client",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M1:T3",
+            "start": 320,
+            "end": 690,
+            "speaker": "Client",
+            "act": "context"
+          },
+          {
+            "id": "M1:T4",
+            "start": 700,
+            "end": 885,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0003",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T5",
+            "start": 894,
+            "end": 927,
+            "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T6",
+            "start": 937,
+            "end": 1100,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "2007-get-real-0-2:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0003",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T7",
+            "start": 1110,
+            "end": 1186,
+            "speaker": "EndUser",
+            "act": "offtopic"
+          },
+          {
+            "id": "M1:T8",
+            "start": 1196,
+            "end": 1238,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T9",
+            "start": 1248,
+            "end": 1262,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T10",
+            "start": 1272,
+            "end": 1361,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T11",
+            "start": 1371,
+            "end": 1448,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0004",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T12",
+            "start": 1458,
+            "end": 1464,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T13",
+            "start": 1474,
+            "end": 1546,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0004",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 1555,
+            "end": 1562,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T15",
+            "start": 1572,
+            "end": 1907,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0004",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 1917,
+            "end": 2066,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0005",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T17",
+            "start": 2075,
+            "end": 2094,
+            "speaker": "Client",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M1:T18",
+            "start": 2105,
+            "end": 2121,
+            "speaker": "TechLead",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M1:T19",
+            "start": 2131,
+            "end": 2137,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T20",
+            "start": 2147,
+            "end": 2209,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0005"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0005",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 2220,
+            "end": 2238,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T22",
+            "start": 2248,
+            "end": 2352,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M1:T23",
+            "start": 2361,
+            "end": 2456,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0006",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T24",
+            "start": 2466,
+            "end": 2567,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2007-get-real-0-2:R0006"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0006",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 2576,
+            "end": 2589,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T26",
+            "start": 2598,
+            "end": 2675,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0007",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T27",
+            "start": 2685,
+            "end": 2691,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T28",
+            "start": 2700,
+            "end": 2757,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0007",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 2767,
+            "end": 2774,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T30",
+            "start": 2785,
+            "end": 2808,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T31",
+            "start": 2818,
+            "end": 2926,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      },
+      {
+        "id": "M2",
+        "file": "reuniao_02.txt",
+        "kind": "follow-up",
+        "participants": [
+          "Analyst",
+          "Client",
+          "TechLead"
+        ],
+        "topics": [
+          "performance requirements",
+          "security requirements",
+          "general needs",
+          "software quality attributes"
+        ],
+        "n_chars": 2309,
+        "n_words": 390,
+        "segments": [
+          {
+            "id": "M2:T1",
+            "start": 77,
+            "end": 188,
+            "speaker": "Analyst",
+            "act": "open"
+          },
+          {
+            "id": "M2:T2",
+            "start": 197,
+            "end": 265,
+            "speaker": "Client",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 275,
+            "end": 454,
+            "speaker": "Analyst",
+            "act": "recap"
+          },
+          {
+            "id": "M2:T4",
+            "start": 464,
+            "end": 544,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 555,
+            "end": 649,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0008",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T6",
+            "start": 659,
+            "end": 666,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T7",
+            "start": 676,
+            "end": 736,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T8",
+            "start": 745,
+            "end": 860,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0009"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0009",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T9",
+            "start": 871,
+            "end": 894,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T10",
+            "start": 904,
+            "end": 973,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T11",
+            "start": 984,
+            "end": 1028,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0010",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1037,
+            "end": 1043,
+            "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T13",
+            "start": 1054,
+            "end": 1077,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T14",
+            "start": 1087,
+            "end": 1093,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T15",
+            "start": 1104,
+            "end": 1172,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T16",
+            "start": 1182,
+            "end": 1187,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T17",
+            "start": 1198,
+            "end": 1311,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T18",
+            "start": 1321,
+            "end": 1521,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2007-get-real-0-2:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0010",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1532,
+            "end": 1545,
+            "speaker": "TechLead",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T20",
+            "start": 1555,
+            "end": 1644,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T21",
+            "start": 1653,
+            "end": 1759,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0011",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T22",
+            "start": 1769,
+            "end": 1774,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T23",
+            "start": 1783,
+            "end": 1878,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2007-get-real-0-2:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0011",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T24",
+            "start": 1888,
+            "end": 1895,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T25",
+            "start": 1906,
+            "end": 2078,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "2007-get-real-0-2:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "2007-get-real-0-2:R0012",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M2:T26",
+            "start": 2087,
+            "end": 2103,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M2:T27",
+            "start": 2113,
+            "end": 2308,
+            "speaker": "Analyst",
+            "act": "close"
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "n_requirements": 10,
+    "n_primary_fr": 4,
+    "n_primary_nfr": 6,
+    "n_expected_in_output": 10,
+    "n_reachable": 10,
+    "by_status": {
+      "clear": 10
+    },
+    "phenomena": {},
+    "n_distractors": 0,
+    "n_issues": 0,
+    "messiness": {
+      "topics_out_of_document_order": 0,
+      "smalltalk": 2,
+      "self_introduced_topics": 3,
+      "interruptions": 1,
+      "offtopic": 1,
+      "chunked_statements": 5,
+      "reactions": 4,
+      "crosstalk": 1,
+      "meetings": 2
+    },
+    "mean_support_clear": 0.874
+  },
+  "requirements": [
+    {
+      "id": "2007-get-real-0-2:R0003",
+      "text": "A listing of the computer science offerings from Oregon university System campuses and other Oregon colleges. >Need to determine extent of community and private colleges in Oregon",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.5,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.1",
+        "section_path": [
+          "Get Real Pages &amp; Sections",
+          "Exploring College (existing)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T4",
+          "M1:T6"
+        ],
+        "related_segments": [
+          "M1:T4",
+          "M1:T6"
+        ],
+        "support_score": 0.857,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0004",
+      "text": "Computer science students and young professionals are presented here: \"a day in the life of\" \"power to change the world\" and Pathways in computer science\" http://www.cs.washington.edu/education/ugrad/prospective/download.html >reviewers of this document should review these videos – click link above then \"Video Downloads Available\" These profiles convey clear messages of CS majors using their degrees in a variety of diverse careers.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.3.1",
+        "section_path": [
+          "Get Real Pages &amp; Sections",
+          "Real People (existing)",
+          "Example video \"real people\" profiles"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T11",
+          "M1:T13",
+          "M1:T15"
+        ],
+        "related_segments": [
+          "M1:T11",
+          "M1:T13",
+          "M1:T15"
+        ],
+        "support_score": 0.78,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0005",
+      "text": "This page should provide pointers to curricula recommendations from OUS campuses and other university sources.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.8",
+        "section_path": [
+          "Get Real Pages &amp; Sections",
+          "High School Courses (new)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T16",
+          "M1:T20"
+        ],
+        "related_segments": [
+          "M1:T16",
+          "M1:T20"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0006",
+      "text": "Pointers should lead to student sections of these organizations.",
+      "class": "FR",
+      "subtype": null,
+      "subtype_name": null,
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "default",
+      "confidence": 0.4,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "3.10",
+        "section_path": [
+          "Get Real Pages &amp; Sections",
+          "Professional Organizations (new)"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T23",
+          "M1:T24"
+        ],
+        "related_segments": [
+          "M1:T23",
+          "M1:T24"
+        ],
+        "support_score": 0.8,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0007",
+      "text": "The Get Real site should work and be tested against IE, Firefox and Netscape.",
+      "class": "NFR",
+      "subtype": "LF",
+      "subtype_name": "Look & Feel",
+      "promise_subtype": "LF",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "4.1",
+        "section_path": [
+          "External Interface Requirements",
+          "User Interfaces"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M1:T26",
+          "M1:T28"
+        ],
+        "related_segments": [
+          "M1:T26",
+          "M1:T28"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0008",
+      "text": "The Get Real site should be hosted on a server that can provide adequate response time.",
+      "class": "NFR",
+      "subtype": "PE",
+      "subtype_name": "Performance",
+      "promise_subtype": "PE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "PE",
+      "source": {
+        "section_id": "5.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Performance Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T5"
+        ],
+        "related_segments": [
+          "M2:T5"
+        ],
+        "support_score": 0.778,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0009",
+      "text": "Copyright and other security measures for Get Real should be the same as the OUS site.",
+      "class": "NFR",
+      "subtype": "SE",
+      "subtype_name": "Security",
+      "promise_subtype": "SE",
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": "SE",
+      "source": {
+        "section_id": "5.2",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Security Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T8"
+        ],
+        "related_segments": [
+          "M2:T8"
+        ],
+        "support_score": 1.0,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0010",
+      "text": "There is a need to track and evaluate the \"hits\" and time spent on the student-focused website over time; and make content, design, and navigation changes as needed based on evaluation of hits.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.9,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3",
+        "section_path": [
+          "Other Nonfunctional Requirements"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "strong"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T11",
+          "M2:T13",
+          "M2:T15",
+          "M2:T17",
+          "M2:T18"
+        ],
+        "related_segments": [
+          "M2:T11",
+          "M2:T13",
+          "M2:T15",
+          "M2:T17",
+          "M2:T18"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0011",
+      "text": "Web design conventions should be consistent with the standards and conventions used on the OUS site.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Software Quality Attributes"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T21",
+          "M2:T23"
+        ],
+        "related_segments": [
+          "M2:T21",
+          "M2:T23"
+        ],
+        "support_score": 0.875,
+        "reachable": true
+      }
+    },
+    {
+      "id": "2007-get-real-0-2:R0012",
+      "text": "\"Specify any additional quality characteristics for the product that will be important to either the customers or the developers.",
+      "class": "NFR",
+      "subtype": "OT",
+      "subtype_name": "Other NFR",
+      "promise_subtype": null,
+      "tier": "primary",
+      "label_source": "section",
+      "confidence": 0.8,
+      "keyword_hint": null,
+      "source": {
+        "section_id": "5.3.1",
+        "section_path": [
+          "Other Nonfunctional Requirements",
+          "Software Quality Attributes"
+        ],
+        "xml_element": "text_body",
+        "original_req_id": null,
+        "modifier": null,
+        "modal": "weak"
+      },
+      "status": "clear",
+      "expected_in_output": true,
+      "phenomena": [],
+      "trace": {
+        "input_segments": [
+          "M2:T25"
+        ],
+        "related_segments": [
+          "M2:T25"
+        ],
+        "support_score": 0.889,
+        "reachable": true
+      }
+    }
+  ],
+  "distractors": [],
+  "issues": []
+}
