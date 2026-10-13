@@ -3,51 +3,67 @@ Participants: Analyst, Client, EndUser, TechLead
 
 Analyst: Okay, let's get started. Thanks for joining. Today I'd like to understand what like you need for OUTBREAK MANAGEMENT i mean FUNCTIONAL REQUIREMENTS.
 Client: Sorry, I'm a couple of minutes late, the previous call uh ran over.
-Client: Er, Outbreak um Management (OM) is the i mean PHIN functional area intended kind of to support the needs sort of of um investigation, actually monitoring, management, analysis, and reporting of a health event or act of er bioterrorism. Central to the functionality of a system you know supporting OM is the the ability to collect data related to cases and exposures and uh to create traceable um links between all all appropriate entities. i mean By tracing actually the mechanism of transmission and sort of identifying the the source of the kind of health event, the appropriate response staff can more more effectively contain the event.
-Analyst: Uhm, Can you you walk me through system architecture?
-Client: Um, For us, systems like supporting OM would er have to support um structured data entry for for well common sort of forms, you know—
-Analyst: Hold on, does that apply to mobile too?
-Client: Where was I... yes, and fields sort of to ensure data integrity, validity, and standardization.
-EndUser: Uhm, So the— sorry, let me rephrase. systems supporting OM has to provide the ability for sort of computers in disconnected um mode to reconnect to a server er to share OM data among other computers that operate in disconnected mode, you know?
+Client: Outbreak Management (OM) is the PHIN functional area intended to support the needs uhm of sort of investigation, monitoring, um management, analysis, and reporting of a health event or act of well bioterrorism. Central to the functionality of a system supporting OM is the ability to collect data related to cases and exposures and to create uh traceable links between all all appropriate entities. By uh tracing the mechanism actually of transmission and identifying the sort of source of of the health event, the appropriate response staff can more effectively contain the event.
+Analyst: Right. And system architecture? Anything specific?
+Client: We need need well systems supporting OM to uh support structured data like entry for common er forms—
+Analyst: Hold on, does that apply to mobile sort of too?
+Client: Where was I... yes, and fields to ensure data integrity, validity, and standardization.
+EndUser: Er, So the— sorry, let me rephrase. systems supporting OM ought to erm provide the ability for computers in disconnected mode to reconnect to a server to share OM data among other computers that operate in disconnected mode.
+Analyst: Just to confirm, systems supporting OM should provide the ability for computers in disconnected mode to reconnect to a server to to share OM data among other computers that operate in disconnected mode?
+EndUser: Yes, that's it.
+Client: Er, The thing is, OM data ought to be synchronized...
+Analyst: Okay, noted.
+Client: So that all instances you know of OM applications working from the same server are able to share and use the same data, you know?
+Analyst: Makes sense.
+EndUser: The thing is, we'd want systems supporting OM to be capable of using configurable, domain-specific vocabulary.
+Analyst: Okay.
+Analyst: What are your expectations regarding outbreak management functional requirements?
+Client: Analysis, Visualization, and Report Generation...
+Analyst: Makes sense.
+Client: Er, And systems supporting kind of OM should enable investigators to produce both aggregated.
+Analyst: Okay.
+Client: Erm, And individual reports about affected entities and events.
+Analyst: Mm-hmm.
+Client: Yeah, so system Integration and Data Exchange: OM information should be exchangeable, based on established standards, between systems involved in the basically investigation, identification, basically confirmation, and and uh reporting of a health event.
+EndUser: Do we really need that? I'd leave it out, um at least for the first version.
+Client: We do need it, it's important um for our people.
+Analyst: Let's leave that open for now, I need to kind of check sort of with my team.
+Client: System Security and Availability: Security of OM data uh includes the protection of data from from corruption and access by unauthorized individuals, as well as i mean the protection of the actual systems supporting uhm OM from kind of sabotage actually or other failure. A plan will need to be established for continuing activities when systems supporting OM are unavailable.
+Analyst: So, let's talk about health event data. What do you need there?
+Client: When a health event is investigated, it should be assigned an event identifier (i.e—
+EndUser: Hold on, does that apply to mobile too?
+Client: Where was I... yes, event ID) that's unique within erm the jurisdiction.
+Client: Data describing the health event should be captured,
+Analyst: Okay, noted.
+Client: Including the reason for for the investigation, that's the main thing.
+Analyst: Makes sense.
+Client: So [laughter] the category of event (e.g.
+Analyst: Yeah.
+Client: Environmental, infectious), the date the event began, the suspected agent like (if actually known) or investigation focus, the geographic area impacted by the event, as um well as um the event status (e.g., open, closed).
+Analyst: What erm are your expectations regarding entity data?
+Client: Well, systems supporting OM ought to have the capability to capture demographic data about persons involved in an OM investigation—
+EndUser: Wait, sorry— [crosstalk]
+Client: Yeah, so, including: Subject like ID, name, address, date of birth, gender, phone number, race, ethnicity, and country you know of citizenship.
+EndUser: Systems supporting OM should have the capability to uhm capture data about organizations (e.g., a uh local health department, a university, a professional association) involved in an an OM investigation, including: organization name, location, and contact information.
+TechLead: I'm not convinced that's necessary, honestly.
+EndUser: We do need it, it's important for our people.
+Analyst: Okay, we'll keep it in then.
+EndUser: I'd like systems supporting OM to have the capability to uhm capture data about actually any animals involved in an um OM investigation, including: type (dog, you know monkey, etc), age, gender, owner's name and address, color, weight, and species, you know?
 Analyst: Right.
-Client: Well, OM data sort of ought actually to be synchronized so that all instances of OM applications working from the same server are able to share and use the same data.
-EndUser: Er, I mean, the sort of idea is that systems supporting OM will be capable of using configurable, domain-specific vocabulary, you know?
-Analyst: Let's move on to outbreak management functional requirements. What uh do you have in mind?
-Client: So, analysis, Visualization, and Report Generation: Systems supporting OM should kind of enable investigators to produce both um aggregated, right—
-Analyst: Er, Hold on, let let me share my screen again.
-Analyst: Hold on, does kind of that apply i mean to mobile too?
-Client: Um, Right, so, kind of and individual reports erm about affected entities and well events.
-EndUser: Erm, I mean, system Integration and Data well Exchange: OM OM information should be um exchangeable, basically based on established standards, between systems uhm involved in the investigation, um identification, confirmation, and reporting of a health event.
-Client: Do we really sort of need that? I'd leave it out, at least for the um first version.
-EndUser: Without it the whole thing doesn't make much i mean sense for us.
-Analyst: Erm, Fine, sort of let's drop it for now.
-EndUser: Uh, System Security uh and Availability: Security of of like OM data includes the protection um of data like from corruption and access by unauthorized individuals, i mean as well erm as er the protection uhm of the kind of actual actually systems supporting OM from sabotage um or other failure. A plan should be established for continuing activities when systems supporting OM are unavailable, that's the main thing.
-EndUser: But what if—
-Analyst: [crosstalk] sorry.
-Analyst: Alright, health event data. Thoughts?
-EndUser: When a health event is investigated, it should be assigned well an event identifier basically (i.e., Event ID) that's unique within the jurisdiction.
-Analyst: Just to confirm, when a health event is investigated, [pause] it should be assigned an event erm identifier (i.e., Event ID) erm that's unique within the jurisdiction?
-EndUser: Yeah, exactly.
-Client: Er, Data describing the health event actually should be captured, including the reason for the investigation, the the category of event (e.g. environmental, infectious), the date the event began, the suspected like agent actually (if known) or investigation i mean focus, the geographic area impacted by the um event, as well um as the event status (e.g., open, closed).
-Analyst: Er, So, let's talk you know about entity data. What do you need er there?
-Client: Sorry, I just wanted to—
-EndUser: —no, you go.
-Client: Um, Yeah, so the idea i mean is that systems supporting OM will have basically the capability to capture demographic data about persons involved in an kind of OM investigation—
-EndUser: Hold on, does does that apply to mobile too?
-Client: Erm, Yeah, you know so, including: Subject ID, uh name, uhm address, date of birth, gender, phone uh number, race, ethnicity, and country of of citizenship.
-Client: Uh, So, systems supporting OM has to have the capability uhm to capture data about organizations (e.g., a local health department, a sort of university, a professional uh association) involved in an OM OM investigation, including: sort of organization name, location, uhm and and contact uhm information, that's pretty important for us.
-EndUser: Do erm we really need that? I'd leave actually it out, at least for um the first version.
-Client: Um, Without it the whole thing doesn't make much sense for us.
-Analyst: Uh, Let's leave that open for now, I I need to check with like my team.
-EndUser: I mean, systems supporting i mean OM would kind of have to have the capability to capture data data about any basically animals involved um in an kind of OM investigation, including: type (dog, monkey, etc), age, gender, owner's name and address, color, weight, um and species.
-Analyst: Got it.
-Analyst: Er, What are your expectations regarding travel history like and conveyance data?
-EndUser: Travel history i mean data to be collected for an animal or or basically object should include shipping invoices, animal shelter delivery kind of and adoption receipts. And um delivery schedules (including like delivery actually vehicle and driver information).
-Analyst: Right.
-EndUser: Erm, I I mean, information about each leg of a trip, as well as the parent information about the trip, should be captured.
-TechLead: Er, That sounds like a lot of of work uh for little value.
-EndUser: Er, I'd really like to keep [noise] it.
-Analyst: Okay, we're not going to uhm solve er this today. Let's actually park it and come uhm back to um it.
-Analyst: Is that all all for travel history and conveyance data?
+Analyst: Is that all for entity data?
 EndUser: Nothing else, I think.
-Analyst: Um, Let's stop here um for today. actually I'll write this up and we continue next erm time.
+Analyst: Right. And like travel history and conveyance data? Anything specific?
+EndUser: Um, For us, so travel uh history data to sort of be collected for an animal,
+Analyst: Okay.
+EndUser: Or object should include shipping kind of invoices.
+Analyst: Right.
+EndUser: Uh, Plus animal shelter delivery and adoption receipts, if um that makes sense.
+Client: Got it.
+EndUser: Sorry, someone just knocked on my door, go ahead.
+EndUser: And delivery schedules (including delivery vehicle and driver information).
+Analyst: Got it.
+Client: The thing is, uh information about each leg of a trip, as well well as the parent information about the trip, should be captured.
+EndUser: That sounds like a a lot of work for little value.
+Client: Without it the whole thing doesn't make much sense for us.
+Analyst: Okay, we take it out of the erm scope.
+Analyst: Okay, we're out of time. I'll send send a summary and we'll pick up the rest next er time.

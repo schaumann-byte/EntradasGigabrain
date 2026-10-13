@@ -1,81 +1,122 @@
 Meeting 1 of 2 (kickoff)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Erm, Hi everyone, thanks for coming. The idea today is to actually understand what i mean you need for uh THEMAS The The Energy Management System.
-Client: It provides a technical description of all so well ftware requirements of the kind of system, provides traceability of software capability requirements kind of to uh the uhm Statement of Work, and and identifies external interfaces. I I uh t like provides product perspectives, product functions, user characteristics, general basically constraints, and assumptions and dependencies of the system. The THEMAS system is a system that operates erm independent of any other system, or any components of the you know heating and cooling actually system to which it's attached.
+Analyst: Hi everyone, thanks for coming. The idea today is to understand actually what you you need for THEMAS The Energy actually Management System.
+Client: It provides a technical like description of all so ftware requirements of like the system, kind of provides traceability of software capability requirements to the uh Statement of Work, and identifies external interfaces. I t provides product perspectives, product functions, user sort of characteristics, general constraints, and assumptions and dependencies of the system. The THEMAS system is sort of a system that operates independent of any i mean other system, uhm or any basically components of the heating and and cooling system to actually which it is attached.
 Analyst: Okay, what about load h/c um unit definitions?
-EndUser: So, we uh need the THEMAS system uh to control t he heating and cooling units that are defined as part of the THEMAS system.
-Client: We need the system [pause] to read this file and the definitions shall be derived from the initialization data in the um file, that's the main thing.
-Analyst: Uhm, Okay, what about load thermostat definitions?
-Client: Each thermostat ought to have a unique identifier by which that thermostat um is identified in the the THEMAS system.
-Analyst: Mm-hmm.
-Analyst: And uhm load utilization parameters, how do you see basically that working?
-Client: Honestly, it'd be nice if well there could be a maximum number i mean of heating or cooling u nits that can be on at any given time.
-Analyst: Uh, Anything else on load utilization parameters?
-Client: No, I think that's it.
-Analyst: Okay, what about set overtemp values?
-EndUser: Erm, We need the kind of THEMAS system to ensure the temperature sort of reported by a given thermostat shall kind of not uh exceed a maximum deviation value of 3 degrees Fahrenheit.
-TechLead: Hmm, I'm not sure about that. I'd say we need the THEMAS system to ensure the temperature reported by a given thermostat shall not exceed a maximum deviation value uh of 15 degrees Fahrenheit.
-EndUser: Hmm, I don't know, I'm pretty sure it was 3 degrees.
-Client: Okay, we're not going to solve this today. Let's park it and come back to it.
-Analyst: Erm, Is that all for set overtemp [crosstalk] values?
-EndUser: That's all for now.
-Analyst: Okay, what about establish valid temperature range?
-EndUser: I'd like er the THEMAS system i mean to only respond to temperatures that are within a erm reasonable value.
-TechLead: That sounds well like well a lot of work for little value.
-EndUser: Without it the whole thing doesn't make much sense for us.
-Analyst: Okay, we take it out well of the scope.
-TechLead: Wait, did anyone else lose er the audio for a second?
-Analyst: Um, Right. And you know initialize system? Anything specific?
-Client: If the settings reflect a need erm for a heating or cooling unit to be turned o n, the process ought sort of to issue a request to turn on the appropriate unit.
-Analyst: So if actually I got it right, if the settings reflect a need for a heating or cooling unit to be turned o n, the process ought um to issue a request to turn on the appropriate unit?
-Client: Right, correct.
-Client: Uhm, Honestly, then , it ought to check all the thermostats and determine if um any thermostat's settings require a heating or cooling unit to be turned on back on.
-EndUser: That sounds like a lot of work for little value.
-Client: We do sort of need uhm it, it's important uhm for our like people.
-Analyst: Erm, Fine, let's uhm drop er it for i mean now.
-EndUser: When the THEMAS system is initialized, it should first turn off all the heating and cooling units.
-Client: Uh, The idea is that this determination will be be made in accordance with the the rules outlined in section 3.1.4.1 and 3.1.4.2.
-Client: It should then read the current temperature values and current temperature settings er of each thermostat.
+EndUser: So, we need the THEMAS system to control t he heating.
+Analyst: Got it.
+EndUser: And cooling units well that are defined as part of the um THEMAS system.
+EndUser: The uhm system ought to read this actually file...
+EndUser: And the definitions shall be derived uh from the initialization actually data in um the file.
 Analyst: Right.
-Analyst: Okay, what about like validate temperature?
-EndUser: The THEMAS system has to only respond to temperatures from the thermostats that that are within the specified valid range.
-Client: A current actually temperature value that well is i mean received from an individual thermostat will need to be compared er to the valid temperature range values. And otherwise, the THEMAS system should output a valid temperature you know status.
-EndUser: Uhm, Well, um a temperature setting value that like is received from an individual thermostat ought er to be compared to the valid uh temperature range values.
-Client: Also, if the temperature setting value is strictly less less than the lower value of the erm valid temperature range or if the temperature setting value is strictly greater than the uh upper value of the valid temperature range—
-TechLead: Can you repeat that? You cut out uh a bit.
-Client: Yeah, so, then the you know THEMAS system shall identify the sort of temperature setting as an invalid i mean temperature and um shall output an invalid temperature status.
-Analyst: Can you walk me through determine temperature status?
-EndUser: Er, Temperatures that exceed the overtemperature limits should be reported as such.
-Analyst: So if I got it uh right, temperatures that exceed the overtemperature erm limits should be reported as such?
-EndUser: Yep.
-Client: Erm, I'd like the THEMAS i mean system to determine wh en a reported temperature or a changed temperature basically setting exceeds the limits set by the overtemperature values.
+TechLead: True.
+EndUser: Uh, Oh, and about load thermostat definitions, each thermostat has to have kind of a unique identifier i mean by which that thermostat um is identified in in um the THEMAS system.
 Analyst: Mm-hmm.
-Client: For us, the THEMAS system um ought to compare the reported um temperature value to the temperature well setting—
-Analyst: Sorry, go on.
-Client: Anyway, as I was saying, and detect when the temperature value uhm exceeds the specified like limits.
-Client: So, if LO = T = erm UO, then this process would have to output the temperature status.
-TechLead: That sounds like a lot of work for little value.
-Client: We do need it, it's important for our people.
-Analyst: Alright, it it stays.
-Client: Yeah, so in this case this process um would have to output the the condition of the temperature limit having been exceeded.
-EndUser: Er, Do we really need that? I'd leave it out, at least for the first version.
-Client: I'd really like to keep it.
-Client: Let's take this offline and decide later.
-Client: Uh, Oh, and about determine h/c mode, when the current temperature value exceeds uh the uhm current temperature setting by a pre -defined amount, the THEMAS system should activate the the appropriate heating or cooling unit.s. And to clarify these conditions, the following definitions like will i mean be used: LT : Lower Trigger kind of Value = TSET - TD UT : Upper Trigger Value = TSET + TD Condition sort of 1: LT = like T = UT like This condition indicates the thermostat's current temperature setting erm is satisfied.
-Analyst: Got it.
-EndUser: Er, If this condition is true, actually then this module should output a request to turn on the well heating unit—
-TechLead: Can erm you repeat that? basically You cut cut out a bit.
-EndUser: Anyway, as I was saying, if LO = T LT uh or the erm cooling unit if UT i mean T T = actually UO.
-Analyst: Erm, And determine status of all h/c units, how do you see that working?
-Client: Uhm, If that thermostat still needs a heating o r cooling unit turned like on, this process i mean might submit a request i mean to turn that that unit well on.
-Analyst: Got it.
-EndUser: Basically, when a request to turn on or off a heating or cooling unit, the following processing will occur. And if the maximum number uhm of heating or erm cooling uhm units is not running, this process will generate a request to turn on the requested unit.
+Analyst: Alright, load utilization parameters. Thoughts?
+EndUser: There might be sort of a kind of maximum number of heating.
 Analyst: Okay.
-EndUser: For us, we'd want the THEMAS system to control each of the heating— sorry, I lost my my train of thought.
-EndUser: Er, We need the— actually, actually we need the THEMAS system to maintain the ON/OFF status of each heating and cooling unit, that's the main thing. And i'd like the THEMAS system to limit the the number er of heating or cooling units t hat may be actually running simultaneously.
-EndUser: For us, if the queue is not empty, kind of this process will need to to remove one request from the LIFO queue and check the basically current state er of the thermostat for which the queued request was made, that's the main thing.
-TechLead: That sounds like a lot of of work basically for little value.
-EndUser: We do need it, it's important for our people.
-Analyst: Alright, it well stays.
-Analyst: Let's stop here for today. um I'll write this up up and we continue next time.
+EndUser: Or cooling u basically nits that well can be on at any given time, you you know?
+Analyst: Can you walk me through set overtemp values?
+EndUser: Erm, The THEMAS system has to ensure the temperature reported by a given thermostat shall not exceed a maximum deviation value of 15 degrees Fahrenheit.
+TechLead: I disagree a bit here. We need the THEMAS system to ensure the temperature reported by a well given thermostat shall not exceed a maximum deviation value of 3 degrees Fahrenheit.
+EndUser: I'd still go with 15 uh degrees, honestly.
+Analyst: Okay, so we'll go with 3 degrees. Let me write it down: the idea is that the THEMAS system will ensure the temperature reported by um a given thermostat shall not exceed a maximum deviation value of 3 degrees Fahrenheit.
+Analyst: What um are your expectations regarding uh establish valid temperature range?
+Client: We'd want the i mean THEMAS system to only respond to temperatures that are within a i mean reasonable value, that's pretty important for us.
+EndUser: I'm not convinced that's necessary, honestly.
+Client: We do need it, well it's important for our people.
+Analyst: Uh, Fine, let's basically drop it for now.
+Analyst: And initialize system, i mean how do you see that working?
+Client: Um, One thing is, if the settings reflect a need for a heating,
+Analyst: Right.
+Client: Or cooling unit to be turned o n.
+Analyst: Makes sense.
+Client: Plus the process shall issue a request to turn on the appropriate unit.
+Analyst: Right.
+EndUser: Right, yes.
+Client: Then , it would have to check all er the thermostats and determine if any thermostat's settings require actually a heating or cooling unit to be turned on back on, you know?
+TechLead: That sounds like a lot of work for little value.
+Client: Um, Without it you know the whole thing doesn't make much sense actually for us.
+Analyst: Okay, we take it out of the scope.
+Client: Uhm, I mean, when the THEMAS system is initialized,
+Analyst: Okay, noted.
+Client: So it shall first turn off all the heating and cooling units, that's the main thing.
+EndUser: Uh, This This determination should you know be be made uhm in accordance uhm with the like rules outlined in section 3.1.4.1 and er 3.1.4.2.
+EndUser: Okay um so it ought to then read the current temperature values,
+EndUser: And current temperature settings of each thermostat.
+Analyst: Is that all for initialize system?
+Client: That's all for now.
+Analyst: Right. And validate temperature? uh Anything erm specific?
+Client: The THEMAS system uhm has to only respond um to temperatures from the thermostats that are within the specified valid range, that's the main thing.
+EndUser: Right.
+Client: For us, a current temperature value that is received from an individual thermostat would have to be compared to the the valid erm temperature range er values.
+Analyst: Got it.
+EndUser: Uh, Otherwise, the like THEMAS system would have to output a valid temperature status.
+Client: True.
+Client: Um, I mean, a temperature setting er value that's received from an individual thermostat ought to be compared to the valid temperature range values.
+Analyst: Mm-hmm.
+TechLead: Same for us.
+Client: For us, if the temperature like setting value is strictly less than the lower value of uh the valid temperature range uh or if the temperature setting value is strictly greater than the upper value of the valid temperature range, then the THEMAS system would have to identify the temperature setting as an invalid temperature and uh shall output an invalid temperature status.
+Analyst: Is actually that all for validate temperature?
+EndUser: No, I think that's it.
+Analyst: Alright, determine temperature status. Thoughts?
+Client: Uh, Temperatures that exceed the overtemperature limits will uh need to to be reported as such.
+Analyst: Makes sense.
+Client: We'd want the THEMAS system to determine wh en a reported temperature,
+Analyst: Got it.
+Client: Or a changed temperature setting exceeds the limits set by the overtemperature actually values.
+Analyst: Makes sense.
+TechLead: Yes, please.
+EndUser: Uhm, The THEMAS system has to to compare the reported temperature value to the temperature setting and detect when the temperature i mean value exceeds the specified limits.
+Analyst: Yeah.
+TechLead: Yes, please.
+EndUser: For us, basically if LO = uh T = UO, then this process will need to output the temperature status.
+TechLead: Do we really need that? I'd leave it i mean out, at least for well the first version.
+EndUser: Um, I'd really like to keep it.
+Analyst: Er, Okay, we're not going to solve this today. Let's park it and come back to it.
+EndUser: Erm, In this case this process will need to output the condition of the temperature limit having been exceeded, that's the main thing.
+Client: That sounds like a lot of work kind of for well little value.
+EndUser: I'd really like to keep it.
+Analyst: Fine, let's drop it for now.
+Analyst: Uhm, Anything else on determine temperature status?
+EndUser: No, I think that's it.
+Analyst: Alright, determine like h/c mode. um Thoughts?
+Client: When the current temperature value exceeds the um current temperature setting by a pre -defined amount, the THEMAS system would have to activate the appropriate heating or cooling unit.s.
+EndUser: Okay.
+Client: To clarify these conditions, the following definitions will be used,
+TechLead: Yeah.
+Client: And also um [crosstalk] LT : Lower Trigger Value = TSET uhm - TD UT.
+Client: Then upper Trigger Value = TSET + TD Condition 1.
+TechLead: Mm-hmm.
+Client: Uhm, Uh, and LT = T = UT This condition indicates the thermostat's current temperature setting is satisfied, you know?
+Analyst: Right.
+EndUser: That too, yeah.
+EndUser: If like this condition is like true...
+Analyst: Okay.
+EndUser: Then this module shall erm output a request to turn turn on the heating unit if LO = T LT or the cooling unit if UT T = UO.
+Analyst: Alright, determine status of all er h/c units. Thoughts?
+Client: If that thermostat still needs a actually heating o o r cooling unit turned on, this erm process could maybe submit a request to turn that unit unit on.
+Analyst: Right.
+EndUser: So when a request to turn i mean on or off a heating—
+Client: Can you repeat that? You cut out a bit.
+EndUser: Er, Anyway, as I was saying, or or cooling unit, the following processing will occur.
+EndUser: Erm, And if the i mean maximum number of heating,
+Analyst: Got it.
+EndUser: Or cooling units isn't running.
+Analyst: Right.
+EndUser: And also this process will generate a request to turn uhm on the requested erm unit.
+Analyst: Makes sense.
+EndUser: Uh, Well, the idea is that the THEMAS system will control i mean each of the heating... well, anyway, we can come uhm back to that.
+Client: The THEMAS system has to maintain kind of the ON/OFF—
+TechLead: Can uhm you repeat that? You cut out a actually bit.
+Client: Er, Right, so, status of each heating and cooling unit.
+EndUser: The idea is that the kind of THEMAS system will limit the number of heating,
+Analyst: Yeah.
+EndUser: Um, Or cooling units t hat may be running simultaneously.
+Client: That too, yeah.
+EndUser: Um, If the queue isn't i mean empty, this process should remove one request from the LIFO queue and check the current state of the thermostat for which the queued request was made.
+TechLead: I'm not convinced that's necessary, honestly.
+EndUser: Er, Without it the whole thing doesn't make kind of much sense for us.
+Client: Okay, we're not going to solve this today. Let's park it and come back to it.
+Analyst: Okay, we're out of time. I'll send a summary and we'll pick up the rest next time.

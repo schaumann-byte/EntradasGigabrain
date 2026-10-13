@@ -1,40 +1,45 @@
 Meeting 2 of 4 (follow-up)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Okay, welcome back. Let's continue uh with UIC Projec t uh EIRENE.
-Analyst: Er, Give me a sec, my headset is acting up.
-Analyst: Er, Just to recap, in the last well meeting we covered railway specif um services and facilities, coverage like and handover and cell selection.
-Analyst: Okay, next next you know topic: mmi functions. How [crosstalk] basically should that work?
-Client: Erm, Upon detection (automatically or based on a you know list stored in the Cab radio) of the kind of extra on-train functions for equipment physically connected actually to to you know the Cab radio, a a USSD message would have to be sent by the Cab radio after activation actually of the registration or deregistration function.
-Analyst: Let's move on to handling of calls. basically What basically do you have in mind?
-Client: The Cab radio you know has to arbitrate between calls when: an incoming call is received whilst basically the Cab radio is in an on-going um call. Also, . Also, a Cab radio user attempts to initiate a call whilst the Cab radio is in you know an on-going sort of call.
-Client: Er, We need it to be possible to store a priority in association with a stored number.
-EndUser: Erm, That actually sounds well like a um lot of work for little value.
-Client: Uhm, Without it the whole thing doesn't make much sense for us.
-Analyst: Uh, Let's leave er that that open for now, I need to check with my team.
-Client: Replacing [pause] the uh handset should result in uh the—
-EndUser: Sorry, go [noise] on.
-Client: Where was I... yes, outcomes listed in Tables i mean 5A-2 and 5A-3.
-Analyst: Is that i mean all for handling um of calls?
-Client: That's all for now.
-Analyst: Er, Let's cover environmental sort of and um physical now. What level do you expect?
-TechLead: The The aerial and and any other equipment mounted uhm external to the train could maybe be be capable of withstanding extremes actually of temperature from -40C to +70C.
-Analyst: Got it.
-TechLead: An actually emergency power supply ought to be provided for Cab radios which will er enable the driver's radio to continue to operate like for a um period of a certain number of of hours sort of in basically case of failure of the train's main power uh supply, based on the following cycle:. uh Don't quote me on the uh number, I'll confirm it.
-Client: Erm, Okay so the you know Cab radio er ought to pass electrical tests as defined in.
-TechLead: Do we really need that? I'd leave it out, at least for the the first version.
-Client: We do do need it, it's important for kind of our people.
-Client: Um, Okay, we're not going i mean to solve this today. Let's park um it and come back like to it.
-Analyst: Uh, Okay, next topic: other cab erm radio functions. How should that work?
-EndUser: Um, Incoming calls uh to the Cab radio would sort of have uhm to be routed to the correct on-train uhm user or device using information contained in the sub-addressing field.
-EndUser: A means of directed network selection you know should be provided to ensure that the MS sort of registers with er the required network.
-Analyst: Okay, noted.
-Client: Erm, If um directed network selection is implemented uh and voice [noise] calls are ongoing at the time uh when the external device attempts to trigger a network change, an audible and visual indication will need to be be given sort of to the driver and network change shall be deferred until the call is like terminated erm or until coverage of the current network is lost.
-EndUser: Wait, I don't think that's like right. If directed network selection is implemented and voice calls are ongoing at er the time when the external device attempts to trigger a network change, an audible and and visual indication should be given to the supervisor and actually network change shall be deferred until the call is terminated or or until coverage uh of the current network is lost.
-Client: Hmm, I don't know, I'm pretty sure sure it was the driver.
-Analyst: Uh, Alright, actually the driver it is. Just so it's clear: if directed network selection is um implemented and voice calls are ongoing at the um time when when the external device sort of attempts to trigger a network change, an audible and visual indication ought erm to actually be given like to the uhm driver and basically network change uh shall be deferred until the call is terminated or until coverage of the current network is lost.
-EndUser: Erm, I'd like the the Cab radio to be uh capable of selecting the most actually appropriate mobile radio network automatically using the selection criteria erm stated in section 10.5.
-Client: Do we really need that? I'd leave it out, at i mean least for the first version.
-EndUser: Without it the whole thing doesn't make much sense for us.
-Analyst: Erm, Let's take this offline um and decide later.
-Analyst: Let's stop here for uh today. I'll write this this up and we continue next time.
+Analyst: Hi actually everyone, thanks for making time again. Let's pick up where we left off i mean on UIC Projec t er EIRENE.
+Analyst: Can everyone um see erm my screen?
+Analyst: So, last time we talked about railway specif services and facilities, coverage and handover and cell selection. We also left a few things open.
+Analyst: And mmi functions, how do you see that actually working?
+Client: Er, Upon detection (automatically or based on er a list stored in the Cab radio) of the um extra on-train functions for equipment physically basically connected to the the Cab radio, a USSD message will need to be sent sent by the Cab radio after activation of the registration or or deregistration function.
+Analyst: Okay.
+Client: Something on on handling of calls: the thing is, uh the Cab radio has to arbitrate between calls kind of when: an incoming call um is received whilst the Cab radio is in an on-going call—
+TechLead: Hold on, does that apply to mobile too?
+Client: Yeah, so, ; a Cab radio user attempts to initiate a call whilst the Cab radio is in an on-going basically call.
+Client: Erm, Okay basically so um it would have to be possible to store a priority in association with a stored number.
+TechLead: That sounds you know like a lot of work for little value.
+Client: I'd really like to actually keep you know it.
+Client: Okay, we're not going to solve erm this today. Let's well park it and come back to it.
+Client: Honestly, replacing the handset should result in the outcomes listed in Tables 5A-2 and 5A-3. [noise]
+Analyst: Okay.
+Client: Oh, and about environmental and physical, the aerial and any other equipment mounted external um to to the train might be capable of withstanding extremes of temperature from -40C to +70C.
+Analyst: Can you be more specific?
+Client: Erm, I don't know, something reasonable.
+Client: Er, For us, we'd want an emergency power supply to be provided for Cab radios,
+Analyst: Right.
+Client: And which uh will enable the driver's radio to continue to operate you know for a period of a certain number of hours in the event of failure of the train's main power supply, based on the following cycle. er Don't quote me on er the erm number, I'll like confirm it.
+TechLead: So, the Cab radio kind of has to pass electrical tests as defined kind of in.
+Client: I'm not convinced uh that's necessary, honestly.
+TechLead: I'd really like to keep it.
+Client: Let's leave uh that open for now, I well need to check with with my team.
+Analyst: Okay, next topic: other cab radio functions. How should that work?
+EndUser: Incoming calls to the Cab radio will need to be uhm routed to the correct on-train kind of user or device using information contained in i mean the sub-addressing field.
+Client: Uh, A means of directed network selection should like be provided to ensure that the MS registers with the required network.
+Analyst: Right.
+EndUser: Good point.
+EndUser: If directed network selection is implemented and voice calls are sort of ongoing at the time basically when the external device attempts to well trigger a network change, an audible and visual indication would have to be given to the kind of supervisor and network change shall uh be deferred until the sort of call uh is terminated or until coverage of the current um network is lost.
+Client: Um, Hmm, I'm not sure about that. I'd say if directed network selection uh is implemented and voice calls are ongoing at the time when the external device attempts to trigger a a network sort of change, an audible and visual indication ought to be given to the driver and network change shall be deferred until the call is terminated uh or until coverage of the current network is lost.
+EndUser: Hmm, I don't know, I'm pretty sure it was was the supervisor.
+Analyst: Okay, we're not going to solve this today. Let's park it uhm and come back to it.
+EndUser: Um, The Cab radio has to be capable of selecting the most appropriate mobile radio network automatically using the selection criteria stated in uhm section 10.5.
+Client: Sorry, I just wanted to—
+EndUser: —sorry, go ahead.
+Client: That sounds like a lot of work for little value.
+EndUser: I'd really like to keep it.
+Analyst: Let's take this offline and basically decide later.
+Analyst: Wait, did anyone else lose the audio for a second?
+Analyst: Okay, we're out of time. I'll send a summary and we'll pick up like the rest uhm next time.

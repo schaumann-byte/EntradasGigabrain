@@ -1,63 +1,73 @@
 Meeting 4 of 4 (review)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Okay, this uh should be our last session on like Gemini, let's go actually through the the remaining points.
-Analyst: Erm, Quick recap well from last time: we went over user constraints, reliability like and availability you know requirements and maintainability.
-Analyst: Coming back to capacity from last time, it's decided: each node ought uhm to have the capability to run at all um operation levels.
-Analyst: Uhm, Okay, next uh topic: installation uh aspects. How should that work?
-EndUser: Every system uh has to thus erm be able to supply its its current version you know upon request.
-EndUser: Uhm, Just as you know a um reminder, sort of access basically from any user station you know won't make user stations in principle identical um and software configurable as um the user station of this or that um subsystem.
-Analyst: What about modularity? Any constraints we should know about?
-TechLead: Uhm, I mean, at the same time, the possibility ought to exist to acquire information about other parts of um the system (for example, telescope coordinates) (as mentioned in the control flow requirements in um Section 3.1.1).
-TechLead: Um, On other information um flow, other astronomical information er such as that coming from sky uh field monitors, autoguider cameras and sky monitoring devices such as cloud and seeing monitors basically would have to not also be capable of being available.
-TechLead: Er, Something on security and safety requirements: the software might quickly bring er the Gemini system to a safe state upon notification of such basically danger, if er possible.
-Client: Yeah, and also—
-Analyst: [crosstalk] sorry.
-Client: We need in general this to require uh mechanical hard stops, electrical interlocks, [pause] electrical hard limit switches, soft limit switches, software limits, and watch dogs.
-Analyst: Uh, So if kind of I got it right, like i'd like in general uh this to require mechanical actually hard uh stops, electrical interlocks, electrical hard limit switches, soft limit switches, software limits, and watch dogs?
-Client: Yep.
-Client: Something on remote operations: honestly, there might be some form of security to control you know access to system features, possibly uh restricting some operations to specific er remote i mean sites (e.g. Hale Pohaku or Hilo basically in er Hawaii, Cerro i mean Tololo in Chile, well etc.), if like possible.
-Analyst: What exactly do you mean kind of by that?
-Client: We'll figure that sort of out kind of later, I guess.
-Analyst: Um, Anything er else uh on remote uh operations?
-EndUser: Nothing else, I think.
-Client: Er, Oh, about testabilty from last time, I checked: this plan should address all areas of testing from design, acceptance, commissioning through to hand-over.
-Analyst: What about operation in uh failure mode? Any well hard limits there?
-TechLead: Uh, Performance The performance of of error-mode recovery is specific to the um subsystem and basically is defined in the Functional basically specification for that subsystem. Normally, there's no recovery possible from a fatal error except to shut-down and then restart the subsystem. But, for an instrument failure, it may be possible sort of to continue operation by rescheduling to use observations that don't require that particular instrument For serious errors, like it it may be possible to to um continue operation with degraded performance. For example, failure of kind of automatic tracking may you know require um manual tracking. Also, other errors may result in operation uh with a different instrument Under like normal conditions, the number of erm warnings should you know be small. The system should monitor the rate of warning messages since uh an increase might indicate well that some tuning or maintenance is um appropriate. er Ideally, basically such conditions should be noted by the subsystems before er reaching the OCS level. Failure conditions shouldn't erm cascade. That's, failure of one subsystem shouldn't affect erm other, working, subsystems, including uh communication links.
-Client: Er, Do we really need that? I'd leave it out, uh at least for the first version.
-TechLead: I'd really basically like to erm keep kind of it.
-Client: Erm, Wait, did anyone like else lose the audio for a second?
-Client: Er, Let's take this this well [laughter] offline and like decide later.
-Analyst: Anything else else on operation in failure mode?
-Client: No, I think that's it.
-EndUser: Erm, Oh, uh and about normal operation, start-up and shut-down. like There actually are start-up and shut-down procedures that actually would have to exist erm at many different levels: Cold start-up, starting the system from uh scratch (including time to download all uhm software) uh should take about 5 erm minutes. This doesn't include time to start-up the telescope or instruments. Warm start-up, kind of starting from scratch actually but uh also excluding software download time should take about 1 minute. Telescope start-up, measured from end of cold or warm start-up i mean should be about uh 4 minutes. Instrument uhm start-up, measured from end of telescope start-up, should take 2 like minutes basically or less.There must be be a way to shut down all all subsystems (hardware and kind of software). All start-ups and shut-downs are are to be automatically logged with uh time stamps, to allow uh for statistics on system availability, if that makes sense.
-Client: Do actually we really well need need actually that? I'd leave it out, at least for uhm the first version.
-EndUser: Er, We do need it, um it's important for our people.
-Analyst: Okay, we're not going um to solve this today. Let's park it and come back to it.
-Client: Yeah, and also—
-Analyst: —no, you go.
-Client: Uhm, Before I forget, on harware requirements, the computer hardware used used for development you know ought to actually conform to the following: sort of Workstations must match specified software standards and present a well-designed development you know environment, including cross-support for basically VxWorks development, if um needed. Also, .Workstations are expected to be state-of-the-art systems (CPU, communications basically support) like in a scaleable family. This allows the migration of of development systems to advancing technology, that's pretty important for us—
-TechLead: Erm, Wait, sorry— you know [crosstalk]
-Client: Where was er I... yes, .It's assumed that workstations support Ethernet IEEE-802.3 and FDDI interfaces for communications; Internal well data formats must be compatible across workstations used um for like development; SCSI-interface basically peripherals are to be available; .Reliability, manufacturer like support, and upgrade capability of you know the development systems will be considered when selecting the final target kind of systems.
-Analyst: Er, Okay, what about operating system?
-Client: Um, Software um below the IOC level. There is is likely to be software below actually the IOC level, but it should not require downloading, except um possibly for upgrades, typically being placed into ROM uh or FLASH memory. erm Any access to this er embedded software while it's connected to the system is strictly sort of through software in the IOC. er From outside the IOC this software appears as part kind of of the electronics. Although this software isn't considered part of of the um Gemini uh software, it's obviously an uh advantage (for maintenance purposes) erm to have it conform um to the requirements of Gemini software.
-TechLead: But what if—
-EndUser: [crosstalk] sorry.
-Analyst: Okay, noted.
-EndUser: Can I jump in on external software packages? basically Archiving. All astronomical uh data are saved into basically the Archiving kind of system. Data storage uhm and transport for astronomical data might be in FITS format. On-line access to the archiver will like be through STARCAT.
-EndUser: All Gemini software well is to be fully documented, internally with appropriate comments, and external er documentation. External documentation would have to not include Unix-style er man man pages.
-Analyst: Alright, communication hardware. Thoughts?
-Client: Erm, The backbone LAN can't be sort of [noise] Ethernet because of bandwidth—
-TechLead: Wait, sorry— um [crosstalk]
-Client: Anyway, as as I was saying, requirements. A FDDI FDDI system you know is recommended for the backbone LAN.
-Analyst: Uhm, So, let's talk about gemini sort of breakdown i mean of tasks. What do you i mean need there?
-EndUser: Each of the Gemini Controls work packages might erm be involved with uhm some aspect of EPICS development ranging from creation of new device uh drivers to database creation and er the design of new uh CA clients.The details of the EPICS work required can be broken down into several broad categories which reflect the nature of the like various work packages, that's um the main thing.
-Analyst: Can you be more more specific?
-EndUser: I don't um know, something reasonable.
-TechLead: Every actually system mustn't thus be able to supply its current version upon request.
-Analyst: Alright, not covered by any any work packages. Thoughts?
-EndUser: Uhm, Okay so host-based Development Tools (CAPFAST, EDD, etc.) Neither will Gemini plan plan uhm on creating new development tools.
-Client: Do we well really need that? I'd [noise] leave it basically out, you know at least for basically the first version.
-EndUser: Um, We do need kind of it, it's actually important for our people.
-Analyst: Let's leave that um open for now, I need to to check actually with my team.
-Analyst: Erm, Great, I think that erm covers it for today. I'll write this this up and send it around.
+Analyst: Hi all. Let's try to close the remaining points on Gemini today.
+Analyst: How was everyone's weekend?
+Analyst: Erm, Quick recap from last time: like we went over user constraints, reliability and availability requirements and maintainability.
+Analyst: Right. And you know installation aspects? Anything specific?
+EndUser: Uh, Okay so kind of we need every system to thus be able to supply its current actually version upon sort of request, if that makes sense.
+Client: Can I jump in on modularity? At the kind of same time, the possibility ought to exist to acquire information you know about other parts of the system (for example—
+EndUser: Yeah, and also—
+TechLead: [crosstalk] sorry.
+Analyst: Hold i mean on, does that apply to mobile basically too?
+TechLead: Uhm, Can we take well a two-minute like break after this topic?
+Client: Anyway, as I kind of was saying, telescope coordinates) (as mentioned in in the i mean control flow requirements in Section er 3.1.1).
+Client: Oh, and about basically security and safety requirements, yeah, so maybe the software could quickly bring the Gemini system to a safe state upon notification of such danger.
+Analyst: Right.
+TechLead: In general this will require mechanical hard stops,
+EndUser: Right.
+TechLead: Uh, So electrical interlocks, electrical hard limit switches.
+Analyst: Yeah.
+TechLead: Soft limit switches, software limits, um and watch basically dogs.
+Analyst: Yeah.
+Analyst: Uhm, Alright, remote operations. basically Thoughts?
+Client: There could maybe be some form of security to control access to system features, possibly restricting some operations to specific remote sites (e.g. Hale Pohaku or Hilo in in Hawaii, Cerro Tololo in in Chile, etc.).
+Client: Uh, Can I jump in on operation in failure mode? Performance well The performance of error-mode recovery is specific to the i mean subsystem you know and is defined um in the Functional specification for that subsystem. Normally, there is no recovery possible from a fatal error except to shut-down and then restart the subsystem. But, for an instrument failure, it may may be possible to continue operation by rescheduling to er use observations that don't require that particular instrument For serious errors, it may be possible to erm continue operation with degraded performance. For example, failure of automatic tracking uh may require manual tracking. Also, other errors may result in operation with a different instrument Under normal conditions, the number of warnings should be small. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is uh appropriate. Ideally, such conditions should be noted by the subsystems before reaching the OCS level. Failure conditions shouldn't cascade. That's, failure of one subsystem shouldn't affect other, working, subsystems, including communication links.
+TechLead: I'm not convinced that's necessary, honestly.
+Client: We well do need it, it's important for kind of our people.
+Client: Let's take this offline and decide later.
+TechLead: Just uh as a [pause] erm reminder, we don't want every system to thus be able to supply its current version upon request.
+Client: On user constraints, access from i mean any user station won't make user stations in principle identical i mean and software configurable uh as the the user station of this or that subsystem.
+Analyst: Uh, What are your expectations regarding normal operation?
+EndUser: Sorry, can can everyone hear me? My connection you know is a bit unstable today.
+EndUser: I mean, start-up and shut-down. There are start-up and shut-down procedures that ought to exist at many different levels: Cold start-up, starting the system um from scratch (including time to download all software) should take about 5 minutes. This doesn't include time to start-up the telescope or instruments. er Warm start-up, starting from scratch um but also excluding software download time should take about 1 minute. Telescope start-up, measured from end of cold or or warm start-up should be about 4 minutes. Instrument start-up, measured well from end of telescope start-up, should take 2 minutes or less.There must be a way to shut you know down all subsystems basically (hardware and software). um All start-ups and shut-downs are to be automatically logged basically with time stamps, to allow for statistics on system availability.
+Client: Do we really need that? [noise] I'd leave it out, at erm least for the first version.
+EndUser: I'd really like like to keep it.
+Analyst: Okay, noted, we keep keep it.
+Analyst: Is that all for normal um operation?
+EndUser: No, I think that's it.
+Analyst: Can you walk me through harware requirements?
+EndUser: The computer hardware you know used for development will need to conform to the following,
+Analyst: Right.
+EndUser: Workstations must match erm specified software standards.
+Analyst: Makes sense.
+EndUser: And er present a well-designed um development environment.
+Client: Yeah.
+EndUser: Uh, and and including cross-support for VxWorks development, if needed; uhm .Workstations are expected to be state-of-the-art systems (CPU, communications kind of support) um in a scaleable family. This allows the migration of development systems to advancing technology; .It's assumed that workstations support Ethernet like IEEE-802.3 and FDDI basically interfaces well for communications; Internal data formats must be compatible across workstations used for development; SCSI-interface peripherals are to be available; .Reliability, manufacturer uh support, and upgrade capability of the development systems will be uh considered when selecting the final target systems.
+Analyst: So if um I got it right, the computer hardware used for development should i mean conform to the following: Workstations must match specified software basically standards and present a well-designed basically development environment, including cross-support for VxWorks development, if needed. Also, .Workstations are expected to i mean be state-of-the-art systems (CPU, communications support) in a scaleable family. This allows the migration of like development systems to advancing technology. Also, well .It's assumed that workstations support Ethernet IEEE-802.3 and FDDI interfaces for communications; Internal data formats must be compatible um across workstations used used for erm development; SCSI-interface peripherals are to be available; .Reliability, manufacturer support. And upgrade capability of the development systems will be actually considered when selecting the final target systems?
+EndUser: Right, correct.
+Analyst: So, let's talk basically about operating system. What you know do you need there?
+Client: Erm, Honestly, software sort of below i mean the IOC level. There's likely to i mean be software below the i mean IOC level, but it should not require downloading, except possibly for upgrades, typically being placed into ROM, right—
+EndUser: Sorry, sorry, go ahead.
+Client: Erm, Right, so, or FLASH memory. Any access to this embedded kind of software while it's connected to the system is strictly through software in the the IOC. From outside the um IOC i mean this software appears as part of the electronics. Although this software isn't considered part of the er Gemini software, it's obviously an advantage (for maintenance purposes) to have it conform to the basically requirements of Gemini software.
+Analyst: Is that all for um operating system?
+EndUser: No, I think that's it.
+Analyst: Can you walk me through external software packages?
+Client: I mean, maybe archiving. uh All astronomical data are saved into the Archiving well system.
+Analyst: Okay.
+Client: And data storage and transport for astronomical data will be in FITS format.
+Analyst: Makes sense.
+Client: Then actually on-line access to the archiver will be through STARCAT.
+EndUser: Oh, and about communication sort of hardware, so, the [laughter] backbone LAN can't be Ethernet because of bandwidth—
+Client: Hold on, does that apply to mobile too?
+EndUser: Yeah, so, uh requirements. actually A FDDI uh system is recommended you know for the backbone LAN.
+Analyst: What are your expectations regarding gemini breakdown of tasks?
+Client: Each of the Gemini Controls work packages might be involved with some aspect of EPICS development i mean ranging from creation of uh new device drivers to database creation and the design of you know new like CA clients.The details of the EPICS uh work required can be broken well down into several broad categories which reflect the nature of the various work packages, um that's the main thing.
+Analyst: Okay, what about not covered by any i mean work packages?
+Client: Uh, Host-based Development Tools (CAPFAST, EDD, um etc.) Neither will Gemini plan on creating new development um tools, right?
+EndUser: That sounds like a i mean lot of work for little value.
+Client: We uh do need it, it's important for actually our people.
+Client: Um, Let's take this offline and decide later.
+EndUser: Uhm, Can we take a two-minute break after this topic?
+Analyst: On capacity, the thing we left open, we're taking erm it out.
+Analyst: Okay, I think we have everything. I'll consolidate and send it around.

@@ -1,37 +1,57 @@
 Meeting 3 of 3 (review)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Okay, this should be our last session on E-GOVERNANCE MISSION MODE PROJECT (MMP) CRIME &, let's go through the remaining points.
-TechLead: Sorry, I'm a couple of minutes late, the previous call ran over.
-Analyst: Quick recap from last time: uh we went over performance and scalability. We also left a a few things open.
-Analyst: Um, What about system availability? Any constraints we should know about?
-TechLead: The planned downtime for the System ought to not exceed <xx> hours per <rolling you know three month period>. The System is considered to be be down if any user is is unable to perform actually any normal System function er and like if this failure is attributed to any component of well the System other than the workstation, if that makes sense.
+Analyst: Okay, this erm should be our you know last session on E-GOVERNANCE MISSION um MODE PROJECT (MMP) CRIME &, let's go through the remaining points.
+Analyst: Er, Quick recap from last time: we went i mean over performance and scalability.
+TechLead: I have the missing info on help module: the solution ought to provide detailed context-sensitive sort of help material for you know all the possible actions and scenarios on all user interfaces in the application.
+Analyst: What about system availability? you know Any hard limits erm there?
+TechLead: The planned downtime for the System would have to not exceed <xx> hours per <rolling three month period>. The System is is considered to be down if any user is unable to perform any normal System function and if this failure basically is attributed to any component of the kind of System other than the workstation.
+EndUser: Right.
+TechLead: Unplanned downtime for the System ought to not exceed <xx hours/minutes> per <rolling three month period>.
 Analyst: Right.
-TechLead: Erm, I mean, unplanned downtime for for you know the System shouldn't exceed <xx hours/minutes> per <rolling three month period>.
+Client: The thing is, uh the number of incidents of unplanned downtime for the System will will well need to not exceed <x> per <rolling three er month period>.
+TechLead: Right, yes.
+TechLead: In the um event of of any software or hardware failure, it ought to be possible to restore the System (with inline i mean synchronization) within at um most <xx> hours.
+Analyst: So if I got it right, in actually the event of any software or hardware failure, it would have to be possible to restore the System (with inline synchronization) within no more than <xx> hours?
+TechLead: Yeah, exactly.
+EndUser: Yes, please.
+Analyst: Uh, Okay, next kind of topic: system functionality. How should that work?
+Client: So, the system would have to support multilingual interface.
 Analyst: Mm-hmm.
-Client: The number of of i mean incidents of unplanned downtime for the System shouldn't exceed <x> per <rolling three month period>. And in the event of any software sort of or hardware failure, it'll you know need to be um possible to restore the System (with inline synchronization) within at at most <xx> hours.
-Analyst: Er, Okay, what about system functionality?
-EndUser: Uhm, Yeah, uhm so we'd want the system to support multilingual interface.
+Client: For us, the system would have to be designed in manner that operational data isn't lost in case of erm any failure of equipment or kind of communication network.
+EndUser: I'm not convinced that's necessary, uhm honestly.
+Client: I'd really like like to erm keep it.
+Client: Okay, we're not going to solve this today. Let's park it and come back to er it.
+Client: Uhm, The system should work even in an offline mode with the critical functionality.
+Analyst: Mm-hmm.
+EndUser: Well, the system has to be implemented using Service Oriented Architecture (SOA),
 Analyst: Makes sense.
-EndUser: Um, We'd want the system to to be designed in manner that operational data is not lost in case of any failure of equipment or basically communication network.
-Client: Do erm we really need that? I'd leave it out, at least for the first version.
-EndUser: I'd really like kind of to keep it.
-Analyst: Uh, Alright, let's leave that one out.
-Client: For us, the uh system has to work even in an offline mode um with the critical functionality. And the system would have to be implemented using Service Oriented Architecture (SOA) and have you know a a modular design.
-EndUser: The idea is that the system uh will be developed for a um centralized deployment and maintenance. And i'd like like basically the system like to be kind of developed to be actually deployed uh in a 3-tier datacenter architecture.
+EndUser: And have a modular design.
+Analyst: Got it.
+TechLead: Same for us.
+EndUser: Uh, The system should be developed, right—
+TechLead: Can you repeat uh that? You cut out um a bit.
+EndUser: Yeah, so, for a centralized deployment and maintenance.
+Client: The system ought to be like developed to be deployed in a 3-tier datacenter architecture.
+Analyst: Makes sense.
+Client: Uhm, The system ought to be extensible to provide access to the interfaces through PDA's and mobile data terminals.
+TechLead: Erm, That sounds like a lot of work for little value.
+Client: Erm, We er do need it, it's important for our our people.
+Analyst: Uh, Okay, we take it out of the scope.
+EndUser: The system would have to uhm adopt standardized formats and common metadata elements.
+Analyst: Uhm, So if I got it right, the system would have to adopt standardized formats and common metadata elements?
+EndUser: Yep.
+Client: Um, The system ought to be designed for access through browser-based systems—
+TechLead: Er, Sorry, go on.
+Client: Anyway, as I was saying, and actually must impose minimal requirements on the client uhm device.
+Client: The system would have to support multiple types of communication services for remote access.
+Analyst: Mm-hmm.
+TechLead: True.
+EndUser: We need the system uhm to have capability to support public uh access to a subset of data and functionality.
 Analyst: Right.
-Client: Uh, Okay so we'd want the system to be extensible to provide access to the interfaces uh through actually PDA's and mobile data terminals.
-TechLead: That sounds like a lot uh of work for little uh value.
-Client: I'd uhm really like to keep it.
-Analyst: Erm, Let's er take this offline and decide later.
-Client: The idea is that the system will adopt standardized formats and common metadata elements, that's kind of the main thing.
-Analyst: Okay.
-EndUser: The system has kind of to erm be designed for access through browser-based systems—
-Client: Uh, Sorry, sorry, go ahead.
-EndUser: Yeah, so, and must impose minimal requirements on on the client device.
-EndUser: Well, the system ought to support multiple types of communication services for remote access.
-Client: The thing is, we'd i mean want the system to basically have capability to support public access to a subset of data and well functionality. And the system you know has to um support SSL encrypted connections.
-Client: Okay so i'd like the system to support secure virtual private network connections.
-EndUser: The system ought to like ensure high standards actually of security basically and access control through: Prevent cross-site scripting Validate basically the incoming data / user request Encode the incoming data / user request Prevent SQL Injection Use parameterized queries Sanitize the user-inputs Validate the data actually both at the client and um server Don't allow er hard delete and perform only soft uhm tagging the row for uh deletion.
-TechLead: Uhm, Oh, about help module from last time, I checked: the solution would uhm have to provide detailed context-sensitive help material for all the possible kind of actions and scenarios on all user interfaces in the application.
-Analyst: Uhm, Okay, I think well we have everything. I'll consolidate and send it around.
+EndUser: Okay so we'd want the system to support SSL encrypted connections, you know?
+Client: I'd like the system to support secure um virtual private network connections.
+EndUser: I'd like the system to basically ensure high standards of security and access erm control through: Prevent cross-site scripting Validate the incoming data / user request Encode er the incoming data / user request Prevent SQL Injection Use Use parameterized queries Sanitize the user-inputs Validate the the data both at the client and server Don't allow hard delete and perform only soft tagging the row for deletion.
+Analyst: Mm-hmm.
+TechLead: Quick follow-up on on general sort of needs: uh the solution should enable the user to track the submitted defect or enhancement request.
+Analyst: Erm, Great, I think that covers it for today. I'll write this up er and send it around.

@@ -1,59 +1,80 @@
 Meeting 3 of 3 (review)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Uhm, Hi all. Let's try to close the remaining i mean points on on ERTMS/ETCS Functional FRS today.
-Analyst: Is it just me erm or is it er really cold in here um today?
-Analyst: Just to recap, in actually the last meeting we covered operational functions, unfitted line operation and you know infrastructure functions. We also left a few things open.
-Analyst: Let's cover passing a stop like signal with restricted movement authority now. What level do i mean you expect?
-Client: Yeah, so it's important that the driver can select an override control according to the sort of permission received, right?
-Analyst: Got it.
-Client: Um, We'd want actual speed to still be shown on the DMI.
-EndUser: That sounds like a lot of work for little value.
+Analyst: Er, Okay, this should be our last session on ERTMS/ETCS Functional FRS, let's go through the remaining points.
+Analyst: Quick recap from last time: we went over operational functions, unfitted line operation and infrastructure functions.
+Analyst: What about passing a stop signal with restricted movement authority? Any hard limits there?
+Client: Okay so for us it's you know key that the driver can select an override control according to the permission received.
+Client: Yeah, so we need sort of actual uh speed to still be shown on the DMI.
+TechLead: Do we really need that? I'd leave it out, at least for the first version.
 Client: Without it the whole thing doesn't make much sense for us.
-Analyst: Um, Okay, we'll keep it in then.
-TechLead: A special indication has to be shown on the the DMI.
-Client: Uhm, The supervised speed really shouldn't be shown on on the DMI.
-Analyst: Mm-hmm.
-Analyst: Is Is that well all for passing a stop signal with restricted movement authority?
-Client: Nothing else, I think.
-Analyst: Uh, What uhm about emergency stop to train(s)? Any hard limits um there?
-Client: If um supervised by uhm an RBC it would [pause] have to be possible to sort of command an emergency uh stop to all trains in a particular area or to a specific train. And it should be possible to command a conditional emergency stop. If er the er train has already passed the location for the emergency stop the command um shall be ignored.
-Analyst: Yeah.
-TechLead: When a train has received an i mean emergency stop ETCS should command the emergency brake.
-TechLead: Uh, We need the emergency stop to [pause] be indicated to the driver on the DMI, right?
-Analyst: Erm, Let's basically cover train trip now. What level do you expect?
-TechLead: Operation of the train trip ought i mean to be be erm indicated on uh the DMI.
-Client: Uh, We'd want the emergency brake to be applied until the traction unit is stationary.
-Analyst: Erm, And er train identification, how do you see that working?
-Analyst: Er, Let's move on to plain text transmission. What do you have in mind?
-Client: Uh, Okay so it ought to be possible to send plain um text messages from track to actually train, that's the main thing.
-Analyst: Anything else on plain text transmission?
-Client: Nothing else, I think.
-Analyst: Erm, Okay, uh next topic: fixed text messages. well How should that um work?
-EndUser: Fixed uh text messages should be provided in the language selected by the driver.
+Client: Okay, we're not going to solve this today. Let's park it and come back to it.
+TechLead: I'd like a special indication to be shown on the DMI.
 Analyst: Makes sense.
-Analyst: Um, Alright, reversing. Thoughts?
-Client: The thing is, the driver must be kind of able to use the, you know—
-TechLead: Sorry, quick er question, is that for everyone?
-Client: Uh, Yeah, so, reversing function without needing to re-confirm the train data.
-Client: I have the missing info on indication displayed on the dmi: visual and acoustic warnings to the driver about possible sort of intervention from ETCS ought to be given to enable the driver actually to react uh and avoid intervention.
-Client: Quick follow-up on basic functioning: ETCS is required to be functional to a maximum train speed of 500 km/h.
-Analyst: Alright, train integrity. Thoughts?
-EndUser: For us, the driver must um be be able to confirm the train integrity uhm to the the RBC manually. The confirmation requires basically the train to be stationary.
-Analyst: Let me check I got this: what we really want is for the driver to be able to i mean confirm the train integrity to the RBC manually. The confirmation requires the train actually to be stationary?
-EndUser: Yeah, exactly.
-Analyst: Um, So, let's talk about handover when passing from one rbc area area to another. What do you need there?
-Client: If the train is equipped with only one operational radio, i mean passing from one RBC uh to— sorry, I lost my train of um thought.
-Analyst: Um, Is that all for handover like when passing from uh one rbc well area to another?
+TechLead: Well, i'd like the supervised speed to not—
+EndUser: Sorry, quick question, is that for everyone?
+TechLead: Er, Right, so, be shown on the DMI.
+Analyst: What about emergency stop sort of to train(s)? Any hard limits there?
+TechLead: So, if supervised by an uh RBC it you know should be possible to command um an emergency stop to all trains in a a particular area or to a specific train.
+Analyst: Okay, noted.
+EndUser: Good point.
+Client: It'll need to be possible to command a conditional emergency stop,
+Analyst: Yeah.
+Client: Uh, and er if the train has already passed the location for the emergency stop uh the command er shall be ignored.
+Analyst: Right.
+Client: I mean, when a um train has received like an emergency stop ETCS ought to command the emergency brake, right?
+Analyst: Yeah.
+TechLead: Good point.
+Client: I I mean, the emergency stop stop should be indicated to the driver on the DMI.
+Analyst: What about train trip? Any hard limits there?
+Client: Uhm, Also, operation of the train trip—
+EndUser: Hold on, does that apply to mobile too?
+Client: Where was I... yes, i mean shall be uh indicated on the DMI.
+TechLead: The emergency brake would have to be applied until the traction unit is stationary.
+Client: Yeah, and also—
+EndUser: [crosstalk] sorry.
+Analyst: Erm, Let er me check uhm I got this: the emergency brake has to be um applied until the traction unit is stationary?
+TechLead: Yep.
+Client: Definitely.
+Analyst: What are your expectations regarding train uhm identification?
+Client: Uh, I have the missing info on infrastructure functions: it's important that the trackside can send information for the calculation of speed profiles.
+Analyst: Uhm, And plain text basically transmission, how do you see that working?
+Client: It should um be possible to send—
+TechLead: Can you repeat that? You cut out actually a bit.
+Client: Anyway, as I was er saying, plain actually text messages from track to train.
+Client: Erm, Can I jump in on er fixed text messages? Fixed text messages should be provided in the language selected by the driver.
+Analyst: Is that all for fixed text messages?
 EndUser: That's all for now.
-EndUser: Uh, Just as a a reminder, the idea is that well the emergency stop will be indicated to actually the supervisor on the the DMI.
-Analyst: Uh, Let's cover on board equipment failures now. What level do you expect?
-Client: If there are failures of the trainborne equipment which compromise the safety you know of train supervision, you know—
-EndUser: Er, Sorry, kind of quick question, is is that you know for everyone?
-Client: Right, so, the ETCS trainborne equipment uhm shall immediately i mean [laughter] command the brake and bring the train sort of to a stop.
-TechLead: Er, Basically, the occurrence of a failure should be displayed on the DMI.
-Client: I'm not convinced basically that's necessary, honestly.
-TechLead: I'd really like to keep it.
-Analyst: Okay, we'll keep it in in then.
-TechLead: In ETCS with RBC this restriction on on performance will need to, if possible be uh transmitted to the RBC.
-Analyst: Okay, I think we we have sort of everything. I'll consolidate and send it you know around.
+Client: Erm, Quick follow-up on supervision of movement authorities and speed limits: it's important that the driver can release an ETCS emergency brake application when stationary.
+Client: I I have the missing info on basic functioning: ETCS is required to be functional to a maximum train speed of 500 km/h.
+Analyst: Can you walk me through reversing?
+Client: I mean, it's um important you know that the driver can use the Reversing function erm without needing to re-confirm the train data.
+TechLead: Yeah, and also—
+Analyst: —sorry, go ahead.
+Analyst: Let me check I got this: for us it's key that the driver can use the Reversing function without needing to re-confirm the kind of train data?
+Client: Yeah, exactly.
+EndUser: That too, yeah.
+TechLead: On emergency stop to train(s), the emergency stop has to be indicated to the supervisor on the DMI.
+Analyst: What uh are your uhm expectations regarding train integrity?
+EndUser: Basically, we want the driver to be able to erm confirm the train integrity to—
+TechLead: Erm, Sorry, quick question, is that well for everyone?
+EndUser: Right, so, the RBC manually. The confirmation requires the train to be stationary.
+Analyst: What are your expectations regarding handover uh when passing from one rbc area to another?
+Client: Also, um if the train is equipped with only one operational radio, passing from one RBC to... well, anyway, we can come back to that.
+Analyst: What about on board equipment failures? Any hard limits there?
+Client: Also, if there kind of are failures of the trainborne equipment...
+Analyst: Right.
+Client: So which compromise the safety of train uh supervision, if that makes sense.
+Analyst: Okay, noted.
+Client: Then the ETCS trainborne equipment i mean shall immediately command the brake.
+Analyst: Okay.
+Client: And bring the train er to a stop, if that makes sense.
+Analyst: Yeah.
+Client: The occurrence of a failure has to be displayed on the DMI, if that makes sense.
+TechLead: Do we really need that? I'd leave it out, at least for the first version.
+Client: We do do need it, it's important for our people.
+Analyst: Fine, let's drop it for now.
+TechLead: Yeah, sort of so in ETCS with um RBC this this restriction on performance will need to...
+TechLead: Plus if possible be transmitted to the RBC.
+Analyst: Okay.
+Analyst: Great, I uhm think well that covers it for today. I'll write this up and send it it around.

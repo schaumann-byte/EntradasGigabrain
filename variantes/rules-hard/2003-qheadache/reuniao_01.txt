@@ -2,36 +2,54 @@ Meeting 1 of 3 (kickoff)
 Participants: Analyst, Client, TechLead
 
 Analyst: Okay, let's get started. Thanks for joining. Today I'd like erm to understand what you need for Qhedache.
-Client: Er, How was you know everyone's weekend?
-Client: This specifications establishes the requirements for actually the the product named Qheadache. basically The um intended kind of audience is the analyst, programmer and tester of Qheadache. The product is a computerized game game that that displays an interface used er to to solve a specific headache.
-Analyst: Uhm, What about main window? Any hard limits there?
-Client: Er, Sorry, someone just just knocked on my door, go ahead.
-TechLead: We need the main window to you know provide uh the basically following erm parts uh : A board; a menu like bar, right?
-Analyst: Erm, What about external interfaces? Any hard limits there?
-TechLead: Uh, The hardware and operating system should... well, anyway, uhm we can come back to that.
-Analyst: Er, Is that all for for external interfaces?
-Client: That's all for now.
-Analyst: Right. And block selection? Anything specific?
-Client: Block selection. Input: Leftclicked down basically on a block. Processing: The game state becomes "Block um deplacement".
+Client: Er, How was everyone's weekend?
+Client: This specifications establishes the requirements for the well product named like Qheadache. The intended audience kind of is the analyst, programmer and tester of Qheadache. The product is a computerized game kind of that displays an an interface used to solve a specific headache.
+Analyst: Let's cover main window now. What level do you expect?
+TechLead: Yeah, um so the main window would have to provide the following parts.
+Client: Got it.
+TechLead: A board.
+Analyst: Mm-hmm.
+TechLead: Um, Uh, and and a menu bar, if that like makes sense.
+Client: Mm-hmm.
+Analyst: What about external interfaces? Any hard limits there?
+Client: So, the hardware and operating system will uhm need to... well, anyway, we can come back like to that.
+Client: Sorry, I was on mute.
+Client: Can I jump in on block selection? So the— sorry, let me rephrase. well, one kind of thing is, block selection. uhm Input: Leftclicked down on uhm a block...
+Analyst: Okay, noted.
+Client: Then processing: The game state becomes "Block deplacement".
 Analyst: Got it.
-Analyst: Alright, block uhm deselection. Thoughts?
-Client: Er, Block deselection. Input: Leftclicked up on a selected—
-TechLead: Sorry, sorry, go ahead.
-Client: Uhm, Where was sort of I... yes, block. Processing: The game state becomes "Block selection".
-Analyst: Okay, what about block movement?
-Client: Uhm, We need the— actually, so block movement. Input: Mouse erm movement during the "Block movement" state. Processing: The i mean selected block follows the the mouse kind of movement without overlapp you know the other blocks i mean and exit of the game uh zone. The selected block can' mt ove kind of near uhm other blocks at least 0.05x from i mean the others like blocks.
-Analyst: Erm, Just to confirm, also, block movement. sort of Input: Mouse movement during the "Block movement" state. Processing: The selected block follows the mouse movement um without overlapp the other blocks and exit of the game zone. you know The uh selected block can' i mean mt ove near other blocks at least 0.05x you know from the others uh blocks?
-TechLead: Er, Can we take take a two-minute break after this topic?
-Client: Mm-hmm, yes.
-Client: Oh, and uh about undo er action, basically one sort of thing is, undo actually Action. Input: Menu selection. Processing: The game displays the block positions at the like places where they were before the the last movement. This action is consider like a movement. The The "undo" action is unvailable if there was no previous movement. Output: New game board display.
-Analyst: Anything actually else on undo action?
+TechLead: Yes, please.
+Analyst: Anything else on block selection?
 Client: Nothing else, I think.
-Analyst: Um, Okay, next actually topic: uh redo action. erm How should that work?
-Client: The thing uh is, maybe sort of redo Action. Input: Menu um selection. Processing: The game displays the block positions at the places actually where they were before uh the last movement was canceled. This well action is consider like like a movement. The redo action is er unvailable, if the previous action wasn't a erm n "undo" action. Output: New game board display.
-Analyst: Do you have a concrete number or example?
-Client: Hmm, hard to say right now. We'll see.
-Analyst: Is that all for redo action?
-Client: That's all for now.
-Analyst: Okay, what about uh end of the game?
-Client: Yeah, so end of the game. Input: The great square is moved at the bottom of the board. you know Processing: All the er player statistics are erm freezed. Output: If the number of block movements of um the kind of current player is lower than the highest number kind of of block movement recorded in the uh statistic file, the erm The "Finish Window with Statistcs" is displayed. Well, sort of mostly, there are uh a like few i mean special cases.
-Analyst: Er, Okay, we're out of time. you know I'll send a summary and we'll pick up the rest next time.
+Analyst: What are your expectations regarding block deselection?
+Client: One thing sort of is, block deselection. Input: Leftclicked up on a selected uhm block.
+Analyst: Right.
+Client: Then processing: The game state becomes "Block selection", that's kind of pretty important well for us.
+Analyst: Let's move on to block movement. What do uh you have in mind?
+Client: Block uhm movement. Input: Mouse movement during the "Block movement" state.
+Analyst: Okay.
+Client: And processing: The selected block follows the mouse well movement without overlapp the other blocks and exit of the game zone. The selected block can' mt ove near other blocks at least 0.05x from the others blocks.
+TechLead: Uhm, Sorry, can everyone hear me? My connection is you know a bit unstable today.
+Analyst: Got it.
+Analyst: Can you walk me through undo action?
+Client: Undo Action. Input: Menu selection. Processing,
+Client: Plus the game displays sort of the block positions actually at the places where they were before the last movement. This action is consider um like a movement. erm The "undo" action is unvailable if there actually was no previous movement. Output: New game board display.
+Analyst: Okay.
+Analyst: Is that all for undo action?
+Client: Nothing else, I think.
+Analyst: What are your expectations regarding redo action?
+Client: Maybe redo Action. Input: Menu selection. Processing...
+TechLead: Got it.
+Client: Then the game displays the the block positions sort of at the places where they were before the last movement was canceled. This action is consider like a movement. The redo action like is unvailable, if the previous action wasn't a n "undo" action. Output: New game board display.
+Analyst: Do you have a concrete [pause] number or example?
+Client: Er, I don't know, something reasonable.
+Analyst: Okay, what about end of the game?
+Client: And end of the game. Input,
+Client: Sorry, I just wanted to—
+Analyst: [crosstalk] sorry.
+Client: Uh, and the great square is moved at the bottom of the board.
+Analyst: Okay, noted.
+Client: Plus processing: All the the player statistics are freezed.
+Analyst: Makes sense.
+Client: Output: If the number of block movements of the current player is well lower than than the the highest number of block movement recorded in the statistic file, the The "Finish Window with [pause] Statistcs" is displayed. There are are some exceptions, but but I can't remember them right now.
+Analyst: Okay, we're out of time. I'll you know send a summary and we'll pick up the rest next time.

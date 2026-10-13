@@ -1,49 +1,60 @@
 Meeting 2 of 3 (follow-up)
 Participants: Analyst, Client, TechLead
 
-Analyst: Um, Okay, welcome back. uh Let's continue with Gamma-J Connecting erm Retailers through the World.
-Analyst: So, last time we talked about operating environment, design and implementation constraints and kind of user documentation. We er also left [noise] a few things open.
-Analyst: What about weborder browser interface? Any constraints we should know about?
-Client: Um, So, it'd be nice if the order database of WebOrder could communicate with you know the account system well through a programmatic interface for the billing uh operations.
-TechLead: Through programmatic interface, well WebOrder might uh transmit information erm of of items ordered by customers uh to the Inventory well management system.
-Analyst: Yeah.
-Analyst: Anything else uh on weborder browser interface?
-Client: No, I think that's it.
-Analyst: Let's uh cover quality attribute actually requirements now. What you know level do you expect?
-Client: Upon the USB being plugged in the system will need to be able to like be deployed and operational in i mean less than 1 minute, if that makes sense.
-Client: The thing is, well it's important that the system can handle 1000 customers like logged in concurrently [noise] at well the same time.
-TechLead: I'm not convinced that's necessary, honestly.
-Client: I'd really like to keep uhm it.
-Analyst: Erm, Let's take this offline and decide sort of later.
-Client: So the— sorry, let me rephrase. yeah, so the system would need to be able er to to retrieve 200 products per like second.
-Analyst: Erm, So if I got it right, we want the system erm to be um able to retrieve 200 products per sort of second?
-Client: Yep.
-Client: Um, Maybe the system uh could add product to shopping cart in less less than 2ms.
-Analyst: Got it.
-Client: For us, the system should be erm able to search for a specified product kind of in you know less than 1 second.
-TechLead: Erm, For us it's key that the system can email customer—
-Client: Um, Wait, sorry— [crosstalk]
-TechLead: Erm, Anyway, as I was was sort of saying, and vendor in less than [pause] you know 1 second.
-TechLead: The system would need to be able to validate—
-Analyst: Uh, Hold on, does that apply to mobile too?
-TechLead: Yeah, so, credit card in less than 2 [crosstalk] seconds.
-Client: For us it's key that the system can acquire shipping charges in less than 2 seconds, right? And we want the system erm to be able to restore 1000 records per second.
-Analyst: Okay, noted.
-Analyst: Uhm, Is that all all for quality attribute requirements?
-Client: Nothing else, I think.
-Client: Quick follow-up on interface: like customers would er need to be able to search for products matching their search criteria.
-Analyst: Um, And communications you know interfaces, how strict do we need to be?
-TechLead: Uhm, The idea is that the WebOrder system will send an e-mail to System Administrator about i mean any technical queries from customers er or sales people. And the um WebOrder system has to send an um e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address well along with tracking number.
-Analyst: Um, What about safety requirements? Any hard limits there?
-TechLead: Uhm, The thing you know is, the system has er to do periodic... hmm, you know I'd need er to think um about the rest.
-Client: Uhm, Quick follow-up on user documentation: would have to deliver Operations and Maintenance manual, basically Users Guide book, and Installation Instructions for the Administrator.
-Analyst: What about security like requirements? Any constraints we uh should know about?
-Client: The idea er is that the system will validate credit cards against fraud, that's pretty like important for us.
-Client: The system would have to encrypt all... well, anyway, we can come back to that.
-Client: Uh, We need you know the— actually, the system ought to auto detect IP DOS attacks and block IP uh automatically. And the system should detect consecutive failed login attempts.
-Analyst: Okay.
-TechLead: For us, we'd want the system to er be protected by—
+Analyst: Hi everyone, thanks for making er time again. Let's pick up um where we left off on Gamma-J Connecting Retailers through the World.
+Analyst: Just to recap, in the [crosstalk] last meeting we covered operating environment, design and implementation erm constraints and user documentation. And And a couple of points were still open.
+Analyst: Let's cover weborder erm browser interface now. What level do you expect?
+Client: Honestly, it'd be nice if the order database of WebOrder could communicate with the account system through a programmatic interface for the billing operations.
+TechLead: Through programmatic interface, WebOrder could maybe transmit information basically of items ordered by customers to the Inventory management system.
+Analyst: Can you be more specific?
+TechLead: We'll figure that out later, I guess.
+Analyst: Uh, What about quality attribute er requirements? Any constraints we should know about?
+TechLead: Well, upon the USB being plugged in the system will need to be able to be deployed—
 Client: Wait, sorry— [crosstalk]
-TechLead: Er, Right, so, open source firewall called Firestarter. [noise] http://www.fs-security.com/.
-TechLead: Before I forget, on availability um requirements, kind of the system ought um to have uhm an availability of of 99.99%.
-Analyst: Uhm, Okay, we're out of time. I'll send a summary and erm we'll pick up the rest next time.
+TechLead: Where was I... yes, and operational in erm less than 1 minute.
+TechLead: Yeah, so the system would need to be able able to erm handle 1000 customers logged in concurrently well at the same time.
+Client: Do we really need that? I'd like leave it it out, at least for the first version.
+TechLead: We do need it, it's important for our people.
+Analyst: Let's take this offline and decide uh later.
+Client: It's important that the system can retrieve 200 products per second.
+Client: Maybe the system could add product to uh shopping cart in less than 2ms.
+Analyst: Do you have a concrete number or example?
+Client: Uh, We'll figure that out later, I guess.
+Client: Uhm, The system must be able to to search for a specified product in less than 1 second, if kind of that makes sense.
+TechLead: Uh, Honestly, the the system would need to be able to like email customer.
+Analyst: Makes sense.
+TechLead: And vendor in less kind of than 1 second.
+Analyst: Mm-hmm.
+TechLead: The system must be able to to validate credit card in um less than 2 seconds.
+Analyst: Mm-hmm.
+TechLead: Yeah, so the system would need need to well be able to acquire shipping charges in less than 2 seconds.
+Analyst: Yeah.
+TechLead: Er, The system would need to be able actually to um restore 1000 records per second.
+Analyst: Got it.
+Client: Mm-hmm.
+Analyst: Let's cover um communications interfaces now. What level do you expect?
+Client: Uhm, The WebOrder uh system should send an e-mail to System Administrator about like any technical queries from from customers or sales people.
+TechLead: Good point.
+Client: The WebOrder system uh ought to send an e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address along with tracking number, that's the um main thing.
+Analyst: Just to confirm, we we need the WebOrder system to send an e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address along with tracking number?
+Client: Yeah, exactly.
+Analyst: What about safety requirements? Any constraints we should know about?
+Client: Er, The system well would have i mean to do periodic... well, like anyway, we can come back to that.
+Analyst: And security requirements, how strict do we need to be?
+TechLead: The system ought to validate credit cards against fraud.
+Analyst: Right.
+Client: The system ought to encrypt all... hmm, I'd need to think about the rest.
+Client: We'd want the system to auto detect IP DOS attacks.
+Client: And you know block IP automatically.
+Client: We need the system to detect consecutive failed login attempts.
+TechLead: Right, yes.
+Client: The system should be protected by, that's pretty kind of important for us—
+TechLead: Wait, sorry— [crosstalk]
+Client: Yeah, so, open source firewall called Firestarter. http://www.fs-security.com/.
+Analyst: Sorry, uh someone just knocked on my [crosstalk] door, go ahead.
+Analyst: What What about availability requirements? actually Any constraints we should know about?
+TechLead: Hold on, let me share my screen again.
+Client: The system should uh [crosstalk] have an availability of 99.99%, you know?
+Analyst: Yeah.
+TechLead: Yeah, agreed.
+Analyst: Okay, we're out of time. I'll send a um summary and we'll um pick up the rest next uhm time.

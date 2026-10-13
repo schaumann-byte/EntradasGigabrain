@@ -24,13 +24,18 @@
       "p_conflict_open": 0.4,
       "p_resolve_later": 0.5,
       "p_complete_later": 0.5,
-      "noise": 0.1
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07
     }
   },
   "input": {
     "n_meetings": 3,
-    "n_chars": 15065,
-    "n_words": 2536,
+    "n_chars": 14208,
+    "n_words": 2303,
     "meetings": [
       {
         "id": "M1",
@@ -52,8 +57,8 @@
           "order confirmation",
           "interface"
         ],
-        "n_chars": 5720,
-        "n_words": 970,
+        "n_chars": 5047,
+        "n_words": 812,
         "segments": [
           {
             "id": "M1:T1",
@@ -72,21 +77,21 @@
           {
             "id": "M1:T3",
             "start": 281,
-            "end": 617,
+            "end": 584,
             "speaker": "Client",
             "act": "context"
           },
           {
             "id": "M1:T4",
-            "start": 627,
-            "end": 699,
+            "start": 594,
+            "end": 669,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
             "id": "M1:T5",
-            "start": 708,
-            "end": 829,
+            "start": 678,
+            "end": 809,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -102,8 +107,8 @@
           },
           {
             "id": "M1:T6",
-            "start": 840,
-            "end": 885,
+            "start": 820,
+            "end": 868,
             "speaker": "TechLead",
             "act": "object_scope",
             "refs": [
@@ -116,8 +121,8 @@
           },
           {
             "id": "M1:T7",
-            "start": 894,
-            "end": 981,
+            "start": 877,
+            "end": 944,
             "speaker": "Client",
             "act": "defend_scope",
             "refs": [
@@ -130,8 +135,8 @@
           },
           {
             "id": "M1:T8",
-            "start": 991,
-            "end": 1015,
+            "start": 954,
+            "end": 972,
             "speaker": "Analyst",
             "act": "resolve_keep",
             "gt_ids": [
@@ -147,8 +152,8 @@
           },
           {
             "id": "M1:T9",
-            "start": 1026,
-            "end": 1133,
+            "start": 983,
+            "end": 1071,
             "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
@@ -163,16 +168,9 @@
           },
           {
             "id": "M1:T10",
-            "start": 1143,
-            "end": 1225,
-            "speaker": "Analyst",
-            "act": "ask_topic"
-          },
-          {
-            "id": "M1:T11",
-            "start": 1236,
-            "end": 1383,
-            "speaker": "TechLead",
+            "start": 1080,
+            "end": 1175,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0007"
@@ -180,16 +178,40 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0007",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P2"
               }
             ]
           },
           {
+            "id": "M1:T11",
+            "start": 1185,
+            "end": 1190,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
             "id": "M1:T12",
-            "start": 1394,
-            "end": 1664,
-            "speaker": "TechLead",
+            "start": 1199,
+            "end": 1311,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0007",
+                "role": "part2",
+                "pid": "P2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T13",
+            "start": 1320,
+            "end": 1369,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0008"
@@ -197,44 +219,97 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0008",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T13",
-            "start": 1674,
-            "end": 1986,
+            "id": "M1:T14",
+            "start": 1379,
+            "end": 1391,
             "speaker": "Analyst",
-            "act": "echo",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T15",
+            "start": 1400,
+            "end": 1455,
+            "speaker": "Client",
+            "act": "continue",
             "gt_ids": [
               "0000-gamma-j:R0008"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0008",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M1:T14",
-            "start": 1997,
-            "end": 2011,
-            "speaker": "TechLead",
-            "act": "confirm"
+            "id": "M1:T16",
+            "start": 1465,
+            "end": 1471,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
-            "id": "M1:T15",
-            "start": 2021,
-            "end": 2096,
+            "id": "M1:T17",
+            "start": 1480,
+            "end": 1533,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0008",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 1543,
+            "end": 1548,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T19",
+            "start": 1557,
+            "end": 1679,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0008"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0008",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T20",
+            "start": 1689,
+            "end": 1695,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T21",
+            "start": 1705,
+            "end": 1777,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T16",
-            "start": 2107,
-            "end": 2192,
+            "id": "M1:T22",
+            "start": 1788,
+            "end": 1856,
             "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
@@ -248,10 +323,24 @@
             ]
           },
           {
-            "id": "M1:T17",
-            "start": 2201,
-            "end": 2319,
+            "id": "M1:T23",
+            "start": 1866,
+            "end": 1873,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T24",
+            "start": 1882,
+            "end": 1894,
             "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T25",
+            "start": 1905,
+            "end": 2019,
+            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0010"
@@ -265,72 +354,138 @@
             ]
           },
           {
-            "id": "M1:T18",
-            "start": 2329,
-            "end": 2378,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M1:T19",
-            "start": 2389,
-            "end": 2411,
-            "speaker": "TechLead",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M1:T20",
-            "start": 2421,
-            "end": 2487,
+            "id": "M1:T26",
+            "start": 2029,
+            "end": 2084,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T21",
-            "start": 2496,
-            "end": 2787,
-            "speaker": "Client",
+            "id": "M1:T27",
+            "start": 2094,
+            "end": 2182,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
-              "0000-gamma-j:R0011",
-              "0000-gamma-j:R0012"
+              "0000-gamma-j:R0011"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0011",
-                "role": "statement"
-              },
-              {
-                "rid": "0000-gamma-j:R0012",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T22",
-            "start": 2797,
-            "end": 2836,
+            "id": "M1:T28",
+            "start": 2192,
+            "end": 2198,
             "speaker": "Analyst",
-            "act": "anything_else"
+            "act": "backchannel"
           },
           {
-            "id": "M1:T23",
-            "start": 2845,
-            "end": 2864,
+            "id": "M1:T29",
+            "start": 2208,
+            "end": 2316,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0011",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T30",
+            "start": 2326,
+            "end": 2532,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "0000-gamma-j:R0011"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0011",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T31",
+            "start": 2542,
+            "end": 2556,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2567,
+            "end": 2572,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T33",
+            "start": 2582,
+            "end": 2633,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0012",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T34",
+            "start": 2642,
+            "end": 2649,
             "speaker": "Client",
-            "act": "nothing_else"
+            "act": "backchannel"
           },
           {
-            "id": "M1:T24",
-            "start": 2874,
-            "end": 2930,
+            "id": "M1:T35",
+            "start": 2659,
+            "end": 2714,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0012"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0012",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T36",
+            "start": 2724,
+            "end": 2736,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T37",
+            "start": 2746,
+            "end": 2784,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T25",
-            "start": 2939,
-            "end": 3068,
+            "id": "M1:T38",
+            "start": 2793,
+            "end": 2858,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -339,14 +494,44 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0014",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T26",
-            "start": 3078,
-            "end": 3268,
+            "id": "M1:T39",
+            "start": 2868,
+            "end": 2873,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T40",
+            "start": 2882,
+            "end": 2947,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0014"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0014",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T41",
+            "start": 2958,
+            "end": 2969,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T42",
+            "start": 2979,
+            "end": 3077,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -355,59 +540,59 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0015",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T27",
-            "start": 3278,
-            "end": 3469,
+            "id": "M1:T43",
+            "start": 3087,
+            "end": 3094,
             "speaker": "Analyst",
-            "act": "echo",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T44",
+            "start": 3104,
+            "end": 3180,
+            "speaker": "EndUser",
+            "act": "continue",
             "gt_ids": [
               "0000-gamma-j:R0015"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0015",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M1:T28",
-            "start": 3479,
-            "end": 3491,
-            "speaker": "EndUser",
-            "act": "confirm"
-          },
-          {
-            "id": "M1:T29",
-            "start": 3501,
-            "end": 3543,
+            "id": "M1:T45",
+            "start": 3190,
+            "end": 3196,
             "speaker": "Analyst",
-            "act": "anything_else"
+            "act": "backchannel"
           },
           {
-            "id": "M1:T30",
-            "start": 3552,
-            "end": 3574,
+            "id": "M1:T46",
+            "start": 3205,
+            "end": 3216,
             "speaker": "Client",
-            "act": "nothing_else"
+            "act": "react"
           },
           {
-            "id": "M1:T31",
-            "start": 3584,
-            "end": 3657,
+            "id": "M1:T47",
+            "start": 3226,
+            "end": 3269,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T32",
-            "start": 3667,
-            "end": 3811,
-            "speaker": "EndUser",
+            "id": "M1:T48",
+            "start": 3278,
+            "end": 3428,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0013"
@@ -420,31 +605,24 @@
             ]
           },
           {
-            "id": "M1:T33",
-            "start": 3820,
-            "end": 3896,
-            "speaker": "Client",
-            "act": "offtopic"
+            "id": "M1:T49",
+            "start": 3438,
+            "end": 3445,
+            "speaker": "EndUser",
+            "act": "react"
           },
           {
-            "id": "M1:T34",
-            "start": 3906,
-            "end": 3913,
-            "speaker": "Analyst",
-            "act": "backchannel"
-          },
-          {
-            "id": "M1:T35",
-            "start": 3923,
-            "end": 3996,
+            "id": "M1:T50",
+            "start": 3455,
+            "end": 3493,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T36",
-            "start": 4006,
-            "end": 4120,
-            "speaker": "EndUser",
+            "id": "M1:T51",
+            "start": 3502,
+            "end": 3618,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0017"
@@ -458,9 +636,9 @@
             ]
           },
           {
-            "id": "M1:T37",
-            "start": 4129,
-            "end": 4277,
+            "id": "M1:T52",
+            "start": 3627,
+            "end": 3679,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -469,22 +647,45 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0018",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T38",
-            "start": 4287,
-            "end": 4352,
+            "id": "M1:T53",
+            "start": 3690,
+            "end": 3711,
+            "speaker": "TechLead",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T54",
+            "start": 3720,
+            "end": 3817,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "0000-gamma-j:R0018"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0018",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T55",
+            "start": 3827,
+            "end": 3875,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T39",
-            "start": 4361,
-            "end": 4463,
-            "speaker": "Client",
+            "id": "M1:T56",
+            "start": 3885,
+            "end": 3985,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0021"
@@ -497,10 +698,24 @@
             ]
           },
           {
-            "id": "M1:T40",
-            "start": 4473,
-            "end": 4569,
-            "speaker": "EndUser",
+            "id": "M1:T57",
+            "start": 3995,
+            "end": 4002,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T58",
+            "start": 4013,
+            "end": 4018,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T59",
+            "start": 4027,
+            "end": 4061,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0020"
@@ -508,14 +723,60 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0020",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T41",
-            "start": 4578,
-            "end": 4647,
+            "id": "M1:T60",
+            "start": 4071,
+            "end": 4078,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T61",
+            "start": 4087,
+            "end": 4127,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0020",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T62",
+            "start": 4137,
+            "end": 4149,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T63",
+            "start": 4158,
+            "end": 4185,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0020",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T64",
+            "start": 4194,
+            "end": 4262,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -524,127 +785,127 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0019",
-                "role": "part1"
+                "role": "statement"
               }
             ]
           },
           {
-            "id": "M1:T42",
-            "start": 4657,
-            "end": 4700,
+            "id": "M1:T65",
+            "start": 4272,
+            "end": 4277,
             "speaker": "EndUser",
-            "act": "interrupt"
+            "act": "react"
           },
           {
-            "id": "M1:T43",
-            "start": 4709,
-            "end": 4786,
-            "speaker": "Client",
-            "act": "resume",
-            "gt_ids": [
-              "0000-gamma-j:R0019"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0019",
-                "role": "part2"
-              }
-            ]
-          },
-          {
-            "id": "M1:T44",
-            "start": 4796,
-            "end": 4839,
+            "id": "M1:T66",
+            "start": 4287,
+            "end": 4321,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T45",
-            "start": 4849,
-            "end": 5122,
+            "id": "M1:T67",
+            "start": 4331,
+            "end": 4380,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
-              "0000-gamma-j:R0027",
-              "0000-gamma-j:R0023"
+              "0000-gamma-j:R0027"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0027",
-                "role": "statement"
-              },
-              {
-                "rid": "0000-gamma-j:R0023",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M1:T46",
-            "start": 5132,
-            "end": 5278,
-            "speaker": "Analyst",
-            "act": "echo",
-            "gt_ids": [
-              "0000-gamma-j:R0023"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0023",
-                "role": "echo"
-              }
-            ]
-          },
-          {
-            "id": "M1:T47",
-            "start": 5288,
-            "end": 5292,
-            "speaker": "EndUser",
-            "act": "confirm"
-          },
-          {
-            "id": "M1:T48",
-            "start": 5301,
-            "end": 5376,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0026"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0026",
                 "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T49",
-            "start": 5386,
-            "end": 5429,
-            "speaker": "Analyst",
-            "act": "interrupt"
+            "id": "M1:T68",
+            "start": 4391,
+            "end": 4403,
+            "speaker": "TechLead",
+            "act": "backchannel"
           },
           {
-            "id": "M1:T50",
-            "start": 5438,
-            "end": 5523,
+            "id": "M1:T69",
+            "start": 4413,
+            "end": 4479,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0027"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0027",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T70",
+            "start": 4489,
+            "end": 4496,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T71",
+            "start": 4507,
+            "end": 4512,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M1:T72",
+            "start": 4521,
+            "end": 4670,
             "speaker": "Client",
-            "act": "resume",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0023"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0023",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M1:T73",
+            "start": 4680,
+            "end": 4692,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T74",
+            "start": 4701,
+            "end": 4817,
+            "speaker": "Client",
+            "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0026"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0026",
-                "role": "part2"
+                "role": "statement"
               }
             ]
           },
           {
-            "id": "M1:T51",
-            "start": 5533,
-            "end": 5622,
+            "id": "M1:T75",
+            "start": 4827,
+            "end": 4834,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T76",
+            "start": 4844,
+            "end": 4960,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -659,9 +920,9 @@
             ]
           },
           {
-            "id": "M1:T52",
-            "start": 5632,
-            "end": 5719,
+            "id": "M1:T77",
+            "start": 4970,
+            "end": 5046,
             "speaker": "Analyst",
             "act": "close"
           }
@@ -684,34 +945,34 @@
           "security requirements",
           "availability requirements"
         ],
-        "n_chars": 4495,
-        "n_words": 753,
+        "n_chars": 4412,
+        "n_words": 722,
         "segments": [
           {
             "id": "M2:T1",
             "start": 77,
-            "end": 175,
+            "end": 208,
             "speaker": "Analyst",
             "act": "open"
           },
           {
             "id": "M2:T2",
-            "start": 185,
-            "end": 350,
+            "start": 218,
+            "end": 408,
             "speaker": "Analyst",
             "act": "recap"
           },
           {
             "id": "M2:T3",
-            "start": 360,
-            "end": 436,
+            "start": 418,
+            "end": 491,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
             "id": "M2:T4",
-            "start": 445,
-            "end": 619,
+            "start": 500,
+            "end": 659,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -727,8 +988,8 @@
           },
           {
             "id": "M2:T5",
-            "start": 630,
-            "end": 786,
+            "start": 670,
+            "end": 819,
             "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
@@ -744,37 +1005,44 @@
           },
           {
             "id": "M2:T6",
-            "start": 796,
-            "end": 801,
+            "start": 829,
+            "end": 854,
             "speaker": "Analyst",
-            "act": "backchannel"
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0029",
+                "role": "clarification",
+                "pid": "P7"
+              }
+            ]
           },
           {
             "id": "M2:T7",
-            "start": 811,
-            "end": 858,
-            "speaker": "Analyst",
-            "act": "anything_else"
+            "start": 865,
+            "end": 902,
+            "speaker": "TechLead",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0029",
+                "role": "clarification",
+                "pid": "P7"
+              }
+            ]
           },
           {
             "id": "M2:T8",
-            "start": 867,
-            "end": 889,
-            "speaker": "Client",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M2:T9",
-            "start": 899,
-            "end": 993,
+            "start": 912,
+            "end": 999,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M2:T10",
-            "start": 1002,
-            "end": 1150,
-            "speaker": "Client",
+            "id": "M2:T9",
+            "start": 1010,
+            "end": 1093,
+            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0032"
@@ -782,15 +1050,38 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0032",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M2:T11",
-            "start": 1159,
-            "end": 1293,
+            "id": "M2:T10",
+            "start": 1102,
+            "end": 1126,
             "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T11",
+            "start": 1137,
+            "end": 1199,
+            "speaker": "TechLead",
+            "act": "resume",
+            "gt_ids": [
+              "0000-gamma-j:R0032"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0032",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T12",
+            "start": 1210,
+            "end": 1331,
+            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0033"
@@ -804,10 +1095,10 @@
             ]
           },
           {
-            "id": "M2:T12",
-            "start": 1304,
-            "end": 1349,
-            "speaker": "TechLead",
+            "id": "M2:T13",
+            "start": 1340,
+            "end": 1421,
+            "speaker": "Client",
             "act": "object_scope",
             "refs": [
               {
@@ -818,10 +1109,10 @@
             ]
           },
           {
-            "id": "M2:T13",
-            "start": 1358,
-            "end": 1389,
-            "speaker": "Client",
+            "id": "M2:T14",
+            "start": 1432,
+            "end": 1477,
+            "speaker": "TechLead",
             "act": "defend_scope",
             "refs": [
               {
@@ -832,9 +1123,9 @@
             ]
           },
           {
-            "id": "M2:T14",
-            "start": 1399,
-            "end": 1453,
+            "id": "M2:T15",
+            "start": 1487,
+            "end": 1531,
             "speaker": "Analyst",
             "act": "park",
             "refs": [
@@ -846,9 +1137,9 @@
             ]
           },
           {
-            "id": "M2:T15",
-            "start": 1462,
-            "end": 1583,
+            "id": "M2:T16",
+            "start": 1540,
+            "end": 1608,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -862,32 +1153,9 @@
             ]
           },
           {
-            "id": "M2:T16",
-            "start": 1593,
-            "end": 1701,
-            "speaker": "Analyst",
-            "act": "echo",
-            "gt_ids": [
-              "0000-gamma-j:R0034"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0034",
-                "role": "echo"
-              }
-            ]
-          },
-          {
             "id": "M2:T17",
-            "start": 1710,
-            "end": 1714,
-            "speaker": "Client",
-            "act": "confirm"
-          },
-          {
-            "id": "M2:T18",
-            "start": 1723,
-            "end": 1804,
+            "start": 1617,
+            "end": 1689,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -902,16 +1170,37 @@
             ]
           },
           {
-            "id": "M2:T19",
-            "start": 1814,
-            "end": 1821,
+            "id": "M2:T18",
+            "start": 1699,
+            "end": 1740,
             "speaker": "Analyst",
-            "act": "backchannel"
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0035",
+                "role": "clarification",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1749,
+            "end": 1790,
+            "speaker": "Client",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0035",
+                "role": "clarification",
+                "pid": "P9"
+              }
+            ]
           },
           {
             "id": "M2:T20",
-            "start": 1830,
-            "end": 1941,
+            "start": 1799,
+            "end": 1916,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -927,8 +1216,8 @@
           },
           {
             "id": "M2:T21",
-            "start": 1952,
-            "end": 2008,
+            "start": 1927,
+            "end": 2001,
             "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
@@ -943,17 +1232,17 @@
           },
           {
             "id": "M2:T22",
-            "start": 2017,
-            "end": 2045,
-            "speaker": "Client",
-            "act": "interrupt"
+            "start": 2011,
+            "end": 2023,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
             "id": "M2:T23",
-            "start": 2056,
-            "end": 2148,
+            "start": 2034,
+            "end": 2075,
             "speaker": "TechLead",
-            "act": "resume",
+            "act": "continue",
             "gt_ids": [
               "0000-gamma-j:R0037"
             ],
@@ -966,58 +1255,67 @@
           },
           {
             "id": "M2:T24",
-            "start": 2159,
-            "end": 2204,
-            "speaker": "TechLead",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0038"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0038",
-                "role": "part1"
-              }
-            ]
+            "start": 2085,
+            "end": 2092,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
             "id": "M2:T25",
-            "start": 2214,
-            "end": 2257,
-            "speaker": "Analyst",
-            "act": "interrupt"
-          },
-          {
-            "id": "M2:T26",
-            "start": 2268,
-            "end": 2325,
+            "start": 2103,
+            "end": 2180,
             "speaker": "TechLead",
-            "act": "resume",
+            "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0038"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0038",
-                "role": "part2"
+                "role": "statement"
               }
             ]
           },
           {
+            "id": "M2:T26",
+            "start": 2190,
+            "end": 2197,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
             "id": "M2:T27",
-            "start": 2334,
-            "end": 2499,
-            "speaker": "Client",
+            "start": 2208,
+            "end": 2311,
+            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
-              "0000-gamma-j:R0039",
-              "0000-gamma-j:R0040"
+              "0000-gamma-j:R0039"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0039",
                 "role": "statement"
-              },
+              }
+            ]
+          },
+          {
+            "id": "M2:T28",
+            "start": 2321,
+            "end": 2326,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T29",
+            "start": 2337,
+            "end": 2421,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0040"
+            ],
+            "refs": [
               {
                 "rid": "0000-gamma-j:R0040",
                 "role": "statement"
@@ -1025,65 +1323,59 @@
             ]
           },
           {
-            "id": "M2:T28",
-            "start": 2509,
-            "end": 2521,
+            "id": "M2:T30",
+            "start": 2431,
+            "end": 2438,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M2:T29",
-            "start": 2531,
-            "end": 2587,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M2:T30",
-            "start": 2596,
-            "end": 2618,
-            "speaker": "Client",
-            "act": "nothing_else"
-          },
-          {
             "id": "M2:T31",
-            "start": 2627,
-            "end": 2751,
+            "start": 2447,
+            "end": 2454,
             "speaker": "Client",
-            "act": "followup",
-            "gt_ids": [
-              "0000-gamma-j:R0024"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0024",
-                "role": "followup",
-                "pid": "P5"
-              }
-            ]
+            "act": "react"
           },
           {
             "id": "M2:T32",
-            "start": 2761,
-            "end": 2833,
+            "start": 2464,
+            "end": 2535,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
             "id": "M2:T33",
-            "start": 2844,
-            "end": 3183,
-            "speaker": "TechLead",
+            "start": 2544,
+            "end": 2687,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
-              "0000-gamma-j:R0031",
-              "0000-gamma-j:R0030"
+              "0000-gamma-j:R0031"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0031",
                 "role": "statement"
-              },
+              }
+            ]
+          },
+          {
+            "id": "M2:T34",
+            "start": 2698,
+            "end": 2709,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T35",
+            "start": 2718,
+            "end": 2917,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0030"
+            ],
+            "refs": [
               {
                 "rid": "0000-gamma-j:R0030",
                 "role": "statement"
@@ -1091,17 +1383,40 @@
             ]
           },
           {
-            "id": "M2:T34",
-            "start": 3193,
-            "end": 3251,
+            "id": "M2:T36",
+            "start": 2927,
+            "end": 3119,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "0000-gamma-j:R0030"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0030",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T37",
+            "start": 3128,
+            "end": 3142,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T38",
+            "start": 3152,
+            "end": 3221,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M2:T35",
-            "start": 3262,
-            "end": 3379,
-            "speaker": "TechLead",
+            "id": "M2:T39",
+            "start": 3230,
+            "end": 3330,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0041"
@@ -1115,34 +1430,17 @@
             ]
           },
           {
-            "id": "M2:T36",
-            "start": 3388,
-            "end": 3569,
-            "speaker": "Client",
-            "act": "followup",
-            "gt_ids": [
-              "0000-gamma-j:R0010"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0010",
-                "role": "followup",
-                "pid": "P3"
-              }
-            ]
-          },
-          {
-            "id": "M2:T37",
-            "start": 3579,
-            "end": 3658,
+            "id": "M2:T40",
+            "start": 3340,
+            "end": 3395,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M2:T38",
-            "start": 3667,
-            "end": 3776,
-            "speaker": "Client",
+            "id": "M2:T41",
+            "start": 3406,
+            "end": 3462,
+            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0042"
@@ -1155,9 +1453,16 @@
             ]
           },
           {
-            "id": "M2:T39",
-            "start": 3785,
-            "end": 3864,
+            "id": "M2:T42",
+            "start": 3472,
+            "end": 3478,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T43",
+            "start": 3487,
+            "end": 3560,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1172,20 +1477,47 @@
             ]
           },
           {
-            "id": "M2:T40",
-            "start": 3873,
-            "end": 4050,
+            "id": "M2:T44",
+            "start": 3569,
+            "end": 3620,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
-              "0000-gamma-j:R0045",
-              "0000-gamma-j:R0046"
+              "0000-gamma-j:R0045"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0045",
-                "role": "statement"
-              },
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M2:T45",
+            "start": 3629,
+            "end": 3665,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0045"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0045",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T46",
+            "start": 3674,
+            "end": 3737,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0046"
+            ],
+            "refs": [
               {
                 "rid": "0000-gamma-j:R0046",
                 "role": "statement"
@@ -1193,17 +1525,17 @@
             ]
           },
           {
-            "id": "M2:T41",
-            "start": 4060,
-            "end": 4065,
-            "speaker": "Analyst",
-            "act": "backchannel"
+            "id": "M2:T47",
+            "start": 3748,
+            "end": 3759,
+            "speaker": "TechLead",
+            "act": "react"
           },
           {
-            "id": "M2:T42",
-            "start": 4076,
-            "end": 4127,
-            "speaker": "TechLead",
+            "id": "M2:T48",
+            "start": 3768,
+            "end": 3842,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0047"
@@ -1216,17 +1548,17 @@
             ]
           },
           {
-            "id": "M2:T43",
-            "start": 4136,
-            "end": 4160,
-            "speaker": "Client",
+            "id": "M2:T49",
+            "start": 3853,
+            "end": 3877,
+            "speaker": "TechLead",
             "act": "interrupt"
           },
           {
-            "id": "M2:T44",
-            "start": 4171,
-            "end": 4263,
-            "speaker": "TechLead",
+            "id": "M2:T50",
+            "start": 3886,
+            "end": 3965,
+            "speaker": "Client",
             "act": "resume",
             "gt_ids": [
               "0000-gamma-j:R0047"
@@ -1239,10 +1571,31 @@
             ]
           },
           {
-            "id": "M2:T45",
-            "start": 4274,
-            "end": 4393,
+            "id": "M2:T51",
+            "start": 3975,
+            "end": 4039,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T52",
+            "start": 4049,
+            "end": 4138,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T53",
+            "start": 4149,
+            "end": 4187,
             "speaker": "TechLead",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T54",
+            "start": 4196,
+            "end": 4270,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0048"
@@ -1255,9 +1608,23 @@
             ]
           },
           {
-            "id": "M2:T46",
-            "start": 4403,
-            "end": 4494,
+            "id": "M2:T55",
+            "start": 4280,
+            "end": 4285,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T56",
+            "start": 4296,
+            "end": 4309,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T57",
+            "start": 4319,
+            "end": 4411,
             "speaker": "Analyst",
             "act": "close"
           }
@@ -1282,337 +1649,44 @@
           "other requirements",
           "preconditions"
         ],
-        "n_chars": 4850,
-        "n_words": 813,
+        "n_chars": 4749,
+        "n_words": 769,
         "segments": [
           {
             "id": "M3:T1",
             "start": 83,
-            "end": 213,
+            "end": 191,
             "speaker": "Analyst",
             "act": "open"
           },
           {
             "id": "M3:T2",
-            "start": 223,
-            "end": 406,
+            "start": 201,
+            "end": 320,
             "speaker": "Analyst",
             "act": "recap"
           },
           {
             "id": "M3:T3",
-            "start": 416,
-            "end": 470,
-            "speaker": "Analyst",
-            "act": "ask_topic"
+            "start": 330,
+            "end": 445,
+            "speaker": "EndUser",
+            "act": "followup",
+            "gt_ids": [
+              "0000-gamma-j:R0024"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0024",
+                "role": "followup",
+                "pid": "P5"
+              }
+            ]
           },
           {
             "id": "M3:T4",
-            "start": 480,
-            "end": 600,
-            "speaker": "EndUser",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0049"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0049",
-                "role": "statement",
-                "pid": "P13"
-              }
-            ]
-          },
-          {
-            "id": "M3:T5",
-            "start": 609,
-            "end": 861,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0050",
-              "0000-gamma-j:R0051"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0050",
-                "role": "statement"
-              },
-              {
-                "rid": "0000-gamma-j:R0051",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T6",
-            "start": 871,
-            "end": 994,
-            "speaker": "EndUser",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0052"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0052",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T7",
-            "start": 1004,
-            "end": 1129,
-            "speaker": "Analyst",
-            "act": "echo",
-            "gt_ids": [
-              "0000-gamma-j:R0052"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0052",
-                "role": "echo"
-              }
-            ]
-          },
-          {
-            "id": "M3:T8",
-            "start": 1139,
-            "end": 1154,
-            "speaker": "EndUser",
-            "act": "confirm"
-          },
-          {
-            "id": "M3:T9",
-            "start": 1164,
-            "end": 1208,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M3:T10",
-            "start": 1217,
-            "end": 1239,
-            "speaker": "Client",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M3:T11",
-            "start": 1249,
-            "end": 1333,
-            "speaker": "Analyst",
-            "act": "ask_topic"
-          },
-          {
-            "id": "M3:T12",
-            "start": 1342,
-            "end": 1448,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0060"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0060",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T13",
-            "start": 1458,
-            "end": 1463,
-            "speaker": "Analyst",
-            "act": "backchannel"
-          },
-          {
-            "id": "M3:T14",
-            "start": 1472,
-            "end": 1556,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0059"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0059",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T15",
-            "start": 1565,
-            "end": 1615,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0058"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0058",
-                "role": "statement",
-                "pid": "P14"
-              }
-            ]
-          },
-          {
-            "id": "M3:T16",
-            "start": 1625,
-            "end": 1687,
-            "speaker": "EndUser",
-            "act": "object_scope",
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0058",
-                "role": "conflict",
-                "pid": "P14"
-              }
-            ]
-          },
-          {
-            "id": "M3:T17",
-            "start": 1696,
-            "end": 1763,
-            "speaker": "Client",
-            "act": "defend_scope",
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0058",
-                "role": "conflict",
-                "pid": "P14"
-              }
-            ]
-          },
-          {
-            "id": "M3:T18",
-            "start": 1773,
-            "end": 1791,
-            "speaker": "Analyst",
-            "act": "resolve_keep",
-            "gt_ids": [
-              "0000-gamma-j:R0058"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0058",
-                "role": "resolution",
-                "pid": "P14"
-              }
-            ]
-          },
-          {
-            "id": "M3:T19",
-            "start": 1801,
-            "end": 1918,
-            "speaker": "EndUser",
-            "act": "restate",
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0036",
-                "role": "restatement",
-                "pid": "P10"
-              }
-            ]
-          },
-          {
-            "id": "M3:T20",
-            "start": 1928,
-            "end": 1994,
-            "speaker": "Analyst",
-            "act": "ask_topic"
-          },
-          {
-            "id": "M3:T21",
-            "start": 2003,
-            "end": 2126,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0054"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0054",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T22",
-            "start": 2136,
-            "end": 2141,
-            "speaker": "Analyst",
-            "act": "backchannel"
-          },
-          {
-            "id": "M3:T23",
-            "start": 2150,
-            "end": 2316,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0055",
-              "0000-gamma-j:R0056"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0055",
-                "role": "statement"
-              },
-              {
-                "rid": "0000-gamma-j:R0056",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T24",
-            "start": 2326,
-            "end": 2430,
-            "speaker": "Analyst",
-            "act": "echo",
-            "gt_ids": [
-              "0000-gamma-j:R0056"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0056",
-                "role": "echo"
-              }
-            ]
-          },
-          {
-            "id": "M3:T25",
-            "start": 2439,
-            "end": 2453,
-            "speaker": "Client",
-            "act": "confirm"
-          },
-          {
-            "id": "M3:T26",
-            "start": 2462,
-            "end": 2569,
-            "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0057"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0057",
-                "role": "statement"
-              }
-            ]
-          },
-          {
-            "id": "M3:T27",
-            "start": 2578,
-            "end": 2700,
+            "start": 454,
+            "end": 569,
             "speaker": "Client",
             "act": "followup",
             "gt_ids": [
@@ -1627,9 +1701,410 @@
             ]
           },
           {
+            "id": "M3:T5",
+            "start": 579,
+            "end": 640,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T6",
+            "start": 649,
+            "end": 724,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0049",
+                "role": "statement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M3:T7",
+            "start": 734,
+            "end": 842,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0050"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0050",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T8",
+            "start": 852,
+            "end": 989,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0051"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0051",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T9",
+            "start": 999,
+            "end": 1006,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T10",
+            "start": 1016,
+            "end": 1117,
+            "speaker": "EndUser",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0052"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0052",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1127,
+            "end": 1133,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1144,
+            "end": 1156,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M3:T13",
+            "start": 1166,
+            "end": 1236,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T14",
+            "start": 1245,
+            "end": 1312,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0060",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1322,
+            "end": 1329,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T16",
+            "start": 1338,
+            "end": 1410,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T17",
+            "start": 1420,
+            "end": 1473,
+            "speaker": "Analyst",
+            "act": "offtopic"
+          },
+          {
+            "id": "M3:T18",
+            "start": 1484,
+            "end": 1550,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0059",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T19",
+            "start": 1560,
+            "end": 1573,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T20",
+            "start": 1582,
+            "end": 1633,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0058"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "statement",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T21",
+            "start": 1644,
+            "end": 1720,
+            "speaker": "TechLead",
+            "act": "object_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "conflict",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T22",
+            "start": 1729,
+            "end": 1777,
+            "speaker": "Client",
+            "act": "defend_scope",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "conflict",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T23",
+            "start": 1786,
+            "end": 1873,
+            "speaker": "Client",
+            "act": "park",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0058",
+                "role": "conflict",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M3:T24",
+            "start": 1883,
+            "end": 1955,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T25",
+            "start": 1964,
+            "end": 2078,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0054"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0054",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T26",
+            "start": 2088,
+            "end": 2100,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T27",
+            "start": 2109,
+            "end": 2171,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0055",
+                "role": "statement"
+              }
+            ]
+          },
+          {
             "id": "M3:T28",
-            "start": 2709,
-            "end": 2795,
+            "start": 2181,
+            "end": 2193,
+            "speaker": "EndUser",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M3:T29",
+            "start": 2203,
+            "end": 2220,
+            "speaker": "Analyst",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M3:T30",
+            "start": 2230,
+            "end": 2319,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "0000-gamma-j:R0055"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0055",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M3:T31",
+            "start": 2328,
+            "end": 2332,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T32",
+            "start": 2342,
+            "end": 2353,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T33",
+            "start": 2364,
+            "end": 2458,
+            "speaker": "TechLead",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0056"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0056",
+                "role": "statement"
+              }
+            ]
+          },
+          {
+            "id": "M3:T34",
+            "start": 2468,
+            "end": 2473,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T35",
+            "start": 2482,
+            "end": 2549,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0057",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T36",
+            "start": 2559,
+            "end": 2571,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T37",
+            "start": 2580,
+            "end": 2635,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0057",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T38",
+            "start": 2645,
+            "end": 2652,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T39",
+            "start": 2662,
+            "end": 2673,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M3:T40",
+            "start": 2683,
+            "end": 2750,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T41",
+            "start": 2759,
+            "end": 2833,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1638,38 +2113,22 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0061",
-                "role": "part1"
+                "role": "statement"
               }
             ]
           },
           {
-            "id": "M3:T29",
-            "start": 2805,
-            "end": 2844,
-            "speaker": "EndUser",
-            "act": "interrupt"
+            "id": "M3:T42",
+            "start": 2843,
+            "end": 2855,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
-            "id": "M3:T30",
-            "start": 2853,
-            "end": 2914,
+            "id": "M3:T43",
+            "start": 2864,
+            "end": 2917,
             "speaker": "Client",
-            "act": "resume",
-            "gt_ids": [
-              "0000-gamma-j:R0061"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0061",
-                "role": "part2"
-              }
-            ]
-          },
-          {
-            "id": "M3:T31",
-            "start": 2925,
-            "end": 3023,
-            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0062"
@@ -1677,82 +2136,75 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0062",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T44",
+            "start": 2928,
+            "end": 2940,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T45",
+            "start": 2949,
+            "end": 3029,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0062"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0062",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T46",
+            "start": 3039,
+            "end": 3046,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T47",
+            "start": 3056,
+            "end": 3138,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T48",
+            "start": 3147,
+            "end": 3228,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "0000-gamma-j:R0063"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0063",
                 "role": "statement"
               }
             ]
           },
           {
-            "id": "M3:T32",
-            "start": 3033,
-            "end": 3038,
-            "speaker": "Analyst",
-            "act": "backchannel"
-          },
-          {
-            "id": "M3:T33",
-            "start": 3048,
-            "end": 3090,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M3:T34",
-            "start": 3101,
-            "end": 3123,
+            "id": "M3:T49",
+            "start": 3239,
+            "end": 3252,
             "speaker": "TechLead",
-            "act": "nothing_else"
+            "act": "react"
           },
           {
-            "id": "M3:T35",
-            "start": 3133,
-            "end": 3200,
-            "speaker": "Analyst",
-            "act": "ask_topic"
-          },
-          {
-            "id": "M3:T36",
-            "start": 3209,
-            "end": 3257,
+            "id": "M3:T50",
+            "start": 3261,
+            "end": 3346,
             "speaker": "Client",
-            "act": "state",
-            "gt_ids": [
-              "0000-gamma-j:R0063"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0063",
-                "role": "part1"
-              }
-            ]
-          },
-          {
-            "id": "M3:T37",
-            "start": 3267,
-            "end": 3280,
-            "speaker": "EndUser",
-            "act": "interrupt"
-          },
-          {
-            "id": "M3:T38",
-            "start": 3289,
-            "end": 3324,
-            "speaker": "Client",
-            "act": "resume",
-            "gt_ids": [
-              "0000-gamma-j:R0063"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0063",
-                "role": "part2"
-              }
-            ]
-          },
-          {
-            "id": "M3:T39",
-            "start": 3335,
-            "end": 3376,
-            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0065"
@@ -1760,38 +2212,15 @@
             "refs": [
               {
                 "rid": "0000-gamma-j:R0065",
-                "role": "part1"
+                "role": "statement"
               }
             ]
           },
           {
-            "id": "M3:T40",
-            "start": 3385,
-            "end": 3413,
+            "id": "M3:T51",
+            "start": 3355,
+            "end": 3461,
             "speaker": "Client",
-            "act": "interrupt"
-          },
-          {
-            "id": "M3:T41",
-            "start": 3424,
-            "end": 3486,
-            "speaker": "TechLead",
-            "act": "resume",
-            "gt_ids": [
-              "0000-gamma-j:R0065"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0065",
-                "role": "part2"
-              }
-            ]
-          },
-          {
-            "id": "M3:T42",
-            "start": 3497,
-            "end": 3575,
-            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0066"
@@ -1805,60 +2234,136 @@
             ]
           },
           {
-            "id": "M3:T43",
-            "start": 3585,
-            "end": 3643,
+            "id": "M3:T52",
+            "start": 3471,
+            "end": 3513,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M3:T53",
+            "start": 3522,
+            "end": 3544,
+            "speaker": "Client",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M3:T54",
+            "start": 3554,
+            "end": 3680,
+            "speaker": "EndUser",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0036",
+                "role": "restatement",
+                "pid": "P10"
+              }
+            ]
+          },
+          {
+            "id": "M3:T55",
+            "start": 3690,
+            "end": 3746,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M3:T44",
-            "start": 3652,
-            "end": 3872,
-            "speaker": "Client",
+            "id": "M3:T56",
+            "start": 3756,
+            "end": 3801,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
-              "0000-gamma-j:R0067",
-              "0000-gamma-j:R0068"
+              "0000-gamma-j:R0067"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0067",
-                "role": "statement"
-              },
-              {
-                "rid": "0000-gamma-j:R0068",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M3:T45",
-            "start": 3882,
-            "end": 4012,
+            "id": "M3:T57",
+            "start": 3811,
+            "end": 3818,
             "speaker": "Analyst",
-            "act": "echo",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T58",
+            "start": 3828,
+            "end": 3871,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0067"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0067",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T59",
+            "start": 3882,
+            "end": 3888,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T60",
+            "start": 3898,
+            "end": 3963,
+            "speaker": "EndUser",
+            "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0068"
             ],
             "refs": [
               {
                 "rid": "0000-gamma-j:R0068",
-                "role": "echo"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M3:T46",
-            "start": 4021,
-            "end": 4035,
-            "speaker": "Client",
-            "act": "confirm"
+            "id": "M3:T61",
+            "start": 3973,
+            "end": 3985,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
-            "id": "M3:T47",
-            "start": 4045,
-            "end": 4172,
+            "id": "M3:T62",
+            "start": 3995,
+            "end": 4057,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0068"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0068",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T63",
+            "start": 4067,
+            "end": 4072,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T64",
+            "start": 4082,
+            "end": 4154,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -1872,18 +2377,18 @@
             ]
           },
           {
-            "id": "M3:T48",
-            "start": 4183,
-            "end": 4230,
-            "speaker": "TechLead",
-            "act": "interrupt"
+            "id": "M3:T65",
+            "start": 4163,
+            "end": 4168,
+            "speaker": "Client",
+            "act": "backchannel"
           },
           {
-            "id": "M3:T49",
-            "start": 4240,
-            "end": 4363,
+            "id": "M3:T66",
+            "start": 4178,
+            "end": 4271,
             "speaker": "EndUser",
-            "act": "resume",
+            "act": "continue",
             "gt_ids": [
               "0000-gamma-j:R0069"
             ],
@@ -1895,10 +2400,47 @@
             ]
           },
           {
-            "id": "M3:T50",
-            "start": 4372,
-            "end": 4514,
+            "id": "M3:T67",
+            "start": 4280,
+            "end": 4292,
             "speaker": "Client",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T68",
+            "start": 4302,
+            "end": 4341,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "0000-gamma-j:R0069"
+            ],
+            "refs": [
+              {
+                "rid": "0000-gamma-j:R0069",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T69",
+            "start": 4351,
+            "end": 4363,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T70",
+            "start": 4373,
+            "end": 4429,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T71",
+            "start": 4440,
+            "end": 4551,
+            "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
               "0000-gamma-j:R0070"
@@ -1911,46 +2453,23 @@
             ]
           },
           {
-            "id": "M3:T51",
-            "start": 4524,
-            "end": 4688,
+            "id": "M3:T72",
+            "start": 4561,
+            "end": 4573,
             "speaker": "Analyst",
-            "act": "echo",
-            "gt_ids": [
-              "0000-gamma-j:R0070"
-            ],
-            "refs": [
-              {
-                "rid": "0000-gamma-j:R0070",
-                "role": "echo"
-              }
-            ]
+            "act": "backchannel"
           },
           {
-            "id": "M3:T52",
-            "start": 4697,
-            "end": 4701,
+            "id": "M3:T73",
+            "start": 4582,
+            "end": 4661,
             "speaker": "Client",
-            "act": "confirm"
+            "act": "offtopic"
           },
           {
-            "id": "M3:T53",
-            "start": 4711,
-            "end": 4741,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M3:T54",
-            "start": 4750,
-            "end": 4769,
-            "speaker": "Client",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M3:T55",
-            "start": 4779,
-            "end": 4849,
+            "id": "M3:T74",
+            "start": 4671,
+            "end": 4748,
             "speaker": "Analyst",
             "act": "close"
           }
@@ -1965,34 +2484,37 @@
     "n_expected_in_output": 60,
     "n_reachable": 60,
     "by_status": {
-      "clear": 48,
-      "conflict_resolved": 2,
-      "conflict_open": 1,
+      "clear": 47,
+      "conflict_resolved": 1,
+      "conflict_open": 2,
       "ambiguous": 3,
       "inconsistent": 1,
-      "incomplete": 5
+      "incomplete": 6
     },
     "phenomena": {
       "ambiguity:unresolved": 3,
-      "conflict:open": 1,
-      "conflict:resolved": 2,
-      "incompleteness:completed_later": 3,
-      "incompleteness:open": 5,
+      "conflict:open": 2,
+      "conflict:resolved": 1,
+      "incompleteness:completed_later": 2,
+      "incompleteness:open": 6,
       "inconsistency:unnoticed": 1
     },
     "n_distractors": 0,
-    "n_issues": 10,
+    "n_issues": 12,
     "messiness": {
       "topic_revisits": 1,
       "topics_out_of_document_order": 6,
       "smalltalk": 1,
-      "false_starts": 4,
-      "offtopic": 1,
-      "interruptions": 9,
-      "self_introduced_topics": 3,
+      "false_starts": 1,
+      "self_introduced_topics": 1,
+      "chunked_statements": 16,
+      "reactions": 17,
+      "interruptions": 3,
+      "offtopic": 4,
+      "crosstalk": 1,
       "meetings": 3
     },
-    "mean_support_clear": 0.987
+    "mean_support_clear": 0.99
   },
   "requirements": [
     {
@@ -2123,16 +2645,19 @@
             "stated_text": "Must use a SQL based database. SQL standard is the most widely used database format. Restricting"
           },
           "segments": [
-            "M1:T11"
+            "M1:T10",
+            "M1:T12"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T11"
+          "M1:T10",
+          "M1:T12"
         ],
         "related_segments": [
-          "M1:T11"
+          "M1:T10",
+          "M1:T12"
         ],
         "support_score": 0.667,
         "reachable": true
@@ -2165,12 +2690,16 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T12",
-          "M1:T13"
+          "M1:T13",
+          "M1:T15",
+          "M1:T17",
+          "M1:T19"
         ],
         "related_segments": [
-          "M1:T12",
-          "M1:T13"
+          "M1:T13",
+          "M1:T15",
+          "M1:T17",
+          "M1:T19"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2203,10 +2732,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T16"
+          "M1:T22"
         ],
         "related_segments": [
-          "M1:T16"
+          "M1:T22"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2234,35 +2763,31 @@
         "modifier": null,
         "modal": "strong"
       },
-      "status": "clear",
+      "status": "incomplete",
       "expected_in_output": true,
       "phenomena": [
         {
           "pid": "P3",
           "type": "incompleteness",
           "kind": "truncated",
-          "outcome": "completed_later",
+          "outcome": "open",
           "details": {
             "missing": "book, and Installation Instructions for the Administrator.",
-            "stated_text": "Shall deliver Operations and Maintenance manual, Users Guide",
-            "completed_in": "M2"
+            "stated_text": "Shall deliver Operations and Maintenance manual, Users Guide"
           },
           "segments": [
-            "M1:T17",
-            "M2:T36"
+            "M1:T25"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T17",
-          "M2:T36"
+          "M1:T25"
         ],
         "related_segments": [
-          "M1:T17",
-          "M2:T36"
+          "M1:T25"
         ],
-        "support_score": 1.0,
+        "support_score": 0.6,
         "reachable": true
       }
     },
@@ -2294,10 +2819,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T21"
+          "M1:T27",
+          "M1:T29",
+          "M1:T30"
         ],
         "related_segments": [
-          "M1:T21"
+          "M1:T27",
+          "M1:T29",
+          "M1:T30"
         ],
         "support_score": 0.923,
         "reachable": true
@@ -2331,10 +2860,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T21"
+          "M1:T33",
+          "M1:T35"
         ],
         "related_segments": [
-          "M1:T21"
+          "M1:T33",
+          "M1:T35"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2368,10 +2899,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T32"
+          "M1:T48"
         ],
         "related_segments": [
-          "M1:T32"
+          "M1:T48"
         ],
         "support_score": 0.909,
         "reachable": true
@@ -2405,10 +2936,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T25"
+          "M1:T38",
+          "M1:T40"
         ],
         "related_segments": [
-          "M1:T25"
+          "M1:T38",
+          "M1:T40"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2442,12 +2975,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T26",
-          "M1:T27"
+          "M1:T42",
+          "M1:T44"
         ],
         "related_segments": [
-          "M1:T26",
-          "M1:T27"
+          "M1:T42",
+          "M1:T44"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2489,16 +3022,16 @@
             "stated_text": "The shopping cart will clearly display the number of items"
           },
           "segments": [
-            "M1:T36"
+            "M1:T51"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T36"
+          "M1:T51"
         ],
         "related_segments": [
-          "M1:T36"
+          "M1:T51"
         ],
         "support_score": 0.667,
         "reachable": true
@@ -2532,10 +3065,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T37"
+          "M1:T52",
+          "M1:T54"
         ],
         "related_segments": [
-          "M1:T37"
+          "M1:T52",
+          "M1:T54"
         ],
         "support_score": 0.9,
         "reachable": true
@@ -2569,12 +3104,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T41",
-          "M1:T43"
+          "M1:T64"
         ],
         "related_segments": [
-          "M1:T41",
-          "M1:T43"
+          "M1:T64"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2608,10 +3141,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T40"
+          "M1:T59",
+          "M1:T61",
+          "M1:T63"
         ],
         "related_segments": [
-          "M1:T40"
+          "M1:T59",
+          "M1:T61",
+          "M1:T63"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2645,10 +3182,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T39"
+          "M1:T56"
         ],
         "related_segments": [
-          "M1:T39"
+          "M1:T56"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2682,14 +3219,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T45",
-          "M1:T46"
+          "M1:T72"
         ],
         "related_segments": [
-          "M1:T45",
-          "M1:T46"
+          "M1:T72"
         ],
-        "support_score": 1.0,
+        "support_score": 0.875,
         "reachable": true
       }
     },
@@ -2727,22 +3262,22 @@
           "details": {
             "missing": "products matching their search criteria.",
             "stated_text": "Customers will be able to search for",
-            "completed_in": "M2"
+            "completed_in": "M3"
           },
           "segments": [
-            "M1:T51",
-            "M2:T31"
+            "M1:T76",
+            "M3:T3"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T51",
-          "M2:T31"
+          "M1:T76",
+          "M3:T3"
         ],
         "related_segments": [
-          "M1:T51",
-          "M2:T31"
+          "M1:T76",
+          "M3:T3"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2776,12 +3311,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T48",
-          "M1:T50"
+          "M1:T74"
         ],
         "related_segments": [
-          "M1:T48",
-          "M1:T50"
+          "M1:T74"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2815,10 +3348,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T45"
+          "M1:T67",
+          "M1:T69"
         ],
         "related_segments": [
-          "M1:T45"
+          "M1:T67",
+          "M1:T69"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2910,10 +3445,13 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system."
+            "stated_text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system.",
+            "clarification_attempted": true
           },
           "segments": [
-            "M2:T5"
+            "M2:T5",
+            "M2:T6",
+            "M2:T7"
           ]
         }
       ],
@@ -2922,7 +3460,9 @@
           "M2:T5"
         ],
         "related_segments": [
-          "M2:T5"
+          "M2:T5",
+          "M2:T6",
+          "M2:T7"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2955,10 +3495,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T33"
+          "M2:T35",
+          "M2:T36"
         ],
         "related_segments": [
-          "M2:T33"
+          "M2:T35",
+          "M2:T36"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3026,10 +3568,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T10"
+          "M2:T9",
+          "M2:T11"
         ],
         "related_segments": [
-          "M2:T10"
+          "M2:T9",
+          "M2:T11"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3065,26 +3609,26 @@
           "kind": "scope",
           "outcome": "open",
           "details": {
-            "raised_by": "TechLead",
+            "raised_by": "Client",
             "meeting": "M2"
           },
           "segments": [
-            "M2:T11",
             "M2:T12",
             "M2:T13",
-            "M2:T14"
+            "M2:T14",
+            "M2:T15"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T11"
+          "M2:T12"
         ],
         "related_segments": [
-          "M2:T11",
           "M2:T12",
           "M2:T13",
-          "M2:T14"
+          "M2:T14",
+          "M2:T15"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3116,11 +3660,9 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T15",
           "M2:T16"
         ],
         "related_segments": [
-          "M2:T15",
           "M2:T16"
         ],
         "support_score": 1.0,
@@ -3159,19 +3701,24 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "The system shall be able to add product to shopping cart in less than 2ms."
+            "stated_text": "The system shall be able to add product to shopping cart in less than 2ms.",
+            "clarification_attempted": true
           },
           "segments": [
-            "M2:T18"
+            "M2:T17",
+            "M2:T18",
+            "M2:T19"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T18"
+          "M2:T17"
         ],
         "related_segments": [
-          "M2:T18"
+          "M2:T17",
+          "M2:T18",
+          "M2:T19"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3214,7 +3761,7 @@
           },
           "segments": [
             "M2:T20",
-            "M3:T19"
+            "M3:T54"
           ]
         }
       ],
@@ -3224,7 +3771,7 @@
         ],
         "related_segments": [
           "M2:T20",
-          "M3:T19"
+          "M3:T54"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3293,12 +3840,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T24",
-          "M2:T26"
+          "M2:T25"
         ],
         "related_segments": [
-          "M2:T24",
-          "M2:T26"
+          "M2:T25"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3365,10 +3910,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T27"
+          "M2:T29"
         ],
         "related_segments": [
-          "M2:T27"
+          "M2:T29"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3409,16 +3954,16 @@
             "stated_text": "The system will do periodic"
           },
           "segments": [
-            "M2:T35"
+            "M2:T39"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T35"
+          "M2:T39"
         ],
         "related_segments": [
-          "M2:T35"
+          "M2:T39"
         ],
         "support_score": 0.286,
         "reachable": true
@@ -3451,10 +3996,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T38"
+          "M2:T41"
         ],
         "related_segments": [
-          "M2:T38"
+          "M2:T41"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3496,19 +4041,19 @@
             "completed_in": "M3"
           },
           "segments": [
-            "M2:T39",
-            "M3:T27"
+            "M2:T43",
+            "M3:T4"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T39",
-          "M3:T27"
+          "M2:T43",
+          "M3:T4"
         ],
         "related_segments": [
-          "M2:T39",
-          "M3:T27"
+          "M2:T43",
+          "M3:T4"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3541,10 +4086,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T40"
+          "M2:T44",
+          "M2:T45"
         ],
         "related_segments": [
-          "M2:T40"
+          "M2:T44",
+          "M2:T45"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3577,10 +4124,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T40"
+          "M2:T46"
         ],
         "related_segments": [
-          "M2:T40"
+          "M2:T46"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3613,12 +4160,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T42",
-          "M2:T44"
+          "M2:T48",
+          "M2:T50"
         ],
         "related_segments": [
-          "M2:T42",
-          "M2:T44"
+          "M2:T48",
+          "M2:T50"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3651,10 +4198,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T45"
+          "M2:T54"
         ],
         "related_segments": [
-          "M2:T45"
+          "M2:T54"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3695,16 +4242,16 @@
             "stated_text": "The system shall perform searches"
           },
           "segments": [
-            "M3:T4"
+            "M3:T6"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T4"
+          "M3:T6"
         ],
         "related_segments": [
-          "M3:T4"
+          "M3:T6"
         ],
         "support_score": 0.429,
         "reachable": true
@@ -3737,10 +4284,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T5"
+          "M3:T7"
         ],
         "related_segments": [
-          "M3:T5"
+          "M3:T7"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3773,10 +4320,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T5"
+          "M3:T8"
         ],
         "related_segments": [
-          "M3:T5"
+          "M3:T8"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3809,12 +4356,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T6",
-          "M3:T7"
+          "M3:T10"
         ],
         "related_segments": [
-          "M3:T6",
-          "M3:T7"
+          "M3:T10"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3847,12 +4392,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T21"
+          "M3:T25"
         ],
         "related_segments": [
-          "M3:T21"
+          "M3:T25"
         ],
-        "support_score": 0.875,
+        "support_score": 1.0,
         "reachable": true
       }
     },
@@ -3883,10 +4428,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T23"
+          "M3:T27",
+          "M3:T30"
         ],
         "related_segments": [
-          "M3:T23"
+          "M3:T27",
+          "M3:T30"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3919,12 +4466,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T23",
-          "M3:T24"
+          "M3:T33"
         ],
         "related_segments": [
-          "M3:T23",
-          "M3:T24"
+          "M3:T33"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3957,12 +4502,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T26"
+          "M3:T35",
+          "M3:T37"
         ],
         "related_segments": [
-          "M3:T26"
+          "M3:T35",
+          "M3:T37"
         ],
-        "support_score": 0.857,
+        "support_score": 1.0,
         "reachable": true
       }
     },
@@ -3989,36 +4536,35 @@
         "modifier": null,
         "modal": "strong"
       },
-      "status": "conflict_resolved",
+      "status": "conflict_open",
       "expected_in_output": true,
       "phenomena": [
         {
           "pid": "P14",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "resolved",
+          "outcome": "open",
           "details": {
-            "raised_by": "EndUser",
+            "raised_by": "TechLead",
             "meeting": "M3"
           },
           "segments": [
-            "M3:T15",
-            "M3:T16",
-            "M3:T17",
-            "M3:T18"
+            "M3:T20",
+            "M3:T21",
+            "M3:T22",
+            "M3:T23"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T15",
-          "M3:T18"
+          "M3:T20"
         ],
         "related_segments": [
-          "M3:T15",
-          "M3:T16",
-          "M3:T17",
-          "M3:T18"
+          "M3:T20",
+          "M3:T21",
+          "M3:T22",
+          "M3:T23"
         ],
         "support_score": 0.75,
         "reachable": true
@@ -4052,10 +4598,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T14"
+          "M3:T18"
         ],
         "related_segments": [
-          "M3:T14"
+          "M3:T18"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4089,10 +4635,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T12"
+          "M3:T14",
+          "M3:T16"
         ],
         "related_segments": [
-          "M3:T12"
+          "M3:T14",
+          "M3:T16"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4126,12 +4674,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T28",
-          "M3:T30"
+          "M3:T41"
         ],
         "related_segments": [
-          "M3:T28",
-          "M3:T30"
+          "M3:T41"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4165,10 +4711,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T31"
+          "M3:T43",
+          "M3:T45"
         ],
         "related_segments": [
-          "M3:T31"
+          "M3:T43",
+          "M3:T45"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4202,12 +4750,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T36",
-          "M3:T38"
+          "M3:T48"
         ],
         "related_segments": [
-          "M3:T36",
-          "M3:T38"
+          "M3:T48"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4241,12 +4787,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T39",
-          "M3:T41"
+          "M3:T50"
         ],
         "related_segments": [
-          "M3:T39",
-          "M3:T41"
+          "M3:T50"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4288,16 +4832,16 @@
             "stated_text": "The system should be able to create"
           },
           "segments": [
-            "M3:T42"
+            "M3:T51"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T42"
+          "M3:T51"
         ],
         "related_segments": [
-          "M3:T42"
+          "M3:T51"
         ],
         "support_score": 0.4,
         "reachable": true
@@ -4329,10 +4873,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T44"
+          "M3:T56",
+          "M3:T58"
         ],
         "related_segments": [
-          "M3:T44"
+          "M3:T56",
+          "M3:T58"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4364,12 +4910,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T44",
-          "M3:T45"
+          "M3:T60",
+          "M3:T62"
         ],
         "related_segments": [
-          "M3:T44",
-          "M3:T45"
+          "M3:T60",
+          "M3:T62"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4401,12 +4947,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T47",
-          "M3:T49"
+          "M3:T64",
+          "M3:T66",
+          "M3:T68"
         ],
         "related_segments": [
-          "M3:T47",
-          "M3:T49"
+          "M3:T64",
+          "M3:T66",
+          "M3:T68"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4441,12 +4989,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T50",
-          "M3:T51"
+          "M3:T71"
         ],
         "related_segments": [
-          "M3:T50",
-          "M3:T51"
+          "M3:T71"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4463,7 +5009,8 @@
       "pid": "P2",
       "expected_action": "request_missing_information",
       "segments": [
-        "M1:T11"
+        "M1:T10",
+        "M1:T12"
       ],
       "details": {
         "missing": "to SQL allows easy of use and compatibility for Web Store.",
@@ -4474,11 +5021,26 @@
       "id": "0000-gamma-j:I002",
       "type": "incompleteness",
       "kind": "truncated",
+      "requirement": "0000-gamma-j:R0010",
+      "pid": "P3",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T25"
+      ],
+      "details": {
+        "missing": "book, and Installation Instructions for the Administrator.",
+        "stated_text": "Shall deliver Operations and Maintenance manual, Users Guide"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I003",
+      "type": "incompleteness",
+      "kind": "truncated",
       "requirement": "0000-gamma-j:R0017",
       "pid": "P4",
       "expected_action": "request_missing_information",
       "segments": [
-        "M1:T36"
+        "M1:T51"
       ],
       "details": {
         "missing": "in the cart, along with the total cost.",
@@ -4486,7 +5048,7 @@
       }
     },
     {
-      "id": "0000-gamma-j:I003",
+      "id": "0000-gamma-j:I004",
       "type": "ambiguity",
       "kind": "optionality",
       "requirement": "0000-gamma-j:R0028",
@@ -4502,57 +5064,63 @@
       }
     },
     {
-      "id": "0000-gamma-j:I004",
+      "id": "0000-gamma-j:I005",
       "type": "ambiguity",
       "kind": "optionality",
       "requirement": "0000-gamma-j:R0029",
       "pid": "P7",
       "expected_action": "ask_clarification",
       "segments": [
-        "M2:T5"
+        "M2:T5",
+        "M2:T6",
+        "M2:T7"
       ],
       "details": {
         "removed": null,
         "replacement": null,
-        "stated_text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system."
+        "stated_text": "Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system.",
+        "clarification_attempted": true
       }
     },
     {
-      "id": "0000-gamma-j:I005",
+      "id": "0000-gamma-j:I006",
       "type": "conflict",
       "kind": "scope",
       "requirement": "0000-gamma-j:R0033",
       "pid": "P8",
       "expected_action": "resolve_with_stakeholders",
       "segments": [
-        "M2:T11",
         "M2:T12",
         "M2:T13",
-        "M2:T14"
+        "M2:T14",
+        "M2:T15"
       ],
       "details": {
-        "raised_by": "TechLead",
+        "raised_by": "Client",
         "meeting": "M2"
       }
     },
     {
-      "id": "0000-gamma-j:I006",
+      "id": "0000-gamma-j:I007",
       "type": "ambiguity",
       "kind": "optionality",
       "requirement": "0000-gamma-j:R0035",
       "pid": "P9",
       "expected_action": "ask_clarification",
       "segments": [
-        "M2:T18"
+        "M2:T17",
+        "M2:T18",
+        "M2:T19"
       ],
       "details": {
         "removed": null,
         "replacement": null,
-        "stated_text": "The system shall be able to add product to shopping cart in less than 2ms."
+        "stated_text": "The system shall be able to add product to shopping cart in less than 2ms.",
+        "clarification_attempted": true
       }
     },
     {
-      "id": "0000-gamma-j:I007",
+      "id": "0000-gamma-j:I008",
       "type": "inconsistency",
       "kind": "value",
       "requirement": "0000-gamma-j:R0036",
@@ -4560,7 +5128,7 @@
       "expected_action": "flag_inconsistency",
       "segments": [
         "M2:T20",
-        "M3:T19"
+        "M3:T54"
       ],
       "details": {
         "original_value": "1 second",
@@ -4570,14 +5138,14 @@
       }
     },
     {
-      "id": "0000-gamma-j:I008",
+      "id": "0000-gamma-j:I009",
       "type": "incompleteness",
       "kind": "truncated",
       "requirement": "0000-gamma-j:R0041",
       "pid": "P11",
       "expected_action": "request_missing_information",
       "segments": [
-        "M2:T35"
+        "M2:T39"
       ],
       "details": {
         "missing": "backups through a live internet connection.",
@@ -4585,14 +5153,14 @@
       }
     },
     {
-      "id": "0000-gamma-j:I009",
+      "id": "0000-gamma-j:I010",
       "type": "incompleteness",
       "kind": "truncated",
       "requirement": "0000-gamma-j:R0049",
       "pid": "P13",
       "expected_action": "request_missing_information",
       "segments": [
-        "M3:T4"
+        "M3:T6"
       ],
       "details": {
         "missing": "via Dijkstra's shortest path algorithm.",
@@ -4600,14 +5168,32 @@
       }
     },
     {
-      "id": "0000-gamma-j:I010",
+      "id": "0000-gamma-j:I011",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "0000-gamma-j:R0058",
+      "pid": "P14",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M3:T20",
+        "M3:T21",
+        "M3:T22",
+        "M3:T23"
+      ],
+      "details": {
+        "raised_by": "TechLead",
+        "meeting": "M3"
+      }
+    },
+    {
+      "id": "0000-gamma-j:I012",
       "type": "incompleteness",
       "kind": "truncated",
       "requirement": "0000-gamma-j:R0066",
       "pid": "P15",
       "expected_action": "request_missing_information",
       "segments": [
-        "M3:T42"
+        "M3:T51"
       ],
       "details": {
         "missing": "test environment of weborder system.",

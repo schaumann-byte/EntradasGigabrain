@@ -1,66 +1,116 @@
 Meeting 2 of 2 (follow-up)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Hi everyone, thanks for making uh time time again. Let's pick up where we left off on KeePass Password Safe.
-Client: Erm, How was everyone's weekend?
-Analyst: Uh, So, last time we talked about general needs, new well database and open database.
-Analyst: Can you walk me through auto-type?
-Client: This you know feature uh allows user to define a a sequence of keypresses which KeePass could maybe automatically perform.
-Analyst: Can you be more more specific?
-Client: We'll figure that out later, like I guess.
-EndUser: The sequence would have to be sort of prefixed with "Auto-Type" and length of one line, that's pretty important for us.
-Client: If If a sequence is more than a actually line kind of it can't be basically used and in case uh of two sequences erm in uhm one note's field only the the first one is used.
-Analyst: Yeah.
-EndUser: Also, the prefix "Auto-Type:" is required in front of each sequence, that's the main thing. And sequence's length mustn't be more than a line line (59 characters).
-Client: Erm, One thing is, if if two two erm auto-types are referred in one note field, only the first is used, basically that's the main thing.
-Analyst: Er, What are your expectations regarding command like line options?
-EndUser: Um, I think only one well database file is is allowed in command line options.
-Client: Okay so in case a space is is found in the path, it would have to be enclosed into quotes.
-Analyst: Erm, About the open point on modify uhm group/subgroup: we decided uh to drop it.
-Analyst: Uh, Let's move on to composite master key. What do you have you know in mind?
-Client: For us, if a a master password is required kind of to unlock the database, the database doesn't open unless the i mean password is is kind of entered.
-Analyst: So if I got it right, if a master password is required to unlock the database, the database doesn't sort of open unless the password is like entered?
-Client: Mm-hmm, yes.
-Client: If a key file is required to unlock the sort of database—
-Analyst: Sorry, quick question, is that for everyone?
-Client: Yeah, so, the database doesn't open unless the key file is present.
-EndUser: So the— sorry, let me rephrase. if there's a composite key, er both master password and key file are required, right? And kind of in case of lost master password or or key file, the database never unlocks again. There is no recovery.
-Client: Yeah, so there's no well backdoor or key that unlocks all databases. [pause]
-Client: Can I jump in on import/export? Yeah, so so file formats are not specialized password database formats.
-Analyst: Just to erm confirm, and file file formats aren't specialized password database um formats?
-Client: Mm-hmm, yes.
-Client: Uhm, File i mean formats um only specify a low-level layout well of stored data.
+Analyst: Hi everyone, thanks for making time again. Let's sort of pick up where we left off on KeePass Password Safe.
+Client: Sorry, I'm a couple of minutes late, the previous uh call ran over.
+Analyst: Quick recap from last time: we went over general needs, uh new database and open database. And a couple of like points were still open.
+Analyst: And auto-type, how do you see that working?
+Client: Uh, I mean, this feature allows user to define a sequence of keypresses which KeePass could maybe automatically i mean perform.
+Client: The sequence would have to be prefixed with "Auto-Type".
+Client: Um, Hold on, let me share my screen again.
 Analyst: Makes sense.
-Analyst: So, let's talk about tan support. well What What do you need there?
-Client: Erm, When TAN are created, they like appear as typical entries which in sort of the field title contain "TAN" so that KeePass will know it's a TAN. And in TAN entries, user can't change the title, user name name or URL but notes can be added.
+Client: And length of one line.
+Analyst: Makes sense.
+TechLead: Mm-hmm.
+EndUser: If a sequence is more than a line it can't be used.
+Analyst: Okay.
+EndUser: And in case of two sequences in one note's field only the first one is erm used.
+Analyst: Makes sense.
+EndUser: The prefix "Auto-Type:" is required in front of each sequence, that's pretty important for us.
 Analyst: Yeah.
-Client: Title, username or URL like can't sort of be changed in a a TAN entry.
-Analyst: Got it.
-Client: And when a TAN is used, uh it expires erm automatically and can never be used uh again.
-Analyst: Erm, Is that all for tan support?
-EndUser: No, I think that's it.
-Analyst: And integration, how do you see that working? [noise]
-Client: Global hot key can't be changed.
-TechLead: That sounds like a sort of lot of work work for little value.
-Client: I'd really like to keep it.
-Analyst: Okay, we'll keep it in then.
-Analyst: What about user interfaces? Any constraints we should know about?
-Client: At this time the main database window is inactive and like cannot be accessed unless the current active window is closed.
-Analyst: Let's cover you know performance requirements now. What level do you expect?
-Client: Erm, If um in the meanwhile it isn't pasted anywhere, it'll need to be copied again, right?
+Client: Erm, Sequence's length mustn't be more than a line (59 characters).
+EndUser: Okay, noted.
+Client: Um, Well, also, if two auto-types are referred um in one note field.
+Analyst: Right.
+Client: Plus only the first is used.
 Analyst: Mm-hmm.
-Client: That happens so that if user user copies basically a password and not paste it anywhere, the password cannot be found by anyone later.
-TechLead: I'm not convinced that's necessary, honestly.
-Client: We do need it, it's erm important for our people.
-Client: Um, Let's leave that open for now, I need to check with my my team.
-TechLead: Erm, Before I uhm forget, on software quality attributes, honestly, keePass is a small and light project so it doesn't need to be installed. All it takes is unpacking actually from the the Zip package. It can be transferred also in a USB erm stick with sort of no extra configuration needed.
-Analyst: Er, Is that that all um for software quality attributes?
-TechLead: That's all for now.
-Analyst: On well the open point uh about change language: we decided. An internet connection and a browser are required to download new language translations For uh the following features, use cases um aren't included.
-Analyst: Uhm, Let's cover safety requirements now. What level do you expect?
-TechLead: When a USB erm which contains the database is removed from a computer while changes um haven't been completely um saved, the database is damaged and uhm can't be opened.
-Client: I'm not convinced like that's necessary, honestly.
-TechLead: I'd really like to keep it.
-TechLead: Let's try to finish on time, I have another call actually after this.
-Client: Let's leave that open erm for now, I need to check with my team.
-Analyst: Er, Okay, well I think we have everything. I'll consolidate and kind of send it around.
+EndUser: Mm-hmm.
+Client: Something on command line options: the thing is, maybe only one database file is allowed in command line options.
+Client: And in case a space is found sort of in the path...
+EndUser: Okay, noted.
+Client: Uh, And it must be enclosed into quotes.
+Analyst: Got it.
+TechLead: Right, yes.
+Analyst: So, let's talk about composite master key. What do you well need there?
+Client: The thing is, if a master password is required to unlock the the database...
+Analyst: Okay, noted.
+Client: And also the database doesn't open unless the password is entered.
+EndUser: Mm-hmm.
+Client: Erm, So, uh if a key file is required to unlock the database.
+Analyst: Okay.
+Client: Then the database doesn't open unless basically the key file is present.
+EndUser: Yeah, so if there's a composite key,
+TechLead: Okay, noted.
+EndUser: Uh, Both master password uh and key file are required.
+Analyst: Makes sense.
+EndUser: Yeah, so and in case actually of lost master password,
+Client: Right.
+EndUser: Um, Or key file, the database never [crosstalk] unlocks again.
+Analyst: Right.
+EndUser: Then there's no no recovery.
+Client: That too, yeah.
+EndUser: So So there's no backdoor or key that unlocks all databases.
+Analyst: Let's move on to import/export. What do you have in mind?
+Analyst: Sorry, I was on mute.
+EndUser: So So file formats aren't specialized password database formats.
+Analyst: Got it.
+TechLead: Yeah.
+EndUser: Also, file formats only specify a—
+Client: Sorry, quick question, is that for everyone?
+EndUser: Where was I... yes, low-level layout of stored data.
+Client: Oh, and about tan support, it should— well, for us, and when like TAN are basically created, they basically appear as typical entries...
+TechLead: Got it.
+Client: Then which in the field uhm title contain uh "TAN".
+EndUser: Okay.
+Client: Uhm, So that KeePass will know i mean it's a TAN, that's pretty important for us.
+Analyst: So if I got it right, when TAN are created, they appear as typical erm entries which in the field title contain "TAN" so that i mean KeePass will know sort of it's a TAN?
+Client: Yeah, exactly.
+EndUser: Er, In TAN entries, user can't change the title,
+Analyst: Mm-hmm.
+EndUser: So user name or URL but notes can be added.
+Analyst: Makes sense.
+EndUser: Title, username or URL cannot be changed in a a TAN erm entry.
+Analyst: So if I got it right, title, username or URL can't be changed in a TAN entry?
+EndUser: Yes, that's it.
+EndUser: Erm, So, one thing is, when a TAN is er used, it expires automatically and can never er be used again.
+Analyst: Got it.
+TechLead: True.
+Analyst: What are your kind of expectations regarding integration?
+Client: Global hot key can't be changed.
+TechLead: Do we really need that? I'd leave it out, at least for the first version.
+Client: I'd really like to keep it.
+Analyst: Let's leave that open for now, I need to check with my team.
+Analyst: On new database, uhm the thing we left open, we're taking it out.
+Analyst: What about user interfaces? Any hard you know limits erm there?
+TechLead: Well, at this time the main database window is inactive...
+Analyst: Okay.
+TechLead: And cannot be accessed unless the current active window is closed.
+Analyst: Let me check I got this: at this time the main database window is inactive uh and can't be accessed unless the current active window is closed?
+TechLead: Exactly, yeah.
+Analyst: What about performance requirements? Any constraints we uh should know about?
+Client: One thing is, if in kind of the meanwhile it isn't pasted anywhere.
+Analyst: Okay, noted.
+Client: Then it must be copied again. [noise]
+Analyst: Okay.
+Client: That happens so that if user copies a password and and not paste it anywhere, the password cannot be found by anyone later.
+EndUser: That sounds like a lot of work for little value.
+Client: We do need it, it's important for our people.
+Analyst: Okay, we're not going to solve this today. Let's park it and come back to it.
+EndUser: Um, I have the missing info on add entry: an entry would have to belong to a group to uhm be created.
+Analyst: Coming back uhm to modify group/subgroup from last time, it's decided: also, a name is required in order for the group/subgroup to be renamed.
+Analyst: Let's cover software quality attributes now. basically What level do you expect?
+TechLead: Er, Honestly, one thing is, keePass is a small.
+Client: Makes sense.
+TechLead: And light you know project so it doesn't need to be installed.
+Analyst: Makes sense.
+TechLead: All it basically takes is uhm unpacking from the Zip package.
+Client: Yeah.
+TechLead: It can be transferred also in a USB stick with um no additional configuration needed.
+Analyst: Er, Let me check I sort of got this: keePass is a sort of small and light project so it doesn't need to sort of be installed. All it takes is is unpacking from the Zip package. It can be transferred also in a USB USB stick with no erm extra configuration needed?
+TechLead: Yep.
+Analyst: Let's cover safety requirements now. What kind of level do you expect?
+Client: For us, when a USB which contains the database is removed from a computer while changes haven't been completely saved, the database is damaged and cannot be opened.
+EndUser: Er, Do we really need that? I'd leave it out, at least for the well first version.
+Client: I'd really like to keep keep it.
+Analyst: Erm, Okay, noted, we keep it.
+Analyst: Okay, I think we basically have everything. I'll consolidate and send it around.

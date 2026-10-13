@@ -25,9 +25,9 @@ O prefixo indica o **realizador**, isto é, quem escreve as falas: `rules` são 
 | variante | palavras | esperados na saída | clear | conflito resolvido | conflito aberto | rejeitado | ambíguo | inconsistente | incompleto | omitido | issues | distratores |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | `v1-original` | 35.398 | 820 | 820 | – | – | – | – | – | – | – | – | – |
-| `rules-clean` | 37.600 | 820 | 820 | – | – | – | – | – | – | – | – | – |
-| `rules-realistic` | 44.225 | 789 | 614 | 32 | 16 | 7 | 64 | 21 | 42 | 24 | 143 | 7 |
-| `rules-hard` | 50.456 | 758 | 441 | 41 | 45 | 19 | 110 | 52 | 69 | 43 | 276 | 7 |
+| `rules-clean` | 37.628 | 820 | 820 | – | – | – | – | – | – | – | – | – |
+| `rules-realistic` | 46.304 | 781 | 614 | 22 | 18 | 15 | 64 | 21 | 42 | 24 | 145 | 6 |
+| `rules-hard` | 48.924 | 761 | 438 | 46 | 43 | 16 | 110 | 52 | 72 | 43 | 277 | 3 |
 
 O detalhamento por documento está em [`indice_documentos.csv`](indice_documentos.csv), com uma linha por (variante, documento).
 
@@ -69,6 +69,7 @@ Client: Oh, about master password from last time, I checked: ...
 
 - **Participantes**: `Analyst` (conduz), `Client` (negócio), `TechLead` (restrições técnicas e RNF), `EndUser` (uso). A composição muda de reunião para reunião.
 - **Bagunça**: tópicos fora da ordem do documento, tópico retomado mais tarde ("going back to search…"), stakeholder que puxa o tópico sem o analista perguntar, interrupção no meio de uma fala que é retomada depois, falso começo ("We need the— actually, …"), *crosstalk*, conversa de abertura e comentários fora do tópico.
+- **Turnos curtos** (`realistic`/`hard`): falas longas são fatiadas em pedaços do mesmo falante, cortados só em fronteiras naturais (fim de frase, vírgula, oração), com *backchannel* ("Mm-hmm.", "Okay.") e reações curtas de outros participantes ("Yeah, agreed.") entre eles. A mediana cai de 16 palavras por turno (v1) para 9–10, e os turnos de até duas palavras sobem de 17% para 22–29%. O `clean` mantém a estrutura de turnos do v1.
 - **Ruído lexical**: hesitações, muletas, gagueira e marcas `[laughter]`, `[crosstalk]`, `[pause]`, como no v1.
 
 ### Fenômenos de requisitos
@@ -159,17 +160,17 @@ O `naive` transforma em requisito toda frase com modal ou expressão de necessid
 | variante | P | R (esperados) | F1 | distratores extraídos | rejeitados extraídos |
 |---|---:|---:|---:|---:|---:|
 | `v1-original` | 0,673 | 0,782 | 0,723 | – | – |
-| `rules-clean` | 0,711 | 0,844 | 0,772 | 0 | 0 |
-| `rules-realistic` | 0,612 | 0,750 | 0,674 | 7 | 6 |
-| `rules-hard` | 0,545 | 0,708 | 0,616 | 5 | 17 |
+| `rules-clean` | 0,709 | 0,842 | 0,770 | 0 | 0 |
+| `rules-realistic` | 0,540 | 0,721 | 0,617 | 6 | 14 |
+| `rules-hard` | 0,504 | 0,677 | 0,578 | 3 | 15 |
 
-O `oracle` tem F1 = 1,0 em extração e issues, mas `detail_hallucination_rate` ≈ 0,57. Isso é esperado: ele copia o texto canônico do SRS, que contém detalhes que ninguém disse na reunião.
+O `oracle` tem F1 = 1,0 em extração e issues, mas `detail_hallucination_rate` ≈ 0,55–0,63. Isso é esperado: ele copia o texto canônico do SRS, que contém detalhes que ninguém disse na reunião.
 
 ---
 
 ## 6. Limitações conhecidas
 
-- **Distratores são raros** (7 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e poucos requisitos do PURE têm número ou ator explícito. Inversões de polaridade ("shall" × "shall not") entram apenas como inconsistência, porque "not" é stopword no casamento lexical.
+- **Distratores são raros** (3–6 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e poucos requisitos do PURE têm número ou ator explícito. Inversões de polaridade ("shall" × "shall not") entram apenas como inconsistência, porque "not" é stopword no casamento lexical.
 - **As falas ainda carregam o texto do SRS.** O realizador `rules` muda a forma (modal, contrações, léxico, discurso), mas mantém as palavras de conteúdo. Por isso requisitos longos continuam soando como documento. A variante B (`llm-*`) existe para medir esse efeito.
 - **`v1-original` está congelado** como foi publicado. Os arquivos usam CRLF, e os offsets só batem quando o texto é lido com tradução de quebras de linha (Python em modo texto). O campo `input.file` do gabarito diz `input_raw.txt`, embora o arquivo se chame `transcricao_reuniao.txt`. As variantes 2.0 não têm esses problemas.
 

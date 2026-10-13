@@ -1,67 +1,121 @@
 Meeting 1 of 2 (kickoff)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Okay, let's get started. Thanks for joining. Today I'd like to to understand what you need for EUROPEAN INTEGRATED RAILWAY RADIO ENHANCED.
+Analyst: Okay, let's get started. Thanks for joining. Today I'd like to understand what you need for EUROPEAN INTEGRATED RAILWAY RADIO ENHANCED.
 TechLead: Give me a sec, my you know headset is acting up.
-Client: Uhm, It specifies the functional requirements for a i mean digital radio standard for um the um European railways actually and is part of the Technical Specification for Interoperability. It encompasses well ground-train voice and actually data communications, together with the you know ground- based you know mobile communications needs of trackside workers, station and depot staff and railway administrative and um managerial personnel. 1.3.3 The statements made in the specification are assigned to one of um three categories:
-Analyst: Okay, um what about data data uh services?
-Client: Er, For us, possibly the priority like scheme uh for calls described in section 10.2 is also valid for data sort of applications. Automatic fax.
-EndUser: I mean, where fax functionality is is provided, it'll need to be possible to interrupt the fax to make or receive a high priority voice or data call. kind of Train control applications.
-Client: Uh, Yeah, so where ERTMS/ETCS level 2 or 3 is implemented, the network could maybe be capable um of supporting data sort of communications for that train control system.
-Client: For uh us, possibly i mean the priority scheme for calls described in section 10.2 is also valid for train control applications.
-Analyst: What exactly do you mean by that?
-Client: Uhm, I don't know, something uhm reasonable.
-Analyst: Uh, Anything else on data services?
-EndUser: Nothing else, I think.
-Analyst: Erm, And call related services, how do you see that working?
-Client: The idea is you know that the EIRENE network will erm support the uh following call related services: display erm of identity of basically called/calling user. Also, restriction of display of called/calling user. Also, priority and pre-emption; closed user group; call forwarding; call hold; call sort of waiting; charging information; call barring. Display of identity, that's pretty important for us.
-Client: Erm, Yeah, so it would have to be possible for the equipment actually to display the identity of the called or calling party in the basically form of a standard telephone [crosstalk] number.
-Analyst: And coverage and performance, how strict do erm we need to be?
-TechLead: Um, The level of coverage has to be at least 95% of the time over 95% uhm of the designated coverage area for a a radio installed in a vehicle with kind of an external antenna.
-Analyst: Uhm, So i mean if basically I got it right, the level of coverage should be at at least 95% of the time over 95% like of the designated coverage area for a a radio installed in a vehicle with an external antenna?
-TechLead: Yes, that's it.
-Analyst: Uhm, Okay, next topic: network interconnection. like How uh should that work?
-EndUser: During the process of moving from one GSM-R network to another, the system ought to minimise the inconvenience to the the i mean supervisor.
-Client: Really? I had in mind that during kind of the process of moving from one GSM-R network to another, the you know system should minimise the you know inconvenience to the user.
-EndUser: Hmm, I don't know, I'm pretty sure it was the supervisor.
-Analyst: Alright, like the user it is. Just so it's clear: during the well process of moving from one GSM-R network to another, the system should minimise the inconvenience to uhm the user.
-Analyst: What you know about call set-up time requirement? Any hard limits there?
-Client: One thing is, erm call set-up time requirements uhm are dependent... well, anyway, we can come back to that.
-Analyst: Uhm, Alright, broadcast and group i mean call call areas. Thoughts?
-Client: Okay so the group or or um broadcast call uh area used will have the effect of determining which mobiles can participate in like the call (ie those currently within the area defined). It should be um possible to determine the area over which the call takes place by one, um or or uh a well combination, of the following: the location erm of the call initiator (if er mobile-originated). Also, the identity of the group being called (eg all users, all trains, etc). Also, a prefix to the sort of group uhm identity specifying the call area (if fixed network-initiated). And any group uh or broadcast calls initiated in a given uhm location ought to be broadcast over an an uh associated area based on the location of the call originator. And also to any fixed network numbers associated with the originating location.
+Client: It specifies the uh functional requirements for a digital radio standard for i mean the European um railways and is part basically of the Technical Specification for Interoperability. It you know encompasses ground-train voice and data data communications, together with the ground- based mobile communications needs of trackside workers, station and depot staff and railway administrative and managerial personnel. 1.3.3 The statements made in the specification are assigned to one of three categories:
+Analyst: So, let's talk about data services. What What do you need uhm there?
+Client: Basically, i i think the priority scheme for calls described in section 10.2 is also valid for data applications. Automatic fax.
+Client: Basically, where fax uhm functionality is provided...
 Analyst: Okay.
-Client: Mobiles configured for reception of uh railway emergency you know calls i mean entering into a call area um where a railway emergency call is ongoing would have to automatically join this call.
-Analyst: Just to confirm, mobiles configured for reception of railway emergency calls basically entering you know into a call area where a i mean railway emergency call is ongoing ought to automatically join this you know call?
-Client: Right, correct.
-Analyst: Uh, Let's cover environmental and physical actually requirements now. What level uh do you expect?
-Client: Wait, did anyone else lose the like audio for a second?
-Client: The thing is, in in normal operation of a mobile radio unit, it's expected that a combination of the above environmental conditions will be experienced.
-EndUser: Uhm, Can I uhm jump in on driver call related functions? The erm thing is, if the the functional identity well of the connected party contains an i mean alphanumeric well description, this ought to also also be basically displayed.
-Client: Erm, For us, once connected, the driver erm ought sort of to be able to communicate with other driver(s) by using the Push-To-Talk button on the handset. uh An indication shall be provided to the driver as a reminder you know of the need to use the Push-To-Talk button on the handset if he wants to talk.
-Client: Once the Railway emergency call is connected and and the audible indication is finished, an indication might you know be provided to the driver actually as a reminder of the need to use the Push- To-Talk sort of button on the handset if he wants to speak.
-Analyst: Do Do you have a concrete number or example?
-Client: I don't know, something reasonable.
-Client: Uh, If a driver is disconnected from the multi-driver call, a clear indication ought to be given.
-EndUser: Uhm, Hmm, I'm not sure about that. I'd say if the any user is actually disconnected actually from the multi-driver call, a clear indication should be given.
-Client: No, it really has um to be a driver, otherwise it doesn't work for us.
-Analyst: Let's take this offline and decide later.
-Client: For us, the Cab radio ought to be capable of being used as a kind of standard telephone, such that the driver is able to call basically any valid number uhm subject to pre-defined call restrictions. The call call may be initiated by: selection from a pre-defined er list uhm (up er to 99 well entries). Also, uh direct dialling a subscriber number. Also, sort of calling a erm functional number. Receive incoming point-to-point voice call.
-Analyst: Uhm, Just to confirm, the Cab radio uhm has to be capable of being used as actually a standard telephone, such that the the driver erm is able to call any valid number er subject to pre-defined call restrictions. The call may be you know initiated by: selection i mean from a pre-defined list (up to 99 entries). Also, direct dialling a subscriber number. um Also, calling a functional number. um Receive erm incoming point-to-point voice call?
-Client: Yes, that's it.
-Client: Before I forget, on cab radio, if directed uh network selection or automatic network selection are implemented, the driver would have kind of to be informed by means of an audible and visual indication of the new network identity er whenever a network change takes place without user intervention. Register and deregister train number.
-Client: General MMI uh functions are required to support the following basically call functions: uh forward call to the driver uhm handportable. Also, like put a call on hold. Also, display incoming call details whilst in an on-going call; temporarily exit an existing call to answer another incoming call; multi-driver call service.
-Client: Erm, One thing is, 5.2.3.28ii Data entry may be from either system depending on the operating procedures agreed between the train operator and the railway um infrastructure operator. And when switched off, the radio should retain any numbers which are stored at uh the time the radio is switched off. Switch radio MMI on/off.
-Client: Er, I mean, where ERTMS/ETCS and radio systems er are available and the the driver is required to enter actually the train number as part part of i mean the initialisation procedure, um this task would have to be carried out only once once on on the ERTMS/ETCS system and uh the entered number transmitted to the radio system.
-Analyst: Er, What about environmental and physical requirements? Any hard limits there?
-TechLead: Erm, Measures ought to be be taken to reduce the risk of theft of radio equipment. Examples of such measures include physical protection, alarms and access erm control measures.
-Analyst: Uhm, Just to confirm, measures would have to be taken to reduce the risk of uh theft of radio i mean equipment. Examples of such measures include physical protection, alarms and access control um measures?
-TechLead: Yes, that's it.
-TechLead: Train-mounted equipment including the Cab radio terminal equipment, MMI sort of and antenna uh ought uh to like comply sort of with sort of all specifications in section 4.3 and er all uhm of those defined in this section, if that makes sense.
-EndUser: Uh, Sorry, someone just knocked on my door, go ahead.
-Analyst: Going back to driver call related functions for a sec, anything else there?
-Client: The idea is that the Cab radio will will provide a a means for the driver to terminate calls which uh he is authorised to erm terminate (ie all calls except actually Railway emergency calls not initiated by the driver and shunting group uhm calls).
-EndUser: For voice calls using the Cab radio not involving the driver as a called or calling party, the driver could maybe have the possibility to listen to basically the audio output of the communication.
-EndUser: Where ERTMS/ETCS and radio basically systems are available and the any user is required to enter basically the actually train number kind of as part of the initialisation procedure, this task should be carried out only like once on the ERTMS/ETCS uh system uh and the entered well number transmitted to basically the radio system.
-Analyst: What about driver safety device interface? Any hard limits there?
-Client: Er, So extra information may also be provided if well available from external systems.
-Analyst: Okay, we're out of of time. I'll um send a summary and we'll pick um up the rest next time.
+Client: It shall be possible to interrupt actually the fax to make.
+Analyst: Got it.
+Client: Or receive actually a high kind of priority voice, if that makes sense.
+Analyst: Okay.
+Client: Or data call. Train control applications.
+Client: Maybe where ERTMS/ETCS level 2 or 3 is implemented...
+EndUser: Makes sense.
+Analyst: By the way, are we still meeting on Thursday?
+Client: Plus Plus the network uh shall be capable of supporting data communications for that train control system, you know?
+Analyst: Got it.
+EndUser: Possibly the priority scheme basically for calls described in in section 10.2 is also valid for train control applications, if that makes sense.
+Analyst: Let's move on to call related services. What do you have in you know mind?
+Client: The thing erm is, the uh EIRENE network ought to support the following call related kind of services,
+EndUser: Mm-hmm.
+Client: Uh, and display of identity of called/calling user, that's the main thing.
+Analyst: Okay, noted.
+Client: Uh, and restriction of display of called/calling user, right?
+TechLead: Okay.
+Client: Erm, Plus priority and pre-emption; closed user group; call forwarding; call hold; call waiting; charging information; call uh barring. Display of of identity.
+EndUser: It ought to be possible for the equipment to display the identity of the called or calling party in the form of a standard telephone erm number.
+Analyst: Erm, Let's uh cover coverage and performance now. What level do you expect?
+Client: The idea is that the level of coverage will be at least 95% of the um time over 95% of the designated coverage area for a radio installed in a vehicle with an external antenna.
+Analyst: Yeah.
+Analyst: Okay, what about network interconnection?
+EndUser: Yeah, so during uh the process of like moving from one GSM-R network to another, the system ought to minimise the inconvenience to the user.
+Client: Uhm, Hmm, I'm not sure about that. I'd say during the process of moving from one GSM-R network to another, the system will need to minimise the inconvenience to the supervisor.
+EndUser: Uhm, I'd still kind of go with the user, honestly.
+EndUser: Sorry, someone just knocked on my door, go ahead.
+Analyst: Fine, let's settle on the user then. So, during you know the process of moving from one GSM-R network to another, the system should minimise the inconvenience to the user.
+Analyst: Erm, And call set-up time requirement, how strict do we well need to be?
+Client: I mean, also, call set-up time requirements are dependent... hmm, uhm I'd need to think about like the rest.
+Analyst: And broadcast and group call areas, how do you erm see that working?
+Client: Basically, the kind of group or broadcast call area used will have the effect of determining which mobiles can can participate in the call (ie those currently within um the the area uh defined). It should be possible to basically determine the area over which the call takes place by one, or a combination, of the following: the location um of the call initiator (if mobile-originated). Also, the identity of the group being called um (eg um all users, well all trains, etc). Also, a prefix to the group identity specifying the call area (if fixed network-initiated).
+Analyst: Okay, noted.
+Client: Any group or broadcast calls initiated in a given location would well have sort of to to be broadcast over an associated area based on the location uh of the call originator. And also to any fixed network numbers associated with uh the originating location.
+Analyst: Got it.
+Client: Mobiles configured for reception of railway emergency calls entering into a call area where a railway emergency call is ongoing ought to automatically join this call.
+Analyst: Mm-hmm.
+EndUser: Good point.
+TechLead: Sorry, I just wanted to—
+EndUser: [crosstalk] sorry.
+Analyst: What about environmental and physical requirements? Any constraints we should know about?
+TechLead: One thing is, in normal operation of a mobile radio unit,
+Client: Okay.
+TechLead: It's expected that a combination of the basically above you know environmental conditions will be experienced.
+Analyst: Just to confirm, in normal operation of a mobile radio unit, it's expected that a combination of the actually above environmental conditions will be experienced?
+TechLead: Exactly, yeah.
+EndUser: Yeah, agreed.
+Analyst: Can you walk me through uh driver call related functions?
+EndUser: One thing um is, if the functional identity of the connected party contains an alphanumeric actually description,
+Analyst: Makes sense.
+EndUser: And this shall also be displayed.
+Analyst: Makes sense.
+EndUser: Once connected, the i mean driver will need to be able to communicate with other driver(s) by using the kind of Push-To-Talk um button well on the handset. An indication shall i mean be provided to the driver as a reminder of the i mean need erm to use the Push-To-Talk button on the the handset if he wants to talk.
+Analyst: Okay.
+EndUser: I think once the Railway emergency call is connected...
+Analyst: Yeah.
+EndUser: And the audible indication is finished.
+TechLead: Right.
+EndUser: Uh, Plus an indication shall be provided to the driver as a reminder of the need to sort of use the Push- To-Talk button on the handset if he he wants to speak.
+EndUser: If the the any user is disconnected from the multi-driver call, a clear indication would have to be given.
+TechLead: Hmm, I'm not sure about that. I'd say if a driver is disconnected from the multi-driver call, basically a clear indication will need to be given.
+EndUser: I'd still go [crosstalk] actually with the any user, honestly.
+Analyst: Okay, so we'll go with a driver. Let me write it down: if a er driver is disconnected from the multi-driver call, a clear actually indication actually would have to be given.
+EndUser: For For us, i'd like the Cab radio to be capable of being well used as a standard telephone, such that the driver is able to call any valid number subject to pre-defined call restrictions. The call may be initiated by: selection from a pre-defined basically list (up to 99 entries). Also, direct dialling a subscriber number. Also, calling a kind of functional like number. Receive incoming point-to-point voice call.
+Analyst: Uh, Okay, next topic: cab radio. How should that work?
+EndUser: I mean, if directed uh network selection,
+Analyst: Okay, noted.
+EndUser: And/or automatic network selection are implemented.
+Analyst: Yeah.
+EndUser: Erm, The you know driver shall be informed by means of an audible.
+Analyst: Mm-hmm.
+EndUser: And visual indication of the new network identity whenever actually a network change takes place without user erm intervention. um Register and deregister train number.
+TechLead: Same for us.
+EndUser: General er MMI functions are required to support the following call functions: you know forward call i mean to the driver handportable. Also, put a call on hold. Also, display incoming um call details whilst in um an an on-going call; temporarily exit an existing call to answer another uhm incoming call; multi-driver call service, that's pretty important for us.
+TechLead: Okay, noted.
+EndUser: Uhm, 5.2.3.28ii Data entry may be from either um system depending on the operating basically procedures agreed between the train operator and the railway infrastructure operator.
+Client: When switched off, the radio should retain any numbers,
+EndUser: Yeah.
+Client: Then which are stored uh at the time the radio is switched off.
+TechLead: Got it.
+Client: Then switch radio MMI on/off.
+Analyst: Mm-hmm.
+TechLead: Definitely.
+EndUser: Also, where ERTMS/ETCS and radio systems are available,
+Client: Yeah.
+EndUser: And the driver is required to enter the train number as part of the initialisation procedure, this task shall be carried out only once on sort of the ERTMS/ETCS system and the entered number transmitted to the radio system.
+Analyst: And environmental and and physical requirements, how strict do we need to be?
+Client: Measures ought to be taken to reduce the risk of theft of radio equipment,
+Analyst: Okay, noted.
+Client: Uh, actually and examples of such measures include er physical protection.
+EndUser: Yeah.
+Client: So So alarms and access control measures.
+Analyst: Mm-hmm.
+Client: Also, [laughter] train-mounted equipment including like the Cab radio terminal equipment,
+EndUser: Sorry, can everyone hear me? My connection um is a bit bit unstable uh today.
+EndUser: Okay, noted.
+Client: Er, MMI and antenna shall well comply with all specifications in section 4.3.
+Analyst: Makes sense.
+Client: And all of i mean those defined in this section.
+Analyst: Going back to driver call related functions for a uh sec, anything else there?
+Client: I'd like the Cab radio to provide a means for the driver sort of to terminate calls which he is authorised to well terminate (ie all calls except Railway emergency calls not initiated i mean by the driver and shunting group calls).
+Analyst: Just to confirm, we'd want the Cab radio to provide a means sort of for the driver to like terminate sort of calls which sort of he is authorised to terminate (ie er all uhm calls except Railway emergency calls not initiated by the driver and shunting group calls)?
+Client: Mm-hmm, yes.
+Client: Okay so for voice calls using the Cab radio not involving the driver as a called or calling party, the driver could maybe have the possibility to listen to the the audio output uhm of the communication.
+Analyst: Mm-hmm.
+Analyst: Uh, What about driver uh safety device interface? Any hard erm limits there?
+TechLead: One thing is, additional information may also be provided—
+EndUser: Sorry, uhm go on.
+TechLead: Yeah, so, if available from external systems.
+Analyst: Okay, we're out of time. I'll send a summary and we'll pick up well the rest next time.

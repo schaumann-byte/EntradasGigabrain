@@ -1,65 +1,158 @@
 Meeting 1 of 3 (kickoff)
 Participants: Analyst, Client, TechLead
 
-Analyst: Okay, let's get get started. Thanks for joining. Today I'd like to understand what you need for E-GOVERNANCE MISSION MODE actually PROJECT (MMP) CRIME &.
-Client: The key guiding principle behind the functional um design of like CCTNS V1.0 is like to focus on the critical functionality that provides value to the police personnel at the i mean cutting edge which in turn can improve the outcomes in the areas of "Investigation of Crime" and "Detection of Criminals". um CCTNS V1.0 functionality is designed to focus on delivering value to IOs, actually records room staff and citizens actually within the broad crime i mean investigation um area. erm Based on the guiding er principles stated above, well nine different function blocks have been identified and the detailed functionality erm of each block was determined.
-Analyst: Erm, Let's cover help module now. What What level do you you expect?
-TechLead: The solution ought to provide detailed context-sensitive help material for uh all sort of the possible— sorry, I lost my train of thought.
-TechLead: Sorry, you know someone just knocked on my door, go ahead.
-Analyst: What about general needs? Any constraints we should know about?
-TechLead: The solution has to send alerts (e.g., email, SMS) to the user if the user chooses to whenever any action has been taken on the alert.
+Analyst: Okay, let's get get started. Thanks for joining. Today I'd like to understand what you need for E-GOVERNANCE MISSION MODE PROJECT (MMP) CRIME &.
+Client: Uh, The key guiding principle behind the functional um design of like CCTNS V1.0 is to focus on erm the critical functionality that provides value to the police personnel at the i mean cutting edge which in turn can improve the outcomes in the areas of "Investigation of Crime" and "Detection of Criminals". um CCTNS V1.0 functionality is designed to focus on delivering value to IOs, actually records room staff and citizens within the broad crime investigation area. Based um on the guiding principles stated above, nine well different function blocks have been identified and the detailed functionality of each block was determined.
+Analyst: Let's cover help module now. What level do you expect?
+TechLead: We need the solution to provide detailed context-sensitive help material for all the possible— sorry, I lost my train of thought.
+TechLead: Sorry, someone you know just knocked on my door, go ahead.
+Analyst: Erm, Let's cover general needs now. What level do you expect?
+TechLead: The like solution should send alerts (e.g., email,
+Client: Yeah.
+TechLead: SMS) to the user.
+Analyst: Okay.
+TechLead: And if the user chooses to whenever any action has been taken on the alert.
+Analyst: So if I got it sort of right, the solution would have to send alerts (e.g., email, SMS) to the user if the user chooses to whenever any action has been taken on the alert?
+TechLead: Exactly, yeah.
+TechLead: We need the solution to enable the user to track uh the... well, anyway, we [crosstalk] er can come back to that.
+TechLead: Basically, we'd want the solution to uh enable the help-desk user to view the reports on the submitted defects or kind of enhancement requests category-wise, status-wise, and age- wise.
+Analyst: Okay, noted.
+Analyst: Um, Anything else on general needs?
+Client: No, I think that's it.
+Analyst: And audit module, how strict do we need to basically be?
+TechLead: The basically idea is that the um System will ensure that audit trail data is available for inspection on request, so that a specific event can be identified and all related data made accessible. And that this can be achieved by authorised external personnel who have little or no familiarity with the system.
+Analyst: Right.
+Client: Yeah.
+Client: So, the System would need like to be able to export audit trails for specified cases (without affecting the audit trail stored by the System). This functionality can be used like by external auditors who erm wish to examine erm or analyse system activity.
+Analyst: Makes sense.
+Client: We'd want the System to maintain the audit trail for as long as required,
+Analyst: Okay.
+Client: Then which will be at least for the life of the case to which basically it you know refers.
+Analyst: Makes sense.
+TechLead: We need the System to at a minimum be able to provide er reports for actions on cases organised: By case; By i mean user; In chronological sequence, that's pretty important for us.
+Client: Mm-hmm.
+TechLead: An audit trail is actually a record sort of of actions taken by like either the user or the system triggers. This includes actions taken by users or Administrators, or actions initiated automatically by the system as a result of system parameters. The System would have to uh keep an unalterable audit trail capable of automatically capturing and storing information about: All the actions (create/read/update/delete) that are taken upon the um critical entities (case, suspect, property,...) in the system The user initiating and or carrying out the action. Also, The date and time of the event. Administrative parameters The word uh "unalterable" uh is to mean that the audit trail data can't be modified in any way or deleted by any user. Also, it may be kind of subject to re-department and copying to removable media if required, so long as its contents remain uhm unchanged.
 Analyst: Mm-hmm.
-TechLead: The solution ought to enable erm the sort of user to track the— sorry, I lost my train of thought.
-TechLead: Um, I'd like the solution to enable the help-desk user to view you know the reports on the i mean submitted defects—
-TechLead: Erm, Sorry, can everyone hear me? My connection is a a uh bit unstable today.
-Analyst: Sorry, sorry, go ahead.
-TechLead: Um, Right, so, or enhancement requests category-wise, status-wise, and age- wise.
-Analyst: What about audit module? Any constraints we should know about?
-Client: Er, I'd like the System to ensure that audit trail um data is available for um inspection on request, so that a specific event i mean can be identified and all related data made accessible. And that this this can basically be achieved by authorised external personnel who have little or no familiarity with the system. And what we really kind of want is for the System to kind of be able to export audit trails for specified cases (without affecting the audit trail stored by the System). This functionality can be used by external auditors who wish to examine or analyse system activity.
-Client: Erm, We need the System to maintain the well audit trail for as long like as required, which will erm be at least erm for the life of the case to which it refers.
-TechLead: Well, the System would have to at a minimum be able to provide reports for actions kind of on cases organised: By case; By user; In you know chronological sequence.
-Analyst: Er, Just to confirm, we need the System to at a minimum be able to sort of provide reports for actions on cases organised: By By case; sort of By kind of user; In chronological sequence?
+Analyst: And access module, how strict do we need to be?
+Client: I'd like the System to allow changes to security attributes basically for groups or users (such as access rights, security basically level, privileges, password allocation and management) to be made only by super-user, that's the main thing.
+Analyst: Yeah.
+TechLead: If a user requests access well to, or searches for, a case which he doesn't have the right er to access, the System would have to provide one of the following responses (selectable at configuration time): display title and metadata. Also, display the existence of a case but not not its erm title or other metadata. Also, don't display any case information or indicate its its existence in any way. These options are presented in order well of increasing um security. Note that the requirement in the third um option (i.e. the most stringent) implies that kind of the System mustn't include such cases in any count of search results; this level of security is normally appropriate for cases dealing um with matters such um as national security.
+Analyst: Okay.
+TechLead: If a user performs a quick...
+TechLead: Erm, Or advanced search, the System must never include in the search result list any er record which the user does not have the right to access.
+Analyst: Just to confirm, if a user performs a quick or advanced search, the System ought to never uh include in the search result list any actually record which the user doesn't have the erm right to access?
 TechLead: Mm-hmm, yes.
-Client: An audit trail is a record of sort of actions taken by either the user or the system triggers. This includes like actions taken by users or Administrators, or actions initiated automatically by the system as a result of system parameters. The System should keep an unalterable audit uh trail capable like of automatically capturing and actually storing information about: All the actions (create/read/update/delete) that are taken upon the critical entities (case, suspect, property,...) um in the system The user initiating and um or carrying out the action. well Also, The date and time of the event. Administrative parameters The word "unalterable" is um to uh mean that the audit trail data cannot be modified in any way or deleted by any user. Also, it may be subject to re-department kind of and copying to removable basically media if i mean required, so long as its you know contents remain unchanged.
-Analyst: What er about access module? Any constraints actually we should know about?
-Client: The System would um have to allow changes to security attributes for groups or users (such as access rights, you know—
-TechLead: Sorry, quick question, basically is that for for everyone?
-Client: Erm, Right, you know so, security level, privileges, password allocation and management) to be made only by super-user.
-TechLead: If a user requests access to, or searches for, a case which he does not have the right to access, the System will need to provide one of the following responses (selectable at i mean configuration time): display title and metadata. Also, display the the existence of of a case but not uh its title or other metadata. Also, basically don't display any case information or indicate its existence in any uhm way. um These options are presented in order of increasing security. Note that the requirement in the erm third option (i.e. the most stringent) implies that uh the System mustn't include such um cases in any count of search results; this level of security is um normally appropriate for cases dealing with matters such as national security. And if a user performs a quick kind of or advanced actually search, the System would uh have to never include in the er search result list any record which the user doesn't have the right to access.
-Analyst: Yeah.
-TechLead: Oh, and about kind of ease uh of use, all error messages produced by the System i mean should be be meaningful, so that sort of they can be be appropriately acted upon you know by the users who who are likely to see them. Ideally, each error message will actually be accompanied by explanatory text and an like indication um of the action(s) which the user can take kind of in response to the error.
+Client: Yeah, agreed.
+Analyst: What about ease of use? Any hard limits there?
+Client: For us, all error messages produced by the System [noise] ought to be meaningful,
+Analyst: Okay, noted.
+Client: Erm, So that they can be appropriately acted upon by the users who are likely to er see them. Ideally, each error message will be accompanied by explanatory text and an indication of the action(s) which the the user can take in response to the the error.
+Analyst: Okay.
+Client: Honestly, the the System would have you know to provide End User,
+Analyst: Okay, noted.
+Client: Um, And Administrator functions which are easy to sort of use and intuitive throughout.
+Analyst: So if I well got uh it right, the System ought to provide End User and Administrator functions which are easy to use and intuitive throughout?
+Client: Mm-hmm, yes.
+TechLead: Uh, Something on usability: we want the user interfaces to be able to be designed— sorry, I lost my train of thought.
+TechLead: The thing is, the user interfaces of the erm system should comply with Standard ISO 9241.
 Analyst: Got it.
-Client: Uhm, The System ought to provide End User and Administrator functions you know which are easy er to use and intuitive throughout.
-Analyst: Erm, Let's cover usability now. What level do you expect?
-Client: The you know user well interfaces should be able to be designed... hmm, er I'd need to to think about the rest.
-TechLead: The user interfaces of the system should comply with Standard ISO 9241, if if that sort of makes sense. i mean And providing text equivalents for non-text media objects: uh All non-text media erm objects, such as like graphical images or video, should um be er provided with er alternative equivalent textual descriptions or with equivalent text-based functionality.
-Client: Basically, making navigation self-descriptive: Navigation should be designed to help users understand where you know they're, where they have been and where they can go next. General guidance on achieving self-descriptiveness is given in ISO um 9241-110.
-TechLead: So the— sorry, let me rephrase. minimizing navigation uh effort: The number of navigation steps needed to to reach a certain piece of content should be minimized as sort of long as kind of different mental models, navigation strategies and tasks of the user are er taken into account.
-Analyst: Let me check I got this: minimizing navigation effort: i mean The number of navigation steps needed to reach a certain piece of content should be minimized as long as different mental models, navigation strategies and kind of tasks of the user are are taken into account?
-TechLead: Yes, that's it.
-TechLead: Uh, We need splash screens to be like avoided unless they provide useful content or feedback about the application state to the user. If a splash screen is used, um a navigation option to skip it should be sort of offered. And avoiding opening like unnecessary windows: Extra windows such as new um browser windows or pop-up windows should only be opened if this you know supports the user's well task. Opening new windows can distract, confuse or impede users like for a i mean variety of reasons. They can superimpose the primary window, hiding relevant information. They could make make actually it cognitively more difficult to understand the navigation structure with i mean negative effects on both usability well and accessibility. They also require extra user actions for closing unwanted windows.
-Client: Making user interfaces robust: User interfaces should be designed to be as robust as possible in the face of changing technology. This encompasses being able to present content containing newer technologies by older user agents as well as designing content to be usable with future technologies.
-Analyst: So if I um got it right, making user interfaces robust: User interfaces should be designed to be as robust as possible in the um face of changing technology. This encompasses being able to present content containing newer technologies by older user agents as well um as designing content to be usable with well future technologies?
-Client: Right, correct.
-TechLead: Acceptable opening / download times: Application pages should be designed and and implemented er so that there are acceptable opening times and download times like for the expected range of technical basically contexts of use (e.g. bandwidth between the uhm application and the user). This is particularly important for frequently accessed pages or pages that are are important for user navigation and exploration, such as the home page.
-Client: Er, Really? I had in mind that acceptable opening / download times: Application pages should be designed and implemented so that there are um acceptable opening times and download times for the expected range of technical i mean contexts of use (e.g. bandwidth between erm the application and the supervisor). This is particularly important for frequently accessed pages or pages that are important for user navigation and and exploration, actually such as the home page.
-TechLead: I'd actually still go with the user, honestly.
-Analyst: Okay, so erm we'll go sort of with um the user. Let me write it down: acceptable opening / download times: sort of Application pages should be designed basically and implemented so that there are acceptable opening times and download times for the expected range of technical contexts of use (e.g. bandwidth between basically the application and the user). This is is particularly important for sort of frequently accessed pages or pages well that are important for er user navigation well and exploration, such as the home page.
-TechLead: Okay so providing i mean clear error messages: The content of error messages er shown on the pages or actually special error pages should sort of clearly state the i mean reason why the um error occurred and.
-Client: Text quality: The quality of textual content about spelling and grammar should be erm sufficient so as uhm not to to impede readability.
-TechLead: Uh, The thing is, distinguishable within-page links: Within-page links like should be clearly distinguishable from other links that lead er to a different page. EX. Within-page links are shown with dashed rather than solid underlines. uhm And distinguishing navigation links from um controls: Navigation links should be clearly distinguishable from erm controls activating some action. Typical action types erm [pause] in user interfaces include manipulating application data, you know performing searches, communication actions, such as opening a new e-mail window or you know starting a chat function. And presentation-related actions, such as sorting a list of search results.
-Client: Uhm, The thing is, so providing printable document versions: If a document is either too long, dispersed over several pages or or in a specific layout that's not suitable for for online reading, you know—
-TechLead: Hold on, does does that well apply to mobile too?
-Client: Where was I... yes, a printer-friendly version of the document should be provided that prints the content in a form acceptable to the user (e.g. in the expected layout, paper format, or orientation).
-TechLead: I mean, selecting like appropriate page lengths uh The length of a page should be selected so as to support the primary purpose and use of the page. Short pages are generally more appropriate for homepages, navigation sort of pages, or like overview pages that need to be read quickly. Longer pages can be more appropriate when users want uh to read the content without interruptions or when the page needs to match a paper counterpart, that's the main main thing.
-Client: Using frames with care: If frames like are used, care should be taken to uh avoid possible problems, for example, those involving the use of the back button, bookmarking of pages, or scrolling of information. When frames are used, it's important to title each frame. And to describe its purpose and how frames relate to one another other. And linking back to sort of the home page or landmark well pages: sort of Each page should contain a link leading to to the home page uh of the application or to a landmark page that's easy to recognize for for basically the the user.
-TechLead: Providing a a site site map: A separate navigation actually overview such as a site map should erm be provided for application showing the the structure of basically the site in er an well overview form. And placing i mean navigation components consistently: Navigation components should actually be er placed consistently on the pages or in the framesets in the pages of the uh application.
+Client: Right, yes.
+Client: Also, uh providing text equivalents for non-text media objects,
+Analyst: Mm-hmm.
+Client: Plus all non-text media objects, such as graphical images.
+Analyst: Got it.
+Client: Or video, should be provided with alternative equivalent textual descriptions.
+Analyst: Makes sense.
+Client: Or with equivalent text-based functionality.
+TechLead: Makes sense.
+Client: Uhm, Making navigation self-descriptive: actually Navigation should be designed to help users understand where they are, where they like have been and where they can go next. General guidance on achieving self-descriptiveness kind of is given in ISO 9241-110, well right?
+Analyst: So if I got it right, making navigation self-descriptive: Navigation should be designed to help users understand where they're, where uh they have been and where they can go next. General guidance on um achieving self-descriptiveness is given in ISO 9241-110?
+Client: Mm-hmm, yes.
+TechLead: Good point.
+TechLead: Minimizing navigation effort: like The number of navigation steps needed to um reach a certain piece of content should be minimized as long as different mental models, navigation strategies and tasks of uhm the user are taken into account.
+Analyst: Okay.
+TechLead: Yeah, [pause] so splash screens ought to be avoided unless they provide useful content.
+Client: Got it.
+TechLead: Or feedback about the application state to the user, you know?
+Analyst: Okay, noted.
+TechLead: And if a splash screen is used.
+Client: Okay.
+TechLead: Erm, A navigation well option to sort of skip it should be offered.
+Analyst: Right.
+TechLead: So avoiding opening unnecessary windows,
+Analyst: Got it.
+TechLead: Erm, And also extra uh windows such as new browser er windows.
+Client: Right.
+TechLead: Or pop-up windows basically should only be opened, you know?
+Analyst: Makes sense.
+TechLead: Um, If this supports the user's task. Opening new windows can distract, um confuse or impede users for a variety of reasons. They can superimpose the you know primary window, hiding relevant information. They could make it cognitively more difficult to understand the navigation structure with negative effects on both usability and accessibility. They also require um additional user actions for closing unwanted windows.
+Analyst: Mm-hmm.
+TechLead: Um, I mean, also, making user interfaces robust...
+Analyst: Okay, noted.
+TechLead: Then user interfaces should be designed to be as robust as possible in the face of changing technology. This encompasses being able to present content containing newer technologies by older user agents as well sort of as designing content to be um usable with future technologies, if that makes sense.
+Client: Yeah.
+TechLead: Acceptable opening / download times: Application pages should be designed and implemented so uh that there are acceptable opening times and download times for the expected range of technical contexts of um use (e.g. bandwidth between the application and the user). This is is particularly important for uhm frequently accessed kind of pages or pages that are important for user navigation actually and exploration, such as the home page.
+Client: Really? I had had in mind that acceptable opening / download times: Application pages should be designed and basically implemented so you know that that there are acceptable opening times and download times for the uhm expected range of technical contexts of use (e.g. sort of bandwidth between the application and and the supervisor). This is particularly important for frequently accessed pages or pages that are important for user navigation and exploration, such as the home page.
+TechLead: No, it really kind of has to be the user, otherwise it doesn't work um for us.
+Analyst: Okay, we're not going to solve this today. Let's park it erm and come back to it.
+TechLead: Also, providing clear error messages...
+Analyst: Mm-hmm.
+TechLead: Erm, So the content of error messages shown sort of on the i mean pages.
+Analyst: Mm-hmm.
+TechLead: Er, Or special error pages should clearly state the reason why the error occurred and, you know?
+Client: Uh, So text quality: The quality erm of textual content you know about spelling.
+Analyst: Got it.
+Client: And grammar should be enough so as not to impede readability.
+Analyst: Okay, noted.
+Client: Basically, distinguishable within-page links: Within-page um links should be clearly distinguishable from other links that uhm lead to a different page. basically EX. Within-page links are shown with uh dashed rather than solid underlines.
+Analyst: Makes sense.
+Client: Distinguishing navigation links from controls,
+TechLead: Right.
+Client: And navigation links should [crosstalk] be clearly distinguishable from controls activating some action.
+Analyst: Okay.
+Client: Plus typical basically action types in user interfaces include manipulating application data.
+Analyst: Okay.
+Client: Then performing searches, communication actions, um such as opening a new e-mail window or starting a chat function, and presentation-related actions, such as sorting a list of search results.
+TechLead: Honestly, so providing printable document versions: If a document is um either too too long, dispersed over several pages or in a specific layout that that i mean isn't suitable for online reading—
+Analyst: Sorry, quick question, is that for everyone?
+TechLead: Right, so, a a printer-friendly version of the document should be provided that prints uhm the content in a form acceptable to the user (e.g. in the expected layout, paper format, or orientation).
+Client: Selecting appropriate page lengths The length of i mean a page should i mean be selected so as to support the primary purpose and use of the page. Short pages are generally more appropriate for homepages, navigation pages, or overview pages that need to to be read quickly. Longer pages can be more appropriate when users want to read the content uhm without interruptions like or when the page needs to match a paper counterpart.
+TechLead: Yeah.
+Client: Okay so also, using frames with with care,
+Analyst: Makes sense.
+Client: And if frames are used, if that makes sense.
+Analyst: Makes sense.
+Client: Er, And care should be taken to avoid possible problems.
+Client: Uh, and for example, those involving the use of the back button, bookmarking of pages, or scrolling of information. sort of When frames are used, it's important to title each frame, and to describe its purpose and and how frames relate to one another other.
 Analyst: Yeah.
-Client: So, uh so taking actually account of the users' tasks and information needs:.
-TechLead: Well, making individualization and adaptation evident: basically It could maybe be made evident to the user when individualization or adaptation are used.
+TechLead: Honestly, linking back to the home page basically or or landmark pages: Each page should contain a link leading to the home page of the application or to erm a landmark page that's easy uhm to recognize for the user.
+TechLead: Well, so providing a a site map,
+Analyst: Okay.
+TechLead: And And a separate navigation overview, that's sort of pretty important for us.
+Analyst: Okay, noted.
+TechLead: And also such as uh a site kind of map uh should uh be provided for application showing the structure of the er site site in an overview form.
+Analyst: Got it.
+Client: Yes, please.
+TechLead: And placing navigation components consistently,
+TechLead: And navigation components should be placed consistently on the pages.
+Analyst: Okay, noted.
+TechLead: Or in the framesets in the pages um of the application.
 Analyst: Yeah.
-TechLead: Also, making user profiles evident: If predefined user um profiles or user-specified profiles are used for individualizing or well adapting i mean content—
-Analyst: Can you repeat that? You cut out a bit.
-TechLead: Anyway, as I was saying, the profile currently used uh should be made evident. If profiles are i mean used, it's important to provide users with information about this concept and and its implications.
-TechLead: Erm, Allowing users to see and change profiles: If user-specified profiles um are used, users should be able to uhm see, modify and erm delete that profile on demand.
+Client: One thing is, taking account of the users' tasks and information needs:. Well, mostly, there are a few special cases.
+TechLead: Making individualization and adaptation evident: It could maybe be made evident to the user when individualization and/or adaptation are used.
+TechLead: Uh, Yeah, so so making user profiles evident.
+Analyst: Yeah.
+TechLead: Then if predefined user profiles.
+Client: Right.
+TechLead: Or user-specified profiles are used for individualizing.
+Analyst: Okay, noted.
+TechLead: Um, Or adapting content, the profile currently used should be made you know evident. If profiles are used, it is important to provide users with information about this concept and its implications, right?
+TechLead: Also, like allowing users to see and change like profiles...
+Analyst: Yeah.
+TechLead: Then if user-specified profiles are used.
+Analyst: Makes sense.
+TechLead: Users should be able to to see, modify.
+Analyst: Yeah.
+TechLead: And delete that profile on [pause] demand.
+Client: Yes, please.
 Analyst: Let's stop here for today. I'll write this up and we continue next time.

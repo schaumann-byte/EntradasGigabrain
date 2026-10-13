@@ -1,43 +1,49 @@
 Meeting 2 of 4 (follow-up)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Uhm, Okay, welcome back. Let's well continue with Gamma-J sort of Connecting Retailers uh through the World.
-TechLead: Uh, How was everyone's weekend?
-Analyst: Quick recap from last time: we went went over operating environment, user basically documentation and customer sort of accounts. er And a couple of uh points were still open.
-Analyst: Okay, next topic: order confirmation. How should that work?
-EndUser: Possibly customers should be able to confirm the order after well checkout, we'll [noise] see.
-EndUser: I mean, if the actually order is incorrect, the customer will be able basically to revise and update their order. And we kind of want the customer to i mean be be able to then receive basically a kind of confirmation email with the the specific order details.
-Analyst: What about weborder browser interface? Any constraints we should know you know about?
-Client: The thing is, erm we need the like order database of of erm WebOrder to communicate i mean with the account basically system through sort of a programmatic interface for the billing operations.
-EndUser: I'm not convinced that's necessary, honestly.
-Client: Without it the whole thing doesn't make much sense for us.
-Analyst: Alright, it erm stays.
-TechLead: Well, through programmatic interface, WebOrder could maybe transmit information of sort of items ordered by customers to kind of the Inventory management system.
-Analyst: Anything er else on weborder sort of browser interface?
-Client: No, I think that's it.
-Analyst: Uhm, Let's cover communications interfaces now. What level do you erm expect?
-Client: Um, I'd like the WebOrder system to send an e-mail to System um Administrator regarding any um technical queries from customers or sales like people.
-EndUser: That i mean sounds like a lot of work for little value.
-Client: Uh, We i mean do need it, um [laughter] it's important for our people.
-Analyst: Okay, noted, we keep uh it.
-Client: Um, So, ideally the WebOrder system would send an well e-mail confirmation to the customer that the items they ordered actually will be delivered to the shipping address along with tracking number, but um I'm uh not not sure it's a must.
-Analyst: Er, Can you be um more specific?
-Client: I don't well know, something reasonable.
-Client: Oh, about shopping cart from last time, um I checked: the shopping cart has to clearly display like the number of items in the cart, along with the total sort of cost.
-Client: Before I forget, on safety requirements, basically we'd want the system to do periodic backups through a live internet connection.
-Analyst: And security requirements, how strict kind of do we need to be?
-Client: Honestly, the idea is that the system will actually auto detect IP DOS attacks—
-TechLead: Can you repeat that? You cut out a actually bit.
-Client: Uhm, Where was I... yes, and block IP automatically.
-TechLead: Erm, So, maybe like the system erm could validate credit cards against fraud.
+Analyst: Hi everyone, thanks for making time again. Let's pick up where we left off on on Gamma-J uh Connecting Retailers through the World.
+EndUser: Erm, Is it just me or is it really cold in here today?
+Analyst: Quick recap from last erm time: we went over operating environment, user documentation and customer accounts. And a couple sort of of points were still open.
+EndUser: Can I jump in on order confirmation? Maybe customers could confirm the order after checkout.
+Analyst: What exactly basically do uhm you mean actually by that?
+EndUser: Uhm, Hmm, hard to say right now. We'll see.
+EndUser: Um, Yeah, basically so if the order is incorrect, the customer will be able to uhm revise and update their order.
 Analyst: Okay, noted.
-Client: Um, We need uh the system er to be protected by i mean open source firewall called well Firestarter. http://www.fs-security.com/, you know?
-EndUser: Sorry, I just wanted to—
-TechLead: [crosstalk] sorry.
-TechLead: I'm not convinced that's necessary, honestly.
-Client: Erm, I'd really kind of like to keep it.
-Analyst: Er, Alright, let's leave uhm that one out.
-Client: It should— well, i'd like the system uh to encrypt all erm customer data in database.
-Analyst: Mm-hmm.
-TechLead: Um, The system ought to detect consecutive failed login attempts.
-Analyst: Let's stop stop here for today. I'll write uh this up and we continue next time.
+EndUser: Erm, The customer should be able to then receive a confirmation email with the specific order details.
+Analyst: Right.
+Analyst: Let's basically cover weborder browser interface um now. What level do you expect?
+Client: Er, The order database of WebOrder has to communicate with the account system through a programmatic interface for the billing operations, if that makes sense.
+EndUser: Do we really need that? I'd leave it out, at least for the first version.
+Client: I'd really like to keep it.
+Analyst: Alright, it stays.
+TechLead: I mean, through programmatic interface, WebOrder could maybe transmit information of items ordered by customers basically to the Inventory management system.
+Analyst: What exactly do you mean by that?
+TechLead: We'll figure that out later, I guess.
+Analyst: What about communications like interfaces? Any constraints we should i mean know about?
+TechLead: The thing is, we need the WebOrder system to send like an i mean e-mail to System Administrator about any sort of technical queries from actually customers or sales people, if that makes uh sense.
+Client: I'm um not convinced erm that's necessary, honestly.
+TechLead: I'd really like to keep it.
+Analyst: Uhm, Let's take this offline and decide later.
+TechLead: The thing is, ideally the WebOrder system would send an um e-mail confirmation to the customer uhm that the items they ordered will be delivered to the shipping address along er with tracking number, but I'm not sure it's a must.
+Analyst: Er, Anything else on communications interfaces?
+Client: Nothing else, I think.
+Client: And like we said, we don't want customers to be able to register, log in, and log out of their accounts.
+Analyst: What about safety requirements? Any hard limits there?
+Client: The The er thing is, i'd like the system to do periodic backups through a live internet connection.
+EndUser: Yeah, agreed.
+Analyst: Let's cover security requirements now. What level do you expect?
+TechLead: The system ought to uhm auto detect IP DOS attacks,
+Client: Right.
+TechLead: And block IP automatically.
+Analyst: Makes sense.
+EndUser: Yes, please.
+TechLead: Uhm, Ideally the system would validate credit cards against fraud, but I'm um not sure erm it's a must.
+Client: Erm, We'd want uh the system to be protected [crosstalk] by open source firewall called Firestarter. http://www.fs-security.com/.
+TechLead: That well sounds like a lot of work for little value.
+Client: I'd really kind of like to keep it.
+Analyst: Er, Okay, noted, we we keep it.
+Client: The system has to encrypt all customer kind of data in database, you know?
+Analyst: Okay, noted.
+TechLead: Right, yes.
+Client: Yeah, so like we need the system to detect consecutive failed basically login attempts.
+Analyst: Okay, we're out of time. I'll send a summary and we'll pick up the rest next time.

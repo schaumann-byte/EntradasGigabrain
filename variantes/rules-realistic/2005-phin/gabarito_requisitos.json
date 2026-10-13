@@ -24,13 +24,18 @@
       "p_conflict_open": 0.4,
       "p_resolve_later": 0.5,
       "p_complete_later": 0.5,
-      "noise": 0.1
+      "p_chunk": 0.9,
+      "chunk_target": 7,
+      "p_mid_backchannel": 0.9,
+      "p_backchannel": 0.75,
+      "p_react": 0.35,
+      "noise": 0.07
     }
   },
   "input": {
     "n_meetings": 3,
-    "n_chars": 21910,
-    "n_words": 3463,
+    "n_chars": 22361,
+    "n_words": 3467,
     "meetings": [
       {
         "id": "M1",
@@ -49,34 +54,34 @@
           "travel history and conveyance data",
           "case investigation and exposure contact data"
         ],
-        "n_chars": 8758,
-        "n_words": 1412,
+        "n_chars": 8480,
+        "n_words": 1328,
         "segments": [
           {
             "id": "M1:T1",
             "start": 74,
-            "end": 228,
+            "end": 209,
             "speaker": "Analyst",
             "act": "open"
           },
           {
             "id": "M1:T2",
-            "start": 237,
-            "end": 823,
+            "start": 218,
+            "end": 777,
             "speaker": "Client",
             "act": "context"
           },
           {
             "id": "M1:T3",
-            "start": 833,
-            "end": 894,
+            "start": 787,
+            "end": 876,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
             "id": "M1:T4",
-            "start": 903,
-            "end": 1101,
+            "start": 885,
+            "end": 945,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -85,21 +90,83 @@
             "refs": [
               {
                 "rid": "2005-phin:R0003",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
             "id": "M1:T5",
-            "start": 1111,
-            "end": 1117,
-            "speaker": "Analyst",
+            "start": 955,
+            "end": 967,
+            "speaker": "EndUser",
             "act": "backchannel"
           },
           {
             "id": "M1:T6",
-            "start": 1126,
-            "end": 1380,
+            "start": 976,
+            "end": 1088,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0003",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T7",
+            "start": 1098,
+            "end": 1105,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T8",
+            "start": 1114,
+            "end": 1175,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0003",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T9",
+            "start": 1185,
+            "end": 1402,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2005-phin:R0003"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0003",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M1:T10",
+            "start": 1411,
+            "end": 1415,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M1:T11",
+            "start": 1424,
+            "end": 1468,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -108,14 +175,83 @@
             "refs": [
               {
                 "rid": "2005-phin:R0004",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T7",
-            "start": 1389,
-            "end": 1746,
+            "id": "M1:T12",
+            "start": 1478,
+            "end": 1485,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T13",
+            "start": 1494,
+            "end": 1538,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0004",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T14",
+            "start": 1548,
+            "end": 1560,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T15",
+            "start": 1569,
+            "end": 1603,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0004",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T16",
+            "start": 1613,
+            "end": 1625,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T17",
+            "start": 1634,
+            "end": 1763,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0004"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0004",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T18",
+            "start": 1772,
+            "end": 1819,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -124,32 +260,135 @@
             "refs": [
               {
                 "rid": "2005-phin:R0007",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T8",
-            "start": 1756,
-            "end": 1818,
+            "id": "M1:T19",
+            "start": 1829,
+            "end": 1835,
             "speaker": "Analyst",
-            "act": "ask_topic"
+            "act": "backchannel"
           },
           {
-            "id": "M1:T9",
-            "start": 1827,
-            "end": 2182,
+            "id": "M1:T20",
+            "start": 1844,
+            "end": 1942,
             "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0007",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T21",
+            "start": 1952,
+            "end": 1957,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T22",
+            "start": 1966,
+            "end": 2005,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0007",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T23",
+            "start": 2015,
+            "end": 2022,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T24",
+            "start": 2031,
+            "end": 2232,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0007"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0007",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T25",
+            "start": 2242,
+            "end": 2254,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T26",
+            "start": 2264,
+            "end": 2385,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
-              "2005-phin:R0010",
-              "2005-phin:R0013"
+              "2005-phin:R0010"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0010",
-                "role": "statement"
-              },
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T27",
+            "start": 2395,
+            "end": 2400,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T28",
+            "start": 2410,
+            "end": 2484,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0010"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0010",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T29",
+            "start": 2493,
+            "end": 2711,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2005-phin:R0013"
+            ],
+            "refs": [
               {
                 "rid": "2005-phin:R0013",
                 "role": "statement"
@@ -157,9 +396,23 @@
             ]
           },
           {
-            "id": "M1:T10",
-            "start": 2191,
-            "end": 2343,
+            "id": "M1:T30",
+            "start": 2721,
+            "end": 2733,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T31",
+            "start": 2743,
+            "end": 2755,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T32",
+            "start": 2764,
+            "end": 2832,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -168,38 +421,38 @@
             "refs": [
               {
                 "rid": "2005-phin:R0014",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T11",
-            "start": 2353,
-            "end": 2581,
+            "id": "M1:T33",
+            "start": 2842,
+            "end": 2847,
             "speaker": "Analyst",
-            "act": "echo",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T34",
+            "start": 2856,
+            "end": 2978,
+            "speaker": "Client",
+            "act": "continue",
             "gt_ids": [
               "2005-phin:R0014"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0014",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M1:T12",
-            "start": 2590,
-            "end": 2605,
-            "speaker": "Client",
-            "act": "confirm"
-          },
-          {
-            "id": "M1:T13",
-            "start": 2614,
-            "end": 2824,
-            "speaker": "Client",
+            "id": "M1:T35",
+            "start": 2988,
+            "end": 3044,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0015"
@@ -207,23 +460,40 @@
             "refs": [
               {
                 "rid": "2005-phin:R0015",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P1"
               }
             ]
           },
           {
-            "id": "M1:T14",
-            "start": 2834,
-            "end": 2841,
+            "id": "M1:T36",
+            "start": 3054,
+            "end": 3148,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0015"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0015",
+                "role": "part2",
+                "pid": "P1"
+              }
+            ]
+          },
+          {
+            "id": "M1:T37",
+            "start": 3158,
+            "end": 3170,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M1:T15",
-            "start": 2850,
-            "end": 2997,
-            "speaker": "Client",
+            "id": "M1:T38",
+            "start": 3180,
+            "end": 3270,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0016"
@@ -237,10 +507,10 @@
             ]
           },
           {
-            "id": "M1:T16",
-            "start": 3007,
-            "end": 3057,
-            "speaker": "EndUser",
+            "id": "M1:T39",
+            "start": 3279,
+            "end": 3361,
+            "speaker": "Client",
             "act": "object_scope",
             "refs": [
               {
@@ -251,10 +521,10 @@
             ]
           },
           {
-            "id": "M1:T17",
-            "start": 3066,
-            "end": 3097,
-            "speaker": "Client",
+            "id": "M1:T40",
+            "start": 3371,
+            "end": 3432,
+            "speaker": "EndUser",
             "act": "defend_scope",
             "refs": [
               {
@@ -265,34 +535,45 @@
             ]
           },
           {
-            "id": "M1:T18",
-            "start": 3107,
-            "end": 3151,
-            "speaker": "Analyst",
-            "act": "drop",
-            "gt_ids": [
-              "2005-phin:R0016"
-            ],
+            "id": "M1:T41",
+            "start": 3441,
+            "end": 3482,
+            "speaker": "Client",
+            "act": "park",
             "refs": [
               {
                 "rid": "2005-phin:R0016",
-                "role": "resolution",
+                "role": "conflict",
                 "pid": "P2"
               }
             ]
           },
           {
-            "id": "M1:T19",
-            "start": 3161,
-            "end": 3209,
+            "id": "M1:T42",
+            "start": 3492,
+            "end": 3533,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M1:T43",
+            "start": 3543,
+            "end": 3565,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T44",
+            "start": 3575,
+            "end": 3614,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T20",
-            "start": 3219,
-            "end": 3496,
-            "speaker": "EndUser",
+            "id": "M1:T45",
+            "start": 3623,
+            "end": 3888,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0017"
@@ -305,9 +586,23 @@
             ]
           },
           {
-            "id": "M1:T21",
-            "start": 3506,
-            "end": 3804,
+            "id": "M1:T46",
+            "start": 3898,
+            "end": 3905,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T47",
+            "start": 3915,
+            "end": 3928,
+            "speaker": "EndUser",
+            "act": "react"
+          },
+          {
+            "id": "M1:T48",
+            "start": 3938,
+            "end": 4224,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -321,9 +616,23 @@
             ]
           },
           {
-            "id": "M1:T22",
-            "start": 3814,
-            "end": 4057,
+            "id": "M1:T49",
+            "start": 4234,
+            "end": 4241,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T50",
+            "start": 4250,
+            "end": 4265,
+            "speaker": "Client",
+            "act": "react"
+          },
+          {
+            "id": "M1:T51",
+            "start": 4275,
+            "end": 4529,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -338,9 +647,9 @@
             ]
           },
           {
-            "id": "M1:T23",
-            "start": 4066,
-            "end": 4151,
+            "id": "M1:T52",
+            "start": 4538,
+            "end": 4586,
             "speaker": "Client",
             "act": "object_scope",
             "refs": [
@@ -352,9 +661,9 @@
             ]
           },
           {
-            "id": "M1:T24",
-            "start": 4161,
-            "end": 4231,
+            "id": "M1:T53",
+            "start": 4596,
+            "end": 4658,
             "speaker": "EndUser",
             "act": "defend_scope",
             "refs": [
@@ -366,26 +675,23 @@
             ]
           },
           {
-            "id": "M1:T25",
-            "start": 4241,
-            "end": 4276,
-            "speaker": "Analyst",
-            "act": "resolve_keep",
-            "gt_ids": [
-              "2005-phin:R0020"
-            ],
+            "id": "M1:T54",
+            "start": 4667,
+            "end": 4718,
+            "speaker": "Client",
+            "act": "park",
             "refs": [
               {
                 "rid": "2005-phin:R0020",
-                "role": "resolution",
+                "role": "conflict",
                 "pid": "P3"
               }
             ]
           },
           {
-            "id": "M1:T26",
-            "start": 4286,
-            "end": 4793,
+            "id": "M1:T55",
+            "start": 4728,
+            "end": 5234,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -400,9 +706,9 @@
             ]
           },
           {
-            "id": "M1:T27",
-            "start": 4802,
-            "end": 4854,
+            "id": "M1:T56",
+            "start": 5243,
+            "end": 5339,
             "speaker": "Client",
             "act": "object_scope",
             "refs": [
@@ -414,9 +720,9 @@
             ]
           },
           {
-            "id": "M1:T28",
-            "start": 4864,
-            "end": 4909,
+            "id": "M1:T57",
+            "start": 5349,
+            "end": 5376,
             "speaker": "EndUser",
             "act": "defend_scope",
             "refs": [
@@ -428,24 +734,27 @@
             ]
           },
           {
-            "id": "M1:T29",
-            "start": 4919,
-            "end": 5016,
+            "id": "M1:T58",
+            "start": 5386,
+            "end": 5420,
             "speaker": "Analyst",
-            "act": "park",
+            "act": "drop",
+            "gt_ids": [
+              "2005-phin:R0023"
+            ],
             "refs": [
               {
                 "rid": "2005-phin:R0023",
-                "role": "conflict",
+                "role": "resolution",
                 "pid": "P4"
               }
             ]
           },
           {
-            "id": "M1:T30",
-            "start": 5025,
-            "end": 5350,
-            "speaker": "Client",
+            "id": "M1:T59",
+            "start": 5430,
+            "end": 5693,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0025"
@@ -458,23 +767,30 @@
             ]
           },
           {
-            "id": "M1:T31",
-            "start": 5360,
-            "end": 5372,
+            "id": "M1:T60",
+            "start": 5703,
+            "end": 5708,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M1:T32",
-            "start": 5382,
-            "end": 5430,
+            "id": "M1:T61",
+            "start": 5718,
+            "end": 5746,
             "speaker": "Analyst",
-            "act": "ask_topic"
+            "act": "anything_else"
           },
           {
-            "id": "M1:T33",
-            "start": 5439,
-            "end": 5604,
+            "id": "M1:T62",
+            "start": 5756,
+            "end": 5778,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M1:T63",
+            "start": 5787,
+            "end": 5996,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -488,10 +804,17 @@
             ]
           },
           {
-            "id": "M1:T34",
-            "start": 5614,
-            "end": 5970,
+            "id": "M1:T64",
+            "start": 6006,
+            "end": 6013,
             "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T65",
+            "start": 6022,
+            "end": 6089,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0029"
@@ -499,21 +822,90 @@
             "refs": [
               {
                 "rid": "2005-phin:R0029",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T35",
-            "start": 5980,
-            "end": 6048,
+            "id": "M1:T66",
+            "start": 6099,
+            "end": 6106,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T67",
+            "start": 6115,
+            "end": 6174,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0029",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T68",
+            "start": 6184,
+            "end": 6191,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T69",
+            "start": 6200,
+            "end": 6237,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0029",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T70",
+            "start": 6246,
+            "end": 6459,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0029"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0029",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M1:T71",
+            "start": 6469,
+            "end": 6481,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T72",
+            "start": 6491,
+            "end": 6543,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M1:T36",
-            "start": 6057,
-            "end": 6304,
+            "id": "M1:T73",
+            "start": 6552,
+            "end": 6616,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -522,16 +914,81 @@
             "refs": [
               {
                 "rid": "2005-phin:R0035",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P7"
               }
             ]
           },
           {
-            "id": "M1:T37",
-            "start": 6313,
-            "end": 6483,
+            "id": "M1:T74",
+            "start": 6626,
+            "end": 6633,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T75",
+            "start": 6642,
+            "end": 6685,
             "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0035",
+                "role": "part2",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T76",
+            "start": 6694,
+            "end": 6773,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0035",
+                "role": "part2",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T77",
+            "start": 6783,
+            "end": 6795,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M1:T78",
+            "start": 6804,
+            "end": 6886,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0035"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0035",
+                "role": "part2",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M1:T79",
+            "start": 6896,
+            "end": 6977,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0034"
@@ -539,50 +996,32 @@
             "refs": [
               {
                 "rid": "2005-phin:R0034",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P6"
               }
             ]
           },
           {
-            "id": "M1:T38",
-            "start": 6493,
-            "end": 6558,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M1:T39",
-            "start": 6568,
-            "end": 6590,
+            "id": "M1:T80",
+            "start": 6987,
+            "end": 7080,
             "speaker": "EndUser",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M1:T40",
-            "start": 6600,
-            "end": 6846,
-            "speaker": "EndUser",
-            "act": "restate",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0034"
+            ],
             "refs": [
               {
-                "rid": "2005-phin:R0035",
-                "role": "restatement",
-                "pid": "P7"
+                "rid": "2005-phin:R0034",
+                "role": "part2",
+                "pid": "P6"
               }
             ]
           },
           {
-            "id": "M1:T41",
-            "start": 6856,
-            "end": 6920,
-            "speaker": "Analyst",
-            "act": "ask_topic"
-          },
-          {
-            "id": "M1:T42",
-            "start": 6930,
-            "end": 7167,
+            "id": "M1:T81",
+            "start": 7090,
+            "end": 7243,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -591,38 +1030,38 @@
             "refs": [
               {
                 "rid": "2005-phin:R0037",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M1:T43",
-            "start": 7177,
-            "end": 7383,
+            "id": "M1:T82",
+            "start": 7253,
+            "end": 7281,
             "speaker": "Analyst",
-            "act": "echo",
+            "act": "interrupt"
+          },
+          {
+            "id": "M1:T83",
+            "start": 7291,
+            "end": 7437,
+            "speaker": "EndUser",
+            "act": "resume",
             "gt_ids": [
               "2005-phin:R0037"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0037",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M1:T44",
-            "start": 7393,
-            "end": 7405,
-            "speaker": "EndUser",
-            "act": "confirm"
-          },
-          {
-            "id": "M1:T45",
-            "start": 7415,
-            "end": 7870,
-            "speaker": "EndUser",
+            "id": "M1:T84",
+            "start": 7446,
+            "end": 7885,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0038"
@@ -636,10 +1075,10 @@
             ]
           },
           {
-            "id": "M1:T46",
-            "start": 7879,
-            "end": 7956,
-            "speaker": "Client",
+            "id": "M1:T85",
+            "start": 7895,
+            "end": 7940,
+            "speaker": "EndUser",
             "act": "object_scope",
             "refs": [
               {
@@ -650,10 +1089,10 @@
             ]
           },
           {
-            "id": "M1:T47",
-            "start": 7966,
-            "end": 8024,
-            "speaker": "EndUser",
+            "id": "M1:T86",
+            "start": 7949,
+            "end": 7976,
+            "speaker": "Client",
             "act": "defend_scope",
             "refs": [
               {
@@ -664,24 +1103,27 @@
             ]
           },
           {
-            "id": "M1:T48",
-            "start": 8033,
-            "end": 8110,
-            "speaker": "Client",
-            "act": "park",
+            "id": "M1:T87",
+            "start": 7986,
+            "end": 8010,
+            "speaker": "Analyst",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "2005-phin:R0038"
+            ],
             "refs": [
               {
                 "rid": "2005-phin:R0038",
-                "role": "conflict",
+                "role": "resolution",
                 "pid": "P8"
               }
             ]
           },
           {
-            "id": "M1:T49",
-            "start": 8120,
-            "end": 8263,
-            "speaker": "EndUser",
+            "id": "M1:T88",
+            "start": 8019,
+            "end": 8126,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0040"
@@ -694,16 +1136,16 @@
             ]
           },
           {
-            "id": "M1:T50",
-            "start": 8273,
-            "end": 8279,
+            "id": "M1:T89",
+            "start": 8136,
+            "end": 8141,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M1:T51",
-            "start": 8289,
-            "end": 8450,
+            "id": "M1:T90",
+            "start": 8151,
+            "end": 8287,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -717,10 +1159,10 @@
             ]
           },
           {
-            "id": "M1:T52",
-            "start": 8460,
-            "end": 8556,
-            "speaker": "EndUser",
+            "id": "M1:T91",
+            "start": 8296,
+            "end": 8397,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0049"
@@ -734,23 +1176,9 @@
             ]
           },
           {
-            "id": "M1:T53",
-            "start": 8566,
-            "end": 8636,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M1:T54",
-            "start": 8645,
-            "end": 8667,
-            "speaker": "Client",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M1:T55",
-            "start": 8677,
-            "end": 8757,
+            "id": "M1:T92",
+            "start": 8407,
+            "end": 8479,
             "speaker": "Analyst",
             "act": "close"
           }
@@ -773,28 +1201,42 @@
           "case investigation",
           "linking"
         ],
-        "n_chars": 6521,
-        "n_words": 1025,
+        "n_chars": 7098,
+        "n_words": 1113,
         "segments": [
           {
             "id": "M2:T1",
             "start": 86,
-            "end": 192,
+            "end": 178,
             "speaker": "Analyst",
             "act": "open"
           },
           {
             "id": "M2:T2",
-            "start": 202,
-            "end": 356,
+            "start": 189,
+            "end": 227,
+            "speaker": "TechLead",
+            "act": "smalltalk"
+          },
+          {
+            "id": "M2:T3",
+            "start": 237,
+            "end": 353,
             "speaker": "Analyst",
             "act": "recap"
           },
           {
-            "id": "M2:T3",
-            "start": 365,
-            "end": 696,
-            "speaker": "Client",
+            "id": "M2:T4",
+            "start": 363,
+            "end": 452,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T5",
+            "start": 462,
+            "end": 702,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0054"
@@ -808,10 +1250,10 @@
             ]
           },
           {
-            "id": "M2:T4",
-            "start": 707,
-            "end": 752,
-            "speaker": "TechLead",
+            "id": "M2:T6",
+            "start": 711,
+            "end": 795,
+            "speaker": "Client",
             "act": "object_scope",
             "refs": [
               {
@@ -822,10 +1264,10 @@
             ]
           },
           {
-            "id": "M2:T5",
-            "start": 761,
-            "end": 788,
-            "speaker": "Client",
+            "id": "M2:T7",
+            "start": 805,
+            "end": 863,
+            "speaker": "EndUser",
             "act": "defend_scope",
             "refs": [
               {
@@ -836,23 +1278,26 @@
             ]
           },
           {
-            "id": "M2:T6",
-            "start": 798,
-            "end": 846,
+            "id": "M2:T8",
+            "start": 873,
+            "end": 897,
             "speaker": "Analyst",
-            "act": "park",
+            "act": "resolve_keep",
+            "gt_ids": [
+              "2005-phin:R0054"
+            ],
             "refs": [
               {
                 "rid": "2005-phin:R0054",
-                "role": "conflict",
+                "role": "resolution",
                 "pid": "P10"
               }
             ]
           },
           {
-            "id": "M2:T7",
-            "start": 856,
-            "end": 1061,
+            "id": "M2:T9",
+            "start": 907,
+            "end": 1007,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -861,37 +1306,44 @@
             "refs": [
               {
                 "rid": "2005-phin:R0055",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M2:T8",
-            "start": 1071,
-            "end": 1257,
+            "id": "M2:T10",
+            "start": 1017,
+            "end": 1029,
             "speaker": "Analyst",
-            "act": "echo",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T11",
+            "start": 1039,
+            "end": 1100,
+            "speaker": "EndUser",
+            "act": "continue",
             "gt_ids": [
               "2005-phin:R0055"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0055",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M2:T9",
-            "start": 1267,
-            "end": 1282,
-            "speaker": "EndUser",
-            "act": "confirm"
+            "id": "M2:T12",
+            "start": 1110,
+            "end": 1122,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
-            "id": "M2:T10",
-            "start": 1292,
-            "end": 1423,
+            "id": "M2:T13",
+            "start": 1132,
+            "end": 1198,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -900,15 +1352,38 @@
             "refs": [
               {
                 "rid": "2005-phin:R0057",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M2:T11",
-            "start": 1432,
-            "end": 1927,
+            "id": "M2:T14",
+            "start": 1207,
+            "end": 1246,
             "speaker": "Client",
+            "act": "interrupt"
+          },
+          {
+            "id": "M2:T15",
+            "start": 1256,
+            "end": 1341,
+            "speaker": "EndUser",
+            "act": "resume",
+            "gt_ids": [
+              "2005-phin:R0057"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0057",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T16",
+            "start": 1351,
+            "end": 1445,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0059"
@@ -916,16 +1391,116 @@
             "refs": [
               {
                 "rid": "2005-phin:R0059",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P11"
               }
             ]
           },
           {
-            "id": "M2:T12",
-            "start": 1937,
-            "end": 2049,
+            "id": "M2:T17",
+            "start": 1455,
+            "end": 1461,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T18",
+            "start": 1471,
+            "end": 1513,
             "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0059",
+                "role": "part2",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T19",
+            "start": 1523,
+            "end": 1528,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T20",
+            "start": 1538,
+            "end": 1607,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0059",
+                "role": "part2",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T21",
+            "start": 1617,
+            "end": 1624,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T22",
+            "start": 1634,
+            "end": 1976,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0059"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0059",
+                "role": "part2",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T23",
+            "start": 1986,
+            "end": 2032,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "2005-phin:R0059",
+                "role": "clarification",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T24",
+            "start": 2042,
+            "end": 2084,
+            "speaker": "EndUser",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "2005-phin:R0059",
+                "role": "clarification",
+                "pid": "P11"
+              }
+            ]
+          },
+          {
+            "id": "M2:T25",
+            "start": 2093,
+            "end": 2181,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0060"
@@ -938,18 +1513,18 @@
             ]
           },
           {
-            "id": "M2:T13",
-            "start": 2059,
-            "end": 2082,
-            "speaker": "Analyst",
-            "act": "interrupt"
+            "id": "M2:T26",
+            "start": 2191,
+            "end": 2196,
+            "speaker": "EndUser",
+            "act": "backchannel"
           },
           {
-            "id": "M2:T14",
-            "start": 2092,
-            "end": 2224,
-            "speaker": "EndUser",
-            "act": "resume",
+            "id": "M2:T27",
+            "start": 2205,
+            "end": 2272,
+            "speaker": "Client",
+            "act": "continue",
             "gt_ids": [
               "2005-phin:R0060"
             ],
@@ -961,9 +1536,85 @@
             ]
           },
           {
-            "id": "M2:T15",
-            "start": 2234,
-            "end": 2406,
+            "id": "M2:T28",
+            "start": 2282,
+            "end": 2294,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T29",
+            "start": 2303,
+            "end": 2335,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T30",
+            "start": 2345,
+            "end": 2357,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T31",
+            "start": 2366,
+            "end": 2417,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0060",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T32",
+            "start": 2427,
+            "end": 2692,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2005-phin:R0060"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0060",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T33",
+            "start": 2701,
+            "end": 2715,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T34",
+            "start": 2726,
+            "end": 2741,
+            "speaker": "TechLead",
+            "act": "react"
+          },
+          {
+            "id": "M2:T35",
+            "start": 2751,
+            "end": 2933,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -978,9 +1629,37 @@
             ]
           },
           {
-            "id": "M2:T16",
-            "start": 2415,
-            "end": 2535,
+            "id": "M2:T36",
+            "start": 2943,
+            "end": 2972,
+            "speaker": "Analyst",
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "2005-phin:R0064",
+                "role": "clarification",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T37",
+            "start": 2982,
+            "end": 3020,
+            "speaker": "EndUser",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "2005-phin:R0064",
+                "role": "clarification",
+                "pid": "P12"
+              }
+            ]
+          },
+          {
+            "id": "M2:T38",
+            "start": 3029,
+            "end": 3168,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -994,70 +1673,16 @@
             ]
           },
           {
-            "id": "M2:T17",
-            "start": 2545,
-            "end": 2694,
+            "id": "M2:T39",
+            "start": 3178,
+            "end": 3185,
             "speaker": "Analyst",
-            "act": "echo",
-            "gt_ids": [
-              "2005-phin:R0071"
-            ],
-            "refs": [
-              {
-                "rid": "2005-phin:R0071",
-                "role": "echo"
-              }
-            ]
+            "act": "backchannel"
           },
           {
-            "id": "M2:T18",
-            "start": 2703,
-            "end": 2717,
-            "speaker": "Client",
-            "act": "confirm"
-          },
-          {
-            "id": "M2:T19",
-            "start": 2727,
-            "end": 2799,
-            "speaker": "Analyst",
-            "act": "anything_else"
-          },
-          {
-            "id": "M2:T20",
-            "start": 2808,
-            "end": 2830,
-            "speaker": "Client",
-            "act": "nothing_else"
-          },
-          {
-            "id": "M2:T21",
-            "start": 2840,
-            "end": 3030,
-            "speaker": "EndUser",
-            "act": "followup",
-            "gt_ids": [
-              "2005-phin:R0049"
-            ],
-            "refs": [
-              {
-                "rid": "2005-phin:R0049",
-                "role": "followup",
-                "pid": "P9"
-              }
-            ]
-          },
-          {
-            "id": "M2:T22",
-            "start": 3040,
-            "end": 3119,
-            "speaker": "Analyst",
-            "act": "ask_topic"
-          },
-          {
-            "id": "M2:T23",
-            "start": 3128,
-            "end": 3465,
+            "id": "M2:T40",
+            "start": 3194,
+            "end": 3282,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1066,47 +1691,102 @@
             "refs": [
               {
                 "rid": "2005-phin:R0072",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P13"
               }
             ]
           },
           {
-            "id": "M2:T24",
-            "start": 3475,
-            "end": 3538,
+            "id": "M2:T41",
+            "start": 3292,
+            "end": 3304,
             "speaker": "Analyst",
-            "act": "drop_later",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T42",
+            "start": 3313,
+            "end": 3359,
+            "speaker": "Client",
+            "act": "continue",
             "gt_ids": [
-              "2005-phin:R0023"
+              "2005-phin:R0072"
             ],
             "refs": [
               {
-                "rid": "2005-phin:R0023",
-                "role": "resolution",
-                "pid": "P4"
-              }
-            ]
-          },
-          {
-            "id": "M2:T25",
-            "start": 3549,
-            "end": 3858,
-            "speaker": "TechLead",
-            "act": "restate",
-            "refs": [
-              {
                 "rid": "2005-phin:R0072",
-                "role": "restatement",
+                "role": "part2",
                 "pid": "P13"
               }
             ]
           },
           {
-            "id": "M2:T26",
-            "start": 3867,
-            "end": 4088,
+            "id": "M2:T43",
+            "start": 3368,
+            "end": 3411,
             "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0072"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0072",
+                "role": "part2",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T44",
+            "start": 3421,
+            "end": 3428,
+            "speaker": "EndUser",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T45",
+            "start": 3437,
+            "end": 3608,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0072"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0072",
+                "role": "part2",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M2:T46",
+            "start": 3618,
+            "end": 3869,
+            "speaker": "EndUser",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2005-phin:R0035",
+                "role": "restatement",
+                "pid": "P7"
+              }
+            ]
+          },
+          {
+            "id": "M2:T47",
+            "start": 3879,
+            "end": 3931,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M2:T48",
+            "start": 3941,
+            "end": 4002,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0074"
@@ -1114,16 +1794,40 @@
             "refs": [
               {
                 "rid": "2005-phin:R0074",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P14"
               }
             ]
           },
           {
-            "id": "M2:T27",
-            "start": 4098,
-            "end": 4246,
+            "id": "M2:T49",
+            "start": 4012,
+            "end": 4024,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T50",
+            "start": 4034,
+            "end": 4131,
             "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0074"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0074",
+                "role": "part2",
+                "pid": "P14"
+              }
+            ]
+          },
+          {
+            "id": "M2:T51",
+            "start": 4140,
+            "end": 4278,
+            "speaker": "Client",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0075"
@@ -1137,16 +1841,37 @@
             ]
           },
           {
-            "id": "M2:T28",
-            "start": 4256,
-            "end": 4261,
+            "id": "M2:T52",
+            "start": 4288,
+            "end": 4313,
             "speaker": "Analyst",
-            "act": "backchannel"
+            "act": "clarify_question",
+            "refs": [
+              {
+                "rid": "2005-phin:R0075",
+                "role": "clarification",
+                "pid": "P15"
+              }
+            ]
           },
           {
-            "id": "M2:T29",
-            "start": 4271,
-            "end": 4517,
+            "id": "M2:T53",
+            "start": 4322,
+            "end": 4363,
+            "speaker": "Client",
+            "act": "evade",
+            "refs": [
+              {
+                "rid": "2005-phin:R0075",
+                "role": "clarification",
+                "pid": "P15"
+              }
+            ]
+          },
+          {
+            "id": "M2:T54",
+            "start": 4373,
+            "end": 4461,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -1155,45 +1880,94 @@
             "refs": [
               {
                 "rid": "2005-phin:R0076",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M2:T30",
-            "start": 4527,
-            "end": 4784,
-            "speaker": "Analyst",
-            "act": "echo",
+            "id": "M2:T55",
+            "start": 4472,
+            "end": 4479,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T56",
+            "start": 4489,
+            "end": 4525,
+            "speaker": "EndUser",
+            "act": "continue",
             "gt_ids": [
               "2005-phin:R0076"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0076",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M2:T31",
-            "start": 4794,
-            "end": 4806,
+            "id": "M2:T57",
+            "start": 4535,
+            "end": 4617,
             "speaker": "EndUser",
-            "act": "confirm"
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0076"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0076",
+                "role": "part2"
+              }
+            ]
           },
           {
-            "id": "M2:T32",
-            "start": 4816,
-            "end": 4867,
+            "id": "M2:T58",
+            "start": 4627,
+            "end": 4676,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0076"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0076",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T59",
+            "start": 4686,
+            "end": 4691,
             "speaker": "Analyst",
-            "act": "ask_topic"
+            "act": "backchannel"
           },
           {
-            "id": "M2:T33",
-            "start": 4876,
-            "end": 5016,
-            "speaker": "Client",
+            "id": "M2:T60",
+            "start": 4701,
+            "end": 5028,
+            "speaker": "Analyst",
+            "act": "resolve_later",
+            "gt_ids": [
+              "2005-phin:R0020"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0020",
+                "role": "resolution",
+                "pid": "P3"
+              }
+            ]
+          },
+          {
+            "id": "M2:T61",
+            "start": 5038,
+            "end": 5157,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0080"
@@ -1201,21 +1975,60 @@
             "refs": [
               {
                 "rid": "2005-phin:R0080",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M2:T34",
-            "start": 5026,
-            "end": 5038,
+            "id": "M2:T62",
+            "start": 5167,
+            "end": 5172,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M2:T35",
-            "start": 5048,
-            "end": 5258,
+            "id": "M2:T63",
+            "start": 5182,
+            "end": 5241,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0080"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0080",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T64",
+            "start": 5251,
+            "end": 5402,
+            "speaker": "Analyst",
+            "act": "echo",
+            "gt_ids": [
+              "2005-phin:R0080"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0080",
+                "role": "echo"
+              }
+            ]
+          },
+          {
+            "id": "M2:T65",
+            "start": 5412,
+            "end": 5426,
+            "speaker": "EndUser",
+            "act": "confirm"
+          },
+          {
+            "id": "M2:T66",
+            "start": 5436,
+            "end": 5636,
             "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
@@ -1230,45 +2043,31 @@
             ]
           },
           {
-            "id": "M2:T36",
-            "start": 5268,
-            "end": 5293,
+            "id": "M2:T67",
+            "start": 5645,
+            "end": 5712,
+            "speaker": "Client",
+            "act": "offtopic"
+          },
+          {
+            "id": "M2:T68",
+            "start": 5722,
+            "end": 5734,
             "speaker": "Analyst",
-            "act": "clarify_question",
-            "refs": [
-              {
-                "rid": "2005-phin:R0082",
-                "role": "clarification",
-                "pid": "P17"
-              }
-            ]
+            "act": "backchannel"
           },
           {
-            "id": "M2:T37",
-            "start": 5303,
-            "end": 5349,
-            "speaker": "EndUser",
-            "act": "evade",
-            "refs": [
-              {
-                "rid": "2005-phin:R0082",
-                "role": "clarification",
-                "pid": "P17"
-              }
-            ]
-          },
-          {
-            "id": "M2:T38",
-            "start": 5359,
-            "end": 5401,
+            "id": "M2:T69",
+            "start": 5744,
+            "end": 5776,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M2:T39",
-            "start": 5410,
-            "end": 5611,
-            "speaker": "Client",
+            "id": "M2:T70",
+            "start": 5786,
+            "end": 5858,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0086"
@@ -1276,43 +2075,63 @@
             "refs": [
               {
                 "rid": "2005-phin:R0086",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P19"
               }
             ]
           },
           {
-            "id": "M2:T40",
-            "start": 5621,
-            "end": 5663,
+            "id": "M2:T71",
+            "start": 5868,
+            "end": 5875,
             "speaker": "Analyst",
-            "act": "clarify_question",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T72",
+            "start": 5885,
+            "end": 5960,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0086"
+            ],
             "refs": [
               {
                 "rid": "2005-phin:R0086",
-                "role": "clarification",
+                "role": "part2",
                 "pid": "P19"
               }
             ]
           },
           {
-            "id": "M2:T41",
-            "start": 5672,
-            "end": 5707,
-            "speaker": "Client",
-            "act": "evade",
+            "id": "M2:T73",
+            "start": 5970,
+            "end": 5982,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T74",
+            "start": 5992,
+            "end": 6027,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0086"
+            ],
             "refs": [
               {
                 "rid": "2005-phin:R0086",
-                "role": "clarification",
+                "role": "part2",
                 "pid": "P19"
               }
             ]
           },
           {
-            "id": "M2:T42",
-            "start": 5716,
-            "end": 5838,
+            "id": "M2:T75",
+            "start": 6036,
+            "end": 6171,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1326,17 +2145,17 @@
             ]
           },
           {
-            "id": "M2:T43",
-            "start": 5848,
-            "end": 5855,
+            "id": "M2:T76",
+            "start": 6181,
+            "end": 6188,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M2:T44",
-            "start": 5864,
-            "end": 6005,
-            "speaker": "Client",
+            "id": "M2:T77",
+            "start": 6198,
+            "end": 6340,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0089"
@@ -1350,10 +2169,10 @@
             ]
           },
           {
-            "id": "M2:T45",
-            "start": 6016,
-            "end": 6061,
-            "speaker": "TechLead",
+            "id": "M2:T78",
+            "start": 6349,
+            "end": 6422,
+            "speaker": "Client",
             "act": "object_scope",
             "refs": [
               {
@@ -1364,10 +2183,10 @@
             ]
           },
           {
-            "id": "M2:T46",
-            "start": 6070,
-            "end": 6126,
-            "speaker": "Client",
+            "id": "M2:T79",
+            "start": 6432,
+            "end": 6477,
+            "speaker": "EndUser",
             "act": "defend_scope",
             "refs": [
               {
@@ -1378,27 +2197,24 @@
             ]
           },
           {
-            "id": "M2:T47",
-            "start": 6136,
-            "end": 6154,
+            "id": "M2:T80",
+            "start": 6487,
+            "end": 6569,
             "speaker": "Analyst",
-            "act": "resolve_keep",
-            "gt_ids": [
-              "2005-phin:R0089"
-            ],
+            "act": "park",
             "refs": [
               {
                 "rid": "2005-phin:R0089",
-                "role": "resolution",
+                "role": "conflict",
                 "pid": "P20"
               }
             ]
           },
           {
-            "id": "M2:T48",
-            "start": 6163,
-            "end": 6438,
-            "speaker": "Client",
+            "id": "M2:T81",
+            "start": 6579,
+            "end": 6668,
+            "speaker": "EndUser",
             "act": "state",
             "gt_ids": [
               "2005-phin:R0090"
@@ -1406,14 +2222,81 @@
             "refs": [
               {
                 "rid": "2005-phin:R0090",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M2:T49",
-            "start": 6448,
-            "end": 6520,
+            "id": "M2:T82",
+            "start": 6678,
+            "end": 6685,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T83",
+            "start": 6695,
+            "end": 6763,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0090"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0090",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T84",
+            "start": 6773,
+            "end": 6778,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T85",
+            "start": 6788,
+            "end": 6917,
+            "speaker": "EndUser",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0090"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0090",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M2:T86",
+            "start": 6927,
+            "end": 6933,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M2:T87",
+            "start": 6943,
+            "end": 6967,
+            "speaker": "Analyst",
+            "act": "anything_else"
+          },
+          {
+            "id": "M2:T88",
+            "start": 6977,
+            "end": 6999,
+            "speaker": "EndUser",
+            "act": "nothing_else"
+          },
+          {
+            "id": "M2:T89",
+            "start": 7009,
+            "end": 7097,
             "speaker": "Analyst",
             "act": "close"
           }
@@ -1436,34 +2319,34 @@
           "operations",
           "system security and availability"
         ],
-        "n_chars": 6631,
+        "n_chars": 6783,
         "n_words": 1026,
         "segments": [
           {
             "id": "M3:T1",
             "start": 74,
-            "end": 207,
+            "end": 198,
             "speaker": "Analyst",
             "act": "open"
           },
           {
             "id": "M3:T2",
-            "start": 217,
-            "end": 269,
-            "speaker": "Analyst",
-            "act": "smalltalk"
-          },
-          {
-            "id": "M3:T3",
-            "start": 279,
-            "end": 482,
+            "start": 208,
+            "end": 400,
             "speaker": "Analyst",
             "act": "recap"
           },
           {
+            "id": "M3:T3",
+            "start": 410,
+            "end": 485,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
             "id": "M3:T4",
-            "start": 491,
-            "end": 711,
+            "start": 494,
+            "end": 634,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1478,8 +2361,15 @@
           },
           {
             "id": "M3:T5",
-            "start": 720,
-            "end": 866,
+            "start": 644,
+            "end": 649,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T6",
+            "start": 658,
+            "end": 817,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1494,44 +2384,124 @@
             ]
           },
           {
-            "id": "M3:T6",
-            "start": 876,
-            "end": 979,
+            "id": "M3:T7",
+            "start": 827,
+            "end": 911,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M3:T7",
-            "start": 990,
-            "end": 1040,
-            "speaker": "TechLead",
-            "act": "offtopic"
-          },
-          {
             "id": "M3:T8",
-            "start": 1049,
-            "end": 1549,
+            "start": 920,
+            "end": 1043,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
-              "2005-phin:R0094",
-              "2005-phin:R0095"
+              "2005-phin:R0094"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0094",
-                "role": "statement"
-              },
-              {
-                "rid": "2005-phin:R0095",
                 "role": "statement"
               }
             ]
           },
           {
             "id": "M3:T9",
-            "start": 1558,
-            "end": 1921,
+            "start": 1053,
+            "end": 1065,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T10",
+            "start": 1074,
+            "end": 1156,
+            "speaker": "Client",
+            "act": "state",
+            "gt_ids": [
+              "2005-phin:R0095"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0095",
+                "role": "part1"
+              }
+            ]
+          },
+          {
+            "id": "M3:T11",
+            "start": 1166,
+            "end": 1172,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T12",
+            "start": 1181,
+            "end": 1239,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0095"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0095",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T13",
+            "start": 1250,
+            "end": 1255,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T14",
+            "start": 1264,
+            "end": 1332,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0095"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0095",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T15",
+            "start": 1343,
+            "end": 1355,
+            "speaker": "TechLead",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T16",
+            "start": 1364,
+            "end": 1537,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0095"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0095",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T17",
+            "start": 1546,
+            "end": 1913,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1545,16 +2515,16 @@
             ]
           },
           {
-            "id": "M3:T10",
-            "start": 1931,
-            "end": 1943,
+            "id": "M3:T18",
+            "start": 1923,
+            "end": 1930,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M3:T11",
-            "start": 1952,
-            "end": 2152,
+            "id": "M3:T19",
+            "start": 1939,
+            "end": 2028,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1563,15 +2533,87 @@
             "refs": [
               {
                 "rid": "2005-phin:R0098",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P22"
               }
             ]
           },
           {
-            "id": "M3:T12",
-            "start": 2161,
-            "end": 2224,
+            "id": "M3:T20",
+            "start": 2038,
+            "end": 2044,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T21",
+            "start": 2053,
+            "end": 2081,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0098"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0098",
+                "role": "part2",
+                "pid": "P22"
+              }
+            ]
+          },
+          {
+            "id": "M3:T22",
+            "start": 2091,
+            "end": 2103,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T23",
+            "start": 2112,
+            "end": 2168,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0098"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0098",
+                "role": "part2",
+                "pid": "P22"
+              }
+            ]
+          },
+          {
+            "id": "M3:T24",
+            "start": 2178,
+            "end": 2183,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T25",
+            "start": 2192,
+            "end": 2258,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0098"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0098",
+                "role": "part2",
+                "pid": "P22"
+              }
+            ]
+          },
+          {
+            "id": "M3:T26",
+            "start": 2267,
+            "end": 2336,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1585,9 +2627,54 @@
             ]
           },
           {
-            "id": "M3:T13",
-            "start": 2233,
-            "end": 2346,
+            "id": "M3:T27",
+            "start": 2346,
+            "end": 2353,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T28",
+            "start": 2362,
+            "end": 2554,
+            "speaker": "Client",
+            "act": "followup",
+            "gt_ids": [
+              "2005-phin:R0049"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0049",
+                "role": "followup",
+                "pid": "P9"
+              }
+            ]
+          },
+          {
+            "id": "M3:T29",
+            "start": 2565,
+            "end": 2770,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2005-phin:R0098",
+                "role": "restatement",
+                "pid": "P22"
+              }
+            ]
+          },
+          {
+            "id": "M3:T30",
+            "start": 2780,
+            "end": 2851,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T31",
+            "start": 2860,
+            "end": 2967,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1602,16 +2689,9 @@
             ]
           },
           {
-            "id": "M3:T14",
-            "start": 2356,
-            "end": 2368,
-            "speaker": "Analyst",
-            "act": "backchannel"
-          },
-          {
-            "id": "M3:T15",
-            "start": 2377,
-            "end": 2501,
+            "id": "M3:T32",
+            "start": 2976,
+            "end": 3130,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1625,23 +2705,39 @@
             ]
           },
           {
-            "id": "M3:T16",
-            "start": 2511,
-            "end": 2523,
+            "id": "M3:T33",
+            "start": 3140,
+            "end": 3292,
             "speaker": "Analyst",
-            "act": "backchannel"
+            "act": "echo",
+            "gt_ids": [
+              "2005-phin:R0081"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0081",
+                "role": "echo"
+              }
+            ]
           },
           {
-            "id": "M3:T17",
-            "start": 2533,
-            "end": 2594,
+            "id": "M3:T34",
+            "start": 3301,
+            "end": 3305,
+            "speaker": "Client",
+            "act": "confirm"
+          },
+          {
+            "id": "M3:T35",
+            "start": 3315,
+            "end": 3405,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M3:T18",
-            "start": 2603,
-            "end": 2735,
+            "id": "M3:T36",
+            "start": 3414,
+            "end": 3513,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1655,9 +2751,16 @@
             ]
           },
           {
-            "id": "M3:T19",
-            "start": 2744,
-            "end": 2861,
+            "id": "M3:T37",
+            "start": 3523,
+            "end": 3529,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T38",
+            "start": 3538,
+            "end": 3619,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1666,21 +2769,44 @@
             "refs": [
               {
                 "rid": "2005-phin:R0110",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M3:T20",
-            "start": 2871,
-            "end": 2878,
+            "id": "M3:T39",
+            "start": 3629,
+            "end": 3636,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M3:T21",
-            "start": 2887,
-            "end": 2994,
+            "id": "M3:T40",
+            "start": 3645,
+            "end": 3704,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0110"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0110",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T41",
+            "start": 3714,
+            "end": 3726,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T42",
+            "start": 3735,
+            "end": 3815,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1689,22 +2815,39 @@
             "refs": [
               {
                 "rid": "2005-phin:R0113",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P23"
               }
             ]
           },
           {
-            "id": "M3:T22",
-            "start": 3004,
-            "end": 3009,
+            "id": "M3:T43",
+            "start": 3825,
+            "end": 3837,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M3:T23",
-            "start": 3018,
-            "end": 3153,
+            "id": "M3:T44",
+            "start": 3846,
+            "end": 3885,
+            "speaker": "Client",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0113"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0113",
+                "role": "part2",
+                "pid": "P23"
+              }
+            ]
+          },
+          {
+            "id": "M3:T45",
+            "start": 3894,
+            "end": 4033,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1719,9 +2862,9 @@
             ]
           },
           {
-            "id": "M3:T24",
-            "start": 3164,
-            "end": 3209,
+            "id": "M3:T46",
+            "start": 4044,
+            "end": 4093,
             "speaker": "TechLead",
             "act": "object_scope",
             "refs": [
@@ -1733,9 +2876,9 @@
             ]
           },
           {
-            "id": "M3:T25",
-            "start": 3218,
-            "end": 3267,
+            "id": "M3:T47",
+            "start": 4102,
+            "end": 4155,
             "speaker": "Client",
             "act": "defend_scope",
             "refs": [
@@ -1747,11 +2890,11 @@
             ]
           },
           {
-            "id": "M3:T26",
-            "start": 3277,
-            "end": 3304,
+            "id": "M3:T48",
+            "start": 4165,
+            "end": 4209,
             "speaker": "Analyst",
-            "act": "resolve_keep",
+            "act": "drop",
             "gt_ids": [
               "2005-phin:R0119"
             ],
@@ -1764,9 +2907,9 @@
             ]
           },
           {
-            "id": "M3:T27",
-            "start": 3313,
-            "end": 3641,
+            "id": "M3:T49",
+            "start": 4218,
+            "end": 4544,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1781,23 +2924,9 @@
             ]
           },
           {
-            "id": "M3:T28",
-            "start": 3650,
-            "end": 3662,
-            "speaker": "Client",
-            "act": "crosstalk_a"
-          },
-          {
-            "id": "M3:T29",
-            "start": 3672,
-            "end": 3684,
-            "speaker": "Analyst",
-            "act": "crosstalk_b"
-          },
-          {
-            "id": "M3:T30",
-            "start": 3693,
-            "end": 3840,
+            "id": "M3:T50",
+            "start": 4553,
+            "end": 4635,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1806,37 +2935,72 @@
             "refs": [
               {
                 "rid": "2005-phin:R0123",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M3:T31",
-            "start": 3850,
-            "end": 4059,
-            "speaker": "Analyst",
-            "act": "echo",
+            "id": "M3:T51",
+            "start": 4644,
+            "end": 4725,
+            "speaker": "Client",
+            "act": "continue",
             "gt_ids": [
               "2005-phin:R0123"
             ],
             "refs": [
               {
                 "rid": "2005-phin:R0123",
-                "role": "echo"
+                "role": "part2"
               }
             ]
           },
           {
-            "id": "M3:T32",
-            "start": 4068,
-            "end": 4082,
-            "speaker": "Client",
-            "act": "confirm"
+            "id": "M3:T52",
+            "start": 4735,
+            "end": 4740,
+            "speaker": "Analyst",
+            "act": "backchannel"
           },
           {
-            "id": "M3:T33",
-            "start": 4091,
-            "end": 4396,
+            "id": "M3:T53",
+            "start": 4751,
+            "end": 5089,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2005-phin:R0121",
+                "role": "restatement",
+                "pid": "P25"
+              }
+            ]
+          },
+          {
+            "id": "M3:T54",
+            "start": 5100,
+            "end": 5456,
+            "speaker": "TechLead",
+            "act": "restate",
+            "refs": [
+              {
+                "rid": "2005-phin:R0072",
+                "role": "restatement",
+                "pid": "P13"
+              }
+            ]
+          },
+          {
+            "id": "M3:T55",
+            "start": 5466,
+            "end": 5517,
+            "speaker": "Analyst",
+            "act": "ask_topic"
+          },
+          {
+            "id": "M3:T56",
+            "start": 5526,
+            "end": 5698,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1845,21 +3009,37 @@
             "refs": [
               {
                 "rid": "2005-phin:R0128",
-                "role": "statement"
+                "role": "part1"
               }
             ]
           },
           {
-            "id": "M3:T34",
-            "start": 4407,
-            "end": 4456,
-            "speaker": "TechLead",
-            "act": "offtopic"
+            "id": "M3:T57",
+            "start": 5708,
+            "end": 5747,
+            "speaker": "Analyst",
+            "act": "interrupt"
           },
           {
-            "id": "M3:T35",
-            "start": 4465,
-            "end": 4579,
+            "id": "M3:T58",
+            "start": 5756,
+            "end": 5911,
+            "speaker": "Client",
+            "act": "resume",
+            "gt_ids": [
+              "2005-phin:R0128"
+            ],
+            "refs": [
+              {
+                "rid": "2005-phin:R0128",
+                "role": "part2"
+              }
+            ]
+          },
+          {
+            "id": "M3:T59",
+            "start": 5920,
+            "end": 6039,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1873,47 +3053,44 @@
             ]
           },
           {
-            "id": "M3:T36",
-            "start": 4589,
-            "end": 5128,
+            "id": "M3:T60",
+            "start": 6049,
+            "end": 6054,
             "speaker": "Analyst",
-            "act": "resolve_later",
-            "gt_ids": [
-              "2005-phin:R0038"
-            ],
-            "refs": [
-              {
-                "rid": "2005-phin:R0038",
-                "role": "resolution",
-                "pid": "P8"
-              }
-            ]
+            "act": "backchannel"
           },
           {
-            "id": "M3:T37",
-            "start": 5139,
-            "end": 5502,
+            "id": "M3:T61",
+            "start": 6065,
+            "end": 6077,
             "speaker": "TechLead",
-            "act": "restate",
-            "refs": [
-              {
-                "rid": "2005-phin:R0121",
-                "role": "restatement",
-                "pid": "P25"
-              }
-            ]
+            "act": "react"
           },
           {
-            "id": "M3:T38",
-            "start": 5512,
-            "end": 5578,
+            "id": "M3:T62",
+            "start": 6087,
+            "end": 6175,
             "speaker": "Analyst",
             "act": "ask_topic"
           },
           {
-            "id": "M3:T39",
-            "start": 5587,
-            "end": 5787,
+            "id": "M3:T63",
+            "start": 6186,
+            "end": 6201,
+            "speaker": "TechLead",
+            "act": "crosstalk_a"
+          },
+          {
+            "id": "M3:T64",
+            "start": 6210,
+            "end": 6228,
+            "speaker": "Client",
+            "act": "crosstalk_b"
+          },
+          {
+            "id": "M3:T65",
+            "start": 6237,
+            "end": 6446,
             "speaker": "Client",
             "act": "state",
             "gt_ids": [
@@ -1927,16 +3104,16 @@
             ]
           },
           {
-            "id": "M3:T40",
-            "start": 5797,
-            "end": 5802,
+            "id": "M3:T66",
+            "start": 6456,
+            "end": 6461,
             "speaker": "Analyst",
             "act": "backchannel"
           },
           {
-            "id": "M3:T41",
-            "start": 5813,
-            "end": 5976,
+            "id": "M3:T67",
+            "start": 6472,
+            "end": 6538,
             "speaker": "TechLead",
             "act": "state",
             "gt_ids": [
@@ -1945,46 +3122,63 @@
             "refs": [
               {
                 "rid": "2005-phin:R0134",
-                "role": "statement",
+                "role": "part1",
                 "pid": "P26"
               }
             ]
           },
           {
-            "id": "M3:T42",
-            "start": 5985,
-            "end": 6326,
-            "speaker": "Client",
-            "act": "followup",
+            "id": "M3:T68",
+            "start": 6548,
+            "end": 6553,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T69",
+            "start": 6564,
+            "end": 6627,
+            "speaker": "TechLead",
+            "act": "continue",
             "gt_ids": [
-              "2005-phin:R0034"
+              "2005-phin:R0134"
             ],
             "refs": [
               {
-                "rid": "2005-phin:R0034",
-                "role": "followup",
-                "pid": "P6"
+                "rid": "2005-phin:R0134",
+                "role": "part2",
+                "pid": "P26"
               }
             ]
           },
           {
-            "id": "M3:T43",
-            "start": 6335,
-            "end": 6550,
-            "speaker": "Client",
-            "act": "restate",
+            "id": "M3:T70",
+            "start": 6637,
+            "end": 6642,
+            "speaker": "Analyst",
+            "act": "backchannel"
+          },
+          {
+            "id": "M3:T71",
+            "start": 6653,
+            "end": 6702,
+            "speaker": "TechLead",
+            "act": "continue",
+            "gt_ids": [
+              "2005-phin:R0134"
+            ],
             "refs": [
               {
-                "rid": "2005-phin:R0098",
-                "role": "restatement",
-                "pid": "P22"
+                "rid": "2005-phin:R0134",
+                "role": "part2",
+                "pid": "P26"
               }
             ]
           },
           {
-            "id": "M3:T44",
-            "start": 6560,
-            "end": 6630,
+            "id": "M3:T72",
+            "start": 6712,
+            "end": 6782,
             "speaker": "Analyst",
             "act": "close"
           }
@@ -1999,41 +3193,42 @@
     "n_expected_in_output": 56,
     "n_reachable": 58,
     "by_status": {
-      "clear": 36,
-      "conflict_resolved": 4,
-      "conflict_open": 1,
+      "clear": 35,
+      "conflict_resolved": 3,
+      "conflict_open": 2,
       "rejected": 2,
       "ambiguous": 9,
       "inconsistent": 4,
-      "incomplete": 2,
+      "incomplete": 3,
       "omitted": 2
     },
     "phenomena": {
       "ambiguity:unresolved": 9,
-      "conflict:dropped": 1,
-      "conflict:dropped_later": 1,
-      "conflict:open": 1,
-      "conflict:resolved": 3,
+      "conflict:dropped": 2,
+      "conflict:open": 2,
+      "conflict:resolved": 2,
       "conflict:resolved_later": 1,
-      "incompleteness:completed_later": 2,
-      "incompleteness:open": 2,
+      "incompleteness:completed_later": 1,
+      "incompleteness:open": 3,
       "inconsistency:unnoticed": 4,
       "omission:not_discussed": 2
     },
     "n_distractors": 0,
-    "n_issues": 16,
+    "n_issues": 18,
     "messiness": {
       "topic_revisits": 1,
       "topics_out_of_document_order": 4,
+      "chunked_statements": 24,
       "self_introduced_topics": 5,
-      "false_starts": 1,
-      "interruptions": 1,
+      "reactions": 5,
+      "false_starts": 2,
+      "interruptions": 3,
       "smalltalk": 1,
-      "offtopic": 2,
+      "offtopic": 1,
       "crosstalk": 1,
       "meetings": 3
     },
-    "mean_support_clear": 0.98
+    "mean_support_clear": 0.984
   },
   "requirements": [
     {
@@ -2062,10 +3257,16 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T4"
+          "M1:T4",
+          "M1:T6",
+          "M1:T8",
+          "M1:T9"
         ],
         "related_segments": [
-          "M1:T4"
+          "M1:T4",
+          "M1:T6",
+          "M1:T8",
+          "M1:T9"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2097,10 +3298,16 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T6"
+          "M1:T11",
+          "M1:T13",
+          "M1:T15",
+          "M1:T17"
         ],
         "related_segments": [
-          "M1:T6"
+          "M1:T11",
+          "M1:T13",
+          "M1:T15",
+          "M1:T17"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2132,10 +3339,16 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T7"
+          "M1:T18",
+          "M1:T20",
+          "M1:T22",
+          "M1:T24"
         ],
         "related_segments": [
-          "M1:T7"
+          "M1:T18",
+          "M1:T20",
+          "M1:T22",
+          "M1:T24"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2168,10 +3381,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T9"
+          "M1:T26",
+          "M1:T28"
         ],
         "related_segments": [
-          "M1:T9"
+          "M1:T26",
+          "M1:T28"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2204,10 +3419,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T9"
+          "M1:T29"
         ],
         "related_segments": [
-          "M1:T9"
+          "M1:T29"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2240,12 +3455,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T10",
-          "M1:T11"
+          "M1:T32",
+          "M1:T34"
         ],
         "related_segments": [
-          "M1:T10",
-          "M1:T11"
+          "M1:T32",
+          "M1:T34"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2287,16 +3502,19 @@
             "stated_text": "Systems supporting OM should be able to electronically record and store data from remote devices that may be uploaded to an aggregating system."
           },
           "segments": [
-            "M1:T13"
+            "M1:T35",
+            "M1:T36"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T13"
+          "M1:T35",
+          "M1:T36"
         ],
         "related_segments": [
-          "M1:T13"
+          "M1:T35",
+          "M1:T36"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2324,36 +3542,35 @@
         "modifier": null,
         "modal": "weak"
       },
-      "status": "rejected",
-      "expected_in_output": false,
+      "status": "conflict_open",
+      "expected_in_output": true,
       "phenomena": [
         {
           "pid": "P2",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "dropped",
+          "outcome": "open",
           "details": {
-            "raised_by": "EndUser",
+            "raised_by": "Client",
             "meeting": "M1"
           },
           "segments": [
-            "M1:T15",
-            "M1:T16",
-            "M1:T17",
-            "M1:T18"
+            "M1:T38",
+            "M1:T39",
+            "M1:T40",
+            "M1:T41"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T15",
-          "M1:T18"
+          "M1:T38"
         ],
         "related_segments": [
-          "M1:T15",
-          "M1:T16",
-          "M1:T17",
-          "M1:T18"
+          "M1:T38",
+          "M1:T39",
+          "M1:T40",
+          "M1:T41"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2387,10 +3604,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T20"
+          "M1:T45"
         ],
         "related_segments": [
-          "M1:T20"
+          "M1:T45"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2424,10 +3641,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T21"
+          "M1:T48"
         ],
         "related_segments": [
-          "M1:T21"
+          "M1:T48"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2463,29 +3680,32 @@
           "pid": "P3",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "resolved",
+          "outcome": "resolved_later",
           "details": {
             "raised_by": "Client",
-            "meeting": "M1"
+            "meeting": "M1",
+            "resolved_in": "M2"
           },
           "segments": [
-            "M1:T22",
-            "M1:T23",
-            "M1:T24",
-            "M1:T25"
+            "M1:T51",
+            "M1:T52",
+            "M1:T53",
+            "M1:T54",
+            "M2:T60"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T22",
-          "M1:T25"
+          "M1:T51",
+          "M2:T60"
         ],
         "related_segments": [
-          "M1:T22",
-          "M1:T23",
-          "M1:T24",
-          "M1:T25"
+          "M1:T51",
+          "M1:T52",
+          "M1:T53",
+          "M1:T54",
+          "M2:T60"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2521,32 +3741,29 @@
           "pid": "P4",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "dropped_later",
+          "outcome": "dropped",
           "details": {
             "raised_by": "Client",
-            "meeting": "M1",
-            "resolved_in": "M2"
+            "meeting": "M1"
           },
           "segments": [
-            "M1:T26",
-            "M1:T27",
-            "M1:T28",
-            "M1:T29",
-            "M2:T24"
+            "M1:T55",
+            "M1:T56",
+            "M1:T57",
+            "M1:T58"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T26",
-          "M2:T24"
+          "M1:T55",
+          "M1:T58"
         ],
         "related_segments": [
-          "M1:T26",
-          "M1:T27",
-          "M1:T28",
-          "M1:T29",
-          "M2:T24"
+          "M1:T55",
+          "M1:T56",
+          "M1:T57",
+          "M1:T58"
         ],
         "support_score": 0.972,
         "reachable": true
@@ -2580,10 +3797,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T30"
+          "M1:T59"
         ],
         "related_segments": [
-          "M1:T30"
+          "M1:T59"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2617,10 +3834,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T33"
+          "M1:T63"
         ],
         "related_segments": [
-          "M1:T33"
+          "M1:T63"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2654,10 +3871,16 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T34"
+          "M1:T65",
+          "M1:T67",
+          "M1:T69",
+          "M1:T70"
         ],
         "related_segments": [
-          "M1:T34"
+          "M1:T65",
+          "M1:T67",
+          "M1:T69",
+          "M1:T70"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2728,35 +3951,34 @@
         "modifier": null,
         "modal": "weak"
       },
-      "status": "clear",
+      "status": "incomplete",
       "expected_in_output": true,
       "phenomena": [
         {
           "pid": "P6",
           "type": "incompleteness",
           "kind": "truncated",
-          "outcome": "completed_later",
+          "outcome": "open",
           "details": {
             "missing": "friend in Santa Fe, travel history and conveyance data should be noted accordingly for each place the exposed person traveled.",
-            "stated_text": "For example, if a person who lives in Georgia travels to Seattle and becomes exposed to monkey pox, then visits a",
-            "completed_in": "M3"
+            "stated_text": "For example, if a person who lives in Georgia travels to Seattle and becomes exposed to monkey pox, then visits a"
           },
           "segments": [
-            "M1:T37",
-            "M3:T42"
+            "M1:T79",
+            "M1:T80"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T37",
-          "M3:T42"
+          "M1:T79",
+          "M1:T80"
         ],
         "related_segments": [
-          "M1:T37",
-          "M3:T42"
+          "M1:T79",
+          "M1:T80"
         ],
-        "support_score": 1.0,
+        "support_score": 0.55,
         "reachable": true
       }
     },
@@ -2795,21 +4017,30 @@
             "original_value": "should",
             "conflicting_value": "should not",
             "conflicting_text": "Travel history data to be collected for an animal or object should not include shipping invoices, animal shelter delivery and adoption receipts, and delivery schedules (including delivery vehicle and driver information).",
-            "restated_in": "M1"
+            "restated_in": "M2"
           },
           "segments": [
-            "M1:T36",
-            "M1:T40"
+            "M1:T73",
+            "M1:T75",
+            "M1:T76",
+            "M1:T78",
+            "M2:T46"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T36"
+          "M1:T73",
+          "M1:T75",
+          "M1:T76",
+          "M1:T78"
         ],
         "related_segments": [
-          "M1:T36",
-          "M1:T40"
+          "M1:T73",
+          "M1:T75",
+          "M1:T76",
+          "M1:T78",
+          "M2:T46"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2843,14 +4074,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T42",
-          "M1:T43"
+          "M1:T81",
+          "M1:T83"
         ],
         "related_segments": [
-          "M1:T42",
-          "M1:T43"
+          "M1:T81",
+          "M1:T83"
         ],
-        "support_score": 0.941,
+        "support_score": 1.0,
         "reachable": true
       }
     },
@@ -2884,32 +4115,29 @@
           "pid": "P8",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "resolved_later",
+          "outcome": "resolved",
           "details": {
-            "raised_by": "Client",
-            "meeting": "M1",
-            "resolved_in": "M3"
+            "raised_by": "EndUser",
+            "meeting": "M1"
           },
           "segments": [
-            "M1:T45",
-            "M1:T46",
-            "M1:T47",
-            "M1:T48",
-            "M3:T36"
+            "M1:T84",
+            "M1:T85",
+            "M1:T86",
+            "M1:T87"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T45",
-          "M3:T36"
+          "M1:T84",
+          "M1:T87"
         ],
         "related_segments": [
-          "M1:T45",
-          "M1:T46",
-          "M1:T47",
-          "M1:T48",
-          "M3:T36"
+          "M1:T84",
+          "M1:T85",
+          "M1:T86",
+          "M1:T87"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -2943,12 +4171,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T49"
+          "M1:T88"
         ],
         "related_segments": [
-          "M1:T49"
+          "M1:T88"
         ],
-        "support_score": 0.875,
+        "support_score": 1.0,
         "reachable": true
       }
     },
@@ -2980,10 +4208,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M1:T51"
+          "M1:T90"
         ],
         "related_segments": [
-          "M1:T51"
+          "M1:T90"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3023,22 +4251,22 @@
           "details": {
             "missing": "in the exposure investigation of health events.",
             "stated_text": "Epi data must be collected to assist",
-            "completed_in": "M2"
+            "completed_in": "M3"
           },
           "segments": [
-            "M1:T52",
-            "M2:T21"
+            "M1:T91",
+            "M3:T28"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M1:T52",
-          "M2:T21"
+          "M1:T91",
+          "M3:T28"
         ],
         "related_segments": [
-          "M1:T52",
-          "M2:T21"
+          "M1:T91",
+          "M3:T28"
         ],
         "support_score": 0.875,
         "reachable": true
@@ -3067,35 +4295,36 @@
         "modifier": null,
         "modal": "weak"
       },
-      "status": "conflict_open",
+      "status": "conflict_resolved",
       "expected_in_output": true,
       "phenomena": [
         {
           "pid": "P10",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "open",
+          "outcome": "resolved",
           "details": {
-            "raised_by": "TechLead",
+            "raised_by": "Client",
             "meeting": "M2"
           },
           "segments": [
-            "M2:T3",
-            "M2:T4",
             "M2:T5",
-            "M2:T6"
+            "M2:T6",
+            "M2:T7",
+            "M2:T8"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T3"
+          "M2:T5",
+          "M2:T8"
         ],
         "related_segments": [
-          "M2:T3",
-          "M2:T4",
           "M2:T5",
-          "M2:T6"
+          "M2:T6",
+          "M2:T7",
+          "M2:T8"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3129,12 +4358,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T7",
-          "M2:T8"
+          "M2:T9",
+          "M2:T11"
         ],
         "related_segments": [
-          "M2:T7",
-          "M2:T8"
+          "M2:T9",
+          "M2:T11"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3168,10 +4397,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T10"
+          "M2:T13",
+          "M2:T15"
         ],
         "related_segments": [
-          "M2:T10"
+          "M2:T13",
+          "M2:T15"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3211,19 +4442,33 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "Environmental sample data should include information about the collection method, location (geocoded if possible) from which the sample was taken, source (e.g., rain or well for water, radiation release, asbestos, chair or desk in a specified location), nature of the sample (e.g., soil, water, air), quality control data, collection begin and end date and time for air samples, and original volume and volume of concentrate tested for water samples."
+            "stated_text": "Environmental sample data should include information about the collection method, location (geocoded if possible) from which the sample was taken, source (e.g., rain or well for water, radiation release, asbestos, chair or desk in a specified location), nature of the sample (e.g., soil, water, air), quality control data, collection begin and end date and time for air samples, and original volume and volume of concentrate tested for water samples.",
+            "clarification_attempted": true
           },
           "segments": [
-            "M2:T11"
+            "M2:T16",
+            "M2:T18",
+            "M2:T20",
+            "M2:T22",
+            "M2:T23",
+            "M2:T24"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T11"
+          "M2:T16",
+          "M2:T18",
+          "M2:T20",
+          "M2:T22"
         ],
         "related_segments": [
-          "M2:T11"
+          "M2:T16",
+          "M2:T18",
+          "M2:T20",
+          "M2:T22",
+          "M2:T23",
+          "M2:T24"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3257,12 +4502,18 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T12",
-          "M2:T14"
+          "M2:T25",
+          "M2:T27",
+          "M2:T29",
+          "M2:T31",
+          "M2:T32"
         ],
         "related_segments": [
-          "M2:T12",
-          "M2:T14"
+          "M2:T25",
+          "M2:T27",
+          "M2:T29",
+          "M2:T31",
+          "M2:T32"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3302,19 +4553,24 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "Systems supporting OM must be able to create a laboratory test request for a specimen/sample or group of specimens/samples."
+            "stated_text": "Systems supporting OM must be able to create a laboratory test request for a specimen/sample or group of specimens/samples.",
+            "clarification_attempted": true
           },
           "segments": [
-            "M2:T15"
+            "M2:T35",
+            "M2:T36",
+            "M2:T37"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T15"
+          "M2:T35"
         ],
         "related_segments": [
-          "M2:T15"
+          "M2:T35",
+          "M2:T36",
+          "M2:T37"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3348,12 +4604,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T16",
-          "M2:T17"
+          "M2:T38"
         ],
         "related_segments": [
-          "M2:T16",
-          "M2:T17"
+          "M2:T38"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3394,21 +4648,30 @@
             "original_value": "should",
             "conflicting_value": "should not",
             "conflicting_text": "Systems supporting OM should not capture or be linked to data regarding the prophylaxis or treatment to cases, exposed individuals, or at risk persons, including the person who ordered the prophylaxis or treatment, and the name, date, type, duration, and dosage of the treatment or prophylaxis given.",
-            "restated_in": "M2"
+            "restated_in": "M3"
           },
           "segments": [
-            "M2:T23",
-            "M2:T25"
+            "M2:T40",
+            "M2:T42",
+            "M2:T43",
+            "M2:T45",
+            "M3:T54"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T23"
+          "M2:T40",
+          "M2:T42",
+          "M2:T43",
+          "M2:T45"
         ],
         "related_segments": [
-          "M2:T23",
-          "M2:T25"
+          "M2:T40",
+          "M2:T42",
+          "M2:T43",
+          "M2:T45",
+          "M3:T54"
         ],
         "support_score": 0.955,
         "reachable": true
@@ -3450,16 +4713,19 @@
             "stated_text": "Systems supporting OM should capture information such as the date and time of an activity, activity"
           },
           "segments": [
-            "M2:T26"
+            "M2:T48",
+            "M2:T50"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T26"
+          "M2:T48",
+          "M2:T50"
         ],
         "related_segments": [
-          "M2:T26"
+          "M2:T48",
+          "M2:T50"
         ],
         "support_score": 0.533,
         "reachable": true
@@ -3499,19 +4765,24 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "Activity logs, which are tools for investigators to track their actions during a case, should be supported."
+            "stated_text": "Activity logs, which are tools for investigators to track their actions during a case, should be supported.",
+            "clarification_attempted": true
           },
           "segments": [
-            "M2:T27"
+            "M2:T51",
+            "M2:T52",
+            "M2:T53"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T27"
+          "M2:T51"
         ],
         "related_segments": [
-          "M2:T27"
+          "M2:T51",
+          "M2:T52",
+          "M2:T53"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3545,12 +4816,16 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T29",
-          "M2:T30"
+          "M2:T54",
+          "M2:T56",
+          "M2:T57",
+          "M2:T58"
         ],
         "related_segments": [
-          "M2:T29",
-          "M2:T30"
+          "M2:T54",
+          "M2:T56",
+          "M2:T57",
+          "M2:T58"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3593,16 +4868,16 @@
             "stated_text": "Electronic questionnaires must be developed and validated."
           },
           "segments": [
-            "M3:T13"
+            "M3:T31"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T13"
+          "M3:T31"
         ],
         "related_segments": [
-          "M3:T13"
+          "M3:T31"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3636,10 +4911,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T33"
+          "M2:T61",
+          "M2:T63",
+          "M2:T64"
         ],
         "related_segments": [
-          "M2:T33"
+          "M2:T61",
+          "M2:T63",
+          "M2:T64"
         ],
         "support_score": 0.818,
         "reachable": true
@@ -3673,10 +4952,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T15"
+          "M3:T32",
+          "M3:T33"
         ],
         "related_segments": [
-          "M3:T15"
+          "M3:T32",
+          "M3:T33"
         ],
         "support_score": 0.818,
         "reachable": true
@@ -3716,24 +4997,19 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "Case investigation should be supported by reusable questionnaire libraries that use common terminology (where available) to maximize the efficiency of data exchange.",
-            "clarification_attempted": true
+            "stated_text": "Case investigation should be supported by reusable questionnaire libraries that use common terminology (where available) to maximize the efficiency of data exchange."
           },
           "segments": [
-            "M2:T35",
-            "M2:T36",
-            "M2:T37"
+            "M2:T66"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T35"
+          "M2:T66"
         ],
         "related_segments": [
-          "M2:T35",
-          "M2:T36",
-          "M2:T37"
+          "M2:T66"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3815,24 +5091,25 @@
           "details": {
             "removed": null,
             "replacement": null,
-            "stated_text": "Entity-to-epi data links must match the entity to their symptoms, survey questions, specimens/samples collected, laboratory results, and prophylaxis and treatment data.",
-            "clarification_attempted": true
+            "stated_text": "Entity-to-epi data links must match the entity to their symptoms, survey questions, specimens/samples collected, laboratory results, and prophylaxis and treatment data."
           },
           "segments": [
-            "M2:T39",
-            "M2:T40",
-            "M2:T41"
+            "M2:T70",
+            "M2:T72",
+            "M2:T74"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T39"
+          "M2:T70",
+          "M2:T72",
+          "M2:T74"
         ],
         "related_segments": [
-          "M2:T39",
-          "M2:T40",
-          "M2:T41"
+          "M2:T70",
+          "M2:T72",
+          "M2:T74"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3866,10 +5143,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T42"
+          "M2:T75"
         ],
         "related_segments": [
-          "M2:T42"
+          "M2:T75"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3898,36 +5175,35 @@
         "modifier": null,
         "modal": "strong"
       },
-      "status": "conflict_resolved",
+      "status": "conflict_open",
       "expected_in_output": true,
       "phenomena": [
         {
           "pid": "P20",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "resolved",
+          "outcome": "open",
           "details": {
-            "raised_by": "TechLead",
+            "raised_by": "Client",
             "meeting": "M2"
           },
           "segments": [
-            "M2:T44",
-            "M2:T45",
-            "M2:T46",
-            "M2:T47"
+            "M2:T77",
+            "M2:T78",
+            "M2:T79",
+            "M2:T80"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M2:T44",
-          "M2:T47"
+          "M2:T77"
         ],
         "related_segments": [
-          "M2:T44",
-          "M2:T45",
-          "M2:T46",
-          "M2:T47"
+          "M2:T77",
+          "M2:T78",
+          "M2:T79",
+          "M2:T80"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -3961,10 +5237,14 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M2:T48"
+          "M2:T81",
+          "M2:T83",
+          "M2:T85"
         ],
         "related_segments": [
-          "M2:T48"
+          "M2:T81",
+          "M2:T83",
+          "M2:T85"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4043,18 +5323,18 @@
             "stated_text": "Systems supporting OM should be able to produce contact work lists for each investigator"
           },
           "segments": [
-            "M3:T5"
+            "M3:T6"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T5"
+          "M3:T6"
         ],
         "related_segments": [
-          "M3:T5"
+          "M3:T6"
         ],
-        "support_score": 0.615,
+        "support_score": 0.692,
         "reachable": true
       }
     },
@@ -4121,12 +5401,18 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T8"
+          "M3:T10",
+          "M3:T12",
+          "M3:T14",
+          "M3:T16"
         ],
         "related_segments": [
-          "M3:T8"
+          "M3:T10",
+          "M3:T12",
+          "M3:T14",
+          "M3:T16"
         ],
-        "support_score": 1.0,
+        "support_score": 0.96,
         "reachable": true
       }
     },
@@ -4157,10 +5443,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T9"
+          "M3:T17"
         ],
         "related_segments": [
-          "M3:T9"
+          "M3:T17"
         ],
         "support_score": 0.966,
         "reachable": true
@@ -4203,18 +5489,27 @@
             "restated_in": "M3"
           },
           "segments": [
-            "M3:T11",
-            "M3:T43"
+            "M3:T19",
+            "M3:T21",
+            "M3:T23",
+            "M3:T25",
+            "M3:T29"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T11"
+          "M3:T19",
+          "M3:T21",
+          "M3:T23",
+          "M3:T25"
         ],
         "related_segments": [
-          "M3:T11",
-          "M3:T43"
+          "M3:T19",
+          "M3:T21",
+          "M3:T23",
+          "M3:T25",
+          "M3:T29"
         ],
         "support_score": 0.941,
         "reachable": true
@@ -4247,10 +5542,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T12"
+          "M3:T26"
         ],
         "related_segments": [
-          "M3:T12"
+          "M3:T26"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4283,10 +5578,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T18"
+          "M3:T36"
         ],
         "related_segments": [
-          "M3:T18"
+          "M3:T36"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4319,10 +5614,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T19"
+          "M3:T38",
+          "M3:T40"
         ],
         "related_segments": [
-          "M3:T19"
+          "M3:T38",
+          "M3:T40"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4364,16 +5661,19 @@
             "stated_text": "Laboratory results should be linked to laboratory test requests, which are linked to subjects."
           },
           "segments": [
-            "M3:T21"
+            "M3:T42",
+            "M3:T44"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T21"
+          "M3:T42",
+          "M3:T44"
         ],
         "related_segments": [
-          "M3:T21"
+          "M3:T42",
+          "M3:T44"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4401,36 +5701,36 @@
         "modifier": null,
         "modal": "strong"
       },
-      "status": "conflict_resolved",
-      "expected_in_output": true,
+      "status": "rejected",
+      "expected_in_output": false,
       "phenomena": [
         {
           "pid": "P24",
           "type": "conflict",
           "kind": "scope",
-          "outcome": "resolved",
+          "outcome": "dropped",
           "details": {
             "raised_by": "TechLead",
             "meeting": "M3"
           },
           "segments": [
-            "M3:T23",
-            "M3:T24",
-            "M3:T25",
-            "M3:T26"
+            "M3:T45",
+            "M3:T46",
+            "M3:T47",
+            "M3:T48"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T23",
-          "M3:T26"
+          "M3:T45",
+          "M3:T48"
         ],
         "related_segments": [
-          "M3:T23",
-          "M3:T24",
-          "M3:T25",
-          "M3:T26"
+          "M3:T45",
+          "M3:T46",
+          "M3:T47",
+          "M3:T48"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4473,18 +5773,18 @@
             "restated_in": "M3"
           },
           "segments": [
-            "M3:T27",
-            "M3:T37"
+            "M3:T49",
+            "M3:T53"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T27"
+          "M3:T49"
         ],
         "related_segments": [
-          "M3:T27",
-          "M3:T37"
+          "M3:T49",
+          "M3:T53"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4517,12 +5817,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T30",
-          "M3:T31"
+          "M3:T50",
+          "M3:T51"
         ],
         "related_segments": [
-          "M3:T30",
-          "M3:T31"
+          "M3:T50",
+          "M3:T51"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4555,10 +5855,12 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T33"
+          "M3:T56",
+          "M3:T58"
         ],
         "related_segments": [
-          "M3:T33"
+          "M3:T56",
+          "M3:T58"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4591,10 +5893,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T35"
+          "M3:T59"
         ],
         "related_segments": [
-          "M3:T35"
+          "M3:T59"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4636,16 +5938,22 @@
             "stated_text": "Systems and data supporting OM must be protected from sabotage, corruption and unauthorized access, and must be available subsequent to a catastrophic event."
           },
           "segments": [
-            "M3:T41"
+            "M3:T67",
+            "M3:T69",
+            "M3:T71"
           ]
         }
       ],
       "trace": {
         "input_segments": [
-          "M3:T41"
+          "M3:T67",
+          "M3:T69",
+          "M3:T71"
         ],
         "related_segments": [
-          "M3:T41"
+          "M3:T67",
+          "M3:T69",
+          "M3:T71"
         ],
         "support_score": 0.923,
         "reachable": true
@@ -4678,10 +5986,10 @@
       "phenomena": [],
       "trace": {
         "input_segments": [
-          "M3:T39"
+          "M3:T65"
         ],
         "related_segments": [
-          "M3:T39"
+          "M3:T65"
         ],
         "support_score": 1.0,
         "reachable": true
@@ -4698,7 +6006,8 @@
       "pid": "P1",
       "expected_action": "ask_clarification",
       "segments": [
-        "M1:T13"
+        "M1:T35",
+        "M1:T36"
       ],
       "details": {
         "removed": null,
@@ -4708,143 +6017,87 @@
     },
     {
       "id": "2005-phin:I002",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2005-phin:R0016",
+      "pid": "P2",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M1:T38",
+        "M1:T39",
+        "M1:T40",
+        "M1:T41"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M1"
+      }
+    },
+    {
+      "id": "2005-phin:I003",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2005-phin:R0034",
+      "pid": "P6",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M1:T79",
+        "M1:T80"
+      ],
+      "details": {
+        "missing": "friend in Santa Fe, travel history and conveyance data should be noted accordingly for each place the exposed person traveled.",
+        "stated_text": "For example, if a person who lives in Georgia travels to Seattle and becomes exposed to monkey pox, then visits a"
+      }
+    },
+    {
+      "id": "2005-phin:I004",
       "type": "inconsistency",
       "kind": "polarity",
       "requirement": "2005-phin:R0035",
       "pid": "P7",
       "expected_action": "flag_inconsistency",
       "segments": [
-        "M1:T36",
-        "M1:T40"
+        "M1:T73",
+        "M1:T75",
+        "M1:T76",
+        "M1:T78",
+        "M2:T46"
       ],
       "details": {
         "original_value": "should",
         "conflicting_value": "should not",
         "conflicting_text": "Travel history data to be collected for an animal or object should not include shipping invoices, animal shelter delivery and adoption receipts, and delivery schedules (including delivery vehicle and driver information).",
-        "restated_in": "M1"
-      }
-    },
-    {
-      "id": "2005-phin:I003",
-      "type": "conflict",
-      "kind": "scope",
-      "requirement": "2005-phin:R0054",
-      "pid": "P10",
-      "expected_action": "resolve_with_stakeholders",
-      "segments": [
-        "M2:T3",
-        "M2:T4",
-        "M2:T5",
-        "M2:T6"
-      ],
-      "details": {
-        "raised_by": "TechLead",
-        "meeting": "M2"
-      }
-    },
-    {
-      "id": "2005-phin:I004",
-      "type": "ambiguity",
-      "kind": "optionality",
-      "requirement": "2005-phin:R0059",
-      "pid": "P11",
-      "expected_action": "ask_clarification",
-      "segments": [
-        "M2:T11"
-      ],
-      "details": {
-        "removed": null,
-        "replacement": null,
-        "stated_text": "Environmental sample data should include information about the collection method, location (geocoded if possible) from which the sample was taken, source (e.g., rain or well for water, radiation release, asbestos, chair or desk in a specified location), nature of the sample (e.g., soil, water, air), quality control data, collection begin and end date and time for air samples, and original volume and volume of concentrate tested for water samples."
+        "restated_in": "M2"
       }
     },
     {
       "id": "2005-phin:I005",
       "type": "ambiguity",
       "kind": "optionality",
-      "requirement": "2005-phin:R0064",
-      "pid": "P12",
+      "requirement": "2005-phin:R0059",
+      "pid": "P11",
       "expected_action": "ask_clarification",
       "segments": [
-        "M2:T15"
+        "M2:T16",
+        "M2:T18",
+        "M2:T20",
+        "M2:T22",
+        "M2:T23",
+        "M2:T24"
       ],
       "details": {
         "removed": null,
         "replacement": null,
-        "stated_text": "Systems supporting OM must be able to create a laboratory test request for a specimen/sample or group of specimens/samples."
+        "stated_text": "Environmental sample data should include information about the collection method, location (geocoded if possible) from which the sample was taken, source (e.g., rain or well for water, radiation release, asbestos, chair or desk in a specified location), nature of the sample (e.g., soil, water, air), quality control data, collection begin and end date and time for air samples, and original volume and volume of concentrate tested for water samples.",
+        "clarification_attempted": true
       }
     },
     {
       "id": "2005-phin:I006",
-      "type": "inconsistency",
-      "kind": "polarity",
-      "requirement": "2005-phin:R0072",
-      "pid": "P13",
-      "expected_action": "flag_inconsistency",
-      "segments": [
-        "M2:T23",
-        "M2:T25"
-      ],
-      "details": {
-        "original_value": "should",
-        "conflicting_value": "should not",
-        "conflicting_text": "Systems supporting OM should not capture or be linked to data regarding the prophylaxis or treatment to cases, exposed individuals, or at risk persons, including the person who ordered the prophylaxis or treatment, and the name, date, type, duration, and dosage of the treatment or prophylaxis given.",
-        "restated_in": "M2"
-      }
-    },
-    {
-      "id": "2005-phin:I007",
-      "type": "incompleteness",
-      "kind": "truncated",
-      "requirement": "2005-phin:R0074",
-      "pid": "P14",
-      "expected_action": "request_missing_information",
-      "segments": [
-        "M2:T26"
-      ],
-      "details": {
-        "missing": "type, who initiated the activity, and contact information to generate activity logs for management purposes.",
-        "stated_text": "Systems supporting OM should capture information such as the date and time of an activity, activity"
-      }
-    },
-    {
-      "id": "2005-phin:I008",
       "type": "ambiguity",
       "kind": "optionality",
-      "requirement": "2005-phin:R0075",
-      "pid": "P15",
-      "expected_action": "ask_clarification",
-      "segments": [
-        "M2:T27"
-      ],
-      "details": {
-        "removed": null,
-        "replacement": null,
-        "stated_text": "Activity logs, which are tools for investigators to track their actions during a case, should be supported."
-      }
-    },
-    {
-      "id": "2005-phin:I009",
-      "type": "ambiguity",
-      "kind": "optionality",
-      "requirement": "2005-phin:R0077",
-      "pid": "P16",
-      "expected_action": "ask_clarification",
-      "segments": [
-        "M3:T13"
-      ],
-      "details": {
-        "removed": null,
-        "replacement": null,
-        "stated_text": "Electronic questionnaires must be developed and validated."
-      }
-    },
-    {
-      "id": "2005-phin:I010",
-      "type": "ambiguity",
-      "kind": "optionality",
-      "requirement": "2005-phin:R0082",
-      "pid": "P17",
+      "requirement": "2005-phin:R0064",
+      "pid": "P12",
       "expected_action": "ask_clarification",
       "segments": [
         "M2:T35",
@@ -4854,38 +6107,143 @@
       "details": {
         "removed": null,
         "replacement": null,
-        "stated_text": "Case investigation should be supported by reusable questionnaire libraries that use common terminology (where available) to maximize the efficiency of data exchange.",
+        "stated_text": "Systems supporting OM must be able to create a laboratory test request for a specimen/sample or group of specimens/samples.",
         "clarification_attempted": true
+      }
+    },
+    {
+      "id": "2005-phin:I007",
+      "type": "inconsistency",
+      "kind": "polarity",
+      "requirement": "2005-phin:R0072",
+      "pid": "P13",
+      "expected_action": "flag_inconsistency",
+      "segments": [
+        "M2:T40",
+        "M2:T42",
+        "M2:T43",
+        "M2:T45",
+        "M3:T54"
+      ],
+      "details": {
+        "original_value": "should",
+        "conflicting_value": "should not",
+        "conflicting_text": "Systems supporting OM should not capture or be linked to data regarding the prophylaxis or treatment to cases, exposed individuals, or at risk persons, including the person who ordered the prophylaxis or treatment, and the name, date, type, duration, and dosage of the treatment or prophylaxis given.",
+        "restated_in": "M3"
+      }
+    },
+    {
+      "id": "2005-phin:I008",
+      "type": "incompleteness",
+      "kind": "truncated",
+      "requirement": "2005-phin:R0074",
+      "pid": "P14",
+      "expected_action": "request_missing_information",
+      "segments": [
+        "M2:T48",
+        "M2:T50"
+      ],
+      "details": {
+        "missing": "type, who initiated the activity, and contact information to generate activity logs for management purposes.",
+        "stated_text": "Systems supporting OM should capture information such as the date and time of an activity, activity"
+      }
+    },
+    {
+      "id": "2005-phin:I009",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2005-phin:R0075",
+      "pid": "P15",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T51",
+        "M2:T52",
+        "M2:T53"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Activity logs, which are tools for investigators to track their actions during a case, should be supported.",
+        "clarification_attempted": true
+      }
+    },
+    {
+      "id": "2005-phin:I010",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2005-phin:R0077",
+      "pid": "P16",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M3:T31"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Electronic questionnaires must be developed and validated."
       }
     },
     {
       "id": "2005-phin:I011",
       "type": "ambiguity",
       "kind": "optionality",
-      "requirement": "2005-phin:R0086",
-      "pid": "P19",
+      "requirement": "2005-phin:R0082",
+      "pid": "P17",
       "expected_action": "ask_clarification",
       "segments": [
-        "M2:T39",
-        "M2:T40",
-        "M2:T41"
+        "M2:T66"
       ],
       "details": {
         "removed": null,
         "replacement": null,
-        "stated_text": "Entity-to-epi data links must match the entity to their symptoms, survey questions, specimens/samples collected, laboratory results, and prophylaxis and treatment data.",
-        "clarification_attempted": true
+        "stated_text": "Case investigation should be supported by reusable questionnaire libraries that use common terminology (where available) to maximize the efficiency of data exchange."
       }
     },
     {
       "id": "2005-phin:I012",
+      "type": "ambiguity",
+      "kind": "optionality",
+      "requirement": "2005-phin:R0086",
+      "pid": "P19",
+      "expected_action": "ask_clarification",
+      "segments": [
+        "M2:T70",
+        "M2:T72",
+        "M2:T74"
+      ],
+      "details": {
+        "removed": null,
+        "replacement": null,
+        "stated_text": "Entity-to-epi data links must match the entity to their symptoms, survey questions, specimens/samples collected, laboratory results, and prophylaxis and treatment data."
+      }
+    },
+    {
+      "id": "2005-phin:I013",
+      "type": "conflict",
+      "kind": "scope",
+      "requirement": "2005-phin:R0089",
+      "pid": "P20",
+      "expected_action": "resolve_with_stakeholders",
+      "segments": [
+        "M2:T77",
+        "M2:T78",
+        "M2:T79",
+        "M2:T80"
+      ],
+      "details": {
+        "raised_by": "Client",
+        "meeting": "M2"
+      }
+    },
+    {
+      "id": "2005-phin:I014",
       "type": "incompleteness",
       "kind": "truncated",
       "requirement": "2005-phin:R0093",
       "pid": "P21",
       "expected_action": "request_missing_information",
       "segments": [
-        "M3:T5"
+        "M3:T6"
       ],
       "details": {
         "missing": "to use, and should allow sorting by priority or geography.",
@@ -4893,15 +6251,18 @@
       }
     },
     {
-      "id": "2005-phin:I013",
+      "id": "2005-phin:I015",
       "type": "inconsistency",
       "kind": "polarity",
       "requirement": "2005-phin:R0098",
       "pid": "P22",
       "expected_action": "flag_inconsistency",
       "segments": [
-        "M3:T11",
-        "M3:T43"
+        "M3:T19",
+        "M3:T21",
+        "M3:T23",
+        "M3:T25",
+        "M3:T29"
       ],
       "details": {
         "original_value": "should",
@@ -4911,14 +6272,15 @@
       }
     },
     {
-      "id": "2005-phin:I014",
+      "id": "2005-phin:I016",
       "type": "ambiguity",
       "kind": "optionality",
       "requirement": "2005-phin:R0113",
       "pid": "P23",
       "expected_action": "ask_clarification",
       "segments": [
-        "M3:T21"
+        "M3:T42",
+        "M3:T44"
       ],
       "details": {
         "removed": null,
@@ -4927,15 +6289,15 @@
       }
     },
     {
-      "id": "2005-phin:I015",
+      "id": "2005-phin:I017",
       "type": "inconsistency",
       "kind": "polarity",
       "requirement": "2005-phin:R0121",
       "pid": "P25",
       "expected_action": "flag_inconsistency",
       "segments": [
-        "M3:T27",
-        "M3:T37"
+        "M3:T49",
+        "M3:T53"
       ],
       "details": {
         "original_value": "should",
@@ -4945,14 +6307,16 @@
       }
     },
     {
-      "id": "2005-phin:I016",
+      "id": "2005-phin:I018",
       "type": "ambiguity",
       "kind": "optionality",
       "requirement": "2005-phin:R0134",
       "pid": "P26",
       "expected_action": "ask_clarification",
       "segments": [
-        "M3:T41"
+        "M3:T67",
+        "M3:T69",
+        "M3:T71"
       ],
       "details": {
         "removed": null,

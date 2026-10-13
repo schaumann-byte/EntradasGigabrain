@@ -1,64 +1,76 @@
 Meeting 4 of 4 (review)
 Participants: Analyst, Client, TechLead
 
-Analyst: Hi all. Let's try to close the remaining points on UIC Projec you know t EIRENE um today.
-TechLead: Busy week, sorry if I'm a bit slow today.
-Analyst: Just to recap, in the last meeting we we covered public address interface, other interfaces and sort of environmental and physical. well We also left a few things open.
-Client: Um, On driver call-related functions, each of basically the other cabs on the train won't be contacted using erm its functional number (registered by the other drivers before the well establishment of the call).
-Analyst: Erm, Can basically you walk me through calls from external networks to the gsm-r network?
-Client: Uh, Yeah, so access to the GSM-R network should uh be performed by dialling an EIRENE Network Access like Number (ENAN)8—
-Analyst: Uh, Sorry, quick um question, is i mean that actually for everyone?
-Client: Yeah, so, erm followed by the relevant National or International Functional Number as defined in um subsections 9.5 sort of and um 9.6 actually respectively.
-Analyst: What about access classes? Any hard limits there?
-Client: For consistent working on public networks uhm and in international roaming, um the use of access classes in a railway network you know should comply um with the uh GSM specification.
-TechLead: Sorry, I just wanted to—
-Client: [crosstalk] sorry.
+Analyst: Okay, this should be our last session on UIC Projec t EIRENE, let's go through the remaining points.
+Analyst: Er, Quick recap from last time: we went over public address interface, other interfaces and environmental and physical. We also left a few things open.
+Client: Uh, I have the kind of missing info on access to external networks: access to private networks have to be uhm performed by using a BC, defined in table 9-12c.
+TechLead: Quick follow-up on public address interface: if implemented, the the Public basically Address interface should comply with the specifications erm of the UIC Fiche.
+Client: Er, I have the missing info on er use of short dialling codes: for certain functions, standardised short codes should be implemented for mobile originated calls.
+Analyst: Uh, So, let's er talk about calls from external networks to the gsm-r network. What do you need there?
+Client: Basically, access to the GSM-R network should be performed by i mean dialling an EIRENE Network Access Number (ENAN)8, followed by the relevant National or International Functional Number as um defined in subsections 9.5 and 9.6 respectively, you know that's pretty important um for us.
 Analyst: Okay, noted.
-Analyst: Anything kind of else on access classes?
-Client: Nothing else, I think.
-Client: Um, Oh, and about re-establishment of functional number correlation, in in case of losing correlation between functional numbers and MSISDNs, i mean provision uhm for recovery from uh such a situation uh might be made.
-TechLead: A GSM point-to-point voice call at 'Railway operation' [crosstalk] priority shouldn't then be initiated.
-Analyst: Uh, On environmental kind of and uh physical, the thing we left left open, we're taking it out.
-Analyst: Um, Can you walk me through functional numbering?
-Client: I mean, in case of a registration procedure well failing owing to the functional actually number already being registered to uh another mobile, the Cab radio will need to be capable of um providing the user with the you know ability to perform automatically the forced de-registration of the kind of previously registered mobile and the registration of er this functional number to the user's mobile, right?
-TechLead: Um, I'm not convinced that's necessary, like honestly.
-Client: I'd really like to keep it.
-Analyst: Okay, noted, we keep kind of it.
-Client: Re-registration of on-train uhm functional numbers based on the you know train number ought to to be performed every time actually a train erm leaves one EIRENE network and enters into another EIRENE network.
-Analyst: Anything else on functional numbering?
-Client: No, I think that's it.
-Client: Er, Something on on functional uhm numbering: mobile access [laughter] to the functional numbering scheme for registration, deregistration erm and re-registration should apply the USSD messages erm and protocols over the air interface as specified in the GSM well Follow-me sort of service.
-Analyst: Right.
-Client: The kind of functionality described well in i mean 11.3.9i could maybe also be available for other types of like mobiles.
-TechLead: Uhm, Re-registration of on-train functional numbers based on basically the train you know number ought to actually not be performed every time a you know train leaves one one EIRENE network and enters into another EIRENE network.
-Client: Something on inter eirene network interfacing: for us, the protocol actually used for routing of calls well might er be Signalling System No 7 (SS7) as defined by the ITU-T.
-Client: Can Can we take you know a er two-minute break after this topic?
-Analyst: Uhm, What exactly actually do you mean by basically that?
-Client: Hmm, hard to say right now. We'll see.
-Client: Um, The thing is, uh call call setup uh between EIRENE networks using international functional numbers should be based on the combination of the Breakout-Code (BC) and International Code (IC).
-TechLead: Sorry, I just wanted to—
-Client: —sorry, go ahead.
-TechLead: Do we really need uh that? I'd leave it out, at least for actually the first version.
-Client: Erm, We We do basically need need it, it's important for our people.
-Client: Let's leave that open for now, I need to check with uh my team.
-Analyst: And kind of presentation of functional identities, uhm how do you like see that working?
-Client: Erm, I um mean, sort of the idea is that the calling party functional actually number will be erm passed to like the receiving mobile using sort of the the sort of User to User well Signalling supplementary service (UUS1) during call setup.
-Analyst: Uhm, On the open point about handling of calls: we decided. We need it to be possible to store a priority in association with a stored number.
-Analyst: Er, About uh other cab radio functions we parked last er time: erm we checked, uh and it's settled. The Cab radio would have to be capable of selecting the most appropriate mobile radio network automatically using the selection criteria stated in i mean section 10.5.
-Analyst: Let's move on to to provision of railway emergency calls. What do um you have erm in mind?
-Client: Erm, It has to i mean be uh possible to configure you know Railway emergency er group like call areas to contain combinations of cells controlled um by one or more MSC(s) within basically one or more network(s).
-Analyst: So if I uh got it right, the idea um is that it will be possible to configure Railway emergency uh group call areas to um contain combinations of cells sort of controlled by erm one uhm or more MSC(s) within one or more network(s)?
-Client: Yep.
-Analyst: And system requirements: operational uhm radio, how do you erm see that um working?
-Client: Uh, Maintain group call the shunting leader leaves the dedicated well group um call momentarily for well the purposes of conducting other communications. The leader may [crosstalk] then rejoin the group when like ready. In er the meantime, like all all other shunting team members remain active within the dedicated group actually call. The operational radio procedure that ought to be used to um maintain uh the group call is shown well in table 14-5.
-TechLead: Oh, about use of sort of short dialling codes from last time, I checked: for certain functions, standardised short codes will will need uh to be implemented for mobile originated calls.
-Client: Uh, Oh, and about receipt i mean of railway emergency calls, i mean, uh otherwise, the MSC MSC um Release bit in the "Control Channel Description" information element should be set to "0" kind of (zero)], right? [laughter]
-Client: Also, actually if the GSM um Release 99 capability and and the er Immediate Setup 2 feature defined in, like Release 4] are supported by the network—
-TechLead: Sorry, uhm sorry, go go ahead.
-Client: Where you know was I... erm yes, sort of the network shall set the the MSC actually Release bit in the "Control Channel Description" information element to sort of "1".
-Analyst: Can you walk erm me through system requirements?
-Client: Okay so i'd like it er to uhm be within the limits defined in in table 15-2.
+Analyst: What about access classes? Any hard limits there?
+TechLead: So, so for consistent working on public networks,
+Analyst: Got it.
+TechLead: And in international roaming, sort of that's the main thing.
+TechLead: Er, Plus the use of of access classes in a railway network shall comply with the GSM specification, that's pretty uhm important for us.
+Client: Let's try to finish on time, I have another call after this.
+Analyst: Okay.
+Client: Same for us.
+Analyst: About the open point on environmental and physical: we decided to drop it.
+Analyst: About other cab radio functions we parked last time: we checked, and it's settled. If uhm directed network selection is implemented like and voice calls are ongoing at i mean the actually time when the external device attempts to trigger a network change, an audible and visual indication should be given to the well driver and network change shall be deferred until the call is terminated or until coverage of the current network is lost.
+Analyst: And erm re-establishment um of functional number correlation, how strict do we need you know to be?
+Client: Yeah, so possibly in case of um losing correlation between functional you know numbers.
+TechLead: Mm-hmm.
+Client: Uhm, And MSISDNs, provision for recovery from from such a situation shall be made.
+Analyst: Makes sense.
+Client: Er, Let's try to finish on uh time, I have uh another call after this.
+Analyst: And functional numbering, how do you see that working?
+Client: In case of a registration procedure failing owing to the functional number already being registered to another mobile, the Cab radio will you know need to be capable of providing the user with the ability to perform automatically the well forced de-registration of the previously actually registered mobile and the uh registration of this functional number to the user's mobile.
+TechLead: Do we really erm need that? I'd leave it out, you know at least for the first version.
+Client: Without it the whole thing doesn't make much sense for us.
+Analyst: Alright, it stays.
+Client: Erm, Re-registration of of on-train functional numbers based on the train number should be performed every time a train leaves one EIRENE network and enters into another EIRENE network.
+Client: Oh, and about kind of functional numbering, okay so so mobile access erm to the functional numbering scheme for registration, deregistration—
+TechLead: Hold on, does that apply to mobile um too?
+Client: Er, Yeah, so, erm and re-registration shall apply the USSD messages and protocols over the air interface as specified in the GSM Follow-me like service.
+TechLead: Sorry, I was on mute.
+Client: The functionality described um in 11.3.9i might also be available for other types of mobiles, if that makes sense.
+Analyst: Okay, noted.
+TechLead: Just Just as a reminder, each of the other cabs on the train won't be be contacted using its uh functional number (registered by you know the other i mean drivers before the establishment of the call).
+TechLead: Re-registration of on-train functional numbers based on the train number will need to not be performed every time a train er leaves one EIRENE network and enters into another EIRENE network.
+Analyst: So, let's talk i mean about inter eirene network you know interfacing. What do you need there?
+Client: Er, Honestly, the protocol used for routing of calls might be Signalling System No 7 (SS7) as as defined by actually the ITU-T. [laughter]
+Analyst: Okay, noted.
+Client: Call setup between EIRENE networks using international functional numbers should be based on the combination of the Breakout-Code (BC) and International Code (IC).
+TechLead: Uh, That uh sounds like a lot of work for little value.
+Client: I'd really like to keep keep it.
+Analyst: Alright, it stays.
+Analyst: And presentation of functional identities, how do you [laughter] see that working?
+Analyst: Sorry, someone just knocked on my door, uhm go ahead.
+Client: Er, Basically, erm the calling [laughter] party functional number has to be i mean passed to the receiving mobile using the the User to User Signalling supplementary service (UUS1) during call setup, if that makes sense.
+Analyst: Er, And provision of railway emergency calls, how do you i mean see that working?
+Client: Well, it ought to be possible to configure uh Railway you know emergency group call areas to contain combinations of cells controlled by one or uh more MSC(s) within one or more network(s).
 Analyst: Mm-hmm.
-TechLead: Um, And like we um said, i'd like you know the calling party functional number to like be passed to er the receiving mobile using the manager to User basically Signalling supplementary service (UUS1) during call setup.
-TechLead: Uhm, And like we said, incoming actually calls to the Cab radio would have to not be routed to the [crosstalk] correct on-train user or device using information actually contained in the sub-addressing field.
-Analyst: Uh, Okay, I think we have everything. I'll uhm consolidate and send i mean it around.
+Analyst: Let's move on to system requirements: operational basically radio. What do you have in mind?
+Client: Maintain group call the shunting uhm leader leaves the dedicated group call momentarily for the purposes of conducting other er communications. The leader may then um rejoin the erm group when ready. In the the meantime, all other shunting i mean team uh members remain active within the dedicated group call. The operational radio procedure that will need to be used to maintain the the group call uh is shown in table 14-5.
+Client: But what if—
+TechLead: —no, you go.
+Analyst: Yeah.
+Client: By the way, are we still meeting on uh Thursday?
+TechLead: That too, yeah.
+Analyst: On use of international eirene numbers, the thing we left open, we're taking it out.
+TechLead: Just as a um reminder, the calling party functional number has to be passed to the receiving mobile using the manager to User Signalling supplementary service (UUS1) during call setup.
+Client: Something on receipt of railway emergency calls: otherwise, the uhm MSC Release bit bit in the "Control Channel Description" information element will need to be set to actually "0" (zero)].
+TechLead: Right.
+Client: Uh, And if the GSM Release 99 capability,
+TechLead: Right.
+Client: Er, And the Immediate Setup 2 feature defined in [EN 301 515.
+Analyst: Makes sense.
+Client: Um, Index [6], Release 4] are supported by the network, you know?
+Analyst: Right.
+Client: Then the network shall set the MSC Release bit bit in the "Control Channel you know Description" information element to to "1".
+Analyst: Mm-hmm.
+Client: Before I forget, on system uh requirements, it'll need you know to be within i mean the limits defined in table 15-2.
+Analyst: Yeah.
+Analyst: Okay, I think we have everything. I'll consolidate and send it around.

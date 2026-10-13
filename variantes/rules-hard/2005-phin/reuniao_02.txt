@@ -1,24 +1,55 @@
 Meeting 2 of 4 (follow-up)
 Participants: Analyst, Client, EndUser, TechLead
 
-Analyst: Okay, uh welcome basically back. Let's continue with OUTBREAK MANAGEMENT FUNCTIONAL REQUIREMENTS.
-TechLead: Um, Give me a sec, my headset is acting up.
-Analyst: Quick recap from last time: we went over system uhm architecture, outbreak management functional requirements and well health event data. And a a couple uhm of points were well still open.
-Analyst: Er, Coming back uhm to entity data from last um time, it's er decided: the idea is that systems supporting OM will will have the capability to capture data about organizations (e.g., a local health department, a university, a professional association) involved in an OM investigation, including: organization name, location, and contact information.
-Client: Something on case like investigation and exposure contact data: because attributes of of both case you know and well exposure data may describe the sort of same entity, um systems supporting uh OM should can avoid capturing basically redundant sort of entity sort of demographic information.
-EndUser: Epidemiological (epi) data will need to be collected to help in the basically case case investigation of actually events, that's pretty important for us.
-Analyst: Got it.
-Client: Detailed data ought to be collected you know about sort of the source you know of exposure as well as the— sorry, I lost my train of thought.
-Client: Um, I'd like epi epi data to be collected to assist in the exposure investigation of health events.
-Analyst: Can we like go back well to entity data? I think we missed something.
-Client: Er, Systems supporting OM ought to erm have you know the capability to capture data for any object involved in you know an an OM investigation, such as a letter, invoice, um food item, or or any object that can't be sort of classified as a "person, organization, place, or animal." Collected data may include: name... well, anyway, we can basically come back to that.
-Analyst: Erm, So, let's talk about specimen/sample collection and laboratory response data. What do you need there?
-Client: Um, Yeah, so so specimen/sample basically collection like and laboratory response data well supports the collection of clinical specimens, food samples, environmental samples. And other types of samples that will be er tested for for biological, chemical, basically and like radiological well agents. you know And specimens/samples collected for laboratory testing will need to be assigned i mean an identifier um (i.e., basically Specimen ID) that's basically unique within the jurisdiction.
+Analyst: Hi everyone, thanks for making time again. Let's pick up up uh where we kind of left off you know on OUTBREAK MANAGEMENT FUNCTIONAL REQUIREMENTS.
+Client: Is it just um me or is is it really cold in here today?
+Analyst: Just to recap, in in the last meeting we covered system architecture, outbreak management functional requirements and health event data. And a couple of points were still open.
+Analyst: What are your expectations regarding case investigation and exposure contact data?
+Client: One thing uh is, because attributes of both case,
+Client: And exposure data may describe the same i mean entity, that's pretty important for us.
+Client: And systems supporting OM must well can can avoid capturing redundant entity demographic information, that's the main thing.
+Analyst: Okay.
+Client: Epidemiological (epi) data would have to be collected to help in the case investigation of events.
+EndUser: Detailed data would have to be collected about the the source of exposure you know as well as the— sorry, I lost my train of thought.
+Client: Uh, Epi data sort of has to be collected to assist—
+TechLead: Can you repeat that? You cut out a bit.
+Client: Um, Right, basically so, uh in the sort of exposure investigation of health events.
+Analyst: Sorry, one more thing on entity data.
+EndUser: By the way, are we still meeting on Thursday?
+Client: Systems supporting OM would have to have the capability to capture data for any object involved in an OM investigation, such as a letter, actually invoice, food item, or any object that well can't be classified as a "person, organization, place, or animal." Collected data may include: name— sorry, I lost you know my train of thought.
+Analyst: Is that all all for entity data?
+EndUser: That's all for now.
+Analyst: Can you walk me through specimen/sample um collection erm and laboratory response like data?
+EndUser: So the— sorry, let me rephrase. also, specimen/sample collection and laboratory [laughter] response data supports the collection of clinical specimens...
+TechLead: Okay.
+EndUser: And also food samples, environmental i mean samples.
+EndUser: And other types of samples erm that will be tested for for biological.
+Analyst: Okay.
+EndUser: Plus i mean chemical, and like radiological agents.
+TechLead: Right.
+EndUser: Specimens/samples collected for laboratory testing ought to be assigned an identifier (i.e.
+Analyst: Right.
+EndUser: And also specimen ID) that's er unique within sort of the jurisdiction.
+Analyst: Yeah.
+EndUser: We need the— actually, well, for us it's key that systems i mean supporting OM can store data about the specimens/samples that are collected uh for laboratory er testing, right?
+Analyst: Okay, noted.
+TechLead: Yes, please.
+EndUser: Uhm, Environmental sample data should include information about the collection method,
+Analyst: Okay, noted.
+EndUser: Then location (geocoded if possible) from, if that makes sense.
 Analyst: Makes sense.
-Client: Um, For er us it's key that systems supporting OM can basically store data about the specimens/samples that that are collected for laboratory testing.
-EndUser: We'd want environmental sample data to include information about the collection method, erm location (geocoded if possible) from which the sample was taken, source sort of (e.g., uh rain or well i mean for like water, radiation release, asbestos, chair or desk in a specified location), nature of well the um sample (e.g., soil, water, air), quality control data, collection begin and end date and time for air samples. And original volume and volume actually of concentrate tested for water samples.
-EndUser: Food sample data ought to kind of include information about the lot uh number, batch sort of number, manufacturer name, shipping invoice, temperature, sample type (e.g., dairy – milk, red uhm meat, i mean spice), and product storage condition. And systems supporting OM would need erm to be um able to create a laboratory test request for i mean a specimen/sample or group of specimens/samples.
-EndUser: The thing uh is, well all levels of granularity i mean of results (e.g., specimen/sample level, assay level) i mean might be supported.
-EndUser: Let's try to finish on time, I have another call after uhm this.
-EndUser: Uh, Before I forget, on travel history and sort of conveyance data, like for example, if a well person who lives in Georgia travels to Seattle and becomes exposed to monkey pox, you know then visits a friend in uh Santa Fe, travel history and um conveyance like data well should be noted accordingly for each place the exposed person traveled.
-Analyst: Uh, Let's stop here for today. I'll well write this up and erm we basically continue next time.
+EndUser: Which the sample was taken, source (e.g.
+Client: Right.
+EndUser: Then rain or well for water, radiation sort of release, uh asbestos, chair or desk in a specified location), nature of the sample (e.g., soil, water, air), quality control data, collection begin and end date and time for air samples, and original volume and volume you know of concentrate tested for water samples, right?
+Analyst: Okay, noted.
+EndUser: We'd want food sample data to include information about the lot number, batch number, manufacturer name, shipping invoice, temperature, uh sample type uh (e.g., dairy – milk, red meat, uh spice), and product storage condition.
+EndUser: What we really want is for systems supporting OM to be be able to create a laboratory test request for a specimen/sample—
+Client: Uhm, By the way, are we still meeting on Thursday?
+TechLead: Uh, Sorry, go on.
+EndUser: Where was I... kind of yes, or group of like specimens/samples.
+Client: All levels of granularity of results (e.g., specimen/sample level, assay level) might be supported.
+EndUser: Oh, and about travel history and conveyance data, for example, sort of if a person who lives in Georgia travels to Seattle and becomes exposed to monkey pox, then visits a friend in Santa Fe—
+TechLead: Sorry, someone uh just knocked on my door, go ahead.
+Client: Hold on, does that uhm apply to mobile too?
+EndUser: Where was I... yes, like travel history and conveyance data should be noted accordingly for each place the exposed person traveled.
+Analyst: Let's stop here for today. I'll write this [crosstalk] uh up and we continue next time.
