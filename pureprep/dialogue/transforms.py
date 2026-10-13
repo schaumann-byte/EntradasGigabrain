@@ -310,3 +310,31 @@ def split_for_interruption(text):
         return best[1].rstrip(" ,;"), best[2]
     k = len(words) // 2
     return " ".join(words[:k]), " ".join(words[k:])
+
+
+_SENT_END = re.compile(r"(?<=[.!?;:])\s+")
+
+
+def chunk_text(text, target=12, max_parts=4, min_part=4):
+    """Fatia uma fala longa em pedaços de ~``target`` palavras, cortando de
+    preferência em fim de frase ou fronteira de oração. A concatenação das
+    partes preserva todas as palavras (só vírgulas/ponto e vírgula do corte
+    somem)."""
+    text = normalize_ws(text)
+    parts = []
+    while len(parts) < max_parts - 1 and len(text.split()) > target * 1.5:
+        best = None
+        for rx, bonus in ((_SENT_END, 0.0), (_BREAK, 2.0)):  # fim de frase é preferido
+            for m in rx.finditer(text):
+                left, right = text[: m.start()], text[m.end() :]
+                nl = len(left.split())
+                if nl >= min_part and len(right.split()) >= min_part:
+                    d = abs(nl - target) + bonus
+                    if best is None or d < best[0]:
+                        best = (d, left, right)
+        if best is None or best[0] > target:
+            break  # sem fronteira natural: cortar no meio da oração soa artificial
+        parts.append(best[1].rstrip(" ,;:"))
+        text = best[2]
+    parts.append(text)
+    return parts

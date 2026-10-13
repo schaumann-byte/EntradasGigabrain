@@ -98,10 +98,17 @@ def _strip_able(rest):
     return re.sub(r"^be able to\s+", "", rest, flags=re.I)
 
 
+_NOT_SUBJECT = re.compile(
+    r"^(?:in|if|when|whenever|once|during|after|before|while|for|at|on|upon|unless|until|since|as|by|with|without|"
+    r"and|or|but|so|then|also|there|here|it)\b", re.I)
+
+
 def deformalize_casual(text, rng, speaker=None, hedge=False):
     """Versão mais variada de ``synth.deformalize`` (que fica congelada no v1)."""
     t = normalize_ws(text).rstrip(" .;")
     m = _HEAD.match(t)
+    if m and _NOT_SUBJECT.match(m.group("subj")):
+        m = None  # "In case the transition has to..." não tem sujeito no início
     if m:
         subj = _lower_first(m.group("subj"))
         rest = m.group("rest")
@@ -141,14 +148,23 @@ _PREFIX = ["So, ", "Basically, ", "Well, ", "The thing is, ", "For us, ", "Hones
 _SUFFIX = [", you know?", ", if that makes sense.", ", that's the main thing.", ", that's pretty important for us.", ", right?"]
 
 
-def casual_need(text, rng, speaker=None, flags=None, discourse=True):
-    """Fala completa de um requisito (com cabeçalho)."""
+def casual_need(text, rng, speaker=None, flags=None, discourse=True, suffix=True):
+    """Fala completa de um requisito (com cabeçalho). ``suffix=False`` quando
+    a fala continua no próximo turno (sem "..., you know?" no meio)."""
     flags = flags or {}
     s = deformalize_casual(text, rng, speaker, hedge=flags.get("hedge", False))
     s = split_long(contract(casual_lexicon(s, rng), rng))
     if discourse and rng.random() < 0.35:
         s = rng.choice(_PREFIX) + _lower_first(s)
-    s = _cap(s).rstrip(" .;,")
+    s = _cap(s).rstrip(" .;," if suffix else " .;,:")
+    s = _tail(s, flags, rng, discourse and suffix)
+    if flags.get("false_start"):
+        s = rng.choice(["We need the— actually, ", "So the— sorry, let me rephrase. ", "It should— well, "]) + _lower_first(s)
+    return s
+
+
+def _tail(s, flags, rng, discourse=True):
+    """Fim da fala: marca de fala cortada/valor faltante ou sufixo de discurso."""
     if flags.get("incomplete") == "truncated":
         s += rng.choice(["... well, anyway, we can come back to that.", "— sorry, I lost my train of thought.",
                          "... hmm, I'd need to think about the rest."])
@@ -162,8 +178,6 @@ def casual_need(text, rng, speaker=None, flags=None, discourse=True):
         s += rng.choice(_SUFFIX)
     else:
         s += "."
-    if flags.get("false_start"):
-        s = rng.choice(["We need the— actually, ", "So the— sorry, let me rephrase. ", "It should— well, "]) + _lower_first(s)
     return s
 
 
@@ -171,6 +185,19 @@ def casual_fragment(text, rng):
     """Continuação de fala interrompida (sem cabeçalho)."""
     s = contract(casual_lexicon(normalize_ws(text), rng), rng).rstrip(" .;,")
     return rng.choice(["Anyway, as I was saying, ", "Yeah, so, ", "Right, so, ", "Where was I... yes, "]) + _lower_first(s) + "."
+
+
+_CONTINUE = ["And ", "So ", "", "Plus ", "And also ", "Then ", "Uh, and "]
+
+
+def casual_continuation(text, rng, flags=None):
+    """Próximo pedaço de uma fala fatiada pelo plano (mesmo falante)."""
+    s = contract(casual_lexicon(normalize_ws(text), rng), rng).rstrip(" .;,:")
+    lead = rng.choice(_CONTINUE)
+    if re.match(r"(?:and|or|but|so|plus|then|also)\b", s, re.I):
+        lead = ""  # o pedaço já começa com conector ("and the driver...")
+    s = lead + (_lower_first(s) if lead else _cap(s))
+    return _tail(s, flags or {}, rng, discourse=True)
 
 
 # ---------------------------------------------------------------------------
@@ -233,6 +260,8 @@ _CLARIFY = ["Can you be more specific?", "What exactly do you mean by that?", "D
 _EVADE = ["Hmm, hard to say right now. We'll see.", "I don't know, something reasonable.", "We'll figure that out later, I guess."]
 _ANYTHING = ["Anything else on {t}?", "Is that all for {t}?"]
 _NOTHING = ["No, I think that's it.", "That's all for now.", "Nothing else, I think."]
+_REACT = ["Yeah, agreed.", "Same for us.", "True.", "Yeah.", "Right, yes.", "Definitely.", "Mm-hmm.", "Good point.",
+          "Yes, please.", "That too, yeah."]
 _CROSS_A = ["Yeah, and also—", "But what if—", "Sorry, I just wanted to—"]
 _CROSS_B = ["—sorry, go ahead.", "—no, you go.", "[crosstalk] sorry."]
 _CLOSE = ["Okay, we're out of time. I'll send a summary and we'll pick up the rest next time.",
@@ -257,15 +286,20 @@ def render_turn(turn, rng):
     act, info, spk = turn.act, turn.info, turn.speaker
     ch = rng.choice
     if act == "state":
-        parts = [casual_need(u.text, rng, spk, u.flags, discourse=j == 0) for j, u in enumerate(turn.utts)]
+        parts = [casual_need(u.text, rng, spk, u.flags, discourse=j == 0, suffix=not info.get("chunked"))
+                 for j, u in enumerate(turn.utts)]
         s = " ".join(parts if len(parts) == 1 else [parts[0]] + ["And " + _lower_first(p) for p in parts[1:]])
         if info.get("interrupted"):
             s = s.rstrip(" .,!?") + "—"
+        elif info.get("chunked") and s.endswith("."):
+            s = s[:-1] + ch([",", "...", "."])  # a fala continua no próximo turno
         if info.get("self_intro"):
             s = _fill(ch(_SELF_INTRO) + "{x}", s, t=info["self_intro"])
         return s
     if act == "resume":
         return casual_fragment(turn.utts[0].text, rng)
+    if act == "continue":
+        return casual_continuation(turn.utts[0].text, rng, turn.utts[0].flags)
     if act == "echo":
         return _fill(ch(_ECHO), _q(casual_need(turn.utts[0].text, rng, discourse=False)))
     if act in ("counter", "resolve", "resolve_later", "followup", "restate"):
@@ -295,6 +329,7 @@ def render_turn(turn, rng):
         "evade": lambda: _EVADE[info["key"] % len(_EVADE)],
         "anything_else": lambda: ch(_ANYTHING).format(t=info["topic"]),
         "nothing_else": lambda: ch(_NOTHING),
+        "react": lambda: _REACT[info["key"] % len(_REACT)],
         "crosstalk_a": lambda: ch(_CROSS_A),
         "crosstalk_b": lambda: ch(_CROSS_B),
         "close": lambda: ch(_CLOSE_FINAL if info.get("final") else _CLOSE),
@@ -305,7 +340,7 @@ def render_turn(turn, rng):
 
 
 # atos curtos não recebem ruído lexical (soariam artificiais)
-_NO_NOISE = {"confirm", "backchannel", "crosstalk_a", "crosstalk_b", "nothing_else"}
+_NO_NOISE = {"confirm", "backchannel", "react", "crosstalk_a", "crosstalk_b", "nothing_else"}
 
 
 def realize(plan, rng, noise=None):

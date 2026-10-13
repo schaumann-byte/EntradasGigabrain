@@ -196,14 +196,56 @@ class _Planner:
         if mess and rng.random() < 0.15 * mess:
             flags["false_start"] = True
             self.counts["false_starts"] += 1
-        utts = [Utt(r.rid, r.text, "statement", flags=dict(flags) if j == 0 else {}) for j, r in enumerate(chunk)]
-        out = [Turn(spk, "state", utts, info=intro)]
+        if self.P["p_chunk"]:
+            # um requisito por vez, fatiado em turnos curtos
+            out = []
+            for j, r in enumerate(chunk):
+                if j and rng.random() < self.P["p_mid_backchannel"]:
+                    out.append(Turn(self._listener(spk, present), "backchannel"))
+                out += self._say(spk, r.rid, r.text, flags=flags if j == 0 else {}, intro=intro if j == 0 else {}, present=present)
+        else:
+            utts = [Utt(r.rid, r.text, "statement", flags=dict(flags) if j == 0 else {}) for j, r in enumerate(chunk)]
+            out = [Turn(spk, "state", utts, info=intro)]
         if rng.random() < 0.12:
             out.append(Turn("Analyst", "echo", [Utt(chunk[-1].rid, chunk[-1].text, "echo")]))
             out.append(Turn(spk, "confirm"))
-        elif rng.random() < 0.3:
+        elif rng.random() < self.P["p_backchannel"]:
             out.append(Turn("Analyst", "backchannel"))
+        out += self._react(spk, present)
         return out
+
+    def _listener(self, spk, present):
+        """Quem solta o *backchannel* no meio da fala: em geral o analista."""
+        if self.rng.random() < 0.75 or len(present) < 3:
+            return "Analyst" if spk != "Analyst" else self._other(present, spk)
+        return self._other(present, spk)
+
+    def _react(self, spk, present):
+        """Reação curta de outro stakeholder ("Yeah, agreed.")."""
+        if self.P["p_react"] and self.rng.random() < self.P["p_react"]:
+            self.counts["reactions"] += 1
+            return [Turn(self._other(present, spk), "react", info={"key": self.rng.randrange(1000)})]
+        return []
+
+    def _say(self, spk, rid, text, pid=None, flags=None, intro=None, present=None):
+        """Afirmação de um requisito; se longa, vira vários turnos curtos do
+        mesmo falante com *backchannel* entre eles (calibração com o AMI).
+        Marcas de início (hesitação, falso começo) vão na primeira parte;
+        marcas de fim (fala cortada, valor faltante) na última."""
+        flags, intro, P = flags or {}, intro or {}, self.P
+        if P["p_chunk"] and len(text.split()) > P["chunk_target"] * 1.5 and self.rng.random() < P["p_chunk"]:
+            parts = T.chunk_text(text, P["chunk_target"])
+            if len(parts) > 1:
+                self.counts["chunked_statements"] += 1
+                head = {k: v for k, v in flags.items() if k in ("hedge", "false_start")}
+                tail = {k: v for k, v in flags.items() if k in ("incomplete", "remark")}
+                turns = [Turn(spk, "state", [Utt(rid, parts[0], "part1", pid, head)], info={**intro, "chunked": True})]
+                for j, part in enumerate(parts[1:], 1):
+                    if self.rng.random() < P["p_mid_backchannel"]:
+                        turns.append(Turn(self._listener(spk, present), "backchannel"))
+                    turns.append(Turn(spk, "continue", [Utt(rid, part, "part2", pid, tail if j == len(parts) - 1 else {})]))
+                return turns
+        return [Turn(spk, "state", [Utt(rid, text, "statement", pid, flags)], info=intro)]
 
     def _conflict(self, r, p, spk, intro, present, k, topic):
         rng = self.rng
@@ -270,9 +312,9 @@ class _Planner:
             p.outcome, self.status[r.rid] = "resolved", "conflict_resolved"
         return turns
 
-    def _ambiguity(self, r, p, spk, intro):
+    def _ambiguity(self, r, p, spk, intro, present):
         flags = {"hedge": True} if p.kind == "optionality" else {}
-        turns = [Turn(spk, "state", [Utt(r.rid, p.details["stated_text"], "statement", p.pid, flags)], info=intro)]
+        turns = self._say(spk, r.rid, p.details["stated_text"], p.pid, flags, intro, present)
         if self.rng.random() < 0.3:
             ref = [(r.rid, "clarification", p.pid)]
             turns += [Turn("Analyst", "clarify_question", info={"kind": p.kind}, refs=ref),
@@ -283,11 +325,11 @@ class _Planner:
         p.outcome, self.status[r.rid] = "unresolved", "ambiguous"
         return turns
 
-    def _incompleteness(self, r, p, spk, intro, k, topic):
+    def _incompleteness(self, r, p, spk, intro, k, topic, present):
         flags = {"incomplete": p.kind}
         if p.kind == "missing_condition" and self.rng.random() < 0.5:
             flags["remark"] = True
-        turns = [Turn(spk, "state", [Utt(r.rid, p.details["stated_text"], "statement", p.pid, flags)], info=intro)]
+        turns = self._say(spk, r.rid, p.details["stated_text"], p.pid, flags, intro, present)
         later = self._later(k)
         if later is not None and self.rng.random() < self.P["p_complete_later"]:
             self._put(k, later, [Turn(self._speaker_in(later, spk), "followup", [Utt(r.rid, r.text, "followup", p.pid)],
@@ -298,8 +340,8 @@ class _Planner:
             p.outcome, self.status[r.rid] = "open", "incomplete"
         return turns
 
-    def _inconsistency(self, r, p, spk, intro, k, topic):
-        turns = [Turn(spk, "state", [Utt(r.rid, r.text, "statement", p.pid)], info=intro)]
+    def _inconsistency(self, r, p, spk, intro, k, topic, present):
+        turns = self._say(spk, r.rid, r.text, p.pid, intro=intro, present=present)
         later = self._later(k) if self.rng.random() < 0.8 else None
         tgt = k if later is None else later
         speaker2 = self._speaker_in(tgt, self.rng.choice([s for s in STAKEHOLDERS if s != spk]))
@@ -339,11 +381,11 @@ class _Planner:
             elif p.type == "conflict":
                 turns = self._conflict(r, p, spk, intro, present, k, topic)
             elif p.type == "ambiguity":
-                turns = self._ambiguity(r, p, spk, intro)
+                turns = self._ambiguity(r, p, spk, intro, present)
             elif p.type == "incompleteness":
-                turns = self._incompleteness(r, p, spk, intro, k, topic)
+                turns = self._incompleteness(r, p, spk, intro, k, topic, present)
             else:
-                turns = self._inconsistency(r, p, spk, intro, k, topic)
+                turns = self._inconsistency(r, p, spk, intro, k, topic, present)
             block.extend(turns)
             first = False
             i += n

@@ -65,6 +65,19 @@ def test_split_for_interruption_keeps_all_words():
     assert (a + " " + b).replace(",", "").split() == text.replace(",", "").split()
 
 
+def test_chunk_text_cuts_only_at_natural_boundaries():
+    text = ("The operator shall be able to export the monthly report, including all charts and the raw data, "
+            "and the system shall keep a copy of every exported file for audit purposes.")
+    parts = T.chunk_text(text, target=7)
+    assert len(parts) >= 3
+    norm = lambda s: s.replace(",", "").split()
+    assert sum((norm(p) for p in parts), []) == norm(text)
+    assert all(len(p.split()) >= 4 for p in parts)
+    # sem fronteira natural, não corta no meio da oração
+    plain = "The operator shall be able to export the monthly report together with all charts for audit purposes"
+    assert T.chunk_text(plain, target=7) == [plain]
+
+
 # ----------------------------------------------------------------- realizador
 
 
@@ -174,7 +187,9 @@ def _check_invariants(plan, realized, gold):
             if p["outcome"] in ("resolved_later", "dropped_later", "completed_later"):
                 assert len(meetings) == 2, p
             if p["type"] == "inconsistency":
-                assert len(p["segments"]) == 2
+                # versão original (possivelmente fatiada) + exatamente uma reafirmação divergente
+                roles = [ref["role"] for s in p["segments"] for ref in seg_ids[s]["refs"] if ref.get("pid") == p["pid"]]
+                assert roles.count("restatement") == 1 and len(roles) >= 2
     return texts
 
 
@@ -186,6 +201,23 @@ def test_clean_profile_is_single_meeting_without_phenomena(portal):
     assert gold["input"]["meetings"][0]["participants"] == ["Analyst", "Client", "EndUser", "TechLead"]
     assert all(r["status"] == "clear" for r in gold["requirements"])
     assert not gold["issues"] and not gold["distractors"]
+    # clean mantém a estrutura de turnos do v1 (ablação só da superfície)
+    assert not any(s["act"] in ("continue", "react") for m in gold["input"]["meetings"] for s in m["segments"])
+
+
+def test_realistic_splits_long_statements_into_short_turns(portal):
+    doc, ext, reqs = portal
+    plan, realized, gold = build_meetings(doc, ext, reqs, profile="realistic", realizer="rules", seed=5)
+    _check_invariants(plan, realized, gold)
+    segs = {s["id"]: s for m in gold["input"]["meetings"] for s in m["segments"]}
+    chunked = [r for r in gold["requirements"]
+               if any(segs[sid]["act"] == "continue" for sid in r["trace"]["input_segments"])]
+    assert chunked, "nenhuma fala fatiada"
+    for r in chunked:
+        ids = r["trace"]["input_segments"]
+        speakers = {segs[s]["speaker"] for s in ids if segs[s]["act"] in ("state", "continue")}
+        assert len(speakers) == 1  # mesmo falante em todos os pedaços
+        assert r["trace"]["support_score"] >= 0.6
 
 
 @pytest.mark.parametrize("seed", range(8))

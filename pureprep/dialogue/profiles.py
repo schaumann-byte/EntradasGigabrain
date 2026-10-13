@@ -2,6 +2,13 @@
 requisito recebe no máximo um fenômeno semântico) e intensidade da bagunça
 estrutural (``mess`` ∈ [0, 1]).
 
+Estrutura de turnos (calibrada contra o AMI, ver RELATORIO_DIAGNOSTICO §5.3):
+``p_chunk`` fatia falas longas em pedaços de ~``chunk_target`` palavras, com
+*backchannel* entre eles (``p_mid_backchannel``); ``p_backchannel`` e
+``p_react`` controlam respostas curtas do analista e de outro stakeholder
+depois de uma fala. ``clean`` mantém a estrutura do v1 (ablação só da
+superfície do texto).
+
 - ``clean``     : 1 reunião, ordem do documento, sem fenômenos semânticos.
                   Só a superfície casual do realizador + ruído lexical.
 - ``realistic`` : 2–3 reuniões, bagunça moderada, ~25% dos requisitos com
@@ -21,6 +28,11 @@ PROFILES = {
         "p_conflict_open": 0.0,
         "p_resolve_later": 0.0,
         "p_complete_later": 0.0,
+        "p_chunk": 0.0,
+        "chunk_target": 12,
+        "p_mid_backchannel": 0.0,
+        "p_backchannel": 0.3,
+        "p_react": 0.0,
         "noise": 0.08,
     },
     "realistic": {
@@ -34,7 +46,12 @@ PROFILES = {
         "p_conflict_open": 0.4,
         "p_resolve_later": 0.5,
         "p_complete_later": 0.5,
-        "noise": 0.10,
+        "p_chunk": 0.9,
+        "chunk_target": 7,
+        "p_mid_backchannel": 0.9,
+        "p_backchannel": 0.75,
+        "p_react": 0.35,
+        "noise": 0.07,
     },
     "hard": {
         "meetings": (3, 4),
@@ -47,7 +64,12 @@ PROFILES = {
         "p_conflict_open": 0.55,
         "p_resolve_later": 0.35,
         "p_complete_later": 0.35,
-        "noise": 0.14,
+        "p_chunk": 0.9,
+        "chunk_target": 7,
+        "p_mid_backchannel": 0.9,
+        "p_backchannel": 0.75,
+        "p_react": 0.35,
+        "noise": 0.075,
     },
 }
 
