@@ -72,9 +72,7 @@ def export_variant(src, dest, variant_name, git):
         "source": {"dataset": "PURE", "doi": "10.5281/zenodo.1414117"},
         "documents": docs,
     }
-    (dest / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "
-", encoding="utf-8", newline="
-")
+    (dest / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     return len(docs)
 
 
@@ -121,8 +119,7 @@ def build_index(entradas):
                     row[k] = 0
             rows.append(row)
     with open(idx, "w", newline="", encoding="utf-8") as fh:
-        wr = csv.DictWriter(fh, fieldnames=INDEX_FIELDS, lineterminator="
-")
+        wr = csv.DictWriter(fh, fieldnames=INDEX_FIELDS, lineterminator="\n")
         wr.writeheader()
         wr.writerows(rows)
     return len(rows)
