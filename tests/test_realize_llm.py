@@ -63,12 +63,15 @@ def test_same_plan_and_gold_as_variant_a(portal, tmp_path):
 def test_cache_makes_b_reproducible_offline(portal, tmp_path):
     first = EchoProvider()
     _, r1, g1 = _run(portal, first, tmp_path)
-    assert first.calls == g1["generator"]["realizer_stats"]["windows"]
+    assert first.calls == g1["_run_stats"]["requests"] == g1["generator"]["realizer_stats"]["windows"]
     second = EchoProvider()
     _, r2, g2 = _run(portal, second, tmp_path, offline=True)
     assert second.calls == 0
     assert [t for _, t, _ in r1] == [t for _, t, _ in r2]
-    assert g2["generator"]["realizer_stats"]["cache_hits"] == g2["generator"]["realizer_stats"]["windows"]
+    assert g2["_run_stats"]["cache_hits"] == g2["generator"]["realizer_stats"]["windows"]
+    # o gabarito não registra como a execução rodou: original e reprodução são idênticos
+    g1.pop("_run_stats"), g2.pop("_run_stats")
+    assert g1 == g2
 
 
 def test_offline_without_cache_fails(portal, tmp_path):
@@ -156,8 +159,9 @@ def test_provider_failure_is_counted(portal, tmp_path):
         def complete(self, system, user, schema):
             raise LLMUnavailable("HTTP 529: overloaded")
     _, _, g = _run(portal, Broken(), tmp_path)
-    st = g["generator"]["realizer_stats"]
+    st = g["_run_stats"]
     assert st["request_failed:HTTP 529: overloaded"] == st["windows"]
+    assert not any(k.startswith("request_failed") for k in g["generator"]["realizer_stats"])
     assert st["fallback:no_response"] == st["turns"]
 
 

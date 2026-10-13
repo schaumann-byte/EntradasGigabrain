@@ -47,7 +47,11 @@ def build_meetings(doc, ext, reqs, *, profile, realizer, seed, realizer_options=
         params["llm"] = {**opts["provider"].params(), "prompt_version": realize_llm.PROMPT_VERSION}
     gold = build_gold(doc, plan, realized, reqs, variant=variant_name(realizer, profile), realizer=realizer, params=params)
     if rstats is not None:
-        gold["generator"]["realizer_stats"] = rstats
+        # no gabarito só o que descreve o conteúdo; requisições, acertos de cache
+        # e falhas de rede dependem da execução (vão em "_run_stats", fora do JSON)
+        run_keys = ("requests", "cache_hits", "request_failed:")
+        gold["generator"]["realizer_stats"] = {k: v for k, v in rstats.items() if not k.startswith(run_keys)}
+        gold["_run_stats"] = rstats
     return plan, realized, gold
 
 

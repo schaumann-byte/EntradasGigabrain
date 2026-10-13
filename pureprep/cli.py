@@ -172,7 +172,7 @@ def process(xml_path, out, seed, tau, dialogue_cap, noise, profiles=(), realizer
     for profile in profiles:
         plan, realized, gold = build_meetings(doc, ext, chosen, profile=profile, realizer=realizer, seed=seed,
                                               realizer_options=realizer_options)
-        for k, n in (gold["generator"].get("realizer_stats") or {}).items():
+        for k, n in gold.pop("_run_stats", {}).items():
             REALIZER_TOTALS[gold["variant"]][k] += n
         _write_meetings(out, doc, plan, realized, gold)
         v, s = gold["variant"], gold["stats"]
