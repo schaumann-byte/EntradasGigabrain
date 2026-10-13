@@ -1,0 +1,10 @@
+{
+ "prompt_version": "b2",
+ "provider": {
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "effort": "low"
+ },
+ "request": "{\n \"project\": \"Software Requirements Specification for KeePass Password Safe\",\n \"meeting\": \"1 of 3 (kickoff)\",\n \"participants\": [\n  \"Analyst\",\n  \"Client\",\n  \"EndUser\",\n  \"TechLead\"\n ],\n \"previous_turns_for_context_only\": [\n  {\n   \"speaker\": \"Client\",\n   \"act\": \"state\",\n   \"content\": [\n    \"ìWhen the password field is changed the repeat password field must be Changed\"\n   ]\n  },\n  {\n   \"speaker\": \"EndUser\",\n   \"act\": \"interrupt\"\n  },\n  {\n   \"speaker\": \"Client\",\n   \"act\": \"resume\",\n   \"content\": [\n    \"and be identical with password field\"\n   ]\n  }\n ],\n \"turns\": [\n  {\n   \"id\": \"M1:T81\",\n   \"speaker\": \"Analyst\",\n   \"act\": \"anything_else\",\n   \"guide\": \"Analyst asks whether there is anything else on 'view/edit entry'.\"\n  },\n  {\n   \"id\": \"M1:T82\",\n   \"speaker\": \"EndUser\",\n   \"act\": \"nothing_else\",\n   \"guide\": \"Short answer: nothing else on this topic.\"\n  },\n  {\n   \"id\": \"M1:T83\",\n   \"speaker\": \"TechLead\",\n   \"act\": \"restate\",\n   \"guide\": \"The speaker mentions the content again as if it were what everyone already agreed. Do not signal any change.\",\n   \"content\": [\n    {\n     \"text\": \"ìAn entry must not be selected to be viewed or modified\",\n     \"role\": \"restatement\"\n    }\n   ]\n  },\n  {\n   \"id\": \"M1:T84\",\n   \"speaker\": \"Analyst\",\n   \"act\": \"close\",\n   \"guide\": \"Analyst closes the meeting. There will be another meeting: say you will continue next time.\"\n  }\n ]\n}",
+ "response": "{\"turns\":[{\"id\":\"M1:T81\",\"text\":\"Okay, anything else on view and edit entry before we move on?\"},{\"id\":\"M1:T82\",\"text\":\"No, that's it from me.\"},{\"id\":\"M1:T83\",\"text\":\"Just to recap what we've got there: an entry must not be selected to be viewed or modified.\"},{\"id\":\"M1:T84\",\"text\":\"Alright, good. Let's stop here for today, and we'll pick up the rest next time. Thanks, everyone.\"}]}"
+}
