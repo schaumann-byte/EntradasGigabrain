@@ -13,6 +13,7 @@
 4. Foram gerados **três modos de entrada** para cada documento: `context` (texto real, difícil), `notes` (lista informal de necessidades) e `dialogue` (reunião sintética com ruído de fala). Um baseline ingênuo sem LLM atinge F1 = 0,14 / 0,89 / 0,72 respectivamente, o que mostra que os modos discriminam níveis diferentes de dificuldade.
 5. **Documentos recomendados:** 4 são ideais para entrada real (keepass, video-search, peering, peppol) e 10 para entrada sintetizada. Há ainda **25 documentos Tier A sem XML** que podem ampliar o benchmark se convertidos.
 6. **O PURE não tem diálogos.** Recomendação: (a) síntese de diálogo em três níveis, com verificação de preservação semântica, e (b) complementar com o AMI Meeting Corpus, já presente localmente, para **calibrar e testar robustez de formato**, não como gabarito de requisitos.
+7. **Atualização de 13/10/2026 (seção 5.3):** o nível N2 foi implementado por regras no novo modo `meetings`, com várias reuniões, conversa bagunçada, conflitos, ambiguidade, inconsistência e incompletude, e gabarito schema 2.0 com status, distratores e *issues*. O baseline ingênuo cai de F1 0,77 (`rules-clean`) para 0,67 (`rules-realistic`) e 0,62 (`rules-hard`). Nos requisitos ambíguos, a revocação fica em 0,23–0,33. A estrutura de turnos continua distante do AMI.
 
 ---
 
@@ -187,7 +188,7 @@ A densidade de ruído está calibrada. A **estrutura de turnos não**: os turnos
 |---|---|---|---|
 | **N0 — template** | regras determinísticas + ruído aditivo (este pipeline) | por construção (nenhuma palavra de conteúdo removida) | implementado |
 | **N1 — paráfrase por LLM** | LLM reescreve blocos de 3–8 requisitos como diálogo entre papéis (persona do stakeholder a partir de *User Classes*), marcando internamente os IDs de requisito em cada turno | verificação dupla: (i) cada requisito do gabarito é **implicado** pelos turnos marcados (NLI ou LLM-juiz); (ii) verificação reversa: nenhum requisito novo é introduzido; (iii) sobreposição lexical com o gabarito abaixo de um teto (ex.: ROUGE-1 < 0,5), para forçar paráfrase real; (iv) revisão humana de 10 % | recomendado |
-| **N2 — fenômenos realistas** | mudança de ideia ("aliás, 5 s em vez de 2 s"; o gabarito guarda o estado final), requisitos implícitos, contradições, interrupções; ruído de ASR via TTS → Whisper | gabarito atualizado pelo roteiro do fenômeno; mede consistência | recomendado |
+| **N2 — fenômenos realistas** | mudança de ideia ("aliás, 5 s em vez de 2 s"; o gabarito guarda o estado final), requisitos implícitos, contradições, interrupções; ruído de ASR via TTS → Whisper | gabarito atualizado pelo roteiro do fenômeno; mede consistência | **implementado por regras** (modo `meetings`, seção 5.3); ruído de ASR pendente |
 
 Para N1, usar um LLM de família diferente da do sistema avaliado, para evitar viés de autopreferência. Essa abordagem é análoga à simulação de entrevistas do Elicitron [R3] e à entrada conversacional prevista no REQINONE [R2].
 
@@ -200,12 +201,82 @@ Para N1, usar um LLM de família diferente da do sistema avaliado, para evitar v
 
 **Recomendação final:** manter o PURE como fonte do **conteúdo semântico e do gabarito**. Gerar diálogo nos níveis N0 a N2 e usar o AMI para **calibrar o formato e testar robustez**. Um pequeno AMI-RE rotulado à mão fornece validação externa com diálogo 100 % real.
 
+### 5.3 Implementação do N2: modo `meetings` (13/10/2026)
+
+**Motivação.** As transcrições do modo `dialogue` (N0) eram formais demais. Cada requisito era dito uma única vez, com clareza, na ordem do documento, e ninguém discordava. Esse cenário não exercita as dificuldades reais da elicitação: informação espalhada por várias reuniões, conflitos entre stakeholders, falas vagas e lacunas.
+
+**Arquitetura.** O gerador foi dividido em duas fases (`pureprep/dialogue/`):
+
+```
+requisitos ─► plano (determinístico) ─► realizador ─► gabarito schema 2.0
+              reuniões, participantes,   superfície     construído a partir
+              ordem, fenômenos e         do texto       do log do plano
+              desfechos
+```
+
+O plano depende só da semente e do perfil. O realizador `rules` (variante A) usa modelos de frase e léxico coloquial. O realizador `llm` (variante B, futuro N1) vai consumir **o mesmo plano**, de modo que A e B tenham gabaritos idênticos e a comparação isole o efeito da linguagem. A rastreabilidade passa a vir do log do plano, e não da similaridade lexical, porque a ambiguidade e a incompletude removem de propósito palavras do requisito. O modo `dialogue` ficou congelado, com teste de regressão byte a byte contra o dataset v1 publicado.
+
+**Fenômenos** (no máximo um por requisito):
+
+| fenômeno | realização | status no gabarito |
+|---|---|---|
+| reuniões separadas | 1–4 reuniões com recapitulação; participantes variam | segmentos `M<n>:T<k>` |
+| bagunça | ordem fora do documento, tópico retomado, interrupção no meio da fala, falso começo, *crosstalk*, conversa fora do tópico | `stats.messiness` |
+| conflito de valor/ator | variante com número ou papel trocado, contestada; decidida na hora, adiada ou decidida em reunião posterior | `conflict_resolved` (a proposta perdedora vira **distrator**) ou `conflict_open` |
+| conflito de escopo | "do we really need that?" | `conflict_resolved`, `rejected` ou `conflict_open` |
+| ambiguidade | quantidade vaga, ator vago, referência vaga, obrigatoriedade hesitante | `ambiguous` |
+| inconsistência | reafirmado depois com valor, ator ou polaridade divergente, sem que ninguém perceba | `inconsistent` |
+| incompletude | valor faltante, condição omitida, fala cortada; às vezes completada em reunião posterior | `incomplete` ou `clear` |
+| omissão | requisito nunca discutido | `omitted` |
+
+**Variantes geradas** (18 documentos, mesma amostra de 820 requisitos do v1, seed 42):
+
+| variante | reuniões/doc | palavras | esperados | ambíguos | inconsistentes | incompletos | conflitos (resolvidos/abertos/rejeitados) | omitidos | *issues* | distratores |
+|---|---:|---:|---:|---:|---:|---:|---|---:|---:|---:|
+| `rules-clean` | 1,0 | 37.600 | 820 | – | – | – | – | – | – | – |
+| `rules-realistic` | 2,4 | 44.225 | 789 | 64 | 21 | 42 | 32 / 16 / 7 | 24 | 143 | 7 |
+| `rules-hard` | 3,3 | 50.456 | 758 | 110 | 52 | 69 | 41 / 45 / 19 | 43 | 276 | 7 |
+
+**Dificuldade (baseline ingênuo, micro-média sobre os requisitos esperados).** O oracle obtém F1 = 1,0 em extração e em *issues* em todas as variantes.
+
+| variante | P | R | F1 | R ambíguos | R incompletos | R conflito aberto | distratores extraídos | rejeitados extraídos |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| `dialogue` v1 | 0,67 | 0,78 | 0,72 | – | – | – | – | – |
+| `rules-clean` | 0,71 | 0,84 | 0,77 | – | – | – | 0 | 0 |
+| `rules-realistic` | 0,61 | 0,75 | 0,67 | 0,23 | 0,48 | 0,81 | 7 | 6 |
+| `rules-hard` | 0,55 | 0,71 | 0,62 | 0,33 | 0,45 | 0,87 | 5 | 17 |
+
+Leitura:
+- **A queda de F1 é monotônica** com o perfil, e os fenômenos derrubam a revocação exatamente onde se esperava: requisitos ambíguos e incompletos.
+- **O baseline extrai propostas rejeitadas e requisitos retirados do escopo.** É o erro que as métricas novas (`false_positives`) tornam visível.
+- **`rules-clean` fica um pouco mais fácil que o v1.** A superfície casual quebra menos frases no meio do requisito.
+- **O detalhe que ninguém disse fica registrado.** A métrica `detail_hallucination_rate` mede se a predição traz o valor removido. O próprio oracle marca ≈ 0,57, porque copia o texto canônico do SRS.
+
+**Calibração com o AMI** (mesma métrica da tabela da seção 5). A contagem de hesitações abaixo usa o léxico de `resources/noise_en.json` sobre todos os turnos, que é mais amplo que a contagem original: o v1 dá 8,05 por esse critério, contra 5,88 na tabela anterior. Compare só as variantes entre si.
+
+| | `dialogue` v1 | `rules-clean` | `rules-realistic` | `rules-hard` | AMI |
+|---|---:|---:|---:|---:|---:|
+| hesitações/muletas por 100 palavras (critério amplo) | 8,05 | 7,96 | 9,76 | 13,17 | — |
+| mediana de palavras por turno | 16 | 14 | 14 | 15 | 3 |
+| turnos de *backchannel* (≤ 2 palavras) | 17 % | 16 % | 10 % | 7 % | 45 % |
+
+O modo `meetings` **não corrige** a lacuna de estrutura de turnos apontada acima, e a piora em parte. Objeções, adiamentos e retomadas acrescentam turnos de tamanho médio, enquanto o *backchannel* continua restrito a depois de afirmações claras. A densidade de hesitações do perfil `hard` também passa da do v1. Ajustes recomendados para uma próxima versão: reduzir `noise` em `realistic`/`hard` para ~0,07–0,09; fatiar falas longas em vários turnos curtos com *backchannel* intercalado; elevar a taxa de *backchannel* por turno.
+
+**Limitações.**
+- **Distratores são raros** (7 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e apenas 31/820 requisitos têm grandeza numérica e 138/820 têm ator explícito.
+- **A inversão de polaridade só entra como inconsistência.** "not" é stopword no casamento lexical, então ela não pode virar distrator.
+- **As falas preservam as palavras de conteúdo do SRS**, e requisitos longos continuam soando como documento. É o efeito que a variante B (N1) deve medir.
+- **O casamento continua lexical.** As ressalvas da seção 4.4 valem aqui também.
+
+**Onde estão os dados.** O repositório `Entradas` foi reorganizado em `variantes/{v1-original, rules-clean, rules-realistic, rules-hard}`, com `manifest.json` (commit do gerador, semente e parâmetros) por variante, PDFs em `originais/` e índice com uma linha por (variante, documento). A exportação é feita por `scripts/export_entradas.py`.
+
 ---
 
 ## 6. Próximos passos sugeridos
 1. Rodar o sistema multiagente nas Suítes 1 e 2 e avaliar com `python -m pureprep.evaluate`.
 2. Revisão humana de uma amostra estratificada do gabarito (prioridade: `label_source = default`), com medida de concordância (kappa de Cohen).
-3. Implementar o nível N1 e o casamento semântico no avaliador.
+3. Implementar o nível N1 como realizador `llm` do modo `meetings` (variante B, sobre o mesmo plano da A) e o casamento semântico no avaliador.
+3a. Recalibrar a estrutura de turnos do modo `meetings` contra o AMI (seção 5.3) e avaliar o sistema multiagente nas variantes `rules-*`, incluindo a detecção de *issues*.
 4. Converter 5–10 documentos Tier A sem XML (começando por pontis, clarus, rlcs e inventory 2.0).
 5. Montar o AMI-RE (~10 reuniões ES).
 
