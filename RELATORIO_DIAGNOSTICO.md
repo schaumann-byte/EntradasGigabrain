@@ -187,7 +187,7 @@ A densidade de ruído está calibrada. A **estrutura de turnos não**: os turnos
 | Nível | Como | Garantia semântica | Status |
 |---|---|---|---|
 | **N0 — template** | regras determinísticas + ruído aditivo (este pipeline) | por construção (nenhuma palavra de conteúdo removida) | implementado |
-| **N1 — paráfrase por LLM** | LLM reescreve blocos de 3–8 requisitos como diálogo entre papéis (persona do stakeholder a partir de *User Classes*), marcando internamente os IDs de requisito em cada turno | verificação dupla: (i) cada requisito do gabarito é **implicado** pelos turnos marcados (NLI ou LLM-juiz); (ii) verificação reversa: nenhum requisito novo é introduzido; (iii) sobreposição lexical com o gabarito abaixo de um teto (ex.: ROUGE-1 < 0,5), para forçar paráfrase real; (iv) revisão humana de 10 % | **infraestrutura implementada** (realizador `llm` do modo `meetings`, seção 5.4); verificação por regras no lugar do NLI/LLM-juiz; geração aguardando chave de API |
+| **N1 — paráfrase por LLM** | LLM reescreve blocos de 3–8 requisitos como diálogo entre papéis (persona do stakeholder a partir de *User Classes*), marcando internamente os IDs de requisito em cada turno | verificação dupla: (i) cada requisito do gabarito é **implicado** pelos turnos marcados (NLI ou LLM-juiz); (ii) verificação reversa: nenhum requisito novo é introduzido; (iii) sobreposição lexical com o gabarito abaixo de um teto (ex.: ROUGE-1 < 0,5), para forçar paráfrase real; (iv) revisão humana de 10 % | **implementado e gerado** (variantes `llm-*`, seção 5.4); verificação por regras no lugar do NLI/LLM-juiz; revisão humana pendente |
 | **N2 — fenômenos realistas** | mudança de ideia ("aliás, 5 s em vez de 2 s"; o gabarito guarda o estado final), requisitos implícitos, contradições, interrupções; ruído de ASR via TTS → Whisper | gabarito atualizado pelo roteiro do fenômeno; mede consistência | **implementado por regras** (modo `meetings`, seção 5.3); ruído de ASR pendente |
 
 Para N1, usar um LLM de família diferente da do sistema avaliado, para evitar viés de autopreferência. Essa abordagem é análoga à simulação de entrevistas do Elicitron [R3] e à entrada conversacional prevista no REQINONE [R2].
@@ -295,13 +295,27 @@ Desenho:
 
 **Escala** (dry-run, 18 documentos, perfis `clean`, `realistic` e `hard`): 470 requisições, ~0,8 M tokens de entrada e ~0,35 M de saída, sem contar o raciocínio do modelo.
 
-**Limitação a medir na geração:** a taxa de fallback. Se o LLM parafrasear demais, mais falas voltam para a A e a variante B fica parcialmente igual à A. A taxa por motivo aparece no resumo do CLI e em cada gabarito. Ela deve ser reportada junto com qualquer comparação A × B.
+**Geração (13/10/2026).** Com `claude-opus-5-5`, esforço `low` e prompt `b2`: 470 requisições em 13,5 min, sem falhas. O cache (4,8 MB) está versionado em `llm_cache/`, e a reprodução offline sai idêntica byte a byte.
+
+O prompt `b1` foi descartado depois do teste com o KeePass. Nos turnos de discussão (objeção e defesa de escopo), o LLM inventava justificativas sobre o domínio ("people offline would get stuck"), que um extrator poderia ler como requisito. No `b2`, as razões ficam genéricas (importância, esforço, prioridade).
+
+| perfil | falas aceitas | fallbacks (principais motivos) | cobertura de tokens A → B | F1 naive A → B | mediana palavras/turno A → B | *backchannel* A → B |
+|---|---:|---|---:|---:|---:|---:|
+| `clean` | 98,3 % | conteúdo 17, número perdido 10 | 0,98 → 0,80 | 0,77 → **0,61** | 14 → 16 | 15 % → 14 % |
+| `realistic` | 98,5 % | conteúdo 36, número inventado 7, detalhe vazado 2 | 0,98 → 0,84 | 0,62 → **0,46** | 9 → 11 | 29 % → 24 % |
+| `hard` | 99,0 % | conteúdo 16, número perdido 8, número inventado 5 | 0,98 → 0,84 | 0,58 → **0,44** | 10 → 13 | 22 % → 18 % |
+
+Leitura:
+- **O efeito da paráfrase é grande e consistente.** Com plano, fenômenos e gabarito idênticos, o F1 do baseline lexical cai 14–16 pontos da A para a B. Parte do que as variantes `rules-*` medem é casamento de superfície com o texto do SRS, e a B remove essa vantagem.
+- **A verificação barrou o que devia.** Houve números inventados (12), detalhes removidos que reapareceram (3) e uma mistura de valores num distrator; essas falas voltaram para a A.
+- **A estrutura de turnos piora um pouco.** As concordâncias do LLM são mais longas ("Yes, that's right."), o que desfaz parte da calibração contra o AMI. Uma versão futura do prompt pode restringir os atos curtos a 1–2 palavras.
+- **A verificação continua lexical.** Uma revisão humana por amostragem (ex.: 50 falas por perfil, priorizando turnos com fenômeno) deve preceder conclusões fortes sobre a equivalência semântica.
 ---
 
 ## 6. Próximos passos sugeridos
 1. Rodar o sistema multiagente nas Suítes 1 e 2 e avaliar com `python -m pureprep.evaluate`.
 2. Revisão humana de uma amostra estratificada do gabarito (prioridade: `label_source = default`), com medida de concordância (kappa de Cohen).
-3. Gerar a variante B (`--realizer llm`, seção 5.4), versionar o cache e comparar A × B por perfil; implementar o casamento semântico no avaliador.
+3. Revisar por amostragem as falas da variante B (seção 5.4) e implementar o casamento semântico no avaliador, que deve reduzir a distância entre A e B atribuível só ao casamento lexical.
 3a. Avaliar o sistema multiagente nas variantes `rules-*`, incluindo a detecção de *issues*. A estrutura de turnos já foi calibrada contra o AMI (seção 5.3).
 4. Converter 5–10 documentos Tier A sem XML (começando por pontis, clarus, rlcs e inventory 2.0).
 5. Montar o AMI-RE (~10 reuniões ES).
