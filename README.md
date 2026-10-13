@@ -69,7 +69,9 @@ Fenômenos (no máximo um por requisito) e o que viram no gabarito:
 
 Perfis (`pureprep/dialogue/profiles.py`): `clean` (1 reunião, sem fenômenos; só a superfície
 casual), `realistic` (2–3 reuniões, ~25% dos requisitos com fenômeno), `hard` (3–4 reuniões,
-~45%).
+~45%). Em `realistic` e `hard`, falas longas viram vários turnos curtos com *backchannel* entre eles
+(`p_chunk`, `chunk_target`, `p_mid_backchannel`, `p_backchannel`, `p_react`), calibrados contra o AMI
+(ver `RELATORIO_DIAGNOSTICO.md` §5.3); `clean` mantém a estrutura de turnos do v1.
 
 ### Como adicionar o realizador B (LLM)
 

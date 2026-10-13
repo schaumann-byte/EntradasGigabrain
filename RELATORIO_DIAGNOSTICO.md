@@ -13,7 +13,7 @@
 4. Foram gerados **três modos de entrada** para cada documento: `context` (texto real, difícil), `notes` (lista informal de necessidades) e `dialogue` (reunião sintética com ruído de fala). Um baseline ingênuo sem LLM atinge F1 = 0,14 / 0,89 / 0,72 respectivamente, o que mostra que os modos discriminam níveis diferentes de dificuldade.
 5. **Documentos recomendados:** 4 são ideais para entrada real (keepass, video-search, peering, peppol) e 10 para entrada sintetizada. Há ainda **25 documentos Tier A sem XML** que podem ampliar o benchmark se convertidos.
 6. **O PURE não tem diálogos.** Recomendação: (a) síntese de diálogo em três níveis, com verificação de preservação semântica, e (b) complementar com o AMI Meeting Corpus, já presente localmente, para **calibrar e testar robustez de formato**, não como gabarito de requisitos.
-7. **Atualização de 13/10/2026 (seção 5.3):** o nível N2 foi implementado por regras no novo modo `meetings`, com várias reuniões, conversa bagunçada, conflitos, ambiguidade, inconsistência e incompletude, e gabarito schema 2.0 com status, distratores e *issues*. O baseline ingênuo cai de F1 0,77 (`rules-clean`) para 0,67 (`rules-realistic`) e 0,62 (`rules-hard`). Nos requisitos ambíguos, a revocação fica em 0,23–0,33. A estrutura de turnos continua distante do AMI.
+7. **Atualização de 13/10/2026 (seção 5.3):** o nível N2 foi implementado por regras no novo modo `meetings`, com várias reuniões, conversa bagunçada, conflitos, ambiguidade, inconsistência e incompletude, e gabarito schema 2.0 com status, distratores e *issues*. O baseline ingênuo cai de F1 0,77 (`rules-clean`) para 0,62 (`rules-realistic`) e 0,58 (`rules-hard`). Nos requisitos ambíguos, a revocação fica em 0,25–0,35. A estrutura de turnos foi calibrada contra o AMI: a mediana cai de 16 para 9–10 palavras por turno, e o *backchannel* sobe de 17% para 22–29% (no AMI, 3 palavras e 45%).
 
 ---
 
@@ -233,9 +233,9 @@ O plano depende só da semente e do perfil. O realizador `rules` (variante A) us
 
 | variante | reuniões/doc | palavras | esperados | ambíguos | inconsistentes | incompletos | conflitos (resolvidos/abertos/rejeitados) | omitidos | *issues* | distratores |
 |---|---:|---:|---:|---:|---:|---:|---|---:|---:|---:|
-| `rules-clean` | 1,0 | 37.600 | 820 | – | – | – | – | – | – | – |
-| `rules-realistic` | 2,4 | 44.225 | 789 | 64 | 21 | 42 | 32 / 16 / 7 | 24 | 143 | 7 |
-| `rules-hard` | 3,3 | 50.456 | 758 | 110 | 52 | 69 | 41 / 45 / 19 | 43 | 276 | 7 |
+| `rules-clean` | 1,0 | 37.628 | 820 | – | – | – | – | – | – | – |
+| `rules-realistic` | 2,4 | 46.304 | 781 | 64 | 21 | 42 | 22 / 18 / 15 | 24 | 145 | 6 |
+| `rules-hard` | 3,3 | 48.924 | 761 | 110 | 52 | 72 | 46 / 43 / 16 | 43 | 277 | 3 |
 
 **Dificuldade (baseline ingênuo, micro-média sobre os requisitos esperados).** O oracle obtém F1 = 1,0 em extração e em *issues* em todas as variantes.
 
@@ -243,27 +243,38 @@ O plano depende só da semente e do perfil. O realizador `rules` (variante A) us
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | `dialogue` v1 | 0,67 | 0,78 | 0,72 | – | – | – | – | – |
 | `rules-clean` | 0,71 | 0,84 | 0,77 | – | – | – | 0 | 0 |
-| `rules-realistic` | 0,61 | 0,75 | 0,67 | 0,23 | 0,48 | 0,81 | 7 | 6 |
-| `rules-hard` | 0,55 | 0,71 | 0,62 | 0,33 | 0,45 | 0,87 | 5 | 17 |
+| `rules-realistic` | 0,54 | 0,72 | 0,62 | 0,25 | 0,43 | 0,94 | 6 | 14 |
+| `rules-hard` | 0,50 | 0,68 | 0,58 | 0,35 | 0,40 | 0,91 | 3 | 15 |
 
 Leitura:
 - **A queda de F1 é monotônica** com o perfil, e os fenômenos derrubam a revocação exatamente onde se esperava: requisitos ambíguos e incompletos.
 - **O baseline extrai propostas rejeitadas e requisitos retirados do escopo.** É o erro que as métricas novas (`false_positives`) tornam visível.
 - **`rules-clean` fica um pouco mais fácil que o v1.** A superfície casual quebra menos frases no meio do requisito.
-- **O detalhe que ninguém disse fica registrado.** A métrica `detail_hallucination_rate` mede se a predição traz o valor removido. O próprio oracle marca ≈ 0,57, porque copia o texto canônico do SRS.
+- **Os turnos curtos também pesam.** Depois da calibração de turnos (abaixo), o F1 de `realistic` caiu de 0,67 para 0,62 e o de `hard` de 0,62 para 0,58: um requisito fatiado em vários turnos não é recuperado por quem extrai frase a frase.
+- **O detalhe que ninguém disse fica registrado.** A métrica `detail_hallucination_rate` mede se a predição traz o valor removido. O próprio oracle marca ≈ 0,55–0,63, porque copia o texto canônico do SRS.
 
 **Calibração com o AMI** (mesma métrica da tabela da seção 5). A contagem de hesitações abaixo usa o léxico de `resources/noise_en.json` sobre todos os turnos, que é mais amplo que a contagem original: o v1 dá 8,05 por esse critério, contra 5,88 na tabela anterior. Compare só as variantes entre si.
 
-| | `dialogue` v1 | `rules-clean` | `rules-realistic` | `rules-hard` | AMI |
-|---|---:|---:|---:|---:|---:|
-| hesitações/muletas por 100 palavras (critério amplo) | 8,05 | 7,96 | 9,76 | 13,17 | — |
-| mediana de palavras por turno | 16 | 14 | 14 | 15 | 3 |
-| turnos de *backchannel* (≤ 2 palavras) | 17 % | 16 % | 10 % | 7 % | 45 % |
+| | `dialogue` v1 | `rules-clean` | `realistic` 1ª versão | `realistic` calibrado | `hard` 1ª versão | `hard` calibrado | AMI |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| hesitações/muletas por 100 palavras (critério amplo) | 8,05 | 8,01 | 9,76 | **7,25** | 13,17 | **8,06** | — |
+| mediana de palavras por turno | 16 | 14 | 14 | **9** | 15 | **10** | 3 |
+| 3º quartil de palavras por turno | 31 | 29 | — | **16** | — | **18** | — |
+| turnos de *backchannel* (≤ 2 palavras) | 17 % | 15 % | 10 % | **29 %** | 7 % | **22 %** | 45 % |
 
-O modo `meetings` **não corrige** a lacuna de estrutura de turnos apontada acima, e a piora em parte. Objeções, adiamentos e retomadas acrescentam turnos de tamanho médio, enquanto o *backchannel* continua restrito a depois de afirmações claras. A densidade de hesitações do perfil `hard` também passa da do v1. Ajustes recomendados para uma próxima versão: reduzir `noise` em `realistic`/`hard` para ~0,07–0,09; fatiar falas longas em vários turnos curtos com *backchannel* intercalado; elevar a taxa de *backchannel* por turno.
+A primeira versão do modo `meetings` **não corrigia** a lacuna de estrutura de turnos apontada acima, e chegava a piorá-la: objeções, adiamentos e retomadas acrescentavam turnos de tamanho médio, o *backchannel* aparecia só depois de afirmações claras e as hesitações do `hard` passavam bastante das do v1.
+
+**Calibração aplicada** (parâmetros em `pureprep/dialogue/profiles.py`, decididos no plano para que a variante B herde a mesma estrutura):
+- **Fatiamento de falas longas** (`p_chunk` = 0,9; `chunk_target` = 7 palavras): a fala vira vários turnos curtos do mesmo falante, cortados só em fim de frase, vírgula ou início de oração (*and*, *which*, *when*, *if*…). Sem fronteira natural, a fala fica inteira: cortar no meio da oração soava artificial.
+- ***Backchannel*** entre os pedaços (`p_mid_backchannel` = 0,9) e depois da afirmação (`p_backchannel` = 0,75). Em geral vem do analista, às vezes de outro stakeholder.
+- **Reações curtas** de outro stakeholder ("Yeah, agreed.", "Same for us."; `p_react` = 0,35).
+- **Ruído lexical reduzido**: `noise` 0,07 em `realistic` e 0,075 em `hard`, o que devolve as hesitações ao nível do v1.
+- **`rules-clean` mantém a estrutura de turnos do v1**, de propósito: continua sendo a ablação que isola só a superfície do texto.
+
+Uma varredura de parâmetros mostrou retorno decrescente abaixo de ~7 palavras por pedaço (mediana 8, *backchannel* 33%). Chegar aos 45% do AMI exigiria *backchannel* também depois de perguntas e objeções, o que deixava o diálogo repetitivo. A distância que resta para o AMI (mediana 3) vem principalmente de as falas carregarem o texto do SRS. É uma limitação da variante A que a variante B pode atacar.
 
 **Limitações.**
-- **Distratores são raros** (7 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e apenas 31/820 requisitos têm grandeza numérica e 138/820 têm ator explícito.
+- **Distratores são raros** (3–6 por variante): só conflitos de valor ou de ator geram uma proposta perdedora distinguível lexicalmente, e apenas 31/820 requisitos têm grandeza numérica e 138/820 têm ator explícito.
 - **A inversão de polaridade só entra como inconsistência.** "not" é stopword no casamento lexical, então ela não pode virar distrator.
 - **As falas preservam as palavras de conteúdo do SRS**, e requisitos longos continuam soando como documento. É o efeito que a variante B (N1) deve medir.
 - **O casamento continua lexical.** As ressalvas da seção 4.4 valem aqui também.
@@ -276,7 +287,7 @@ O modo `meetings` **não corrige** a lacuna de estrutura de turnos apontada acim
 1. Rodar o sistema multiagente nas Suítes 1 e 2 e avaliar com `python -m pureprep.evaluate`.
 2. Revisão humana de uma amostra estratificada do gabarito (prioridade: `label_source = default`), com medida de concordância (kappa de Cohen).
 3. Implementar o nível N1 como realizador `llm` do modo `meetings` (variante B, sobre o mesmo plano da A) e o casamento semântico no avaliador.
-3a. Recalibrar a estrutura de turnos do modo `meetings` contra o AMI (seção 5.3) e avaliar o sistema multiagente nas variantes `rules-*`, incluindo a detecção de *issues*.
+3a. Avaliar o sistema multiagente nas variantes `rules-*`, incluindo a detecção de *issues*. A estrutura de turnos já foi calibrada contra o AMI (seção 5.3).
 4. Converter 5–10 documentos Tier A sem XML (começando por pontis, clarus, rlcs e inventory 2.0).
 5. Montar o AMI-RE (~10 reuniões ES).
 
