@@ -1,7 +1,7 @@
 # Relatório de diagnóstico — PURE como banco de testes do módulo de ingestão
 
 **Projeto:** sistema multiagente de Engenharia de Requisitos (sumarização → extração no padrão INCOSE/IEEE → classificação RF/RNF)
-**Data:** 23/09/2026 · **Artefatos:** `pure_ingestao/` (hoje `EntradasGigabrain/gerador_reunioes/`) (código, saídas e testes reproduzíveis com `bash scripts/run_all.sh`)
+**Data:** 23/09/2026 · **Artefatos:** `EntradasGigabrain/gerador_reunioes/` (código, saídas e testes reproduzíveis com `bash scripts/run_all.sh`)
 
 ---
 
@@ -25,7 +25,7 @@
 | `Artigos/` | MARE [R1], REQINONE [R2], Elicitron [R3] + análise MARE (.pptx) | MARE e REQINONE usam PURE; Elicitron simula entrevistas |
 | raiz | Survey LLM4SE [R4], roteiro da disciplina [R5], apresentação "O Impacto dos LLMs…" (imagem, sem camada de texto) | contexto; a apresentação destaca escassez de dados rotulados de RNF e risco de *data leakage* |
 | `Sanitização de Texto/` | sanitizador de transcrições + **AMI Meeting Corpus** (98 reuniões em texto, com `gold.json` de decisões/ações) [R12] | reuso: léxicos de ruído e dados de diálogo real |
-| `pure_ingestao/` (novo) | PURE baixado, pipeline, saídas e testes | este trabalho |
+| `gerador_reunioes/` (novo) | PURE baixado, pipeline, saídas e testes | este trabalho |
 
 ### 1.2 Formato dos XMLs do PURE (`req_document.xsd`)
 ```
