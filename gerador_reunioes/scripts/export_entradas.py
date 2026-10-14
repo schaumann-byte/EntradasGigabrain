@@ -1,9 +1,9 @@
 """Exporta variantes do modo ``meetings`` para o repositório de dados
-``Entradas`` e regenera o índice.
+``EntradasGigabrain`` (pasta pai deste gerador) e regenera o índice.
 
 Layout gerado::
 
-    Entradas/
+    EntradasGigabrain/
       indice_documentos.csv            # uma linha por (variante, documento)
       originais/<doc_id>.pdf           # documento original (compartilhado)
       variantes/<variante>/manifest.json
@@ -14,7 +14,7 @@ O ``manifest.json`` de cada variante registra o commit do gerador, a
 semente e os parâmetros do perfil, para que a variante seja reproduzível.
 
 Uso:
-    python scripts/export_entradas.py --output output --entradas ../Entradas
+    python scripts/export_entradas.py --output output --entradas ..
     python scripts/export_entradas.py --variants rules-realistic,rules-hard
     python scripts/export_entradas.py --index-only        # só regenera o índice
 """
@@ -46,7 +46,7 @@ def git_info():
         return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True).stdout.strip()
 
     commit = run("rev-parse", "HEAD")
-    return {"commit": commit or None, "dirty": bool(run("status", "--porcelain", "--untracked-files=no")), "branch": run("rev-parse", "--abbrev-ref", "HEAD") or None}
+    return {"commit": commit or None, "dirty": bool(run("status", "--porcelain", "--untracked-files=no", "--", ".")), "branch": run("rev-parse", "--abbrev-ref", "HEAD") or None}
 
 
 def export_variant(src, dest, variant_name, git):
@@ -128,7 +128,7 @@ def build_index(entradas):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--output", default=str(ROOT / "output"), help="saída do pureprep.cli")
-    ap.add_argument("--entradas", default=str(ROOT.parent / "Entradas"), help="repositório de dados")
+    ap.add_argument("--entradas", default=str(ROOT.parent), help="repositório de dados")
     ap.add_argument("--variants", default="", help="variantes a exportar (padrão: todas as do manifest)")
     ap.add_argument("--index-only", action="store_true")
     ap.add_argument("--allow-dirty", action="store_true", help="exporta mesmo com alterações não commitadas no gerador")

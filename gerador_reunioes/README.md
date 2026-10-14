@@ -1,4 +1,4 @@
-# pure_ingestao — banco de testes do módulo de ingestão (PURE)
+# gerador_reunioes — gerador de reuniões (banco de testes do módulo de ingestão, PURE)
 
 Transforma os SRS do dataset PURE em pares de teste para o módulo de
 entrada do sistema multiagente de Engenharia de Requisitos:
@@ -18,7 +18,7 @@ python scripts/download_data.py                   # PURE (Zenodo, com MD5) + Req
 python -m pureprep.cli --out output               # gera os pares (v1 + meetings)
 python -m pureprep.evaluate --pairs output/pairs/context --pred <pasta_predições> --out relatorio.json
 python -m pytest -q
-python scripts/export_entradas.py                 # publica as variantes meetings em ../Entradas
+python scripts/export_entradas.py                 # publica as variantes meetings na pasta pai (EntradasGigabrain)
 ```
 
 Parâmetros de `pureprep.cli`: `--seed` (padrão 42), `--support-threshold` (0,6),

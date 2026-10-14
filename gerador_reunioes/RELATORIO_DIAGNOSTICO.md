@@ -1,7 +1,7 @@
 # Relatório de diagnóstico — PURE como banco de testes do módulo de ingestão
 
 **Projeto:** sistema multiagente de Engenharia de Requisitos (sumarização → extração no padrão INCOSE/IEEE → classificação RF/RNF)
-**Data:** 23/09/2026 · **Artefatos:** `pure_ingestao/` (código, saídas e testes reproduzíveis com `bash scripts/run_all.sh`)
+**Data:** 23/09/2026 · **Artefatos:** `pure_ingestao/` (hoje `EntradasGigabrain/gerador_reunioes/`) (código, saídas e testes reproduzíveis com `bash scripts/run_all.sh`)
 
 ---
 

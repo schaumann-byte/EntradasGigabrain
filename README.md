@@ -2,7 +2,7 @@
 
 Conjunto de dados para experimentos de **Engenharia de Requisitos** e **Melhoria de Processos de Software**: reuniões de elicitação simuladas e o gabarito (*ground truth*) dos requisitos que elas contêm. A base é o dataset público **PURE** (*Public Requirements Engineering Dataset*, [Zenodo 10.5281/zenodo.1414117](https://doi.org/10.5281/zenodo.1414117)).
 
-Os dados são gerados pelo `pureprep` (repositório `pure_ingestao`) com transformações **determinísticas, sem IA generativa**. Cada variante traz no `manifest.json` o commit do gerador, a semente e os parâmetros usados, o que a torna reproduzível.
+Os dados são gerados pelo `pureprep` (pasta [`gerador_reunioes/`](gerador_reunioes/), antigo repositório `pure_ingestao`) com transformações **determinísticas, sem IA generativa**. Cada variante traz no `manifest.json` o commit do gerador, a semente e os parâmetros usados, o que a torna reproduzível.
 
 ---
 
@@ -42,6 +42,7 @@ O detalhamento por documento está em [`indice_documentos.csv`](indice_documento
 Entradas/
 ├── README.md
 ├── indice_documentos.csv              # uma linha por (variante, documento)
+├── gerador_reunioes/                 # código do gerador (pureprep), testes e cache LLM
 ├── originais/<doc_id>.pdf             # documento de requisitos original (compartilhado)
 └── variantes/
     ├── v1-original/<doc_id>/
@@ -202,12 +203,12 @@ O `oracle` tem F1 = 1,0 em extração e issues, mas `detail_hallucination_rate` 
 
 ## 7. Como regenerar
 
-No repositório `pure_ingestao`:
+Na pasta `gerador_reunioes/`:
 
 ```bash
 python scripts/download_data.py
 python -m pureprep.cli --out output                      # v1 + rules-clean/realistic/hard
-python scripts/export_entradas.py --entradas ../Entradas  # copia variantes e regenera o índice
+python scripts/export_entradas.py                        # copia variantes para a pasta pai e regenera o índice
 ```
 
 O `export_entradas.py` se recusa a exportar quando há alterações não commitadas no gerador, para que o `manifest.json` sempre aponte um commit reproduzível.
