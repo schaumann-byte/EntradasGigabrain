@@ -18,6 +18,7 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
+from . import utf8_stdio
 from .parse import slugify
 
 CONTEXT_H = re.compile(r"\b(scope|purpose|product perspective|overall description|general description|system overview|user (classes|characteristics)|operating environment|vision)\b", re.I)
@@ -109,4 +110,5 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    utf8_stdio()
     main()

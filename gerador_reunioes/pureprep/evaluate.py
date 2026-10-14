@@ -37,6 +37,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from . import utf8_stdio
 from . import evaluate_meetings as evm
 from .textsim import containment, overlap_f1, token_set
 
@@ -231,4 +232,5 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    utf8_stdio()
     main()

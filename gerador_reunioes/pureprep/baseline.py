@@ -13,6 +13,7 @@ import json
 import re
 from pathlib import Path
 
+from . import utf8_stdio
 from .extract import keyword_hint
 from .textsim import modal_strength, split_sentences
 
@@ -74,4 +75,5 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    utf8_stdio()
     main()

@@ -35,9 +35,6 @@ python -m pureprep.cli               # 2. gera tudo em output/
 python -m pytest -q                  # 3. confere que nada quebrou
 ```
 
-> **Windows:** se aparecer `UnicodeEncodeError` (ex.: no `--help`), rode antes
-> `$env:PYTHONIOENCODING="utf-8"` (PowerShell) ou `export PYTHONIOENCODING=utf-8` (Git Bash).
-
 Pronto: as reuniões estão em `output/pairs/meetings/<variante>/<documento>/`.
 Para o pipeline completo (dados, geração, baselines, validações e testes) use
 `bash scripts/run_all.sh`.

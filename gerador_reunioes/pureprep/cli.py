@@ -23,7 +23,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from . import V1_VERSION, __version__
+from . import V1_VERSION, __version__, utf8_stdio
 from .dialogue import PROFILES, REALIZERS, build_meetings, meeting_file, variant_name
 from .dialogue.llm_providers import make_provider
 from .extract import extract
@@ -265,4 +265,5 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    utf8_stdio()
     main()

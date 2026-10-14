@@ -15,6 +15,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from . import utf8_stdio
 from .extract import extract
 from .parse import load_document
 from .taxonomy import NFR_SUBTYPES
@@ -104,4 +105,5 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    utf8_stdio()
     main()

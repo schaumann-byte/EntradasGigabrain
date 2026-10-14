@@ -31,7 +31,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from pureprep import __version__  # noqa: E402
+from pureprep import __version__, utf8_stdio  # noqa: E402
 
 INDEX_FIELDS = [
     "variante", "id_documento", "nome_projeto", "qualidade_tier", "n_reunioes", "palavras_transcricao",
@@ -148,4 +148,5 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    utf8_stdio()
     main()
