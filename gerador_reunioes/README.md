@@ -63,8 +63,8 @@ semente (`--seed`, padrão 42) o resultado sai igual byte a byte.
    e do **perfil** de dificuldade.
 3. **Escrever as falas** (o **realizador**). Transforma cada passo do plano em
    texto de conversa. Há dois realizadores:
-   - `rules` (variante A): modelos de frase e um léxico casual (`resources/casual_en.json`);
-   - `llm` (variante B): o mesmo plano, com as falas reescritas por um LLM.
+   - `rules` (variante A): modelos de frase e léxicos, sem LLM (ver [Variante A](#variante-a-falas-escritas-por-regras-sem-llm));
+   - `llm` (variante B): o mesmo plano, com as falas reescritas por um LLM (ver [Variante B](#variante-b-falas-reescritas-por-llm)).
 4. **Montar o gabarito** (`dialogue/gold.py`). Como o plano registra o que foi
    dito, em qual turno e com qual desfecho, o gabarito sai direto dele, com a
    referência exata de cada turno (`M2:T14` = reunião 2, turno 14).
@@ -105,6 +105,67 @@ o requisito aparece assim (resumido):
 
 e a lista `issues` traz o problema que o sistema deveria apontar
 (`"expected_action": "flag_inconsistency"`).
+
+---
+
+## Variante A: falas escritas por regras (sem LLM)
+
+As variantes `rules-*` são geradas **sem nenhum modelo de linguagem**. O
+realizador `rules` (`pureprep/dialogue/realize_rules.py`) transforma o plano em
+texto usando só modelos de frase, um léxico de substituições e sorteios
+controlados pela semente. Por isso a geração é instantânea, gratuita e
+reproduzível em qualquer máquina.
+
+O realizador **nunca decide conteúdo**: o que cada fala deve dizer (o
+requisito, o valor trocado num conflito, o detalhe removido numa ambiguidade)
+já vem pronto do plano. O realizador só escolhe *como* dizer.
+
+### Falas que expressam um requisito
+
+O texto do requisito, como está no SRS, passa por cinco camadas:
+
+| camada | o que faz | exemplo |
+|---|---|---|
+| 1. desformalização | troca "`<sujeito> shall ...`" por um pedido de stakeholder, sorteado entre 34 modelos. Usa 1ª pessoa quando quem fala é o `EndUser` e o sujeito é o usuário | "The User shall be able to view..." → "As a user, I'd want to be able to view..." |
+| 2. léxico casual | troca 48 expressões formais por coloquiais, remove referências ao documento ("see section 3.2") e aplica contrações | "in order to" → "to", "prior to" → "before", "do not" → "don't" |
+| 3. frases longas | quebra frases com mais de 26 palavras em `;` ou `, and` e às vezes acrescenta marcadores de discurso | "So, ...", "Basically, ...", "..., you know?" |
+| 4. marcas do plano | escreve na fala o fenômeno que o plano escolheu | hesitação ("maybe ... could"), falso começo ("We need the— actually, ..."), fala cortada ("... well, anyway, we can come back to that."), valor faltante ("I'd have to check the exact number though.") |
+| 5. ruído lexical | insere hesitações, muletas, gagueira e marcas de ruído (taxa `--noise`, padrão 8%) | "uh", "um", "like", "i mean", "the the", `[crosstalk]`, `[laughter]` |
+
+Os léxicos ficam em `pureprep/resources/`: `casual_en.json` (camada 2) e
+`noise_en.json` (camada 5). O `noise_en.json` espelha o sanitizador de
+transcrições, de modo que o ruído inserido é exatamente o que ele sabe remover.
+Falas muito curtas ("Mm-hmm.", "Yeah, agreed.") não recebem ruído, porque
+ficariam artificiais.
+
+Exemplos reais de `rules-realistic`, com o texto original do SRS e a fala gerada:
+
+| documento | SRS | fala na reunião |
+|---|---|---|
+| 2010-blitdraft | The User shall be able to view the hyperlinks and descriptions listed. | As a user, I'd sort of want to be able to view the hyperlinks and descriptions listed. |
+| 2007-ertms | The current operational status shall be indicated to the driver on the DMI | Er, Well, we need the current operational status to be indicated to the driver on kind of the DMI. |
+| 0000-gamma-j (ambiguidade) | The order database of WebOrder will communicate with the account system through a programmatic interface for the billing operations. | Honestly, it'd be nice if the order database of WebOrder could communicate with the account system through a programmatic interface for the billing operations. |
+| 2007-ertms (fala cortada) | The driver shall be able to release an ETCS emergency brake application when stationary. | Erm, I mean, the driver must be able to release... hmm, I'd need to think actually about the rest. |
+
+No terceiro exemplo, o "it'd be nice if ... could" transforma uma obrigação em
+desejo, e o gabarito marca o requisito como `ambiguous`. No quarto, o resto
+da frase só aparece na reunião 3 (desfecho `completed_later`).
+
+### Falas sem requisito
+
+Aberturas, recapitulações, perguntas do analista, *backchannel*, conflitos,
+interrupções e encerramentos vêm de listas de frases prontas, uma lista por tipo
+de ato do plano (ex.: `ask_topic` → "Okay, what about {tópico}?", `park` →
+"Let's park it and come back to it.", `counter` → "Hmm, I'm not sure about
+that. I'd say {proposta}").
+
+### Limitações da variante A
+
+A variedade é limitada ao repertório de modelos, então as mesmas construções
+se repetem ao longo de um documento. Algumas frases saem pouco naturais, por
+exemplo "Customers would need to be able to be presented with...". Erros de
+digitação do PURE também passam para a fala ("control t he heating"). A
+variante B existe justamente para medir quanto disso afeta o sistema avaliado.
 
 ---
 

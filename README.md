@@ -2,7 +2,7 @@
 
 Conjunto de dados para experimentos de **Engenharia de Requisitos** e **Melhoria de Processos de Software**: reuniões de elicitação simuladas e o gabarito (*ground truth*) dos requisitos que elas contêm. A base é o dataset público **PURE** (*Public Requirements Engineering Dataset*, [Zenodo 10.5281/zenodo.1414117](https://doi.org/10.5281/zenodo.1414117)).
 
-Os dados são gerados pelo `pureprep` (pasta [`gerador_reunioes/`](gerador_reunioes/), antigo repositório `pure_ingestao`) com transformações **determinísticas, sem IA generativa**. Cada variante traz no `manifest.json` o commit do gerador, a semente e os parâmetros usados, o que a torna reproduzível.
+Os dados são gerados pelo `pureprep` (pasta [`gerador_reunioes/`](gerador_reunioes/), antigo repositório `pure_ingestao`). As variantes `rules-*` (A) usam transformações **determinísticas, sem IA generativa**; as `llm-*` (B) partem do mesmo plano e têm as falas reescritas por um LLM. Cada variante traz no `manifest.json` o commit do gerador, a semente e os parâmetros usados, o que a torna reproduzível.
 
 ---
 
@@ -75,6 +75,18 @@ Client: Oh, about master password from last time, I checked: ...
 - **Bagunça**: tópicos fora da ordem do documento, tópico retomado mais tarde ("going back to search…"), stakeholder que puxa o tópico sem o analista perguntar, interrupção no meio de uma fala que é retomada depois, falso começo ("We need the— actually, …"), *crosstalk*, conversa de abertura e comentários fora do tópico.
 - **Turnos curtos** (`realistic`/`hard`): falas longas são fatiadas em pedaços do mesmo falante, cortados só em fronteiras naturais (fim de frase, vírgula, oração), com *backchannel* ("Mm-hmm.", "Okay.") e reações curtas de outros participantes ("Yeah, agreed.") entre eles. A mediana cai de 16 palavras por turno (v1) para 9–10, e os turnos de até duas palavras sobem de 17% para 22–29%. O `clean` mantém a estrutura de turnos do v1.
 - **Ruído lexical**: hesitações, muletas, gagueira e marcas `[laughter]`, `[crosstalk]`, `[pause]`, como no v1.
+
+### Variante A: como as falas foram escritas
+
+Nas `rules-*`, as falas foram escritas **sem nenhum modelo de linguagem**, por regras determinísticas. O texto de cada requisito do SRS vira fala em cinco camadas:
+
+1. **Desformalização:** "The User shall be able to view..." vira um pedido de stakeholder, como "As a user, I'd want to be able to view...", sorteado entre 34 modelos.
+2. **Léxico casual:** 48 expressões formais trocadas por coloquiais ("in order to" → "to"), referências ao documento removidas ("see section 3.2") e contrações.
+3. **Quebra de frases longas** e marcadores de discurso ("So, ...", "..., you know?").
+4. **Marcas do fenômeno** escolhido pelo plano: hesitação ("it'd be nice if ... could"), falso começo, fala cortada, valor faltante.
+5. **Ruído lexical:** hesitações, muletas, gagueira e marcas `[crosstalk]`, `[laughter]`.
+
+As demais falas (aberturas, perguntas do analista, *backchannel*, conflitos, encerramentos) vêm de listas de frases prontas. O resultado é reproduzível byte a byte, mas o repertório é limitado: as mesmas construções se repetem e algumas frases soam pouco naturais. Detalhes e exemplos no [README do gerador](gerador_reunioes/README.md#variante-a-falas-escritas-por-regras-sem-llm).
 
 ### Variante B: como as falas foram escritas
 
