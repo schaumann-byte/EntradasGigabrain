@@ -6,9 +6,12 @@ Layout gerado::
     EntradasGigabrain/
       indice_documentos.csv            # uma linha por (variante, documento)
       originais/<doc_id>.pdf           # documento original (compartilhado)
-      variantes/<variante>/manifest.json
-      variantes/<variante>/<doc_id>/reuniao_NN.txt
-      variantes/<variante>/<doc_id>/gabarito_requisitos.json
+      variante_A/rules-<perfil>/...    # realizador por regras
+      variante_B/llm-<perfil>/...      # realizador por LLM
+      <grupo>/<variante>/manifest.json
+      <grupo>/<variante>/<doc_id>/reuniao_NN.txt
+      <grupo>/<variante>/<doc_id>/gabarito_requisitos.json
+      v1-original/                     # dataset v1, congelado (não é exportado)
 
 O ``manifest.json`` de cada variante registra o commit do gerador, a
 semente e os parâmetros do perfil, para que a variante seja reproduzível.
@@ -81,6 +84,29 @@ def _original(entradas, doc_id):
     return hits[0].relative_to(entradas).as_posix() if hits else ""
 
 
+# pasta de cada realizador (prefixo do nome da variante)
+GROUPS = {"rules": "variante_A", "llm": "variante_B"}
+V1_DIR = "v1-original"
+
+
+def variant_dir(entradas, variant):
+    prefix = variant.split("-", 1)[0]
+    if prefix not in GROUPS:
+        raise ValueError(f"variante sem pasta conhecida: {variant} (prefixos: {', '.join(GROUPS)})")
+    return entradas / GROUPS[prefix] / variant
+
+
+def variant_dirs(entradas):
+    """Pastas de variante na ordem do índice: A, B e por fim o v1."""
+    dirs = []
+    for group in GROUPS.values():
+        if (entradas / group).is_dir():
+            dirs += sorted(p for p in (entradas / group).iterdir() if p.is_dir())
+    if (entradas / V1_DIR).is_dir():
+        dirs.append(entradas / V1_DIR)
+    return dirs
+
+
 def build_index(entradas):
     old = {}
     idx = entradas / "indice_documentos.csv"
@@ -89,7 +115,7 @@ def build_index(entradas):
             for row in csv.DictReader(fh):
                 old.setdefault(row["id_documento"], row)
     rows = []
-    for vdir in sorted(p for p in (entradas / "variantes").iterdir() if p.is_dir()):
+    for vdir in variant_dirs(entradas):
         for d in sorted(p for p in vdir.iterdir() if p.is_dir()):
             gt = json.loads((d / "gabarito_requisitos.json").read_text(encoding="utf-8"))
             prev = old.get(d.name, {})
@@ -142,8 +168,9 @@ def main(argv=None):
         if git["dirty"] and not args.allow_dirty:
             sys.exit("O gerador tem alterações não commitadas; faça commit (ou use --allow-dirty) para o manifest apontar um commit reproduzível.")
         for v in variants:
-            n = export_variant(out / "pairs" / "meetings" / v, entradas / "variantes" / v, v, git)
-            print(f"{v}: {n} documentos -> {entradas / 'variantes' / v}")
+            dest = variant_dir(entradas, v)
+            n = export_variant(out / "pairs" / "meetings" / v, dest, v, git)
+            print(f"{v}: {n} documentos -> {dest}")
     print(f"índice: {build_index(entradas)} linhas -> {entradas / 'indice_documentos.csv'}")
 
 

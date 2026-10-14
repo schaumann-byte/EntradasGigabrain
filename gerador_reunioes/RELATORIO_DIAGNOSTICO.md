@@ -279,7 +279,7 @@ Uma varredura de parâmetros mostrou retorno decrescente abaixo de ~7 palavras p
 - **As falas preservam as palavras de conteúdo do SRS**, e requisitos longos continuam soando como documento. É o efeito que a variante B (N1) deve medir.
 - **O casamento continua lexical.** As ressalvas da seção 4.4 valem aqui também.
 
-**Onde estão os dados.** O repositório `Entradas` foi reorganizado em `variantes/{v1-original, rules-clean, rules-realistic, rules-hard}`, com `manifest.json` (commit do gerador, semente e parâmetros) por variante, PDFs em `originais/` e índice com uma linha por (variante, documento). A exportação é feita por `scripts/export_entradas.py`.
+**Onde estão os dados.** O repositório `Entradas` foi reorganizado em `variantes/{v1-original, rules-clean, rules-realistic, rules-hard}` (hoje `variante_A/`, `variante_B/` e `v1-original/` na raiz), com `manifest.json` (commit do gerador, semente e parâmetros) por variante, PDFs em `originais/` e índice com uma linha por (variante, documento). A exportação é feita por `scripts/export_entradas.py`.
 
 
 ### 5.4 Variante B: realizador por LLM (13/10/2026)

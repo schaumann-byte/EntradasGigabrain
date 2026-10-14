@@ -262,7 +262,8 @@ python scripts/export_entradas.py --variants rules-hard,llm-hard
 python scripts/export_entradas.py --index-only   # só regenera indice_documentos.csv
 ```
 
-O script copia `output/pairs/meetings/<variante>/` para `../variantes/<variante>/`,
+O script copia `output/pairs/meetings/<variante>/` para `../variante_A/<variante>/`
+(`rules-*`) ou `../variante_B/<variante>/` (`llm-*`),
 renomeia o gabarito para `gabarito_requisitos.json`, grava um `manifest.json`
 (commit do gerador, semente, parâmetros) e regenera `../indice_documentos.csv`.
 Ele se recusa a rodar se houver alterações não commitadas em `gerador_reunioes/`,
@@ -379,5 +380,5 @@ modos da primeira versão, com gabarito schema 1.0. Eles não mudam mais:
 | `pureprep/crosscheck.py` | comparação com o ReqFromSRS |
 | `pureprep/scan_originals.py` | triagem dos documentos originais |
 | `scripts/download_data.py` | baixa PURE e ReqFromSRS (com checagem MD5) |
-| `scripts/export_entradas.py` | publica as variantes na pasta pai |
+| `scripts/export_entradas.py` | publica as variantes em `../variante_A/` e `../variante_B/` |
 | `scripts/run_all.sh` | pipeline completo |

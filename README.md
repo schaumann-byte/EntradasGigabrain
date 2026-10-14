@@ -39,22 +39,31 @@ O detalhamento por documento está em [`indice_documentos.csv`](indice_documento
 ## 2. Estrutura de diretórios
 
 ```text
-Entradas/
+EntradasGigabrain/
 ├── README.md
-├── indice_documentos.csv              # uma linha por (variante, documento)
-├── gerador_reunioes/                 # código do gerador (pureprep), testes e cache LLM
+├── indice_documentos.csv              # uma linha por (variante, documento), com a pasta de cada um
+├── variante_A/                        # falas escritas por regras, sem LLM
+│   ├── rules-clean/
+│   ├── rules-realistic/
+│   │   ├── manifest.json              # commit do gerador, semente, parâmetros, estatísticas
+│   │   └── <doc_id>/
+│   │       ├── reuniao_01.txt
+│   │       ├── reuniao_02.txt
+│   │       └── gabarito_requisitos.json   # schema 2.0
+│   └── rules-hard/
+├── variante_B/                        # falas reescritas por LLM (mesmo plano e gabarito da A)
+│   ├── llm-clean/
+│   ├── llm-realistic/                 # mesma estrutura das rules-*
+│   └── llm-hard/
+├── v1-original/                       # dataset v1.0, congelado
+│   └── <doc_id>/
+│       ├── transcricao_reuniao.txt
+│       └── gabarito_requisitos.json   # schema 1.0
 ├── originais/<doc_id>.pdf             # documento de requisitos original (compartilhado)
-└── variantes/
-    ├── v1-original/<doc_id>/
-    │   ├── transcricao_reuniao.txt
-    │   └── gabarito_requisitos.json   # schema 1.0
-    └── rules-realistic/               # (idem rules-clean, rules-hard)
-        ├── manifest.json              # commit do gerador, semente, parâmetros, estatísticas
-        └── <doc_id>/
-            ├── reuniao_01.txt
-            ├── reuniao_02.txt
-            └── gabarito_requisitos.json   # schema 2.0
+└── gerador_reunioes/                  # código do gerador (pureprep), testes e cache do LLM
 ```
+
+A pasta de uma variante é sempre `variante_A/<variante>` para as `rules-*` e `variante_B/<variante>` para as `llm-*`. O nome da pasta é igual ao campo `variant` dos gabaritos e manifestos.
 
 Projetos: `0000-cctns`, `0000-gamma-j`, `1995-gemini`, `1998-themas`, `1999-dii`, `1999-tcs`, `2003-qheadache`, `2005-microcare` (sem requisitos normativos, tier C), `2005-phin`, `2006-eirene-sys-15`, `2007-eirene-fun-7-2`, `2007-ertms`, `2007-get-real-0-2`, `2008-keepass`, `2008-peering`, `2009-peppol-approved`, `2009-video-search`, `2010-blitdraft`.
 
@@ -220,7 +229,7 @@ Na pasta `gerador_reunioes/`:
 ```bash
 python scripts/download_data.py
 python -m pureprep.cli --out output                      # v1 + rules-clean/realistic/hard
-python scripts/export_entradas.py                        # copia variantes para a pasta pai e regenera o índice
+python scripts/export_entradas.py                        # copia para variante_A/ ou variante_B/ e regenera o índice
 ```
 
 O `export_entradas.py` se recusa a exportar quando há alterações não commitadas no gerador, para que o `manifest.json` sempre aponte um commit reproduzível.
